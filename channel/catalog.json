@@ -225,7 +225,7 @@
    "series": "ai-ml",
    "order": 6,
    "phase": 1,
-   "status": "planned",
+   "status": "in-production",
    "visual": "a null distribution of coin flip results with the observed result landing out in the tail, that tail area filling in",
    "covers": "the null hypothesis as the boring explanation, what a p value is and the three things it is not, the tail area picture, a significance level as a line somebody chose, a coin flipping test worked through, type one and type two errors, why a small p value says nothing about the size of an effect",
    "links": {
@@ -242,7 +242,10 @@
     ],
     "overlaps": []
    },
-   "production": null,
+   "production": {
+    "folder": "hypothesis-testing",
+    "branch": "claude/math-lab-tv-yzk7km"
+   },
    "youtube": null,
    "notes": "Promised as the next video at the end of Bayes' Theorem ('p-values ... flips the question, like mistake one'). Open with that callback."
   },

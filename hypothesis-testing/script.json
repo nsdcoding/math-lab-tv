@@ -1,0 +1,870 @@
+[
+  {
+    "id": "s001",
+    "chapter": "The Coffee Coin",
+    "text": "Every morning, you and a friend get coffee together. And every morning, you flip a coin to decide who pays.",
+    "visual": "STICKER café: two friends at a small table, one about to flip a coin (illustration). Two coffee-cup icons slide in.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s002",
+    "chapter": "The Coffee Coin",
+    "text": "It's always your friend's coin. And your friend always calls heads.",
+    "visual": "A coin icon (blue rim) with 'H' face; chip 'their coin · they call heads'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s003",
+    "chapter": "The Coffee Coin",
+    "text": "After a month, you look back. Twenty flips. Heads came up fifteen times.",
+    "visual": "Tally board on axes (x: flip 1–20, y: H/T): 15 orange H dots, 5 blue T dots fill in one by one; counter '15 heads / 20'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s004",
+    "chapter": "The Coffee Coin",
+    "text": "That means you paid for fifteen coffees. Your friend paid for five.",
+    "visual": "Two stacks of cup icons on a count axis 0–15: 'you paid 15' (orange), 'they paid 5' (blue).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s005",
+    "chapter": "The Coffee Coin",
+    "text": "The first few times, you laughed it off. Coins are random, right? But by the end of the month, you start to wonder.",
+    "visual": "Calendar pages flip; the tally grows; a small thought bubble '…hmm' over the 'you' icon.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s006",
+    "chapter": "The Coffee Coin",
+    "text": "So here's the question. Is that coin rigged? Or did your friend just get lucky?",
+    "visual": "Split screen: left 'rigged?' (orange coin with a weight), right 'just luck?' (blue coin with a shrug). Big '?'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s007",
+    "chapter": "The Coffee Coin",
+    "text": "Take a second, and decide what you think.",
+    "visual": "A slider between 'luck' and 'rigged' with a blinking cursor; small clock ticks.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s008",
+    "chapter": "The Coffee Coin",
+    "text": "Your gut probably says something is off. But a fair coin can come up heads fifteen times. It's not impossible.",
+    "visual": "Coin spins; caption 'a fair coin CAN do this'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s009",
+    "chapter": "The Coffee Coin",
+    "text": "So how unusual is fifteen out of twenty, really? Unusual enough to call it rigged?",
+    "visual": "A number line 0–20 heads with ticks every 5; a warn pin drops at 15; the space beyond it shimmers.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s010",
+    "chapter": "The Coffee Coin",
+    "text": "There is a tool built for exactly this question. It's called hypothesis testing, and the number it gives you is called a p value.",
+    "visual": "Title card: 'HYPOTHESIS TESTING' (aqua) with subtitle 'and p values, without the confusion'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s011",
+    "chapter": "Welcome",
+    "text": "Welcome to Math Lab TV. Where math is something you can see.",
+    "visual": "Logo (violet rounded square with a green bell curve) + MATH LAB TV + tagline 'where math is something you can see'.",
+    "pause_after": 0.7
+  },
+  {
+    "id": "s012",
+    "chapter": "Welcome",
+    "text": "Today you will learn how to test a claim, by asking what boring old chance would usually do.",
+    "visual": "Small logo top-right. Big ① (blue); mini bar chart of fair-coin results; caption 'test a claim against chance'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s013",
+    "chapter": "Welcome",
+    "text": "You will see exactly what a p value measures, as an area you can point at.",
+    "visual": "Big ② (aqua); the mini chart's right tail fills aqua; caption 'the p value is an area'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s014",
+    "chapter": "Welcome",
+    "text": "And you will see the two ways a test can be wrong, and the traps that fool even scientists.",
+    "visual": "Big ③ (red); two small warning cards 'false alarm' and 'missed it'; caption 'two ways to be wrong'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s015",
+    "chapter": "Why It Matters",
+    "text": "In our Bayes video, we left you with a puzzle.",
+    "visual": "Chip 'from: Bayes' Theorem' slides in; the old teaser card reappears: 'p = 0.03'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s016",
+    "chapter": "Why It Matters",
+    "text": "Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.",
+    "visual": "Speech bubble beside the card: 'a 3% chance it's a fluke?' with a red question mark.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s017",
+    "chapter": "Why It Matters",
+    "text": "We said that description flips the question. Today, we'll see what a p value really measures, and you'll see the flip with your own eyes.",
+    "visual": "The bubble flips over like a card, showing two arrows pointing opposite ways.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s018",
+    "chapter": "Why It Matters",
+    "text": "And this matters, because p values are everywhere.",
+    "visual": "Three cards slide in, empty.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s019",
+    "chapter": "Why It Matters",
+    "text": "A new medicine is tested against a sugar pill. A website tries a new button colour. A trader checks if a strategy beats luck.",
+    "visual": "Cards fill: pill vs sugar pill; two buttons A / B; a price line with a question mark.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s020",
+    "chapter": "Why It Matters",
+    "text": "Every one of them asks the same thing as you and your friend. Is this a real effect, or just chance?",
+    "visual": "All three cards tilt toward one shared question card: 'real effect, or just chance?'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s021",
+    "chapter": "The Boring Explanation",
+    "text": "Hypothesis testing starts in a strange place. Not with what you suspect, but with the most boring explanation there is.",
+    "visual": "Two boxes: an exciting orange box 'something is going on' and a plain blue box 'nothing is going on'; camera moves to the blue one.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s022",
+    "chapter": "The Boring Explanation",
+    "text": "For our coin, the boring explanation is simple. The coin is fair. Heads and tails are equally likely, and fifteen heads was just luck.",
+    "visual": "Blue card 'the coin is fair: heads 1/2, tails 1/2'; a fair balance beam sits level under it.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s023",
+    "chapter": "The Boring Explanation",
+    "text": "This boring explanation has a name. It's called the null hypothesis. Null just means nothing. Nothing special is going on.",
+    "visual": "Label 'NULL HYPOTHESIS' writes over the blue card; a definition card: 'null = nothing special is going on'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s024",
+    "chapter": "The Boring Explanation",
+    "text": "Your suspicion, that the coin favours heads, is called the alternative hypothesis.",
+    "visual": "Orange card 'ALTERNATIVE: the coin favours heads'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s025",
+    "chapter": "The Boring Explanation",
+    "text": "Here's the key idea. We don't try to prove the alternative directly. Instead, we pretend the boring explanation is true, and ask how surprising our result would be.",
+    "visual": "Arrow from the blue card to a thought bubble 'if the coin were fair… how surprising is 15?'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s026",
+    "chapter": "The Boring Explanation",
+    "text": "It's just like a courtroom. The defendant is presumed innocent. The prosecution has to show the evidence would be very hard to explain if they were innocent.",
+    "visual": "Courtroom line art: a judge's bench; 'presumed innocent' (blue) on one side, 'evidence' (warn) on the other.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s027",
+    "chapter": "The Boring Explanation",
+    "text": "The null hypothesis is the innocent defendant. And our fifteen heads is the evidence.",
+    "visual": "Labels map over: 'innocent = fair coin' (blue), 'evidence = 15 heads' (warn).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s028",
+    "chapter": "A Thousand Fair Coins",
+    "text": "So, if the coin really is fair, what would twenty flips usually look like?",
+    "visual": "A single fair blue coin flips twenty times quickly; a counter ends at '11 heads' (illustration of one run).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s029",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Let's find out with a thought experiment. Imagine a thousand friends, each with a perfectly fair coin, each flipping it twenty times.",
+    "visual": "A 40 × 25 grid of small blue coin dots appears on equal-scale axes: '1,000 friends, each flips a fair coin 20 times'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s030",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Each friend counts their heads. Then we stack them up by how many heads they got.",
+    "visual": "The dots fly from the grid into columns over an x-axis 'number of heads' 0–20 (ticks every 1, labels every 5); y-axis 'friends' 0–200, ticks every 50.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s031",
+    "chapter": "A Thousand Fair Coins",
+    "text": "This picture has a name. It's called a distribution. It just shows every possible result, and how often each one happens.",
+    "visual": "Definition card: 'distribution = every result + how often it happens'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s032",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Look at the shape. Most friends land near ten heads, the middle. About one hundred and seventy six of them get exactly ten.",
+    "visual": "The 10-heads column glows; label '≈ 176 friends' on top.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s033",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Results further from ten get rarer and rarer, on both sides.",
+    "visual": "Arrows run down both slopes; outer bars fade to nearly zero.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s034",
+    "chapter": "A Thousand Fair Coins",
+    "text": "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.",
+    "visual": "Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s035",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Now, where does your friend's fifteen land?",
+    "visual": "The warn pin from the hook drops onto 15 on the x-axis.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s036",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.",
+    "visual": "Camera zooms to the right tail; the 15 bar glows warn; label '≈ 15 friends'; brackets show two spreads from 10.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s037",
+    "chapter": "A Thousand Fair Coins",
+    "text": "But we don't just ask about exactly fifteen. We ask: how many fair coins did at least this well? Fifteen heads, or sixteen, or seventeen, all the way to twenty.",
+    "visual": "Bars 15 through 20 outline one by one, counting up.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s038",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Let's fill in that tail.",
+    "visual": "The tail area from 15 to 20 fills aqua, bar by bar.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s039",
+    "chapter": "A Thousand Fair Coins",
+    "text": "About twenty one friends out of a thousand. That's roughly two in a hundred.",
+    "visual": "Counter '≈ 21 of 1,000' in aqua; then '≈ 2 in 100'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s040",
+    "chapter": "A Thousand Fair Coins",
+    "text": "And that is the p value. Zero point zero two one.",
+    "visual": "Big aqua 'p ≈ 0.021' appears beside the tail; the filled tail pulses.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s041",
+    "chapter": "A Thousand Fair Coins",
+    "text": "In plain words: if the coin were fair, a result this extreme or more would happen only about two times in a hundred.",
+    "visual": "Sentence card, colour-coded: 'IF the coin were fair (blue), a result THIS EXTREME OR MORE (warn) happens ≈ 2 times in 100 (aqua)'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s042",
+    "chapter": "A Thousand Fair Coins",
+    "text": "We don't actually need a thousand friends. There are about a million different ways twenty flips can come out, all equally likely for a fair coin.",
+    "visual": "Card '2²⁰ = 1,048,576 possible sequences'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s043",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Exactly twenty one thousand seven hundred of them have fifteen heads or more. Divide, and you get the same zero point zero two one.",
+    "visual": "Formula: p = 21,700 ÷ 1,048,576 ≈ 0.021, the 0.021 in aqua.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s044",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Let's give it symbols. People write p equals the probability of data at least this extreme, given that the null hypothesis is true.",
+    "visual": "LaTeX: p = P( data this extreme or more | H₀ ), parts colour-coded.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s045",
+    "chapter": "A Thousand Fair Coins",
+    "text": "The capital P means probability. H zero is the null hypothesis. And the straight line means given, or assuming.",
+    "visual": "Symbol definitions appear under each part: 'P = probability', 'H₀ = null hypothesis (fair coin)', '| = given / assuming'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s046",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Remember that straight line. It's going to matter a lot.",
+    "visual": "The '|' glows warn and a small chip 'assuming the coin is fair' hangs from it.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s047",
+    "chapter": "A Thousand Fair Coins",
+    "text": "One honest detail. We only counted the heads side, because your suspicion was about heads. If you'd suspected the coin was off in either direction, you'd count both tails, and the p value would double to about zero point zero four.",
+    "visual": "Left tail 0–5 also fills (lighter aqua) for a moment; label 'two-sided: p ≈ 0.041'; then it clears.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s048",
+    "chapter": "Drawing the Line",
+    "text": "So, two in a hundred. Is that rare enough to call the coin rigged?",
+    "visual": "The chart returns; 'p ≈ 0.021' and a question mark.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s049",
+    "chapter": "Drawing the Line",
+    "text": "To decide, people choose a cut off before they look at the data. It's called the significance level, and it's written with the Greek letter alpha.",
+    "visual": "A violet vertical line slides along the x-axis; label 'significance level α (alpha)'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s050",
+    "chapter": "Drawing the Line",
+    "text": "The most common choice is zero point zero five. One in twenty.",
+    "visual": "Chip 'α = 0.05 = 1 in 20'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s051",
+    "chapter": "Drawing the Line",
+    "text": "The rule is: if the p value is smaller than alpha, we say the result is statistically significant, and we reject the boring explanation.",
+    "visual": "Rule card: 'p < α → reject the null' with p (aqua) and α (violet).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s052",
+    "chapter": "Drawing the Line",
+    "text": "Our p value is zero point zero two one. That's below zero point zero five. So at this line, we'd reject the idea that the coin is fair.",
+    "visual": "Meter 0–0.10 with the violet line at 0.05 and an aqua marker at 0.021 left of it; stamp 'reject the null'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s053",
+    "chapter": "Drawing the Line",
+    "text": "But here's something most people never hear. That line is not a law of nature. Somebody chose it.",
+    "visual": "The violet line wobbles; label 'a choice, not a law'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s054",
+    "chapter": "Drawing the Line",
+    "text": "The statistician Ronald Fisher suggested one in twenty about a hundred years ago, as a convenient rule of thumb. It stuck.",
+    "visual": "Card 'one in twenty: a 1920s rule of thumb' (no portrait).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s055",
+    "chapter": "Drawing the Line",
+    "text": "Other fields draw the line in very different places. Particle physicists want something like one in three and a half million before they announce a discovery.",
+    "visual": "Line-up of thresholds on a log meter: 'common: 1 in 20', 'stricter: 1 in 200', 'particle physics: ≈ 1 in 3.5 million'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s056",
+    "chapter": "Drawing the Line",
+    "text": "And watch what the line does to our coin. Fifteen heads gives a p value of zero point zero two one. Significant.",
+    "visual": "Chart: tail from 15 filled aqua; p ≈ 0.021 left of the violet α line on the meter; tick ✓.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s057",
+    "chapter": "Drawing the Line",
+    "text": "Fourteen heads gives about zero point zero five eight. Not significant.",
+    "visual": "Tail from 14 fills; p ≈ 0.058 lands right of the line; label 'not significant'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s058",
+    "chapter": "Drawing the Line",
+    "text": "One coin flip apart. The evidence barely changed, but the verdict flipped completely.",
+    "visual": "Side by side: '14 heads · p ≈ 0.058' vs '15 heads · p ≈ 0.021', with a tiny gap between them.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s059",
+    "chapter": "Drawing the Line",
+    "text": "So treat significant and not significant as a rough sign, not a magic switch. Always look at the p value itself, and at the size of the effect.",
+    "visual": "The switch icon fades; a dial 0–0.10 replaces it.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s060",
+    "chapter": "What p Is Not",
+    "text": "Now that we know what a p value is, let's be very clear about three things it is not.",
+    "visual": "Three red cards face down, numbered 1, 2, 3.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s061",
+    "chapter": "What p Is Not",
+    "text": "Number one. It is not the chance that the coin is fair.",
+    "visual": "Card 1 flips: 'NOT the chance the null is true'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s062",
+    "chapter": "What p Is Not",
+    "text": "A p value of zero point zero two one does not mean a two percent chance the coin is fair, or a two percent chance it was a fluke.",
+    "visual": "'2% chance it's a fluke' appears and gets crossed out in red.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s063",
+    "chapter": "What p Is Not",
+    "text": "Remember the straight line. The p value assumes the coin is fair, then asks about the data. It does not ask about the coin.",
+    "visual": "Two LaTeX lines: 'P(data | fair)' ✓ (aqua) above 'P(fair | data)' ✗ (red); arrows show they point opposite ways.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s064",
+    "chapter": "What p Is Not",
+    "text": "This is the same flip we saw with Bayes. The chance a sick person tests positive is not the chance a positive person is sick. And the chance of this data from a fair coin is not the chance the coin is fair.",
+    "visual": "Chip 'from: Bayes' Theorem'; the old pair 'P(positive | sick) ≠ P(sick | positive)' slides in above the new pair.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s065",
+    "chapter": "What p Is Not",
+    "text": "Number two. It is not a measure of how big the effect is.",
+    "visual": "Card 2 flips: 'NOT how big the effect is'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s066",
+    "chapter": "What p Is Not",
+    "text": "A tiny p value does not mean the coin is very rigged. We'll see why in a moment.",
+    "visual": "A small ruler icon with a question mark.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s067",
+    "chapter": "What p Is Not",
+    "text": "Number three. A big p value does not prove the boring explanation.",
+    "visual": "Card 3 flips: 'NOT proof of nothing'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s068",
+    "chapter": "What p Is Not",
+    "text": "If you had flipped only five times and got four heads, the p value would be large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
+    "visual": "Mini chart for 5 flips with a wide tail; caption 'not enough data ≠ no effect'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s069",
+    "chapter": "What p Is Not",
+    "text": "In a courtroom, not guilty doesn't mean innocent. It means there wasn't enough evidence.",
+    "visual": "Gavel with 'not guilty' and a smaller line 'not proven innocent'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s070",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Any test that makes a yes or no decision can be wrong in two different ways.",
+    "visual": "A 2 × 2 table on axes: columns 'coin really fair' (blue) / 'coin really rigged' (orange); rows 'we say rigged' / 'we say fair'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s071",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "The first way: the coin is fair, but we call it rigged anyway. That's a false alarm. Statisticians call it a type one error.",
+    "visual": "Top-left cell turns red: 'TYPE I · false alarm'. Icon: innocent person behind bars.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s072",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "In the courtroom, that's convicting an innocent person.",
+    "visual": "Courtroom icon in the cell.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s073",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "The second way: the coin really is rigged, but we say it's fair. That's a miss. It's called a type two error.",
+    "visual": "Bottom-right cell turns red: 'TYPE II · miss'. Icon: a guilty person walking free.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s074",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "In the courtroom, that's letting a guilty person walk free.",
+    "visual": "Courtroom icon in the cell; the two correct cells turn green-grey 'correct'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s075",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.",
+    "visual": "Fair-coin chart (blue) with the aqua tail ≥15 labelled 'false alarm rate ≈ 2.1%'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s076",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "But what about misses? Suppose the coin really is rigged, and lands heads seventy percent of the time.",
+    "visual": "A second distribution (orange) for a 70%-heads coin slides in above the blue one, centred at 14 (illustration: a 70% coin).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s077",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Then fifteen heads or more happens only about forty two percent of the time. So more than half the time, our test would miss it.",
+    "visual": "The orange bars from 15 up fill (≈ 42% 'caught'); bars below 15 hatch red '≈ 58% missed'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s078",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Twenty flips just isn't much evidence. Both pictures overlap a lot.",
+    "visual": "Camera pulls back to show the two distributions overlapping heavily.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s079",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Now flip a hundred times instead. The two pictures pull apart. With a cut off at fifty nine heads, a fair coin is still falsely accused under five times in a hundred.",
+    "visual": "Both distributions redraw for 100 flips (x-axis 30–90, ticks every 10): blue centred at 50, orange at 70; violet line at 59.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s080",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "And the rigged coin gets caught about ninety nine times in a hundred.",
+    "visual": "The orange area right of 59 fills: 'caught ≈ 99%'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s081",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "That's the trade off. A stricter line means fewer false alarms but more misses. And the main way to cut both at once is more data.",
+    "visual": "A seesaw: 'false alarms' vs 'misses'; a block labelled 'more data' lifts both sides down.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s082",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "Now let's come back to that second thing a p value is not. A measure of size.",
+    "visual": "Card 2 from 'What p Is Not' returns: 'NOT how big the effect is'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s083",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "Imagine a different coin. It's almost fair. It lands heads fifty point two percent of the time. Just a hair more than half.",
+    "visual": "A coin with a microscopic weight; a bar '50.2% heads' next to '50% fair', nearly the same length.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s084",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "Over twenty flips, you'd never notice. But suppose a machine flips it a million times, and gets five hundred and two thousand heads.",
+    "visual": "A counter spins to '1,000,000 flips · 502,000 heads'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s085",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "For a fair coin, the spread over a million flips is about five hundred heads. Two thousand extra heads is four spreads from the middle.",
+    "visual": "Fair-coin bell (blue) for a million flips, x-axis 498,000–502,000 ticks every 1,000; brackets of 500 each; warn pin at 502,000.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s086",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "The p value is about zero point zero zero zero zero three. Three in a hundred thousand. Incredibly significant.",
+    "visual": "Tiny aqua tail; 'p ≈ 0.00003' in big aqua; stamp 'highly significant'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s087",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "But does it matter? If you used this coin for coffee, you'd pay for about two extra coffees in every thousand.",
+    "visual": "Your share of 1,000 coffees: 502 (this coin) vs 500 (a fair coin), almost identical; caption '≈ 2 extra coffees per 1,000 flips'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s088",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "So the p value tells you whether an effect is probably there. It does not tell you whether it's big enough to care about.",
+    "visual": "Two dials: 'is it there?' (aqua, p value) and 'how big is it?' (orange, effect size).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s089",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "With enough data, almost any tiny difference becomes significant. That's why good reports show both the p value and the size of the effect.",
+    "visual": "Checklist card: '✓ p value  ✓ effect size'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s090",
+    "chapter": "Real World",
+    "text": "So where will you actually meet this?",
+    "visual": "Four tiles: Machine Learning, Data Science, Finance, Computer Science.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s091",
+    "chapter": "Real World",
+    "text": "In data science, the classic one is an A B test. Half the visitors see the old button, half see the new one.",
+    "visual": "Data Science tile expands: two buttons A and B, each with a visitor counter.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s092",
+    "chapter": "Real World",
+    "text": "The null hypothesis is that the button makes no difference. If the new one gets more clicks, the p value asks: how often would a gap this big appear by chance alone?",
+    "visual": "Blue 'no difference' card; a small null distribution of 'gap between A and B' with the observed gap in its tail (illustration).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s093",
+    "chapter": "Real World",
+    "text": "In machine learning, you compare two models on the same test set. One scores a little higher. Is it really better, or did it just get a luckier set of examples?",
+    "visual": "Machine Learning tile: two model cards 'accuracy 91.2%' vs '91.6%'; a coin-flip icon between them.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s094",
+    "chapter": "Real World",
+    "text": "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.",
+    "visual": "Labels shuffle between the two models several times; a little distribution of shuffled gaps builds.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s095",
+    "chapter": "Real World",
+    "text": "In finance, a trader backtests a strategy and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck.",
+    "visual": "Finance tile: a jagged price line with a profit arrow; blue card 'no real edge'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s096",
+    "chapter": "Real World",
+    "text": "And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment.",
+    "visual": "Twenty little price lines; one glows gold; a red question mark beside it.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s097",
+    "chapter": "Real World",
+    "text": "In computer science, engineers test whether new code is really faster. Timing a program is noisy, just like a coin. So they run it many times, and test whether the speed up is more than noise.",
+    "visual": "CS tile: two run-time strips 'old code' vs 'new code' with scattered timing dots; a bracket 'speed-up or noise?'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s098",
+    "chapter": "Real World",
+    "text": "Different worlds, same question as your coffee. Real effect, or just chance?",
+    "visual": "All four tiles shrink around the coffee coin in the centre.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s099",
+    "chapter": "Common Mistakes",
+    "text": "Let's finish with the most common mistakes, because they trip up beginners and experts alike.",
+    "visual": "Three red mistake cards slide in, face down.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s100",
+    "chapter": "Common Mistakes",
+    "text": "Mistake one: reading the p value as the chance the boring explanation is true.",
+    "visual": "Card 1 flips: 'p = chance the coin is fair?' (red).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s101",
+    "chapter": "Common Mistakes",
+    "text": "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.",
+    "visual": "Illustration: a grid of 100 coins on equal-scale axes, 1 orange (rigged) and 99 blue (fair); chip 'illustration'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s102",
+    "chapter": "Common Mistakes",
+    "text": "Then, just like in the Bayes video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+    "visual": "Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s103",
+    "chapter": "Common Mistakes",
+    "text": "The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers.",
+    "visual": "Side by side: 'p ≈ 0.021' (aqua) vs 'chance rigged ≈ 17%' (violet), with '≠' between them.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s104",
+    "chapter": "Common Mistakes",
+    "text": "Mistake two: running lots of tests, and only reporting the one that worked.",
+    "visual": "Card 2 flips: 'testing many things, reporting one' (red).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s105",
+    "chapter": "Common Mistakes",
+    "text": "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent.",
+    "visual": "Twenty fair-coin mini charts in a 5 × 4 grid; one by chance lands in its tail and glows; counter 'chance of ≥ 1 false alarm ≈ 64%'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s106",
+    "chapter": "Common Mistakes",
+    "text": "That's how a lucky trading strategy, or a surprising headline, can come from pure noise. If you test many things, you need a stricter line.",
+    "visual": "The glowing chart is stamped 'lucky, not real'; the violet line moves further right.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s107",
+    "chapter": "Common Mistakes",
+    "text": "Mistake three: treating not significant as proof there's no effect.",
+    "visual": "Card 3 flips: 'not significant = no effect?' (red).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s108",
+    "chapter": "Common Mistakes",
+    "text": "Remember the seventy percent coin. With twenty flips, we missed it more than half the time. Not significant often just means not enough data.",
+    "visual": "The overlapping 20-flip pictures return; the '≈ 58% missed' area highlights.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s109",
+    "chapter": "Common Mistakes",
+    "text": "And a bonus mistake: choosing the line after you've seen the data. If you move alpha until your result is significant, the p value stops meaning anything.",
+    "visual": "The violet line slides right to sneak past a p value; a red 'no!' stamp. Caption 'choose α before you look'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s110",
+    "chapter": "Recipe",
+    "text": "Let's turn all of that into a recipe you can use for any claim.",
+    "visual": "Recipe card frame unrolls: 'Hypothesis testing in five steps'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s111",
+    "chapter": "Recipe",
+    "text": "Step one: state the boring explanation. That's the null hypothesis. Nothing special is going on.",
+    "visual": "Item 1 (blue): 'State the null' + 'the boring explanation'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s112",
+    "chapter": "Recipe",
+    "text": "Step two: choose your line, before you look. Alpha, usually one in twenty.",
+    "visual": "Item 2 (violet): 'Choose α first' + 'usually 0.05'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s113",
+    "chapter": "Recipe",
+    "text": "Step three: picture what chance alone would do. Draw the distribution, assuming the null is true.",
+    "visual": "Item 3: 'Picture chance' + 'the distribution if the null is true'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s114",
+    "chapter": "Recipe",
+    "text": "Step four: find the tail. The p value is the share of that picture at least as extreme as your result.",
+    "visual": "Item 4 (aqua): 'Find the tail area' + 'p = share at least this extreme'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s115",
+    "chapter": "Recipe",
+    "text": "Step five: decide, and then ask how big. Compare p to alpha, and always report the size of the effect too.",
+    "visual": "Item 5 (orange): 'Decide, then size it' + 'p vs α, plus effect size'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s116",
+    "chapter": "Recipe",
+    "text": "For the coffee coin: fair coin as the null. Fifteen heads out of twenty. A p value of about two in a hundred. Below one in twenty, so we'd call it suspicious, and keep flipping to be sure.",
+    "visual": "Summary strip: 'H₀ fair · 15 of 20 heads · p ≈ 0.021 < 0.05 → suspicious, collect more data'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s117",
+    "chapter": "Recipe",
+    "text": "A p value doesn't tell you what's true. It tells you how surprised chance would be.",
+    "visual": "Closing line types on in aqua, centred.",
+    "pause_after": 2.0
+  },
+  {
+    "id": "s118",
+    "chapter": "Subscribe",
+    "text": "Look around your world, and notice how often a lucky streak gets mistaken for a pattern.",
+    "visual": "Four everyday cards: a sports winning streak, a 'hot' slot machine, a stock that doubled, a lucky shirt; each stamped 'real, or chance?'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s119",
+    "chapter": "Subscribe",
+    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+    "visual": "Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s120",
+    "chapter": "Next Time",
+    "text": "But here's a puzzle for next time.",
+    "visual": "Small logo top-centre; a puzzle-piece icon draws on.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s121",
+    "chapter": "Next Time",
+    "text": "In a courtroom, an expert says there's only a one in a million chance that an innocent person would match the evidence.",
+    "visual": "Courtroom line art; a card 'chance an innocent person matches: 1 in 1,000,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s122",
+    "chapter": "Next Time",
+    "text": "So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way.",
+    "visual": "Speech bubble 'so 1 in a million they're innocent?' with a red question mark.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s123",
+    "chapter": "Next Time",
+    "text": "It's the very same flip we caught today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
+    "visual": "The 'P(data | innocent)' vs 'P(innocent | data)' pair flips; chip 'next: the prosecutor's fallacy' under the logo.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s124",
+    "chapter": "Next Time",
+    "text": "I will see you in the next video.",
+    "visual": "Logo + next chip hold.",
+    "pause_after": 2.0
+  }
+]

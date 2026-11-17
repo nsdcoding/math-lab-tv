@@ -821,7 +821,7 @@ def push(scene, old, new, direction=LEFT, run_time=0.8):
     # move exactly the scene's top-level pieces that belong to `old`: animating a group that is not itself in the
     # scene makes Manim add it on top, so filled cards would cover their own labels during the slide
     fam = {id(x) for x in old.get_family()}
-    olds = [m for m in scene.mobjects if id(m) in fam]
+    olds = [m for m in scene.mobjects if fam & {id(x) for x in m.get_family()}]   # incl. groups made by an earlier push
     for m in olds: scene.qa_mute(m)          # leaving the frame: not part of the layout any more
     scene.play(*[m.animate(rate_func=smooth).shift(d) for m in olds], new.animate(rate_func=smooth).shift(d), run_time=run_time)
     scene.remove(*[x for m in olds for x in m.get_family()])

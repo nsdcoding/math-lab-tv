@@ -6,3 +6,8 @@
 #
 # Example (remove the leading # to use it):
 # mean-vs-median = https://youtu.be/XXXXXXXXXXX
+
+bayes-examples = https://www.youtube.com/watch?v=QpYlwLb8UmE
+mean-vs-median = https://www.youtube.com/watch?v=CLDnC_Tfmgg
+standard-deviation = https://www.youtube.com/watch?v=N5MXIQOKjoQ
+pythagoras = https://www.youtube.com/watch?v=-3pBE2v268M

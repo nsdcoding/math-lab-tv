@@ -89,10 +89,11 @@
     "script": "channel/lesson-lab/standard-deviation/script.txt",
     "callbacks": [
      "mean-vs-median"
-    ]
+    ],
+    "youtube_title": "Standard Deviation Explained Visually | Stats, Machine Learning & Data Science"
    },
    "youtube": null,
-   "notes": "Made outside this repo (Lesson Lab script in channel/lesson-lab/standard-deviation). Mean vs Median's teaser leads here. Add the folder/branch if it lives elsewhere, and the YouTube link once uploaded."
+   "notes": "Published on YouTube (made outside this repo; Lesson Lab draft in channel/lesson-lab/standard-deviation). Mean vs Median's teaser leads here."
   },
   {
    "slug": "mean-vs-median",
@@ -119,7 +120,7 @@
     "length": "15:50",
     "video": "mean-vs-median/out/mean_vs_median.mp4",
     "package": "mean-vs-median/out/youtube/",
-    "youtube_title": "Mean vs Median: Which Average Lies? | Machine Learning, Data Science, Finance & CS",
+    "youtube_title": "Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS)",
     "running_example": "Two towns (Maple, Pine Hill), nine household incomes each; Pine Hill mean 60k vs median 40k",
     "callbacks": [],
     "teaser_next": "standard-deviation",
@@ -158,7 +159,7 @@
     "length": "15:12",
     "video": "bayes-theorem/out/bayes_theorem.mp4",
     "package": "bayes-theorem/out/youtube/",
-    "youtube_title": "Bayes' Theorem Explained Simply: Why a 90% Accurate Test Means 8% | ML, Data Science, Finance, CS",
+    "youtube_title": "Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS",
     "running_example": "Screening test, 1,000 people, condition 1 in 100, catches 9 of 10, false alarm 1 in 10: 9 real vs 99 false -> 1 in 12",
     "callbacks": [],
     "teaser_next": "hypothesis-testing",
@@ -961,10 +962,11 @@
     "overlaps": []
    },
    "production": {
-    "script": "channel/lesson-lab/pythagoras/script.txt"
+    "script": "channel/lesson-lab/pythagoras/script.txt",
+    "youtube_title": "Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?"
    },
    "youtube": null,
-   "notes": "Lesson Lab draft script (5-8 min, written for the old Lesson Lab); rewrite to the channel prompt when produced."
+   "notes": "Published on YouTube (made outside this repo; Lesson Lab draft in channel/lesson-lab/pythagoras)."
   },
   {
    "slug": "gauss-sum",

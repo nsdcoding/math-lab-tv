@@ -52,15 +52,22 @@ def generate(prompt, out, aspect="1:1", refs=()):
 
 
 def cut_out(raw, out, thresh=26):
-    from PIL import Image, ImageDraw, ImageFilter
+    """Remove the plain background: grey pixels within the border's brightness range that connect to the border.
+    (A per-seed flood fill failed on generated backgrounds, which shade from corner to centre.)"""
+    from PIL import Image, ImageFilter
     import numpy as np
+    from scipy import ndimage
     im = Image.open(raw).convert("RGB")
-    W, H = im.size
-    work = im.copy(); marker = (255, 0, 255)
-    for seed in [(0, 0), (W - 1, 0), (0, H - 1), (W - 1, H - 1), (W // 2, 0), (0, H // 2), (W - 1, H // 2), (W // 2, H - 1)]:
-        if work.getpixel(seed) != marker:
-            ImageDraw.floodfill(work, seed, marker, thresh=thresh)
-    bg = np.all(np.array(work) == marker, axis=2)
+    a = np.array(im).astype(int)
+    border = np.concatenate([a[:8].reshape(-1, 3), a[-8:].reshape(-1, 3), a[:, :8].reshape(-1, 3), a[:, -8:].reshape(-1, 3)])
+    lum = a.mean(axis=2); blum = border.mean(axis=1)
+    lo, hi = np.percentile(blum, 0.5) - thresh / 3, np.percentile(blum, 99.5) + thresh / 3
+    cand = ((a.max(axis=2) - a.min(axis=2)) < 14) & (lum >= lo) & (lum <= hi)
+    lab, _ = ndimage.label(cand)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    sizes = np.bincount(lab.ravel())
+    big = np.nonzero(sizes > 0.004 * lab.size)[0]          # enclosed background (e.g. under a table) is large too
+    bg = np.isin(lab, np.union1d(edge[edge > 0], big[big > 0]))
     alpha = Image.fromarray(((~bg) * 255).astype("uint8")).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
     rgba = im.convert("RGBA"); rgba.putalpha(alpha)
     box = alpha.getbbox()

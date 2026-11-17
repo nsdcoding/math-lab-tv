@@ -21,9 +21,9 @@ def discover_scenes():
         for cls, ch in re.findall(r'class (\w+)\(Base\):\s*\n\s*CHAPTER = "([^"]+)"', f.read_text()):
             found[ch] = (ch, f.stem, cls)
     missing = [c["name"] for c in CHAPTERS if c["name"] not in found]
-    if missing:
+    if missing and not (len(sys.argv) > 1 and sys.argv[1] == "sample"):   # a sample needs only its own chapters
         sys.exit(f"no scene for chapter(s): {missing}")
-    return [found[c["name"]] for c in CHAPTERS]
+    return [found[c["name"]] for c in CHAPTERS if c["name"] in found]
 
 
 SCENES = discover_scenes()
@@ -165,8 +165,10 @@ if __name__ == "__main__":
     if mode == "srt":
         srt()
     elif mode == "sample":
-        names = [c["name"] for c in CHAPTERS[:4]]
         cut = SEGS[sys.argv[2]]["start"] - 0.3 if len(sys.argv) > 2 else None
+        # hook, welcome, why and the start of the lesson: every chapter up to the one holding the cut segment
+        last = next((k for k, c in enumerate(CHAPTERS) if len(sys.argv) > 2 and sys.argv[2] in c["segs"]), 3)
+        names = [c["name"] for c in CHAPTERS[:max(last + 1, 4)]]
         assemble(names, "sample.mp4", t_cut=cut)
     else:
         srt(); assemble([s[0] for s in SCENES], HERE.name.replace("-", "_") + ".mp4")

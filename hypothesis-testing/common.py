@@ -596,3 +596,53 @@ def tube(color=AQUA, h=1.6, w=0.5, fill=0.35):
     liq = Rectangle(width=w * 0.8, height=h * fill).set_stroke(width=0).set_fill(color, 0.85)
     liq.move_to(body.get_bottom() + UP * (h * fill / 2 + 0.06))
     return VGroup(body, liq)
+
+
+# ───────────── Hypothesis testing: the coffee coin ─────────────
+from math import comb
+
+TITLE = ("HYPOTHESIS TESTING", "and p values, without the confusion")
+FLIPS = "HHTHHHTHHHHTHHTHHHTH"          # the month of coffee flips: 15 heads, 5 tails
+assert FLIPS.count("H") == 15 and len(FLIPS) == 20
+EXP = [1000 * comb(20, k) / 2 ** 20 for k in range(21)]   # expected friends (of 1,000) with k heads
+
+
+def _int_counts():
+    fl = [int(e) for e in EXP]
+    rest = sorted(range(21), key=lambda k: EXP[k] - fl[k], reverse=True)
+    for k in rest[:1000 - sum(fl)]:
+        fl[k] += 1
+    return fl
+
+
+COUNTS = _int_counts()                   # whole friends per column, sums to 1,000
+assert sum(COUNTS) == 1000
+
+
+def ht_title():
+    """The title card that ends the hook and opens the welcome (identical in both scenes)."""
+    tc = title_card(*TITLE, color=AQUA, size=92)
+    if tc.width > 12:
+        tc.scale_to_fit_width(12)
+    return tc
+
+
+def coin(face="H", color=BLUE_, r=0.6):
+    rim = Circle(radius=r).set_stroke(color, 6).set_fill("#22221f", 1)
+    inner = Circle(radius=r * 0.78).set_stroke(color, 2, opacity=0.7)
+    rim.qa_container = True; inner.qa_container = True
+    t = TB(face, int(r * 70), color).move_to(rim)
+    return VGroup(rim, inner, t)
+
+
+def dist_chart(x_len=11.0, y_len=3.8, y_max=200, step=50, fs=22,
+               x_title="number of heads in 20 flips", y_title="friends (of 1,000)"):
+    g = xy_axes([0, 20, 1], [0, y_max, step], x_len, y_len, x_title, y_title,
+                x_labels={v: str(v) for v in (0, 5, 10, 15, 20)}, font_size=fs, y_vertical=True)
+    return g
+
+
+def dist_bars(ax, color=BLUE_, values=None, width=None, opacity=0.9):
+    values = EXP if values is None else values
+    w = width or (ax.c2p(1, 0)[0] - ax.c2p(0, 0)[0]) * 0.76
+    return VGroup(*[bar(ax, k, v, color, width=w, opacity=opacity) for k, v in enumerate(values)])

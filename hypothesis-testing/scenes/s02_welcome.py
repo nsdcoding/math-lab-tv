@@ -2,19 +2,34 @@ import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from common import *
 
-# FILL: the topic title card (identical to the one that ends the hook scene) and the three previews.
-TITLE = ("TOPIC NAME", "explained simply, with real examples")
 PREVIEWS = [  # (number colour, caption)  -- one per "Today you will learn" sentence
-    (AQUA, "first thing you will learn"),
-    (VIOLET, "second thing you will learn"),
-    (ORANGE_, "third thing you will learn"),
+    (BLUE_, "test a claim against chance"),
+    (AQUA, "the p value is an area"),
+    (RED_, "two ways to be wrong"),
 ]
 
 
+def _mini_chart(tail=False):
+    g = xy_axes([0, 20, 5], [0, 200, 100], 6.0, 2.3, None, "friends", font_size=20, y_vertical=True)
+    bars = dist_bars(g.ax, BLUE_)
+    if tail:
+        for k in range(15, 21):
+            bars[k].set_fill(AQUA, 1)
+        br = Brace(VGroup(*bars[15:]), UP, buff=0.12, color=AQUA)
+        pl = T("p value", 26, AQUA, weight=BOLD).next_to(br, UP, buff=0.1)
+        return VGroup(g, bars, br, pl)
+    return VGroup(g, bars)
+
+
 def preview_visual(k):
-    """FILL: a small visual (fits roughly 9 x 3 units, centred near UP*0.2) from the running example for preview k."""
-    return VGroup(RoundedRectangle(corner_radius=0.2, width=4, height=2).set_stroke(INK2, 3),
-                  T(f"preview {k + 1}", 30, INK2))
+    if k < 2:
+        return _mini_chart(tail=(k == 1))
+    def c(txt):
+        b = card(3.6, 1.5, RED_)
+        x = cross(RED_, 0.18).move_to(b.get_left() + RIGHT * 0.5)
+        t = T(txt, 30, INK, weight=BOLD).next_to(x, RIGHT, buff=0.3)
+        return VGroup(b, x, t)
+    return VGroup(c("false alarm"), c("missed it")).arrange(RIGHT, buff=0.6)
 
 
 class S02Welcome(Base):
@@ -22,7 +37,7 @@ class S02Welcome(Base):
 
     def construct(self):
         seg_welcome, *seg_items = self.ch["segs"]          # welcome line, then the three "you will learn" lines
-        title = title_card(*TITLE)
+        title = ht_title()
         self.add(title)
         # ── "Welcome to Math Lab TV. Where math is something you can see." (word for word) ──
         self.at(seg_welcome, 0.0)

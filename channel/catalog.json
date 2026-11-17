@@ -225,7 +225,7 @@
    "series": "ai-ml",
    "order": 6,
    "phase": 1,
-   "status": "in-production",
+   "status": "produced",
    "visual": "a null distribution of coin flip results with the observed result landing out in the tail, that tail area filling in",
    "covers": "the null hypothesis as the boring explanation, what a p value is and the three things it is not, the tail area picture, a significance level as a line somebody chose, a coin flipping test worked through, type one and type two errors, why a small p value says nothing about the size of an effect",
    "links": {
@@ -244,7 +244,18 @@
    },
    "production": {
     "folder": "hypothesis-testing",
-    "branch": "claude/math-lab-tv-yzk7km"
+    "branch": "claude/math-lab-tv-yzk7km",
+    "length": "15:20",
+    "video": "hypothesis-testing/out/hypothesis_testing.mp4",
+    "package": "hypothesis-testing/out/youtube/",
+    "youtube_title": "Hypothesis Testing & p Values Explained Visually: Is This Coin Rigged? | ML, Data Science, Finance",
+    "running_example": "Coffee coin: a friend's coin lands heads 15 of 20; fair-coin tail of 15+ = 21,700 of 1,048,576 sequences -> p ≈ 0.021",
+    "callbacks": [
+     "bayes-examples",
+     "standard-deviation"
+    ],
+    "teaser_next": "prosecutors-fallacy",
+    "hook": "Your friend's coin wins the coffee bet 15 times out of 20: rigged, or luck?"
    },
    "youtube": null,
    "notes": "Promised as the next video at the end of Bayes' Theorem ('p-values ... flips the question, like mistake one'). Open with that callback."

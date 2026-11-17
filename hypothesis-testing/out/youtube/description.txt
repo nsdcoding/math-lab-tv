@@ -1,0 +1,55 @@
+Hypothesis testing and p values explained visually, for Machine Learning (ML), Data Science (DS), Finance and Computer Science (CS).
+See exactly what a p value measures, what a significance level is, type I and type II errors, and the traps that fool even scientists.
+
+Your friend's coin decides who pays for coffee, and in a month it lands heads 15 times out of 20. Is it rigged, or just luck? If the coin were fair, only about 21 of 1,000 people would get 15 or more heads: a p value of about 0.02. A 15-minute explainer for people who don't think of themselves as "math people".
+
+⏱ CHAPTERS
+0:00 The coffee coin: 15 heads in 20 flips. Rigged?
+0:55 Welcome to Math Lab TV
+1:15 Why p values matter (and the puzzle from the Bayes video)
+1:55 The null hypothesis: the boring explanation
+2:49 What a p value measures: the tail area
+5:11 Significance level (alpha): a line somebody chose
+6:40 Three things a p value is NOT
+7:52 Type I and type II errors (false alarms and misses)
+9:25 A tiny p value is not a big effect
+10:37 Where you'll use it: ML, Data Science, Finance, CS
+12:02 Common mistakes: flipped question, p-hacking, 'no effect'
+13:39 The 5-step recipe
+14:39 Subscribe
+14:51 Next time: the prosecutor's fallacy
+
+🌍 WHERE YOU'LL USE IT
+• Machine Learning / ML (10:56): is model B really better than model A, or did it get a luckier test set? Shuffle tests and regression p values.
+• Data Science / DS (10:39): A/B tests: would a click gap this big appear by chance alone if the button made no difference?
+• Finance (11:25): did a backtested strategy beat the market, or was the profit luck? Test many strategies and some win by chance.
+• Computer Science / CS (11:44): is new code really faster, or is the speed-up just timing noise? Run it many times and test.
+
+📐 KEY FORMULAS
+• p = P(data at least this extreme | H₀)
+  p = the p value · P = probability · | = given, assuming · H₀ = the null hypothesis (the boring explanation: the coin is fair)
+• Reject H₀ when p < α
+  α (alpha) = the significance level: a cut-off chosen BEFORE you look, often 0.05 (1 in 20)
+
+✅ WORKED EXAMPLE
+• 20 flips of a fair coin can land 1,048,576 ways; 21,700 of them have 15+ heads → p = 21,700 ÷ 1,048,576 ≈ 0.021
+• Two-sided (rigged either way): p ≈ 0.041 · 14 heads: p ≈ 0.058 (not significant at 0.05)
+• False alarms with 'rigged at 15+': ≈ 2.1% · a coin that lands heads 70% of the time is caught ≈ 42%, missed ≈ 58%
+• 100 flips, cut-off 59: false alarms ≈ 4.4%, the 70% coin caught ≈ 99%
+• A 50.2% coin over a million flips: 502,000 heads, p ≈ 0.00003, yet only ≈ 2 extra coffees per 1,000
+• If 1 coin in 100 is rigged, a coin with 15+ heads is still fair ≈ 83% of the time (rigged ≈ 17%)
+• 20 tests of nothing at 0.05: ≈ 64% chance at least one looks significant
+
+🧭 THE RECIPE
+1. State the null: the boring explanation
+2. Choose α first, before you look (often 0.05)
+3. Picture chance: the distribution if H₀ is true
+4. Find the tail: the share at least as extreme as your result
+5. Decide, then size it: p vs α, and always report the effect size
+
+📺 RELATED VIDEOS
+• Next: The Prosecutors Fallacy: The Statistics Trap Smart People Fall For (coming soon, subscribe so you don't miss it)
+
+▶ NEXT VIDEO: The prosecutor's fallacy: a 1 in a million chance an innocent person matches the evidence is not a 1 in a million chance they're innocent.
+
+#machinelearning #datascience #statistics

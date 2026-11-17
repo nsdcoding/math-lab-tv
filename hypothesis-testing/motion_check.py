@@ -36,16 +36,39 @@ def still_runs(path):
             if (i - start) / FPS > MAX_STILL:
                 runs.append((start / FPS, i / FPS))
             start = None
-    return runs, len(f) / FPS
+    return runs, len(f) / FPS, flickers(f)
+
+
+def flickers(f, jump=8.0):
+    """Moments where one region of the frame blinks: it jumps away from its level and comes back to the SAME level
+    within a second, while most of the frame stays put (an image whose opacity overshot 1, an object drawn in the
+    wrong place for a frame). Whole-screen slides and pushes are not flicker."""
+    out = []
+    tiles = f.reshape(len(f), 4, H // 4, 4, W // 4).mean(axis=(2, 4)).reshape(len(f), 16)
+    d = np.diff(tiles, axis=0)
+    moving = (np.abs(d) > 1.0).sum(axis=1)            # tiles changing at all: many = a slide/push/zoom
+    for i in range(len(d)):
+        big = np.abs(d[i]) > jump
+        if not big.any() or big.sum() > 6 or moving[max(0, i - 3):i + 31].max() >= 9:
+            continue
+        for t_ in np.nonzero(big)[0]:
+            pre = tiles[i, t_]
+            seg = tiles[i + 2:i + 31, t_]
+            if len(seg) and (np.abs(seg - pre) < 1.5).any():
+                out.append(round((i + 1) / FPS, 2))
+                break
+    return sorted(set(out))
 
 
 if __name__ == "__main__":
     bad = 0
     for p in sys.argv[1:]:
-        runs, dur = still_runs(p)
+        runs, dur, fl = still_runs(p)
         longest = max([b - a for a, b in runs], default=0)
         print(f"{p.split('/')[-1]}: {dur:.1f}s, {len(runs)} still stretches > {MAX_STILL}s, longest {longest:.1f}s")
         for a, b in runs:
             print(f"    still {a:6.1f}–{b:6.1f}s  ({b - a:.1f}s)")
-        bad += len(runs)
+        if fl:
+            print(f"    FLICKER at {fl[:10]} s (something blinked out and back)")
+        bad += len(runs) + len(fl)
     sys.exit(1 if bad else 0)

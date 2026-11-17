@@ -1,0 +1,9 @@
+📌 Quick summary: a p value is the chance of seeing data at least this extreme IF the boring explanation (H₀) were true. It is not the chance H₀ is true, not the size of the effect, and a big p value is not proof of nothing.
+
+Worth adding:
+• 4:57 The test here is one-sided (heads only). If you suspect the coin is off either way, count both tails: p ≈ 0.041.
+• 12:13 The 1-in-100 rigged-coin town is an illustration; the real chance a coin is rigged depends on how common rigged coins are.
+• 10:56 Model accuracies and the regression table are illustrations, not real results.
+• 9:54 The million-flip p value uses the normal approximation (exact binomial agrees: ≈ 0.00003).
+
+What's a result you've seen called 'significant' that you now want to check? 👇

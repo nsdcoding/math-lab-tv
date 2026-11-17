@@ -182,6 +182,7 @@ class Base(MovingCameraScene):
         """Like Manim's, but looks inside AnimationGroups: their wrapper Group is never added, so animating
         mobjects that already sit inside a group cannot pull them out of it and redraw them on top."""
         curr = self.get_mobject_family_members()
+        curr_ids = {id(x) for x in curr}
         def leaves(an):
             if isinstance(an, AnimationGroup):
                 for x in an.animations:
@@ -193,9 +194,14 @@ class Base(MovingCameraScene):
                 if x.is_introducer():
                     continue
                 m = x.mobject
-                if m is not None and m not in curr:
-                    self.add(m)
-                    curr += m.get_family()
+                if m is None or id(m) in curr_ids:
+                    continue
+                sub = m.get_family()[1:]
+                if sub and not x.remover and not getattr(x, "replace_mobject_with_target_in_scene", False) \
+                        and all(id(s_) in curr_ids for s_ in sub):
+                    continue      # a temporary group around mobjects already on screen: animate them where they are
+                self.add(m)
+                curr_ids |= {id(s_) for s_ in m.get_family()}
 
     def _restore_order(self, before, fam_before):
         """Animating mobjects that already sit inside a group (LaggedStart/AnimationGroup of pulses, Indicates…)
@@ -206,7 +212,13 @@ class Base(MovingCameraScene):
         out, placed = [], set()
         def put(m):
             fam = {id(x) for x in m.get_family()}
-            if fam & placed:
+            if fam <= placed:
+                return
+            if fam & placed:                  # partly placed already: place the missing pieces one by one
+                for s_ in m.submobjects:
+                    put(s_)
+                if id(m) not in placed and not m.submobjects:
+                    out.append(m); placed.add(id(m))
                 return
             out.append(m); placed.update(fam)
         for m in before:
@@ -805,8 +817,14 @@ def push(scene, old, new, direction=LEFT, run_time=0.8):
     """Slide `old` out and `new` in from the opposite side, like a camera pan between two stations."""
     d = 14.5 * direction
     new.shift(-d)
-    scene.play(old.animate.shift(d), new.animate.shift(d), run_time=run_time, rate_func=smooth)
-    scene.remove(old)
+    # move each existing piece itself (animating a temporary group that wraps on-screen mobjects makes them vanish)
+    # move exactly the scene's top-level pieces that belong to `old`: animating a group that is not itself in the
+    # scene makes Manim add it on top, so filled cards would cover their own labels during the slide
+    fam = {id(x) for x in old.get_family()}
+    olds = [m for m in scene.mobjects if id(m) in fam]
+    for m in olds: scene.qa_mute(m)          # leaving the frame: not part of the layout any more
+    scene.play(*[m.animate(rate_func=smooth).shift(d) for m in olds], new.animate(rate_func=smooth).shift(d), run_time=run_time)
+    scene.remove(*[x for m in olds for x in m.get_family()])
 
 
 def card_cue(title, mini, color=VIOLET):
@@ -879,3 +897,39 @@ def pulse(*mobs, s=1.12):
         *mobs, s = mobs
     c = VGroup(*[m.copy() for m in mobs]).get_center() if len(mobs) > 1 else mobs[0].get_center()
     return AnimationGroup(*[m.animate(rate_func=there_and_back).scale(s, about_point=c) for m in mobs])
+
+
+def speedometer(title="how surprising?", left="not surprising", right="very surprising", r=1.55):
+    """A real speedometer dial: coloured zones (calm → alarming), tick marks, end labels, a tapered needle on a hub.
+    Returns (group, angle tracker): the needle points at angle = tracker value, PI (far left) … 0 (far right)."""
+    zones = VGroup(*[Arc(radius=r, start_angle=PI - PI * a / 3, angle=-PI / 3 + 0.02).set_stroke(c, 16)
+                     for a, c in enumerate([AQUA, WARN, RED_])])
+    ticks = VGroup(*[Line(ORIGIN, RIGHT * (0.16 if k % 5 else 0.26)).set_stroke(INK2, 3 if k % 5 else 4)
+                     .rotate(PI - PI * k / 10, about_point=ORIGIN).shift(np.array([np.cos(PI - PI * k / 10), np.sin(PI - PI * k / 10), 0]) * (r - 0.38))
+                     for k in range(11)])
+    for x in ticks: x.qa_ignore = True
+    hub = Circle(0.13).set_stroke(BG, 3).set_fill(INK, 1)
+    hub.qa_ignore = True
+    ang = ValueTracker(PI * 0.97)
+    def mk_needle():
+        a = ang.get_value()
+        d = np.array([np.cos(a), np.sin(a), 0]); n = np.array([-d[1], d[0], 0])
+        c = hub.get_center()          # follows the dial wherever it is moved
+        rr = zones.width / 2 - 0.25
+        return Polygon(c + d * rr, c + n * 0.08, c - d * 0.22, c - n * 0.08).set_stroke(width=0).set_fill(INK, 1)
+    needle = always_redraw(mk_needle)
+    needle.qa_ignore = True
+    lab_l = T(left, 22, AQUA, weight=BOLD).next_to(np.array([-r, 0, 0]), DOWN, buff=0.25)
+    lab_r = T(right, 22, RED_, weight=BOLD).next_to(np.array([r, 0, 0]), DOWN, buff=0.25)
+    ttl = T(title, 28, INK, weight=BOLD).next_to(VGroup(lab_l, lab_r), DOWN, buff=0.22)
+    g = VGroup(zones, ticks, needle, hub, lab_l, lab_r, ttl)
+    g.zones, g.needle, g.hub = zones, needle, hub
+    return g, ang
+
+
+def pmf_list(n, p, total=1000):
+    """Expected count (of `total`) for each number of heads 0..n with heads-probability p."""
+    return [total * comb(n, k) * p ** k * (1 - p) ** (n - k) for k in range(n + 1)]
+
+
+EXP70 = pmf_list(20, 0.7)                 # a rigged coin that lands heads 70% of the time, 20 flips

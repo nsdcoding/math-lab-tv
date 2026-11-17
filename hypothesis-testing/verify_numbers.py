@@ -39,4 +39,21 @@ assert F(502, 1000) - F(500, 1000) == F(2, 1000)                   # ~2 extra co
 assert round((1 - 0.95**20) * 100) == 64
 # thresholds
 assert round(1 / (0.5 * erfc(5 / sqrt(2))) / 1e6, 1) == 3.5        # 5 sigma ~ 1 in 3.5 million
+# on-screen extras: Bayes count with 10,000 coins (1 in 100 rigged at 70% heads)
+rig_hits = 100 * power20; fair_hits = 9900 * p15
+assert round(float(rig_hits)) == 42 and round(float(fair_hits)) == 205
+assert round(float(rig_hits / (rig_hits + fair_hits)) * 100) == 17 and round(float(fair_hits / (rig_hits + fair_hits)) * 100) == 83
+# 70% coin over 20 flips peaks at 14 heads (~192 of 1,000); 100 flips: fair peak ~80, 70% peak ~87 per 1,000
+assert max(range(21), key=lambda k: pmf(20, k, F(7, 10))) == 14 and round(float(1000 * pmf(20, 14, F(7, 10)))) == 192
+assert round(float(1000 * pmf(100, 50, H))) == 80 and round(float(1000 * pmf(100, 70, F(7, 10)))) == 87
+assert 3_500_000 // 20 == 175_000                                    # physics line vs 1 in 20
+assert round(float(tail(5, 4)), 2) == 0.19                          # 5 flips, 4 heads: p ≈ 0.19
+# trade-off bars shown in "Two Ways to Be Wrong" (false-alarm % and miss % for each cut-off)
+for c_, fa, miss in [(13, 13.2, 22.8), (14, 5.8, 39.2), (15, 2.1, 58.4), (16, 0.6, 76.2)]:
+    assert round(float(tail(20, c_)) * 100, 1) == fa and round((1 - float(tail(20, c_, F(7, 10)))) * 100, 1) == miss
+assert round(float(tail(100, 59)) * 100, 1) == 4.4 and round((1 - float(tail(100, 59, F(7, 10)))) * 100, 1) == 0.7
+# "Tiny p" chart: p for a 50.2% coin that shows exactly 50.2% heads, by number of flips (normal approximation)
+def p_at(n): return 0.5 * erfc((0.002 * sqrt(n) / 0.5) / sqrt(2))
+assert [round(p_at(10 ** e), 2) for e in (2, 3, 4, 5)] == [0.48, 0.45, 0.34, 0.10] and p_at(10 ** 5.5) < 0.05 < p_at(10 ** 5)
+assert round(p_at(10 ** 6), 5) == 0.00003
 print("all numbers verified")

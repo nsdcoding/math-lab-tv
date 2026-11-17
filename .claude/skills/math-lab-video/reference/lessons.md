@@ -36,3 +36,15 @@
   live in other repositories; nothing from them is used here.
 - Links to files must include the branch (`https://github.com/nsdcoding/math-lab-tv/blob/<branch>/<path>`).
 - Files under 100 MB can be committed (a 15-min 1080p MP4 is ~60 MB).
+
+## Motion and flicker (Hypothesis Testing)
+- Never fade with an overshooting rate function (`ease_out_back`): opacity goes above 1 and an image blinks out
+  for a few frames. Use `ease_out_cubic` for fades; overshoot is fine for pure motion (a needle, a scale).
+- Animating mobjects that already sit inside a group with LaggedStart/AnimationGroup made Manim re-add them on
+  top of everything (cards drew over their own labels). `Base` now skips AnimationGroup wrappers and restores the
+  drawing order after every play.
+- Idle actors must move enough to see: a 1.06 pulse over a second is invisible. motion_check compares frames 0.2 s
+  apart; aim for pulses of 1.1+ and falls of a few units.
+- Gauges: use `speedometer()` (zones, ticks, end labels, needle on a hub), not a bare arc and line.
+- Images (stickers) placed partly off-frame are drawn in the wrong place for a frame or two. Never slide an
+  image in from off-screen: FadeIn(img, shift=...) from just inside the frame.

@@ -28,7 +28,7 @@ class S01Hook(Base):
         self.at("s001", 0.0)
         cafe = sticker("assets/cafe.png", 4.6).move_to(UP * 0.35 + DOWN * 3)
         cafe.set_opacity(0)
-        self.play(cafe.animate.shift(UP * 3).set_opacity(1), run_time=0.9, rate_func=rate_functions.ease_out_back)
+        self.play(cafe.animate(rate_func=rate_functions.ease_out_cubic).shift(UP * 3).set_opacity(1), run_time=0.9)   # no overshoot: opacity > 1 blanks an image
         cupL = cafe.get_center() + np.array([-0.42, 0.2, 0]); cupR = cafe.get_center() + np.array([0.48, 0.2, 0])
         self.idle(lambda: steam(cupL + rng.uniform(-0.1, 0.1) * RIGHT), lambda: steam(cupR + rng.uniform(-0.1, 0.1) * RIGHT))
         sun = VGroup(Circle(0.32).set_stroke(WARN, 4).set_fill(WARN, 0.9),
@@ -211,7 +211,7 @@ class S01Hook(Base):
             self.play(flipping(cr), FadeIn(strip[k], scale=1.4), FadeIn(lets[k]), run_time=0.17)
         self.word("s008", "impossible", dt=-0.5)
         stamp = pill("unusual, not impossible", AQUA, 32).rotate(4 * DEGREES).move_to(DOWN * 1.65)
-        self.play(FadeIn(stamp, scale=1.6), run_time=0.35, rate_func=rate_functions.ease_out_back)
+        self.play(FadeIn(stamp, scale=1.6), run_time=0.35, rate_func=rate_functions.ease_out_cubic)
         self.play(ripple(stamp.get_center(), AQUA, r=0.5, scale=4), run_time=0.6)
 
         # ── s009 how unusual? a heads number line ──

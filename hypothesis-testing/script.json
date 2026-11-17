@@ -23,14 +23,14 @@
   {
     "id": "s004",
     "chapter": "The Coffee Coin",
-    "text": "That means you paid for fifteen coffees. Your friend paid for five.",
+    "text": "So you bought fifteen of the coffees. Your friend bought just five.",
     "visual": "Two stacks of cup icons on a count axis 0–15: 'you paid 15' (orange), 'they paid 5' (blue).",
     "pause_after": 1.0
   },
   {
     "id": "s005",
     "chapter": "The Coffee Coin",
-    "text": "The first few times, you laughed it off. Coins are random, right? But by the end of the month, you start to wonder.",
+    "text": "The first few times, it seemed like luck. Coins are random, right? But by the end of the month, you start to wonder.",
     "visual": "Calendar pages flip; the tally grows; a small thought bubble '…hmm' over the 'you' icon.",
     "pause_after": 0.35
   },
@@ -240,7 +240,7 @@
   {
     "id": "s035",
     "chapter": "A Thousand Fair Coins",
-    "text": "Now, where does your friend's fifteen land?",
+    "text": "So, where does your friend's fifteen land?",
     "visual": "The warn pin from the hook drops onto 15 on the x-axis.",
     "pause_after": 0.8
   },
@@ -471,7 +471,7 @@
   {
     "id": "s068",
     "chapter": "What p Is Not",
-    "text": "If you had flipped only five times and got four heads, the p value would be large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
+    "text": "Suppose you flip a coin only five times, and get four heads. The p value is large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
     "visual": "Mini chart for 5 flips with a wide tail; caption 'not enough data ≠ no effect'.",
     "pause_after": 1.0
   },
@@ -522,6 +522,13 @@
     "chapter": "Two Ways to Be Wrong",
     "text": "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.",
     "visual": "Fair-coin chart (blue) with the aqua tail ≥15 labelled 'false alarm rate ≈ 2.1%'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s075a",
+    "chapter": "Two Ways to Be Wrong",
+    "text": "Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step.",
+    "visual": "Staircase of tail areas: ≥14 → 5.8% (above the α line), ≥15 → 2.1% (below); arrow 'nearest safe step'.",
     "pause_after": 0.35
   },
   {
@@ -604,9 +611,16 @@
   {
     "id": "s087",
     "chapter": "Tiny p, Tiny Effect",
-    "text": "But does it matter? If you used this coin for coffee, you'd pay for about two extra coffees in every thousand.",
+    "text": "But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand.",
     "visual": "Your share of 1,000 coffees: 502 (this coin) vs 500 (a fair coin), almost identical; caption '≈ 2 extra coffees per 1,000 flips'.",
     "pause_after": 1.5
+  },
+  {
+    "id": "s087a",
+    "chapter": "Tiny p, Tiny Effect",
+    "text": "And it works the other way too. A big effect can hide behind a big p value, when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips.",
+    "visual": "The 20-flip overlap picture returns small, beside the million-flip picture: 'big effect, little data' vs 'tiny effect, huge data'.",
+    "pause_after": 1.0
   },
   {
     "id": "s088",
@@ -655,6 +669,13 @@
     "chapter": "Real World",
     "text": "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.",
     "visual": "Labels shuffle between the two models several times; a little distribution of shuffled gaps builds.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s094a",
+    "chapter": "Real World",
+    "text": "And when you fit a linear regression, every input gets its own p value. It asks: if this input truly had no effect, how surprising would the slope we found be?",
+    "visual": "Mini regression table (illustration): rows 'size', 'age', 'colour' with slope and p columns; the p column glows aqua.",
     "pause_after": 0.35
   },
   {
@@ -709,7 +730,7 @@
   {
     "id": "s102",
     "chapter": "Common Mistakes",
-    "text": "Then, just like in the Bayes video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+    "text": "Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
     "visual": "Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).",
     "pause_after": 0.35
   },
@@ -732,6 +753,13 @@
     "chapter": "Common Mistakes",
     "text": "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent.",
     "visual": "Twenty fair-coin mini charts in a 5 × 4 grid; one by chance lands in its tail and glows; counter 'chance of ≥ 1 false alarm ≈ 64%'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s105a",
+    "chapter": "Common Mistakes",
+    "text": "This has a name. It's called p hacking: trying analysis after analysis until something crosses the line.",
+    "visual": "Chip 'p-hacking' stamps on in red over the grid of twenty charts.",
     "pause_after": 0.35
   },
   {
@@ -856,7 +884,7 @@
   {
     "id": "s123",
     "chapter": "Next Time",
-    "text": "It's the very same flip we caught today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
+    "text": "It's the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
     "visual": "The 'P(data | innocent)' vs 'P(innocent | data)' pair flips; chip 'next: the prosecutor's fallacy' under the logo.",
     "pause_after": 0.35
   },

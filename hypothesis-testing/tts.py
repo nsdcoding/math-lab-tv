@@ -22,7 +22,7 @@ URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
 SPOKEN_FIXES = {}
 # Per-segment spoken spellings: {segment id: [(written, spoken), ...]}
 SPOKEN_FIXES_BY_ID = {
-    "s108": [("with Bayes.", "with Bays.")],   # heard as "bass" at the end of the sentence
+    "s064": [("with Bayes.", "with Bays.")],   # heard as "bass" at the end of a sentence (Bayes video)
 }
 
 

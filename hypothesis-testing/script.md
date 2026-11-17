@@ -1,6 +1,6 @@
 # Hypothesis Testing and p Values Without the Confusion
 
-124 segments · 2471 words · est. 16.2 min (voice ≈165 wpm + 74 s pauses) · target 15–20 min
+128 segments · 2592 words · est. 17.0 min (voice ≈165 wpm + 76 s pauses) · target 15–20 min
 
 
 ## The Coffee Coin  ·  161 words, ~59 s
@@ -11,9 +11,9 @@
   - *Visual:* A coin icon (blue rim) with 'H' face; chip 'their coin · they call heads'.
 - **s003** After a month, you look back. Twenty flips. Heads came up fifteen times.
   - *Visual:* Tally board on axes (x: flip 1–20, y: H/T): 15 orange H dots, 5 blue T dots fill in one by one; counter '15 heads / 20'.
-- **s004** That means you paid for fifteen coffees. Your friend paid for five. ⏸1.0s
+- **s004** So you bought fifteen of the coffees. Your friend bought just five. ⏸1.0s
   - *Visual:* Two stacks of cup icons on a count axis 0–15: 'you paid 15' (orange), 'they paid 5' (blue).
-- **s005** The first few times, you laughed it off. Coins are random, right? But by the end of the month, you start to wonder.
+- **s005** The first few times, it seemed like luck. Coins are random, right? But by the end of the month, you start to wonder.
   - *Visual:* Calendar pages flip; the tally grows; a small thought bubble '…hmm' over the 'you' icon.
 - **s006** So here's the question. Is that coin rigged? Or did your friend just get lucky?
   - *Visual:* Split screen: left 'rigged?' (orange coin with a weight), right 'just luck?' (blue coin with a shrug). Big '?'.
@@ -85,7 +85,7 @@
   - *Visual:* Arrows run down both slopes; outer bars fade to nearly zero.
 - **s034** In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.
   - *Visual:* Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.
-- **s035** Now, where does your friend's fifteen land? ⏸0.8s
+- **s035** So, where does your friend's fifteen land? ⏸0.8s
   - *Visual:* The warn pin from the hook drops onto 15 on the x-axis.
 - **s036** Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.
   - *Visual:* Camera zooms to the right tail; the 15 bar glows warn; label '≈ 15 friends'; brackets show two spreads from 10.
@@ -157,12 +157,12 @@
   - *Visual:* A small ruler icon with a question mark.
 - **s067** Number three. A big p value does not prove the boring explanation.
   - *Visual:* Card 3 flips: 'NOT proof of nothing'.
-- **s068** If you had flipped only five times and got four heads, the p value would be large. That doesn't show the coin is fair. It just shows five flips can't tell you much. ⏸1.0s
+- **s068** Suppose you flip a coin only five times, and get four heads. The p value is large. That doesn't show the coin is fair. It just shows five flips can't tell you much. ⏸1.0s
   - *Visual:* Mini chart for 5 flips with a wide tail; caption 'not enough data ≠ no effect'.
 - **s069** In a courtroom, not guilty doesn't mean innocent. It means there wasn't enough evidence. ⏸1.0s
   - *Visual:* Gavel with 'not guilty' and a smaller line 'not proven innocent'.
 
-## Two Ways to Be Wrong  ·  234 words, ~85 s
+## Two Ways to Be Wrong  ·  269 words, ~98 s
 
 - **s070** Any test that makes a yes or no decision can be wrong in two different ways.
   - *Visual:* A 2 × 2 table on axes: columns 'coin really fair' (blue) / 'coin really rigged' (orange); rows 'we say rigged' / 'we say fair'.
@@ -176,6 +176,8 @@
   - *Visual:* Courtroom icon in the cell; the two correct cells turn green-grey 'correct'.
 - **s075** Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.
   - *Visual:* Fair-coin chart (blue) with the aqua tail ≥15 labelled 'false alarm rate ≈ 2.1%'.
+- **s075a** Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step.
+  - *Visual:* Staircase of tail areas: ≥14 → 5.8% (above the α line), ≥15 → 2.1% (below); arrow 'nearest safe step'.
 - **s076** But what about misses? Suppose the coin really is rigged, and lands heads seventy percent of the time.
   - *Visual:* A second distribution (orange) for a 70%-heads coin slides in above the blue one, centred at 14 (illustration: a 70% coin).
 - **s077** Then fifteen heads or more happens only about forty two percent of the time. So more than half the time, our test would miss it. ⏸1.5s
@@ -189,7 +191,7 @@
 - **s081** That's the trade off. A stricter line means fewer false alarms but more misses. And the main way to cut both at once is more data. ⏸1.0s
   - *Visual:* A seesaw: 'false alarms' vs 'misses'; a block labelled 'more data' lifts both sides down.
 
-## Tiny p, Tiny Effect  ·  176 words, ~64 s
+## Tiny p, Tiny Effect  ·  213 words, ~77 s
 
 - **s082** Now let's come back to that second thing a p value is not. A measure of size.
   - *Visual:* Card 2 from 'What p Is Not' returns: 'NOT how big the effect is'.
@@ -201,14 +203,16 @@
   - *Visual:* Fair-coin bell (blue) for a million flips, x-axis 498,000–502,000 ticks every 1,000; brackets of 500 each; warn pin at 502,000.
 - **s086** The p value is about zero point zero zero zero zero three. Three in a hundred thousand. Incredibly significant. ⏸1.0s
   - *Visual:* Tiny aqua tail; 'p ≈ 0.00003' in big aqua; stamp 'highly significant'.
-- **s087** But does it matter? If you used this coin for coffee, you'd pay for about two extra coffees in every thousand. ⏸1.5s
+- **s087** But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand. ⏸1.5s
   - *Visual:* Your share of 1,000 coffees: 502 (this coin) vs 500 (a fair coin), almost identical; caption '≈ 2 extra coffees per 1,000 flips'.
+- **s087a** And it works the other way too. A big effect can hide behind a big p value, when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips. ⏸1.0s
+  - *Visual:* The 20-flip overlap picture returns small, beside the million-flip picture: 'big effect, little data' vs 'tiny effect, huge data'.
 - **s088** So the p value tells you whether an effect is probably there. It does not tell you whether it's big enough to care about.
   - *Visual:* Two dials: 'is it there?' (aqua, p value) and 'how big is it?' (orange, effect size).
 - **s089** With enough data, almost any tiny difference becomes significant. That's why good reports show both the p value and the size of the effect. ⏸1.0s
   - *Visual:* Checklist card: '✓ p value  ✓ effect size'.
 
-## Real World  ·  212 words, ~77 s
+## Real World  ·  243 words, ~88 s
 
 - **s090** So where will you actually meet this?
   - *Visual:* Four tiles: Machine Learning, Data Science, Finance, Computer Science.
@@ -220,6 +224,8 @@
   - *Visual:* Machine Learning tile: two model cards 'accuracy 91.2%' vs '91.6%'; a coin-flip icon between them.
 - **s094** A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.
   - *Visual:* Labels shuffle between the two models several times; a little distribution of shuffled gaps builds.
+- **s094a** And when you fit a linear regression, every input gets its own p value. It asks: if this input truly had no effect, how surprising would the slope we found be?
+  - *Visual:* Mini regression table (illustration): rows 'size', 'age', 'colour' with slope and p columns; the p column glows aqua.
 - **s095** In finance, a trader backtests a strategy and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck.
   - *Visual:* Finance tile: a jagged price line with a profit arrow; blue card 'no real edge'.
 - **s096** And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment.
@@ -229,7 +235,7 @@
 - **s098** Different worlds, same question as your coffee. Real effect, or just chance? ⏸1.0s
   - *Visual:* All four tiles shrink around the coffee coin in the centre.
 
-## Common Mistakes  ·  246 words, ~89 s
+## Common Mistakes  ·  264 words, ~96 s
 
 - **s099** Let's finish with the most common mistakes, because they trip up beginners and experts alike.
   - *Visual:* Three red mistake cards slide in, face down.
@@ -237,7 +243,7 @@
   - *Visual:* Card 1 flips: 'p = chance the coin is fair?' (red).
 - **s101** Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.
   - *Visual:* Illustration: a grid of 100 coins on equal-scale axes, 1 orange (rigged) and 99 blue (fair); chip 'illustration'.
-- **s102** Then, just like in the Bayes video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.
+- **s102** Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.
   - *Visual:* Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).
 - **s103** The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers. ⏸1.5s
   - *Visual:* Side by side: 'p ≈ 0.021' (aqua) vs 'chance rigged ≈ 17%' (violet), with '≠' between them.
@@ -245,6 +251,8 @@
   - *Visual:* Card 2 flips: 'testing many things, reporting one' (red).
 - **s105** If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent.
   - *Visual:* Twenty fair-coin mini charts in a 5 × 4 grid; one by chance lands in its tail and glows; counter 'chance of ≥ 1 false alarm ≈ 64%'.
+- **s105a** This has a name. It's called p hacking: trying analysis after analysis until something crosses the line.
+  - *Visual:* Chip 'p-hacking' stamps on in red over the grid of twenty charts.
 - **s106** That's how a lucky trading strategy, or a surprising headline, can come from pure noise. If you test many things, you need a stricter line. ⏸1.0s
   - *Visual:* The glowing chart is stamped 'lucky, not real'; the violet line moves further right.
 - **s107** Mistake three: treating not significant as proof there's no effect.
@@ -288,7 +296,7 @@
   - *Visual:* Courtroom line art; a card 'chance an innocent person matches: 1 in 1,000,000'.
 - **s122** So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way.
   - *Visual:* Speech bubble 'so 1 in a million they're innocent?' with a red question mark.
-- **s123** It's the very same flip we caught today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.
+- **s123** It's the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.
   - *Visual:* The 'P(data | innocent)' vs 'P(innocent | data)' pair flips; chip 'next: the prosecutor's fallacy' under the logo.
 - **s124** I will see you in the next video. ⏸2.0s
   - *Visual:* Logo + next chip hold.

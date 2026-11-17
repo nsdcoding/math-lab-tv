@@ -50,9 +50,9 @@ seg(c, "It's always your friend's coin. And your friend always calls heads.",
     "A coin icon (blue rim) with 'H' face; chip 'their coin · they call heads'.")
 seg(c, "After a month, you look back. Twenty flips. Heads came up fifteen times.",
     "Tally board on axes (x: flip 1–20, y: H/T): 15 orange H dots, 5 blue T dots fill in one by one; counter '15 heads / 20'.")
-seg(c, "That means you paid for fifteen coffees. Your friend paid for five.",
+seg(c, "So you bought fifteen of the coffees. Your friend bought just five.",
     "Two stacks of cup icons on a count axis 0–15: 'you paid 15' (orange), 'they paid 5' (blue).", 1.0)
-seg(c, "The first few times, you laughed it off. Coins are random, right? But by the end of the month, you start to wonder.",
+seg(c, "The first few times, it seemed like luck. Coins are random, right? But by the end of the month, you start to wonder.",
     "Calendar pages flip; the tally grows; a small thought bubble '…hmm' over the 'you' icon.")
 seg(c, "So here's the question. Is that coin rigged? Or did your friend just get lucky?",
     "Split screen: left 'rigged?' (orange coin with a weight), right 'just luck?' (blue coin with a shrug). Big '?'.")
@@ -124,7 +124,7 @@ seg(c, "Results further from ten get rarer and rarer, on both sides.",
     "Arrows run down both slopes; outer bars fade to nearly zero.")
 seg(c, "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.",
     "Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.")
-seg(c, "Now, where does your friend's fifteen land?",
+seg(c, "So, where does your friend's fifteen land?",
     "The warn pin from the hook drops onto 15 on the x-axis.", 0.8)
 seg(c, "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.",
     "Camera zooms to the right tail; the 15 bar glows warn; label '≈ 15 friends'; brackets show two spreads from 10.")
@@ -196,7 +196,7 @@ seg(c, "A tiny p value does not mean the coin is very rigged. We'll see why in a
     "A small ruler icon with a question mark.")
 seg(c, "Number three. A big p value does not prove the boring explanation.",
     "Card 3 flips: 'NOT proof of nothing'.")
-seg(c, "If you had flipped only five times and got four heads, the p value would be large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
+seg(c, "Suppose you flip a coin only five times, and get four heads. The p value is large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
     "Mini chart for 5 flips with a wide tail; caption 'not enough data ≠ no effect'.", 1.0)
 seg(c, "In a courtroom, not guilty doesn't mean innocent. It means there wasn't enough evidence.",
     "Gavel with 'not guilty' and a smaller line 'not proven innocent'.", 1.0)
@@ -215,6 +215,8 @@ seg(c, "In the courtroom, that's letting a guilty person walk free.",
     "Courtroom icon in the cell; the two correct cells turn green-grey 'correct'.", 1.0)
 seg(c, "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.",
     "Fair-coin chart (blue) with the aqua tail ≥15 labelled 'false alarm rate ≈ 2.1%'.")
+seg(c, "Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step.",
+    "Staircase of tail areas: ≥14 → 5.8% (above the α line), ≥15 → 2.1% (below); arrow 'nearest safe step'.", sid="s075a")
 seg(c, "But what about misses? Suppose the coin really is rigged, and lands heads seventy percent of the time.",
     "A second distribution (orange) for a 70%-heads coin slides in above the blue one, centred at 14 (illustration: a 70% coin).")
 seg(c, "Then fifteen heads or more happens only about forty two percent of the time. So more than half the time, our test would miss it.",
@@ -240,8 +242,10 @@ seg(c, "For a fair coin, the spread over a million flips is about five hundred h
     "Fair-coin bell (blue) for a million flips, x-axis 498,000–502,000 ticks every 1,000; brackets of 500 each; warn pin at 502,000.")
 seg(c, "The p value is about zero point zero zero zero zero three. Three in a hundred thousand. Incredibly significant.",
     "Tiny aqua tail; 'p ≈ 0.00003' in big aqua; stamp 'highly significant'.", 1.0)
-seg(c, "But does it matter? If you used this coin for coffee, you'd pay for about two extra coffees in every thousand.",
+seg(c, "But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand.",
     "Your share of 1,000 coffees: 502 (this coin) vs 500 (a fair coin), almost identical; caption '≈ 2 extra coffees per 1,000 flips'.", 1.5)
+seg(c, "And it works the other way too. A big effect can hide behind a big p value, when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips.",
+    "The 20-flip overlap picture returns small, beside the million-flip picture: 'big effect, little data' vs 'tiny effect, huge data'.", 1.0, sid="s087a")
 seg(c, "So the p value tells you whether an effect is probably there. It does not tell you whether it's big enough to care about.",
     "Two dials: 'is it there?' (aqua, p value) and 'how big is it?' (orange, effect size).")
 seg(c, "With enough data, almost any tiny difference becomes significant. That's why good reports show both the p value and the size of the effect.",
@@ -259,6 +263,8 @@ seg(c, "In machine learning, you compare two models on the same test set. One sc
     "Machine Learning tile: two model cards 'accuracy 91.2%' vs '91.6%'; a coin-flip icon between them.")
 seg(c, "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.",
     "Labels shuffle between the two models several times; a little distribution of shuffled gaps builds.")
+seg(c, "And when you fit a linear regression, every input gets its own p value. It asks: if this input truly had no effect, how surprising would the slope we found be?",
+    "Mini regression table (illustration): rows 'size', 'age', 'colour' with slope and p columns; the p column glows aqua.", sid="s094a")
 seg(c, "In finance, a trader backtests a strategy and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck.",
     "Finance tile: a jagged price line with a profit arrow; blue card 'no real edge'.")
 seg(c, "And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment.",
@@ -276,7 +282,7 @@ seg(c, "Mistake one: reading the p value as the chance the boring explanation is
     "Card 1 flips: 'p = chance the coin is fair?' (red).")
 seg(c, "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.",
     "Illustration: a grid of 100 coins on equal-scale axes, 1 orange (rigged) and 99 blue (fair); chip 'illustration'.")
-seg(c, "Then, just like in the Bayes video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+seg(c, "Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
     "Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).")
 seg(c, "The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers.",
     "Side by side: 'p ≈ 0.021' (aqua) vs 'chance rigged ≈ 17%' (violet), with '≠' between them.", 1.5)
@@ -284,6 +290,8 @@ seg(c, "Mistake two: running lots of tests, and only reporting the one that work
     "Card 2 flips: 'testing many things, reporting one' (red).")
 seg(c, "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent.",
     "Twenty fair-coin mini charts in a 5 × 4 grid; one by chance lands in its tail and glows; counter 'chance of ≥ 1 false alarm ≈ 64%'.")
+seg(c, "This has a name. It's called p hacking: trying analysis after analysis until something crosses the line.",
+    "Chip 'p-hacking' stamps on in red over the grid of twenty charts.", sid="s105a")
 seg(c, "That's how a lucky trading strategy, or a surprising headline, can come from pure noise. If you test many things, you need a stricter line.",
     "The glowing chart is stamped 'lucky, not real'; the violet line moves further right.", 1.0)
 seg(c, "Mistake three: treating not significant as proof there's no effect.",
@@ -327,7 +335,7 @@ seg(c, "In a courtroom, an expert says there's only a one in a million chance th
     "Courtroom line art; a card 'chance an innocent person matches: 1 in 1,000,000'.")
 seg(c, "So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way.",
     "Speech bubble 'so 1 in a million they're innocent?' with a red question mark.")
-seg(c, "It's the very same flip we caught today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
+seg(c, "It's the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
     "The 'P(data | innocent)' vs 'P(innocent | data)' pair flips; chip 'next: the prosecutor's fallacy' under the logo.")
 seg(c, "I will see you in the next video.", "Logo + next chip hold.", 2.0)
 

@@ -1,0 +1,829 @@
+[
+ {
+  "id": "s001",
+  "text": "Every morning, you and a friend get coffee together. And every morning, you flip a coin to decide who pays.",
+  "heard": "Every morning, you and a friend get coffee together. And every morning, you flip a coin to decide who pays.",
+  "diffs": []
+ },
+ {
+  "id": "s002",
+  "text": "It's always your friend's coin. And your friend always calls heads.",
+  "heard": "It's always your friend's coin. And your friend always calls heads.",
+  "diffs": []
+ },
+ {
+  "id": "s003",
+  "text": "After a month, you look back. Twenty flips. Heads came up fifteen times.",
+  "heard": "After a month you look back. Twenty flips. Heads came up fifteen times.",
+  "diffs": []
+ },
+ {
+  "id": "s004",
+  "text": "So you bought fifteen of the coffees. Your friend bought just five.",
+  "heard": "So you bought fifteen of the coffees, your friend bought just five,",
+  "diffs": []
+ },
+ {
+  "id": "s005",
+  "text": "The first few times, it seemed like luck. Coins are random, right? But by the end of the month, you start to wonder.",
+  "heard": "The first few times, it seemed like luck. Coins are random, right? But by the end of the month, you start to wonder.",
+  "diffs": []
+ },
+ {
+  "id": "s006",
+  "text": "So here's the question. Is that coin rigged? Or did your friend just get lucky?",
+  "heard": "So here's the question: Is that coin rigged, or did your friend just get lucky?",
+  "diffs": []
+ },
+ {
+  "id": "s007",
+  "text": "Take a second, and decide what you think.",
+  "heard": "Take a second and decide what you think.",
+  "diffs": []
+ },
+ {
+  "id": "s008",
+  "text": "Your gut probably says something is off. But a fair coin can come up heads fifteen times. It's not impossible.",
+  "heard": "Your gut probably says something is off, but a fair coin can come up heads fifteen times. It's not impossible.",
+  "diffs": []
+ },
+ {
+  "id": "s009",
+  "text": "So how unusual is fifteen out of twenty, really? Unusual enough to call it rigged?",
+  "heard": "So how unusual is fifteen out of twenty, really? Unusual enough to call it rigged?",
+  "diffs": []
+ },
+ {
+  "id": "s010",
+  "text": "There is a tool built for exactly this question. It's called hypothesis testing, and the number it gives you is called a p value.",
+  "heard": "There is a tool built for exactly this question. It's called hypothesis testing, and the number it gives you is called a p-value.",
+  "diffs": []
+ },
+ {
+  "id": "s011",
+  "text": "Welcome to Math Lab TV. Where math is something you can see.",
+  "heard": "Welcome to Math Lab TV, where math is something you can see.",
+  "diffs": []
+ },
+ {
+  "id": "s012",
+  "text": "Today you will learn how to test a claim, by asking what boring old chance would usually do.",
+  "heard": "Today you will learn how to test a claim by asking what boring old chance would usually do.",
+  "diffs": []
+ },
+ {
+  "id": "s013",
+  "text": "You will see exactly what a p value measures, as an area you can point at.",
+  "heard": "You will see exactly what a p-value measures as an area you can point at.",
+  "diffs": []
+ },
+ {
+  "id": "s014",
+  "text": "And you will see the two ways a test can be wrong, and the traps that fool even scientists.",
+  "heard": "And you will see the two ways a test can be wrong and the traps that fool even scientists.",
+  "diffs": []
+ },
+ {
+  "id": "s015",
+  "text": "In our Bayes video, we left you with a puzzle.",
+  "heard": "In our Bayes video, we left you with a puzzle.",
+  "diffs": []
+ },
+ {
+  "id": "s016",
+  "text": "Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.",
+  "heard": "Scientists often report a p-value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.",
+  "diffs": []
+ },
+ {
+  "id": "s017",
+  "text": "We said that description flips the question. Today, we'll see what a p value really measures, and you'll see the flip with your own eyes.",
+  "heard": "We said that description flips the question. Today, we'll see what a p-value really measures, and you'll see the flip with your own eyes.",
+  "diffs": []
+ },
+ {
+  "id": "s018",
+  "text": "And this matters, because p values are everywhere.",
+  "heard": "And this matters, because p-values are everywhere.",
+  "diffs": []
+ },
+ {
+  "id": "s019",
+  "text": "A new medicine is tested against a sugar pill. A website tries a new button colour. A trader checks if a strategy beats luck.",
+  "heard": "A new medicine is tested against a sugar pill. A website tries a new button color. A trader checks if a strategy beats luck.",
+  "diffs": [
+   [
+    "colour",
+    "color"
+   ]
+  ]
+ },
+ {
+  "id": "s020",
+  "text": "Every one of them asks the same thing as you and your friend. Is this a real effect, or just chance?",
+  "heard": "Every one of them asks the same thing as you and your friend. Is this a real effect or just chance?",
+  "diffs": []
+ },
+ {
+  "id": "s021",
+  "text": "Hypothesis testing starts in a strange place. Not with what you suspect, but with the most boring explanation there is.",
+  "heard": "Hypothesis testing starts in a strange place. Not with what you suspect, but with the most boring explanation there is.",
+  "diffs": []
+ },
+ {
+  "id": "s022",
+  "text": "For our coin, the boring explanation is simple. The coin is fair. Heads and tails are equally likely, and fifteen heads was just luck.",
+  "heard": "For our coin, the boring explanation is simple. The coin is fair. Heads and tails are equally likely, and fifteen heads was just luck.",
+  "diffs": []
+ },
+ {
+  "id": "s023",
+  "text": "This boring explanation has a name. It's called the null hypothesis. Null just means nothing. Nothing special is going on.",
+  "heard": "This boring explanation has a name, it's called the null hypothesis. Null just means nothing. Nothing special is going on.",
+  "diffs": []
+ },
+ {
+  "id": "s024",
+  "text": "Your suspicion, that the coin favours heads, is called the alternative hypothesis.",
+  "heard": "Your suspicion that the coin favors heads is called the alternative hypothesis.",
+  "diffs": [
+   [
+    "favours",
+    "favors"
+   ]
+  ]
+ },
+ {
+  "id": "s025",
+  "text": "Here's the key idea. We don't try to prove the alternative directly. Instead, we pretend the boring explanation is true, and ask how surprising our result would be.",
+  "heard": "Here's the key idea: We don't try to prove the alternative directly. Instead, we pretend the boring explanation is true, and ask how surprising our result would be.",
+  "diffs": []
+ },
+ {
+  "id": "s026",
+  "text": "It's just like a courtroom. The defendant is presumed innocent. The prosecution has to show the evidence would be very hard to explain if they were innocent.",
+  "heard": "It's just like a courtroom, the defendant is presumed innocent, the prosecution has to show the evidence would be very hard to explain if they were innocent.",
+  "diffs": []
+ },
+ {
+  "id": "s027",
+  "text": "The null hypothesis is the innocent defendant. And our fifteen heads is the evidence.",
+  "heard": "The null hypothesis is the innocent defendant, and our fifteen heads is the evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s028",
+  "text": "So, if the coin really is fair, what would twenty flips usually look like?",
+  "heard": "So, if the coin really is fair, what would twenty flips usually look like?",
+  "diffs": []
+ },
+ {
+  "id": "s029",
+  "text": "Let's find out with a thought experiment. Imagine a thousand friends, each with a perfectly fair coin, each flipping it twenty times.",
+  "heard": "Let's find out with a thought experiment. Imagine a thousand friends, each with a perfectly fair coin, each flipping it twenty times.",
+  "diffs": []
+ },
+ {
+  "id": "s030",
+  "text": "Each friend counts their heads. Then we stack them up by how many heads they got.",
+  "heard": "Each friend counts their heads. Then we stack them up by how many heads they got.",
+  "diffs": []
+ },
+ {
+  "id": "s031",
+  "text": "This picture has a name. It's called a distribution. It just shows every possible result, and how often each one happens.",
+  "heard": "This picture has a name. It's called a distribution. It just shows every possible result, and how often each one happens.",
+  "diffs": []
+ },
+ {
+  "id": "s032",
+  "text": "Look at the shape. Most friends land near ten heads, the middle. About one hundred and seventy six of them get exactly ten.",
+  "heard": "Look at the shape. Most friends land near ten heads, the middle. About one hundred and seventy-six of them get exactly ten.",
+  "diffs": []
+ },
+ {
+  "id": "s033",
+  "text": "Results further from ten get rarer and rarer, on both sides.",
+  "heard": "Results further from ten get rarer and rarer on both sides.",
+  "diffs": []
+ },
+ {
+  "id": "s034",
+  "text": "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.",
+  "heard": "In our standard deviation video we learned to measure spread here the typical spread is about two heads either side of ten",
+  "diffs": []
+ },
+ {
+  "id": "s035",
+  "text": "So, where does your friend's fifteen land?",
+  "heard": "So where does your friend's fifteen land?",
+  "diffs": []
+ },
+ {
+  "id": "s036",
+  "text": "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.",
+  "heard": "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.",
+  "diffs": []
+ },
+ {
+  "id": "s037",
+  "text": "But we don't just ask about exactly fifteen. We ask: how many fair coins did at least this well? Fifteen heads, or sixteen, or seventeen, all the way to twenty.",
+  "heard": "But we don't just ask about exactly fifteen, we ask how many fair coins did at least this well, fifteen heads, or sixteen, or seventeen, all the way to twenty.",
+  "diffs": []
+ },
+ {
+  "id": "s038",
+  "text": "Let's fill in that tail.",
+  "heard": "Let's fill in that tail.",
+  "diffs": []
+ },
+ {
+  "id": "s039",
+  "text": "About twenty one friends out of a thousand. That's roughly two in a hundred.",
+  "heard": "About twenty-one friends out of a thousand. That's roughly two in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s040",
+  "text": "And that is the p value. Zero point zero two one.",
+  "heard": "And that is the p value zero point zero two one",
+  "diffs": []
+ },
+ {
+  "id": "s041",
+  "text": "In plain words: if the coin were fair, a result this extreme or more would happen only about two times in a hundred.",
+  "heard": "In plain words, if the coin were fair, a result this extreme or more would happen only about two times in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s042",
+  "text": "We don't actually need a thousand friends. There are about a million different ways twenty flips can come out, all equally likely for a fair coin.",
+  "heard": "We don't actually need a thousand friends. There are about a million different ways twenty flips can come out, all equally likely for a fair coin.",
+  "diffs": []
+ },
+ {
+  "id": "s043",
+  "text": "Exactly twenty one thousand seven hundred of them have fifteen heads or more. Divide, and you get the same zero point zero two one.",
+  "heard": "Exactly twenty-one thousand seven hundred of them have fifteen heads or more. Divide, and you get the same zero point zero two one.",
+  "diffs": []
+ },
+ {
+  "id": "s044",
+  "text": "Let's give it symbols. People write p equals the probability of data at least this extreme, given that the null hypothesis is true.",
+  "heard": "Let's give it symbols. People write p equals the probability of data at least this extreme, given that the null hypothesis is true.",
+  "diffs": []
+ },
+ {
+  "id": "s045",
+  "text": "The capital P means probability. H zero is the null hypothesis. And the straight line means given, or assuming.",
+  "heard": "The capital P means probability. H zero is the null hypothesis. And the straight line means given or assuming.",
+  "diffs": []
+ },
+ {
+  "id": "s046",
+  "text": "Remember that straight line. It's going to matter a lot.",
+  "heard": "Remember that straight line. It's going to matter a lot.",
+  "diffs": []
+ },
+ {
+  "id": "s047",
+  "text": "One honest detail. We only counted the heads side, because your suspicion was about heads. If you'd suspected the coin was off in either direction, you'd count both tails, and the p value would double to about zero point zero four.",
+  "heard": "One honest detail. We only counted the head side because your suspicion was about heads. If you'd suspected the coin was off in either direction, you'd count both tails, and the p-value would double to about zero point zero four.",
+  "diffs": [
+   [
+    "heads",
+    "head"
+   ]
+  ]
+ },
+ {
+  "id": "s048",
+  "text": "So, two in a hundred. Is that rare enough to call the coin rigged?",
+  "heard": "So two in a hundred. Is that rare enough to call the coin rigged?",
+  "diffs": []
+ },
+ {
+  "id": "s049",
+  "text": "To decide, people choose a cut off before they look at the data. It's called the significance level, and it's written with the Greek letter alpha.",
+  "heard": "To decide, people choose a cutoff before they look at the data. It's called the significance level, and it's written with the Greek letter alpha.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s050",
+  "text": "The most common choice is zero point zero five. One in twenty.",
+  "heard": "The most common choice is zero point zero five, one in twenty.",
+  "diffs": []
+ },
+ {
+  "id": "s051",
+  "text": "The rule is: if the p value is smaller than alpha, we say the result is statistically significant, and we reject the boring explanation.",
+  "heard": "The rule is if the p-value is smaller than alpha we say the result is statistically significant and we reject the boring explanation.",
+  "diffs": []
+ },
+ {
+  "id": "s052",
+  "text": "Our p value is zero point zero two one. That's below zero point zero five. So at this line, we'd reject the idea that the coin is fair.",
+  "heard": "Our P value is zero point zero two one. That's below zero point zero five. So at this line, we'd reject the idea that the coin is fair.",
+  "diffs": []
+ },
+ {
+  "id": "s053",
+  "text": "But here's something most people never hear. That line is not a law of nature. Somebody chose it.",
+  "heard": "But here's something most people never hear. That line is not a law of nature. Somebody chose it.",
+  "diffs": []
+ },
+ {
+  "id": "s054",
+  "text": "The statistician Ronald Fisher suggested one in twenty about a hundred years ago, as a convenient rule of thumb. It stuck.",
+  "heard": "The statistician Ronald Fisher suggested one in twenty about a hundred years ago as a convenient rule of thumb. It stuck.",
+  "diffs": []
+ },
+ {
+  "id": "s055",
+  "text": "Other fields draw the line in very different places. Particle physicists want something like one in three and a half million before they announce a discovery.",
+  "heard": "Other fields draw the line in very different places. Particle physicists want something like one in three and a half million before they announce a discovery.",
+  "diffs": []
+ },
+ {
+  "id": "s056",
+  "text": "And watch what the line does to our coin. Fifteen heads gives a p value of zero point zero two one. Significant.",
+  "heard": "And watch what the line does to our coin. Fifteen heads gives a p-value of zero point zero two one. Significant.",
+  "diffs": []
+ },
+ {
+  "id": "s057",
+  "text": "Fourteen heads gives about zero point zero five eight. Not significant.",
+  "heard": "Fourteen heads gives about zero point zero five eight. Not significant.",
+  "diffs": []
+ },
+ {
+  "id": "s058",
+  "text": "One coin flip apart. The evidence barely changed, but the verdict flipped completely.",
+  "heard": "One coin flip apart. The evidence barely changed, but the verdict flipped completely.",
+  "diffs": []
+ },
+ {
+  "id": "s059",
+  "text": "So treat significant and not significant as a rough sign, not a magic switch. Always look at the p value itself, and at the size of the effect.",
+  "heard": "So treat significant and not significant as a rough sign, not a magic switch. Always look at the p-value itself and at the size of the effect.",
+  "diffs": []
+ },
+ {
+  "id": "s060",
+  "text": "Now that we know what a p value is, let's be very clear about three things it is not.",
+  "heard": "Now that we know what a p-value is, let's be very clear about three things it is not.",
+  "diffs": []
+ },
+ {
+  "id": "s061",
+  "text": "Number one. It is not the chance that the coin is fair.",
+  "heard": "Number one. It is not the chance that the coin is fair.",
+  "diffs": []
+ },
+ {
+  "id": "s062",
+  "text": "A p value of zero point zero two one does not mean a two percent chance the coin is fair, or a two percent chance it was a fluke.",
+  "heard": "A P-value of zero point zero two one does not mean a two percent chance the coin is fair, or a two percent chance it was a fluke.",
+  "diffs": []
+ },
+ {
+  "id": "s063",
+  "text": "Remember the straight line. The p value assumes the coin is fair, then asks about the data. It does not ask about the coin.",
+  "heard": "Remember the straight line. The P value assumes the coin is fair, then asks about the data. It does not ask about the coin.",
+  "diffs": []
+ },
+ {
+  "id": "s064",
+  "text": "This is the same flip we saw with Bayes. The chance a sick person tests positive is not the chance a positive person is sick. And the chance of this data from a fair coin is not the chance the coin is fair.",
+  "heard": "This is the same flip we saw with Bayes. The chance a sick person tests positive is not the chance a positive person is sick, and the chance of this data from a fair coin is not the chance the coin is fair.",
+  "diffs": []
+ },
+ {
+  "id": "s065",
+  "text": "Number two. It is not a measure of how big the effect is.",
+  "heard": "Number two. It is not a measure of how big the effect is.",
+  "diffs": []
+ },
+ {
+  "id": "s066",
+  "text": "A tiny p value does not mean the coin is very rigged. We'll see why in a moment.",
+  "heard": "A tiny p-value does not mean the coin is very rigged. We'll see why in a moment.",
+  "diffs": []
+ },
+ {
+  "id": "s067",
+  "text": "Number three. A big p value does not prove the boring explanation.",
+  "heard": "Number three a big P value does not prove the boring explanation.",
+  "diffs": []
+ },
+ {
+  "id": "s068",
+  "text": "Suppose you flip a coin only five times, and get four heads. The p value is large. That doesn't show the coin is fair. It just shows five flips can't tell you much.",
+  "heard": "Suppose you flip a coin only five times and get four heads. The p-value is large. That doesn't show the coin is fair, it just shows five flips can't tell you much.",
+  "diffs": []
+ },
+ {
+  "id": "s069",
+  "text": "In a courtroom, not guilty doesn't mean innocent. It means there wasn't enough evidence.",
+  "heard": "In a courtroom, not guilty doesn't mean innocent, it means there wasn't enough evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s070",
+  "text": "Any test that makes a yes or no decision can be wrong in two different ways.",
+  "heard": "Any test that makes a yes or no decision can be wrong in two different ways.",
+  "diffs": []
+ },
+ {
+  "id": "s071",
+  "text": "The first way: the coin is fair, but we call it rigged anyway. That's a false alarm. Statisticians call it a type one error.",
+  "heard": "The first way. The coin is fair, but we call it rigged anyway. That's a false alarm. Statisticians call it a type one error.",
+  "diffs": []
+ },
+ {
+  "id": "s072",
+  "text": "In the courtroom, that's convicting an innocent person.",
+  "heard": "In the courtroom, that's convicting an innocent person.",
+  "diffs": []
+ },
+ {
+  "id": "s073",
+  "text": "The second way: the coin really is rigged, but we say it's fair. That's a miss. It's called a type two error.",
+  "heard": "The second way, the coin really is rigged, but we say it's fair. That's a miss. It's called a type two error.",
+  "diffs": []
+ },
+ {
+  "id": "s074",
+  "text": "In the courtroom, that's letting a guilty person walk free.",
+  "heard": "In the courtroom, that's letting a guilty person walk free.",
+  "diffs": []
+ },
+ {
+  "id": "s075",
+  "text": "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.",
+  "heard": "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s075a",
+  "text": "Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step.",
+  "heard": "Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step.",
+  "diffs": []
+ },
+ {
+  "id": "s076",
+  "text": "But what about misses? Suppose the coin really is rigged, and lands heads seventy percent of the time.",
+  "heard": "But what about misses? Suppose the coin really is rigged and lands heads seventy percent of the time.",
+  "diffs": []
+ },
+ {
+  "id": "s077",
+  "text": "Then fifteen heads or more happens only about forty two percent of the time. So more than half the time, our test would miss it.",
+  "heard": "Then fifteen heads or more happens only about forty-two percent of the time. So more than half the time, our test would miss it.",
+  "diffs": []
+ },
+ {
+  "id": "s078",
+  "text": "Twenty flips just isn't much evidence. Both pictures overlap a lot.",
+  "heard": "Twenty flips just isn't much evidence. Both pictures overlap a lot.",
+  "diffs": []
+ },
+ {
+  "id": "s079",
+  "text": "Now flip a hundred times instead. The two pictures pull apart. With a cut off at fifty nine heads, a fair coin is still falsely accused under five times in a hundred.",
+  "heard": "Now flip a hundred times instead. The two pictures pull apart. With a cutoff at fifty-nine heads, a fair coin is still falsely accused under five times in a hundred.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s080",
+  "text": "And the rigged coin gets caught about ninety nine times in a hundred.",
+  "heard": "And the rigged coin gets caught about ninety-nine times in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s081",
+  "text": "That's the trade off. A stricter line means fewer false alarms but more misses. And the main way to cut both at once is more data.",
+  "heard": "That's the tradeoff. A stricter line means fewer false alarms but more misses. And the main way to cut both at once is more data.",
+  "diffs": [
+   [
+    "trade off",
+    "tradeoff"
+   ]
+  ]
+ },
+ {
+  "id": "s082",
+  "text": "Now let's come back to that second thing a p value is not. A measure of size.",
+  "heard": "Now let's come back to that second thing a p-value is not. A measure of size.",
+  "diffs": []
+ },
+ {
+  "id": "s083",
+  "text": "Imagine a different coin. It's almost fair. It lands heads fifty point two percent of the time. Just a hair more than half.",
+  "heard": "Imagine a different coin. It's almost fair. It lands heads fifty point two percent of the time. Just a hair more than half.",
+  "diffs": []
+ },
+ {
+  "id": "s084",
+  "text": "Over twenty flips, you'd never notice. But suppose a machine flips it a million times, and gets five hundred and two thousand heads.",
+  "heard": "Over twenty flips you'd never notice, but suppose a machine flips it a million times and gets five hundred and two thousand heads.",
+  "diffs": []
+ },
+ {
+  "id": "s085",
+  "text": "For a fair coin, the spread over a million flips is about five hundred heads. Two thousand extra heads is four spreads from the middle.",
+  "heard": "For a fair coin, the spread over a million flips is about five hundred heads. Two thousand extra heads is four spreads from the middle.",
+  "diffs": []
+ },
+ {
+  "id": "s086",
+  "text": "The p value is about zero point zero zero zero zero three. Three in a hundred thousand. Incredibly significant.",
+  "heard": "The P-value is about zero point zero zero zero zero three three in a hundred thousand Incredibly significant.",
+  "diffs": []
+ },
+ {
+  "id": "s087",
+  "text": "But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand.",
+  "heard": "But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s087a",
+  "text": "And it works the other way too. A big effect can hide behind a big p value, when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips.",
+  "heard": "And it works the other way too. A big effect can hide behind a big p-value when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips.",
+  "diffs": []
+ },
+ {
+  "id": "s088",
+  "text": "So the p value tells you whether an effect is probably there. It does not tell you whether it's big enough to care about.",
+  "heard": "So the P value tells you whether an effect is probably there. It doesn't tell you whether it's big enough to care about.",
+  "diffs": [
+   [
+    "does not",
+    "doesn't"
+   ]
+  ]
+ },
+ {
+  "id": "s089",
+  "text": "With enough data, almost any tiny difference becomes significant. That's why good reports show both the p value and the size of the effect.",
+  "heard": "With enough data, almost any tiny difference becomes significant. That's why good reports show both the p-value and the size of the effect.",
+  "diffs": []
+ },
+ {
+  "id": "s090",
+  "text": "So where will you actually meet this?",
+  "heard": "So where will you actually meet this?",
+  "diffs": []
+ },
+ {
+  "id": "s091",
+  "text": "In data science, the classic one is an A B test. Half the visitors see the old button, half see the new one.",
+  "heard": "In data science the classic one is an A B test. Half the visitors see the old button, half see the new one.",
+  "diffs": []
+ },
+ {
+  "id": "s092",
+  "text": "The null hypothesis is that the button makes no difference. If the new one gets more clicks, the p value asks: how often would a gap this big appear by chance alone?",
+  "heard": "The null hypothesis is that the button makes no difference. If the new one gets more clicks, the p-value asks, how often would a gap this big appear by chance alone?",
+  "diffs": []
+ },
+ {
+  "id": "s093",
+  "text": "In machine learning, you compare two models on the same test set. One scores a little higher. Is it really better, or did it just get a luckier set of examples?",
+  "heard": "In machine learning, you compare two models on the same test set. One scores a little higher. Is it really better, or did it just get a luckier set of examples?",
+  "diffs": []
+ },
+ {
+  "id": "s094",
+  "text": "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.",
+  "heard": "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes.",
+  "diffs": []
+ },
+ {
+  "id": "s094a",
+  "text": "And when you fit a linear regression, every input gets its own p value. It asks: if this input truly had no effect, how surprising would the slope we found be?",
+  "heard": "And when you fit a linear regression, every input gets its own p-value. It asks, if this input truly had no effect, how surprising would the slope we found be?",
+  "diffs": []
+ },
+ {
+  "id": "s095",
+  "text": "In finance, a trader backtests a strategy and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck.",
+  "heard": "In finance, a trader backtests a strategy, and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck.",
+  "diffs": []
+ },
+ {
+  "id": "s096",
+  "text": "And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment.",
+  "heard": "And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment.",
+  "diffs": []
+ },
+ {
+  "id": "s097",
+  "text": "In computer science, engineers test whether new code is really faster. Timing a program is noisy, just like a coin. So they run it many times, and test whether the speed up is more than noise.",
+  "heard": "In computer science, engineers test whether new code is really faster. Timing a program is noisy, just like a coin. So they run it many times and test whether the speedup is more than noise.",
+  "diffs": [
+   [
+    "speed up",
+    "speedup"
+   ]
+  ]
+ },
+ {
+  "id": "s098",
+  "text": "Different worlds, same question as your coffee. Real effect, or just chance?",
+  "heard": "Different worlds, same question as your coffee. Real effect, or just chance?",
+  "diffs": []
+ },
+ {
+  "id": "s099",
+  "text": "Let's finish with the most common mistakes, because they trip up beginners and experts alike.",
+  "heard": "Let's finish with the most common mistakes, because they trip up beginners and experts alike.",
+  "diffs": []
+ },
+ {
+  "id": "s100",
+  "text": "Mistake one: reading the p value as the chance the boring explanation is true.",
+  "heard": "Mistake one reading the p-value as the chance the boring explanation is true.",
+  "diffs": []
+ },
+ {
+  "id": "s101",
+  "text": "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.",
+  "heard": "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.",
+  "diffs": []
+ },
+ {
+  "id": "s102",
+  "text": "Then, just like in the Bayes video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+  "heard": "Then, just like in our Bayes' theorem video, count. Among all the coins that would give fifteen heads or more, about eighty-three percent are still fair coins. Only about seventeen percent are rigged.",
+  "diffs": [
+   [
+    "",
+    "our"
+   ],
+   [
+    "",
+    "theorem"
+   ]
+  ]
+ },
+ {
+  "id": "s103",
+  "text": "The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers.",
+  "heard": "The p-value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers.",
+  "diffs": []
+ },
+ {
+  "id": "s104",
+  "text": "Mistake two: running lots of tests, and only reporting the one that worked.",
+  "heard": "Mistake two running lots of tests and only reporting the one that worked.",
+  "diffs": []
+ },
+ {
+  "id": "s105",
+  "text": "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent.",
+  "heard": "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty-four percent.",
+  "diffs": []
+ },
+ {
+  "id": "s105a",
+  "text": "This has a name. It's called p hacking: trying analysis after analysis until something crosses the line.",
+  "heard": "This has a name. It's called p-hacking. Trying analysis after analysis until something crosses the line.",
+  "diffs": []
+ },
+ {
+  "id": "s106",
+  "text": "That's how a lucky trading strategy, or a surprising headline, can come from pure noise. If you test many things, you need a stricter line.",
+  "heard": "That's how a lucky trading strategy or a surprising headline can come from pure noise. If you test many things, you need a stricter line.",
+  "diffs": []
+ },
+ {
+  "id": "s107",
+  "text": "Mistake three: treating not significant as proof there's no effect.",
+  "heard": "Mistake three, treating not significant as proof there's no effect.",
+  "diffs": []
+ },
+ {
+  "id": "s108",
+  "text": "Remember the seventy percent coin. With twenty flips, we missed it more than half the time. Not significant often just means not enough data.",
+  "heard": "Remember the seventy percent coin. With twenty flips, we missed it more than half the time. Not significant often just means not enough data.",
+  "diffs": []
+ },
+ {
+  "id": "s109",
+  "text": "And a bonus mistake: choosing the line after you've seen the data. If you move alpha until your result is significant, the p value stops meaning anything.",
+  "heard": "And a bonus mistake. Choosing the line after you've seen the data. If you move alpha until your result is significant, the p-value stops meaning anything.",
+  "diffs": []
+ },
+ {
+  "id": "s110",
+  "text": "Let's turn all of that into a recipe you can use for any claim.",
+  "heard": "Let's turn all of that into a recipe you can use for any claim.",
+  "diffs": []
+ },
+ {
+  "id": "s111",
+  "text": "Step one: state the boring explanation. That's the null hypothesis. Nothing special is going on.",
+  "heard": "Step one. State the boring explanation. That's the null hypothesis. Nothing special is going on.",
+  "diffs": []
+ },
+ {
+  "id": "s112",
+  "text": "Step two: choose your line, before you look. Alpha, usually one in twenty.",
+  "heard": "Step two. Choose your line before you look. Alpha, usually one in twenty.",
+  "diffs": []
+ },
+ {
+  "id": "s113",
+  "text": "Step three: picture what chance alone would do. Draw the distribution, assuming the null is true.",
+  "heard": "Step three picture what chance alone would do draw the distribution assuming the null is true",
+  "diffs": []
+ },
+ {
+  "id": "s114",
+  "text": "Step four: find the tail. The p value is the share of that picture at least as extreme as your result.",
+  "heard": "Step four. Find the tail. The P value is the share of that picture at least as extreme as your result.",
+  "diffs": []
+ },
+ {
+  "id": "s115",
+  "text": "Step five: decide, and then ask how big. Compare p to alpha, and always report the size of the effect too.",
+  "heard": "Step five, decide, and then ask how big. Compare p to alpha, and always report the size of the effect too.",
+  "diffs": []
+ },
+ {
+  "id": "s116",
+  "text": "For the coffee coin: fair coin as the null. Fifteen heads out of twenty. A p value of about two in a hundred. Below one in twenty, so we'd call it suspicious, and keep flipping to be sure.",
+  "heard": "For the coffee coin. Fair coin as the null. Fifteen heads out of twenty. A P value of about two in a hundred. Below one in twenty. So we'd call it suspicious and keep flipping to be sure.",
+  "diffs": []
+ },
+ {
+  "id": "s117",
+  "text": "A p value doesn't tell you what's true. It tells you how surprised chance would be.",
+  "heard": "A P value doesn't tell you what's true. It tells you how surprised chance would be.",
+  "diffs": []
+ },
+ {
+  "id": "s118",
+  "text": "Look around your world, and notice how often a lucky streak gets mistaken for a pattern.",
+  "heard": "Look around your world and notice how often a lucky streak gets mistaken for a pattern.",
+  "diffs": []
+ },
+ {
+  "id": "s119",
+  "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+  "heard": "If this lesson made things clear for you, please subscribe to MathLab TV so we can keep building together.",
+  "diffs": [
+   [
+    "math lab",
+    "mathlab"
+   ]
+  ]
+ },
+ {
+  "id": "s120",
+  "text": "But here's a puzzle for next time.",
+  "heard": "But here's a puzzle for next time.",
+  "diffs": []
+ },
+ {
+  "id": "s121",
+  "text": "In a courtroom, an expert says there's only a one in a million chance that an innocent person would match the evidence.",
+  "heard": "In a courtroom an expert says there's only a one in a million chance that an innocent person would match the evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s122",
+  "text": "So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way.",
+  "heard": "So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way.",
+  "diffs": []
+ },
+ {
+  "id": "s123",
+  "text": "It's the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it.",
+  "heard": "This is the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy and why smart people fall for it.",
+  "diffs": [
+   [
+    "",
+    "this"
+   ]
+  ]
+ },
+ {
+  "id": "s124",
+  "text": "I will see you in the next video.",
+  "heard": "I will see you in the next video.",
+  "diffs": []
+ }
+]

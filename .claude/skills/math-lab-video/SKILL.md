@@ -132,6 +132,16 @@ one sentence first (`python3 tts.py test "…" out.wav`).
   (mistakes/traps), ink #f0efec / #c3c2b7 / muted #898781. Give each key concept ONE colour and keep it.
 - EVERY explanation sits on real x/y axes with numbered ticks and axis titles. Squares and areas use equal
   x/y scale so cells can be counted.
+- **No second without something happening** (owner's rule): a new beat roughly every second, each tied to the
+  words being spoken (`self.word(sid, "word")`), with motion graphics, transitions (`push`, slides, zooms) and
+  camera moves. Register idle actors for every wait (`self.idle(...)`: coin flips, friends dropping into a chart,
+  `pulse`, `glint`, `ripple`); if none are set, the newest object breathes. `python3 motion_check.py <scene.mp4>`
+  must report no still stretch over 1 s for every scene.
+- **Callbacks name the card**: whenever the narration says "in our X video", it also says the video is in the
+  card at the top, and `card_cue(title, mini)` shows the tile in the top-right corner. List those timestamps in
+  the package so the owner can add the YouTube cards.
+- Never `Indicate` a filled chip/pill (it recolours the box over the text): use `pulse`. Never put a cross or
+  strike over text: use a red chip beside it. Shapes must not overlap either (the checker's `box_overlap`).
 - A new visual beat every 2–3 s: comparisons, metaphors (balance beam, water levelling, number-line walks),
   counters, stacking dots, on-screen symbol definitions, and the final recipe card. Keep variety high.
 - Camera: MovingCameraScene with zooms and pans, always kept inside the subtitle-safe area. Fade out
@@ -177,7 +187,7 @@ something code cannot draw well, and only where the visual plan (approved at che
   (scaling a group pushes them apart); `qa_mute` objects hidden under an opaque overlay; mark deliberate
   strike-throughs and highlight boxes `qa_ignore` with a comment. More in `reference/lessons.md`.
 
-⏸ **CHECKPOINT 2**: render a ~2–3 minute sample with audio (`python3 build.py sample <cut-sid>`: hook,
+⏸ **CHECKPOINT 2**: run `motion_check.py` on every scene first, then render a ~2–3 minute sample with audio (`python3 build.py sample <cut-sid>`: hook,
 welcome, why it matters and the start of the lesson). Send it, commit, push, and wait for approval before the
 full render.
 

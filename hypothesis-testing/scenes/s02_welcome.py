@@ -46,8 +46,10 @@ class S02Welcome(Base):
         self.play(FadeOut(title, scale=0.85), run_time=0.5)
         self.play(DrawBorderThenFill(mark[0]), run_time=0.6)
         self.play(Create(mark[1]), FadeIn(name, shift=LEFT * 0.3), run_time=0.8)
+        self.idle(lambda: glint(mark[0], AQUA, 6))
         self.until(word_time(seg_welcome, word_index(seg_welcome, "where")) - 0.1)
         self.play(AddTextLetterByLetter(tag), run_time=1.2)
+        self.idle(lambda: pulse(lg[0], 1.04))
         # ── numbered preview 1, 2, 3; small logo stays top-right ──
         small = logo(0.42).to_edge(UP, buff=0.32).to_edge(RIGHT, buff=0.45)
         learn = T("TODAY YOU WILL LEARN", 24, MUTED, weight=BOLD).next_to(small, LEFT, buff=0.5)
@@ -62,8 +64,27 @@ class S02Welcome(Base):
                 self.play(ReplacementTransform(lg[0], small), FadeOut(tag), FadeIn(learn), run_time=0.8)
             else:
                 self.play(FadeOut(prev, shift=LEFT * 1.0), run_time=0.5)
-            self.play(FadeIn(num, scale=0.5), FadeIn(vis), FadeIn(c_), run_time=0.9)
+            self.idle()
+            rng = np.random.default_rng(k)
+            if k < 2:   # the chart builds itself: axes, then bars grow, then friends keep dropping in
+                g, bars = vis[0], vis[1]
+                self.play(FadeIn(num, scale=0.5), Create(g.ax), FadeIn(g.labs), FadeIn(g.yt), FadeIn(c_, shift=UP * 0.2), run_time=0.6)
+                self.play(LaggedStart(*[GrowFromEdge(b_, DOWN) for b_ in bars], lag_ratio=0.06), run_time=0.9)
+                if k == 1:
+                    self.play(LaggedStart(*[b_.animate.set_fill(AQUA, 1) for b_ in bars[15:]], lag_ratio=0.2),
+                              ripple(bars[16].get_center(), AQUA, r=0.2, scale=4), run_time=0.7)
+                    self.play(GrowFromCenter(vis[2]), FadeIn(vis[3], shift=DOWN * 0.15), run_time=0.5)
+                self.idle(lambda: LaggedStart(*[drop_into(g.ax, int(rng.binomial(20, 0.5)), AQUA if k else BLUE_, 205)
+                                                for _ in range(9)], lag_ratio=0.1),
+                          lambda: LaggedStart(*[pulse(b_, 1.08) for b_ in bars[6:15]], lag_ratio=0.1))
+            else:       # two ways to be wrong: the cards flip in, crosses strike
+                self.play(FadeIn(num, scale=0.5), FadeIn(c_, shift=UP * 0.2), run_time=0.4)
+                for cd in vis:
+                    self.play(FadeIn(cd[0], shift=UP * 0.3), FadeIn(cd[2]), run_time=0.35)
+                    self.play(Create(cd[1]), ripple(cd[1].get_center(), RED_, r=0.15, scale=4), run_time=0.35)
+                self.idle(lambda: LaggedStart(*[pulse(cd, 1.08) for cd in vis], lag_ratio=0.4))
             prev = VGroup(num, vis, c_)
         self.until(SEGS[seg_items[-1]]["end"] + 0.1)
-        self.play(FadeOut(VGroup(small, learn, prev)), run_time=0.4)
+        self.idle()
+        self.play(FadeOut(VGroup(small, learn, prev), shift=LEFT * 1.0), run_time=0.4)
         self.finish()

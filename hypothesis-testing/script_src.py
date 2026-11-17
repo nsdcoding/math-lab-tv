@@ -80,6 +80,8 @@ seg(c, "And you will see the two ways a test can be wrong, and the traps that fo
 c = "Why It Matters"
 seg(c, "In our Bayes video, we left you with a puzzle.",
     "Chip 'from: Bayes' Theorem' slides in; the old teaser card reappears: 'p = 0.03'.")
+seg(c, "If you missed it, you'll find it in the card at the top of this video.",
+    "A YouTube-style 'i' card cue animates into the top-right corner with a thumbnail tile 'Bayes' Theorem'; an arrow points to it.", sid="s015a")
 seg(c, "Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.",
     "Speech bubble beside the card: 'a 3% chance it's a fluke?' with a red question mark.")
 seg(c, "We said that description flips the question. Today, we'll see what a p value really measures, and you'll see the flip with your own eyes.",
@@ -122,8 +124,12 @@ seg(c, "Look at the shape. Most friends land near ten heads, the middle. About o
     "The 10-heads column glows; label '≈ 176 friends' on top.")
 seg(c, "Results further from ten get rarer and rarer, on both sides.",
     "Arrows run down both slopes; outer bars fade to nearly zero.")
-seg(c, "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.",
-    "Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.")
+seg(c, "In our standard deviation video, we learned to measure spread.",
+    "Chip 'from: Standard Deviation'; the card cue appears top-right with a 'Standard Deviation' tile.")
+seg(c, "That one is in the card at the top too.",
+    "The card cue pulses; arrow to the top-right corner.", sid="s034a")
+seg(c, "Here, the typical spread is about two heads either side of ten.",
+    "A bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.", sid="s034b")
 seg(c, "So, where does your friend's fifteen land?",
     "The warn pin from the hook drops onto 15 on the x-axis.", 0.8)
 seg(c, "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.",
@@ -282,7 +288,7 @@ seg(c, "Mistake one: reading the p value as the chance the boring explanation is
     "Card 1 flips: 'p = chance the coin is fair?' (red).")
 seg(c, "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.",
     "Illustration: a grid of 100 coins on equal-scale axes, 1 orange (rigged) and 99 blue (fair); chip 'illustration'.")
-seg(c, "Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+seg(c, "Then, just like in our Bayes theorem video, which is linked in the card above, we count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
     "Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).")
 seg(c, "The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers.",
     "Side by side: 'p ≈ 0.021' (aqua) vs 'chance rigged ≈ 17%' (violet), with '≠' between them.", 1.5)

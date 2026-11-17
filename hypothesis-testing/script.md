@@ -1,6 +1,6 @@
 # Hypothesis Testing and p Values Without the Confusion
 
-128 segments · 2592 words · est. 17.0 min (voice ≈165 wpm + 76 s pauses) · target 15–20 min
+131 segments · 2626 words · est. 17.2 min (voice ≈165 wpm + 77 s pauses) · target 15–20 min
 
 
 ## The Coffee Coin  ·  161 words, ~59 s
@@ -37,10 +37,12 @@
 - **s014** And you will see the two ways a test can be wrong, and the traps that fool even scientists. ⏸0.6s
   - *Visual:* Big ③ (red); two small warning cards 'false alarm' and 'missed it'; caption 'two ways to be wrong'.
 
-## Why It Matters  ·  114 words, ~41 s
+## Why It Matters  ·  130 words, ~47 s
 
 - **s015** In our Bayes video, we left you with a puzzle.
   - *Visual:* Chip 'from: Bayes' Theorem' slides in; the old teaser card reappears: 'p = 0.03'.
+- **s015a** If you missed it, you'll find it in the card at the top of this video.
+  - *Visual:* A YouTube-style 'i' card cue animates into the top-right corner with a thumbnail tile 'Bayes' Theorem'; an arrow points to it.
 - **s016** Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.
   - *Visual:* Speech bubble beside the card: 'a 3% chance it's a fluke?' with a red question mark.
 - **s017** We said that description flips the question. Today, we'll see what a p value really measures, and you'll see the flip with your own eyes. ⏸1.0s
@@ -69,7 +71,7 @@
 - **s027** The null hypothesis is the innocent defendant. And our fifteen heads is the evidence. ⏸1.0s
   - *Visual:* Labels map over: 'innocent = fair coin' (blue), 'evidence = 15 heads' (warn).
 
-## A Thousand Fair Coins  ·  384 words, ~140 s
+## A Thousand Fair Coins  ·  394 words, ~143 s
 
 - **s028** So, if the coin really is fair, what would twenty flips usually look like?
   - *Visual:* A single fair blue coin flips twenty times quickly; a counter ends at '11 heads' (illustration of one run).
@@ -83,8 +85,12 @@
   - *Visual:* The 10-heads column glows; label '≈ 176 friends' on top.
 - **s033** Results further from ten get rarer and rarer, on both sides.
   - *Visual:* Arrows run down both slopes; outer bars fade to nearly zero.
-- **s034** In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.
-  - *Visual:* Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.
+- **s034** In our standard deviation video, we learned to measure spread.
+  - *Visual:* Chip 'from: Standard Deviation'; the card cue appears top-right with a 'Standard Deviation' tile.
+- **s034a** That one is in the card at the top too.
+  - *Visual:* The card cue pulses; arrow to the top-right corner.
+- **s034b** Here, the typical spread is about two heads either side of ten.
+  - *Visual:* A bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.
 - **s035** So, where does your friend's fifteen land? ⏸0.8s
   - *Visual:* The warn pin from the hook drops onto 15 on the x-axis.
 - **s036** Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads.
@@ -235,7 +241,7 @@
 - **s098** Different worlds, same question as your coffee. Real effect, or just chance? ⏸1.0s
   - *Visual:* All four tiles shrink around the coffee coin in the centre.
 
-## Common Mistakes  ·  264 words, ~96 s
+## Common Mistakes  ·  272 words, ~99 s
 
 - **s099** Let's finish with the most common mistakes, because they trip up beginners and experts alike.
   - *Visual:* Three red mistake cards slide in, face down.
@@ -243,7 +249,7 @@
   - *Visual:* Card 1 flips: 'p = chance the coin is fair?' (red).
 - **s101** Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time.
   - *Visual:* Illustration: a grid of 100 coins on equal-scale axes, 1 orange (rigged) and 99 blue (fair); chip 'illustration'.
-- **s102** Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.
+- **s102** Then, just like in our Bayes theorem video, which is linked in the card above, we count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.
   - *Visual:* Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).
 - **s103** The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers. ⏸1.5s
   - *Visual:* Side by side: 'p ≈ 0.021' (aqua) vs 'chance rigged ≈ 17%' (violet), with '≠' between them.

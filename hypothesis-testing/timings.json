@@ -1,5 +1,5 @@
 {
- "total": 911.74,
+ "total": 920.25,
  "segments": [
   {
    "id": "s001",
@@ -107,794 +107,815 @@
    "text": "In our Bayes video, we left you with a puzzle."
   },
   {
-   "id": "s016",
+   "id": "s015a",
    "chapter": "Why It Matters",
    "start": 78.49,
-   "end": 85.61,
+   "end": 81.79,
+   "text": "If you missed it, you'll find it in the card at the top of this video."
+  },
+  {
+   "id": "s016",
+   "chapter": "Why It Matters",
+   "start": 82.14,
+   "end": 89.26,
    "text": "Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke."
   },
   {
    "id": "s017",
    "chapter": "Why It Matters",
-   "start": 85.96,
-   "end": 93.67,
+   "start": 89.61,
+   "end": 97.32,
    "text": "We said that description flips the question. Today, we'll see what a p value really measures, and you'll see the flip with your own eyes."
   },
   {
    "id": "s018",
    "chapter": "Why It Matters",
-   "start": 94.67,
-   "end": 97.76,
+   "start": 98.32,
+   "end": 101.41,
    "text": "And this matters, because p values are everywhere."
   },
   {
    "id": "s019",
    "chapter": "Why It Matters",
-   "start": 98.11,
-   "end": 105.74,
+   "start": 101.76,
+   "end": 109.39,
    "text": "A new medicine is tested against a sugar pill. A website tries a new button colour. A trader checks if a strategy beats luck."
   },
   {
    "id": "s020",
    "chapter": "Why It Matters",
-   "start": 106.09,
-   "end": 111.12,
+   "start": 109.74,
+   "end": 114.77,
    "text": "Every one of them asks the same thing as you and your friend. Is this a real effect, or just chance?"
   },
   {
    "id": "s021",
    "chapter": "The Boring Explanation",
-   "start": 112.12,
-   "end": 118.98,
+   "start": 115.77,
+   "end": 122.63,
    "text": "Hypothesis testing starts in a strange place. Not with what you suspect, but with the most boring explanation there is."
   },
   {
    "id": "s022",
    "chapter": "The Boring Explanation",
-   "start": 119.33,
-   "end": 127.43,
+   "start": 122.98,
+   "end": 131.08,
    "text": "For our coin, the boring explanation is simple. The coin is fair. Heads and tails are equally likely, and fifteen heads was just luck."
   },
   {
    "id": "s023",
    "chapter": "The Boring Explanation",
-   "start": 127.78,
-   "end": 136.28,
+   "start": 131.43,
+   "end": 139.93,
    "text": "This boring explanation has a name. It's called the null hypothesis. Null just means nothing. Nothing special is going on."
   },
   {
    "id": "s024",
    "chapter": "The Boring Explanation",
-   "start": 136.63,
-   "end": 141.41,
+   "start": 140.28,
+   "end": 145.06,
    "text": "Your suspicion, that the coin favours heads, is called the alternative hypothesis."
   },
   {
    "id": "s025",
    "chapter": "The Boring Explanation",
-   "start": 141.76,
-   "end": 150.41,
+   "start": 145.41,
+   "end": 154.06,
    "text": "Here's the key idea. We don't try to prove the alternative directly. Instead, we pretend the boring explanation is true, and ask how surprising our result would be."
   },
   {
    "id": "s026",
    "chapter": "The Boring Explanation",
-   "start": 151.41,
-   "end": 159.33,
+   "start": 155.06,
+   "end": 162.98,
    "text": "It's just like a courtroom. The defendant is presumed innocent. The prosecution has to show the evidence would be very hard to explain if they were innocent."
   },
   {
    "id": "s027",
    "chapter": "The Boring Explanation",
-   "start": 159.68,
-   "end": 165.48,
+   "start": 163.33,
+   "end": 169.13,
    "text": "The null hypothesis is the innocent defendant. And our fifteen heads is the evidence."
   },
   {
    "id": "s028",
    "chapter": "A Thousand Fair Coins",
-   "start": 166.48,
-   "end": 170.76,
+   "start": 170.13,
+   "end": 174.41,
    "text": "So, if the coin really is fair, what would twenty flips usually look like?"
   },
   {
    "id": "s029",
    "chapter": "A Thousand Fair Coins",
-   "start": 171.11,
-   "end": 178.69,
+   "start": 174.76,
+   "end": 182.34,
    "text": "Let's find out with a thought experiment. Imagine a thousand friends, each with a perfectly fair coin, each flipping it twenty times."
   },
   {
    "id": "s030",
    "chapter": "A Thousand Fair Coins",
-   "start": 179.04,
-   "end": 182.95,
+   "start": 182.69,
+   "end": 186.6,
    "text": "Each friend counts their heads. Then we stack them up by how many heads they got."
   },
   {
    "id": "s031",
    "chapter": "A Thousand Fair Coins",
-   "start": 183.3,
-   "end": 191.53,
+   "start": 186.95,
+   "end": 195.18,
    "text": "This picture has a name. It's called a distribution. It just shows every possible result, and how often each one happens."
   },
   {
    "id": "s032",
    "chapter": "A Thousand Fair Coins",
-   "start": 191.88,
-   "end": 199.81,
+   "start": 195.53,
+   "end": 203.46,
    "text": "Look at the shape. Most friends land near ten heads, the middle. About one hundred and seventy six of them get exactly ten."
   },
   {
    "id": "s033",
    "chapter": "A Thousand Fair Coins",
-   "start": 200.16,
-   "end": 204.41,
+   "start": 203.81,
+   "end": 208.06,
    "text": "Results further from ten get rarer and rarer, on both sides."
   },
   {
    "id": "s034",
    "chapter": "A Thousand Fair Coins",
-   "start": 204.76,
-   "end": 211.5,
-   "text": "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten."
+   "start": 208.41,
+   "end": 211.87,
+   "text": "In our standard deviation video, we learned to measure spread."
+  },
+  {
+   "id": "s034a",
+   "chapter": "A Thousand Fair Coins",
+   "start": 212.22,
+   "end": 214.24,
+   "text": "That one is in the card at the top too."
+  },
+  {
+   "id": "s034b",
+   "chapter": "A Thousand Fair Coins",
+   "start": 214.59,
+   "end": 218.32,
+   "text": "Here, the typical spread is about two heads either side of ten."
   },
   {
    "id": "s035",
    "chapter": "A Thousand Fair Coins",
-   "start": 211.85,
-   "end": 213.43,
+   "start": 218.67,
+   "end": 220.25,
    "text": "So, where does your friend's fifteen land?"
   },
   {
    "id": "s036",
    "chapter": "A Thousand Fair Coins",
-   "start": 214.23,
-   "end": 221.5,
+   "start": 221.05,
+   "end": 228.32,
    "text": "Way out here. More than two spreads from the middle. Only about fifteen of the thousand fair coins got exactly fifteen heads."
   },
   {
    "id": "s037",
    "chapter": "A Thousand Fair Coins",
-   "start": 221.85,
-   "end": 233.01,
+   "start": 228.67,
+   "end": 239.83,
    "text": "But we don't just ask about exactly fifteen. We ask: how many fair coins did at least this well? Fifteen heads, or sixteen, or seventeen, all the way to twenty."
   },
   {
    "id": "s038",
    "chapter": "A Thousand Fair Coins",
-   "start": 233.36,
-   "end": 234.56,
+   "start": 240.18,
+   "end": 241.38,
    "text": "Let's fill in that tail."
   },
   {
    "id": "s039",
    "chapter": "A Thousand Fair Coins",
-   "start": 235.36,
-   "end": 239.4,
+   "start": 242.18,
+   "end": 246.22,
    "text": "About twenty one friends out of a thousand. That's roughly two in a hundred."
   },
   {
    "id": "s040",
    "chapter": "A Thousand Fair Coins",
-   "start": 240.4,
-   "end": 243.73,
+   "start": 247.22,
+   "end": 250.55,
    "text": "And that is the p value. Zero point zero two one."
   },
   {
    "id": "s041",
    "chapter": "A Thousand Fair Coins",
-   "start": 245.23,
-   "end": 252.06,
+   "start": 252.05,
+   "end": 258.88,
    "text": "In plain words: if the coin were fair, a result this extreme or more would happen only about two times in a hundred."
   },
   {
    "id": "s042",
    "chapter": "A Thousand Fair Coins",
-   "start": 253.06,
-   "end": 261.67,
+   "start": 259.88,
+   "end": 268.49,
    "text": "We don't actually need a thousand friends. There are about a million different ways twenty flips can come out, all equally likely for a fair coin."
   },
   {
    "id": "s043",
    "chapter": "A Thousand Fair Coins",
-   "start": 262.02,
-   "end": 269.32,
+   "start": 268.84,
+   "end": 276.14,
    "text": "Exactly twenty one thousand seven hundred of them have fifteen heads or more. Divide, and you get the same zero point zero two one."
   },
   {
    "id": "s044",
    "chapter": "A Thousand Fair Coins",
-   "start": 269.67,
-   "end": 277.26,
+   "start": 276.49,
+   "end": 284.08,
    "text": "Let's give it symbols. People write p equals the probability of data at least this extreme, given that the null hypothesis is true."
   },
   {
    "id": "s045",
    "chapter": "A Thousand Fair Coins",
-   "start": 277.61,
-   "end": 286.75,
+   "start": 284.43,
+   "end": 293.57,
    "text": "The capital P means probability. H zero is the null hypothesis. And the straight line means given, or assuming."
   },
   {
    "id": "s046",
    "chapter": "A Thousand Fair Coins",
-   "start": 287.1,
-   "end": 289.77,
+   "start": 293.92,
+   "end": 296.59,
    "text": "Remember that straight line. It's going to matter a lot."
   },
   {
    "id": "s047",
    "chapter": "A Thousand Fair Coins",
-   "start": 290.77,
-   "end": 304.75,
+   "start": 297.59,
+   "end": 311.57,
    "text": "One honest detail. We only counted the heads side, because your suspicion was about heads. If you'd suspected the coin was off in either direction, you'd count both tails, and the p value would double to about zero point zero four."
   },
   {
    "id": "s048",
    "chapter": "Drawing the Line",
-   "start": 305.1,
-   "end": 308.87,
+   "start": 311.92,
+   "end": 315.69,
    "text": "So, two in a hundred. Is that rare enough to call the coin rigged?"
   },
   {
    "id": "s049",
    "chapter": "Drawing the Line",
-   "start": 309.22,
-   "end": 316.59,
+   "start": 316.04,
+   "end": 323.41,
    "text": "To decide, people choose a cut off before they look at the data. It's called the significance level, and it's written with the Greek letter alpha."
   },
   {
    "id": "s050",
    "chapter": "Drawing the Line",
-   "start": 316.94,
-   "end": 320.8,
+   "start": 323.76,
+   "end": 327.62,
    "text": "The most common choice is zero point zero five. One in twenty."
   },
   {
    "id": "s051",
    "chapter": "Drawing the Line",
-   "start": 321.15,
-   "end": 329.58,
+   "start": 327.97,
+   "end": 336.4,
    "text": "The rule is: if the p value is smaller than alpha, we say the result is statistically significant, and we reject the boring explanation."
   },
   {
    "id": "s052",
    "chapter": "Drawing the Line",
-   "start": 329.93,
-   "end": 339.79,
+   "start": 336.75,
+   "end": 346.61,
    "text": "Our p value is zero point zero two one. That's below zero point zero five. So at this line, we'd reject the idea that the coin is fair."
   },
   {
    "id": "s053",
    "chapter": "Drawing the Line",
-   "start": 340.79,
-   "end": 346.79,
+   "start": 347.61,
+   "end": 353.61,
    "text": "But here's something most people never hear. That line is not a law of nature. Somebody chose it."
   },
   {
    "id": "s054",
    "chapter": "Drawing the Line",
-   "start": 347.14,
-   "end": 354.92,
+   "start": 353.96,
+   "end": 361.74,
    "text": "The statistician Ronald Fisher suggested one in twenty about a hundred years ago, as a convenient rule of thumb. It stuck."
   },
   {
    "id": "s055",
    "chapter": "Drawing the Line",
-   "start": 355.27,
-   "end": 362.8,
+   "start": 362.09,
+   "end": 369.62,
    "text": "Other fields draw the line in very different places. Particle physicists want something like one in three and a half million before they announce a discovery."
   },
   {
    "id": "s056",
    "chapter": "Drawing the Line",
-   "start": 363.15,
-   "end": 371.24,
+   "start": 369.97,
+   "end": 378.06,
    "text": "And watch what the line does to our coin. Fifteen heads gives a p value of zero point zero two one. Significant."
   },
   {
    "id": "s057",
    "chapter": "Drawing the Line",
-   "start": 371.59,
-   "end": 376.49,
+   "start": 378.41,
+   "end": 383.31,
    "text": "Fourteen heads gives about zero point zero five eight. Not significant."
   },
   {
    "id": "s058",
    "chapter": "Drawing the Line",
-   "start": 376.84,
-   "end": 382.81,
+   "start": 383.66,
+   "end": 389.63,
    "text": "One coin flip apart. The evidence barely changed, but the verdict flipped completely."
   },
   {
    "id": "s059",
    "chapter": "Drawing the Line",
-   "start": 384.31,
-   "end": 392.75,
+   "start": 391.13,
+   "end": 399.57,
    "text": "So treat significant and not significant as a rough sign, not a magic switch. Always look at the p value itself, and at the size of the effect."
   },
   {
    "id": "s060",
    "chapter": "What p Is Not",
-   "start": 393.75,
-   "end": 398.78,
+   "start": 400.57,
+   "end": 405.6,
    "text": "Now that we know what a p value is, let's be very clear about three things it is not."
   },
   {
    "id": "s061",
    "chapter": "What p Is Not",
-   "start": 399.13,
-   "end": 402.76,
+   "start": 405.95,
+   "end": 409.58,
    "text": "Number one. It is not the chance that the coin is fair."
   },
   {
    "id": "s062",
    "chapter": "What p Is Not",
-   "start": 403.11,
-   "end": 411.6,
+   "start": 409.93,
+   "end": 418.42,
    "text": "A p value of zero point zero two one does not mean a two percent chance the coin is fair, or a two percent chance it was a fluke."
   },
   {
    "id": "s063",
    "chapter": "What p Is Not",
-   "start": 411.95,
-   "end": 420.3,
+   "start": 418.77,
+   "end": 427.12,
    "text": "Remember the straight line. The p value assumes the coin is fair, then asks about the data. It does not ask about the coin."
   },
   {
    "id": "s064",
    "chapter": "What p Is Not",
-   "start": 420.65,
-   "end": 431.92,
+   "start": 427.47,
+   "end": 438.74,
    "text": "This is the same flip we saw with Bayes. The chance a sick person tests positive is not the chance a positive person is sick. And the chance of this data from a fair coin is not the chance the coin is fair."
   },
   {
    "id": "s065",
    "chapter": "What p Is Not",
-   "start": 433.42,
-   "end": 436.66,
+   "start": 440.24,
+   "end": 443.48,
    "text": "Number two. It is not a measure of how big the effect is."
   },
   {
    "id": "s066",
    "chapter": "What p Is Not",
-   "start": 437.01,
-   "end": 441.85,
+   "start": 443.83,
+   "end": 448.67,
    "text": "A tiny p value does not mean the coin is very rigged. We'll see why in a moment."
   },
   {
    "id": "s067",
    "chapter": "What p Is Not",
-   "start": 442.2,
-   "end": 447.19,
+   "start": 449.02,
+   "end": 454.01,
    "text": "Number three. A big p value does not prove the boring explanation."
   },
   {
    "id": "s068",
    "chapter": "What p Is Not",
-   "start": 447.54,
-   "end": 458.23,
+   "start": 454.36,
+   "end": 465.05,
    "text": "Suppose you flip a coin only five times, and get four heads. The p value is large. That doesn't show the coin is fair. It just shows five flips can't tell you much."
   },
   {
    "id": "s069",
    "chapter": "What p Is Not",
-   "start": 459.23,
-   "end": 464.7,
+   "start": 466.05,
+   "end": 471.52,
    "text": "In a courtroom, not guilty doesn't mean innocent. It means there wasn't enough evidence."
   },
   {
    "id": "s070",
    "chapter": "Two Ways to Be Wrong",
-   "start": 465.7,
-   "end": 470.32,
+   "start": 472.52,
+   "end": 477.14,
    "text": "Any test that makes a yes or no decision can be wrong in two different ways."
   },
   {
    "id": "s071",
    "chapter": "Two Ways to Be Wrong",
-   "start": 470.67,
-   "end": 478.7,
+   "start": 477.49,
+   "end": 485.52,
    "text": "The first way: the coin is fair, but we call it rigged anyway. That's a false alarm. Statisticians call it a type one error."
   },
   {
    "id": "s072",
    "chapter": "Two Ways to Be Wrong",
-   "start": 479.05,
-   "end": 481.9,
+   "start": 485.87,
+   "end": 488.72,
    "text": "In the courtroom, that's convicting an innocent person."
   },
   {
    "id": "s073",
    "chapter": "Two Ways to Be Wrong",
-   "start": 482.25,
-   "end": 489.08,
+   "start": 489.07,
+   "end": 495.9,
    "text": "The second way: the coin really is rigged, but we say it's fair. That's a miss. It's called a type two error."
   },
   {
    "id": "s074",
    "chapter": "Two Ways to Be Wrong",
-   "start": 489.43,
-   "end": 492.35,
+   "start": 496.25,
+   "end": 499.17,
    "text": "In the courtroom, that's letting a guilty person walk free."
   },
   {
    "id": "s075",
    "chapter": "Two Ways to Be Wrong",
-   "start": 493.35,
-   "end": 502.39,
+   "start": 500.17,
+   "end": 509.21,
    "text": "Here's what alpha really controls. With our rule, call it rigged at fifteen heads or more, a fair coin gets falsely accused only about two times in a hundred."
   },
   {
    "id": "s075a",
    "chapter": "Two Ways to Be Wrong",
-   "start": 502.74,
-   "end": 513.36,
+   "start": 509.56,
+   "end": 520.18,
    "text": "Notice that it's two in a hundred, not five. Twenty flips can only give whole numbers of heads, so the line can't sit exactly at one in twenty. It lands on the nearest safe step."
   },
   {
    "id": "s076",
    "chapter": "Two Ways to Be Wrong",
-   "start": 513.71,
-   "end": 519.91,
+   "start": 520.53,
+   "end": 526.73,
    "text": "But what about misses? Suppose the coin really is rigged, and lands heads seventy percent of the time."
   },
   {
    "id": "s077",
    "chapter": "Two Ways to Be Wrong",
-   "start": 520.26,
-   "end": 527.29,
+   "start": 527.08,
+   "end": 534.11,
    "text": "Then fifteen heads or more happens only about forty two percent of the time. So more than half the time, our test would miss it."
   },
   {
    "id": "s078",
    "chapter": "Two Ways to Be Wrong",
-   "start": 528.79,
-   "end": 533.03,
+   "start": 535.61,
+   "end": 539.85,
    "text": "Twenty flips just isn't much evidence. Both pictures overlap a lot."
   },
   {
    "id": "s079",
    "chapter": "Two Ways to Be Wrong",
-   "start": 533.38,
-   "end": 544.02,
+   "start": 540.2,
+   "end": 550.84,
    "text": "Now flip a hundred times instead. The two pictures pull apart. With a cut off at fifty nine heads, a fair coin is still falsely accused under five times in a hundred."
   },
   {
    "id": "s080",
    "chapter": "Two Ways to Be Wrong",
-   "start": 544.37,
-   "end": 548.09,
+   "start": 551.19,
+   "end": 554.91,
    "text": "And the rigged coin gets caught about ninety nine times in a hundred."
   },
   {
    "id": "s081",
    "chapter": "Two Ways to Be Wrong",
-   "start": 549.59,
-   "end": 558.09,
+   "start": 556.41,
+   "end": 564.91,
    "text": "That's the trade off. A stricter line means fewer false alarms but more misses. And the main way to cut both at once is more data."
   },
   {
    "id": "s082",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 559.09,
-   "end": 563.52,
+   "start": 565.91,
+   "end": 570.34,
    "text": "Now let's come back to that second thing a p value is not. A measure of size."
   },
   {
    "id": "s083",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 563.87,
-   "end": 571.2,
+   "start": 570.69,
+   "end": 578.02,
    "text": "Imagine a different coin. It's almost fair. It lands heads fifty point two percent of the time. Just a hair more than half."
   },
   {
    "id": "s084",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 571.55,
-   "end": 578.82,
+   "start": 578.37,
+   "end": 585.64,
    "text": "Over twenty flips, you'd never notice. But suppose a machine flips it a million times, and gets five hundred and two thousand heads."
   },
   {
    "id": "s085",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 579.17,
-   "end": 587.66,
+   "start": 585.99,
+   "end": 594.48,
    "text": "For a fair coin, the spread over a million flips is about five hundred heads. Two thousand extra heads is four spreads from the middle."
   },
   {
    "id": "s086",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 588.01,
-   "end": 594.75,
+   "start": 594.83,
+   "end": 601.57,
    "text": "The p value is about zero point zero zero zero zero three. Three in a hundred thousand. Incredibly significant."
   },
   {
    "id": "s087",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 595.75,
-   "end": 601.67,
+   "start": 602.57,
+   "end": 608.49,
    "text": "But does it matter? If this coin decided your coffee, you'd pay for about two extra coffees in every thousand."
   },
   {
    "id": "s087a",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 603.17,
-   "end": 613.51,
+   "start": 609.99,
+   "end": 620.33,
    "text": "And it works the other way too. A big effect can hide behind a big p value, when there's only a little data. That was our seventy percent coin, missed more than half the time in twenty flips."
   },
   {
    "id": "s088",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 614.51,
-   "end": 621.2,
+   "start": 621.33,
+   "end": 628.02,
    "text": "So the p value tells you whether an effect is probably there. It does not tell you whether it's big enough to care about."
   },
   {
    "id": "s089",
    "chapter": "Tiny p, Tiny Effect",
-   "start": 621.55,
-   "end": 629.9,
+   "start": 628.37,
+   "end": 636.72,
    "text": "With enough data, almost any tiny difference becomes significant. That's why good reports show both the p value and the size of the effect."
   },
   {
    "id": "s090",
    "chapter": "Real World",
-   "start": 630.9,
-   "end": 632.52,
+   "start": 637.72,
+   "end": 639.34,
    "text": "So where will you actually meet this?"
   },
   {
    "id": "s091",
    "chapter": "Real World",
-   "start": 632.87,
-   "end": 639.1,
+   "start": 639.69,
+   "end": 645.92,
    "text": "In data science, the classic one is an A B test. Half the visitors see the old button, half see the new one."
   },
   {
    "id": "s092",
    "chapter": "Real World",
-   "start": 639.45,
-   "end": 649.49,
+   "start": 646.27,
+   "end": 656.31,
    "text": "The null hypothesis is that the button makes no difference. If the new one gets more clicks, the p value asks: how often would a gap this big appear by chance alone?"
   },
   {
    "id": "s093",
    "chapter": "Real World",
-   "start": 649.84,
-   "end": 660.34,
+   "start": 656.66,
+   "end": 667.16,
    "text": "In machine learning, you compare two models on the same test set. One scores a little higher. Is it really better, or did it just get a luckier set of examples?"
   },
   {
    "id": "s094",
    "chapter": "Real World",
-   "start": 660.69,
-   "end": 666.96,
+   "start": 667.51,
+   "end": 673.78,
    "text": "A hypothesis test, or a simple shuffle test, tells you whether that gap is bigger than chance usually makes."
   },
   {
    "id": "s094a",
    "chapter": "Real World",
-   "start": 667.31,
-   "end": 678.58,
+   "start": 674.13,
+   "end": 685.4,
    "text": "And when you fit a linear regression, every input gets its own p value. It asks: if this input truly had no effect, how surprising would the slope we found be?"
   },
   {
    "id": "s095",
    "chapter": "Real World",
-   "start": 678.93,
-   "end": 690.25,
+   "start": 685.75,
+   "end": 697.07,
    "text": "In finance, a trader backtests a strategy and it beats the market. But markets are noisy. The null hypothesis is that the strategy has no real edge, and the profit was luck."
   },
   {
    "id": "s096",
    "chapter": "Real World",
-   "start": 690.6,
-   "end": 697.05,
+   "start": 697.42,
+   "end": 703.87,
    "text": "And try enough strategies, and some will look brilliant by pure luck. We'll come back to that in a moment."
   },
   {
    "id": "s097",
    "chapter": "Real World",
-   "start": 697.4,
-   "end": 708.86,
+   "start": 704.22,
+   "end": 715.68,
    "text": "In computer science, engineers test whether new code is really faster. Timing a program is noisy, just like a coin. So they run it many times, and test whether the speed up is more than noise."
   },
   {
    "id": "s098",
    "chapter": "Real World",
-   "start": 709.86,
-   "end": 715.25,
+   "start": 716.68,
+   "end": 722.07,
    "text": "Different worlds, same question as your coffee. Real effect, or just chance?"
   },
   {
    "id": "s099",
    "chapter": "Common Mistakes",
-   "start": 716.25,
-   "end": 721.13,
+   "start": 723.07,
+   "end": 727.95,
    "text": "Let's finish with the most common mistakes, because they trip up beginners and experts alike."
   },
   {
    "id": "s100",
    "chapter": "Common Mistakes",
-   "start": 721.48,
-   "end": 726.8,
+   "start": 728.3,
+   "end": 733.62,
    "text": "Mistake one: reading the p value as the chance the boring explanation is true."
   },
   {
    "id": "s101",
    "chapter": "Common Mistakes",
-   "start": 727.15,
-   "end": 736.67,
+   "start": 733.97,
+   "end": 743.49,
    "text": "Here's how far apart those two numbers can be. Suppose that in your town, only one coin in a hundred is rigged, and a rigged one lands heads seventy percent of the time."
   },
   {
    "id": "s102",
    "chapter": "Common Mistakes",
-   "start": 737.02,
-   "end": 748.63,
-   "text": "Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged."
+   "start": 743.84,
+   "end": 757.14,
+   "text": "Then, just like in our Bayes theorem video, which is linked in the card above, we count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged."
   },
   {
    "id": "s103",
    "chapter": "Common Mistakes",
-   "start": 748.98,
-   "end": 756.45,
+   "start": 757.49,
+   "end": 764.96,
    "text": "The p value was two percent. But the chance the coin is rigged is only about one in six. Same evidence, very different numbers."
   },
   {
    "id": "s104",
    "chapter": "Common Mistakes",
-   "start": 757.95,
-   "end": 762.7,
+   "start": 766.46,
+   "end": 771.21,
    "text": "Mistake two: running lots of tests, and only reporting the one that worked."
   },
   {
    "id": "s105",
    "chapter": "Common Mistakes",
-   "start": 763.05,
-   "end": 771.29,
+   "start": 771.56,
+   "end": 779.8,
    "text": "If you test twenty things that have no real effect, each at one in twenty, the chance that at least one looks significant is about sixty four percent."
   },
   {
    "id": "s105a",
    "chapter": "Common Mistakes",
-   "start": 771.64,
-   "end": 778.49,
+   "start": 780.15,
+   "end": 787.0,
    "text": "This has a name. It's called p hacking: trying analysis after analysis until something crosses the line."
   },
   {
    "id": "s106",
    "chapter": "Common Mistakes",
-   "start": 778.84,
-   "end": 786.59,
+   "start": 787.35,
+   "end": 795.1,
    "text": "That's how a lucky trading strategy, or a surprising headline, can come from pure noise. If you test many things, you need a stricter line."
   },
   {
    "id": "s107",
    "chapter": "Common Mistakes",
-   "start": 787.59,
-   "end": 791.37,
+   "start": 796.1,
+   "end": 799.88,
    "text": "Mistake three: treating not significant as proof there's no effect."
   },
   {
    "id": "s108",
    "chapter": "Common Mistakes",
-   "start": 791.72,
-   "end": 799.65,
+   "start": 800.23,
+   "end": 808.16,
    "text": "Remember the seventy percent coin. With twenty flips, we missed it more than half the time. Not significant often just means not enough data."
   },
   {
    "id": "s109",
    "chapter": "Common Mistakes",
-   "start": 800.65,
-   "end": 809.88,
+   "start": 809.16,
+   "end": 818.39,
    "text": "And a bonus mistake: choosing the line after you've seen the data. If you move alpha until your result is significant, the p value stops meaning anything."
   },
   {
    "id": "s110",
    "chapter": "Recipe",
-   "start": 810.88,
-   "end": 814.31,
+   "start": 819.39,
+   "end": 822.82,
    "text": "Let's turn all of that into a recipe you can use for any claim."
   },
   {
    "id": "s111",
    "chapter": "Recipe",
-   "start": 814.66,
-   "end": 820.88,
+   "start": 823.17,
+   "end": 829.39,
    "text": "Step one: state the boring explanation. That's the null hypothesis. Nothing special is going on."
   },
   {
    "id": "s112",
    "chapter": "Recipe",
-   "start": 821.23,
-   "end": 826.38,
+   "start": 829.74,
+   "end": 834.89,
    "text": "Step two: choose your line, before you look. Alpha, usually one in twenty."
   },
   {
    "id": "s113",
    "chapter": "Recipe",
-   "start": 826.73,
-   "end": 833.8,
+   "start": 835.24,
+   "end": 842.31,
    "text": "Step three: picture what chance alone would do. Draw the distribution, assuming the null is true."
   },
   {
    "id": "s114",
    "chapter": "Recipe",
-   "start": 834.15,
-   "end": 840.45,
+   "start": 842.66,
+   "end": 848.96,
    "text": "Step four: find the tail. The p value is the share of that picture at least as extreme as your result."
   },
   {
    "id": "s115",
    "chapter": "Recipe",
-   "start": 840.8,
-   "end": 848.54,
+   "start": 849.31,
+   "end": 857.05,
    "text": "Step five: decide, and then ask how big. Compare p to alpha, and always report the size of the effect too."
   },
   {
    "id": "s116",
    "chapter": "Recipe",
-   "start": 850.04,
-   "end": 862.84,
+   "start": 858.55,
+   "end": 871.35,
    "text": "For the coffee coin: fair coin as the null. Fifteen heads out of twenty. A p value of about two in a hundred. Below one in twenty, so we'd call it suspicious, and keep flipping to be sure."
   },
   {
    "id": "s117",
    "chapter": "Recipe",
-   "start": 863.84,
-   "end": 868.84,
+   "start": 872.35,
+   "end": 877.35,
    "text": "A p value doesn't tell you what's true. It tells you how surprised chance would be."
   },
   {
    "id": "s118",
    "chapter": "Subscribe",
-   "start": 870.84,
-   "end": 876.01,
+   "start": 879.35,
+   "end": 884.52,
    "text": "Look around your world, and notice how often a lucky streak gets mistaken for a pattern."
   },
   {
    "id": "s119",
    "chapter": "Subscribe",
-   "start": 876.61,
-   "end": 882.53,
+   "start": 885.12,
+   "end": 891.04,
    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together."
   },
   {
    "id": "s120",
    "chapter": "Next Time",
-   "start": 883.33,
-   "end": 884.99,
+   "start": 891.84,
+   "end": 893.5,
    "text": "But here's a puzzle for next time."
   },
   {
    "id": "s121",
    "chapter": "Next Time",
-   "start": 885.34,
-   "end": 891.68,
+   "start": 893.85,
+   "end": 900.19,
    "text": "In a courtroom, an expert says there's only a one in a million chance that an innocent person would match the evidence."
   },
   {
    "id": "s122",
    "chapter": "Next Time",
-   "start": 892.03,
-   "end": 898.52,
+   "start": 900.54,
+   "end": 907.03,
    "text": "So the jury thinks there's a one in a million chance the defendant is innocent. Real cases have gone exactly this way."
   },
   {
    "id": "s123",
    "chapter": "Next Time",
-   "start": 898.87,
-   "end": 906.39,
+   "start": 907.38,
+   "end": 914.9,
    "text": "It's the very same flip we saw today. Next time, we'll see why it's called the prosecutor's fallacy, and why smart people fall for it."
   },
   {
    "id": "s124",
    "chapter": "Next Time",
-   "start": 906.74,
-   "end": 908.24,
+   "start": 915.25,
+   "end": 916.75,
    "text": "I will see you in the next video."
   }
  ]

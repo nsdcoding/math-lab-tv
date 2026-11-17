@@ -105,6 +105,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s015a",
+    "chapter": "Why It Matters",
+    "text": "If you missed it, you'll find it in the card at the top of this video.",
+    "visual": "A YouTube-style 'i' card cue animates into the top-right corner with a thumbnail tile 'Bayes' Theorem'; an arrow points to it.",
+    "pause_after": 0.35
+  },
+  {
     "id": "s016",
     "chapter": "Why It Matters",
     "text": "Scientists often report a p value, like zero point zero three, and it gets described as a three percent chance that the result is a fluke.",
@@ -233,8 +240,22 @@
   {
     "id": "s034",
     "chapter": "A Thousand Fair Coins",
-    "text": "In our standard deviation video, we learned to measure spread. Here, the typical spread is about two heads either side of ten.",
-    "visual": "Chip 'from: Standard Deviation'; a bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.",
+    "text": "In our standard deviation video, we learned to measure spread.",
+    "visual": "Chip 'from: Standard Deviation'; the card cue appears top-right with a 'Standard Deviation' tile.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s034a",
+    "chapter": "A Thousand Fair Coins",
+    "text": "That one is in the card at the top too.",
+    "visual": "The card cue pulses; arrow to the top-right corner.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s034b",
+    "chapter": "A Thousand Fair Coins",
+    "text": "Here, the typical spread is about two heads either side of ten.",
+    "visual": "A bracket from 8 to 12 labelled 'typical spread ≈ 2.2 heads'.",
     "pause_after": 0.35
   },
   {
@@ -730,7 +751,7 @@
   {
     "id": "s102",
     "chapter": "Common Mistakes",
-    "text": "Then, just like in our Bayes theorem video, count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
+    "text": "Then, just like in our Bayes theorem video, which is linked in the card above, we count. Among all the coins that would give fifteen heads or more, about eighty three percent are still fair coins. Only about seventeen percent are rigged.",
     "visual": "Bayes-style split: of the coins that reach ≥15 heads, the blue block (fair) is far larger than the orange block (rigged); labels '≈ 83% fair' (blue) and '≈ 17% rigged' (orange).",
     "pause_after": 0.35
   },

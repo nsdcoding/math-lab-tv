@@ -87,22 +87,45 @@ class Base(MovingCameraScene):
         self.t0 = self.ch["t0"]
         self.qa_log = []
         self.camera.frame.save_state()
+        self._idle, self._idle_k = [], 0
 
     # time on the global timeline
     def now(self):
         return self.t0 + self.renderer.time
 
     def at(self, sid, dt=0.0):
-        target = SEGS[sid]["start"] + dt
-        w = target - self.now()
-        if w > 1 / 30:
-            self.wait(w)
+        self.until(SEGS[sid]["start"] + dt)
+
+    def word(self, sid, w, dt=-0.15, nth=0):
+        """Wait until the nth occurrence of word w in segment sid is spoken (+dt)."""
+        ws = [x.strip(",.;:?!'").lower() for x in SEGS[sid]["text"].split()]
+        idx = [i for i, x in enumerate(ws) if x == w.lower().strip(",.;:?!'")][nth]
+        self.until(word_time(sid, idx) + dt)
+
+    def idle(self, *makers):
+        """Idle actors: callables that return one short Animation tied to what is on screen (a coin flip, a friend
+        dropping into the chart, a glint along the key object). Every wait longer than ~0.9 s is filled with them
+        in turn, so the screen never sits still. idle() with no arguments clears them."""
+        self._idle, self._idle_k = list(makers), 0
 
     def seg_end(self, sid):
         return SEGS[sid]["end"]
 
     def until(self, t_global):
         w = t_global - self.now()
+        while w > 0.5:
+            if self._idle:
+                mk = self._idle[self._idle_k % len(self._idle)]
+                self._idle_k += 1
+                anim = mk()
+            else:      # fallback: the newest thing on screen breathes, so a wait is never a frozen frame
+                f = self._focus_alive()
+                if f is None:
+                    break
+                anim = pulse(f, s=1.1 if f.width < 6 else 1.04)
+            rt = w - 0.02 if w < 1.7 else 0.85
+            self.play(anim, run_time=rt)
+            w = t_global - self.now()
         if w > 1 / 30:
             self.wait(w)
 
@@ -122,8 +145,89 @@ class Base(MovingCameraScene):
         self.remove(*fam)
 
     def play(self, *a, **k):
+        before = list(self.mobjects)
+        fam_before = {id(x) for m in before for x in m.get_family()}
         super().play(*a, **k)
+        self._restore_order(before, fam_before)
+        def _op(m):
+            pts = [x for x in m.family_members_with_points() if isinstance(x, VMobject)]
+            return max([x.get_fill_opacity() for x in pts] + [x.get_stroke_opacity() for x in pts] + [0])
+        new = [m for m in self.mobjects if id(m) not in fam_before and
+               (isinstance(m, ImageMobject) or (isinstance(m, VMobject) and m.width * m.height > 0.15 and _op(m) > 0.3))]
+        if new:
+            self._focus = max(new, key=lambda m: m.width * m.height)
         self.qa_check()
+
+    def _focus_alive(self):
+        f = getattr(self, "_focus", None)
+        fam = {id(x) for m in self.mobjects for x in m.get_family()}
+        if f is None or id(f) not in fam:
+            f = VMobject()   # gone: fall through to the largest visible object
+        _p = [x for x in f.family_members_with_points() if isinstance(x, VMobject)]
+        op = max([x.get_fill_opacity() for x in _p] + [x.get_stroke_opacity() for x in _p] + [0]) \
+            if not isinstance(f, ImageMobject) else 1
+        if op > 0.3 and f.width * f.height >= 1.0:
+            return f
+        # the newest thing is gone or tiny: use the largest clearly visible object on screen
+        def vis(m):
+            if isinstance(m, ImageMobject):
+                return 1
+            pts = [x for x in m.family_members_with_points() if isinstance(x, VMobject)]
+            return max([x.get_fill_opacity() for x in pts] + [x.get_stroke_opacity() for x in pts] + [0])
+        cand = [m for m in self.mobjects if vis(m) > 0.3 and m.width * m.height > 0.3
+                and not all(getattr(x, "qa_ignore", False) for x in m.family_members_with_points() or [m])]
+        return max(cand, key=lambda m: m.width * m.height) if cand else None
+
+    def add_mobjects_from_animations(self, animations):
+        """Like Manim's, but looks inside AnimationGroups: their wrapper Group is never added, so animating
+        mobjects that already sit inside a group cannot pull them out of it and redraw them on top."""
+        curr = self.get_mobject_family_members()
+        def leaves(an):
+            if isinstance(an, AnimationGroup):
+                for x in an.animations:
+                    yield from leaves(x)
+            else:
+                yield an
+        for an in animations:
+            for x in leaves(an):
+                if x.is_introducer():
+                    continue
+                m = x.mobject
+                if m is not None and m not in curr:
+                    self.add(m)
+                    curr += m.get_family()
+
+    def _restore_order(self, before, fam_before):
+        """Animating mobjects that already sit inside a group (LaggedStart/AnimationGroup of pulses, Indicates…)
+        makes Manim split that group and re-add the pieces on top, so filled cards end up drawn over their own
+        labels. Put the scene back in its original drawing order, keeping anything removed or newly added."""
+        after = list(self.mobjects)
+        fam_after = {id(x) for m in after for x in m.get_family()}
+        out, placed = [], set()
+        def put(m):
+            fam = {id(x) for x in m.get_family()}
+            if fam & placed:
+                return
+            out.append(m); placed.update(fam)
+        for m in before:
+            fam = m.get_family()
+            if all(id(x) in fam_after for x in fam):
+                put(m)                                             # whole and still on screen
+            else:
+                ids = {id(x) for x in fam}
+                for x in after:                                   # partly removed: keep its surviving pieces
+                    if id(x) in ids:
+                        put(x)
+        for m in after:
+            if id(m) in fam_before and m not in before:
+                continue                                          # a piece of an old group: already placed
+            if id(m) not in fam_before and type(m) in (Group, VGroup) and any(id(s) in fam_before for s in m.submobjects):
+                for s_ in m.submobjects:                          # a wrapper made by an AnimationGroup
+                    if id(s_) not in fam_before:
+                        put(s_)
+            else:
+                put(m)
+        self.mobjects = out
 
     # ── QA: overlap checker run after every animation ──
     def _texts(self):
@@ -252,6 +356,31 @@ class Base(MovingCameraScene):
                         ox = min(A[2], I[2]) - max(A[0], I[0]); oy = min(A[3], I[3]) - max(A[1], I[1])
                         if ox > 0.04 and oy > 0.04:
                             self.qa_log.append(dict(t=t, kind="text_on_image", a=name(a), b="sticker"))
+        # boxes (cards, chips, pills) overlapping other boxes, solid shapes or images without one holding the other
+        solids = []
+        for m in self.mobjects:
+            for sub in m.get_family():
+                if getattr(sub, "qa_ignore", False) or getattr(sub, "qa_joined", False):
+                    continue
+                if getattr(sub, "qa_image", False):
+                    solids.append(sub)
+                elif isinstance(sub, VMobject) and not isinstance(sub, (Text, MathTex, Tex, MarkupText)) and len(sub.points) > 0 \
+                        and id(sub) not in textfam_all and sub.get_fill_opacity() > 0.5 \
+                        and sub.get_fill_color().to_hex().lower() not in (BG.lower(),):
+                    solids.append(sub)
+        boxes_c = [c_ for c_ in conts if not getattr(c_, "qa_joined", False)]
+        def inside(P, Q, tol=0.03):
+            return P[0] >= Q[0] - tol and P[1] >= Q[1] - tol and P[2] <= Q[2] + tol and P[3] <= Q[3] + tol
+        seen_pairs = set()
+        for c_ in boxes_c:
+            C = self._screen_box(c_)
+            for s in solids + boxes_c:
+                if s is c_ or (id(s), id(c_)) in seen_pairs: continue
+                seen_pairs.add((id(c_), id(s)))
+                S_ = self._screen_box(s)
+                ox = min(C[2], S_[2]) - max(C[0], S_[0]); oy = min(C[3], S_[3]) - max(C[1], S_[1])
+                if ox > 0.04 and oy > 0.04 and not inside(S_, C) and not inside(C, S_):
+                    self.qa_log.append(dict(t=t, kind="box_overlap", a=type(c_).__name__, b=type(s).__name__))
         for a, A in boxes:
             for s in shapes:
                 if id(s) in textfam: continue
@@ -596,3 +725,107 @@ def tube(color=AQUA, h=1.6, w=0.5, fill=0.35):
     liq = Rectangle(width=w * 0.8, height=h * fill).set_stroke(width=0).set_fill(color, 0.85)
     liq.move_to(body.get_bottom() + UP * (h * fill / 2 + 0.06))
     return VGroup(body, liq)
+
+
+# ───────────── motion-graphics helpers ─────────────
+def ripple(point, color=WARN, r=0.25, scale=5, width=5):
+    """An expanding ring that fades out: marks a moment of emphasis at a point."""
+    c = Circle(radius=r).set_stroke(color, width).move_to(point)
+    c.qa_ignore = True
+    return FadeOut(c, scale=scale)
+
+
+def glint(mob, color=INK, width=6, time_width=0.35):
+    """A light sweeping along a mobject's outline (or underline for text)."""
+    if isinstance(mob, (Text, MathTex, Tex)) or (isinstance(mob, VGroup) and any(isinstance(x, Text) for x in mob)):
+        path = Line(mob.get_corner(DL) + DOWN * 0.08, mob.get_corner(DR) + DOWN * 0.08)
+    else:
+        path = mob.copy().set_fill(opacity=0)
+    path.set_stroke(color, width)
+    for x in path.get_family(): x.qa_ignore = True
+    return ShowPassingFlash(path, time_width=time_width)
+
+
+def flipping(c):
+    """One coin flip (squash and return)."""
+    return c.animate(rate_func=there_and_back).stretch(0.06, 0)
+
+
+def push(scene, old, new, direction=LEFT, run_time=0.8):
+    """Slide `old` out and `new` in from the opposite side, like a camera pan between two stations."""
+    d = 14.5 * direction
+    new.shift(-d)
+    scene.play(old.animate.shift(d), new.animate.shift(d), run_time=run_time, rate_func=smooth)
+    scene.remove(old)
+
+
+def card_cue(title, mini, color=VIOLET):
+    """YouTube-card cue for a referenced video: a small tile (mini picture + title) with an 'i' badge.
+    Sits in the top-right corner, where the real card appears."""
+    t = T(title, 24, INK, weight=BOLD)
+    mini.scale_to_fit_height(0.62)
+    row = VGroup(mini, t).arrange(RIGHT, buff=0.25)
+    box = RoundedRectangle(corner_radius=0.16, width=row.width + 0.55, height=row.height + 0.42,
+                           stroke_color=color, stroke_width=2.5, fill_color="#22221f", fill_opacity=1)
+    box.qa_container = True
+    row.move_to(box)
+    badge = VGroup(Circle(0.21).set_stroke(INK, 2.5).set_fill(color, 1), T("i", 24, INK, weight=BOLD))
+    badge[0].qa_container = True
+    badge[1].move_to(badge[0])
+    badge.next_to(box, LEFT, buff=0.18)
+    g = VGroup(badge, box, row)
+    g.move_to([7.111 - EDGE - 0.15 - g.width / 2, 4 - EDGE - 0.1 - g.height / 2, 0])
+    g.box, g.badge = box, badge
+    return g
+
+
+def mini_bayes():
+    sq = VGroup(*[Square(0.16, stroke_width=0, fill_color=(ORANGE_ if (i == 0) else BLUE_), fill_opacity=0.9)
+                  for i in range(25)]).arrange_in_grid(5, 5, buff=0.04)
+    return sq
+
+
+def mini_sd():
+    ax = Line(LEFT * 0.7, RIGHT * 0.7).set_stroke(INK2, 3)
+    xs = np.linspace(-0.7, 0.7, 40)
+    cur = VMobject().set_points_smoothly([np.array([x, 0.65 * np.exp(-(x / 0.28) ** 2), 0]) for x in xs]).set_stroke(AQUA, 3)
+    br = DoubleArrow(LEFT * 0.28 + UP * 0.25, RIGHT * 0.28 + UP * 0.25, buff=0, stroke_width=2, tip_length=0.08, color=VIOLET)
+    return VGroup(ax, cur, br)
+
+
+def cup(color=WARN, s=0.42):
+    body = Polygon(LEFT * 0.5 + UP * 0.45, RIGHT * 0.5 + UP * 0.45, RIGHT * 0.38 + DOWN * 0.45, LEFT * 0.38 + DOWN * 0.45)
+    body.set_stroke(color, 3).set_fill(color, 0.9)
+    handle = Arc(radius=0.2, start_angle=-PI / 2, angle=PI).set_stroke(color, 4).move_to(RIGHT * 0.58)
+    g = VGroup(body, handle).scale(s)
+    return g
+
+
+def steam(cup_top, color=INK2):
+    """One wisp of steam rising from a point and fading."""
+    pts = [cup_top + np.array([0.06 * np.sin(k * 1.3), 0.12 * k, 0]) for k in range(6)]
+    w = VMobject().set_points_smoothly(pts).set_stroke(color, 3, opacity=0.8)
+    w.qa_ignore = True
+    return FadeOut(w, shift=UP * 0.35)
+
+
+def drop_into(ax, k, color=BLUE_, h_from=210, r=0.1):
+    """A friend (dot) falling from above into column k of a distribution chart."""
+    d = Dot(radius=r, color=color).move_to(ax.c2p(k, h_from))
+    d.qa_ignore = True
+    dist = ax.c2p(k, h_from)[1] - ax.c2p(k, 1)[1]
+    return FadeOut(d, shift=DOWN * dist, rate_func=rate_functions.ease_in_quad)
+
+
+def binom_k(rng):
+    return int(rng.binomial(20, 0.5))
+
+
+def pulse(*mobs, s=1.12):
+    """Grow and settle back (safe for chips/pills: Indicate would recolour their filled box over the text).
+    Several mobjects pulse together about their common centre. Never pass a temporary VGroup of mobjects that
+    already belong to another group: adding it to the scene pulls them out of their group."""
+    if mobs and not isinstance(mobs[-1], Mobject):
+        *mobs, s = mobs
+    c = VGroup(*[m.copy() for m in mobs]).get_center() if len(mobs) > 1 else mobs[0].get_center()
+    return AnimationGroup(*[m.animate(rate_func=there_and_back).scale(s, about_point=c) for m in mobs])

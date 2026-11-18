@@ -106,7 +106,7 @@ class S07BaseRate(Base):
                      result_card("city · 8,000,000", "1 in 9", VIOLET, 26, 46, 3.9),
                      result_card("country · 60,000,000", "1 in 61", VIOLET, 26, 46, 3.9)).arrange(RIGHT, buff=0.35)
         res.move_to(DOWN * 0.5)
-        fixed = pill("same trace: 1 in a million", WARN, 28).next_to(res, UP, buff=0.5)
+        fixed = pill("same trace: 1 in a million", WARN, 28).next_to(res, DOWN, buff=0.4)
         self.word("s067", "evidence")
         self.play(FadeOut(tr), FadeIn(fixed, shift=DOWN * 0.2), run_time=0.5)
         self.word("s067", "crowd")

@@ -867,7 +867,7 @@ def pulse(*mobs, s=None, color=WARN):
 
 
 def Indicate(mob, color=None, scale_factor=None, **kw):    # noqa: N802  (overrides manim's bouncing Indicate)
-    return highlight(mob, color=color if color not in (None, YELLOW) else WARN)
+    return highlight(mob, color=color or WARN)
 
 
 def Wiggle(mob, **kw):    # noqa: N802  (overrides manim's Wiggle: no shaking)

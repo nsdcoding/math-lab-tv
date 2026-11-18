@@ -70,7 +70,7 @@
    "series": "ai-ml",
    "order": 1,
    "phase": 1,
-   "status": "produced",
+   "status": "published",
    "visual": "two dot clouds with the same mean, one tight and one spread, every point's distance to the mean drawn as a bar that squares into a tile",
    "covers": "spread as the question an average cannot answer, distance from the mean, why the deviations are squared instead of averaged raw, taking the square root to get back to the original units, a full worked calculation on five numbers, what one standard deviation covers on a bell curve, population versus sample and why the divisor changes",
    "links": {
@@ -92,7 +92,7 @@
     ],
     "youtube_title": "Standard Deviation Explained Visually | Stats, Machine Learning & Data Science"
    },
-   "youtube": null,
+   "youtube": "https://www.youtube.com/watch?v=N5MXIQOKjoQ",
    "notes": "Published on YouTube (made outside this repo; Lesson Lab draft in channel/lesson-lab/standard-deviation). Mean vs Median's teaser leads here."
   },
   {
@@ -101,7 +101,7 @@
    "series": "ai-ml",
    "order": 2,
    "phase": 1,
-   "status": "produced",
+   "status": "published",
    "visual": "incomes on a number line with the mean riding a seesaw and the median standing on the middle person, one outlier dragging the seesaw away",
    "covers": "the mean as a balance point and the median as the middle value, both computed on the same small set, what a single extreme value does to each, skew, when the mode is the honest answer, how reported averages mislead about salaries and house prices",
    "links": {
@@ -126,7 +126,7 @@
     "teaser_next": "standard-deviation",
     "hook": "Two towns report the same average income of 60 thousand; 8 of 9 Pine Hill families earn less"
    },
-   "youtube": null,
+   "youtube": "https://www.youtube.com/watch?v=CLDnC_Tfmgg",
    "notes": ""
   },
   {
@@ -135,7 +135,7 @@
    "series": "ai-ml",
    "order": 3,
    "phase": 1,
-   "status": "produced",
+   "status": "published",
    "visual": "a square of ten thousand people splitting by who is ill, then by who tests positive, the positive block separating into true and false",
    "covers": "prior and likelihood and posterior in ordinary words, the formula read as a sentence, a medical test worked end to end with real numbers, why the base rate decides the answer, the same arithmetic on a spam filter, updating twice on two pieces of evidence",
    "links": {
@@ -165,7 +165,7 @@
     "teaser_next": "hypothesis-testing",
     "hook": "A positive result from a '90% accurate' test means only about an 8% chance"
    },
-   "youtube": null,
+   "youtube": "https://www.youtube.com/watch?v=QpYlwLb8UmE",
    "notes": ""
   },
   {
@@ -827,7 +827,7 @@
    "series": "ai-ml",
    "order": 31,
    "phase": 3,
-   "status": "planned",
+   "status": "in-production",
    "visual": "two conditional probabilities written as boxes and then swapped, a population square showing how many innocent people share the same evidence",
    "covers": "the probability of the evidence given innocence against the probability of innocence given the evidence, why swapping them is not harmless, a one in a million match inside a large city, the population calculation worked out, how the same swap appears in medical testing, the base rate as the missing piece, how to catch the swap in any claim you are shown",
    "links": {
@@ -840,7 +840,10 @@
     ],
     "overlaps": []
    },
-   "production": null,
+   "production": {
+    "folder": "prosecutors-fallacy",
+    "branch": "claude/ecstatic-einstein-kw6bsb"
+   },
    "youtube": null,
    "notes": ""
   },
@@ -965,7 +968,7 @@
    "series": "seeing-why",
    "order": 1,
    "phase": null,
-   "status": "scripted",
+   "status": "published",
    "visual": "two squares on the legs shearing and sliding until they fill the square on the hypotenuse",
    "covers": "what the theorem actually claims about areas rather than lengths, the shearing proof, why it fails for non-right triangles, the converse used for checking square corners",
    "links": {
@@ -979,7 +982,7 @@
     "script": "channel/lesson-lab/pythagoras/script.txt",
     "youtube_title": "Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?"
    },
-   "youtube": null,
+   "youtube": "https://www.youtube.com/watch?v=-3pBE2v268M",
    "notes": "Published on YouTube (made outside this repo; Lesson Lab draft in channel/lesson-lab/pythagoras)."
   },
   {

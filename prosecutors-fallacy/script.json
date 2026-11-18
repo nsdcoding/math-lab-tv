@@ -1,0 +1,891 @@
+[
+  {
+    "id": "s001",
+    "chapter": "One in a Million",
+    "text": "Last time, I left you with a puzzle from a courtroom. Today, we solve it.",
+    "visual": "Small chip 'from: Hypothesis Testing' slides in; a courtroom line-art frame draws on.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s002",
+    "chapter": "One in a Million",
+    "text": "Picture a city of eight million people. One night, a crime. At the scene, police find a tiny trace of DNA.",
+    "visual": "Skyline; counter '8,000,000 people' ticks up; a magnifier over a small warn-coloured DNA icon at the scene.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s003",
+    "chapter": "One in a Million",
+    "text": "It's only a partial trace, so it can't point to one person. But it's still rare.",
+    "visual": "The DNA icon is half-filled; label 'partial trace'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s004",
+    "chapter": "One in a Million",
+    "text": "Weeks later, police find a man. Let's call him Sam. Sam's DNA matches the trace.",
+    "visual": "STICKER: Sam, a worried man in a plain jacket (illustration). A warn 'MATCH ✓' stamp next to him.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s005",
+    "chapter": "One in a Million",
+    "text": "In court, an expert explains: if you picked an innocent person at random, the chance they would match is just one in a million.",
+    "visual": "STICKER courtroom: an expert at the witness stand (illustration). Card: 'innocent person matches: 1 in 1,000,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s006",
+    "chapter": "One in a Million",
+    "text": "Then the prosecutor stands up and says: so there's only a one in a million chance that Sam is innocent.",
+    "visual": "Second card appears beside the first: 'Sam is innocent: 1 in 1,000,000?' with a red question mark.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s007",
+    "chapter": "One in a Million",
+    "text": "The jury nods. One in a million sounds like proof.",
+    "visual": "Twelve small juror icons nod in turn; a gavel icon hovers.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s008",
+    "chapter": "One in a Million",
+    "text": "Take a second, and decide. Do you agree with the prosecutor?",
+    "visual": "Slider between 'agree' and 'disagree' with a blinking cursor; small clock ticks.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s009",
+    "chapter": "One in a Million",
+    "text": "If you said yes, you're in good company. Judges, juries and even experts have made this exact mistake.",
+    "visual": "Three icons (gavel, jury box, lab coat) each get a red tick 'fell for it'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s010",
+    "chapter": "One in a Million",
+    "text": "By the end of this video, you'll see that Sam is much more likely innocent than guilty. And you'll be able to spot this trap anywhere.",
+    "visual": "Big reveal teaser: 'innocent: about 8 in 9' blurred out with a lock icon; 'you'll see why' chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s011",
+    "chapter": "One in a Million",
+    "text": "It's called the prosecutor's fallacy.",
+    "visual": "Title card: 'The Prosecutor's Fallacy' with subtitle 'the statistics trap smart people fall for'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s012",
+    "chapter": "Welcome",
+    "text": "Welcome to Math Lab TV. Where math is something you can see.",
+    "visual": "Logo (violet rounded square with a green bell curve) + MATH LAB TV + tagline 'where math is something you can see'.",
+    "pause_after": 0.7
+  },
+  {
+    "id": "s013",
+    "chapter": "Welcome",
+    "text": "Today you will learn why the chance of the evidence, if someone is innocent, is not the chance they are innocent.",
+    "visual": "Big ① + mini visual: two boxes 'P(match | innocent)' and 'P(innocent | match)' with a red ≠; caption 'two different questions'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s014",
+    "chapter": "Welcome",
+    "text": "You will see how to count the crowd, and find how many innocent people share the same evidence.",
+    "visual": "Big ② + mini population square with a few warn dots; caption 'count the crowd'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s015",
+    "chapter": "Welcome",
+    "text": "And you will learn a simple recipe to catch this swap in courtrooms, medical tests, and the news.",
+    "visual": "Big ③ + mini checklist icon; caption 'catch the swap anywhere'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s016",
+    "chapter": "Two Different Questions",
+    "text": "In our hypothesis testing video, we flipped a friend's coin twenty times, and got fifteen heads.",
+    "visual": "Chip 'from: Hypothesis Testing'. Mini tally of 15 orange H and 5 blue T dots on a flip axis.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s017",
+    "chapter": "Two Different Questions",
+    "text": "We found that a fair coin would do something that extreme only about two times in a hundred.",
+    "visual": "The coin's tail-area picture: bars 0–20 heads, tail ≥ 15 shaded aqua, label 'p ≈ 0.021'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s018",
+    "chapter": "Two Different Questions",
+    "text": "And we warned: that is not the chance the coin is fair. The question had been flipped.",
+    "visual": "Two cards: 'chance of this result, if the coin is fair' and 'chance the coin is fair, given this result'; red ≠ between them.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s019",
+    "chapter": "Two Different Questions",
+    "text": "The courtroom is the very same flip. So let's write it down carefully.",
+    "visual": "Coin cards slide away; the two courtroom cards from the hook slide in.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s020",
+    "chapter": "Two Different Questions",
+    "text": "Mathematicians write the chance of something with a capital P. And they use a short vertical bar, which you can read as the word given.",
+    "visual": "Symbol definition card: 'P( … ) = the chance of …', '|  = given (we already know this part)'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s021",
+    "chapter": "Two Different Questions",
+    "text": "So P of match, given innocent, means: suppose the person is innocent. How likely is a match?",
+    "visual": "Box 1 (blue border): 'P(match | innocent)'. Under it: 'start with innocent people → how many match?' Value '1 in 1,000,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s022",
+    "chapter": "Two Different Questions",
+    "text": "That's the number the expert gave. One in a million.",
+    "visual": "Value in box 1 pulses warn: '1 in 1,000,000'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s023",
+    "chapter": "Two Different Questions",
+    "text": "But the jury needs a different number. P of innocent, given match. Suppose the person matches. How likely are they innocent?",
+    "visual": "Box 2 (violet border): 'P(innocent | match)'. Under it: 'start with people who match → how many are innocent?' Value '?'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s024",
+    "chapter": "Two Different Questions",
+    "text": "Look at the two boxes. Same words. Just swapped around the bar.",
+    "visual": "Animation: 'match' and 'innocent' inside box 1 physically swap places, morphing into box 2. Red arrows show the swap.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s025",
+    "chapter": "Two Different Questions",
+    "text": "The prosecutor took the first number, and read it out as the second. That swap is the whole fallacy.",
+    "visual": "Box 1's value '1 in 1,000,000' flies into box 2; a red stamp 'THE SWAP' lands over it.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s026",
+    "chapter": "Why the Swap Matters",
+    "text": "Is swapping really such a big deal? Let's try it on something simple.",
+    "visual": "Clean slate; two empty boxes return.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s027",
+    "chapter": "Why the Swap Matters",
+    "text": "What's the chance that a dog has four legs? Almost certain. Nearly every dog does.",
+    "visual": "Box: 'P(four legs | dog)' with a dog silhouette; meter fills almost to 1; label 'almost certain'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s028",
+    "chapter": "Why the Swap Matters",
+    "text": "Now swap it. What's the chance that something with four legs is a dog?",
+    "visual": "Box: 'P(dog | four legs)'. A crowd of four-legged silhouettes appears: cats, cows, horses, chairs, tables, a few dogs.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s029",
+    "chapter": "Why the Swap Matters",
+    "text": "Not very likely at all. Cats have four legs. So do cows, and horses. Even your kitchen table.",
+    "visual": "Dogs highlighted orange among many grey four-legged things; meter for box 2 stays low.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s030",
+    "chapter": "Why the Swap Matters",
+    "text": "The two numbers share the same words, but they can be wildly different.",
+    "visual": "Both meters side by side: tall vs short; caption 'same words, different questions'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s031",
+    "chapter": "Why the Swap Matters",
+    "text": "The difference comes from the crowd. How many other things, besides dogs, also have four legs?",
+    "visual": "The non-dog four-legged crowd glows aqua; label 'everything else that fits'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s032",
+    "chapter": "Why the Swap Matters",
+    "text": "So why do smart people swap them? Because our brains love a simple story. The evidence fits the guilty person, so the guilty person must fit the evidence.",
+    "visual": "Two arrows between 'guilty' and 'match': the forward arrow solid ('guilty → match: yes'), the backward arrow dashed red ('match → guilty: not so fast').",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s033",
+    "chapter": "Why the Swap Matters",
+    "text": "But fitting the evidence is easy when the crowd is big. Lots of innocent people can fit it too.",
+    "visual": "The dashed arrow fans out to many blue dots, each with a warn ring.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s034",
+    "chapter": "Why the Swap Matters",
+    "text": "In Sam's case, the crowd is a city of eight million people. So let's count it.",
+    "visual": "Transition: the four-legged crowd morphs into a grid of tiny people dots labelled '8,000,000 people'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s035",
+    "chapter": "Count the Crowd",
+    "text": "Before we start, let's be honest about what we are assuming.",
+    "visual": "Assumptions card slides in, empty.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s036",
+    "chapter": "Count the Crowd",
+    "text": "First, the person who did it lives somewhere in this city.",
+    "visual": "Assumption ① 'the culprit is one of the 8,000,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s037",
+    "chapter": "Count the Crowd",
+    "text": "Second, the real culprit's DNA always matches the trace.",
+    "visual": "Assumption ② 'the culprit always matches'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s038",
+    "chapter": "Count the Crowd",
+    "text": "And third, for now, we know nothing else about Sam. Only the match. We'll come back to that one.",
+    "visual": "Assumption ③ 'no other evidence (yet)' with a small 'we'll return' tag.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s039",
+    "chapter": "Count the Crowd",
+    "text": "Here is the whole city. Eight million people, drawn as eight big blocks of one million each.",
+    "visual": "Population square on equal-scale axes: 8 blocks (4 × 2), each labelled '1,000,000'. Axis titles 'people'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s040",
+    "chapter": "Count the Crowd",
+    "text": "One of them is the culprit. That leaves seven million, nine hundred and ninety nine thousand, nine hundred and ninety nine innocent people.",
+    "visual": "One orange dot in a block; the rest of the square tints blue; counter '7,999,999 innocent'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s041",
+    "chapter": "Count the Crowd",
+    "text": "Now the expert's number. Each innocent person matches with a chance of one in a million.",
+    "visual": "Card 'P(match | innocent) = 1 in 1,000,000' docks at the top right.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s042",
+    "chapter": "Count the Crowd",
+    "text": "So in a block of one million innocent people, how many would we expect to match by pure chance?",
+    "visual": "Zoom into one block; a scanning line sweeps across it.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s043",
+    "chapter": "Count the Crowd",
+    "text": "About one.",
+    "visual": "A single warn dot lights up inside the block; label '≈ 1 innocent match'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s044",
+    "chapter": "Count the Crowd",
+    "text": "And we have eight of those blocks. So across the whole city, about eight innocent people match the trace. Just by luck.",
+    "visual": "Camera pulls back; one warn dot lights in each block, counter climbs 1 → 8; label '≈ 8 innocent matches'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s045",
+    "chapter": "Count the Crowd",
+    "text": "Plus the one real culprit, who matches for sure.",
+    "visual": "The orange culprit dot gets a warn ring; total counter '8 + 1 = 9 people match'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s046",
+    "chapter": "Count the Crowd",
+    "text": "So if police lined up everyone in the city who matches, there would be about nine people in that line.",
+    "visual": "All 9 matching dots fly out of the square into a line-up on a number axis 1–9: eight blue-filled with warn rings, one orange.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s047",
+    "chapter": "Count the Crowd",
+    "text": "And only one of those nine is guilty.",
+    "visual": "The orange figure in the line-up glows; the eight others dim slightly.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s048",
+    "chapter": "Count the Crowd",
+    "text": "Sam is one of the people in that line. All we know is that he matched. So the chance he's the guilty one is about one in nine.",
+    "visual": "Sam's sticker face appears above a random position in the line-up with a '?'; fraction card '1 guilty ÷ 9 matches ≈ 1 in 9' (violet).",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s049",
+    "chapter": "Count the Crowd",
+    "text": "Which means the chance he's innocent is about eight in nine. Around eighty nine percent.",
+    "visual": "Big violet answer card: 'P(innocent | match) ≈ 8 in 9 ≈ 89%'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s050",
+    "chapter": "Count the Crowd",
+    "text": "Notice what we did. No fancy formula. We just imagined everyone in the city, and asked who else would match.",
+    "visual": "Mini recap strip: '8,000,000 people' → '× 1 in a million' → '≈ 8 innocent + 1 culprit' → '1 in 9'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s051",
+    "chapter": "Count the Crowd",
+    "text": "Put the two numbers next to each other.",
+    "visual": "The two boxes return side by side.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s052",
+    "chapter": "Count the Crowd",
+    "text": "The chance of a match, given innocent: one in a million.",
+    "visual": "Box 1: 'P(match | innocent) = 1 in 1,000,000' (blue).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s053",
+    "chapter": "Count the Crowd",
+    "text": "The chance of innocent, given a match: about eight in nine.",
+    "visual": "Box 2: 'P(innocent | match) ≈ 8 in 9' (violet).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s054",
+    "chapter": "Count the Crowd",
+    "text": "The second number is almost nine hundred thousand times bigger. That's how far apart the two questions are.",
+    "visual": "A bar on a log-scale axis: tiny bar for 1 in a million, tall bar for 8 in 9; arrow '≈ 889,000×'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s055",
+    "chapter": "The Formula Behind It",
+    "text": "What we just did is count, but you can write it as a short rule.",
+    "visual": "Clean slate; heading 'the counting rule'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s056",
+    "chapter": "The Formula Behind It",
+    "text": "The chance of guilt, given a match, equals the guilty people who match, divided by everyone who matches.",
+    "visual": "Formula in words: 'P(guilty | match) = guilty matches ÷ all matches'. Numerator orange, denominator warn.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s057",
+    "chapter": "The Formula Behind It",
+    "text": "On top, one. On the bottom, one plus eight. One ninth.",
+    "visual": "Numbers drop in: '1 ÷ (1 + 8) = 1/9' (LaTeX fraction), violet result.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s058",
+    "chapter": "The Formula Behind It",
+    "text": "In our Bayes theorem video, we wrote this same idea as a formula. Here, counting the crowd gets you to the same answer, with no formula to remember.",
+    "visual": "Chip 'from: Bayes' Theorem'. Small Bayes formula appears, then the 'count the crowd' picture beside it with '=' between.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s059",
+    "chapter": "The Formula Behind It",
+    "text": "And notice where the eight came from. Not from the expert's number alone. It came from the size of the crowd.",
+    "visual": "The '8' in the denominator is circled aqua; arrow back to '8,000,000 people'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s060",
+    "chapter": "The Missing Piece",
+    "text": "That crowd size has a name. It's called the base rate. And it's the piece the prosecutor left out.",
+    "visual": "Heading 'the base rate = how big is the crowd of possible suspects?' (aqua).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s061",
+    "chapter": "The Missing Piece",
+    "text": "Let's keep the same one in a million trace, and just change the crowd.",
+    "visual": "A horizontal slider labelled 'crowd size' on a log axis: 1,000 · 1,000,000 · 8,000,000 · 60,000,000.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s062",
+    "chapter": "The Missing Piece",
+    "text": "Imagine the crime happened in a tiny village of one thousand people, and nobody else could have been there.",
+    "visual": "Slider moves to 1,000; a small square of 1,000 dots (40 × 25) with one orange culprit.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s063",
+    "chapter": "The Missing Piece",
+    "text": "Now the chance that even one innocent villager matches is about one in a thousand.",
+    "visual": "Scan line sweeps; no warn dot lights; label 'innocent matches ≈ 0.001'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s064",
+    "chapter": "The Missing Piece",
+    "text": "So if someone in the village matches, they are almost certainly the culprit. About nine hundred and ninety nine times in a thousand.",
+    "visual": "Line-up axis: just one orange figure; violet card 'P(guilty | match) ≈ 999 in 1,000'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s065",
+    "chapter": "The Missing Piece",
+    "text": "Back in our city of eight million, the same match gave about one in nine.",
+    "visual": "Slider moves to 8,000,000; line-up of 9; card '≈ 1 in 9'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s066",
+    "chapter": "The Missing Piece",
+    "text": "And if anyone in a whole country of sixty million could have done it, about sixty innocent people would match. The chance of guilt drops to about one in sixty one.",
+    "visual": "Slider to 60,000,000; line-up axis grows to 61 tiny figures (60 blue with warn rings, 1 orange); card '≈ 1 in 61'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s067",
+    "chapter": "The Missing Piece",
+    "text": "The evidence never changed. Only the crowd did. And the answer swung from almost certain, to almost certainly not.",
+    "visual": "Three result cards in a row: '999 in 1,000', '1 in 9', '1 in 61', with the unchanged '1 in a million' chip above all three.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s068",
+    "chapter": "The Missing Piece",
+    "text": "That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well.",
+    "visual": "Equation in words: 'evidence + crowd → answer'; the crowd part glows aqua.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s069",
+    "chapter": "When Other Evidence Counts",
+    "text": "Now, remember our third assumption. We knew nothing about Sam except the match.",
+    "visual": "Assumption ③ card returns: 'no other evidence (yet)'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s070",
+    "chapter": "When Other Evidence Counts",
+    "text": "In a real case, there's usually more. Maybe Sam was seen near the scene that night.",
+    "visual": "A second evidence chip 'seen near the scene' slides in next to the DNA chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s071",
+    "chapter": "When Other Evidence Counts",
+    "text": "Other evidence works by shrinking the crowd. Instead of eight million possible people, maybe only a few hundred were nearby.",
+    "visual": "The 8-block square shrinks to a small cluster of a few hundred dots labelled 'people nearby (illustration)'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s072",
+    "chapter": "When Other Evidence Counts",
+    "text": "In a smaller crowd, far fewer innocent people match by luck, and the match becomes much stronger evidence.",
+    "visual": "Inside the small cluster: almost certainly no innocent warn dots; only the orange culprit matches; violet meter rises toward 'very likely'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s073",
+    "chapter": "When Other Evidence Counts",
+    "text": "So the match isn't useless. It's one piece, and it has to be combined with everything else, honestly.",
+    "visual": "Puzzle pieces 'DNA match' + 'seen nearby' + 'other facts' click together.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s074",
+    "chapter": "A Real Courtroom",
+    "text": "This isn't just a classroom puzzle. In England, in nineteen ninety nine, a mother was convicted after two of her babies died suddenly.",
+    "visual": "Plain card 'A real case · England · 1999' (no names, no photos). A calendar icon.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s075",
+    "chapter": "A Real Courtroom",
+    "text": "A medical expert told the jury that, for a family like hers, the chance of one sudden infant death was about one in eight thousand five hundred.",
+    "visual": "Card: 'one sudden infant death: about 1 in 8,543' (blue).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s076",
+    "chapter": "A Real Courtroom",
+    "text": "He then multiplied that number by itself, and said the chance of two such deaths was about one in seventy three million.",
+    "visual": "'1 in 8,543 × 1 in 8,543 ≈ 1 in 73,000,000' builds up; red underline on the ×.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s077",
+    "chapter": "A Real Courtroom",
+    "text": "That number had two problems. First, multiplying assumes the two deaths were unrelated. But families can share genes and homes, so a second death is more likely after a first.",
+    "visual": "Red tag 1 'treated as unrelated (they may not be)': two linked baby-cradle icons with a shared-home outline.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s078",
+    "chapter": "A Real Courtroom",
+    "text": "Second, the swap. One in seventy three million was presented as if it were the chance she was innocent.",
+    "visual": "Two boxes again: 'P(two deaths | innocent)' vs 'P(innocent | two deaths)'; red 'THE SWAP' stamp.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s079",
+    "chapter": "A Real Courtroom",
+    "text": "But a double murder of babies is also extremely rare. The real question is which rare explanation is more likely. Comparing them points the other way.",
+    "visual": "Balance beam: left pan 'two natural deaths (rare)', right pan 'two murders (even rarer)'; the beam tips toward natural deaths. Label 'shape only'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s080",
+    "chapter": "A Real Courtroom",
+    "text": "Statisticians spoke out, and in two thousand and three, her conviction was overturned.",
+    "visual": "Card 'conviction overturned · 2003'; a scale-of-justice icon levels out.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s081",
+    "chapter": "The Same Swap in Medicine",
+    "text": "The very same swap happens in doctors' offices, every day.",
+    "visual": "Clinic icon; the two boxes reappear with new words.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s082",
+    "chapter": "The Same Swap in Medicine",
+    "text": "In our Bayes theorem video, a test gave a false alarm to one in ten healthy people.",
+    "visual": "Chip 'from: Bayes' Theorem'. Box 1: 'P(positive | healthy) = 1 in 10' (blue).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s083",
+    "chapter": "The Same Swap in Medicine",
+    "text": "That's the chance of a positive, given healthy. Swap it, and ask: given a positive, how likely are you healthy?",
+    "visual": "Box 2: 'P(healthy | positive) = ?' (violet); swap arrows.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s084",
+    "chapter": "The Same Swap in Medicine",
+    "text": "Out of a thousand people, ninety nine healthy people got false alarms, and only nine people who were really sick tested positive.",
+    "visual": "Recap of that video's picture: 1,000-dot grid; 99 blue dots with warn rings, 9 orange dots with warn rings.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s085",
+    "chapter": "The Same Swap in Medicine",
+    "text": "So eleven in twelve of the positives were healthy. A world away from one in ten.",
+    "visual": "Fraction card 'P(healthy | positive) = 99 ÷ 108 = 11 in 12' (violet) next to '1 in 10'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s086",
+    "chapter": "The Same Swap in Medicine",
+    "text": "It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms.",
+    "visual": "Side by side: city line-up (8 innocent + 1) and clinic line-up (99 healthy + 9); caption 'big innocent crowd → many false matches'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s087",
+    "chapter": "Where You'll Use It",
+    "text": "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court.",
+    "visual": "Clinic line-up of 108 goes through a second test filter; the crowd shrinks; label 'second test = smaller crowd (illustration)'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s088",
+    "chapter": "Where You'll Use It",
+    "text": "Once you can see this swap, you'll find it everywhere, especially in the world of data.",
+    "visual": "Four tiles: Machine Learning, Data Science, Finance, Computer Science.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s089",
+    "chapter": "Where You'll Use It",
+    "text": "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.",
+    "visual": "ML tile expands: stadium crowd of dots (illustration), one orange 'wanted' dot. Chip 'false match: 1 in 10,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s090",
+    "chapter": "Where You'll Use It",
+    "text": "It only wrongly matches one face in ten thousand. Sounds great. But fifty thousand fans means about five false matches, plus the one real person.",
+    "visual": "Scan across the crowd: about five warn rings on blue dots, one on the orange dot; counter '≈ 5 + 1 = 6 alerts'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s091",
+    "chapter": "Where You'll Use It",
+    "text": "So when the alarm goes off, it's the right person only about one time in six.",
+    "visual": "Violet card 'P(right person | alert) ≈ 1 in 6'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s092",
+    "chapter": "Where You'll Use It",
+    "text": "In data science, it's the p value from our coin video. A p value is the chance of results this extreme, given that nothing is going on.",
+    "visual": "DS tile: the coin tail-area picture, label 'p = P(this extreme | nothing going on) ≈ 0.021'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s093",
+    "chapter": "Where You'll Use It",
+    "text": "It is not the chance that nothing is going on. If only one coin in a hundred were rigged, that coin would still be fair about eighty three times in a hundred.",
+    "visual": "Box 'P(fair | 15+ heads) ≈ 83 in 100 (if 1 coin in 100 is rigged · illustration)' (violet) beside '0.021'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s094",
+    "chapter": "Where You'll Use It",
+    "text": "In finance, a bank's fraud model flags card payments. It wrongly flags just one honest payment in a thousand.",
+    "visual": "Finance tile: card-payment icons stream past; chip 'false flag: 1 in 1,000'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s095",
+    "chapter": "Where You'll Use It",
+    "text": "But for every million honest payments, there are maybe a hundred frauds. The model catches ninety of those, and also flags a thousand honest ones.",
+    "visual": "Two stacks on a count axis 0–1,000: 'real fraud caught: 90' (orange), 'honest but flagged: 1,000' (blue with warn ring).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s096",
+    "chapter": "Where You'll Use It",
+    "text": "So only about one flag in twelve is really fraud. The rest are customers whose cards just got blocked.",
+    "visual": "Violet card 'P(fraud | flagged) = 90 ÷ 1,090 ≈ 1 in 12'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s097",
+    "chapter": "Where You'll Use It",
+    "text": "And in computer science, it's what happens when you search a huge database.",
+    "visual": "CS tile: a database cylinder icon with rows of profile records.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s098",
+    "chapter": "Where You'll Use It",
+    "text": "Search five million DNA profiles for a one in a million match, and you'd expect about five innocent hits, even if the real culprit isn't in there at all.",
+    "visual": "Search bar animates through rows; five warn hits pop out, all blue; label 'culprit not in database'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s099",
+    "chapter": "Where You'll Use It",
+    "text": "The bigger the search, the more coincidences you're guaranteed to find.",
+    "visual": "Line on axes x: profiles searched (millions, 0–5), y: expected innocent hits (0–5); straight line rising.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s100",
+    "chapter": "Spot the Swap",
+    "text": "Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches.",
+    "visual": "The four tiles return in a row, each with its line-up: '1 in 6', '83 in 100 fair', '1 in 12', '5 innocent hits'; caption 'rare × big crowd = many'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s101",
+    "chapter": "Spot the Swap",
+    "text": "Let's practise. I'll read three claims. For each one, decide: is it a swap, or is it fair?",
+    "visual": "Heading 'spot the swap'; three blank claim cards; a 'swap?' / 'fair?' toggle under each.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s102",
+    "chapter": "Spot the Swap",
+    "text": "Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire.",
+    "visual": "Card ①: smoke-alarm icon + flame; text 'beeps | fire: almost always → fire | beeps: almost certain?'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s103",
+    "chapter": "Spot the Swap",
+    "text": "That's a swap. The crowd here is every time the alarm beeps, and most of those times, someone just burnt the toast.",
+    "visual": "Card ① stamped red 'SWAP'; a crowd of beep icons, most next to toast icons, a few next to flames. Label 'illustration'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s104",
+    "chapter": "Spot the Swap",
+    "text": "Claim two. Nearly every professional basketball player is tall. So if you're tall, you're probably a professional basketball player.",
+    "visual": "Card ②: basketball icon + height bar; text 'tall | pro player → pro player | tall?'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s105",
+    "chapter": "Spot the Swap",
+    "text": "Swap again. There are millions of tall people, and only a few hundred of them play professionally.",
+    "visual": "Card ② stamped red 'SWAP'; a big crowd of tall figures with a tiny orange group 'pros'. Label 'illustration'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s106",
+    "chapter": "Spot the Swap",
+    "text": "Claim three. Out of everyone in the city who matched the trace, about one in nine is guilty.",
+    "visual": "Card ③: the 9-person line-up; text 'guilty | match ≈ 1 in 9'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s107",
+    "chapter": "Spot the Swap",
+    "text": "That one is fair. It starts from the people who match, and asks how many are guilty. That's exactly the question the jury needs.",
+    "visual": "Card ③ stamped green 'FAIR ✓'; the 'given match' part glows.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s108",
+    "chapter": "Common Mistakes",
+    "text": "Let's name the mistakes, so you can catch them.",
+    "visual": "Heading 'common mistakes' (red).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s109",
+    "chapter": "Common Mistakes",
+    "text": "Mistake one: the swap itself. Reading the chance of the evidence, given innocence, as the chance of innocence, given the evidence.",
+    "visual": "Red card ①: 'P(match | innocent) ≠ P(innocent | match)' with the swap arrows.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s110",
+    "chapter": "Common Mistakes",
+    "text": "Listen for it in the words. One in a million chance an innocent person would match, is not the same as one in a million chance he's innocent.",
+    "visual": "Two speech bubbles: left green ✓ 'an innocent person would match: 1 in a million', right red ✗ 'he is innocent: 1 in a million'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s111",
+    "chapter": "Common Mistakes",
+    "text": "Mistake two: forgetting the crowd. A rare match means very different things in a village and in a whole country.",
+    "visual": "Red card ②: mini slider with '999 in 1,000' ↔ '1 in 61'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s112",
+    "chapter": "Common Mistakes",
+    "text": "Mistake three goes the other way. Some defense lawyers say: there are nine matches, so the chance he did it is only one in nine. The evidence is worthless.",
+    "visual": "Red card ③: speech bubble 'only 1 in 9 → worthless!' with a red ✗.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s113",
+    "chapter": "Common Mistakes",
+    "text": "That's a fallacy too. The match took eight million people down to nine. That's powerful evidence. It just isn't proof on its own.",
+    "visual": "Funnel: '8,000,000' at the top narrows to '9' at the bottom; label 'powerful, not proof'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s114",
+    "chapter": "Common Mistakes",
+    "text": "And a bonus mistake, from the real case: multiplying chances together when the events are connected. That can make a coincidence look far rarer than it is.",
+    "visual": "Red bonus card: '1/8,543 × 1/8,543' with a red 'connected?' tag.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s115",
+    "chapter": "Recipe",
+    "text": "Here's a recipe to catch the swap in any claim you're shown.",
+    "visual": "Recipe card frame draws on: 'catch the swap'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s116",
+    "chapter": "Recipe",
+    "text": "Step one: find the given. Ask what the number assumes is already true.",
+    "visual": "① **Find the given** — what does the number assume is true?",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s117",
+    "chapter": "Recipe",
+    "text": "Step two: flip it. Write down the question you actually care about, and check it's not the one you were given.",
+    "visual": "② **Flip it** — is that the question you actually care about?",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s118",
+    "chapter": "Recipe",
+    "text": "Step three: find the crowd. How many people, or tests, or payments, could have produced this evidence?",
+    "visual": "③ **Find the crowd** — the base rate: how many could match?",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s119",
+    "chapter": "Recipe",
+    "text": "Step four: count the matches. Expected false matches, plus the real ones.",
+    "visual": "④ **Count the matches** — crowd × false-match rate, + the real ones.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s120",
+    "chapter": "Recipe",
+    "text": "And step five: divide. The real matches, out of all the matches. Then add in any other evidence.",
+    "visual": "⑤ **Divide** — real matches ÷ all matches; then combine other evidence.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s121",
+    "chapter": "Recipe",
+    "text": "Because a rare match is not the same as a rare chance of innocence.",
+    "visual": "Closing line under the card: 'a rare match is not a rare chance of innocence' (violet).",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s122",
+    "chapter": "Subscribe",
+    "text": "Look around your world, and notice how often a rare coincidence gets treated as proof.",
+    "visual": "Four everyday cards: a news headline 'one in a million!', a medical test result, a security alarm, a fraud text message; each stamped 'given what?'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s123",
+    "chapter": "Subscribe",
+    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+    "visual": "Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s124",
+    "chapter": "Next Time",
+    "text": "But here's a puzzle for next time.",
+    "visual": "Small logo top-centre; a puzzle-piece icon draws on.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s125",
+    "chapter": "Next Time",
+    "text": "A model says it catches ninety percent of fraud. Another says ninety percent of its alarms are real. Are they bragging about the same thing?",
+    "visual": "Two model cards: 'catches 90% of fraud' and '90% of alarms are real'; a big '=?' between them.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s126",
+    "chapter": "Next Time",
+    "text": "They're not. It's the same swap we saw today, wearing a lab coat. Next time, we'll lay it all out in one simple table, called the confusion matrix.",
+    "visual": "The two cards slot into a 2 × 2 grid outline; chip 'next: the confusion matrix' under the logo.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s127",
+    "chapter": "Next Time",
+    "text": "I will see you in the next video.",
+    "visual": "Logo + next chip hold.",
+    "pause_after": 2.0
+  }
+]

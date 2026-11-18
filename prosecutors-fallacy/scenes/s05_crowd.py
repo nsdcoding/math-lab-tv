@@ -55,8 +55,8 @@ class S05Crowd(Base):
         self.at("s040", 0.0)
         cul = blocks[GUILTY_BLOCK].cells[GUILTY_CELL]
         self.word("s040", "culprit")
-        self.play(cul.animate.set_fill(ORANGE_, 1).scale(1.8), ripple(cul.get_center(), ORANGE_, r=0.2, scale=4), run_time=0.7)
-        self.play(cul.animate.scale(1 / 1.8), run_time=0.3)
+        self.play(cul.animate.set_fill(ORANGE_, 1), ripple(cul.get_center(), ORANGE_, r=0.2, scale=4), run_time=0.7)
+        self.play(highlight(cul, color=ORANGE_), run_time=0.8)
         self.word("s040", "innocent")
         inn = VGroup(T("innocent", 28, BLUE_, weight=BOLD), TB("7,999,999", 40, BLUE_)).arrange(DOWN, buff=0.12)
         inn.move_to(UP * 1.25).set_x(px + inn.width / 2)
@@ -87,9 +87,9 @@ class S05Crowd(Base):
         # ── s043 about one ──
         self.at("s043", 0.0)
         hit0 = b0.cells[LUCKY[0]]
-        self.play(FadeOut(scan), hit0.animate.set_fill(WARN, 1).scale(1.8), ripple(hit0.get_center(), WARN, r=0.2, scale=4), run_time=0.6)
+        self.play(FadeOut(scan), hit0.animate.set_fill(WARN, 1), ripple(hit0.get_center(), WARN, r=0.2, scale=4), run_time=0.6)
         one = pill("≈ 1 innocent match", WARN, 26).move_to(DOWN * 1.85).set_x(px + 2.0)
-        self.play(FadeIn(one, shift=UP * 0.2), hit0.animate.scale(1 / 1.8), run_time=0.5)
+        self.play(FadeIn(one, shift=UP * 0.2), highlight(hit0), run_time=0.8)
 
         # ── s044 eight blocks: about eight innocent matches ──
         self.at("s044", 0.0)
@@ -118,7 +118,7 @@ class S05Crowd(Base):
         self.play(FadeOut(labs), run_time=0.3)
         self.play(FadeIn(ar, shift=UP * 0.2), run_time=0.5)
         self.word("s042a", "eight", nth=1)
-        self.play(ar[-1:].animate.set_color(WARN).scale(1.4), run_time=0.5)
+        self.play(ar[-1:].animate.set_color(WARN), highlight(ar[-1:]), run_time=0.8)
 
         # ── s045 plus the culprit ──
         self.at("s045", 0.0)
@@ -155,13 +155,13 @@ class S05Crowd(Base):
         g_ = lu[CULPRIT_AT]
         others = VGroup(*[p for p in lu if not p.guilty])
         self.word("s047", "one")
-        self.play(*[p[0].animate.set_opacity(0.35) for p in others], g_.animate.scale(1.2), run_time=0.6)   # dim the people only: set_opacity on the rings would fill them
+        self.play(*[p[0].animate.set_opacity(0.35) for p in others], run_time=0.6)   # dim the people only: set_opacity on the rings would fill them
         gl = pill("guilty", ORANGE_, 26).next_to(g_, UP, buff=0.25)
         self.play(FadeIn(gl, shift=DOWN * 0.2), run_time=0.4)
 
         # ── s048 Sam is somewhere in this line: 1 in 9 ──
         self.at("s048", 0.0)
-        self.play(*[p[0].animate.set_stroke(opacity=1).set_fill(opacity=0.85) for p in others], g_.animate.scale(1 / 1.2), FadeOut(gl), run_time=0.5)
+        self.play(*[p[0].animate.set_stroke(opacity=1).set_fill(opacity=0.85) for p in others], FadeOut(gl), run_time=0.5)
         sam = sticker("assets/sam.png", 1.25)
         sam.next_to(lu, UP, buff=0.35).set_x(lu[SAM_AT].get_x())
         sam.set_opacity(0)

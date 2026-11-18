@@ -43,15 +43,16 @@
 - Animating mobjects that already sit inside a group with LaggedStart/AnimationGroup made Manim re-add them on
   top of everything (cards drew over their own labels). `Base` now skips AnimationGroup wrappers and restores the
   drawing order after every play.
-- Idle actors must move enough to see: a 1.06 pulse over a second is invisible. motion_check compares frames 0.2 s
-  apart; aim for pulses of 1.1+ and falls of a few units.
+- (Superseded by the owner's no-bouncing rule, Prosecutor's Fallacy) Idle actors used to be pulses; now use
+  `highlight()` (underline / brace / ring) or a real beat, and let the screen rest between them.
 - Gauges: use `speedometer()` (zones, ticks, end labels, needle on a hub), not a bare arc and line.
 - Images (stickers) placed partly off-frame are drawn in the wrong place for a frame or two. Never slide an
   image in from off-screen: FadeIn(img, shift=...) from just inside the frame.
 
 ## Prosecutor's Fallacy
-- `Indicate(...)` on a pill, chip or card floods its filled box with the highlight colour for a few frames. Use
-  `pulse()` on anything with a filled box; keep `Indicate` for bare text and dots.
+- `Indicate(...)` on a pill, chip or card flooded its filled box with colour. The owner also found the pulsing and
+  breathing too bouncy: common.py now maps `pulse`/`Indicate`/`Wiggle` to `highlight()` (underline, curly brace or
+  ring), drops `FadeIn(scale=...)`, and has no "breathing" fallback in `until()`.
 - `group.animate.set_opacity(x)` also sets the fill of outline-only circles (rings) in the group; restoring to 1
   turns them into solid discs. Dim only the parts you mean (e.g. `p[0].animate.set_opacity(0.35)`).
 - When inserting script lines after voicing, check the new segment's `chapter` in script.json: a line placed

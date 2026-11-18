@@ -119,14 +119,14 @@ class Base(MovingCameraScene):
                 mk = self._idle[self._idle_k % len(self._idle)]
                 self._idle_k += 1
                 anim = mk()
-            else:      # fallback: the newest thing on screen breathes, so a wait is never a frozen frame
-                f = self._focus_alive()
-                if f is None:
-                    break
-                anim = pulse(f, s=1.1 if f.width < 6 else 1.04)
+            else:      # no bouncing/breathing fallback (owner preference): a calm hold is fine
+                break
             rt = w - 0.02 if w < 1.7 else 0.85
             self.play(anim, run_time=rt)
             w = t_global - self.now()
+            if w > 2.0:   # rest between idle highlights so the screen never feels busy
+                self.wait(min(1.6, w - 0.5))
+                w = t_global - self.now()
         if w > 1 / 30:
             self.wait(w)
 
@@ -840,14 +840,45 @@ def binom_k(rng):
     return int(rng.binomial(20, 0.5))
 
 
-def pulse(*mobs, s=1.12):
-    """Grow and settle back (safe for chips/pills: Indicate would recolour their filled box over the text).
-    Several mobjects pulse together about their common centre. Never pass a temporary VGroup of mobjects that
-    already belong to another group: adding it to the scene pulls them out of their group."""
+def highlight(*mobs, color=WARN):
+    """Still highlight, never a bounce (owner preference): an underline under text/chips/rows, a curly brace beside
+    tall cards, a thin ring around small dots. Drawn, held, faded; nothing on screen moves or changes size."""
+    anims = []
+    for m in mobs:
+        w, h = m.width, m.height
+        if w < 0.75 and h < 0.75:
+            mk = Circle(radius=max(w, h) * 0.75 + 0.08).move_to(m).set_stroke(color, 4)
+        elif h > 1.3 and h > 0.45 * w:
+            side = RIGHT if m.get_left()[0] < -6.0 else LEFT
+            mk = Brace(m, side, buff=0.12, color=color)
+        else:
+            mk = Line(m.get_corner(DL) + DOWN * 0.1, m.get_corner(DR) + DOWN * 0.1).set_stroke(color, 5)
+        for x in mk.get_family():
+            x.qa_ignore = True
+        anims.append(Succession(Create(mk, run_time=0.45), Wait(0.35), FadeOut(mk, run_time=0.3)))
+    return AnimationGroup(*anims)
+
+
+def pulse(*mobs, s=None, color=WARN):
+    """Kept for old scene code: now a still highlight (see highlight()); `s` is ignored."""
     if mobs and not isinstance(mobs[-1], Mobject):
-        *mobs, s = mobs
-    c = VGroup(*[m.copy() for m in mobs]).get_center() if len(mobs) > 1 else mobs[0].get_center()
-    return AnimationGroup(*[m.animate(rate_func=there_and_back).scale(s, about_point=c) for m in mobs])
+        *mobs, _ = mobs
+    return highlight(*mobs, color=color)
+
+
+def Indicate(mob, color=None, scale_factor=None, **kw):    # noqa: N802  (overrides manim's bouncing Indicate)
+    return highlight(mob, color=color if color not in (None, YELLOW) else WARN)
+
+
+def Wiggle(mob, **kw):    # noqa: N802  (overrides manim's Wiggle: no shaking)
+    return highlight(mob)
+
+
+_ManimFadeIn = FadeIn
+
+
+def FadeIn(*mobs, scale=None, **kw):    # noqa: N802  (no pop-in: entrances fade/slide, never grow or shrink)
+    return _ManimFadeIn(*mobs, **kw)
 
 
 def speedometer(title="how surprising?", left="not surprising", right="very surprising", r=1.55):

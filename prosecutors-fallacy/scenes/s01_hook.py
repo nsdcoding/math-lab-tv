@@ -107,7 +107,7 @@ class S01Hook(Base):
         self.at("s006", 0.0)
         self.idle()
         self.word("s006", "prosecutor")
-        self.play(court.animate.shift(LEFT * 0.0).scale(1.05), run_time=0.4)
+        self.wait(0.4)
         self.word("s006", "only")
         c2 = evidence_card("Sam is innocent", RED_, 4.0, 26, "1 in 1,000,000", 40)
         c2.next_to(c1, RIGHT, buff=0.45)

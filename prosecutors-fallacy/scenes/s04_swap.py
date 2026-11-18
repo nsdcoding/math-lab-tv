@@ -92,7 +92,7 @@ class S04Swap(Base):
         m1.move_to(UP * 1.1).align_to(b1, LEFT)
         self.word("s027", "Almost")
         self.play(FadeIn(m1.track), GrowFromEdge(m1.fill, LEFT), FadeIn(m1.lab), run_time=0.8)
-        self.idle(lambda: dg.animate(rate_func=there_and_back).shift(UP * 0.18))
+        self.idle(lambda: highlight(dg, color=ORANGE_))
 
         # ── s028 swap it: P(dog | four legs) ──
         self.at("s028", 0.0)

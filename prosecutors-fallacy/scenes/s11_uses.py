@@ -59,7 +59,7 @@ class S11Uses(Base):
         self.word("s089", "stadium")
         self.play(FadeIn(crowd, lag_ratio=0.003), FadeIn(cap), run_time=0.9)
         self.word("s089", "wanted")
-        self.play(crowd[wanted].animate.scale(1.8), ripple(crowd[wanted].get_center(), ORANGE_, r=0.2, scale=4), run_time=0.6)
+        self.play(highlight(crowd[wanted], color=ORANGE_), ripple(crowd[wanted].get_center(), ORANGE_, r=0.2, scale=4), run_time=0.6)
         px = crowd.get_right()[0] + 0.5
         fm = pill("false match: 1 in 10,000", WARN, 26)
         fm.move_to(UP * 1.25).set_x(px + fm.width / 2)

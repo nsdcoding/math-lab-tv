@@ -134,13 +134,16 @@ one sentence first (`python3 tts.py test "…" out.wav`).
   x/y scale so cells can be counted.
 - **No second without something happening** (owner's rule): a new beat roughly every second, each tied to the
   words being spoken (`self.word(sid, "word")`), with motion graphics, transitions (`push`, slides, zooms) and
-  camera moves. Register idle actors for every wait (`self.idle(...)`: coin flips, friends dropping into a chart,
-  `pulse`, `glint`, `ripple`); if none are set, the newest object breathes. `python3 motion_check.py <scene.mp4>`
-  must report no still stretch over 1 s for every scene.
+  camera moves. Register idle actors for long waits (`self.idle(...)`: coin flips, friends dropping into a chart,
+  `glint`, `highlight`); between them the screen rests calmly. Check long still stretches with
+  `python3 motion_check.py <scene.mp4>` and fill them with real beats, never with bouncing.
+- **No bouncing** (owner's rule): nothing grows-and-shrinks, hops, wiggles or pops in. To draw the eye use
+  `highlight(mob)` (common.py): an underline under text, chips and rows, a curly brace beside tall cards, a thin
+  ring around small dots. `pulse`, `Indicate` and `Wiggle` are mapped to it, and `FadeIn(scale=...)` ignores the scale.
 - **Callbacks name the card**: whenever the narration says "in our X video", it also says the video is in the
   card at the top, and `card_cue(title, mini)` shows the tile in the top-right corner. List those timestamps in
   the package so the owner can add the YouTube cards.
-- Never `Indicate` a filled chip/pill (it recolours the box over the text): use `pulse`. Never put a cross or
+- Highlight with `highlight()` (never a bounce). Never put a cross or
   strike over text: use a red chip beside it. Shapes must not overlap either (the checker's `box_overlap`).
 - A new visual beat every 2–3 s: comparisons, metaphors (balance beam, water levelling, number-line walks),
   counters, stacking dots, on-screen symbol definitions, and the final recipe card. Keep variety high.

@@ -27,6 +27,8 @@ assert round(float(pi) * 100) == 89
 # "almost nine hundred thousand times bigger"
 ratio = pi / MATCH
 assert 888_000 < ratio < 889_000
+# Before the match 1 in 8,000,000 -> after ~1 in 9: ~889,000 times higher
+assert 888_000 < pg / F(1, CITY) < 889_000
 # Each block of one million people holds about one innocent match
 assert 1_000_000 * MATCH == 1
 

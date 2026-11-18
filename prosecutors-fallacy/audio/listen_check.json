@@ -1,0 +1,865 @@
+[
+ {
+  "id": "s001",
+  "text": "Last time, I left you with a puzzle from a courtroom. Today, we solve it.",
+  "heard": "Last time, I left you with a puzzle from a courtroom. Today, we solve it.",
+  "diffs": []
+ },
+ {
+  "id": "s002",
+  "text": "Picture a city of eight million people. One night, a crime. At the scene, police find a tiny trace of DNA.",
+  "heard": "Picture a city of eight million people. One night, a crime. At the scene, police find a tiny trace of DNA.",
+  "diffs": []
+ },
+ {
+  "id": "s003",
+  "text": "It's only a partial trace, so it can't point to one person. But it's still rare.",
+  "heard": "It's only a partial trace, so it can't point to one person. But it's still rare.",
+  "diffs": []
+ },
+ {
+  "id": "s004",
+  "text": "Weeks later, police find a man. Let's call him Sam. Sam's DNA matches the trace.",
+  "heard": "Weeks later, police find a man. Let's call him Sam. Sam's DNA matches the trace.",
+  "diffs": []
+ },
+ {
+  "id": "s005",
+  "text": "In court, an expert explains: if you picked an innocent person at random, the chance they would match is just one in a million.",
+  "heard": "In court, an expert explains: If you picked an innocent person at random, the chance they would match is just one in a million.",
+  "diffs": []
+ },
+ {
+  "id": "s006",
+  "text": "Then the prosecutor stands up and says: so there's only a one in a million chance that Sam is innocent.",
+  "heard": "Then the prosecutor stands up and says, so there's only a one in a million chance that Sam is innocent.",
+  "diffs": []
+ },
+ {
+  "id": "s007",
+  "text": "The jury nods. One in a million sounds like proof.",
+  "heard": "The jury nods. One in a million sounds like proof.",
+  "diffs": []
+ },
+ {
+  "id": "s008",
+  "text": "Take a second, and decide. Do you agree with the prosecutor?",
+  "heard": "Take a second and decide. Do you agree with the prosecutor?",
+  "diffs": []
+ },
+ {
+  "id": "s009",
+  "text": "If you said yes, you're in good company. Judges, juries and even experts have made this exact mistake.",
+  "heard": "If you said yes, you're in good company. Judges, juries, and even experts have made this exact mistake.",
+  "diffs": []
+ },
+ {
+  "id": "s010",
+  "text": "By the end of this video, you'll see that Sam is much more likely innocent than guilty. And you'll be able to spot this trap anywhere.",
+  "heard": "By the end of this video, you'll see that Sam is much more likely innocent than guilty, and you'll be able to spot this trap anywhere.",
+  "diffs": []
+ },
+ {
+  "id": "s011",
+  "text": "It's called the prosecutor's fallacy.",
+  "heard": "It's called the prosecutor's fallacy.",
+  "diffs": []
+ },
+ {
+  "id": "s012",
+  "text": "Welcome to Math Lab TV. Where math is something you can see.",
+  "heard": "Welcome to Math Lab T V, where math is something you can see.",
+  "diffs": [
+   [
+    "tv",
+    "t v"
+   ]
+  ]
+ },
+ {
+  "id": "s013",
+  "text": "Today you will learn why the chance of the evidence, if someone is innocent, is not the chance they are innocent.",
+  "heard": "Today you will learn why the chance of the evidence, if someone is innocent, is not the chance they are innocent.",
+  "diffs": []
+ },
+ {
+  "id": "s014",
+  "text": "You will see how to count the crowd, and find how many innocent people share the same evidence.",
+  "heard": "You will see how to count the crowd and find how many innocent people share the same evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s015",
+  "text": "And you will learn a simple recipe to catch this swap in courtrooms, medical tests, and the news.",
+  "heard": "And you will learn a simple recipe to catch this swap in courtrooms, medical tests, and the news.",
+  "diffs": []
+ },
+ {
+  "id": "s016",
+  "text": "In our hypothesis testing video, we flipped a friend's coin twenty times, and got fifteen heads.",
+  "heard": "In our hypothesis testing video, we flipped a friend's coin twenty times and got fifteen heads.",
+  "diffs": []
+ },
+ {
+  "id": "s017",
+  "text": "We found that a fair coin would do something that extreme only about two times in a hundred.",
+  "heard": "We found that a fair coin would do something that extreme only about two times in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s018",
+  "text": "And we warned: that is not the chance the coin is fair. The question had been flipped.",
+  "heard": "And we warned. That is not the chance the coin is fair. The question had been flipped.",
+  "diffs": []
+ },
+ {
+  "id": "s019",
+  "text": "The courtroom is the very same flip. So let's write it down carefully.",
+  "heard": "The courtroom is the very same flip, so let's write it down carefully.",
+  "diffs": []
+ },
+ {
+  "id": "s020",
+  "text": "Mathematicians write the chance of something with a capital P. And they use a short vertical bar, which you can read as the word given.",
+  "heard": "Mathematicians write the chance of something with a capital P, and they use a short vertical bar, which you can read as the word given.",
+  "diffs": []
+ },
+ {
+  "id": "s021",
+  "text": "So P of match, given innocent, means: suppose the person is innocent. How likely is a match?",
+  "heard": "So P of match, given innocent, means suppose the person is innocent, how likely is a match?",
+  "diffs": []
+ },
+ {
+  "id": "s022",
+  "text": "That's the number the expert gave. One in a million.",
+  "heard": "That's the number the expert gave. One in a million.",
+  "diffs": []
+ },
+ {
+  "id": "s023",
+  "text": "But the jury needs a different number. P of innocent, given match. Suppose the person matches. How likely are they innocent?",
+  "heard": "But the jury needs a different number. P of innocent, given match. Suppose the person matches. How likely are they innocent?",
+  "diffs": []
+ },
+ {
+  "id": "s024",
+  "text": "Look at the two boxes. Same words. Just swapped around the bar.",
+  "heard": "Look at the two boxes. Same words. Just swapped around the bar.",
+  "diffs": []
+ },
+ {
+  "id": "s025",
+  "text": "The prosecutor took the first number, and read it out as the second. That swap is the whole fallacy.",
+  "heard": "The prosecutor took the first number and read it out as the second. That swap is the whole fallacy.",
+  "diffs": []
+ },
+ {
+  "id": "s025a",
+  "text": "So what should the expert have said? Something like this: if Sam were innocent, a match would be very unlikely.",
+  "heard": "So what should the expert have said? Something like this: If Sam were innocent, a match would be very unlikely.",
+  "diffs": []
+ },
+ {
+  "id": "s025b",
+  "text": "That sentence is true. But it does not tell you how likely Sam is to be innocent. To get that, you need one more ingredient.",
+  "heard": "That sentence is true, but it does not tell you how likely Sam is to be innocent. To get that, you need one more ingredient.",
+  "diffs": []
+ },
+ {
+  "id": "s026",
+  "text": "Is swapping really such a big deal? Let's try it on something simple.",
+  "heard": "Is swapping really such a big deal? Let's try it on something simple.",
+  "diffs": []
+ },
+ {
+  "id": "s027",
+  "text": "What's the chance that a dog has four legs? Almost certain. Nearly every dog does.",
+  "heard": "What's the chance that a dog has four legs? Almost certain. Nearly every dog does.",
+  "diffs": []
+ },
+ {
+  "id": "s028",
+  "text": "Now swap it. What's the chance that something with four legs is a dog?",
+  "heard": "Now swap it. What's the chance that something with four legs is a dog?",
+  "diffs": []
+ },
+ {
+  "id": "s029",
+  "text": "Not very likely at all. Cats have four legs. So do cows, and horses. Even your kitchen table.",
+  "heard": "Not very likely at all. Cats have four legs, so do cows and horses. Even your kitchen table.",
+  "diffs": []
+ },
+ {
+  "id": "s030",
+  "text": "The two numbers share the same words, but they can be wildly different.",
+  "heard": "The two numbers share the same words, but they can be wildly different.",
+  "diffs": []
+ },
+ {
+  "id": "s031",
+  "text": "The difference comes from the crowd. How many other things, besides dogs, also have four legs?",
+  "heard": "The difference comes from the crowd. How many other things, besides dogs, also have four legs?",
+  "diffs": []
+ },
+ {
+  "id": "s032",
+  "text": "So why do smart people swap them? Because our brains love a simple story. The evidence fits the guilty person, so the guilty person must fit the evidence.",
+  "heard": "So why do smart people swap them? Because our brains love a simple story. The evidence fits the guilty person, so the guilty person must fit the evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s033",
+  "text": "But fitting the evidence is easy when the crowd is big. Lots of innocent people can fit it too.",
+  "heard": "But fitting the evidence is easy when the crowd is big. Lots of innocent people can fit it too.",
+  "diffs": []
+ },
+ {
+  "id": "s034",
+  "text": "In Sam's case, the crowd is a city of eight million people. So let's count it.",
+  "heard": "In Sam's case, the crowd is a city of eight million people, so let's count it.",
+  "diffs": []
+ },
+ {
+  "id": "s035",
+  "text": "Before we start, let's be honest about what we are assuming.",
+  "heard": "Before we start, let's be honest about what we are assuming.",
+  "diffs": []
+ },
+ {
+  "id": "s036",
+  "text": "First, the person who did it lives somewhere in this city.",
+  "heard": "First, the person who did it lives somewhere in this city.",
+  "diffs": []
+ },
+ {
+  "id": "s037",
+  "text": "Second, the real culprit's DNA always matches the trace.",
+  "heard": "Second, the real culprit's DNA always matches the trace.",
+  "diffs": []
+ },
+ {
+  "id": "s038",
+  "text": "And third, for now, we know nothing else about Sam. Only the match. We'll come back to that one.",
+  "heard": "And third, for now, we know nothing else about Sam, only the match. We'll come back to that one.",
+  "diffs": []
+ },
+ {
+  "id": "s039",
+  "text": "Here is the whole city. Eight million people, drawn as eight big blocks of one million each.",
+  "heard": "Here is the whole city. Eight million people, drawn as eight big blocks of one million each.",
+  "diffs": []
+ },
+ {
+  "id": "s040",
+  "text": "One of them is the culprit. That leaves seven million, nine hundred and ninety nine thousand, nine hundred and ninety nine innocent people.",
+  "heard": "One of them is the culprit. That leaves seven million nine hundred ninety-nine thousand nine hundred ninety-nine innocent people.",
+  "diffs": []
+ },
+ {
+  "id": "s041",
+  "text": "Now the expert's number. Each innocent person matches with a chance of one in a million.",
+  "heard": "Now the expert's number. Each innocent person matches with a chance of one in a million.",
+  "diffs": []
+ },
+ {
+  "id": "s042",
+  "text": "So in a block of one million innocent people, how many would we expect to match by pure chance?",
+  "heard": "So in a block of one million innocent people, how many would we expect to match by pure chance?",
+  "diffs": []
+ },
+ {
+  "id": "s043",
+  "text": "About one.",
+  "heard": "About one.",
+  "diffs": []
+ },
+ {
+  "id": "s044",
+  "text": "And we have eight of those blocks. So across the whole city, about eight innocent people match the trace. Just by luck.",
+  "heard": "And we have eight of those blocks so across the whole city, about eight innocent people match the trace. Just by luck.",
+  "diffs": []
+ },
+ {
+  "id": "s042a",
+  "text": "You can check it yourself. Eight million, times one in a million, is eight.",
+  "heard": "You can check it yourself. Eight million times one in a million is eight.",
+  "diffs": []
+ },
+ {
+  "id": "s045",
+  "text": "Plus the one real culprit, who matches for sure.",
+  "heard": "plus the one real culprit who matches for sure",
+  "diffs": []
+ },
+ {
+  "id": "s046",
+  "text": "So if police lined up everyone in the city who matches, there would be about nine people in that line.",
+  "heard": "So if police lined up everyone in the city who matches, there would be about nine people in that line.",
+  "diffs": []
+ },
+ {
+  "id": "s047",
+  "text": "And only one of those nine is guilty.",
+  "heard": "And only one of those nine is guilty.",
+  "diffs": []
+ },
+ {
+  "id": "s048",
+  "text": "Sam is one of the people in that line. All we know is that he matched. So the chance he's the guilty one is about one in nine.",
+  "heard": "Sam is one of the people in that line. All we know is that he matched, so the chance he's the guilty one is about one in nine.",
+  "diffs": []
+ },
+ {
+  "id": "s049",
+  "text": "Which means the chance he's innocent is about eight in nine. Around eighty nine percent.",
+  "heard": "which means the chance he's innocent is about eight in nine around eighty-nine percent",
+  "diffs": []
+ },
+ {
+  "id": "s050",
+  "text": "Notice what we did. No fancy formula. We just imagined everyone in the city, and asked who else would match.",
+  "heard": "Notice what we did. No fancy formula. We just imagined everyone in the city and asked who else would match.",
+  "diffs": []
+ },
+ {
+  "id": "s051",
+  "text": "Put the two numbers next to each other.",
+  "heard": "Put the two numbers next to each other.",
+  "diffs": []
+ },
+ {
+  "id": "s052",
+  "text": "The chance of a match, given innocent: one in a million.",
+  "heard": "The chance of a match, given innocent, one in a million.",
+  "diffs": []
+ },
+ {
+  "id": "s053",
+  "text": "The chance of innocent, given a match: about eight in nine.",
+  "heard": "The chances of innocent given a match about eight in nine",
+  "diffs": [
+   [
+    "chance",
+    "chances"
+   ]
+  ]
+ },
+ {
+  "id": "s054",
+  "text": "The second number is almost nine hundred thousand times bigger. That's how far apart the two questions are.",
+  "heard": "The second number is almost nine hundred thousand times bigger. That's how far apart the two questions are.",
+  "diffs": []
+ },
+ {
+  "id": "s055",
+  "text": "What we just did is count, but you can write it as a short rule.",
+  "heard": "What we just did is count. But you can write it as a short rule.",
+  "diffs": []
+ },
+ {
+  "id": "s056",
+  "text": "The chance of guilt, given a match, equals the guilty people who match, divided by everyone who matches.",
+  "heard": "The chance of guilt given a match equals the guilty people who match divided by everyone who matches.",
+  "diffs": []
+ },
+ {
+  "id": "s057",
+  "text": "On top, one. On the bottom, one plus eight. One ninth.",
+  "heard": "On top, one. On the bottom, one plus eight. One ninth.",
+  "diffs": []
+ },
+ {
+  "id": "s058",
+  "text": "In our Bayes theorem video, we wrote this same idea as a formula. Here, counting the crowd gets you to the same answer, with no formula to remember.",
+  "heard": "In our Bayes theorem video, we wrote this same idea as a formula. Here, counting the crowd gets you to the same answer, with no formula to remember.",
+  "diffs": []
+ },
+ {
+  "id": "s059",
+  "text": "And notice where the eight came from. Not from the expert's number alone. It came from the size of the crowd.",
+  "heard": "And notice where the eight came from. Not from the experts' number alone. It came from the size of the crowd.",
+  "diffs": [
+   [
+    "expert's",
+    "experts'"
+   ]
+  ]
+ },
+ {
+  "id": "s060",
+  "text": "That crowd size has a name. It's called the base rate. And it's the piece the prosecutor left out.",
+  "heard": "That crowd size has a name. It's called the base rate. And it's the piece the prosecutor left out.",
+  "diffs": []
+ },
+ {
+  "id": "s061",
+  "text": "Let's keep the same one in a million trace, and just change the crowd.",
+  "heard": "Let's keep the same one in a million trace and just change the crowd.",
+  "diffs": []
+ },
+ {
+  "id": "s062",
+  "text": "Imagine the crime happened in a tiny village of one thousand people, and nobody else could have been there.",
+  "heard": "Imagine the crime happened in a tiny village of one thousand people and nobody else could have been there.",
+  "diffs": []
+ },
+ {
+  "id": "s063",
+  "text": "Now the chance that even one innocent villager matches is about one in a thousand.",
+  "heard": "Now the chance that even one innocent villager matches is about one in a thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s064",
+  "text": "So if someone in the village matches, they are almost certainly the culprit. About nine hundred and ninety nine times in a thousand.",
+  "heard": "So if someone in the village matches, they are almost certainly the culprit. About nine hundred and ninety-nine times in a thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s065",
+  "text": "Back in our city of eight million, the same match gave about one in nine.",
+  "heard": "Back in our city of eight million, the same match gave about one in nine.",
+  "diffs": []
+ },
+ {
+  "id": "s066",
+  "text": "And if anyone in a whole country of sixty million could have done it, about sixty innocent people would match. The chance of guilt drops to about one in sixty one.",
+  "heard": "And if anyone in a whole country of sixty million could have done it, about sixty innocent people would match. The chance of guilt drops to about one in sixty-one.",
+  "diffs": []
+ },
+ {
+  "id": "s067",
+  "text": "The evidence never changed. Only the crowd did. And the answer swung from almost certain, to almost certainly not.",
+  "heard": "The evidence never changed. Only the crowd did. And the answer swung from almost certain to almost certainly not.",
+  "diffs": []
+ },
+ {
+  "id": "s066a",
+  "text": "Same trace. Same expert. Same one in a million. Three completely different answers.",
+  "heard": "Same trace. Same expert. Same one in a million. Three completely different answers.",
+  "diffs": []
+ },
+ {
+  "id": "s068",
+  "text": "That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well.",
+  "heard": "That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well.",
+  "diffs": []
+ },
+ {
+  "id": "s069",
+  "text": "Now, remember our third assumption. We knew nothing about Sam except the match.",
+  "heard": "Now, remember our third assumption. We knew nothing about Sam except the match.",
+  "diffs": []
+ },
+ {
+  "id": "s070",
+  "text": "In a real case, there's usually more. Maybe Sam was seen near the scene that night.",
+  "heard": "In a real case, there's usually more. Maybe Sam was seen near the scene that night.",
+  "diffs": []
+ },
+ {
+  "id": "s071",
+  "text": "Other evidence works by shrinking the crowd. Instead of eight million possible people, maybe only a few hundred were nearby.",
+  "heard": "Other evidence works by shrinking the crowd. Instead of eight million possible people, maybe only a few hundred were nearby.",
+  "diffs": []
+ },
+ {
+  "id": "s072",
+  "text": "In a smaller crowd, far fewer innocent people match by luck, and the match becomes much stronger evidence.",
+  "heard": "In a smaller crowd, far fewer innocent people match by luck, and the match becomes much stronger evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s073",
+  "text": "So the match isn't useless. It's one piece, and it has to be combined with everything else, honestly.",
+  "heard": "So the match isn't useless. It's one piece and it has to be combined with everything else honestly.",
+  "diffs": []
+ },
+ {
+  "id": "s073a",
+  "text": "In fact, here's how much the match moved things. Before it, Sam was just one of eight million people. One in eight million.",
+  "heard": "In fact, here's how much the match moved things. Before it, Sam was just one of eight million people. One in eight million.",
+  "diffs": []
+ },
+ {
+  "id": "s073b",
+  "text": "After it, he's one in nine. His chance of guilt jumped almost nine hundred thousand times.",
+  "heard": "After it, he's one in nine. His chance of guilt jumped almost nine hundred thousand times.",
+  "diffs": []
+ },
+ {
+  "id": "s073c",
+  "text": "Strong evidence. Just not, on its own, proof.",
+  "heard": "Strong evidence. Just not, on its own, proof.",
+  "diffs": []
+ },
+ {
+  "id": "s074",
+  "text": "This isn't just a classroom puzzle. In England, in nineteen ninety nine, a mother was convicted after two of her babies died suddenly.",
+  "heard": "This isn't just a classroom puzzle. In England, in nineteen ninety-nine, a mother was convicted after two of her babies died suddenly.",
+  "diffs": []
+ },
+ {
+  "id": "s075",
+  "text": "A medical expert told the jury that, for a family like hers, the chance of one sudden infant death was about one in eight thousand five hundred.",
+  "heard": "A medical expert told the jury that, for a family like hers, the chance of one sudden infant death was about one in eight thousand five hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s076",
+  "text": "He then multiplied that number by itself, and said the chance of two such deaths was about one in seventy three million.",
+  "heard": "He then multiplied that number by itself and said the chance of two such deaths was about one in seventy-three million.",
+  "diffs": []
+ },
+ {
+  "id": "s077",
+  "text": "That number had two problems. First, multiplying assumes the two deaths were unrelated. But families can share genes and homes, so a second death is more likely after a first.",
+  "heard": "That number had two problems. First, multiplying assumes the two deaths were unrelated. But families can share genes and homes, so a second death is more likely after a first.",
+  "diffs": []
+ },
+ {
+  "id": "s078",
+  "text": "Second, the swap. One in seventy three million was presented as if it were the chance she was innocent.",
+  "heard": "Second, the swap. One in seventy-three million was presented as if it were the chance she was innocent.",
+  "diffs": []
+ },
+ {
+  "id": "s079",
+  "text": "But a double murder of babies is also extremely rare. The real question is which rare explanation is more likely. Comparing them points the other way.",
+  "heard": "But a double murder of babies is also extremely rare. The real question is which rare explanation is more likely. Comparing them points the other way.",
+  "diffs": []
+ },
+ {
+  "id": "s080",
+  "text": "Statisticians spoke out, and in two thousand and three, her conviction was overturned.",
+  "heard": "Statisticians spoke out and in two thousand and three her conviction was overturned.",
+  "diffs": []
+ },
+ {
+  "id": "s081",
+  "text": "The very same swap happens in doctors' offices, every day.",
+  "heard": "The very same swap happens in doctors' offices every day.",
+  "diffs": []
+ },
+ {
+  "id": "s082",
+  "text": "Back in our Bayes theorem video, a test gave a false alarm to one in ten healthy people.",
+  "heard": "Back in our Bayes' theorem video, a test gave a false alarm to one in ten healthy people.",
+  "diffs": []
+ },
+ {
+  "id": "s083",
+  "text": "That's the chance of a positive, given healthy. Swap it, and ask: given a positive, how likely are you healthy?",
+  "heard": "That's the chance of a positive, given healthy. Swap it and ask, given a positive, how likely are you healthy?",
+  "diffs": []
+ },
+ {
+  "id": "s084",
+  "text": "Out of a thousand people, ninety nine healthy people got false alarms, and only nine people who were really sick tested positive.",
+  "heard": "Out of a thousand people, ninety-nine healthy people got false alarms, and only nine people who were really sick tested positive.",
+  "diffs": []
+ },
+ {
+  "id": "s085",
+  "text": "So eleven out of twelve of the positives were healthy. A world away from one in ten.",
+  "heard": "So eleven out of twelve of the positives were healthy. A world away from one in ten.",
+  "diffs": []
+ },
+ {
+  "id": "s086",
+  "text": "It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms.",
+  "heard": "It's the courtroom again. A rare false alarm inside a big healthy crowd still adds up to lots of false alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s087",
+  "text": "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court.",
+  "heard": "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court.",
+  "diffs": []
+ },
+ {
+  "id": "s084a",
+  "text": "So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it?",
+  "heard": "So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it?",
+  "diffs": []
+ },
+ {
+  "id": "s088",
+  "text": "Once you can see this swap, you'll find it everywhere, especially in the world of data.",
+  "heard": "Once you can see this swap, you'll find it everywhere, especially in the world of data.",
+  "diffs": []
+ },
+ {
+  "id": "s089",
+  "text": "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.",
+  "heard": "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.",
+  "diffs": []
+ },
+ {
+  "id": "s090",
+  "text": "It only wrongly matches one face in ten thousand. Sounds great. But fifty thousand fans means about five false matches, plus the one real person.",
+  "heard": "It only wrongly matches one face in ten thousand. Sounds great, but fifty thousand fans means about five false matches, plus the one real person.",
+  "diffs": []
+ },
+ {
+  "id": "s091",
+  "text": "So when the alarm goes off, it's the right person only about one time in six.",
+  "heard": "So when the alarm goes off, it's the right person only about one time in six.",
+  "diffs": []
+ },
+ {
+  "id": "s092",
+  "text": "In data science, it's the p value from our coin video. A p value is the chance of results this extreme, given that nothing is going on.",
+  "heard": "In data science, it's the p-value from our coin video. A p-value is the chance of results this extreme, given that nothing is going on.",
+  "diffs": []
+ },
+ {
+  "id": "s093",
+  "text": "It is not the chance that nothing is going on. If only one coin in a hundred were rigged, that coin would still be fair about eighty three times in a hundred.",
+  "heard": "It is not the chance that nothing is going on. If only one coin in a hundred were rigged, that coin would still be fair about eighty-three times in a hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s094",
+  "text": "In finance, a bank's fraud model flags card payments. It wrongly flags just one honest payment in a thousand.",
+  "heard": "In finance, a bank's fraud model flags card payments. It wrongly flags just one honest payment in a thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s095",
+  "text": "But for every million honest payments, there are maybe a hundred frauds. The model catches ninety of those, and also flags a thousand honest ones.",
+  "heard": "But for every million honest payments, there are maybe a hundred fraud. The model catches ninety of those, and also flags a thousand honest ones.",
+  "diffs": [
+   [
+    "frauds",
+    "fraud"
+   ]
+  ]
+ },
+ {
+  "id": "s096",
+  "text": "So only about one flag in twelve is really fraud. The rest are customers whose cards just got blocked.",
+  "heard": "So only about one flag in twelve is really fraud. The rest are customers whose cards just got blocked.",
+  "diffs": []
+ },
+ {
+  "id": "s097",
+  "text": "And in computer science, it's what happens when you search a huge database.",
+  "heard": "And in computer science, it's what happens when you search a huge database.",
+  "diffs": []
+ },
+ {
+  "id": "s098",
+  "text": "Search five million DNA profiles for a one in a million match, and you'd expect about five innocent hits, even if the real culprit isn't in there at all.",
+  "heard": "Search five million DNA profiles for a one in a million match, and you'd expect about five innocent hits, even if the real culprit isn't in there at all.",
+  "diffs": []
+ },
+ {
+  "id": "s099",
+  "text": "The bigger the search, the more coincidences you're guaranteed to find.",
+  "heard": "The bigger the search, the more coincidences you're guaranteed to find.",
+  "diffs": []
+ },
+ {
+  "id": "s100",
+  "text": "Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches.",
+  "heard": "Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches.",
+  "diffs": []
+ },
+ {
+  "id": "s101",
+  "text": "Let's practise. I'll read four claims. For each one, decide: is it a swap, or is it fair?",
+  "heard": "Let's practice. I'll read four claims. For each one, decide: is it a swap, or is it fair?",
+  "diffs": [
+   [
+    "practise",
+    "practice"
+   ]
+  ]
+ },
+ {
+  "id": "s102",
+  "text": "Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire.",
+  "heard": "Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire.",
+  "diffs": []
+ },
+ {
+  "id": "s103",
+  "text": "That's a swap. Think of every single time the alarm beeps. Most of those times, someone just burnt the toast.",
+  "heard": "That's a swap. Think of every single time the alarm beeps. Most of those times, someone just burnt the toast.",
+  "diffs": []
+ },
+ {
+  "id": "s104",
+  "text": "Claim two. Nearly every professional basketball player is tall. So if you're tall, you're probably a professional basketball player.",
+  "heard": "Claim two. Nearly every professional basketball player is tall, so if you're tall, you're probably a professional basketball player.",
+  "diffs": []
+ },
+ {
+  "id": "s105",
+  "text": "Swap again. There are millions of tall people, and only a few hundred of them play professionally.",
+  "heard": "Swap again. There are millions of tall people, and only a few hundred of them play professionally.",
+  "diffs": []
+ },
+ {
+  "id": "s106",
+  "text": "Claim three. Out of everyone in the city who matched the trace, about one in nine is guilty.",
+  "heard": "Claim three. Out of everyone in the city who matched the trace, about one in nine is guilty.",
+  "diffs": []
+ },
+ {
+  "id": "s107",
+  "text": "That one is fair. It starts from the people who match, and asks how many are guilty. That's exactly the question the jury needs.",
+  "heard": "That one is fair. It starts from the people who match and asks how many are guilty. That's exactly the question the jury needs.",
+  "diffs": []
+ },
+ {
+  "id": "s107a",
+  "text": "Claim four. A spam filter catches nine out of ten spam emails. So nine out of ten emails it blocks are spam.",
+  "heard": "Claim four. A spam filter catches nine out of ten spam emails. So nine out of ten emails it blocks are spam.",
+  "diffs": []
+ },
+ {
+  "id": "s107b",
+  "text": "Swap. To know how many blocked emails are spam, you'd need to know how many real emails it blocks too. That's the crowd again.",
+  "heard": "Swap. To know how many blocked emails are spam, you'd need to know how many real emails it blocks too. That's the crowd again.",
+  "diffs": []
+ },
+ {
+  "id": "s108",
+  "text": "Let's name the mistakes, so you can catch them.",
+  "heard": "Let's name the mistakes, so you can catch them.",
+  "diffs": []
+ },
+ {
+  "id": "s109",
+  "text": "Mistake one: the swap itself. Reading the chance of the evidence, given innocence, as the chance of innocence, given the evidence.",
+  "heard": "Mistake one, the swap itself. Reading the chance of the evidence, given innocence, as the chance of innocence, given the evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s110",
+  "text": "Listen for it in the words. One in a million chance an innocent person would match, is not the same as one in a million chance he's innocent.",
+  "heard": "Listen for it in the words: one in a million chance an innocent person would match is not the same as one in a million chance he's innocent.",
+  "diffs": []
+ },
+ {
+  "id": "s111",
+  "text": "Mistake two: forgetting the crowd. A rare match means very different things in a village and in a whole country.",
+  "heard": "Mistake two, forgetting the crowd. A rare match means very different things in a village and in a whole country.",
+  "diffs": []
+ },
+ {
+  "id": "s112",
+  "text": "Mistake three goes the other way. Some defense lawyers say: there are nine matches, so the chance he did it is only one in nine. The evidence is worthless.",
+  "heard": "Mistake three goes the other way. Some defense lawyers say, there are nine matches, so the chance he did it is only one in nine. The evidence is worthless.",
+  "diffs": []
+ },
+ {
+  "id": "s113",
+  "text": "That's a fallacy too. The match took eight million people down to nine. That's powerful evidence. It just isn't proof on its own.",
+  "heard": "That's a fallacy too. The match took eight million people down to nine. That's powerful evidence, it just isn't proof on its own.",
+  "diffs": []
+ },
+ {
+  "id": "s114",
+  "text": "And a bonus mistake, from the real case: multiplying chances together when the events are connected. That can make a coincidence look far rarer than it is.",
+  "heard": "And a bonus mistake from the real case: multiplying chances together when the events are connected. That can make a coincidence look far rarer than it is.",
+  "diffs": []
+ },
+ {
+  "id": "s115",
+  "text": "Here's a recipe to catch the swap in any claim you're shown.",
+  "heard": "Here's a recipe to catch the swap in any claim you're shown.",
+  "diffs": []
+ },
+ {
+  "id": "s116",
+  "text": "Step one: find the given. Ask what the number assumes is already true.",
+  "heard": "Step one, find the given. Ask what the number assumes is already true.",
+  "diffs": []
+ },
+ {
+  "id": "s117",
+  "text": "Step two: flip it. Write down the question you actually care about, and check it's not the one you were given.",
+  "heard": "Step two, flip it. Write down the question you actually care about, and check it's not the one you were given.",
+  "diffs": []
+ },
+ {
+  "id": "s118",
+  "text": "Step three: find the crowd. How many people, or tests, or payments, could have produced this evidence?",
+  "heard": "Step three. Find the crowd. How many people or tests or payments could have produced this evidence?",
+  "diffs": []
+ },
+ {
+  "id": "s119",
+  "text": "Step four: count the matches. Expected false matches, plus the real ones.",
+  "heard": "Step four, count the matches. Expected false matches plus the real ones.",
+  "diffs": []
+ },
+ {
+  "id": "s120",
+  "text": "And step five: divide. The real matches, out of all the matches. Then add in any other evidence.",
+  "heard": "And step five, divide the real matches out of all the matches, then add in any other evidence.",
+  "diffs": []
+ },
+ {
+  "id": "s120a",
+  "text": "Try it on Sam. The given: innocent. Flip it: is Sam innocent, given the match? The crowd: eight million. The matches: about eight, plus one. Divide: one in nine.",
+  "heard": "Try it on Sam. The given, innocent, flip it. Is Sam innocent given the match? The crowd, eight million. The match is about eight plus one. Divide one in nine.",
+  "diffs": [
+   [
+    "matches",
+    "match"
+   ]
+  ]
+ },
+ {
+  "id": "s121",
+  "text": "Because a rare match is not the same as a rare chance of innocence.",
+  "heard": "Because a rare match is not the same as a rare chance of innocence.",
+  "diffs": []
+ },
+ {
+  "id": "s122",
+  "text": "Look around your world, and notice how often a rare coincidence gets treated as proof.",
+  "heard": "Look around your world and notice how often a rare coincidence gets treated as proof.",
+  "diffs": []
+ },
+ {
+  "id": "s123",
+  "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+  "heard": "If this lesson made things clear for you, please subscribe to MathLab TV, so we can keep building together.",
+  "diffs": [
+   [
+    "math lab",
+    "mathlab"
+   ]
+  ]
+ },
+ {
+  "id": "s124",
+  "text": "But here's a puzzle for next time.",
+  "heard": "But here's a puzzle for next time.",
+  "diffs": []
+ },
+ {
+  "id": "s125",
+  "text": "A model says it catches ninety percent of fraud. Another says ninety percent of its alarms are real. Are they bragging about the same thing?",
+  "heard": "A model says it catches ninety percent of fraud. Another says ninety percent of its alarms are real. Are they bragging about the same thing?",
+  "diffs": []
+ },
+ {
+  "id": "s126",
+  "text": "They're not. It's the same swap we saw today, wearing a lab coat. Next time, we'll lay it all out in one simple table, called the confusion matrix.",
+  "heard": "They're not. It's the same swap we saw today, wearing a lab coat. Next time, we'll lay it all out in one simple table called the confusion matrix.",
+  "diffs": []
+ },
+ {
+  "id": "s127",
+  "text": "I will see you in the next video.",
+  "heard": "I will see you in the next video.",
+  "diffs": []
+ }
+]

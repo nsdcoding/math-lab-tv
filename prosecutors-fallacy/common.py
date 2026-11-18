@@ -882,3 +882,118 @@ def pmf_list(n, p, total=1000):
     """Expected count (of `total`) for each number of heads 0..n with heads-probability p."""
     return [total * comb(n, k) * p ** k * (1 - p) ** (n - k) for k in range(n + 1)]
 
+
+
+# ───────────── Prosecutor's Fallacy helpers ─────────────
+# Colour roles: innocent = BLUE_, match/evidence = WARN, guilty = ORANGE_, answer = VIOLET, crowd = AQUA, swap = RED_
+WORD_COL = {"match": WARN, "innocent": BLUE_, "guilty": ORANGE_, "positive": WARN, "healthy": BLUE_,
+            "fair": BLUE_, "this extreme": WARN, "fraud": ORANGE_, "flagged": WARN, "four legs": WARN, "dog": ORANGE_}
+
+
+def cond(a, b, size=40):
+    """'P(a | b)' as separate Inter pieces: g.P, g.a, g.bar, g.b, g.close. Colours from WORD_COL."""
+    P = T("P(", size, INK, weight=BOLD)
+    A = T(a, size, WORD_COL.get(a, INK), weight=BOLD)
+    bar = T("|", size, INK2, weight=BOLD)
+    B = T(b, size, WORD_COL.get(b, INK), weight=BOLD)
+    cl = T(")", size, INK, weight=BOLD)
+    g = VGroup(P, A, bar, B, cl).arrange(RIGHT, buff=0.14)
+    bar.set_x((A.get_right()[0] + B.get_left()[0]) / 2)   # Text pads '|' unevenly: centre it between the words
+    g.P, g.a, g.bar, g.b, g.close = P, A, bar, B, cl
+    return g
+
+
+def cond_box(a, b, value=None, color=INK2, size=40, w=None, caption=None, vcol=None):
+    """A rounded box holding P(a | b) and, below it, an optional value and caption."""
+    e = cond(a, b, size)
+    rows = [e]
+    v = None
+    if value is not None:
+        v = TB(value, int(size * 1.1), vcol or color); rows.append(v)
+    cp = None
+    if caption:
+        cp = T(caption, int(size * 0.62), INK2); rows.append(cp)
+    inner = VGroup(*rows).arrange(DOWN, buff=0.3)
+    box = card(max(w or 0, inner.width + 0.8), inner.height + 0.7, color)
+    inner.move_to(box)
+    g = VGroup(box, inner)
+    g.box, g.expr, g.value, g.caption = box, e, v, cp
+    return g
+
+
+def swap_parts(scene, e, run_time=1.2):
+    """Animate the two words of a cond() expression trading places over and under the bar; returns new expr."""
+    pa, pb = e.a.get_center(), e.b.get_center()
+    wa, wb = e.a.width, e.b.width
+    # final layout: P( b | a )
+    left = e.P.get_right()[0] + 0.14
+    nb = left + wb / 2
+    bar_x = left + wb + 0.14 + e.bar.width / 2
+    na = bar_x + e.bar.width / 2 + 0.14 + wa / 2
+    cl_x = na + wa / 2 + 0.14 + e.close.width / 2
+    y = e.a.get_y()
+    pa_arc = ArcBetweenPoints(pa, np.array([na, y, 0]), angle=-PI * 0.7)
+    pb_arc = ArcBetweenPoints(pb, np.array([nb, y, 0]), angle=-PI * 0.7)
+    scene.qa_mute(e)
+    scene.play(MoveAlongPath(e.a, pa_arc), MoveAlongPath(e.b, pb_arc),
+               e.bar.animate.set_x(bar_x), e.close.animate.set_x(cl_x), run_time=run_time)
+    scene.qa_mute(e, False)
+    e.a, e.b = e.b, e.a
+    e.submobjects = [e.P, e.a, e.bar, e.b, e.close]
+    return e
+
+
+def dna(h=1.5, color=WARN, w=0.55, partial=False):
+    """Double-helix icon: two sine strands and rungs. partial=True dims the top half (a partial trace)."""
+    ys = np.linspace(-h / 2, h / 2, 50)
+    s1 = VMobject().set_points_smoothly([np.array([w / 2 * np.sin(y / h * 2 * TAU), y, 0]) for y in ys]).set_stroke(color, 5)
+    s2 = VMobject().set_points_smoothly([np.array([-w / 2 * np.sin(y / h * 2 * TAU), y, 0]) for y in ys]).set_stroke(color, 5)
+    rungs = VGroup()
+    for y in np.linspace(-h / 2 + 0.08, h / 2 - 0.08, 9):
+        x = w / 2 * np.sin(y / h * 2 * TAU)
+        if abs(x) > 0.04:
+            rungs.add(Line([-x, y, 0], [x, y, 0]).set_stroke(color, 3, opacity=0.8))
+    g = VGroup(s1, s2, rungs)
+    g.rungs = rungs
+    return g
+
+
+def skyline(width=12.0, color=INK2, seed=3, h_max=2.2):
+    rng = np.random.default_rng(seed)
+    g = VGroup(); x = -width / 2
+    while x < width / 2 - 0.3:
+        bw = rng.uniform(0.45, 0.9); bh = rng.uniform(0.6, h_max)
+        b = Rectangle(width=bw, height=bh).set_stroke(color, 2.5).set_fill("#22221f", 1)
+        b.move_to([x + bw / 2, bh / 2, 0])
+        wins = VGroup()
+        for wy in np.arange(0.25, bh - 0.15, 0.32):
+            for wx in np.arange(-bw / 2 + 0.15, bw / 2 - 0.1, 0.22):
+                if rng.random() < 0.45:
+                    wins.add(Square(0.08).set_stroke(width=0).set_fill(WARN, 0.6).move_to([x + bw / 2 + wx + 0.04, wy, 0]))
+        g.add(VGroup(b, wins)); x += bw + 0.05
+    for m in g.family_members_with_points():
+        m.qa_ignore = True
+    return g
+
+
+def juror(color=INK2, h=0.55):
+    return person(color, h, fill=0.25)
+
+
+def lock_icon(color=INK2, s=0.5):
+    body = RoundedRectangle(corner_radius=0.06 * s / 0.5, width=0.7 * s, height=0.55 * s).set_stroke(color, 4).set_fill(color, 0.9)
+    shackle = Arc(radius=0.23 * s, start_angle=0, angle=PI).set_stroke(color, 5).next_to(body, UP, buff=0)
+    return VGroup(body, shackle)
+
+
+def gavel(color=INK2, s=1.0):
+    head = RoundedRectangle(corner_radius=0.06, width=0.7, height=0.3).set_stroke(color, 3).set_fill(color, 0.85)
+    handle = Line(ORIGIN, DOWN * 0.75 + RIGHT * 0.35).set_stroke(color, 6).next_to(head, DOWN, buff=0).shift(RIGHT * 0.15)
+    return VGroup(head, handle).rotate(-0.3).scale(s)
+
+
+def labcoat(color=INK, s=1.0):
+    p = person(color, 0.9 * s, fill=0.0)
+    lap = VGroup(Line(p[0].get_top() + LEFT * 0.08 * s, p[0].get_center()),
+                 Line(p[0].get_top() + RIGHT * 0.08 * s, p[0].get_center())).set_stroke(color, 3)
+    return VGroup(p, lap)

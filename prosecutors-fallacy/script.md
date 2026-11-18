@@ -1,6 +1,6 @@
 # The Prosecutor's Fallacy: The Statistics Trap Smart People Fall For
 
-127 segments · 2294 words · est. 15.3 min (voice ≈165 wpm + 81 s pauses) · target 15–20 min
+138 segments · 2512 words · est. 16.7 min (voice ≈165 wpm + 90 s pauses) · target 15–20 min
 
 
 ## One in a Million  ·  181 words, ~66 s
@@ -39,7 +39,7 @@
 - **s015** And you will learn a simple recipe to catch this swap in courtrooms, medical tests, and the news. ⏸0.6s
   - *Visual:* Big ③ + mini checklist icon; caption 'catch the swap anywhere'.
 
-## Two Different Questions  ·  168 words, ~61 s
+## Two Different Questions  ·  213 words, ~77 s
 
 - **s016** In our hypothesis testing video, we flipped a friend's coin twenty times, and got fifteen heads.
   - *Visual:* Chip 'from: Hypothesis Testing'. Mini tally of 15 orange H and 5 blue T dots on a flip axis.
@@ -61,6 +61,10 @@
   - *Visual:* Animation: 'match' and 'innocent' inside box 1 physically swap places, morphing into box 2. Red arrows show the swap.
 - **s025** The prosecutor took the first number, and read it out as the second. That swap is the whole fallacy. ⏸1.2s
   - *Visual:* Box 1's value '1 in 1,000,000' flies into box 2; a red stamp 'THE SWAP' lands over it.
+- **s025a** So what should the expert have said? Something like this: if Sam were innocent, a match would be very unlikely.
+  - *Visual:* Green ✓ card: 'If Sam were innocent, a match would be very unlikely.'
+- **s025b** That sentence is true. But it does not tell you how likely Sam is to be innocent. To get that, you need one more ingredient. ⏸0.8s
+  - *Visual:* Under it, a violet card 'How likely is Sam innocent?' with a missing-puzzle-piece icon labelled '?'.
 
 ## Why the Swap Matters  ·  152 words, ~55 s
 
@@ -83,7 +87,7 @@
 - **s034** In Sam's case, the crowd is a city of eight million people. So let's count it.
   - *Visual:* Transition: the four-legged crowd morphs into a grid of tiny people dots labelled '8,000,000 people'.
 
-## Count the Crowd  ·  297 words, ~108 s
+## Count the Crowd  ·  311 words, ~113 s
 
 - **s035** Before we start, let's be honest about what we are assuming.
   - *Visual:* Assumptions card slides in, empty.
@@ -105,6 +109,8 @@
   - *Visual:* A single warn dot lights up inside the block; label '≈ 1 innocent match'.
 - **s044** And we have eight of those blocks. So across the whole city, about eight innocent people match the trace. Just by luck. ⏸1.2s
   - *Visual:* Camera pulls back; one warn dot lights in each block, counter climbs 1 → 8; label '≈ 8 innocent matches'.
+- **s042a** You can check it yourself. Eight million, times one in a million, is eight. ⏸0.8s
+  - *Visual:* Arithmetic in Inter: '8,000,000 × 1/1,000,000 = 8' (warn result).
 - **s045** Plus the one real culprit, who matches for sure.
   - *Visual:* The orange culprit dot gets a warn ring; total counter '8 + 1 = 9 people match'.
 - **s046** So if police lined up everyone in the city who matches, there would be about nine people in that line. ⏸1.0s
@@ -139,7 +145,7 @@
 - **s059** And notice where the eight came from. Not from the expert's number alone. It came from the size of the crowd. ⏸1.0s
   - *Visual:* The '8' in the denominator is circled aqua; arrow back to '8,000,000 people'.
 
-## The Missing Piece  ·  178 words, ~65 s
+## The Missing Piece  ·  191 words, ~69 s
 
 - **s060** That crowd size has a name. It's called the base rate. And it's the piece the prosecutor left out.
   - *Visual:* Heading 'the base rate = how big is the crowd of possible suspects?' (aqua).
@@ -157,10 +163,12 @@
   - *Visual:* Slider to 60,000,000; line-up axis grows to 61 tiny figures (60 blue with warn rings, 1 orange); card '≈ 1 in 61'.
 - **s067** The evidence never changed. Only the crowd did. And the answer swung from almost certain, to almost certainly not. ⏸1.5s
   - *Visual:* Three result cards in a row: '999 in 1,000', '1 in 9', '1 in 61', with the unchanged '1 in a million' chip above all three.
+- **s066a** Same trace. Same expert. Same one in a million. Three completely different answers. ⏸1.0s
+  - *Visual:* The three result cards pulse in turn under the fixed '1 in a million' chip.
 - **s068** That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well.
   - *Visual:* Equation in words: 'evidence + crowd → answer'; the crowd part glows aqua.
 
-## When Other Evidence Counts  ·  85 words, ~31 s
+## When Other Evidence Counts  ·  132 words, ~48 s
 
 - **s069** Now, remember our third assumption. We knew nothing about Sam except the match.
   - *Visual:* Assumption ③ card returns: 'no other evidence (yet)'.
@@ -172,6 +180,12 @@
   - *Visual:* Inside the small cluster: almost certainly no innocent warn dots; only the orange culprit matches; violet meter rises toward 'very likely'.
 - **s073** So the match isn't useless. It's one piece, and it has to be combined with everything else, honestly. ⏸0.8s
   - *Visual:* Puzzle pieces 'DNA match' + 'seen nearby' + 'other facts' click together.
+- **s073a** In fact, here's how much the match moved things. Before it, Sam was just one of eight million people. One in eight million.
+  - *Visual:* Meter on a log axis: 'before the match: 1 in 8,000,000' (orange, tiny).
+- **s073b** After it, he's one in nine. His chance of guilt jumped almost nine hundred thousand times. ⏸1.0s
+  - *Visual:* Meter jumps to '1 in 9'; arrow '≈ 889,000× higher'.
+- **s073c** Strong evidence. Just not, on its own, proof. ⏸0.8s
+  - *Visual:* Label 'strong ≠ proof'.
 
 ## A Real Courtroom  ·  160 words, ~58 s
 
@@ -190,25 +204,27 @@
 - **s080** Statisticians spoke out, and in two thousand and three, her conviction was overturned. ⏸1.5s
   - *Visual:* Card 'conviction overturned · 2003'; a scale-of-justice icon levels out.
 
-## The Same Swap in Medicine  ·  106 words, ~39 s
+## The Same Swap in Medicine  ·  108 words, ~39 s
 
 - **s081** The very same swap happens in doctors' offices, every day.
   - *Visual:* Clinic icon; the two boxes reappear with new words.
-- **s082** In our Bayes theorem video, a test gave a false alarm to one in ten healthy people.
+- **s082** Back in our Bayes theorem video, a test gave a false alarm to one in ten healthy people.
   - *Visual:* Chip 'from: Bayes' Theorem'. Box 1: 'P(positive | healthy) = 1 in 10' (blue).
 - **s083** That's the chance of a positive, given healthy. Swap it, and ask: given a positive, how likely are you healthy?
   - *Visual:* Box 2: 'P(healthy | positive) = ?' (violet); swap arrows.
 - **s084** Out of a thousand people, ninety nine healthy people got false alarms, and only nine people who were really sick tested positive.
   - *Visual:* Recap of that video's picture: 1,000-dot grid; 99 blue dots with warn rings, 9 orange dots with warn rings.
-- **s085** So eleven in twelve of the positives were healthy. A world away from one in ten. ⏸1.2s
+- **s085** So eleven out of twelve of the positives were healthy. A world away from one in ten. ⏸1.2s
   - *Visual:* Fraction card 'P(healthy | positive) = 99 ÷ 108 = 11 in 12' (violet) next to '1 in 10'.
 - **s086** It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms. ⏸1.0s
   - *Visual:* Side by side: city line-up (8 innocent + 1) and clinic line-up (99 healthy + 9); caption 'big innocent crowd → many false matches'.
 
-## Where You'll Use It  ·  278 words, ~101 s
+## Where You'll Use It  ·  323 words, ~117 s
 
 - **s087** That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court. ⏸0.8s
   - *Visual:* Clinic line-up of 108 goes through a second test filter; the crowd shrinks; label 'second test = smaller crowd (illustration)'.
+- **s084a** So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it? ⏸1.0s
+  - *Visual:* Question card (violet): 'Out of everyone who tests positive, how many really have it?'
 - **s088** Once you can see this swap, you'll find it everywhere, especially in the world of data.
   - *Visual:* Four tiles: Machine Learning, Data Science, Finance, Computer Science.
 - **s089** In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.
@@ -233,16 +249,16 @@
   - *Visual:* Search bar animates through rows; five warn hits pop out, all blue; label 'culprit not in database'.
 - **s099** The bigger the search, the more coincidences you're guaranteed to find. ⏸1.0s
   - *Visual:* Line on axes x: profiles searched (millions, 0–5), y: expected innocent hits (0–5); straight line rising.
-
-## Spot the Swap  ·  160 words, ~58 s
-
 - **s100** Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches. ⏸1.0s
   - *Visual:* The four tiles return in a row, each with its line-up: '1 in 6', '83 in 100 fair', '1 in 12', '5 innocent hits'; caption 'rare × big crowd = many'.
-- **s101** Let's practise. I'll read three claims. For each one, decide: is it a swap, or is it fair?
-  - *Visual:* Heading 'spot the swap'; three blank claim cards; a 'swap?' / 'fair?' toggle under each.
+
+## Spot the Swap  ·  183 words, ~67 s
+
+- **s101** Let's practise. I'll read four claims. For each one, decide: is it a swap, or is it fair?
+  - *Visual:* Heading 'spot the swap'; four blank claim cards; a 'swap?' / 'fair?' toggle under each.
 - **s102** Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire. ⏸1.5s
   - *Visual:* Card ①: smoke-alarm icon + flame; text 'beeps | fire: almost always → fire | beeps: almost certain?'.
-- **s103** That's a swap. The crowd here is every time the alarm beeps, and most of those times, someone just burnt the toast. ⏸0.8s
+- **s103** That's a swap. Think of every single time the alarm beeps. Most of those times, someone just burnt the toast. ⏸0.8s
   - *Visual:* Card ① stamped red 'SWAP'; a crowd of beep icons, most next to toast icons, a few next to flames. Label 'illustration'.
 - **s104** Claim two. Nearly every professional basketball player is tall. So if you're tall, you're probably a professional basketball player. ⏸1.5s
   - *Visual:* Card ②: basketball icon + height bar; text 'tall | pro player → pro player | tall?'.
@@ -252,6 +268,10 @@
   - *Visual:* Card ③: the 9-person line-up; text 'guilty | match ≈ 1 in 9'.
 - **s107** That one is fair. It starts from the people who match, and asks how many are guilty. That's exactly the question the jury needs. ⏸1.0s
   - *Visual:* Card ③ stamped green 'FAIR ✓'; the 'given match' part glows.
+- **s107a** Claim four. A spam filter catches nine out of ten spam emails. So nine out of ten emails it blocks are spam. ⏸1.5s
+  - *Visual:* Card ④: envelope icon + filter; text 'blocked | spam: 9 in 10 → spam | blocked: 9 in 10?'.
+- **s107b** Swap. To know how many blocked emails are spam, you'd need to know how many real emails it blocks too. That's the crowd again. ⏸0.8s
+  - *Visual:* Card ④ stamped red 'SWAP'; a stack of blocked envelopes, some marked 'real email' in blue. Label 'illustration'.
 
 ## Common Mistakes  ·  157 words, ~57 s
 
@@ -270,7 +290,7 @@
 - **s114** And a bonus mistake, from the real case: multiplying chances together when the events are connected. That can make a coincidence look far rarer than it is. ⏸0.8s
   - *Visual:* Red bonus card: '1/8,543 × 1/8,543' with a red 'connected?' tag.
 
-## Recipe  ·  107 words, ~39 s
+## Recipe  ·  136 words, ~49 s
 
 - **s115** Here's a recipe to catch the swap in any claim you're shown.
   - *Visual:* Recipe card frame draws on: 'catch the swap'.
@@ -284,6 +304,8 @@
   - *Visual:* ④ **Count the matches** — crowd × false-match rate, + the real ones.
 - **s120** And step five: divide. The real matches, out of all the matches. Then add in any other evidence. ⏸1.0s
   - *Visual:* ⑤ **Divide** — real matches ÷ all matches; then combine other evidence.
+- **s120a** Try it on Sam. The given: innocent. Flip it: is Sam innocent, given the match? The crowd: eight million. The matches: about eight, plus one. Divide: one in nine. ⏸1.0s
+  - *Visual:* The five recipe steps tick green one by one, each with Sam's number beside it: 'innocent' · 'innocent | match?' · '8,000,000' · '8 + 1' · '1 in 9'.
 - **s121** Because a rare match is not the same as a rare chance of innocence. ⏸1.5s
   - *Visual:* Closing line under the card: 'a rare match is not a rare chance of innocence' (violet).
 

@@ -1,0 +1,971 @@
+{
+ "total": 905.02,
+ "segments": [
+  {
+   "id": "s001",
+   "chapter": "One in a Million",
+   "start": 0.6,
+   "end": 5.66,
+   "text": "Last time, I left you with a puzzle from a courtroom. Today, we solve it."
+  },
+  {
+   "id": "s002",
+   "chapter": "One in a Million",
+   "start": 6.01,
+   "end": 13.19,
+   "text": "Picture a city of eight million people. One night, a crime. At the scene, police find a tiny trace of DNA."
+  },
+  {
+   "id": "s003",
+   "chapter": "One in a Million",
+   "start": 13.54,
+   "end": 18.47,
+   "text": "It's only a partial trace, so it can't point to one person. But it's still rare."
+  },
+  {
+   "id": "s004",
+   "chapter": "One in a Million",
+   "start": 18.82,
+   "end": 25.08,
+   "text": "Weeks later, police find a man. Let's call him Sam. Sam's DNA matches the trace."
+  },
+  {
+   "id": "s005",
+   "chapter": "One in a Million",
+   "start": 25.43,
+   "end": 33.01,
+   "text": "In court, an expert explains: if you picked an innocent person at random, the chance they would match is just one in a million."
+  },
+  {
+   "id": "s006",
+   "chapter": "One in a Million",
+   "start": 33.36,
+   "end": 39.07,
+   "text": "Then the prosecutor stands up and says: so there's only a one in a million chance that Sam is innocent."
+  },
+  {
+   "id": "s007",
+   "chapter": "One in a Million",
+   "start": 39.87,
+   "end": 43.0,
+   "text": "The jury nods. One in a million sounds like proof."
+  },
+  {
+   "id": "s008",
+   "chapter": "One in a Million",
+   "start": 43.35,
+   "end": 46.96,
+   "text": "Take a second, and decide. Do you agree with the prosecutor?"
+  },
+  {
+   "id": "s009",
+   "chapter": "One in a Million",
+   "start": 48.46,
+   "end": 55.07,
+   "text": "If you said yes, you're in good company. Judges, juries and even experts have made this exact mistake."
+  },
+  {
+   "id": "s010",
+   "chapter": "One in a Million",
+   "start": 55.42,
+   "end": 63.21,
+   "text": "By the end of this video, you'll see that Sam is much more likely innocent than guilty. And you'll be able to spot this trap anywhere."
+  },
+  {
+   "id": "s011",
+   "chapter": "One in a Million",
+   "start": 63.56,
+   "end": 65.32,
+   "text": "It's called the prosecutor's fallacy."
+  },
+  {
+   "id": "s012",
+   "chapter": "Welcome",
+   "start": 66.32,
+   "end": 69.93,
+   "text": "Welcome to Math Lab TV. Where math is something you can see."
+  },
+  {
+   "id": "s013",
+   "chapter": "Welcome",
+   "start": 70.63,
+   "end": 76.66,
+   "text": "Today you will learn why the chance of the evidence, if someone is innocent, is not the chance they are innocent."
+  },
+  {
+   "id": "s014",
+   "chapter": "Welcome",
+   "start": 77.01,
+   "end": 82.38,
+   "text": "You will see how to count the crowd, and find how many innocent people share the same evidence."
+  },
+  {
+   "id": "s015",
+   "chapter": "Welcome",
+   "start": 82.73,
+   "end": 88.42,
+   "text": "And you will learn a simple recipe to catch this swap in courtrooms, medical tests, and the news."
+  },
+  {
+   "id": "s016",
+   "chapter": "Two Different Questions",
+   "start": 89.02,
+   "end": 95.03,
+   "text": "In our hypothesis testing video, we flipped a friend's coin twenty times, and got fifteen heads."
+  },
+  {
+   "id": "s017",
+   "chapter": "Two Different Questions",
+   "start": 95.38,
+   "end": 101.27,
+   "text": "We found that a fair coin would do something that extreme only about two times in a hundred."
+  },
+  {
+   "id": "s018",
+   "chapter": "Two Different Questions",
+   "start": 101.62,
+   "end": 106.46,
+   "text": "And we warned: that is not the chance the coin is fair. The question had been flipped."
+  },
+  {
+   "id": "s019",
+   "chapter": "Two Different Questions",
+   "start": 107.26,
+   "end": 110.96,
+   "text": "The courtroom is the very same flip. So let's write it down carefully."
+  },
+  {
+   "id": "s020",
+   "chapter": "Two Different Questions",
+   "start": 111.31,
+   "end": 119.67,
+   "text": "Mathematicians write the chance of something with a capital P. And they use a short vertical bar, which you can read as the word given."
+  },
+  {
+   "id": "s021",
+   "chapter": "Two Different Questions",
+   "start": 120.02,
+   "end": 126.72,
+   "text": "So P of match, given innocent, means: suppose the person is innocent. How likely is a match?"
+  },
+  {
+   "id": "s022",
+   "chapter": "Two Different Questions",
+   "start": 127.07,
+   "end": 130.23,
+   "text": "That's the number the expert gave. One in a million."
+  },
+  {
+   "id": "s023",
+   "chapter": "Two Different Questions",
+   "start": 130.83,
+   "end": 138.55,
+   "text": "But the jury needs a different number. P of innocent, given match. Suppose the person matches. How likely are they innocent?"
+  },
+  {
+   "id": "s024",
+   "chapter": "Two Different Questions",
+   "start": 138.9,
+   "end": 142.7,
+   "text": "Look at the two boxes. Same words. Just swapped around the bar."
+  },
+  {
+   "id": "s025",
+   "chapter": "Two Different Questions",
+   "start": 143.7,
+   "end": 149.99,
+   "text": "The prosecutor took the first number, and read it out as the second. That swap is the whole fallacy."
+  },
+  {
+   "id": "s025a",
+   "chapter": "Two Different Questions",
+   "start": 151.19,
+   "end": 157.52,
+   "text": "So what should the expert have said? Something like this: if Sam were innocent, a match would be very unlikely."
+  },
+  {
+   "id": "s025b",
+   "chapter": "Two Different Questions",
+   "start": 157.87,
+   "end": 165.31,
+   "text": "That sentence is true. But it does not tell you how likely Sam is to be innocent. To get that, you need one more ingredient."
+  },
+  {
+   "id": "s026",
+   "chapter": "Why the Swap Matters",
+   "start": 166.11,
+   "end": 169.7,
+   "text": "Is swapping really such a big deal? Let's try it on something simple."
+  },
+  {
+   "id": "s027",
+   "chapter": "Why the Swap Matters",
+   "start": 170.05,
+   "end": 175.68,
+   "text": "What's the chance that a dog has four legs? Almost certain. Nearly every dog does."
+  },
+  {
+   "id": "s028",
+   "chapter": "Why the Swap Matters",
+   "start": 176.03,
+   "end": 180.23,
+   "text": "Now swap it. What's the chance that something with four legs is a dog?"
+  },
+  {
+   "id": "s029",
+   "chapter": "Why the Swap Matters",
+   "start": 180.58,
+   "end": 187.62,
+   "text": "Not very likely at all. Cats have four legs. So do cows, and horses. Even your kitchen table."
+  },
+  {
+   "id": "s030",
+   "chapter": "Why the Swap Matters",
+   "start": 188.62,
+   "end": 192.79,
+   "text": "The two numbers share the same words, but they can be wildly different."
+  },
+  {
+   "id": "s031",
+   "chapter": "Why the Swap Matters",
+   "start": 193.14,
+   "end": 198.46,
+   "text": "The difference comes from the crowd. How many other things, besides dogs, also have four legs?"
+  },
+  {
+   "id": "s032",
+   "chapter": "Why the Swap Matters",
+   "start": 199.46,
+   "end": 207.42,
+   "text": "So why do smart people swap them? Because our brains love a simple story. The evidence fits the guilty person, so the guilty person must fit the evidence."
+  },
+  {
+   "id": "s033",
+   "chapter": "Why the Swap Matters",
+   "start": 207.77,
+   "end": 213.17,
+   "text": "But fitting the evidence is easy when the crowd is big. Lots of innocent people can fit it too."
+  },
+  {
+   "id": "s034",
+   "chapter": "Why the Swap Matters",
+   "start": 213.97,
+   "end": 218.12,
+   "text": "In Sam's case, the crowd is a city of eight million people. So let's count it."
+  },
+  {
+   "id": "s035",
+   "chapter": "Count the Crowd",
+   "start": 218.47,
+   "end": 221.76,
+   "text": "Before we start, let's be honest about what we are assuming."
+  },
+  {
+   "id": "s036",
+   "chapter": "Count the Crowd",
+   "start": 222.11,
+   "end": 225.37,
+   "text": "First, the person who did it lives somewhere in this city."
+  },
+  {
+   "id": "s037",
+   "chapter": "Count the Crowd",
+   "start": 225.72,
+   "end": 229.14,
+   "text": "Second, the real culprit's DNA always matches the trace."
+  },
+  {
+   "id": "s038",
+   "chapter": "Count the Crowd",
+   "start": 229.49,
+   "end": 235.38,
+   "text": "And third, for now, we know nothing else about Sam. Only the match. We'll come back to that one."
+  },
+  {
+   "id": "s039",
+   "chapter": "Count the Crowd",
+   "start": 236.18,
+   "end": 241.84,
+   "text": "Here is the whole city. Eight million people, drawn as eight big blocks of one million each."
+  },
+  {
+   "id": "s040",
+   "chapter": "Count the Crowd",
+   "start": 242.19,
+   "end": 249.22,
+   "text": "One of them is the culprit. That leaves seven million, nine hundred and ninety nine thousand, nine hundred and ninety nine innocent people."
+  },
+  {
+   "id": "s041",
+   "chapter": "Count the Crowd",
+   "start": 249.57,
+   "end": 254.26,
+   "text": "Now the expert's number. Each innocent person matches with a chance of one in a million."
+  },
+  {
+   "id": "s042",
+   "chapter": "Count the Crowd",
+   "start": 254.61,
+   "end": 261.22,
+   "text": "So in a block of one million innocent people, how many would we expect to match by pure chance?"
+  },
+  {
+   "id": "s043",
+   "chapter": "Count the Crowd",
+   "start": 261.57,
+   "end": 262.24,
+   "text": "About one."
+  },
+  {
+   "id": "s044",
+   "chapter": "Count the Crowd",
+   "start": 263.24,
+   "end": 269.77,
+   "text": "And we have eight of those blocks. So across the whole city, about eight innocent people match the trace. Just by luck."
+  },
+  {
+   "id": "s042a",
+   "chapter": "Count the Crowd",
+   "start": 270.97,
+   "end": 275.03,
+   "text": "You can check it yourself. Eight million, times one in a million, is eight."
+  },
+  {
+   "id": "s045",
+   "chapter": "Count the Crowd",
+   "start": 275.83,
+   "end": 278.84,
+   "text": "Plus the one real culprit, who matches for sure."
+  },
+  {
+   "id": "s046",
+   "chapter": "Count the Crowd",
+   "start": 279.19,
+   "end": 284.39,
+   "text": "So if police lined up everyone in the city who matches, there would be about nine people in that line."
+  },
+  {
+   "id": "s047",
+   "chapter": "Count the Crowd",
+   "start": 285.39,
+   "end": 287.44,
+   "text": "And only one of those nine is guilty."
+  },
+  {
+   "id": "s048",
+   "chapter": "Count the Crowd",
+   "start": 288.44,
+   "end": 294.81,
+   "text": "Sam is one of the people in that line. All we know is that he matched. So the chance he's the guilty one is about one in nine."
+  },
+  {
+   "id": "s049",
+   "chapter": "Count the Crowd",
+   "start": 296.01,
+   "end": 300.86,
+   "text": "Which means the chance he's innocent is about eight in nine. Around eighty nine percent."
+  },
+  {
+   "id": "s050",
+   "chapter": "Count the Crowd",
+   "start": 302.36,
+   "end": 309.3,
+   "text": "Notice what we did. No fancy formula. We just imagined everyone in the city, and asked who else would match."
+  },
+  {
+   "id": "s051",
+   "chapter": "Count the Crowd",
+   "start": 309.65,
+   "end": 311.48,
+   "text": "Put the two numbers next to each other."
+  },
+  {
+   "id": "s052",
+   "chapter": "Count the Crowd",
+   "start": 311.83,
+   "end": 315.14,
+   "text": "The chance of a match, given innocent: one in a million."
+  },
+  {
+   "id": "s053",
+   "chapter": "Count the Crowd",
+   "start": 315.49,
+   "end": 319.24,
+   "text": "The chance of innocent, given a match: about eight in nine."
+  },
+  {
+   "id": "s054",
+   "chapter": "Count the Crowd",
+   "start": 319.59,
+   "end": 325.0,
+   "text": "The second number is almost nine hundred thousand times bigger. That's how far apart the two questions are."
+  },
+  {
+   "id": "s055",
+   "chapter": "The Formula Behind It",
+   "start": 326.5,
+   "end": 329.85,
+   "text": "What we just did is count, but you can write it as a short rule."
+  },
+  {
+   "id": "s056",
+   "chapter": "The Formula Behind It",
+   "start": 330.2,
+   "end": 337.33,
+   "text": "The chance of guilt, given a match, equals the guilty people who match, divided by everyone who matches."
+  },
+  {
+   "id": "s057",
+   "chapter": "The Formula Behind It",
+   "start": 337.68,
+   "end": 342.55,
+   "text": "On top, one. On the bottom, one plus eight. One ninth."
+  },
+  {
+   "id": "s058",
+   "chapter": "The Formula Behind It",
+   "start": 343.35,
+   "end": 351.77,
+   "text": "In our Bayes theorem video, we wrote this same idea as a formula. Here, counting the crowd gets you to the same answer, with no formula to remember."
+  },
+  {
+   "id": "s059",
+   "chapter": "The Formula Behind It",
+   "start": 352.12,
+   "end": 357.95,
+   "text": "And notice where the eight came from. Not from the expert's number alone. It came from the size of the crowd."
+  },
+  {
+   "id": "s060",
+   "chapter": "The Missing Piece",
+   "start": 358.95,
+   "end": 364.85,
+   "text": "That crowd size has a name. It's called the base rate. And it's the piece the prosecutor left out."
+  },
+  {
+   "id": "s061",
+   "chapter": "The Missing Piece",
+   "start": 365.2,
+   "end": 368.81,
+   "text": "Let's keep the same one in a million trace, and just change the crowd."
+  },
+  {
+   "id": "s062",
+   "chapter": "The Missing Piece",
+   "start": 369.16,
+   "end": 375.39,
+   "text": "Imagine the crime happened in a tiny village of one thousand people, and nobody else could have been there."
+  },
+  {
+   "id": "s063",
+   "chapter": "The Missing Piece",
+   "start": 375.74,
+   "end": 380.62,
+   "text": "Now the chance that even one innocent villager matches is about one in a thousand."
+  },
+  {
+   "id": "s064",
+   "chapter": "The Missing Piece",
+   "start": 380.97,
+   "end": 387.45,
+   "text": "So if someone in the village matches, they are almost certainly the culprit. About nine hundred and ninety nine times in a thousand."
+  },
+  {
+   "id": "s065",
+   "chapter": "The Missing Piece",
+   "start": 388.45,
+   "end": 392.42,
+   "text": "Back in our city of eight million, the same match gave about one in nine."
+  },
+  {
+   "id": "s066",
+   "chapter": "The Missing Piece",
+   "start": 392.77,
+   "end": 401.17,
+   "text": "And if anyone in a whole country of sixty million could have done it, about sixty innocent people would match. The chance of guilt drops to about one in sixty one."
+  },
+  {
+   "id": "s067",
+   "chapter": "The Missing Piece",
+   "start": 402.37,
+   "end": 409.74,
+   "text": "The evidence never changed. Only the crowd did. And the answer swung from almost certain, to almost certainly not."
+  },
+  {
+   "id": "s066a",
+   "chapter": "The Missing Piece",
+   "start": 411.24,
+   "end": 416.72,
+   "text": "Same trace. Same expert. Same one in a million. Three completely different answers."
+  },
+  {
+   "id": "s068",
+   "chapter": "The Missing Piece",
+   "start": 417.72,
+   "end": 424.29,
+   "text": "That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well."
+  },
+  {
+   "id": "s069",
+   "chapter": "When Other Evidence Counts",
+   "start": 424.64,
+   "end": 430.02,
+   "text": "Now, remember our third assumption. We knew nothing about Sam except the match."
+  },
+  {
+   "id": "s070",
+   "chapter": "When Other Evidence Counts",
+   "start": 430.37,
+   "end": 435.15,
+   "text": "In a real case, there's usually more. Maybe Sam was seen near the scene that night."
+  },
+  {
+   "id": "s071",
+   "chapter": "When Other Evidence Counts",
+   "start": 435.5,
+   "end": 442.45,
+   "text": "Other evidence works by shrinking the crowd. Instead of eight million possible people, maybe only a few hundred were nearby."
+  },
+  {
+   "id": "s072",
+   "chapter": "When Other Evidence Counts",
+   "start": 442.8,
+   "end": 448.67,
+   "text": "In a smaller crowd, far fewer innocent people match by luck, and the match becomes much stronger evidence."
+  },
+  {
+   "id": "s073",
+   "chapter": "When Other Evidence Counts",
+   "start": 449.67,
+   "end": 455.67,
+   "text": "So the match isn't useless. It's one piece, and it has to be combined with everything else, honestly."
+  },
+  {
+   "id": "s073a",
+   "chapter": "When Other Evidence Counts",
+   "start": 456.47,
+   "end": 465.01,
+   "text": "In fact, here's how much the match moved things. Before it, Sam was just one of eight million people. One in eight million."
+  },
+  {
+   "id": "s073b",
+   "chapter": "When Other Evidence Counts",
+   "start": 465.36,
+   "end": 470.58,
+   "text": "After it, he's one in nine. His chance of guilt jumped almost nine hundred thousand times."
+  },
+  {
+   "id": "s073c",
+   "chapter": "When Other Evidence Counts",
+   "start": 471.58,
+   "end": 475.33,
+   "text": "Strong evidence. Just not, on its own, proof."
+  },
+  {
+   "id": "s074",
+   "chapter": "A Real Courtroom",
+   "start": 476.13,
+   "end": 484.01,
+   "text": "This isn't just a classroom puzzle. In England, in nineteen ninety nine, a mother was convicted after two of her babies died suddenly."
+  },
+  {
+   "id": "s075",
+   "chapter": "A Real Courtroom",
+   "start": 484.36,
+   "end": 492.49,
+   "text": "A medical expert told the jury that, for a family like hers, the chance of one sudden infant death was about one in eight thousand five hundred."
+  },
+  {
+   "id": "s076",
+   "chapter": "A Real Courtroom",
+   "start": 492.84,
+   "end": 499.45,
+   "text": "He then multiplied that number by itself, and said the chance of two such deaths was about one in seventy three million."
+  },
+  {
+   "id": "s077",
+   "chapter": "A Real Courtroom",
+   "start": 499.8,
+   "end": 510.51,
+   "text": "That number had two problems. First, multiplying assumes the two deaths were unrelated. But families can share genes and homes, so a second death is more likely after a first."
+  },
+  {
+   "id": "s078",
+   "chapter": "A Real Courtroom",
+   "start": 510.86,
+   "end": 517.3,
+   "text": "Second, the swap. One in seventy three million was presented as if it were the chance she was innocent."
+  },
+  {
+   "id": "s079",
+   "chapter": "A Real Courtroom",
+   "start": 518.3,
+   "end": 527.52,
+   "text": "But a double murder of babies is also extremely rare. The real question is which rare explanation is more likely. Comparing them points the other way."
+  },
+  {
+   "id": "s080",
+   "chapter": "A Real Courtroom",
+   "start": 528.52,
+   "end": 533.41,
+   "text": "Statisticians spoke out, and in two thousand and three, her conviction was overturned."
+  },
+  {
+   "id": "s081",
+   "chapter": "The Same Swap in Medicine",
+   "start": 534.91,
+   "end": 539.49,
+   "text": "The very same swap happens in doctors' offices, every day."
+  },
+  {
+   "id": "s082",
+   "chapter": "The Same Swap in Medicine",
+   "start": 539.84,
+   "end": 544.78,
+   "text": "Back in our Bayes theorem video, a test gave a false alarm to one in ten healthy people."
+  },
+  {
+   "id": "s083",
+   "chapter": "The Same Swap in Medicine",
+   "start": 545.13,
+   "end": 551.87,
+   "text": "That's the chance of a positive, given healthy. Swap it, and ask: given a positive, how likely are you healthy?"
+  },
+  {
+   "id": "s084",
+   "chapter": "The Same Swap in Medicine",
+   "start": 552.22,
+   "end": 559.33,
+   "text": "Out of a thousand people, ninety nine healthy people got false alarms, and only nine people who were really sick tested positive."
+  },
+  {
+   "id": "s085",
+   "chapter": "The Same Swap in Medicine",
+   "start": 559.68,
+   "end": 563.83,
+   "text": "So eleven out of twelve of the positives were healthy. A world away from one in ten."
+  },
+  {
+   "id": "s086",
+   "chapter": "The Same Swap in Medicine",
+   "start": 565.03,
+   "end": 572.06,
+   "text": "It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms."
+  },
+  {
+   "id": "s087",
+   "chapter": "Where You'll Use It",
+   "start": 573.06,
+   "end": 581.44,
+   "text": "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court."
+  },
+  {
+   "id": "s084a",
+   "chapter": "Where You'll Use It",
+   "start": 582.24,
+   "end": 589.15,
+   "text": "So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it?"
+  },
+  {
+   "id": "s088",
+   "chapter": "Where You'll Use It",
+   "start": 590.15,
+   "end": 595.33,
+   "text": "Once you can see this swap, you'll find it everywhere, especially in the world of data."
+  },
+  {
+   "id": "s089",
+   "chapter": "Where You'll Use It",
+   "start": 595.68,
+   "end": 603.19,
+   "text": "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans."
+  },
+  {
+   "id": "s090",
+   "chapter": "Where You'll Use It",
+   "start": 603.54,
+   "end": 612.24,
+   "text": "It only wrongly matches one face in ten thousand. Sounds great. But fifty thousand fans means about five false matches, plus the one real person."
+  },
+  {
+   "id": "s091",
+   "chapter": "Where You'll Use It",
+   "start": 612.59,
+   "end": 617.85,
+   "text": "So when the alarm goes off, it's the right person only about one time in six."
+  },
+  {
+   "id": "s092",
+   "chapter": "Where You'll Use It",
+   "start": 618.85,
+   "end": 627.04,
+   "text": "In data science, it's the p value from our coin video. A p value is the chance of results this extreme, given that nothing is going on."
+  },
+  {
+   "id": "s093",
+   "chapter": "Where You'll Use It",
+   "start": 627.39,
+   "end": 636.14,
+   "text": "It is not the chance that nothing is going on. If only one coin in a hundred were rigged, that coin would still be fair about eighty three times in a hundred."
+  },
+  {
+   "id": "s094",
+   "chapter": "Where You'll Use It",
+   "start": 637.14,
+   "end": 643.54,
+   "text": "In finance, a bank's fraud model flags card payments. It wrongly flags just one honest payment in a thousand."
+  },
+  {
+   "id": "s095",
+   "chapter": "Where You'll Use It",
+   "start": 643.89,
+   "end": 652.53,
+   "text": "But for every million honest payments, there are maybe a hundred frauds. The model catches ninety of those, and also flags a thousand honest ones."
+  },
+  {
+   "id": "s096",
+   "chapter": "Where You'll Use It",
+   "start": 652.88,
+   "end": 659.28,
+   "text": "So only about one flag in twelve is really fraud. The rest are customers whose cards just got blocked."
+  },
+  {
+   "id": "s097",
+   "chapter": "Where You'll Use It",
+   "start": 660.28,
+   "end": 664.14,
+   "text": "And in computer science, it's what happens when you search a huge database."
+  },
+  {
+   "id": "s098",
+   "chapter": "Where You'll Use It",
+   "start": 664.49,
+   "end": 672.98,
+   "text": "Search five million DNA profiles for a one in a million match, and you'd expect about five innocent hits, even if the real culprit isn't in there at all."
+  },
+  {
+   "id": "s099",
+   "chapter": "Where You'll Use It",
+   "start": 673.33,
+   "end": 677.37,
+   "text": "The bigger the search, the more coincidences you're guaranteed to find."
+  },
+  {
+   "id": "s100",
+   "chapter": "Where You'll Use It",
+   "start": 678.37,
+   "end": 685.71,
+   "text": "Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches."
+  },
+  {
+   "id": "s101",
+   "chapter": "Spot the Swap",
+   "start": 686.71,
+   "end": 693.36,
+   "text": "Let's practise. I'll read four claims. For each one, decide: is it a swap, or is it fair?"
+  },
+  {
+   "id": "s102",
+   "chapter": "Spot the Swap",
+   "start": 693.71,
+   "end": 701.22,
+   "text": "Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire."
+  },
+  {
+   "id": "s103",
+   "chapter": "Spot the Swap",
+   "start": 702.72,
+   "end": 708.75,
+   "text": "That's a swap. Think of every single time the alarm beeps. Most of those times, someone just burnt the toast."
+  },
+  {
+   "id": "s104",
+   "chapter": "Spot the Swap",
+   "start": 709.55,
+   "end": 718.43,
+   "text": "Claim two. Nearly every professional basketball player is tall. So if you're tall, you're probably a professional basketball player."
+  },
+  {
+   "id": "s105",
+   "chapter": "Spot the Swap",
+   "start": 719.93,
+   "end": 725.45,
+   "text": "Swap again. There are millions of tall people, and only a few hundred of them play professionally."
+  },
+  {
+   "id": "s106",
+   "chapter": "Spot the Swap",
+   "start": 726.25,
+   "end": 732.02,
+   "text": "Claim three. Out of everyone in the city who matched the trace, about one in nine is guilty."
+  },
+  {
+   "id": "s107",
+   "chapter": "Spot the Swap",
+   "start": 733.52,
+   "end": 740.95,
+   "text": "That one is fair. It starts from the people who match, and asks how many are guilty. That's exactly the question the jury needs."
+  },
+  {
+   "id": "s107a",
+   "chapter": "Spot the Swap",
+   "start": 741.95,
+   "end": 749.24,
+   "text": "Claim four. A spam filter catches nine out of ten spam emails. So nine out of ten emails it blocks are spam."
+  },
+  {
+   "id": "s107b",
+   "chapter": "Spot the Swap",
+   "start": 750.74,
+   "end": 759.27,
+   "text": "Swap. To know how many blocked emails are spam, you'd need to know how many real emails it blocks too. That's the crowd again."
+  },
+  {
+   "id": "s108",
+   "chapter": "Common Mistakes",
+   "start": 760.07,
+   "end": 762.66,
+   "text": "Let's name the mistakes, so you can catch them."
+  },
+  {
+   "id": "s109",
+   "chapter": "Common Mistakes",
+   "start": 763.01,
+   "end": 771.52,
+   "text": "Mistake one: the swap itself. Reading the chance of the evidence, given innocence, as the chance of innocence, given the evidence."
+  },
+  {
+   "id": "s110",
+   "chapter": "Common Mistakes",
+   "start": 771.87,
+   "end": 779.36,
+   "text": "Listen for it in the words. One in a million chance an innocent person would match, is not the same as one in a million chance he's innocent."
+  },
+  {
+   "id": "s111",
+   "chapter": "Common Mistakes",
+   "start": 780.36,
+   "end": 786.87,
+   "text": "Mistake two: forgetting the crowd. A rare match means very different things in a village and in a whole country."
+  },
+  {
+   "id": "s112",
+   "chapter": "Common Mistakes",
+   "start": 787.22,
+   "end": 796.5,
+   "text": "Mistake three goes the other way. Some defense lawyers say: there are nine matches, so the chance he did it is only one in nine. The evidence is worthless."
+  },
+  {
+   "id": "s113",
+   "chapter": "Common Mistakes",
+   "start": 796.85,
+   "end": 804.51,
+   "text": "That's a fallacy too. The match took eight million people down to nine. That's powerful evidence. It just isn't proof on its own."
+  },
+  {
+   "id": "s114",
+   "chapter": "Common Mistakes",
+   "start": 805.51,
+   "end": 814.91,
+   "text": "And a bonus mistake, from the real case: multiplying chances together when the events are connected. That can make a coincidence look far rarer than it is."
+  },
+  {
+   "id": "s115",
+   "chapter": "Recipe",
+   "start": 815.71,
+   "end": 818.57,
+   "text": "Here's a recipe to catch the swap in any claim you're shown."
+  },
+  {
+   "id": "s116",
+   "chapter": "Recipe",
+   "start": 818.92,
+   "end": 823.45,
+   "text": "Step one: find the given. Ask what the number assumes is already true."
+  },
+  {
+   "id": "s117",
+   "chapter": "Recipe",
+   "start": 823.8,
+   "end": 829.3,
+   "text": "Step two: flip it. Write down the question you actually care about, and check it's not the one you were given."
+  },
+  {
+   "id": "s118",
+   "chapter": "Recipe",
+   "start": 829.65,
+   "end": 836.09,
+   "text": "Step three: find the crowd. How many people, or tests, or payments, could have produced this evidence?"
+  },
+  {
+   "id": "s119",
+   "chapter": "Recipe",
+   "start": 836.44,
+   "end": 841.99,
+   "text": "Step four: count the matches. Expected false matches, plus the real ones."
+  },
+  {
+   "id": "s120",
+   "chapter": "Recipe",
+   "start": 842.34,
+   "end": 848.3,
+   "text": "And step five: divide. The real matches, out of all the matches. Then add in any other evidence."
+  },
+  {
+   "id": "s120a",
+   "chapter": "Recipe",
+   "start": 849.3,
+   "end": 863.13,
+   "text": "Try it on Sam. The given: innocent. Flip it: is Sam innocent, given the match? The crowd: eight million. The matches: about eight, plus one. Divide: one in nine."
+  },
+  {
+   "id": "s121",
+   "chapter": "Recipe",
+   "start": 864.13,
+   "end": 867.48,
+   "text": "Because a rare match is not the same as a rare chance of innocence."
+  },
+  {
+   "id": "s122",
+   "chapter": "Subscribe",
+   "start": 868.98,
+   "end": 873.75,
+   "text": "Look around your world, and notice how often a rare coincidence gets treated as proof."
+  },
+  {
+   "id": "s123",
+   "chapter": "Subscribe",
+   "start": 874.35,
+   "end": 880.13,
+   "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together."
+  },
+  {
+   "id": "s124",
+   "chapter": "Next Time",
+   "start": 880.93,
+   "end": 882.39,
+   "text": "But here's a puzzle for next time."
+  },
+  {
+   "id": "s125",
+   "chapter": "Next Time",
+   "start": 882.74,
+   "end": 890.2,
+   "text": "A model says it catches ninety percent of fraud. Another says ninety percent of its alarms are real. Are they bragging about the same thing?"
+  },
+  {
+   "id": "s126",
+   "chapter": "Next Time",
+   "start": 890.55,
+   "end": 899.81,
+   "text": "They're not. It's the same swap we saw today, wearing a lab coat. Next time, we'll lay it all out in one simple table, called the confusion matrix."
+  },
+  {
+   "id": "s127",
+   "chapter": "Next Time",
+   "start": 900.16,
+   "end": 901.52,
+   "text": "I will see you in the next video."
+  }
+ ]
+}

@@ -104,6 +104,10 @@ seg(c, "Look at the two boxes. Same words. Just swapped around the bar.",
     "Animation: 'match' and 'innocent' inside box 1 physically swap places, morphing into box 2. Red arrows show the swap.", 1.0)
 seg(c, "The prosecutor took the first number, and read it out as the second. That swap is the whole fallacy.",
     "Box 1's value '1 in 1,000,000' flies into box 2; a red stamp 'THE SWAP' lands over it.", 1.2)
+seg(c, "So what should the expert have said? Something like this: if Sam were innocent, a match would be very unlikely.",
+    "Green ✓ card: 'If Sam were innocent, a match would be very unlikely.'", sid="s025a")
+seg(c, "That sentence is true. But it does not tell you how likely Sam is to be innocent. To get that, you need one more ingredient.",
+    "Under it, a violet card 'How likely is Sam innocent?' with a missing-puzzle-piece icon labelled '?'.", 0.8, sid="s025b")
 
 c = "Why the Swap Matters"
 seg(c, "Is swapping really such a big deal? Let's try it on something simple.",
@@ -147,6 +151,8 @@ seg(c, "About one.",
     "A single warn dot lights up inside the block; label '≈ 1 innocent match'.", 1.0)
 seg(c, "And we have eight of those blocks. So across the whole city, about eight innocent people match the trace. Just by luck.",
     "Camera pulls back; one warn dot lights in each block, counter climbs 1 → 8; label '≈ 8 innocent matches'.", 1.2)
+seg(c, "You can check it yourself. Eight million, times one in a million, is eight.",
+    "Arithmetic in Inter: '8,000,000 × 1/1,000,000 = 8' (warn result).", 0.8, sid="s042a")
 seg(c, "Plus the one real culprit, who matches for sure.",
     "The orange culprit dot gets a warn ring; total counter '8 + 1 = 9 people match'.")
 seg(c, "So if police lined up everyone in the city who matches, there would be about nine people in that line.",
@@ -198,6 +204,8 @@ seg(c, "And if anyone in a whole country of sixty million could have done it, ab
     "Slider to 60,000,000; line-up axis grows to 61 tiny figures (60 blue with warn rings, 1 orange); card '≈ 1 in 61'.", 1.2)
 seg(c, "The evidence never changed. Only the crowd did. And the answer swung from almost certain, to almost certainly not.",
     "Three result cards in a row: '999 in 1,000', '1 in 9', '1 in 61', with the unchanged '1 in a million' chip above all three.", 1.5)
+seg(c, "Same trace. Same expert. Same one in a million. Three completely different answers.",
+    "The three result cards pulse in turn under the fixed '1 in a million' chip.", 1.0, sid="s066a")
 seg(c, "That's why the expert's number, on its own, can never tell you the chance of guilt. You always need the crowd as well.",
     "Equation in words: 'evidence + crowd → answer'; the crowd part glows aqua.")
 
@@ -213,6 +221,12 @@ seg(c, "In a smaller crowd, far fewer innocent people match by luck, and the mat
 seg(c, "So the match isn't useless. It's one piece, and it has to be combined with everything else, honestly.",
     "Puzzle pieces 'DNA match' + 'seen nearby' + 'other facts' click together.", 0.8)
 
+seg(c, "In fact, here's how much the match moved things. Before it, Sam was just one of eight million people. One in eight million.",
+    "Meter on a log axis: 'before the match: 1 in 8,000,000' (orange, tiny).", sid="s073a")
+seg(c, "After it, he's one in nine. His chance of guilt jumped almost nine hundred thousand times.",
+    "Meter jumps to '1 in 9'; arrow '≈ 889,000× higher'.", 1.0, sid="s073b")
+seg(c, "Strong evidence. Just not, on its own, proof.",
+    "Label 'strong ≠ proof'.", 0.8, sid="s073c")
 # ───────────── A REAL CASE ─────────────
 c = "A Real Courtroom"
 seg(c, "This isn't just a classroom puzzle. In England, in nineteen ninety nine, a mother was convicted after two of her babies died suddenly.",
@@ -234,13 +248,13 @@ seg(c, "Statisticians spoke out, and in two thousand and three, her conviction w
 c = "The Same Swap in Medicine"
 seg(c, "The very same swap happens in doctors' offices, every day.",
     "Clinic icon; the two boxes reappear with new words.")
-seg(c, "In our Bayes theorem video, a test gave a false alarm to one in ten healthy people.",
+seg(c, "Back in our Bayes theorem video, a test gave a false alarm to one in ten healthy people.",
     "Chip 'from: Bayes' Theorem'. Box 1: 'P(positive | healthy) = 1 in 10' (blue).")
 seg(c, "That's the chance of a positive, given healthy. Swap it, and ask: given a positive, how likely are you healthy?",
     "Box 2: 'P(healthy | positive) = ?' (violet); swap arrows.")
 seg(c, "Out of a thousand people, ninety nine healthy people got false alarms, and only nine people who were really sick tested positive.",
     "Recap of that video's picture: 1,000-dot grid; 99 blue dots with warn rings, 9 orange dots with warn rings.")
-seg(c, "So eleven in twelve of the positives were healthy. A world away from one in ten.",
+seg(c, "So eleven out of twelve of the positives were healthy. A world away from one in ten.",
     "Fraction card 'P(healthy | positive) = 99 ÷ 108 = 11 in 12' (violet) next to '1 in 10'.", 1.2)
 seg(c, "It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms.",
     "Side by side: city line-up (8 innocent + 1) and clinic line-up (99 healthy + 9); caption 'big innocent crowd → many false matches'.", 1.0)
@@ -249,6 +263,8 @@ seg(c, "It's the courtroom again. A rare false alarm, inside a big healthy crowd
 c = "Where You'll Use It"
 seg(c, "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court.",
     "Clinic line-up of 108 goes through a second test filter; the crowd shrinks; label 'second test = smaller crowd (illustration)'.", 0.8)
+seg(c, "So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it?",
+    "Question card (violet): 'Out of everyone who tests positive, how many really have it?'", 1.0, sid="s084a")
 seg(c, "Once you can see this swap, you'll find it everywhere, especially in the world of data.",
     "Four tiles: Machine Learning, Data Science, Finance, Computer Science.")
 seg(c, "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.",
@@ -274,15 +290,16 @@ seg(c, "Search five million DNA profiles for a one in a million match, and you'd
 seg(c, "The bigger the search, the more coincidences you're guaranteed to find.",
     "Line on axes x: profiles searched (millions, 0–5), y: expected innocent hits (0–5); straight line rising.", 1.0)
 
-# ───────────── QUIZ ─────────────
-c = "Spot the Swap"
 seg(c, "Four different fields, one same trap. A rare false match, multiplied by a big crowd, gives you lots of false matches.",
     "The four tiles return in a row, each with its line-up: '1 in 6', '83 in 100 fair', '1 in 12', '5 innocent hits'; caption 'rare × big crowd = many'.", 1.0)
-seg(c, "Let's practise. I'll read three claims. For each one, decide: is it a swap, or is it fair?",
-    "Heading 'spot the swap'; three blank claim cards; a 'swap?' / 'fair?' toggle under each.")
+
+# ───────────── QUIZ ─────────────
+c = "Spot the Swap"
+seg(c, "Let's practise. I'll read four claims. For each one, decide: is it a swap, or is it fair?",
+    "Heading 'spot the swap'; four blank claim cards; a 'swap?' / 'fair?' toggle under each.")
 seg(c, "Claim one. A smoke alarm almost always beeps when there's a fire. So when it beeps, there's almost certainly a fire.",
     "Card ①: smoke-alarm icon + flame; text 'beeps | fire: almost always → fire | beeps: almost certain?'.", 1.5)
-seg(c, "That's a swap. The crowd here is every time the alarm beeps, and most of those times, someone just burnt the toast.",
+seg(c, "That's a swap. Think of every single time the alarm beeps. Most of those times, someone just burnt the toast.",
     "Card ① stamped red 'SWAP'; a crowd of beep icons, most next to toast icons, a few next to flames. Label 'illustration'.", 0.8)
 seg(c, "Claim two. Nearly every professional basketball player is tall. So if you're tall, you're probably a professional basketball player.",
     "Card ②: basketball icon + height bar; text 'tall | pro player → pro player | tall?'.", 1.5)
@@ -293,6 +310,10 @@ seg(c, "Claim three. Out of everyone in the city who matched the trace, about on
 seg(c, "That one is fair. It starts from the people who match, and asks how many are guilty. That's exactly the question the jury needs.",
     "Card ③ stamped green 'FAIR ✓'; the 'given match' part glows.", 1.0)
 
+seg(c, "Claim four. A spam filter catches nine out of ten spam emails. So nine out of ten emails it blocks are spam.",
+    "Card ④: envelope icon + filter; text 'blocked | spam: 9 in 10 → spam | blocked: 9 in 10?'.", 1.5, sid="s107a")
+seg(c, "Swap. To know how many blocked emails are spam, you'd need to know how many real emails it blocks too. That's the crowd again.",
+    "Card ④ stamped red 'SWAP'; a stack of blocked envelopes, some marked 'real email' in blue. Label 'illustration'.", 0.8, sid="s107b")
 # ───────────── COMMON MISTAKES ─────────────
 c = "Common Mistakes"
 seg(c, "Let's name the mistakes, so you can catch them.",
@@ -324,6 +345,8 @@ seg(c, "Step four: count the matches. Expected false matches, plus the real ones
     "④ **Count the matches** — crowd × false-match rate, + the real ones.")
 seg(c, "And step five: divide. The real matches, out of all the matches. Then add in any other evidence.",
     "⑤ **Divide** — real matches ÷ all matches; then combine other evidence.", 1.0)
+seg(c, "Try it on Sam. The given: innocent. Flip it: is Sam innocent, given the match? The crowd: eight million. The matches: about eight, plus one. Divide: one in nine.",
+    "The five recipe steps tick green one by one, each with Sam's number beside it: 'innocent' · 'innocent | match?' · '8,000,000' · '8 + 1' · '1 in 9'.", 1.0, sid="s120a")
 seg(c, "Because a rare match is not the same as a rare chance of innocence.",
     "Closing line under the card: 'a rare match is not a rare chance of innocence' (violet).", 1.5)
 

@@ -89,7 +89,7 @@ class S03Questions(Base):
         e2 = text_card(["Sam is innocent", "1 in 1,000,000 ?"], RED_, 5.0, 28, True).move_to(RIGHT * 3.5 + UP * 0.2)
         self.play(FadeIn(e1, shift=UP * 0.4), FadeIn(e2, shift=UP * 0.4), run_time=0.6)
         self.word("s019", "flip")
-        self.play(Indicate(e2, color=RED_, scale_factor=1.06), run_time=0.7)
+        self.play(pulse(e2, s=1.08), run_time=0.7)
         self.word("s019", "carefully")
         pen = pill("let's write it down", INK, 28).move_to(DOWN * 2.0)
         self.play(FadeIn(pen, shift=UP * 0.2), run_time=0.4)

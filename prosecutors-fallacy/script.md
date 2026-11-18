@@ -204,7 +204,7 @@
 - **s080** Statisticians spoke out, and in two thousand and three, her conviction was overturned. ⏸1.5s
   - *Visual:* Card 'conviction overturned · 2003'; a scale-of-justice icon levels out.
 
-## The Same Swap in Medicine  ·  108 words, ~39 s
+## The Same Swap in Medicine  ·  158 words, ~57 s
 
 - **s081** The very same swap happens in doctors' offices, every day.
   - *Visual:* Clinic icon; the two boxes reappear with new words.
@@ -218,13 +218,13 @@
   - *Visual:* Fraction card 'P(healthy | positive) = 99 ÷ 108 = 11 in 12' (violet) next to '1 in 10'.
 - **s086** It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms. ⏸1.0s
   - *Visual:* Side by side: city line-up (8 innocent + 1) and clinic line-up (99 healthy + 9); caption 'big innocent crowd → many false matches'.
-
-## Where You'll Use It  ·  323 words, ~117 s
-
 - **s087** That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court. ⏸0.8s
   - *Visual:* Clinic line-up of 108 goes through a second test filter; the crowd shrinks; label 'second test = smaller crowd (illustration)'.
 - **s084a** So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it? ⏸1.0s
   - *Visual:* Question card (violet): 'Out of everyone who tests positive, how many really have it?'
+
+## Where You'll Use It  ·  273 words, ~99 s
+
 - **s088** Once you can see this swap, you'll find it everywhere, especially in the world of data.
   - *Visual:* Four tiles: Machine Learning, Data Science, Finance, Computer Science.
 - **s089** In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.

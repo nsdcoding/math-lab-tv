@@ -48,3 +48,12 @@
 - Gauges: use `speedometer()` (zones, ticks, end labels, needle on a hub), not a bare arc and line.
 - Images (stickers) placed partly off-frame are drawn in the wrong place for a frame or two. Never slide an
   image in from off-screen: FadeIn(img, shift=...) from just inside the frame.
+
+## Prosecutor's Fallacy
+- `Indicate(...)` on a pill, chip or card floods its filled box with the highlight colour for a few frames. Use
+  `pulse()` on anything with a filled box; keep `Indicate` for bare text and dots.
+- `group.animate.set_opacity(x)` also sets the fill of outline-only circles (rings) in the group; restoring to 1
+  turns them into solid discs. Dim only the parts you mean (e.g. `p[0].animate.set_opacity(0.35)`).
+- When inserting script lines after voicing, check the new segment's `chapter` in script.json: a line placed
+  after a chapter's `c = ...` assignment silently joins the next chapter.
+- A recipe card too wide for a side column: swap each explanation for the worked value in place instead.

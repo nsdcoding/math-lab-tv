@@ -21,12 +21,11 @@ def cursor():
     return c
 
 
-# FILL: four everyday examples tied to this topic: (label, icon builder, colour)
-EVERYDAY = [("smoke alarm", lambda: VGroup(Circle(0.32), Circle(0.1)).set_stroke(RED_, 3), RED_),
-            ("car alarm", lambda: RoundedRectangle(corner_radius=0.1, width=0.9, height=0.35).set_stroke(WARN, 3), WARN),
-            ("spam folder", lambda: Rectangle(width=0.8, height=0.55).set_stroke(BLUE_, 3), BLUE_),
-            ("“Was this you?”", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(AQUA, 3), AQUA)]
-STAMP = "real or false alarm?"   # FILL: the reflection question stamped on each card
+EVERYDAY = [("a headline", lambda: VGroup(Rectangle(width=1.0, height=0.7), *[Line(LEFT * 0.35, RIGHT * 0.35).shift(UP * y) for y in (0.15, 0, -0.15)]).set_stroke(WARN, 3), WARN),
+            ("a test result", lambda: VGroup(Rectangle(width=0.4, height=1.0), Rectangle(width=1.0, height=0.4)).set_stroke(RED_, 3), RED_),
+            ("an alarm", lambda: VGroup(Circle(0.32), Circle(0.1)).set_stroke(BLUE_, 3), BLUE_),
+            ("a fraud text", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(AQUA, 3), AQUA)]
+STAMP = "given what?"
 
 
 class S90Subscribe(Base):

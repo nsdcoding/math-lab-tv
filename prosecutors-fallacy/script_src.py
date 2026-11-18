@@ -259,12 +259,13 @@ seg(c, "So eleven out of twelve of the positives were healthy. A world away from
 seg(c, "It's the courtroom again. A rare false alarm, inside a big healthy crowd, still adds up to lots of false alarms.",
     "Side by side: city line-up (8 innocent + 1) and clinic line-up (99 healthy + 9); caption 'big innocent crowd → many false matches'.", 1.0)
 
-# ───────────── REAL WORLD ─────────────
-c = "Where You'll Use It"
 seg(c, "That's why a single positive result is usually followed by a second, different test. A second test shrinks the crowd, just like extra evidence in court.",
     "Clinic line-up of 108 goes through a second test filter; the crowd shrinks; label 'second test = smaller crowd (illustration)'.", 0.8)
 seg(c, "So if you ever get a scary test result, ask the flipped question. Out of everyone who tests positive, how many really have it?",
     "Question card (violet): 'Out of everyone who tests positive, how many really have it?'", 1.0, sid="s084a")
+
+# ───────────── REAL WORLD ─────────────
+c = "Where You'll Use It"
 seg(c, "Once you can see this swap, you'll find it everywhere, especially in the world of data.",
     "Four tiles: Machine Learning, Data Science, Finance, Computer Science.")
 seg(c, "In machine learning, take a face recognition camera at a stadium, looking for one wanted person among fifty thousand fans.",

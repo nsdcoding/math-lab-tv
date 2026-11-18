@@ -1,0 +1,12 @@
+Category: Education
+Language: English · Captions: upload out/captions.srt (English)
+Audience: Not made for kids
+License: Standard YouTube License · Allow embedding: on
+Chapters: automatic from the description timestamps (first at 0:00, all ≥ 10 s)
+Thumbnails: upload thumbnail_A.png and thumbnail_B.png to "Test & compare"
+End screen: link the next video in the last 20 s · Comments: on · pin pinned_comment.txt
+YouTube cards (callbacks in the narration):
+1:29  card → Hypothesis Testing and p Values Without the Confusion
+5:43  card → Bayes Theorem Explained Simply, With Real Examples
+8:59  card → Bayes Theorem Explained Simply, With Real Examples
+Video length: 15:05 (905.0 s)

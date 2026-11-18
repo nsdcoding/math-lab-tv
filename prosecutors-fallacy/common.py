@@ -887,7 +887,8 @@ def pmf_list(n, p, total=1000):
 # ───────────── Prosecutor's Fallacy helpers ─────────────
 # Colour roles: innocent = BLUE_, match/evidence = WARN, guilty = ORANGE_, answer = VIOLET, crowd = AQUA, swap = RED_
 WORD_COL = {"match": WARN, "innocent": BLUE_, "guilty": ORANGE_, "positive": WARN, "healthy": BLUE_,
-            "fair": BLUE_, "this extreme": WARN, "fraud": ORANGE_, "flagged": WARN, "four legs": WARN, "dog": ORANGE_}
+            "fair": BLUE_, "this extreme": WARN, "fraud": ORANGE_, "flagged": WARN, "four legs": WARN, "dog": ORANGE_,
+            "two deaths": WARN, "sick": ORANGE_}
 
 
 def cond(a, b, size=40):
@@ -997,3 +998,43 @@ def labcoat(color=INK, s=1.0):
     lap = VGroup(Line(p[0].get_top() + LEFT * 0.08 * s, p[0].get_center()),
                  Line(p[0].get_top() + RIGHT * 0.08 * s, p[0].get_center())).set_stroke(color, 3)
     return VGroup(p, lap)
+
+
+def matcher(guilty=False, h=0.75):
+    """A person in the line-up of people who match: innocent = blue, guilty = orange; every one wears a warn ring."""
+    col = ORANGE_ if guilty else BLUE_
+    p = person(col, h, fill=0.85)
+    r = Circle(radius=h * 0.62).set_stroke(WARN, 3).move_to(p)
+    r.qa_ignore = True
+    g = VGroup(p, r); g.guilty = guilty
+    return g
+
+
+def lineup(n, guilty_at=None, h=0.75, buff=0.28):
+    g = VGroup(*[matcher(i == guilty_at, h) for i in range(n)]).arrange(RIGHT, buff=buff)
+    return g
+
+
+def city_blocks(cols=4, rows=2, cells=12, size=1.85, gap=0.32):
+    """Eight blocks of one million people each, drawn as cells x cells squares (illustrative)."""
+    blocks = VGroup()
+    for r in range(rows):
+        for c in range(cols):
+            sq = VGroup(*[Square(size / cells * 0.8, stroke_width=0, fill_color=BLUE_, fill_opacity=0.55)
+                          for _ in range(cells * cells)]).arrange_in_grid(cells, cells, buff=size / cells * 0.2)
+            frame_ = Square(size + 0.12).set_stroke(INK2, 2).move_to(sq)
+            frame_.qa_container = True
+            blk = VGroup(frame_, sq); blk.cells = sq; blk.frame = frame_
+            blk.move_to(RIGHT * c * (size + gap) + DOWN * r * (size + gap))
+            blocks.add(blk)
+    return blocks
+
+
+def result_card(top, value, color=VIOLET, size=30, vsize=52, w=None):
+    t = T(top, size, INK2)
+    v = TB(value, vsize, color)
+    inner = VGroup(t, v).arrange(DOWN, buff=0.22)
+    box = card(max(w or 0, inner.width + 0.8), inner.height + 0.6, color)
+    inner.move_to(box)
+    g = VGroup(box, inner); g.box, g.top, g.value = box, t, v
+    return g

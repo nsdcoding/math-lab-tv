@@ -1,0 +1,1275 @@
+1
+00:00:00,600 --> 00:00:03,991
+Last time, I left you with a puzzle from a courtroom.
+
+2
+00:00:03,991 --> 00:00:05,660
+Today, we solve it.
+
+3
+00:00:06,010 --> 00:00:08,482
+Picture a city of eight million people.
+
+4
+00:00:08,482 --> 00:00:12,745
+One night, a crime. At the scene, police find a tiny trace of
+
+5
+00:00:12,745 --> 00:00:13,190
+DNA.
+
+6
+00:00:13,540 --> 00:00:17,396
+It's only a partial trace, so it can't point to one person.
+
+7
+00:00:17,396 --> 00:00:18,470
+But it's still rare.
+
+8
+00:00:18,820 --> 00:00:21,651
+Weeks later, police find a man.
+
+9
+00:00:21,651 --> 00:00:25,080
+Let's call him Sam. Sam's DNA matches the trace.
+
+10
+00:00:25,430 --> 00:00:29,322
+In court, an expert explains: if you picked an innocent person
+
+11
+00:00:29,322 --> 00:00:33,010
+at random, the chance they would match is just one in a million.
+
+12
+00:00:33,360 --> 00:00:37,033
+Then the prosecutor stands up and says: so there's only a one in
+
+13
+00:00:37,033 --> 00:00:39,070
+a million chance that Sam is innocent.
+
+14
+00:00:39,870 --> 00:00:43,000
+The jury nods. One in a million sounds like proof.
+
+15
+00:00:43,350 --> 00:00:45,081
+Take a second, and decide.
+
+16
+00:00:45,081 --> 00:00:46,960
+Do you agree with the prosecutor?
+
+17
+00:00:48,460 --> 00:00:51,104
+If you said yes, you're in good company.
+
+18
+00:00:51,104 --> 00:00:55,070
+Judges, juries and even experts have made this exact mistake.
+
+19
+00:00:55,420 --> 00:00:58,576
+By the end of this video, you'll see that Sam is much more
+
+20
+00:00:58,576 --> 00:01:00,683
+likely innocent than guilty.
+
+21
+00:01:00,683 --> 00:01:03,210
+And you'll be able to spot this trap anywhere.
+
+22
+00:01:03,560 --> 00:01:05,320
+It's called the prosecutor's fallacy.
+
+23
+00:01:06,320 --> 00:01:07,808
+Welcome to Math Lab TV.
+
+24
+00:01:07,808 --> 00:01:09,930
+Where math is something you can see.
+
+25
+00:01:10,630 --> 00:01:13,177
+Today you will learn why the chance of the evidence,
+
+26
+00:01:13,177 --> 00:01:16,660
+if someone is innocent, is not the chance they are innocent.
+
+27
+00:01:17,010 --> 00:01:20,660
+You will see how to count the crowd, and find how many innocent
+
+28
+00:01:20,660 --> 00:01:22,380
+people share the same evidence.
+
+29
+00:01:22,730 --> 00:01:25,702
+And you will learn a simple recipe to catch this swap in
+
+30
+00:01:25,702 --> 00:01:28,420
+courtrooms, medical tests, and the news.
+
+31
+00:01:29,020 --> 00:01:32,664
+In our hypothesis testing video, we flipped a friend's coin
+
+32
+00:01:32,664 --> 00:01:35,030
+twenty times, and got fifteen heads.
+
+33
+00:01:35,380 --> 00:01:39,009
+We found that a fair coin would do something that extreme only
+
+34
+00:01:39,009 --> 00:01:41,270
+about two times in a hundred.
+
+35
+00:01:41,620 --> 00:01:44,777
+And we warned: that is not the chance the coin is fair.
+
+36
+00:01:44,777 --> 00:01:46,460
+The question had been flipped.
+
+37
+00:01:47,260 --> 00:01:49,110
+The courtroom is the very same flip.
+
+38
+00:01:49,110 --> 00:01:50,960
+So let's write it down carefully.
+
+39
+00:01:51,310 --> 00:01:55,276
+Mathematicians write the chance of something with a capital P.
+
+40
+00:01:55,276 --> 00:01:58,826
+And they use a short vertical bar, which you can read as the
+
+41
+00:01:58,826 --> 00:01:59,670
+word given.
+
+42
+00:02:00,020 --> 00:02:04,126
+So P of match, given innocent, means: suppose the person is
+
+43
+00:02:04,126 --> 00:02:06,720
+innocent. How likely is a match?
+
+44
+00:02:07,070 --> 00:02:08,844
+That's the number the expert gave.
+
+45
+00:02:08,844 --> 00:02:10,230
+One in a million.
+
+46
+00:02:10,830 --> 00:02:13,073
+But the jury needs a different number.
+
+47
+00:02:13,073 --> 00:02:14,984
+P of innocent, given match.
+
+48
+00:02:14,984 --> 00:02:16,491
+Suppose the person matches.
+
+49
+00:02:16,491 --> 00:02:18,550
+How likely are they innocent?
+
+50
+00:02:18,900 --> 00:02:21,015
+Look at the two boxes. Same words.
+
+51
+00:02:21,015 --> 00:02:22,700
+Just swapped around the bar.
+
+52
+00:02:23,700 --> 00:02:27,385
+The prosecutor took the first number, and read it out as the
+
+53
+00:02:27,385 --> 00:02:29,990
+second. That swap is the whole fallacy.
+
+54
+00:02:31,190 --> 00:02:32,913
+So what should the expert have said?
+
+55
+00:02:32,913 --> 00:02:35,421
+Something like this: if Sam were innocent,
+
+56
+00:02:35,421 --> 00:02:37,520
+a match would be very unlikely.
+
+57
+00:02:37,870 --> 00:02:41,271
+That sentence is true. But it does not tell you how likely Sam
+
+58
+00:02:41,271 --> 00:02:45,310
+is to be innocent. To get that, you need one more ingredient.
+
+59
+00:02:46,110 --> 00:02:47,998
+Is swapping really such a big deal?
+
+60
+00:02:47,998 --> 00:02:49,700
+Let's try it on something simple.
+
+61
+00:02:50,050 --> 00:02:52,507
+What's the chance that a dog has four legs?
+
+62
+00:02:52,507 --> 00:02:55,680
+Almost certain. Nearly every dog does.
+
+63
+00:02:56,030 --> 00:02:59,540
+Now swap it. What's the chance that something with four legs is
+
+64
+00:02:59,540 --> 00:03:00,230
+a dog?
+
+65
+00:03:00,580 --> 00:03:02,780
+Not very likely at all.
+
+66
+00:03:02,780 --> 00:03:05,915
+Cats have four legs. So do cows, and horses.
+
+67
+00:03:05,915 --> 00:03:07,620
+Even your kitchen table.
+
+68
+00:03:08,620 --> 00:03:11,912
+The two numbers share the same words, but they can be wildly
+
+69
+00:03:11,912 --> 00:03:12,790
+different.
+
+70
+00:03:13,140 --> 00:03:15,025
+The difference comes from the crowd.
+
+71
+00:03:15,025 --> 00:03:18,460
+How many other things, besides dogs, also have four legs?
+
+72
+00:03:19,460 --> 00:03:20,984
+So why do smart people swap them?
+
+73
+00:03:20,984 --> 00:03:22,881
+Because our brains love a simple story.
+
+74
+00:03:22,881 --> 00:03:26,268
+The evidence fits the guilty person, so the guilty person must
+
+75
+00:03:26,268 --> 00:03:27,420
+fit the evidence.
+
+76
+00:03:27,770 --> 00:03:30,966
+But fitting the evidence is easy when the crowd is big.
+
+77
+00:03:30,966 --> 00:03:33,170
+Lots of innocent people can fit it too.
+
+78
+00:03:33,970 --> 00:03:37,124
+In Sam's case, the crowd is a city of eight million people.
+
+79
+00:03:37,124 --> 00:03:38,120
+So let's count it.
+
+80
+00:03:38,470 --> 00:03:41,760
+Before we start, let's be honest about what we are assuming.
+
+81
+00:03:42,110 --> 00:03:45,370
+First, the person who did it lives somewhere in this city.
+
+82
+00:03:45,720 --> 00:03:49,140
+Second, the real culprit's DNA always matches the trace.
+
+83
+00:03:49,490 --> 00:03:52,649
+And third, for now, we know nothing else about Sam.
+
+84
+00:03:52,649 --> 00:03:55,380
+Only the match. We'll come back to that one.
+
+85
+00:03:56,180 --> 00:03:57,829
+Here is the whole city.
+
+86
+00:03:57,829 --> 00:04:01,382
+Eight million people, drawn as eight big blocks of one million
+
+87
+00:04:01,382 --> 00:04:01,840
+each.
+
+88
+00:04:02,190 --> 00:04:03,740
+One of them is the culprit.
+
+89
+00:04:03,740 --> 00:04:06,453
+That leaves seven million, nine hundred and ninety nine
+
+90
+00:04:06,453 --> 00:04:09,220
+thousand, nine hundred and ninety nine innocent people.
+
+91
+00:04:09,570 --> 00:04:10,852
+Now the expert's number.
+
+92
+00:04:10,852 --> 00:04:14,260
+Each innocent person matches with a chance of one in a million.
+
+93
+00:04:14,610 --> 00:04:18,038
+So in a block of one million innocent people,
+
+94
+00:04:18,038 --> 00:04:21,220
+how many would we expect to match by pure chance?
+
+95
+00:04:21,570 --> 00:04:22,240
+About one.
+
+96
+00:04:23,240 --> 00:04:24,925
+And we have eight of those blocks.
+
+97
+00:04:24,925 --> 00:04:28,493
+So across the whole city, about eight innocent people match the
+
+98
+00:04:28,493 --> 00:04:29,770
+trace. Just by luck.
+
+99
+00:04:30,970 --> 00:04:32,194
+You can check it yourself.
+
+100
+00:04:32,194 --> 00:04:35,030
+Eight million, times one in a million, is eight.
+
+101
+00:04:35,830 --> 00:04:38,840
+Plus the one real culprit, who matches for sure.
+
+102
+00:04:39,190 --> 00:04:42,407
+So if police lined up everyone in the city who matches,
+
+103
+00:04:42,407 --> 00:04:44,390
+there would be about nine people in that line.
+
+104
+00:04:45,390 --> 00:04:47,440
+And only one of those nine is guilty.
+
+105
+00:04:48,440 --> 00:04:50,339
+Sam is one of the people in that line.
+
+106
+00:04:50,339 --> 00:04:51,903
+All we know is that he matched.
+
+107
+00:04:51,903 --> 00:04:54,810
+So the chance he's the guilty one is about one in nine.
+
+108
+00:04:56,010 --> 00:04:59,170
+Which means the chance he's innocent is about eight in nine.
+
+109
+00:04:59,170 --> 00:05:00,860
+Around eighty nine percent.
+
+110
+00:05:02,360 --> 00:05:04,950
+Notice what we did. No fancy formula.
+
+111
+00:05:04,950 --> 00:05:08,885
+We just imagined everyone in the city, and asked who else would
+
+112
+00:05:08,885 --> 00:05:09,300
+match.
+
+113
+00:05:09,650 --> 00:05:11,480
+Put the two numbers next to each other.
+
+114
+00:05:11,830 --> 00:05:15,140
+The chance of a match, given innocent: one in a million.
+
+115
+00:05:15,490 --> 00:05:19,240
+The chance of innocent, given a match: about eight in nine.
+
+116
+00:05:19,590 --> 00:05:22,828
+The second number is almost nine hundred thousand times bigger.
+
+117
+00:05:22,828 --> 00:05:25,000
+That's how far apart the two questions are.
+
+118
+00:05:26,500 --> 00:05:29,850
+What we just did is count, but you can write it as a short rule.
+
+119
+00:05:30,200 --> 00:05:34,246
+The chance of guilt, given a match, equals the guilty people who
+
+120
+00:05:34,246 --> 00:05:37,330
+match, divided by everyone who matches.
+
+121
+00:05:37,680 --> 00:05:41,576
+On top, one. On the bottom, one plus eight.
+
+122
+00:05:41,576 --> 00:05:42,550
+One ninth.
+
+123
+00:05:43,350 --> 00:05:46,385
+In our Bayes theorem video, we wrote this same idea as a
+
+124
+00:05:46,385 --> 00:05:49,861
+formula. Here, counting the crowd gets you to the same answer,
+
+125
+00:05:49,861 --> 00:05:51,770
+with no formula to remember.
+
+126
+00:05:52,120 --> 00:05:53,994
+And notice where the eight came from.
+
+127
+00:05:53,994 --> 00:05:56,076
+Not from the expert's number alone.
+
+128
+00:05:56,076 --> 00:05:57,950
+It came from the size of the crowd.
+
+129
+00:05:58,950 --> 00:06:00,537
+That crowd size has a name.
+
+130
+00:06:00,537 --> 00:06:02,124
+It's called the base rate.
+
+131
+00:06:02,124 --> 00:06:04,850
+And it's the piece the prosecutor left out.
+
+132
+00:06:05,200 --> 00:06:07,599
+Let's keep the same one in a million trace,
+
+133
+00:06:07,599 --> 00:06:08,810
+and just change the crowd.
+
+134
+00:06:09,160 --> 00:06:12,953
+Imagine the crime happened in a tiny village of one thousand
+
+135
+00:06:12,953 --> 00:06:15,390
+people, and nobody else could have been there.
+
+136
+00:06:15,740 --> 00:06:19,282
+Now the chance that even one innocent villager matches is about
+
+137
+00:06:19,282 --> 00:06:20,620
+one in a thousand.
+
+138
+00:06:20,970 --> 00:06:24,021
+So if someone in the village matches, they are almost certainly
+
+139
+00:06:24,021 --> 00:06:26,915
+the culprit. About nine hundred and ninety nine times in a
+
+140
+00:06:26,915 --> 00:06:27,450
+thousand.
+
+141
+00:06:28,450 --> 00:06:31,828
+Back in our city of eight million, the same match gave about one
+
+142
+00:06:31,828 --> 00:06:32,420
+in nine.
+
+143
+00:06:32,770 --> 00:06:35,650
+And if anyone in a whole country of sixty million could have
+
+144
+00:06:35,650 --> 00:06:38,250
+done it, about sixty innocent people would match.
+
+145
+00:06:38,250 --> 00:06:41,170
+The chance of guilt drops to about one in sixty one.
+
+146
+00:06:42,370 --> 00:06:44,321
+The evidence never changed.
+
+147
+00:06:44,321 --> 00:06:48,006
+Only the crowd did. And the answer swung from almost certain,
+
+148
+00:06:48,006 --> 00:06:49,740
+to almost certainly not.
+
+149
+00:06:51,240 --> 00:06:52,725
+Same trace. Same expert.
+
+150
+00:06:52,725 --> 00:06:56,720
+Same one in a million. Three completely different answers.
+
+151
+00:06:57,720 --> 00:07:00,267
+That's why the expert's number, on its own,
+
+152
+00:07:00,267 --> 00:07:02,384
+can never tell you the chance of guilt.
+
+153
+00:07:02,384 --> 00:07:04,290
+You always need the crowd as well.
+
+154
+00:07:04,640 --> 00:07:07,204
+Now, remember our third assumption.
+
+155
+00:07:07,204 --> 00:07:10,020
+We knew nothing about Sam except the match.
+
+156
+00:07:10,370 --> 00:07:12,978
+In a real case, there's usually more.
+
+157
+00:07:12,978 --> 00:07:15,150
+Maybe Sam was seen near the scene that night.
+
+158
+00:07:15,500 --> 00:07:18,026
+Other evidence works by shrinking the crowd.
+
+159
+00:07:18,026 --> 00:07:20,133
+Instead of eight million possible people,
+
+160
+00:07:20,133 --> 00:07:22,450
+maybe only a few hundred were nearby.
+
+161
+00:07:22,800 --> 00:07:26,134
+In a smaller crowd, far fewer innocent people match by luck,
+
+162
+00:07:26,134 --> 00:07:28,670
+and the match becomes much stronger evidence.
+
+163
+00:07:29,670 --> 00:07:31,170
+So the match isn't useless.
+
+164
+00:07:31,170 --> 00:07:34,901
+It's one piece, and it has to be combined with everything else,
+
+165
+00:07:34,901 --> 00:07:35,670
+honestly.
+
+166
+00:07:36,470 --> 00:07:39,638
+In fact, here's how much the match moved things.
+
+167
+00:07:39,638 --> 00:07:43,302
+Before it, Sam was just one of eight million people.
+
+168
+00:07:43,302 --> 00:07:45,010
+One in eight million.
+
+169
+00:07:45,360 --> 00:07:47,386
+After it, he's one in nine.
+
+170
+00:07:47,386 --> 00:07:50,580
+His chance of guilt jumped almost nine hundred thousand times.
+
+171
+00:07:51,580 --> 00:07:55,330
+Strong evidence. Just not, on its own, proof.
+
+172
+00:07:56,130 --> 00:07:57,711
+This isn't just a classroom puzzle.
+
+173
+00:07:57,711 --> 00:08:01,651
+In England, in nineteen ninety nine, a mother was convicted
+
+174
+00:08:01,651 --> 00:08:04,010
+after two of her babies died suddenly.
+
+175
+00:08:04,360 --> 00:08:08,162
+A medical expert told the jury that, for a family like hers,
+
+176
+00:08:08,162 --> 00:08:11,336
+the chance of one sudden infant death was about one in eight
+
+177
+00:08:11,336 --> 00:08:12,490
+thousand five hundred.
+
+178
+00:08:12,840 --> 00:08:15,249
+He then multiplied that number by itself,
+
+179
+00:08:15,249 --> 00:08:18,633
+and said the chance of two such deaths was about one in seventy
+
+180
+00:08:18,633 --> 00:08:19,450
+three million.
+
+181
+00:08:19,800 --> 00:08:21,451
+That number had two problems.
+
+182
+00:08:21,451 --> 00:08:24,958
+First, multiplying assumes the two deaths were unrelated.
+
+183
+00:08:24,958 --> 00:08:28,654
+But families can share genes and homes, so a second death is
+
+184
+00:08:28,654 --> 00:08:30,510
+more likely after a first.
+
+185
+00:08:30,860 --> 00:08:35,016
+Second, the swap. One in seventy three million was presented as
+
+186
+00:08:35,016 --> 00:08:37,300
+if it were the chance she was innocent.
+
+187
+00:08:38,300 --> 00:08:41,860
+But a double murder of babies is also extremely rare.
+
+188
+00:08:41,860 --> 00:08:45,421
+The real question is which rare explanation is more likely.
+
+189
+00:08:45,421 --> 00:08:47,520
+Comparing them points the other way.
+
+190
+00:08:48,520 --> 00:08:51,460
+Statisticians spoke out, and in two thousand and three,
+
+191
+00:08:51,460 --> 00:08:53,410
+her conviction was overturned.
+
+192
+00:08:54,910 --> 00:08:58,296
+The very same swap happens in doctors' offices,
+
+193
+00:08:58,296 --> 00:08:59,490
+every day.
+
+194
+00:08:59,840 --> 00:09:03,190
+Back in our Bayes theorem video, a test gave a false alarm to
+
+195
+00:09:03,190 --> 00:09:04,780
+one in ten healthy people.
+
+196
+00:09:05,130 --> 00:09:07,668
+That's the chance of a positive, given healthy.
+
+197
+00:09:07,668 --> 00:09:11,870
+Swap it, and ask: given a positive, how likely are you healthy?
+
+198
+00:09:12,220 --> 00:09:15,463
+Out of a thousand people, ninety nine healthy people got false
+
+199
+00:09:15,463 --> 00:09:18,505
+alarms, and only nine people who were really sick tested
+
+200
+00:09:18,505 --> 00:09:19,330
+positive.
+
+201
+00:09:19,680 --> 00:09:22,274
+So eleven out of twelve of the positives were healthy.
+
+202
+00:09:22,274 --> 00:09:23,830
+A world away from one in ten.
+
+203
+00:09:25,030 --> 00:09:26,617
+It's the courtroom again.
+
+204
+00:09:26,617 --> 00:09:29,790
+A rare false alarm, inside a big healthy crowd,
+
+205
+00:09:29,790 --> 00:09:32,060
+still adds up to lots of false alarms.
+
+206
+00:09:33,060 --> 00:09:36,435
+That's why a single positive result is usually followed by a
+
+207
+00:09:36,435 --> 00:09:38,000
+second, different test.
+
+208
+00:09:38,000 --> 00:09:41,032
+A second test shrinks the crowd, just like extra evidence in
+
+209
+00:09:41,032 --> 00:09:41,440
+court.
+
+210
+00:09:42,240 --> 00:09:45,217
+So if you ever get a scary test result, ask the flipped
+
+211
+00:09:45,217 --> 00:09:47,724
+question. Out of everyone who tests positive,
+
+212
+00:09:47,724 --> 00:09:49,150
+how many really have it?
+
+213
+00:09:50,150 --> 00:09:53,145
+Once you can see this swap, you'll find it everywhere,
+
+214
+00:09:53,145 --> 00:09:55,330
+especially in the world of data.
+
+215
+00:09:55,680 --> 00:09:59,227
+In machine learning, take a face recognition camera at a
+
+216
+00:09:59,227 --> 00:10:02,774
+stadium, looking for one wanted person among fifty thousand
+
+217
+00:10:02,774 --> 00:10:03,190
+fans.
+
+218
+00:10:03,540 --> 00:10:06,801
+It only wrongly matches one face in ten thousand.
+
+219
+00:10:06,801 --> 00:10:09,845
+Sounds great. But fifty thousand fans means about five false
+
+220
+00:10:09,845 --> 00:10:12,240
+matches, plus the one real person.
+
+221
+00:10:12,590 --> 00:10:16,941
+So when the alarm goes off, it's the right person only about one
+
+222
+00:10:16,941 --> 00:10:17,850
+time in six.
+
+223
+00:10:18,850 --> 00:10:22,170
+In data science, it's the p value from our coin video.
+
+224
+00:10:22,170 --> 00:10:25,048
+A p value is the chance of results this extreme,
+
+225
+00:10:25,048 --> 00:10:27,040
+given that nothing is going on.
+
+226
+00:10:27,390 --> 00:10:29,780
+It is not the chance that nothing is going on.
+
+227
+00:10:29,780 --> 00:10:32,566
+If only one coin in a hundred were rigged,
+
+228
+00:10:32,566 --> 00:10:35,525
+that coin would still be fair about eighty three times in a
+
+229
+00:10:35,525 --> 00:10:36,140
+hundred.
+
+230
+00:10:37,140 --> 00:10:40,131
+In finance, a bank's fraud model flags card payments.
+
+231
+00:10:40,131 --> 00:10:43,540
+It wrongly flags just one honest payment in a thousand.
+
+232
+00:10:43,890 --> 00:10:47,602
+But for every million honest payments, there are maybe a hundred
+
+233
+00:10:47,602 --> 00:10:50,176
+frauds. The model catches ninety of those,
+
+234
+00:10:50,176 --> 00:10:52,530
+and also flags a thousand honest ones.
+
+235
+00:10:52,880 --> 00:10:56,190
+So only about one flag in twelve is really fraud.
+
+236
+00:10:56,190 --> 00:10:59,280
+The rest are customers whose cards just got blocked.
+
+237
+00:11:00,280 --> 00:11:03,160
+And in computer science, it's what happens when you search a
+
+238
+00:11:03,160 --> 00:11:04,140
+huge database.
+
+239
+00:11:04,490 --> 00:11:08,038
+Search five million DNA profiles for a one in a million match,
+
+240
+00:11:08,038 --> 00:11:10,411
+and you'd expect about five innocent hits,
+
+241
+00:11:10,411 --> 00:11:12,980
+even if the real culprit isn't in there at all.
+
+242
+00:11:13,330 --> 00:11:16,726
+The bigger the search, the more coincidences you're guaranteed
+
+243
+00:11:16,726 --> 00:11:17,370
+to find.
+
+244
+00:11:18,370 --> 00:11:20,816
+Four different fields, one same trap.
+
+245
+00:11:20,816 --> 00:11:23,707
+A rare false match, multiplied by a big crowd,
+
+246
+00:11:23,707 --> 00:11:25,710
+gives you lots of false matches.
+
+247
+00:11:26,710 --> 00:11:28,927
+Let's practise. I'll read four claims.
+
+248
+00:11:28,927 --> 00:11:33,360
+For each one, decide: is it a swap, or is it fair?
+
+249
+00:11:33,710 --> 00:11:37,466
+Claim one. A smoke alarm almost always beeps when there's a
+
+250
+00:11:37,466 --> 00:11:41,220
+fire. So when it beeps, there's almost certainly a fire.
+
+251
+00:11:42,720 --> 00:11:46,044
+That's a swap. Think of every single time the alarm beeps.
+
+252
+00:11:46,044 --> 00:11:48,750
+Most of those times, someone just burnt the toast.
+
+253
+00:11:49,550 --> 00:11:53,990
+Claim two. Nearly every professional basketball player is tall.
+
+254
+00:11:53,990 --> 00:11:57,975
+So if you're tall, you're probably a professional basketball
+
+255
+00:11:57,975 --> 00:11:58,430
+player.
+
+256
+00:11:59,930 --> 00:12:02,426
+Swap again. There are millions of tall people,
+
+257
+00:12:02,426 --> 00:12:05,450
+and only a few hundred of them play professionally.
+
+258
+00:12:06,250 --> 00:12:09,960
+Claim three. Out of everyone in the city who matched the trace,
+
+259
+00:12:09,960 --> 00:12:12,020
+about one in nine is guilty.
+
+260
+00:12:13,520 --> 00:12:16,416
+That one is fair. It starts from the people who match,
+
+261
+00:12:16,416 --> 00:12:18,478
+and asks how many are guilty.
+
+262
+00:12:18,478 --> 00:12:20,950
+That's exactly the question the jury needs.
+
+263
+00:12:21,950 --> 00:12:26,073
+Claim four. A spam filter catches nine out of ten spam emails.
+
+264
+00:12:26,073 --> 00:12:29,240
+So nine out of ten emails it blocks are spam.
+
+265
+00:12:30,740 --> 00:12:34,388
+Swap. To know how many blocked emails are spam,
+
+266
+00:12:34,388 --> 00:12:37,816
+you'd need to know how many real emails it blocks too.
+
+267
+00:12:37,816 --> 00:12:39,270
+That's the crowd again.
+
+268
+00:12:40,070 --> 00:12:42,660
+Let's name the mistakes, so you can catch them.
+
+269
+00:12:43,010 --> 00:12:45,093
+Mistake one: the swap itself.
+
+270
+00:12:45,093 --> 00:12:48,409
+Reading the chance of the evidence, given innocence,
+
+271
+00:12:48,409 --> 00:12:51,520
+as the chance of innocence, given the evidence.
+
+272
+00:12:51,870 --> 00:12:53,348
+Listen for it in the words.
+
+273
+00:12:53,348 --> 00:12:56,264
+One in a million chance an innocent person would match,
+
+274
+00:12:56,264 --> 00:12:59,360
+is not the same as one in a million chance he's innocent.
+
+275
+00:13:00,360 --> 00:13:02,471
+Mistake two: forgetting the crowd.
+
+276
+00:13:02,471 --> 00:13:06,023
+A rare match means very different things in a village and in a
+
+277
+00:13:06,023 --> 00:13:06,870
+whole country.
+
+278
+00:13:07,220 --> 00:13:09,076
+Mistake three goes the other way.
+
+279
+00:13:09,076 --> 00:13:11,970
+Some defense lawyers say: there are nine matches,
+
+280
+00:13:11,970 --> 00:13:14,849
+so the chance he did it is only one in nine.
+
+281
+00:13:14,849 --> 00:13:16,500
+The evidence is worthless.
+
+282
+00:13:16,850 --> 00:13:20,234
+That's a fallacy too. The match took eight million people down
+
+283
+00:13:20,234 --> 00:13:22,708
+to nine. That's powerful evidence.
+
+284
+00:13:22,708 --> 00:13:24,510
+It just isn't proof on its own.
+
+285
+00:13:25,510 --> 00:13:29,067
+And a bonus mistake, from the real case: multiplying chances
+
+286
+00:13:29,067 --> 00:13:31,781
+together when the events are connected.
+
+287
+00:13:31,781 --> 00:13:34,910
+That can make a coincidence look far rarer than it is.
+
+288
+00:13:35,710 --> 00:13:38,570
+Here's a recipe to catch the swap in any claim you're shown.
+
+289
+00:13:38,920 --> 00:13:40,714
+Step one: find the given.
+
+290
+00:13:40,714 --> 00:13:43,450
+Ask what the number assumes is already true.
+
+291
+00:13:43,800 --> 00:13:46,636
+Step two: flip it. Write down the question you actually care
+
+292
+00:13:46,636 --> 00:13:49,300
+about, and check it's not the one you were given.
+
+293
+00:13:49,650 --> 00:13:51,203
+Step three: find the crowd.
+
+294
+00:13:51,203 --> 00:13:55,202
+How many people, or tests, or payments, could have produced this
+
+295
+00:13:55,202 --> 00:13:56,090
+evidence?
+
+296
+00:13:56,440 --> 00:13:58,528
+Step four: count the matches.
+
+297
+00:13:58,528 --> 00:14:01,990
+Expected false matches, plus the real ones.
+
+298
+00:14:02,340 --> 00:14:06,136
+And step five: divide. The real matches, out of all the matches.
+
+299
+00:14:06,136 --> 00:14:08,300
+Then add in any other evidence.
+
+300
+00:14:09,300 --> 00:14:12,636
+Try it on Sam. The given: innocent.
+
+301
+00:14:12,636 --> 00:14:16,239
+Flip it: is Sam innocent, given the match?
+
+302
+00:14:16,239 --> 00:14:18,017
+The crowd: eight million.
+
+303
+00:14:18,017 --> 00:14:21,085
+The matches: about eight, plus one.
+
+304
+00:14:21,085 --> 00:14:23,130
+Divide: one in nine.
+
+305
+00:14:24,130 --> 00:14:26,708
+Because a rare match is not the same as a rare chance of
+
+306
+00:14:26,708 --> 00:14:27,480
+innocence.
+
+307
+00:14:28,980 --> 00:14:32,499
+Look around your world, and notice how often a rare coincidence
+
+308
+00:14:32,499 --> 00:14:33,750
+gets treated as proof.
+
+309
+00:14:34,350 --> 00:14:36,413
+If this lesson made things clear for you,
+
+310
+00:14:36,413 --> 00:14:39,296
+please subscribe to Math Lab TV, so we can keep building
+
+311
+00:14:39,296 --> 00:14:40,130
+together.
+
+312
+00:14:40,930 --> 00:14:42,390
+But here's a puzzle for next time.
+
+313
+00:14:42,740 --> 00:14:45,340
+A model says it catches ninety percent of fraud.
+
+314
+00:14:45,340 --> 00:14:48,280
+Another says ninety percent of its alarms are real.
+
+315
+00:14:48,280 --> 00:14:50,200
+Are they bragging about the same thing?
+
+316
+00:14:50,550 --> 00:14:53,259
+They're not. It's the same swap we saw today,
+
+317
+00:14:53,259 --> 00:14:57,101
+wearing a lab coat. Next time, we'll lay it all out in one
+
+318
+00:14:57,101 --> 00:14:59,810
+simple table, called the confusion matrix.
+
+319
+00:15:00,160 --> 00:15:01,520
+I will see you in the next video.

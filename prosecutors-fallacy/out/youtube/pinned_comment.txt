@@ -1,0 +1,10 @@
+📌 Quick summary: 'a 1 in a million chance an innocent person would match' is P(match | innocent). The jury needs P(innocent | match), and to get it you must count the crowd: in a city of 8 million, about 8 innocent people match too, so a match alone means guilty only about 1 time in 9.
+
+Worth adding:
+• 7:56 The real case is Sally Clark (England, convicted 1999, conviction overturned 2003). The Royal Statistical Society publicly criticised the 1 in 73 million figure in 2001.
+• The names 'prosecutor's fallacy' and 'defense attorney's fallacy' come from Thompson & Schumann (1987), 'Interpretation of statistical evidence in criminal trials', Law and Human Behavior.
+• 3:38 The city example assumes the culprit is one of the 8 million, everyone was equally likely before any evidence, and nothing else is known. Real cases always have more evidence, which shrinks the crowd (7:04).
+• 1 in a million is a typical figure for a partial DNA profile; full profiles are usually far rarer, and close relatives match much more often than strangers.
+• The grids, stadium, fraud and database numbers are illustrations of the counting idea, not real data.
+
+Where have you seen a '1 in a million' that hid a swap? 👇

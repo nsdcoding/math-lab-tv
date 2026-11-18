@@ -827,7 +827,7 @@
    "series": "ai-ml",
    "order": 31,
    "phase": 3,
-   "status": "in-production",
+   "status": "produced",
    "visual": "two conditional probabilities written as boxes and then swapped, a population square showing how many innocent people share the same evidence",
    "covers": "the probability of the evidence given innocence against the probability of innocence given the evidence, why swapping them is not harmless, a one in a million match inside a large city, the population calculation worked out, how the same swap appears in medical testing, the base rate as the missing piece, how to catch the swap in any claim you are shown",
    "links": {
@@ -842,7 +842,18 @@
    },
    "production": {
     "folder": "prosecutors-fallacy",
-    "branch": "claude/ecstatic-einstein-kw6bsb"
+    "branch": "claude/ecstatic-einstein-kw6bsb",
+    "length": "15:05",
+    "video": "prosecutors-fallacy/out/prosecutors_fallacy.mp4",
+    "package": "prosecutors-fallacy/out/youtube/",
+    "youtube_title": "The Prosecutor's Fallacy Explained Visually: Why 1 in a Million Isn't Proof | ML, Data Science",
+    "running_example": "Sam, a city of 8,000,000, a partial DNA trace matching 1 in a million innocent people: ~8 innocent matches + 1 culprit -> P(guilty | match) ~ 1 in 9 (innocent ~ 8 in 9); village 1,000 -> 999 in 1,000; country 60M -> 1 in 61",
+    "hook": "A 1 in a million DNA match in a city of 8 million: the prosecutor says '1 in a million chance Sam is innocent'. Is he right?",
+    "callbacks": [
+     "hypothesis-testing",
+     "bayes-examples"
+    ],
+    "teaser_next": "confusion-matrix"
    },
    "youtube": null,
    "notes": ""

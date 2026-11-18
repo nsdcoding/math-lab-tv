@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """Two 1280x720 thumbnails (A/B) for YouTube Test & compare, rendered from HTML with Playwright.
-TEMPLATE: FILL HEADLINE, FORMULA_TEX, FORMULA_LABELS, TILES, HOOK_HTML and diagram_svg() (thumbnail B).
 Generated stickers (scripts/sticker.py) may be placed with <img src="file://..."> when they add a human element.
 
-Both lead with the keyword headline "BAYES' THEOREM / EXPLAINED VISUALLY" and the colour-coded formula
-(typeset with LaTeX -> SVG), plus a relatable picture from the running example:
-  A: where you'll use it: Machine Learning, Data Science, Finance and CS tiles with hand-drawn SVG icons,
-     plus the hook "a positive test: 90% → 8%".
-  B: the 1,000-person grid from the video (9 real positives, 99 false alarms lit up) -> 9 vs 99 -> 8%.
+Both lead with the keyword headline "PROSECUTOR'S FALLACY / EXPLAINED VISUALLY" and the colour-coded
+P(match | innocent) ≠ P(innocent | match) (LaTeX -> SVG):
+  A: where you'll use it: Machine Learning, Data Science, Finance and CS tiles, plus the hook "1 in a million match → 8 in 9 innocent".
+  B: the city of 8 million (8 blocks, one innocent match each + the culprit) -> 9 people match -> 1 in 9 guilty.
 """
 import json, pathlib, re, subprocess
 import numpy as np
@@ -18,24 +16,19 @@ MINS = round(json.loads((HERE / "timings.json").read_text())["total"] / 60)
 C = dict(bg="#1a1a19", blue="#3987e5", orange="#d95926", aqua="#199e70", violet="#9085e9", warn="#fab219",
          ink="#f0efec", ink2="#c3c2b7", muted="#898781", red="#d03b3b", card="#22221f")
 
-# ── FILL per video ────────────────────────────────────────────────────
-HEADLINE = ("BAYES'<br>THEOREM", "EXPLAINED VISUALLY")       # keyword headline (big, 2 lines) + subline
-HEADLINE_ONE_LINE = "BAYES' THEOREM"                           # thumbnail B
-FORMULA_TEX = r"{\color{vio}P(A\mid B)} = \frac{{\color{aq}P(B\mid A)}\,{\color{wa}P(A)}}{P(B)}"  # colours: vio aq wa ink
-FORMULA_LABELS = [("the real chance", "violet", 34), ("test hit rate", "aqua", 250), ("base rate", "warn", 420)]  # (text, colour, x)
-TILES = [("MACHINE LEARNING", "precision vs recall", "violet", "ICON_ML"),
-         ("DATA SCIENCE", "update beliefs with data", "aqua", "ICON_DS"),
-         ("FINANCE", "fraud alerts &amp; signals", "warn", "ICON_FIN"),
-         ("COMPUTER SCIENCE", "naive Bayes spam filters", "blue", "ICON_CS")]
-HOOK_HTML = ("a <span style='color:#199e70'>positive</span> test: <span style='color:#898781;text-decoration:line-through;"
-             "text-decoration-color:#d03b3b;text-decoration-thickness:4px'>90%</span> → <span style='color:#9085e9'>8%</span>")
-
-# EXAMPLE diagram for thumbnail B (Bayes): the same crowd as the video (common.py): 40 x 25, sick = column 0 top ten rows, 99 scattered false alarms
-COLS, ROWS = 40, 25
-SICK = [(0, ROWS - 1 - k) for k in range(10)]
-_sick = set(SICK)
-HEALTHY = [(c, r) for r in range(ROWS - 1, -1, -1) for c in range(COLS) if (c, r) not in _sick]
-FALSE_POS = [HEALTHY[k] for k in sorted(np.random.default_rng(7).choice(990, 99, replace=False))]
+# ── per video ─────────────────────────────────────────────────────────
+HEADLINE = ("PROSECUTOR'S<br>FALLACY", "EXPLAINED VISUALLY")    # keyword headline (big, 2 lines) + subline
+HEAD_SIZE = 86                                                 # px; "PROSECUTOR'S" must fit the left column
+HEADLINE_ONE_LINE = "PROSECUTOR'S FALLACY"                     # thumbnail B
+HEAD_B_SIZE = 82
+FORMULA_TEX = (r"P({\color{wa}\text{match}}\mid{\color{bl}\text{innocent}}) \;{\color{rd}\neq}\; "
+               r"{\color{vio}P(}{\color{bl}\text{innocent}}\mathrel{\color{vio}\mid}{\color{wa}\text{match}}{\color{vio})}")
+FORMULA_LABELS = [("what the expert gave", "blue", 20), ("what the jury needs", "violet", 300)]
+TILES = [("MACHINE LEARNING", "face alerts: 1 in 6 right", "violet", "ICON_ML"),
+         ("DATA SCIENCE", "p value ≠ P(no effect)", "aqua", "ICON_DS"),
+         ("FINANCE", "fraud flags: 1 in 12 real", "warn", "ICON_FIN"),
+         ("COMPUTER SCIENCE", "big searches, false hits", "blue", "ICON_CS")]
+HOOK_HTML = ("<span style='color:#fab219'>1 in a million</span> match → <span style='color:#9085e9'>8 in 9 innocent</span>")
 
 
 def formula_svg(width):
@@ -43,7 +36,7 @@ def formula_svg(width):
     d = HERE / "build" / "tex"; d.mkdir(parents=True, exist_ok=True)
     (d / "f.tex").write_text(r"""\documentclass[preview,border=2pt]{standalone}
 \usepackage{xcolor,amsmath}
-\definecolor{vio}{HTML}{9085E9}\definecolor{aq}{HTML}{199E70}\definecolor{wa}{HTML}{FAB219}\definecolor{ink}{HTML}{F0EFEC}
+\definecolor{vio}{HTML}{9085E9}\definecolor{aq}{HTML}{199E70}\definecolor{wa}{HTML}{FAB219}\definecolor{ink}{HTML}{F0EFEC}\definecolor{bl}{HTML}{3987E5}\definecolor{rd}{HTML}{D03B3B}
 \begin{document}
 \color{ink}$\displaystyle """ + FORMULA_TEX + r"""$
 \end{document}
@@ -58,26 +51,30 @@ def formula_svg(width):
     return svg, h
 
 
-def crowd_svg(cell):
-    """The 1,000-person grid: 9 real positives (orange, ringed), 99 false alarms (blue, ringed), rest dimmed."""
-    tp, fp = set(SICK[:9]), set(FALSE_POS)
+def city_svg(cell=9, cells=12, gap=14):
+    """Eight blocks of a million people; one innocent match lit in each block (warn) and the culprit (orange)."""
+    rng = np.random.default_rng(4)
+    bw = cells * cell
     out = []
-    for r in range(ROWS):
-        for c in range(COLS):
-            x, y = c * cell, (ROWS - 1 - r) * cell
-            k = (c, r)
-            if k in tp:
-                col, op = C["orange"], 1
-            elif k in fp:
-                col, op = C["blue"], 1
-            elif k in _sick:
-                col, op = C["orange"], 0.35
-            else:
-                col, op = "#4a4a46", 1
+    for k in range(8):
+        bx, by = (k % 4) * (bw + gap), (k // 4) * (bw + gap)
+        out.append(f'<rect x="{bx - 3}" y="{by - 3}" width="{bw + 6}" height="{bw + 6}" fill="none" stroke="{C["ink2"]}" stroke-width="1.5" rx="3"/>')
+        hit = int(rng.integers(cells * cells)); cul = 77 if k == 5 else -1
+        for i in range(cells * cells):
+            x, y = bx + (i % cells) * cell, by + (i // cells) * cell
+            col, op = (C["warn"], 1) if i == hit else (C["orange"], 1) if i == cul else (C["blue"], 0.55)
             out.append(f'<rect x="{x + 1}" y="{y + 1}" width="{cell - 2}" height="{cell - 2}" fill="{col}" opacity="{op}"/>')
-            if k in tp or k in fp:
-                out.append(f'<rect x="{x - 0.5}" y="{y - 0.5}" width="{cell + 1}" height="{cell + 1}" fill="none" stroke="{C["aqua"]}" stroke-width="2"/>')
-    return "\n".join(out), COLS * cell, ROWS * cell
+    return "\n".join(out), 4 * bw + 3 * gap, 2 * bw + gap
+
+
+def lineup_svg(r=20, gap=14):
+    out = []
+    for i in range(9):
+        cx = r + 4 + i * (2 * r + gap); col = C["orange"] if i == 6 else C["blue"]
+        out.append(f'<circle cx="{cx}" cy="{r + 4}" r="{r}" fill="none" stroke="{C["warn"]}" stroke-width="3"/>')
+        out.append(f'<circle cx="{cx}" cy="{r - 3}" r="{r * 0.3:.1f}" fill="{col}"/>')
+        out.append(f'<rect x="{cx - r * 0.42:.1f}" y="{r + 3}" width="{r * 0.84:.1f}" height="{r * 0.62:.1f}" rx="5" fill="{col}"/>')
+    return "\n".join(out), 9 * (2 * r) + 8 * gap + 8, 2 * r + 8
 
 
 def tile(title, outcome, col, icon):
@@ -131,15 +128,15 @@ svg text{font-family:'Inter'}
 
 
 def thumb_a():
-    f, fh = formula_svg(470)
+    f, fh = formula_svg(500)
     body = f"""
-<div class="h" style="position:absolute;left:50px;top:34px;font-size:124px;color:{C['violet']}">{HEADLINE[0]}</div>
-<div class="h" style="position:absolute;left:54px;top:268px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
-<div class="card" style="position:absolute;left:50px;top:362px;width:600px;height:{fh + 92:.0f}px">
-  <div style="position:absolute;left:62px;top:22px">{f}</div>
+<div class="h" style="position:absolute;left:50px;top:40px;font-size:{HEAD_SIZE}px;color:{C['violet']}">{HEADLINE[0]}</div>
+<div class="h" style="position:absolute;left:54px;top:228px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
+<div class="card" style="position:absolute;left:50px;top:330px;width:620px;height:{fh + 92:.0f}px">
+  <div style="position:absolute;left:50px;top:22px">{f}</div>
   {"".join(f'<div class="lab" style="position:absolute;left:{x}px;bottom:16px;color:{C[col]}">{txt}</div>' for txt, col, x in FORMULA_LABELS)}
 </div>
-<div style="position:absolute;left:54px;top:{362 + fh + 92 + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>
+<div style="position:absolute;left:54px;top:{330 + fh + 92 + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>
 <div style="position:absolute;left:720px;top:40px;font-size:30px;font-weight:900;letter-spacing:1px;color:{C['ink2']}">WHERE YOU'LL USE IT</div>
 <div style="position:absolute;left:720px;top:96px;display:grid;grid-template-columns:250px 250px;gap:18px">
   {"".join(tile(a, b, C[col], globals()[ic]) for a, b, col, ic in TILES)}
@@ -149,28 +146,26 @@ def thumb_a():
     return BASE % dict(C, body=body)
 
 
-def thumb_b():   # FILL: replace crowd_svg and the right-hand panel with this video's running-example diagram
-    f, fh = formula_svg(400)
-    grid, gw, gh = crowd_svg(13)
+def thumb_b():
+    f, fh = formula_svg(560)
+    city, cw, chh = city_svg()
+    lu, lw, lh = lineup_svg()
     body = f"""
-<div class="h" style="position:absolute;left:50px;top:30px;font-size:112px;color:{C['violet']}">{HEADLINE_ONE_LINE}</div>
-<div class="h" style="position:absolute;left:54px;top:146px;font-size:56px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
-<div class="card" style="position:absolute;left:836px;top:156px;width:396px;height:{fh + 40:.0f}px">
-  <div style="position:absolute;left:18px;top:20px">{f.replace("width='400'", "width='360'").replace(f"height='{fh:.0f}'", f"height='{fh * 0.9:.0f}'")}</div></div>
-<div style="position:absolute;left:54px;top:236px;font-size:30px;font-weight:800">1,000 people take the test</div>
-<svg style="position:absolute;left:54px;top:286px" width="{gw}" height="{gh}" viewBox="0 0 {gw} {gh}">{grid}</svg>
-<div style="position:absolute;left:{54 + gw + 30}px;top:340px;font-size:64px;color:{C['ink2']}">→</div>
-<div style="position:absolute;left:{54 + gw + 110}px;top:318px;line-height:1.05">
-  <div style="font-size:30px;font-weight:800;color:{C['aqua']}">108 test POSITIVE</div>
-  <div class="h" style="font-size:70px;margin-top:14px"><span style="color:{C['orange']}">9</span>
-    <span style="font-size:34px;color:{C['orange']};letter-spacing:0">really have it</span></div>
-  <div class="h" style="font-size:70px;margin-top:6px"><span style="color:{C['blue']}">99</span>
-    <span style="font-size:34px;color:{C['blue']};letter-spacing:0">false alarms</span></div>
-  <div style="margin-top:18px;display:flex;align-items:baseline;gap:16px">
-    <span class="h" style="font-size:96px;color:{C['violet']}">8%</span>
-    <span style="font-size:30px;font-weight:800;color:{C['violet']}">real chance</span></div>
+<div class="h" style="position:absolute;left:50px;top:30px;font-size:{HEAD_B_SIZE}px;color:{C['violet']}">{HEADLINE_ONE_LINE}</div>
+<div class="h" style="position:absolute;left:54px;top:122px;font-size:52px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
+<div class="card" style="position:absolute;left:54px;top:196px;width:{560 + 40}px;height:{fh + 34:.0f}px">
+  <div style="position:absolute;left:20px;top:17px">{f}</div></div>
+<div style="position:absolute;left:54px;top:{196 + fh + 58:.0f}px;font-size:28px;font-weight:800">a city of <span style="color:{C['aqua']}">8,000,000</span> · a <span style="color:{C['warn']}">1 in a million</span> match</div>
+<svg style="position:absolute;left:58px;top:{196 + fh + 108:.0f}px" width="{cw}" height="{chh}" viewBox="-4 -4 {cw + 8} {chh + 8}">{city}</svg>
+<div style="position:absolute;left:{58 + cw + 34}px;top:{196 + fh + 150:.0f}px;font-size:64px;color:{C['ink2']}">→</div>
+<div style="position:absolute;left:{58 + cw + 120}px;top:{196 + fh + 96:.0f}px;line-height:1.05">
+  <div style="font-size:30px;font-weight:800;color:{C['warn']}">9 people match</div>
+  <svg style="margin-top:14px" width="{lw * 0.82:.0f}" height="{lh * 0.82:.0f}" viewBox="0 0 {lw} {lh}">{lu}</svg>
+  <div style="margin-top:12px;display:flex;align-items:baseline;gap:14px">
+    <span class="h" style="font-size:92px;color:{C['violet']}">1 in 9</span>
+    <span style="font-size:30px;font-weight:800;color:{C['violet']}">guilty</span></div>
 </div>
-<div style="position:absolute;left:54px;top:{286 + gh + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>"""
+<div style="position:absolute;left:880px;top:212px" class="badge">Explained in {MINS} minutes</div>"""
     return BASE % dict(C, body=body)
 
 

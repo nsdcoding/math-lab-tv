@@ -1,0 +1,62 @@
+The prosecutor's fallacy explained visually, for Machine Learning (ML), Data Science (DS), Finance and Computer Science (CS).
+See why P(evidence | innocent) is not P(innocent | evidence), how to count the crowd, and why the base rate is the missing piece.
+
+In a city of 8 million people, Sam's DNA matches a partial trace from a crime scene. An expert says an innocent person would match only 1 time in a million, and the prosecutor says that means a 1 in a million chance Sam is innocent. Count the crowd, and about 8 innocent people match too: Sam is innocent about 8 times in 9. A 15-minute explainer for people who don't think of themselves as "math people".
+
+⏱ CHAPTERS
+0:00 A 1 in a million DNA match: is Sam guilty?
+1:06 Welcome to Math Lab TV
+1:28 P(match | innocent) vs P(innocent | match): two different questions
+2:45 Why swapping them matters (dogs and four legs)
+3:38 Count the crowd: 8 million people, about 9 matches
+5:26 The counting rule (and Bayes' theorem)
+5:58 The base rate: the piece the prosecutor left out
+7:04 How other evidence changes the answer
+7:55 A real case: 1 in 73 million
+8:54 The same swap in medical testing
+9:49 Where you'll use it: ML, Data Science, Finance, CS
+11:26 Quiz: spot the swap
+12:39 Common mistakes (including the defense attorney's fallacy)
+13:35 The 5-step recipe to catch the swap
+14:28 Subscribe
+14:40 Next time: the confusion matrix
+
+🌍 WHERE YOU'LL USE IT
+• Machine Learning / ML (9:55): a face-matching camera with 1 false match in 10,000, scanning 50,000 fans: about 5 false alerts + 1 real, so an alert is right only about 1 time in 6.
+• Data Science / DS (10:18): a p value is P(results this extreme | nothing going on), not P(nothing going on | results). Same coin, p ≈ 0.021, can still be fair ≈ 83% of the time.
+• Finance (10:37): a fraud model that wrongly flags 1 honest payment in 1,000: per million honest payments and 100 frauds, 90 ÷ 1,090 ≈ 1 flag in 12 is real fraud.
+• Computer Science / CS (11:00): search 5 million DNA profiles for a 1 in a million match and expect about 5 innocent hits, even if the culprit isn't in the database.
+
+📐 KEY FORMULAS
+• P(A | B) = the chance of A, given B (the bar | means 'given': we already know B)
+• P(match | innocent) = 1 in 1,000,000 is NOT P(innocent | match)
+• P(guilty | match) = guilty people who match ÷ everyone who matches
+  = 1 ÷ (1 + 8) = 1/9 in the city example (Bayes' theorem, done by counting)
+
+✅ WORKED EXAMPLE
+• City of 8,000,000: 7,999,999 innocent × 1 in a million ≈ 8 innocent matches, + 1 culprit = 9
+• P(guilty | match) ≈ 1 in 9 · P(innocent | match) ≈ 8 in 9 ≈ 89% (about 889,000× bigger than 1 in a million)
+• Same trace, different crowd: village of 1,000 → ≈ 999 in 1,000 guilty · country of 60 million → ≈ 1 in 61
+• Before the match Sam was 1 in 8,000,000; after it, 1 in 9: strong evidence, not proof
+• Medical test (from the Bayes video): P(positive | healthy) = 1 in 10, but P(healthy | positive) = 99 ÷ 108 = 11 in 12
+• Real case: 1 in 8,543 squared ≈ 1 in 73 million (two errors: treating the deaths as unrelated, and the swap)
+
+🧭 THE RECIPE
+1. Find the given: what does the number assume is true?
+2. Flip it: is that the question you actually care about?
+3. Find the crowd: the base rate, how many could match?
+4. Count the matches: crowd × false-match rate, + the real ones
+5. Divide: real matches ÷ all matches, then combine any other evidence honestly
+
+📺 RELATED VIDEOS
+• Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
+• Next: The Confusion Matrix Explained: Accuracy, Precision and Recall (coming soon, subscribe so you don't miss it)
+
+🎓 MORE FROM MATH LAB TV
+• Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
+• Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
+
+▶ NEXT VIDEO: The confusion matrix: 'catches 90% of fraud' and '90% of alarms are real' are two different claims. One simple table makes the swap impossible to miss.
+
+#machinelearning #datascience #statistics

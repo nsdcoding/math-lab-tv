@@ -3,7 +3,8 @@
 import json, math, pathlib
 from common import CHAPTERS, TIM
 
-HERE = pathlib.Path(__file__).parent
+HERE = pathlib.Path(__file__).resolve().parent
+SLUG = "mean-vs-median"   # this video's id in channel/catalog.json
 OUT = HERE / "out" / "youtube"; OUT.mkdir(parents=True, exist_ok=True)
 
 TITLE = "Mean vs Median: Which Average Lies? | Machine Learning, Data Science, Finance & CS"
@@ -45,6 +46,11 @@ def main():
     ch = chapters()
     from common import SEGS
     rw = {k: ts(SEGS[v]["start"]) for k, v in (("fin", "s120"), ("cs", "s125"), ("ds", "s129"), ("ml", "s133"))}
+    # related-video links come from the channel tracker (channel/catalog.json + channel/youtube-links.txt)
+    import sys as _s; _s.path.insert(0, str(HERE.parent / "channel"))
+    import channel as _ch
+    related = _ch.desc_block(_ch.load(), SLUG)
+    related = related + "\n\n" if related else ""
     desc = f"""Mean vs median explained simply, with real uses in Machine Learning, Data Science (DS), Finance and Computer Science (CS).
 Learn which average to trust: MSE vs MAE loss in machine learning, outliers in data science, median income in finance, p50 latency in CS.
 
@@ -82,7 +88,7 @@ Maple (50, 52, 55, 58, 60, 62, 65, 68, 70) is symmetric, so its mean and median 
 4. Compare them. If the mean is much bigger, a few large values are pulling it up (a rule of thumb, not a law)
 5. Match the question: totals & fair shares → mean · a typical person → median · unsure → report both
 
-▶ NEXT VIDEO: Two towns can have the same mean AND the same median and still be completely different places to live. Next time: standard deviation, how far values typically sit from the middle, and why it squares the distances first.
+{related}▶ NEXT VIDEO: Two towns can have the same mean AND the same median and still be completely different places to live. Next time: standard deviation, how far values typically sit from the middle, and why it squares the distances first.
 
 #machinelearning #datascience #statistics
 """

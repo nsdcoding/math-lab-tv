@@ -142,18 +142,32 @@ def desc_block(c, slug):
     lines = []
     def line(s, label):
         u = c["by"][s].get("youtube")
-        return f"• {label}{title(c, s)}: {u}" if u else None
+        t_ = (c["by"][s].get("production") or {}).get("youtube_title") or title(c, s)
+        return f"• {label}{t_}: {u}" if u else None
     seen = set()
     for s in r["promised_by"] + r["callbacks"]:
         if s in seen: continue
         seen.add(s)
         l = line(s, "")
         if l: lines.append(l)
+    # more live videos from the channel (same series first) so every description links somewhere
+    me = c["by"][slug]
+    others = [t for t in c["topics"] if t.get("youtube") and t["slug"] != slug and t["slug"] not in seen
+              and t["slug"] != r["tease_next"]]
+    others.sort(key=lambda t: (t["series"] != me["series"], t["order"]))
+    more = [f"• {(t.get('production') or {}).get('youtube_title') or t['title']}: {t['youtube']}" for t in others[:3]]
     nxt = r["tease_next"]
+    recorded = (me.get("production") or {}).get("teaser_next")
+    if me["status"] == "published" and not recorded:
+        nxt = None          # an already-live video: only name the next one if its real teaser is on record
     if nxt:
         u = c["by"][nxt].get("youtube")
-        lines.append(f"• Next: {title(c, nxt)}" + (f": {u}" if u else " (coming soon, subscribe so you don't miss it)"))
-    return "📺 RELATED VIDEOS\n" + "\n".join(lines) if lines else ""
+        nt = ((c["by"][nxt].get("production") or {}).get("youtube_title") if u else None) or title(c, nxt)
+        lines.append(f"• Next: {nt}" + (f": {u}" if u else " (coming soon, subscribe so you don't miss it)"))
+    out = []
+    if lines: out.append("📺 RELATED VIDEOS\n" + "\n".join(lines))
+    if more: out.append("🎓 MORE FROM MATH LAB TV\n" + "\n".join(more))
+    return "\n\n".join(out)
 
 
 # ── README ───────────────────────────────────────────────────────────

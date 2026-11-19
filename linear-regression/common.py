@@ -308,7 +308,7 @@ def word_index(sid, word):
     return ws.index(word.lower().strip(",.;:?!'"))
 
 
-def xy_axes(x_range, y_range, x_len, y_len, x_label, y_label, x_labels=None, font_size=22, y_vertical=False):
+def xy_axes(x_range, y_range, x_len, y_len, x_label, y_label, x_labels=None, font_size=22, y_vertical=False, y_fmt=None):
     """Axes with Inter tick labels and axis titles. x_labels: optional {value: text}."""
     ax = Axes(x_range=x_range, y_range=y_range, x_length=x_len, y_length=y_len,
               axis_config=dict(color=INK2, stroke_width=3, include_tip=False, tick_size=0.07),
@@ -321,7 +321,7 @@ def xy_axes(x_range, y_range, x_len, y_len, x_label, y_label, x_labels=None, fon
         t = T(txt, font_size, INK2).next_to(ax.c2p(v, y_range[0]), DOWN, buff=0.14); t.qa_clip_ok = True
         labs.add(t)
     for v in np.arange(y_range[0], y_range[1] + 1e-9, y_range[2]):
-        t = T(f"{v:g}", font_size, INK2).next_to(ax.c2p(x_range[0], v), LEFT, buff=0.14); t.qa_clip_ok = True
+        t = T(y_fmt(v) if y_fmt else f"{v:g}", font_size, INK2).next_to(ax.c2p(x_range[0], v), LEFT, buff=0.14); t.qa_clip_ok = True
         labs.add(t)
     if x_label:
         xt = T(x_label, 24, MUTED).next_to(ax.x_axis, DOWN, buff=0.5).align_to(ax.x_axis, RIGHT)
@@ -596,3 +596,72 @@ def tube(color=AQUA, h=1.6, w=0.5, fill=0.35):
     liq = Rectangle(width=w * 0.8, height=h * fill).set_stroke(width=0).set_fill(color, 0.85)
     liq.move_to(body.get_bottom() + UP * (h * fill / 2 + 0.06))
     return VGroup(body, liq)
+
+
+# ───────────── Linear regression: the running example ─────────────
+# Five recent sales on one street. Size in sq ft, price in $ thousand. Best line: price = 50 + 0.1 * size.
+HOUSES = [(1000, 140), (1500, 220), (2000, 250), (2500, 280), (3000, 360)]
+BEST = (50, 0.1)          # intercept ($k), slope ($k per sq ft)
+AVG = (2000, 250)
+
+
+def k(v):
+    """1000 -> '1,000'"""
+    return f"{int(v):,}"
+
+
+def house_axes(x_len=7.6, y_len=4.3, x_max=3500, fs=22, every=500):
+    g = xy_axes([0, x_max, 500], [0, 400, 100], x_len, y_len, "size (square feet)", "price",
+                x_labels={v: k(v) for v in range(every, x_max + 1, every)}, font_size=fs, y_vertical=True,
+                y_fmt=lambda v: "$0" if v == 0 else f"${v:g}k")
+    return g
+
+
+def house_dots(ax, r=0.12, color=INK):
+    return VGroup(*[dot(color, r).move_to(ax.c2p(x, y)) for x, y in HOUSES])
+
+
+def price_line(ax, a, b, x0=0, x1=3500, color=VIOLET, width=5):
+    """y = a + b*x (x in sq ft, y in $k), clipped to the axes' y range [0, 400]."""
+    lo, hi = x0, x1
+    if b != 0:
+        for yb in (0, 400):
+            xb = (yb - a) / b
+            if b > 0 and yb == 0: lo = max(lo, xb)
+            if b > 0 and yb == 400: hi = min(hi, xb)
+            if b < 0 and yb == 400: lo = max(lo, xb)
+            if b < 0 and yb == 0: hi = min(hi, xb)
+    ln = Line(ax.c2p(lo, a + b * lo), ax.c2p(hi, a + b * hi), color=color, stroke_width=width)
+    return ln
+
+
+def miss_bar(ax, x, y, a, b, color=ORANGE_, width=6):
+    g = a + b * x
+    return Line(ax.c2p(x, g), ax.c2p(x, y), color=color, stroke_width=width)
+
+
+def house_icon(w=1.0, color=INK2, fill=None):
+    body = Rectangle(width=w, height=w * 0.72).set_stroke(color, 3)
+    roof = Polygon(body.get_corner(UL) + LEFT * w * 0.1, body.get_corner(UR) + RIGHT * w * 0.1,
+                   body.get_top() + UP * w * 0.45).set_stroke(color, 3)
+    door = Rectangle(width=w * 0.22, height=w * 0.36).set_stroke(color, 3).align_to(body, DOWN)
+    g = VGroup(body, roof, door)
+    if fill:
+        body.set_fill(fill, 1); roof.set_fill(fill, 1)
+        body.qa_container = True
+    return g
+
+
+def hook_title():
+    t = title_card("LINEAR REGRESSION", "the complete beginner guide", size=84)
+    c = pill("1,800 sq ft  →  $230k", VIOLET, 32).next_to(t, DOWN, buff=0.55)
+    return VGroup(t, c)
+
+
+PANEL_X = 4.6        # lesson layout: chart on the left (axis ends near x = 0.9), panel column centred here (≤ 4.6 wide)
+
+
+def lesson_axes():
+    g = house_axes(x_len=7.0, y_len=4.6, fs=24, every=1000)
+    g.to_edge(LEFT, buff=0.55).set_y(0.2)
+    return g

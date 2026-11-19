@@ -21,9 +21,9 @@ def discover_scenes():
         for cls, ch in re.findall(r'class (\w+)\(Base\):\s*\n\s*CHAPTER = "([^"]+)"', f.read_text()):
             found[ch] = (ch, f.stem, cls)
     missing = [c["name"] for c in CHAPTERS if c["name"] not in found]
-    if missing:
+    if missing and "sample" not in sys.argv[1:2]:
         sys.exit(f"no scene for chapter(s): {missing}")
-    return [found[c["name"]] for c in CHAPTERS]
+    return [found[c["name"]] for c in CHAPTERS if c["name"] in found]
 
 
 SCENES = discover_scenes()

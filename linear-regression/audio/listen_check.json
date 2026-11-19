@@ -1,0 +1,932 @@
+[
+ {
+  "id": "s001",
+  "text": "Imagine you are about to sell your house. It is eighteen hundred square feet, on a quiet street in a small town.",
+  "heard": "Imagine you're about to sell your house. It is eighteen hundred square feet on a quiet street in a small town.",
+  "diffs": [
+   [
+    "you are",
+    "you're"
+   ]
+  ]
+ },
+ {
+  "id": "s002",
+  "text": "You ask two agents what it is worth.",
+  "heard": "You ask two agents what it is worth.",
+  "diffs": []
+ },
+ {
+  "id": "s003",
+  "text": "The first says two hundred sixty thousand dollars. The second says two hundred thousand.",
+  "heard": "The first says two hundred sixty thousand dollars. The second says two hundred thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s004",
+  "text": "That is a sixty thousand dollar difference. Who do you believe?",
+  "heard": "That is a sixty thousand dollar difference. Who do you believe?",
+  "diffs": []
+ },
+ {
+  "id": "s005",
+  "text": "So you look at what actually sold. Five houses on your street, in the last year.",
+  "heard": "So you look at what actually sold five houses on your street in the last year.",
+  "diffs": []
+ },
+ {
+  "id": "s006",
+  "text": "A thousand square feet sold for one hundred forty thousand. Three thousand square feet sold for three hundred sixty thousand. The rest are in between.",
+  "heard": "A thousand square feet sold for one hundred forty thousand. Three thousand square feet sold for three hundred sixty thousand. The rest are in between.",
+  "diffs": []
+ },
+ {
+  "id": "s007",
+  "text": "Put them on a picture. Size along the bottom, price up the side. Every dot is one house.",
+  "heard": "Put them on a picture. Size along the bottom, price up the side. Every dot is one house.",
+  "diffs": []
+ },
+ {
+  "id": "s008",
+  "text": "Your eye sees it straight away. Bigger houses, higher prices. The dots lean upward, almost in a line.",
+  "heard": "Your eye sees it straight away: bigger houses, higher prices. The dots lean upward, almost in a line.",
+  "diffs": []
+ },
+ {
+  "id": "s009",
+  "text": "So grab a ruler and draw the line. Then read off eighteen hundred square feet.",
+  "heard": "So grab a ruler and draw the line. Then read off eighteen hundred square feet.",
+  "diffs": []
+ },
+ {
+  "id": "s010",
+  "text": "But hand the same ruler to three people, and you get three different lines, and three different prices.",
+  "heard": "But hand the same ruler to three people and you get three different lines and three different prices.",
+  "diffs": []
+ },
+ {
+  "id": "s011",
+  "text": "There has to be one best line. A line we can defend, with a number that says why it wins.",
+  "heard": "There has to be one best line. A line we can defend with a number that says why it wins.",
+  "diffs": []
+ },
+ {
+  "id": "s012",
+  "text": "Finding that line is called linear regression. By the end of this video, you will find it yourself, by hand, and the fair price will be two hundred thirty thousand dollars.",
+  "heard": "Finding that line is called linear regression. By the end of this video, you will find it yourself by hand and the fair price will be two hundred thirty thousand dollars.",
+  "diffs": []
+ },
+ {
+  "id": "s013",
+  "text": "Welcome to Math Lab TV. Where math is something you can see.",
+  "heard": "Welcome to Math Lab T V, where math is something you can see.",
+  "diffs": [
+   [
+    "tv",
+    "t v"
+   ]
+  ]
+ },
+ {
+  "id": "s014",
+  "text": "Today you will learn how to score any line, by measuring how far it misses each dot.",
+  "heard": "Today you will learn how to score any line by measuring how far it misses each dot.",
+  "diffs": []
+ },
+ {
+  "id": "s015",
+  "text": "You will see the best line found, step by step, and what its slope and starting point really mean.",
+  "heard": "You will see the best line found, step by step, and what its slope and starting point really mean.",
+  "diffs": []
+ },
+ {
+  "id": "s016",
+  "text": "And you will learn when to trust its predictions, and when a line is quietly lying to you.",
+  "heard": "And you will learn when to trust its predictions, and when a line is quietly lying to you.",
+  "diffs": []
+ },
+ {
+  "id": "s017",
+  "text": "Drawing a line through dots sounds like a school exercise. It is actually one of the most used tools in the world.",
+  "heard": "Drawing a line through dots sounds like a school exercise. It is actually one of the most used tools in the world.",
+  "diffs": []
+ },
+ {
+  "id": "s018",
+  "text": "Whenever one number tends to move with another, people want a line between them.",
+  "heard": "Whenever one number tends to move with another, people want a line between them.",
+  "diffs": []
+ },
+ {
+  "id": "s019",
+  "text": "Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets.",
+  "heard": "Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets.",
+  "diffs": []
+ },
+ {
+  "id": "s021a",
+  "text": "Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move?",
+  "heard": "Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move?",
+  "diffs": []
+ },
+ {
+  "id": "s020",
+  "text": "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn.",
+  "heard": "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score is how much bigger models learn.",
+  "diffs": []
+ },
+ {
+  "id": "s021",
+  "text": "So let us build it from nothing. Back to our five houses.",
+  "heard": "So let us build it from nothing. Back to our five houses.",
+  "diffs": []
+ },
+ {
+  "id": "s022",
+  "text": "Here is a line. Any line. We need a way to say how good it is.",
+  "heard": "Here is a line. Any line. We need a way to say how good it is.",
+  "diffs": []
+ },
+ {
+  "id": "s023",
+  "text": "The line is a price guesser. For every size, it points to a price.",
+  "heard": "The line is a price guesser. For every size, it points to a price.",
+  "diffs": []
+ },
+ {
+  "id": "s024",
+  "text": "So for each house, we compare two prices. What the line guessed, and what the house really sold for.",
+  "heard": "So for each house, we compared two prices. What the line guessed, and what the house really sold for.",
+  "diffs": [
+   [
+    "compare",
+    "compared"
+   ]
+  ]
+ },
+ {
+  "id": "s025",
+  "text": "The gap between them is the miss. Statisticians call it the residual, the bit that is left over.",
+  "heard": "The gap between them is the miss. Statisticians call it the residual, the bit that is left over.",
+  "diffs": []
+ },
+ {
+  "id": "s026",
+  "text": "Notice the direction. The miss is measured straight up and down. Not the shortest distance to the line.",
+  "heard": "Notice the direction. The miss is measured straight up and down, not the shortest distance to the line.",
+  "diffs": []
+ },
+ {
+  "id": "s027",
+  "text": "Why? Because up and down is price. We are guessing prices, so we measure our mistake in dollars.",
+  "heard": "Why? Because up and down is price. We are guessing prices, so we measure our mistake in dollars.",
+  "diffs": []
+ },
+ {
+  "id": "s028",
+  "text": "The size of each house is not in doubt. We know it exactly. Only the price is being guessed.",
+  "heard": "The size of each house is not in doubt. We know it exactly. Only the price is being guessed.",
+  "diffs": []
+ },
+ {
+  "id": "s029",
+  "text": "There is a different method that uses the shortest, slanted distance, for when both numbers are uncertain. But that is a different tool, for a different job.",
+  "heard": "There is a different method that uses the shortest, slanted distance for when both numbers are uncertain. But that is a different tool for a different job.",
+  "diffs": []
+ },
+ {
+  "id": "s030",
+  "text": "Now draw the miss for every house. Some dots sit above the line, and their miss is positive.",
+  "heard": "Now draw the miss for every house. Some dots sit above the line, and their miss is positive.",
+  "diffs": []
+ },
+ {
+  "id": "s031",
+  "text": "Others are below the line, and their miss is negative.",
+  "heard": "Others are below the line, and their miss is negative.",
+  "diffs": []
+ },
+ {
+  "id": "s032",
+  "text": "A good line should have small misses. So let us add them up into one score.",
+  "heard": "A good line should have small misses. So let us add them up into one score.",
+  "diffs": []
+ },
+ {
+  "id": "s033",
+  "text": "Try the simplest line of all. A flat line at the average price, two hundred fifty thousand.",
+  "heard": "Try the simplest line of all, a flat line at the average price, two hundred and fifty thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s034",
+  "text": "In our mean versus median video, the average was the single number that best stood in for a whole group. Here it is, as a line.",
+  "heard": "In our mean versus median video, the average was the single number that best stood in for a whole group. Here it is, as a line.",
+  "diffs": []
+ },
+ {
+  "id": "s035",
+  "text": "It ignores size completely. Every house gets the same guess. So it should score badly.",
+  "heard": "It ignores size completely. Every house gets the same guests. So it should score badly.",
+  "diffs": [
+   [
+    "guess",
+    "guests"
+   ]
+  ]
+ },
+ {
+  "id": "s033a",
+  "text": "Let us look at the misses for this flat line, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above.",
+  "heard": "Let us look at the misses for this flatline, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above it.",
+  "diffs": [
+   [
+    "flat line",
+    "flatline"
+   ]
+  ]
+ },
+ {
+  "id": "s036",
+  "text": "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero.",
+  "heard": "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero.",
+  "diffs": []
+ },
+ {
+  "id": "s037",
+  "text": "Zero. A perfect score, for a line that is plainly bad.",
+  "heard": "Zero, a perfect score for a line that is plainly bad.",
+  "diffs": []
+ },
+ {
+  "id": "s038",
+  "text": "The pluses and minuses cancelled out. The misses above wiped out the misses below. So a plain sum is useless.",
+  "heard": "The pluses and minuses cancelled out. The misses above wiped out the misses below, so a plain sum is useless.",
+  "diffs": []
+ },
+ {
+  "id": "s039",
+  "text": "We need every miss to count against the line, whatever its direction. The fix is the one from our standard deviation video. Square them.",
+  "heard": "We need every miss to count against the line, whatever's direction. The fix is the one from our standard deviation video. Square them.",
+  "diffs": [
+   [
+    "whatever its",
+    "whatever's"
+   ]
+  ]
+ },
+ {
+  "id": "s040",
+  "text": "Each orange miss becomes a square, with the miss as its side. Its area is the squared miss.",
+  "heard": "Each orange mist becomes a square, with the mist as its side. Its area is the squared mist.",
+  "diffs": [
+   [
+    "miss",
+    "mist"
+   ],
+   [
+    "miss",
+    "mist"
+   ],
+   [
+    "miss",
+    "mist"
+   ]
+  ]
+ },
+ {
+  "id": "s041",
+  "text": "A square is never negative, so nothing can cancel.",
+  "heard": "A square's never negative, so nothing can cancel.",
+  "diffs": [
+   [
+    "square",
+    "square's"
+   ]
+  ]
+ },
+ {
+  "id": "s042",
+  "text": "And squaring does something else. It punishes big misses much more than small ones.",
+  "heard": "And squaring does something else, it punishes big misses, much more than small ones.",
+  "diffs": []
+ },
+ {
+  "id": "s043",
+  "text": "One miss of twenty costs four hundred. Two misses of ten cost only two hundred together. So the best line hates being far from any one house.",
+  "heard": "One miss of twenty costs four hundred. Two misses of ten cost only two hundred together. So the best line hates being far from any one house.",
+  "diffs": []
+ },
+ {
+  "id": "s044",
+  "text": "Add up all the squares. That total is our score. It is called the sum of squared errors, and smaller is better.",
+  "heard": "Add up all the squares. That total is our score. It is called the sum of squared errors and smaller is better.",
+  "diffs": []
+ },
+ {
+  "id": "s045",
+  "text": "For the flat line, the score is twenty six thousand.",
+  "heard": "For the flatline, the score is twenty-six thousand.",
+  "diffs": [
+   [
+    "flat line",
+    "flatline"
+   ]
+  ]
+ },
+ {
+  "id": "s046",
+  "text": "Now give the line some tilt. Here is a line through the cheapest and the most expensive house.",
+  "heard": "Now give the line some tilt Here is a line through the cheapest and the most expensive house.",
+  "diffs": []
+ },
+ {
+  "id": "s047",
+  "text": "It looks great. It passes right through three of the houses.",
+  "heard": "It looks great. It passes right through three of the houses.",
+  "diffs": []
+ },
+ {
+  "id": "s048",
+  "text": "Two misses of twenty five. Squared, that is six hundred twenty five each. The score is twelve fifty.",
+  "heard": "Two misses of twenty-five squared, that is six hundred and twenty-five each. The score is twelve fifty.",
+  "diffs": []
+ },
+ {
+  "id": "s049",
+  "text": "Much better. But is it the best? Let us go too far the other way, a line that is too steep.",
+  "heard": "Much better. But is it the best? Let us go too far the other way, a line that is too steep.",
+  "diffs": []
+ },
+ {
+  "id": "s050",
+  "text": "Its score jumps to seven thousand two hundred fifty. Too steep is bad, too flat is bad.",
+  "heard": "Its score jumps to seven thousand two hundred fifty. Too steep is bad. Too flat is bad.",
+  "diffs": []
+ },
+ {
+  "id": "s051",
+  "text": "So let the line search for itself. It can do two things. It can pivot, to change its tilt. And it can slide, up and down.",
+  "heard": "So let the light search for itself. It can do two things, it can pivot to change its tilt and it can slide up and down.",
+  "diffs": [
+   [
+    "line",
+    "light"
+   ]
+  ]
+ },
+ {
+  "id": "s052",
+  "text": "Watch the score as it pivots. The squares shrink, grow, and shrink again.",
+  "heard": "Watch the square as it pivots. The squares shrink, grow, and shrink again.",
+  "diffs": [
+   [
+    "score",
+    "square"
+   ]
+  ]
+ },
+ {
+  "id": "s053",
+  "text": "Now it slides. Too high is worse, too low is worse.",
+  "heard": "Now it slides, too high is worse, too low is worse.",
+  "diffs": []
+ },
+ {
+  "id": "s052a",
+  "text": "Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point.",
+  "heard": "Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point.",
+  "diffs": []
+ },
+ {
+  "id": "s054",
+  "text": "And at one spot, the score cannot get any smaller.",
+  "heard": "And at one spot the score cannot get any smaller",
+  "diffs": []
+ },
+ {
+  "id": "s055",
+  "text": "The misses are minus ten, plus twenty, zero, minus twenty, and plus ten. Squared and added, the score is one thousand.",
+  "heard": "The misses are minus ten plus twenty zero minus twenty and plus ten. Squared and added the score is one thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s056",
+  "text": "That is it. The line with the smallest sum of squared errors is the least squares line, and finding it is linear regression.",
+  "heard": "That is it. The line with the smallest sum of squared errors is the least squares line, and finding it is linear regression.",
+  "diffs": []
+ },
+ {
+  "id": "s057",
+  "text": "Be honest about one thing. Squaring is a choice. If we added plain distances instead, the end to end line would actually win, fifty to sixty.",
+  "heard": "Be honest about one thing. Squaring is a choice. If we added plain distances instead, the end-to-end line would actually win, fifty to sixty.",
+  "diffs": []
+ },
+ {
+  "id": "s058",
+  "text": "It is the same choice as mean versus median. Squared misses behave like the mean, and plain distances like the median. Squares are the standard, because they give one clean answer with a simple formula.",
+  "heard": "It is the same choice as mean versus median. Squared misses behave like the mean, and plain distances like the median. Squares are the standard, because they give one clean answer with a simple formula.",
+  "diffs": []
+ },
+ {
+  "id": "s059",
+  "text": "We do not have to search by sliding, though. For a straight line, there is a formula that lands on the best line directly.",
+  "heard": "We do not have to search by sliding though. For a straight line, there is a formula that lands on the best line directly.",
+  "diffs": []
+ },
+ {
+  "id": "s060",
+  "text": "Step one. Find the average house. The average size is two thousand square feet, and the average price is two hundred fifty thousand.",
+  "heard": "Step one, find the average house. The average size is two thousand square feet, and the average price is two hundred fifty thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s061",
+  "text": "Here is a lovely fact. The best line always passes right through the average house. So now we only need its tilt.",
+  "heard": "Here is a lovely fact. The best line always passes right through the average house. So now we only need its tilt.",
+  "diffs": []
+ },
+ {
+  "id": "s062",
+  "text": "Step two. For each house, measure how far it is from the average, both in size and in price.",
+  "heard": "Step two. For each house, measure how far it is from the average, both in size and in price.",
+  "diffs": []
+ },
+ {
+  "id": "s063",
+  "text": "To keep the numbers small, size is counted in hundreds of square feet, and price in thousands of dollars.",
+  "heard": "To keep the numbers small, size is counted in hundreds of square feet, and price in thousands of dollars.",
+  "diffs": []
+ },
+ {
+  "id": "s064",
+  "text": "Step three. Multiply each pair together, and add them all up.",
+  "heard": "Step three multiply each pair together and add them all up.",
+  "diffs": []
+ },
+ {
+  "id": "s065",
+  "text": "Eleven hundred, plus one fifty, plus zero, plus one fifty, plus eleven hundred. That is two thousand five hundred.",
+  "heard": "eleven hundred plus one fifty plus zero plus one fifty plus eleven hundred that is two thousand five hundred",
+  "diffs": []
+ },
+ {
+  "id": "s066",
+  "text": "When a house is bigger than average and also pricier, the product is positive. That pulls the line upward.",
+  "heard": "When the house is bigger than average, and also pricier, the product is positive. That pulls the line upward.",
+  "diffs": []
+ },
+ {
+  "id": "s066a",
+  "text": "Houses that are smaller than average and also cheaper give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down.",
+  "heard": "Houses that are smaller than average, and also cheaper, give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down.",
+  "diffs": []
+ },
+ {
+  "id": "s067",
+  "text": "Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty.",
+  "heard": "Step four: square each size distance and add them up. One hundred plus twenty-five plus zero plus twenty-five plus one hundred. That is two hundred and fifty.",
+  "diffs": []
+ },
+ {
+  "id": "s068",
+  "text": "That second number is just how spread out the sizes are, a close cousin of the variance.",
+  "heard": "That second number is just how spread out the sizes are, a close cousin of the variance.",
+  "diffs": []
+ },
+ {
+  "id": "s069",
+  "text": "Step five. Divide. Two thousand five hundred over two hundred fifty is ten. That is the slope.",
+  "heard": "Step five, divide. Two thousand five hundred over two hundred and fifty is ten. That is the slope.",
+  "diffs": []
+ },
+ {
+  "id": "s070",
+  "text": "Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept.",
+  "heard": "Last step. Start at the average house and walk back to zero size. Two hundred fifty minus ten times twenty is fifty. That is the intercept.",
+  "diffs": []
+ },
+ {
+  "id": "s071a",
+  "text": "Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left.",
+  "heard": "Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left.",
+  "diffs": []
+ },
+ {
+  "id": "s071",
+  "text": "Here is the whole recipe as symbols. Each one is just a word we already met.",
+  "heard": "Here is the whole recipe as symbols. Each one is just a word we already met.",
+  "diffs": []
+ },
+ {
+  "id": "s072",
+  "text": "x is size and y is price. x bar and y bar, with the little line on top, are the averages. And the big sigma means add them all up.",
+  "heard": "X is size, and Y is price. X bar and Y bar, with the little line on top, are the averages. And the big sigma means add them all up.",
+  "diffs": []
+ },
+ {
+  "id": "s073",
+  "text": "b is the slope, and a is the intercept. Ten and fifty. Exactly the line our search found.",
+  "heard": "B is the slope and A is the intercept. Ten and fifty. Exactly the line our search found.",
+  "diffs": []
+ },
+ {
+  "id": "s074",
+  "text": "So our line says, price equals fifty, plus ten times size, in thousands of dollars and hundreds of square feet.",
+  "heard": "So our line says price equals fifty plus ten times size in thousands of dollars and hundreds of square feet.",
+  "diffs": []
+ },
+ {
+  "id": "s075",
+  "text": "In plain dollars, that is fifty thousand dollars, plus one hundred dollars for every square foot.",
+  "heard": "In plain dollars, that is fifty thousand dollars plus one hundred dollars for every square foot.",
+  "diffs": []
+ },
+ {
+  "id": "s076",
+  "text": "What does the slope mean? Ten means, every extra hundred square feet adds about ten thousand dollars to the price.",
+  "heard": "What does the slope mean? Ten means every extra hundred square feet adds about ten thousand dollars to the price.",
+  "diffs": []
+ },
+ {
+  "id": "s077",
+  "text": "It is a rate. Dollars per square foot. It is the single most useful number on the line.",
+  "heard": "It is a rate. Dollars per square foot. It is the single most useful number on the line.",
+  "diffs": []
+ },
+ {
+  "id": "s078",
+  "text": "And the intercept? It is where the line crosses zero size. Fifty thousand dollars, for a house with no floor at all.",
+  "heard": "And the intercept? It is where the line crosses zero size. Fifty thousand dollars for a house with no floor at all.",
+  "diffs": []
+ },
+ {
+  "id": "s079",
+  "text": "That house does not exist. The intercept is often just a starting point that makes the line fit. Do not read too much into it.",
+  "heard": "That house does not exist. The intercept is often just a starting point that makes the line fit. Do not read too much into it.",
+  "diffs": []
+ },
+ {
+  "id": "s080",
+  "text": "Now the question we started with. Your house is eighteen hundred square feet.",
+  "heard": "Now the question we started with. Your house is eighteen hundred square feet.",
+  "diffs": []
+ },
+ {
+  "id": "s081",
+  "text": "Fifty, plus ten times eighteen. That is fifty plus one eighty, which is two hundred thirty thousand dollars.",
+  "heard": "fifty plus ten times eighteen that is fifty plus one hundred eighty which is two hundred thirty thousand dollars",
+  "diffs": [
+   [
+    "",
+    "hundred"
+   ]
+  ]
+ },
+ {
+  "id": "s082",
+  "text": "So the first agent was a bit high, and the second was too low. And now you can show why.",
+  "heard": "So the first agent was a bit high, and the second was too low, and now you can show why.",
+  "diffs": []
+ },
+ {
+  "id": "s082a",
+  "text": "Let us test the line on a house we already know. Twenty five hundred square feet. The line says fifty plus ten times twenty five, which is three hundred thousand.",
+  "heard": "Let us test the line on a house we already know. Twenty-five hundred square feet. The line says fifty plus ten times twenty-five, which is three hundred thousand.",
+  "diffs": []
+ },
+ {
+  "id": "s082b",
+  "text": "It really sold for two hundred eighty thousand. So that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier.",
+  "heard": "It really sold for two hundred eighty thousand, so that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier.",
+  "diffs": []
+ },
+ {
+  "id": "s083",
+  "text": "One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise.",
+  "heard": "One honest note, the real houses missed the line by up to twenty thousand, so treat two hundred thirty as the center, give or take about twenty, not a promise.",
+  "diffs": [
+   [
+    "centre",
+    "center"
+   ]
+  ]
+ },
+ {
+  "id": "s084",
+  "text": "Eighteen hundred square feet sits inside our data, between houses we have actually seen. Guessing there is called prediction, or interpolation.",
+  "heard": "Eighteen hundred square feet sits inside our data, between houses we have actually seen. Guessing there is called prediction, or interpolation.",
+  "diffs": []
+ },
+ {
+  "id": "s085",
+  "text": "Now try a mansion. Ten thousand square feet. The line says one point zero five million dollars.",
+  "heard": "Now try a mansion ten thousand square feet the line says one point zero five million dollars",
+  "diffs": []
+ },
+ {
+  "id": "s086",
+  "text": "Maybe. But we have never seen a house that big on this street. We do not know if the straight line keeps going.",
+  "heard": "Maybe. But we have never seen a house that big on this street. We do not know if the straight line keeps going.",
+  "diffs": []
+ },
+ {
+  "id": "s087",
+  "text": "Prices might level off, or jump. The line has no idea. Guessing outside your data is called extrapolation, and it is risky.",
+  "heard": "Prices might level off or jump. The line has no idea. Guessing outside your data is called extrapolation and it is risky.",
+  "diffs": []
+ },
+ {
+  "id": "s088",
+  "text": "It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
+  "heard": "It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
+  "diffs": []
+ },
+ {
+  "id": "s101a",
+  "text": "There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything the data never showed it.",
+  "heard": "There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything that data never showed it.",
+  "diffs": []
+ },
+ {
+  "id": "s089",
+  "text": "A line is a local summary. It is only trusted where the dots are.",
+  "heard": "A line is a local summary. It is only trusted where the dots are.",
+  "diffs": []
+ },
+ {
+  "id": "s090",
+  "text": "One more warning, and it is a big one. A line tells you that two things move together. It does not tell you why.",
+  "heard": "One more warning, and it is a big one. A line tells you that two things move together. It does not tell you why.",
+  "diffs": []
+ },
+ {
+  "id": "s091",
+  "text": "Here, it feels obvious that more space makes a house cost more. But the line did not prove it. We knew it from common sense.",
+  "heard": "Here it feels obvious that more space makes a house cost more, but the line did not prove it. We knew it from common sense.",
+  "diffs": []
+ },
+ {
+  "id": "s092",
+  "text": "Lines can link things that have nothing to do with each other. Ice cream sales and sunburns rise and fall together, with a lovely straight line between them.",
+  "heard": "Lines can link things that have nothing to do with each other. Ice cream sales and sunburns rise and fall together, with a lovely straight line between them.",
+  "diffs": []
+ },
+ {
+  "id": "s093",
+  "text": "Ice cream does not cause sunburn. Hot sunny days cause both.",
+  "heard": "Ice cream does not cause sunburn. Hot sunny days cause both.",
+  "diffs": []
+ },
+ {
+  "id": "s094",
+  "text": "The same thing can hide in house prices. Bigger houses are often newer, or in better neighbourhoods. Some of the hundred dollars per square foot may really belong to those.",
+  "heard": "The same thing can hide in house prices. Bigger houses are often newer, or in better neighborhoods. Some of the hundred dollars per square foot may really belong to those.",
+  "diffs": [
+   [
+    "neighbourhoods",
+    "neighborhoods"
+   ]
+  ]
+ },
+ {
+  "id": "s095",
+  "text": "Separating those effects needs more than one input, and that is a later video on multiple regression.",
+  "heard": "Separating those effects needs more than one input and that is a later video on multiple regression.",
+  "diffs": []
+ },
+ {
+  "id": "s096",
+  "text": "So read the slope as, houses that are bigger tend to cost this much more. Not, adding a room will raise the price by exactly this.",
+  "heard": "So read the slope as, houses that are bigger tend to cost this much more. Not, adding a room will raise the price by exactly this.",
+  "diffs": []
+ },
+ {
+  "id": "s097",
+  "text": "Now let us see where this exact idea shows up in the real world.",
+  "heard": "Now let us see where this exact idea shows up in the real world.",
+  "diffs": []
+ },
+ {
+  "id": "s098",
+  "text": "In machine learning, a linear regression is the first model you train. The five houses are the training data, and the line is the model.",
+  "heard": "In machine learning, a linear regression is the first model you train. The five houses are the training data, and the line is the model.",
+  "diffs": []
+ },
+ {
+  "id": "s099",
+  "text": "The sum of squared errors is called a loss. Training means finding the settings with the smallest loss, exactly like our line pivoting and sliding.",
+  "heard": "The sum of squared errors is called a loss. Training means finding the settings with the smallest loss, exactly like our line pivoting and sliding.",
+  "diffs": []
+ },
+ {
+  "id": "s100",
+  "text": "In data science, it is the trend line. How much do sales rise for each extra thousand dollars of advertising? The slope answers it.",
+  "heard": "In data science it is the trend line how much do sales rise for each extra thousand dollars of advertising the slope answers it",
+  "diffs": []
+ },
+ {
+  "id": "s101",
+  "text": "In finance, analysts plot a stock's daily moves against the whole market's moves. The slope of that line has a name, beta. A beta above one means the stock swings more than the market.",
+  "heard": "In finance, analysts plot a stock's daily moves against the whole market's moves. The slope of that line has a name: beta. A beta above one means the stock swings more than the market.",
+  "diffs": []
+ },
+ {
+  "id": "s102",
+  "text": "In computer science, engineers time a program on bigger and bigger inputs and fit a line. The slope is the cost per item, and it tells them how long a huge job will take.",
+  "heard": "In computer science, engineers time a program on bigger and bigger inputs and fit a line. The slope is the cost per item, and it tells them how long a huge job will take.",
+  "diffs": []
+ },
+ {
+  "id": "s103",
+  "text": "But notice that last one is an extrapolation. Engineers check it, for the same reason we did with the mansion.",
+  "heard": "But notice that last one is an extrapolation. Engineers check it for the same reason we did with the mansion.",
+  "diffs": []
+ },
+ {
+  "id": "s104",
+  "text": "Measuring how good a line is deserves its own video. For now, notice that our line cut the score from twenty six thousand to one thousand.",
+  "heard": "Measuring how good a line is deserves its own video for now notice that our line cut the score from twenty-six thousand to one thousand",
+  "diffs": []
+ },
+ {
+  "id": "s105",
+  "text": "Here are the mistakes beginners make most often.",
+  "heard": "Here are the mistakes beginners make most often.",
+  "diffs": []
+ },
+ {
+  "id": "s106",
+  "text": "Mistake one. Forcing a straight line onto a curve.",
+  "heard": "Mistake one forcing a straight line onto a curve.",
+  "diffs": []
+ },
+ {
+  "id": "s107",
+  "text": "The formula will always give you a line, even when the dots bend. It never warns you. So always look at the picture first.",
+  "heard": "The formula will always give you a line even when the dots bent. It never warns you. So always look at the picture first.",
+  "diffs": [
+   [
+    "bend",
+    "bent"
+   ]
+  ]
+ },
+ {
+  "id": "s115a",
+  "text": "Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends.",
+  "heard": "Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends.",
+  "diffs": []
+ },
+ {
+  "id": "s108",
+  "text": "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape.",
+  "heard": "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape.",
+  "diffs": []
+ },
+ {
+  "id": "s109",
+  "text": "Mistake two. Forgetting how much one odd point can pull the line.",
+  "heard": "Mistake two. Forgetting how much one odd point can pull the line.",
+  "diffs": []
+ },
+ {
+  "id": "s110",
+  "text": "Say the three thousand square foot house had a gold-plated kitchen and sold for five hundred sixty thousand instead.",
+  "heard": "So the three thousand square foot house had a gold plated kitchen and sold for five hundred sixty thousand instead.",
+  "diffs": [
+   [
+    "say",
+    "so"
+   ]
+  ]
+ },
+ {
+  "id": "s111",
+  "text": "Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
+  "heard": "Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
+  "diffs": []
+ },
+ {
+  "id": "s112",
+  "text": "And your fair price moves from two hundred thirty thousand to two hundred fifty four.",
+  "heard": "In your fair price moves from two hundred thirty thousand to two hundred fifty four.",
+  "diffs": []
+ },
+ {
+  "id": "s113",
+  "text": "It is the same reason one billionaire drags up an average income. Check odd points before you trust the slope.",
+  "heard": "It is the same reason one billionaire drags up an average income. Check odd points before you trust the slope.",
+  "diffs": []
+ },
+ {
+  "id": "s114",
+  "text": "Mistake three. Trusting the line far outside the data, or reading it as cause. We just saw both. A line describes the dots you have, and nothing more.",
+  "heard": "Mistake three, trusting the line far outside the data or reading it as cause. We just saw both. A line describes the dots you have and nothing more.",
+  "diffs": []
+ },
+ {
+  "id": "s115",
+  "text": "And a bonus one. Measuring the misses slanted, instead of straight up and down. The miss is always in the units of what you are predicting.",
+  "heard": "And the bonus one: measuring the misses slanted instead of straight up and down. The misses is always in the units of what you are predicting.",
+  "diffs": [
+   [
+    "miss",
+    "misses"
+   ]
+  ]
+ },
+ {
+  "id": "s116",
+  "text": "Let us put the whole method on one card.",
+  "heard": "Let us put the whole method on one card.",
+  "diffs": []
+ },
+ {
+  "id": "s117",
+  "text": "One. Plot the dots, and check they look like a line.",
+  "heard": "One, plot the dots, and check they look like a line.",
+  "diffs": []
+ },
+ {
+  "id": "s118",
+  "text": "Two. Measure each miss straight up and down, in the units you predict.",
+  "heard": "Two. Measure each mist straight up and down in the units you predict.",
+  "diffs": [
+   [
+    "miss",
+    "mist"
+   ]
+  ]
+ },
+ {
+  "id": "s119",
+  "text": "Three. Square the misses and add them. That is the score.",
+  "heard": "Three, square the misses and Adam. That is the score.",
+  "diffs": [
+   [
+    "add them",
+    "adam"
+   ]
+  ]
+ },
+ {
+  "id": "s120",
+  "text": "Four. Find the line with the smallest score. Slope from the formula, then the intercept from the average point.",
+  "heard": "four find the line with the smallest score slope from the formula then the intercept from the average point",
+  "diffs": []
+ },
+ {
+  "id": "s121",
+  "text": "Five. Read the slope as a rate, and predict only where you have data.",
+  "heard": "five read the slope as a rate and predict only where you have data",
+  "diffs": []
+ },
+ {
+  "id": "s122",
+  "text": "A line does not know the truth. It is just the one guess that misses least.",
+  "heard": "A line does not know the truth. It is just the one guess that misses least.",
+  "diffs": []
+ },
+ {
+  "id": "s123",
+  "text": "Look around your world, and notice how often one number seems to climb with another, and ask whether it is a line, a curve, or just a coincidence.",
+  "heard": "Look around your world and notice how often one number seems to climb with another and ask whether it is a line a curve or just a coincidence.",
+  "diffs": []
+ },
+ {
+  "id": "s124",
+  "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+  "heard": "If this lesson made things clear for you, please subscribe to MathLab TV so we can keep building together.",
+  "diffs": [
+   [
+    "math lab",
+    "mathlab"
+   ]
+  ]
+ },
+ {
+  "id": "s125",
+  "text": "But here's a puzzle for next time.",
+  "heard": "But here's a puzzle for next time.",
+  "diffs": []
+ },
+ {
+  "id": "s126",
+  "text": "With five houses and one straight line, we had a formula. But a modern AI model has millions of settings, and no formula at all.",
+  "heard": "With five houses and one straight line, we had a formula. But a modern AI model has millions of settings and no formula at all.",
+  "diffs": []
+ },
+ {
+  "id": "s127",
+  "text": "So how does it find its smallest score? It does what our line did. It feels which way is downhill, and takes a small step. That is gradient descent.",
+  "heard": "So how does it find its smallest score? It does what our line did. It feels which way is downhill and takes a small step. That is gradient descent.",
+  "diffs": []
+ },
+ {
+  "id": "s128",
+  "text": "I will see you in the next video.",
+  "heard": "I will see you in the next video.",
+  "diffs": []
+ }
+]

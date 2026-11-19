@@ -80,6 +80,8 @@ seg(c, "Whenever one number tends to move with another, people want a line betwe
     "Pairs appear as chips: 'size → price', 'ads → sales', 'hours studied → score', 'input size → run time'.")
 seg(c, "Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets.",
     "Each chip gets its own tiny scatter with a line, one by one.")
+seg(c, 'Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move?',
+    "Each mini scatter gets a tiny slope triangle: 'one step → how much more?'.", 0.6, sid='s021a')
 seg(c, "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn.",
     "The four mini scatters slide together into one box labelled 'machine learning, model number one'.", 0.8)
 seg(c, "So let us build it from nothing. Back to our five houses.",
@@ -105,7 +107,7 @@ seg(c, "There is a different method that uses the shortest, slanted distance, fo
     "Small side note card: 'slanted distance → a different tool (both numbers uncertain)'.", 0.6)
 seg(c, "Now draw the miss for every house. Some dots sit above the line, and their miss is positive.",
     "Five orange bars appear; the ones above the line get a '+' tag.")
-seg(c, "Some sit below, and their miss is negative.",
+seg(c, "Others are below the line, and their miss is negative.",
     "Bars below get a '−' tag.")
 seg(c, "A good line should have small misses. So let us add them up into one score.",
     "A warn score box 'total miss = ?' appears top-right.")
@@ -118,11 +120,13 @@ seg(c, "In our mean versus median video, the average was the single number that 
     "Callback chip 'from: Mean vs Median'; the flat line glows.")
 seg(c, "It ignores size completely. Every house gets the same guess. So it should score badly.",
     "Misses drawn: −110, −30, 0, +30, +110 (in $k), orange bars.")
+seg(c, 'Let us look at the misses for this flat line, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above.',
+    'Bars light in turn with labels −110 and +110; the middle three dim.', 0.35, sid='s033a')
 seg(c, "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero.",
     "Running sum ticks in the score box: −110 → −140 → −140 → −110 → 0. Big '0'.", 1.0)
 seg(c, "Zero. A perfect score, for a line that is plainly bad.",
     "The '0' flashes red; label 'perfect score?'.")
-seg(c, "The pluses and minuses cancelled out. Big misses above hid big misses below. So a plain sum is useless.",
+seg(c, "The pluses and minuses cancelled out. The misses above wiped out the misses below. So a plain sum is useless.",
     "Upper bars and lower bars slide together and annihilate; red 'cancels out'.", 1.0)
 seg(c, "We need every miss to count against the line, whatever its direction. The fix is the one from our standard deviation video. Square them.",
     "Callback chip 'from: Standard Deviation'; formula chip 'miss × miss'.")
@@ -154,7 +158,9 @@ seg(c, "Watch the score as it pivots. The squares shrink, grow, and shrink again
     "Line pivots slowly through slopes; aqua tiles resize live; score ticks with it.")
 seg(c, "Now it slides. Too high is worse, too low is worse.",
     "Line slides up and down; score ticks up both ways.")
-seg(c, "And there is one spot where the score cannot get any smaller.",
+seg(c, 'Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point.',
+    "Small inset: a bowl-shaped curve 'score vs tilt' (shape only) with a dot sliding down to the bottom as the line pivots.", 0.6, sid='s052a')
+seg(c, "And at one spot, the score cannot get any smaller.",
     "Line settles; the tiles stop at 100, 400, 0, 400, 100.", 0.6)
 seg(c, "The misses are minus ten, plus twenty, zero, minus twenty, and plus ten. Squared and added, the score is one thousand.",
     "Score box lands on 1,000 and glows violet: 'the smallest possible'.", 1.5)
@@ -183,6 +189,8 @@ seg(c, "Eleven hundred, plus one fifty, plus zero, plus one fifty, plus eleven h
     "Running total 2,500 in warn.")
 seg(c, "When a house is bigger than average and also pricier, the product is positive. That pulls the line upward.",
     "Rectangles drawn from the average house to each dot (equal scale) in aqua; top-right and bottom-left ones get '+'.")
+seg(c, 'Houses that are smaller than average and also cheaper give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down.',
+    "Bottom-left rectangle highlights '−10 × −110 = +1,100'; a ghost 'bigger but cheaper' dot appears in the bottom-right with a '−' rectangle (illustration), then fades.", 0.6, sid='s066a')
 seg(c, "Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty.",
     "Fourth column 'size² ': 100 · 25 · 0 · 25 · 100; total 250.")
 seg(c, "That second number is just how spread out the sizes are, a close cousin of the variance.",
@@ -191,6 +199,8 @@ seg(c, "Step five. Divide. Two thousand five hundred over two hundred fifty is t
     "Fraction 2,500 / 250 = 10 (LaTeX); slope chip violet.", 1.0)
 seg(c, "Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept.",
     "On chart: from the blue dot the line extends left to the price axis; arithmetic '250 − 10 × 20 = 50' in Inter.", 1.0)
+seg(c, 'Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left.',
+    "From the blue dot, twenty small slope steps walk down the line to x = 0; a counter '−$10k × 20 = −$200k'; lands at $50k.", 0.8, sid='s071a')
 seg(c, "Here is the whole recipe as symbols. Each one is just a word we already met.",
     "Formula card: b = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²,  a = ȳ − b x̄ (LaTeX).")
 seg(c, "x is size and y is price. x bar and y bar, with the little line on top, are the averages. And the big sigma means add them all up.",
@@ -218,6 +228,10 @@ seg(c, "Fifty, plus ten times eighteen. That is fifty plus one eighty, which is 
     "Riser to the line, across to the axis: '$230k' in violet. Arithmetic '50 + 10 × 18 = 230'.", 1.5)
 seg(c, "So the first agent was a bit high, and the second was too low. And now you can show why.",
     "Agent bubbles return: $260k (above), $200k (below); the line's $230k sits between them.")
+seg(c, 'Let us test the line on a house we already know. Twenty five hundred square feet. The line says fifty plus ten times twenty five, which is three hundred thousand.',
+    "Marker at 2,500 sq ft; line readout '$300k'.", 0.35, sid='s082a')
+seg(c, 'It really sold for two hundred eighty thousand. So that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier.',
+    "Ink dot at $280k; orange bar −20 reappears with chip 'the same miss as before'.", 0.8, sid='s082b')
 seg(c, "One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise.",
     "A soft violet band ±$20k around the line at 1,800; label 'give or take'.", 0.8)
 
@@ -231,8 +245,10 @@ seg(c, "Maybe. But we have never seen a house that big on this street. We do not
     "Beyond 3,000 the zone turns red: 'no data here'.")
 seg(c, "Prices might level off, or jump. The line has no idea. Guessing outside your data is called extrapolation, and it is risky.",
     "Two ghost curves leave the line beyond 3,000: one flattens, one rises; label 'illustration'.", 0.8)
-seg(c, "It fails the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
+seg(c, "It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
     "Pan left: marker at 200 sq ft, readout '$70k'; shed outline with red '?'.")
+seg(c, 'There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything the data never showed it.',
+    "The five dots pulse; caption 'a model only knows its data'.", 0.6, sid='s101a')
 seg(c, "A line is a local summary. It is only trusted where the dots are.",
     "Camera pulls back; aqua zone glows, red zones dim; caption 'trust it where the dots are'.", 1.0)
 
@@ -269,7 +285,7 @@ seg(c, "In computer science, engineers time a program on bigger and bigger input
     "CS tile: scatter 'input size → run time', slope 'time per item'; red warning zone far right 'extrapolation'.")
 seg(c, "But notice that last one is an extrapolation. Engineers check it, for the same reason we did with the mansion.",
     "Callback arrow to the mansion zone.", 0.8)
-seg(c, "And that score we built, how much of the squared error the line removes, deserves its own video. Our line cut it from twenty six thousand to one thousand.",
+seg(c, "Measuring how good a line is deserves its own video. For now, notice that our line cut the score from twenty six thousand to one thousand.",
     "Bar 26,000 vs bar 1,000; chip 'later: R squared, MSE and RMSE'.", 0.8)
 
 # ───────────── 11. COMMON MISTAKES ─────────────
@@ -280,13 +296,15 @@ seg(c, "Mistake one. Forcing a straight line onto a curve.",
     "Slot 1 fills: '1  a line on a curve'.")
 seg(c, "The formula will always give you a line, even when the dots bend. It never warns you. So always look at the picture first.",
     "Schematic curved cloud (label 'shape only'); a straight fit misses the middle; misses form an arch pattern.")
+seg(c, 'Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends.',
+    "Schematic hours-of-study scatter rising then flattening (label 'shape only'); straight line overlays; middle region tagged 'line too low', ends 'line too high'.", 0.6, sid='s115a')
 seg(c, "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape.",
     "Misses coloured by sign show a + middle, − ends pattern; label 'pattern in the misses = wrong shape'.", 0.8)
 seg(c, "Mistake two. Forgetting how much one odd point can pull the line.",
     "Slot 2 fills: '2  one point pulls the line'.")
 seg(c, "Say the three thousand square foot house had a gold-plated kitchen and sold for five hundred sixty thousand instead.",
     "Back to the five houses; the 3,000 sq ft dot rises to $560k in red.")
-seg(c, "Because misses are squared, that one house has huge pull. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
+seg(c, "Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
     "Line swings steeper; slope chip $100 → $180 per sq ft; the big red square tile beside the outlier.")
 seg(c, "And your fair price moves from two hundred thirty thousand to two hundred fifty four.",
     "At 1,800 sq ft: $230k ghost → $254k red.")

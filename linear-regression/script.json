@@ -133,6 +133,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s021a",
+    "chapter": "Why It Matters",
+    "text": "Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move?",
+    "visual": "Each mini scatter gets a tiny slope triangle: 'one step → how much more?'.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s020",
     "chapter": "Why It Matters",
     "text": "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn.",
@@ -212,7 +219,7 @@
   {
     "id": "s031",
     "chapter": "Measuring a Miss",
-    "text": "Some sit below, and their miss is negative.",
+    "text": "Others are below the line, and their miss is negative.",
     "visual": "Bars below get a '−' tag.",
     "pause_after": 0.35
   },
@@ -245,6 +252,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s033a",
+    "chapter": "Scoring a Line",
+    "text": "Let us look at the misses for this flat line, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above.",
+    "visual": "Bars light in turn with labels −110 and +110; the middle three dim.",
+    "pause_after": 0.35
+  },
+  {
     "id": "s036",
     "chapter": "Scoring a Line",
     "text": "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero.",
@@ -261,7 +275,7 @@
   {
     "id": "s038",
     "chapter": "Scoring a Line",
-    "text": "The pluses and minuses cancelled out. Big misses above hid big misses below. So a plain sum is useless.",
+    "text": "The pluses and minuses cancelled out. The misses above wiped out the misses below. So a plain sum is useless.",
     "visual": "Upper bars and lower bars slide together and annihilate; red 'cancels out'.",
     "pause_after": 1.0
   },
@@ -371,9 +385,16 @@
     "pause_after": 0.35
   },
   {
+    "id": "s052a",
+    "chapter": "Scoring a Line",
+    "text": "Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point.",
+    "visual": "Small inset: a bowl-shaped curve 'score vs tilt' (shape only) with a dot sliding down to the bottom as the line pivots.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s054",
     "chapter": "Scoring a Line",
-    "text": "And there is one spot where the score cannot get any smaller.",
+    "text": "And at one spot, the score cannot get any smaller.",
     "visual": "Line settles; the tiles stop at 100, 400, 0, 400, 100.",
     "pause_after": 0.6
   },
@@ -462,6 +483,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s066a",
+    "chapter": "The Formula",
+    "text": "Houses that are smaller than average and also cheaper give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down.",
+    "visual": "Bottom-left rectangle highlights '−10 × −110 = +1,100'; a ghost 'bigger but cheaper' dot appears in the bottom-right with a '−' rectangle (illustration), then fades.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s067",
     "chapter": "The Formula",
     "text": "Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty.",
@@ -488,6 +516,13 @@
     "text": "Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept.",
     "visual": "On chart: from the blue dot the line extends left to the price axis; arithmetic '250 − 10 × 20 = 50' in Inter.",
     "pause_after": 1.0
+  },
+  {
+    "id": "s071a",
+    "chapter": "The Formula",
+    "text": "Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left.",
+    "visual": "From the blue dot, twenty small slope steps walk down the line to x = 0; a counter '−$10k × 20 = −$200k'; lands at $50k.",
+    "pause_after": 0.8
   },
   {
     "id": "s071",
@@ -574,6 +609,20 @@
     "pause_after": 0.35
   },
   {
+    "id": "s082a",
+    "chapter": "Reading the Line",
+    "text": "Let us test the line on a house we already know. Twenty five hundred square feet. The line says fifty plus ten times twenty five, which is three hundred thousand.",
+    "visual": "Marker at 2,500 sq ft; line readout '$300k'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s082b",
+    "chapter": "Reading the Line",
+    "text": "It really sold for two hundred eighty thousand. So that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier.",
+    "visual": "Ink dot at $280k; orange bar −20 reappears with chip 'the same miss as before'.",
+    "pause_after": 0.8
+  },
+  {
     "id": "s083",
     "chapter": "Reading the Line",
     "text": "One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise.",
@@ -611,9 +660,16 @@
   {
     "id": "s088",
     "chapter": "Prediction vs Extrapolation",
-    "text": "It fails the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
+    "text": "It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
     "visual": "Pan left: marker at 200 sq ft, readout '$70k'; shed outline with red '?'.",
     "pause_after": 0.35
+  },
+  {
+    "id": "s101a",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything the data never showed it.",
+    "visual": "The five dots pulse; caption 'a model only knows its data'.",
+    "pause_after": 0.6
   },
   {
     "id": "s089",
@@ -723,7 +779,7 @@
   {
     "id": "s104",
     "chapter": "Big Picture",
-    "text": "And that score we built, how much of the squared error the line removes, deserves its own video. Our line cut it from twenty six thousand to one thousand.",
+    "text": "Measuring how good a line is deserves its own video. For now, notice that our line cut the score from twenty six thousand to one thousand.",
     "visual": "Bar 26,000 vs bar 1,000; chip 'later: R squared, MSE and RMSE'.",
     "pause_after": 0.8
   },
@@ -749,6 +805,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s115a",
+    "chapter": "Common Mistakes",
+    "text": "Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends.",
+    "visual": "Schematic hours-of-study scatter rising then flattening (label 'shape only'); straight line overlays; middle region tagged 'line too low', ends 'line too high'.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s108",
     "chapter": "Common Mistakes",
     "text": "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape.",
@@ -772,7 +835,7 @@
   {
     "id": "s111",
     "chapter": "Common Mistakes",
-    "text": "Because misses are squared, that one house has huge pull. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
+    "text": "Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
     "visual": "Line swings steeper; slope chip $100 → $180 per sq ft; the big red square tile beside the outlier.",
     "pause_after": 0.35
   },

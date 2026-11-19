@@ -1,6 +1,6 @@
 # Linear Regression Explained: The Complete Beginner Guide
 
-128 segments · 2464 words · est. 16.1 min (voice ≈165 wpm + 69 s pauses) · target 15–20 min
+137 segments · 2761 words · est. 18.0 min (voice ≈165 wpm + 74 s pauses) · target 15–20 min
 
 
 ## The Fair Price  ·  216 words, ~79 s
@@ -41,7 +41,7 @@
 - **s016** And you will learn when to trust its predictions, and when a line is quietly lying to you. ⏸0.6s
   - *Visual:* Big ③ (red); mini line extends past the dots into a dashed red zone; caption 'when to trust it'.
 
-## Why It Matters  ·  100 words, ~36 s
+## Why It Matters  ·  127 words, ~46 s
 
 - **s017** Drawing a line through dots sounds like a school exercise. It is actually one of the most used tools in the world.
   - *Visual:* The scatter shrinks to the left; a counter of icons starts filling on the right.
@@ -49,12 +49,14 @@
   - *Visual:* Pairs appear as chips: 'size → price', 'ads → sales', 'hours studied → score', 'input size → run time'.
 - **s019** Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets.
   - *Visual:* Each chip gets its own tiny scatter with a line, one by one.
+- **s021a** Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move? ⏸0.6s
+  - *Visual:* Each mini scatter gets a tiny slope triangle: 'one step → how much more?'.
 - **s020** And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn. ⏸0.8s
   - *Visual:* The four mini scatters slide together into one box labelled 'machine learning, model number one'.
 - **s021** So let us build it from nothing. Back to our five houses.
   - *Visual:* Mini scatters fade; the five-house scatter returns to centre.
 
-## Measuring a Miss  ·  191 words, ~69 s
+## Measuring a Miss  ·  193 words, ~70 s
 
 - **s022** Here is a line. Any line. We need a way to say how good it is.
   - *Visual:* A violet line at a random tilt on the five-house axes.
@@ -74,12 +76,12 @@
   - *Visual:* Small side note card: 'slanted distance → a different tool (both numbers uncertain)'.
 - **s030** Now draw the miss for every house. Some dots sit above the line, and their miss is positive.
   - *Visual:* Five orange bars appear; the ones above the line get a '+' tag.
-- **s031** Some sit below, and their miss is negative.
+- **s031** Others are below the line, and their miss is negative.
   - *Visual:* Bars below get a '−' tag.
 - **s032** A good line should have small misses. So let us add them up into one score.
   - *Visual:* A warn score box 'total miss = ?' appears top-right.
 
-## Scoring a Line  ·  483 words, ~176 s
+## Scoring a Line  ·  549 words, ~200 s
 
 - **s033** Try the simplest line of all. A flat line at the average price, two hundred fifty thousand.
   - *Visual:* Flat violet line at $250k; chip 'average price = $250k'.
@@ -87,11 +89,13 @@
   - *Visual:* Callback chip 'from: Mean vs Median'; the flat line glows.
 - **s035** It ignores size completely. Every house gets the same guess. So it should score badly.
   - *Visual:* Misses drawn: −110, −30, 0, +30, +110 (in $k), orange bars.
+- **s033a** Let us look at the misses for this flat line, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above.
+  - *Visual:* Bars light in turn with labels −110 and +110; the middle three dim.
 - **s036** Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero. ⏸1.0s
   - *Visual:* Running sum ticks in the score box: −110 → −140 → −140 → −110 → 0. Big '0'.
 - **s037** Zero. A perfect score, for a line that is plainly bad.
   - *Visual:* The '0' flashes red; label 'perfect score?'.
-- **s038** The pluses and minuses cancelled out. Big misses above hid big misses below. So a plain sum is useless. ⏸1.0s
+- **s038** The pluses and minuses cancelled out. The misses above wiped out the misses below. So a plain sum is useless. ⏸1.0s
   - *Visual:* Upper bars and lower bars slide together and annihilate; red 'cancels out'.
 - **s039** We need every miss to count against the line, whatever its direction. The fix is the one from our standard deviation video. Square them.
   - *Visual:* Callback chip 'from: Standard Deviation'; formula chip 'miss × miss'.
@@ -123,7 +127,9 @@
   - *Visual:* Line pivots slowly through slopes; aqua tiles resize live; score ticks with it.
 - **s053** Now it slides. Too high is worse, too low is worse.
   - *Visual:* Line slides up and down; score ticks up both ways.
-- **s054** And there is one spot where the score cannot get any smaller. ⏸0.6s
+- **s052a** Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point. ⏸0.6s
+  - *Visual:* Small inset: a bowl-shaped curve 'score vs tilt' (shape only) with a dot sliding down to the bottom as the line pivots.
+- **s054** And at one spot, the score cannot get any smaller. ⏸0.6s
   - *Visual:* Line settles; the tiles stop at 100, 400, 0, 400, 100.
 - **s055** The misses are minus ten, plus twenty, zero, minus twenty, and plus ten. Squared and added, the score is one thousand. ⏸1.5s
   - *Visual:* Score box lands on 1,000 and glows violet: 'the smallest possible'.
@@ -134,7 +140,7 @@
 - **s058** It is the same choice as mean versus median. Squared misses behave like the mean, and plain distances like the median. Squares are the standard, because they give one clean answer with a simple formula. ⏸0.8s
   - *Visual:* Two chips: 'squares ↔ mean', 'plain distances ↔ median'; tick next to 'one clean formula'.
 
-## The Formula  ·  308 words, ~112 s
+## The Formula  ·  387 words, ~141 s
 
 - **s059** We do not have to search by sliding, though. For a straight line, there is a formula that lands on the best line directly.
   - *Visual:* Pivot and slide icons fade; a formula card frame appears.
@@ -152,6 +158,8 @@
   - *Visual:* Running total 2,500 in warn.
 - **s066** When a house is bigger than average and also pricier, the product is positive. That pulls the line upward.
   - *Visual:* Rectangles drawn from the average house to each dot (equal scale) in aqua; top-right and bottom-left ones get '+'.
+- **s066a** Houses that are smaller than average and also cheaper give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down. ⏸0.6s
+  - *Visual:* Bottom-left rectangle highlights '−10 × −110 = +1,100'; a ghost 'bigger but cheaper' dot appears in the bottom-right with a '−' rectangle (illustration), then fades.
 - **s067** Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty.
   - *Visual:* Fourth column 'size² ': 100 · 25 · 0 · 25 · 100; total 250.
 - **s068** That second number is just how spread out the sizes are, a close cousin of the variance.
@@ -160,6 +168,8 @@
   - *Visual:* Fraction 2,500 / 250 = 10 (LaTeX); slope chip violet.
 - **s070** Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept. ⏸1.0s
   - *Visual:* On chart: from the blue dot the line extends left to the price axis; arithmetic '250 − 10 × 20 = 50' in Inter.
+- **s071a** Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left. ⏸0.8s
+  - *Visual:* From the blue dot, twenty small slope steps walk down the line to x = 0; a counter '−$10k × 20 = −$200k'; lands at $50k.
 - **s071** Here is the whole recipe as symbols. Each one is just a word we already met.
   - *Visual:* Formula card: b = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²,  a = ȳ − b x̄ (LaTeX).
 - **s072** x is size and y is price. x bar and y bar, with the little line on top, are the averages. And the big sigma means add them all up.
@@ -167,7 +177,7 @@
 - **s073** b is the slope, and a is the intercept. Ten and fifty. Exactly the line our search found. ⏸1.0s
   - *Visual:* b = 10, a = 50 fill in; the slid-and-pivoted line from before overlays exactly; tick.
 
-## Reading the Line  ·  202 words, ~73 s
+## Reading the Line  ·  261 words, ~95 s
 
 - **s074** So our line says, price equals fifty, plus ten times size, in thousands of dollars and hundreds of square feet.
   - *Visual:* Equation card: 'price = 50 + 10 × size' with unit labels.
@@ -187,10 +197,14 @@
   - *Visual:* Riser to the line, across to the axis: '$230k' in violet. Arithmetic '50 + 10 × 18 = 230'.
 - **s082** So the first agent was a bit high, and the second was too low. And now you can show why.
   - *Visual:* Agent bubbles return: $260k (above), $200k (below); the line's $230k sits between them.
+- **s082a** Let us test the line on a house we already know. Twenty five hundred square feet. The line says fifty plus ten times twenty five, which is three hundred thousand.
+  - *Visual:* Marker at 2,500 sq ft; line readout '$300k'.
+- **s082b** It really sold for two hundred eighty thousand. So that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier. ⏸0.8s
+  - *Visual:* Ink dot at $280k; orange bar −20 reappears with chip 'the same miss as before'.
 - **s083** One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise. ⏸0.8s
   - *Visual:* A soft violet band ±$20k around the line at 1,800; label 'give or take'.
 
-## Prediction vs Extrapolation  ·  117 words, ~43 s
+## Prediction vs Extrapolation  ·  144 words, ~52 s
 
 - **s084** Eighteen hundred square feet sits inside our data, between houses we have actually seen. Guessing there is called prediction, or interpolation.
   - *Visual:* Aqua shaded zone from 1,000 to 3,000 sq ft: 'inside the data'; the 1,800 marker inside it.
@@ -200,8 +214,10 @@
   - *Visual:* Beyond 3,000 the zone turns red: 'no data here'.
 - **s087** Prices might level off, or jump. The line has no idea. Guessing outside your data is called extrapolation, and it is risky. ⏸0.8s
   - *Visual:* Two ghost curves leave the line beyond 3,000: one flattens, one rises; label 'illustration'.
-- **s088** It fails the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.
+- **s088** It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.
   - *Visual:* Pan left: marker at 200 sq ft, readout '$70k'; shed outline with red '?'.
+- **s101a** There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything the data never showed it. ⏸0.6s
+  - *Visual:* The five dots pulse; caption 'a model only knows its data'.
 - **s089** A line is a local summary. It is only trusted where the dots are. ⏸1.0s
   - *Visual:* Camera pulls back; aqua zone glows, red zones dim; caption 'trust it where the dots are'.
 
@@ -222,7 +238,7 @@
 - **s096** So read the slope as, houses that are bigger tend to cost this much more. Not, adding a room will raise the price by exactly this. ⏸1.0s
   - *Visual:* Two speech cards: green tick 'bigger houses tend to cost more' · red cross 'adding a room adds exactly $10k'.
 
-## Big Picture  ·  205 words, ~75 s
+## Big Picture  ·  202 words, ~73 s
 
 - **s097** Now let us see where this exact idea shows up in the real world.
   - *Visual:* Four domain tiles: ML, DS, Finance, CS.
@@ -238,10 +254,10 @@
   - *Visual:* CS tile: scatter 'input size → run time', slope 'time per item'; red warning zone far right 'extrapolation'.
 - **s103** But notice that last one is an extrapolation. Engineers check it, for the same reason we did with the mansion. ⏸0.8s
   - *Visual:* Callback arrow to the mansion zone.
-- **s104** And that score we built, how much of the squared error the line removes, deserves its own video. Our line cut it from twenty six thousand to one thousand. ⏸0.8s
+- **s104** Measuring how good a line is deserves its own video. For now, notice that our line cut the score from twenty six thousand to one thousand. ⏸0.8s
   - *Visual:* Bar 26,000 vs bar 1,000; chip 'later: R squared, MSE and RMSE'.
 
-## Common Mistakes  ·  205 words, ~75 s
+## Common Mistakes  ·  245 words, ~89 s
 
 - **s105** Here are the mistakes beginners make most often.
   - *Visual:* Red header 'common mistakes'; three empty numbered slots.
@@ -249,13 +265,15 @@
   - *Visual:* Slot 1 fills: '1  a line on a curve'.
 - **s107** The formula will always give you a line, even when the dots bend. It never warns you. So always look at the picture first.
   - *Visual:* Schematic curved cloud (label 'shape only'); a straight fit misses the middle; misses form an arch pattern.
+- **s115a** Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends. ⏸0.6s
+  - *Visual:* Schematic hours-of-study scatter rising then flattening (label 'shape only'); straight line overlays; middle region tagged 'line too low', ends 'line too high'.
 - **s108** If the misses are all positive in the middle and negative at the ends, the line is the wrong shape. ⏸0.8s
   - *Visual:* Misses coloured by sign show a + middle, − ends pattern; label 'pattern in the misses = wrong shape'.
 - **s109** Mistake two. Forgetting how much one odd point can pull the line.
   - *Visual:* Slot 2 fills: '2  one point pulls the line'.
 - **s110** Say the three thousand square foot house had a gold-plated kitchen and sold for five hundred sixty thousand instead.
   - *Visual:* Back to the five houses; the 3,000 sq ft dot rises to $560k in red.
-- **s111** Because misses are squared, that one house has huge pull. The slope jumps from one hundred to one hundred eighty dollars per square foot.
+- **s111** Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot.
   - *Visual:* Line swings steeper; slope chip $100 → $180 per sq ft; the big red square tile beside the outlier.
 - **s112** And your fair price moves from two hundred thirty thousand to two hundred fifty four.
   - *Visual:* At 1,800 sq ft: $230k ghost → $254k red.

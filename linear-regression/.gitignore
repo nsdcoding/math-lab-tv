@@ -4,3 +4,4 @@ audio/proc/
 build/
 media/
 audio/stt_cache/
+__pycache__/

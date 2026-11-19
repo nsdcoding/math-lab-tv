@@ -173,7 +173,7 @@
    "series": "ai-ml",
    "order": 4,
    "phase": 1,
-   "status": "planned",
+   "status": "in-production",
    "visual": "a scatter of house prices with a line pivoting and sliding, the vertical error bars shrinking as a running total of squared error ticks down",
    "covers": "fitting a line to a cloud of points, residuals measured vertically and not perpendicular, why the errors are squared, slope and intercept read as plain meanings, a worked fit on five points, prediction versus extrapolation, why a fitted line says nothing about cause",
    "links": {
@@ -188,7 +188,10 @@
     ],
     "overlaps": []
    },
-   "production": null,
+   "production": {
+    "folder": "linear-regression",
+    "branch": "claude/funny-ride-c08ngi"
+   },
    "youtube": null,
    "notes": ""
   },

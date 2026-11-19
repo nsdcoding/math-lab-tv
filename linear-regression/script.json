@@ -1,0 +1,898 @@
+[
+  {
+    "id": "s001",
+    "chapter": "The Fair Price",
+    "text": "Imagine you are about to sell your house. It is eighteen hundred square feet, on a quiet street in a small town.",
+    "visual": "Line-art street draws on; one house highlights with a tag '1,800 sq ft'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s002",
+    "chapter": "The Fair Price",
+    "text": "You ask two agents what it is worth.",
+    "visual": "Two agent cards slide in (simple Manim figures, no faces needed).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s003",
+    "chapter": "The Fair Price",
+    "text": "The first says two hundred sixty thousand dollars. The second says two hundred thousand.",
+    "visual": "Agent A bubble '$260k' (orange), agent B bubble '$200k' (blue); a gap bracket '$60k apart' between them.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s004",
+    "chapter": "The Fair Price",
+    "text": "That is a sixty thousand dollar difference. Who do you believe?",
+    "visual": "The '$60k apart' bracket pulses warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s005",
+    "chapter": "The Fair Price",
+    "text": "So you look at what actually sold. Five houses on your street, in the last year.",
+    "visual": "Five sale cards drop in: 1,000 sq ft $140k · 1,500 $220k · 2,000 $250k · 2,500 $280k · 3,000 $360k.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s006",
+    "chapter": "The Fair Price",
+    "text": "A thousand square feet sold for one hundred forty thousand. Three thousand square feet sold for three hundred sixty thousand. The rest are in between.",
+    "visual": "Highlight the first and last cards in turn, then the middle three.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s007",
+    "chapter": "The Fair Price",
+    "text": "Put them on a picture. Size along the bottom, price up the side. Every dot is one house.",
+    "visual": "Cards fly onto x/y axes (size 0–3,500 sq ft, price $0–400k, numbered ticks); five ink dots land.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s008",
+    "chapter": "The Fair Price",
+    "text": "Your eye sees it straight away. Bigger houses, higher prices. The dots lean upward, almost in a line.",
+    "visual": "A soft dashed guide sweeps up through the cloud; label 'leans upward'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s009",
+    "chapter": "The Fair Price",
+    "text": "So grab a ruler and draw the line. Then read off eighteen hundred square feet.",
+    "visual": "A violet ruler line lays across the dots; a vertical marker at 1,800 sq ft.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s010",
+    "chapter": "The Fair Price",
+    "text": "But hand the same ruler to three people, and you get three different lines, and three different prices.",
+    "visual": "Three ghost lines in different tilts; their readings at 1,800: $215k, $230k, $245k.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s011",
+    "chapter": "The Fair Price",
+    "text": "There has to be one best line. A line we can defend, with a number that says why it wins.",
+    "visual": "Ghost lines fade; one violet line remains with a '?' score chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s012",
+    "chapter": "The Fair Price",
+    "text": "Finding that line is called linear regression. By the end of this video, you will find it yourself, by hand, and the fair price will be two hundred thirty thousand dollars.",
+    "visual": "Title card: 'LINEAR REGRESSION' (violet) with subtitle 'the complete beginner guide'; small chip '1,800 sq ft → $230k'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s013",
+    "chapter": "Welcome",
+    "text": "Welcome to Math Lab TV. Where math is something you can see.",
+    "visual": "Logo (violet rounded square with a green bell curve) + MATH LAB TV + tagline 'where math is something you can see'.",
+    "pause_after": 0.7
+  },
+  {
+    "id": "s014",
+    "chapter": "Welcome",
+    "text": "Today you will learn how to score any line, by measuring how far it misses each dot.",
+    "visual": "Small logo top-right. Big ① (orange); mini scatter with orange vertical miss bars; caption 'score a line by its misses'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s015",
+    "chapter": "Welcome",
+    "text": "You will see the best line found, step by step, and what its slope and starting point really mean.",
+    "visual": "Big ② (violet); mini line pivots and settles, slope triangle appears; caption 'find the best line, read it'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s016",
+    "chapter": "Welcome",
+    "text": "And you will learn when to trust its predictions, and when a line is quietly lying to you.",
+    "visual": "Big ③ (red); mini line extends past the dots into a dashed red zone; caption 'when to trust it'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s017",
+    "chapter": "Why It Matters",
+    "text": "Drawing a line through dots sounds like a school exercise. It is actually one of the most used tools in the world.",
+    "visual": "The scatter shrinks to the left; a counter of icons starts filling on the right.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s018",
+    "chapter": "Why It Matters",
+    "text": "Whenever one number tends to move with another, people want a line between them.",
+    "visual": "Pairs appear as chips: 'size → price', 'ads → sales', 'hours studied → score', 'input size → run time'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s019",
+    "chapter": "Why It Matters",
+    "text": "Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets.",
+    "visual": "Each chip gets its own tiny scatter with a line, one by one.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s020",
+    "chapter": "Why It Matters",
+    "text": "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn.",
+    "visual": "The four mini scatters slide together into one box labelled 'machine learning, model number one'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s021",
+    "chapter": "Why It Matters",
+    "text": "So let us build it from nothing. Back to our five houses.",
+    "visual": "Mini scatters fade; the five-house scatter returns to centre.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s022",
+    "chapter": "Measuring a Miss",
+    "text": "Here is a line. Any line. We need a way to say how good it is.",
+    "visual": "A violet line at a random tilt on the five-house axes.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s023",
+    "chapter": "Measuring a Miss",
+    "text": "The line is a price guesser. For every size, it points to a price.",
+    "visual": "A small cursor slides along the size axis; a dashed riser goes up to the line and across to a price readout.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s024",
+    "chapter": "Measuring a Miss",
+    "text": "So for each house, we compare two prices. What the line guessed, and what the house really sold for.",
+    "visual": "At x = 1,500: a hollow violet dot on the line ('guess') and the ink dot ('sold').",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s025",
+    "chapter": "Measuring a Miss",
+    "text": "The gap between them is the miss. Statisticians call it the residual, the bit that is left over.",
+    "visual": "An orange vertical bar joins the two; defcard 'residual = sold − guessed'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s026",
+    "chapter": "Measuring a Miss",
+    "text": "Notice the direction. The miss is measured straight up and down. Not the shortest distance to the line.",
+    "visual": "Orange vertical bar stays; a grey perpendicular dash appears, then is crossed out in red.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s027",
+    "chapter": "Measuring a Miss",
+    "text": "Why? Because up and down is price. We are guessing prices, so we measure our mistake in dollars.",
+    "visual": "The orange bar gets a '$' label; the perpendicular dash would be measured in a mix of feet and dollars: label 'mixes sq ft and $'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s028",
+    "chapter": "Measuring a Miss",
+    "text": "The size of each house is not in doubt. We know it exactly. Only the price is being guessed.",
+    "visual": "Size ticks glow ink ('known'); price axis glows orange ('guessed').",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s029",
+    "chapter": "Measuring a Miss",
+    "text": "There is a different method that uses the shortest, slanted distance, for when both numbers are uncertain. But that is a different tool, for a different job.",
+    "visual": "Small side note card: 'slanted distance → a different tool (both numbers uncertain)'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s030",
+    "chapter": "Measuring a Miss",
+    "text": "Now draw the miss for every house. Some dots sit above the line, and their miss is positive.",
+    "visual": "Five orange bars appear; the ones above the line get a '+' tag.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s031",
+    "chapter": "Measuring a Miss",
+    "text": "Some sit below, and their miss is negative.",
+    "visual": "Bars below get a '−' tag.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s032",
+    "chapter": "Measuring a Miss",
+    "text": "A good line should have small misses. So let us add them up into one score.",
+    "visual": "A warn score box 'total miss = ?' appears top-right.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s033",
+    "chapter": "Scoring a Line",
+    "text": "Try the simplest line of all. A flat line at the average price, two hundred fifty thousand.",
+    "visual": "Flat violet line at $250k; chip 'average price = $250k'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s034",
+    "chapter": "Scoring a Line",
+    "text": "In our mean versus median video, the average was the single number that best stood in for a whole group. Here it is, as a line.",
+    "visual": "Callback chip 'from: Mean vs Median'; the flat line glows.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s035",
+    "chapter": "Scoring a Line",
+    "text": "It ignores size completely. Every house gets the same guess. So it should score badly.",
+    "visual": "Misses drawn: −110, −30, 0, +30, +110 (in $k), orange bars.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s036",
+    "chapter": "Scoring a Line",
+    "text": "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero.",
+    "visual": "Running sum ticks in the score box: −110 → −140 → −140 → −110 → 0. Big '0'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s037",
+    "chapter": "Scoring a Line",
+    "text": "Zero. A perfect score, for a line that is plainly bad.",
+    "visual": "The '0' flashes red; label 'perfect score?'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s038",
+    "chapter": "Scoring a Line",
+    "text": "The pluses and minuses cancelled out. Big misses above hid big misses below. So a plain sum is useless.",
+    "visual": "Upper bars and lower bars slide together and annihilate; red 'cancels out'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s039",
+    "chapter": "Scoring a Line",
+    "text": "We need every miss to count against the line, whatever its direction. The fix is the one from our standard deviation video. Square them.",
+    "visual": "Callback chip 'from: Standard Deviation'; formula chip 'miss × miss'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s040",
+    "chapter": "Scoring a Line",
+    "text": "Each orange miss becomes a square, with the miss as its side. Its area is the squared miss.",
+    "visual": "Each orange bar rotates out into an aqua square tile with equal x/y scale; tile labels show areas.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s041",
+    "chapter": "Scoring a Line",
+    "text": "A square is never negative, so nothing can cancel.",
+    "visual": "All tiles stack in a column; '+' signs only.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s042",
+    "chapter": "Scoring a Line",
+    "text": "And squaring does something else. It punishes big misses much more than small ones.",
+    "visual": "Compare: one 20 miss → tile 400; two 10 misses → tiles 100 + 100 = 200.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s043",
+    "chapter": "Scoring a Line",
+    "text": "One miss of twenty costs four hundred. Two misses of ten cost only two hundred together. So the best line hates being far from any one house.",
+    "visual": "The 400 tile is twice the area of the two 100 tiles side by side; label 'big misses cost more'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s044",
+    "chapter": "Scoring a Line",
+    "text": "Add up all the squares. That total is our score. It is called the sum of squared errors, and smaller is better.",
+    "visual": "defcard 'score = sum of squared errors (add up every square). Smaller = better.'",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s045",
+    "chapter": "Scoring a Line",
+    "text": "For the flat line, the score is twenty six thousand.",
+    "visual": "Score box (warn) counts up to 26,000 (units: thousand-dollar misses, squared).",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s046",
+    "chapter": "Scoring a Line",
+    "text": "Now give the line some tilt. Here is a line through the cheapest and the most expensive house.",
+    "visual": "Violet line rotates to pass through (1,000, 140) and (3,000, 360).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s047",
+    "chapter": "Scoring a Line",
+    "text": "It looks great. It passes right through three of the houses.",
+    "visual": "Three dots ring aqua 'on the line'; two orange bars of 25 remain.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s048",
+    "chapter": "Scoring a Line",
+    "text": "Two misses of twenty five. Squared, that is six hundred twenty five each. The score is twelve fifty.",
+    "visual": "Two 625 tiles; score box drops 26,000 → 1,250.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s049",
+    "chapter": "Scoring a Line",
+    "text": "Much better. But is it the best? Let us go too far the other way, a line that is too steep.",
+    "visual": "Line pivots steeper about the average house; misses grow at both ends.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s050",
+    "chapter": "Scoring a Line",
+    "text": "Its score jumps to seven thousand two hundred fifty. Too steep is bad, too flat is bad.",
+    "visual": "Score box rises to 7,250 in red.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s051",
+    "chapter": "Scoring a Line",
+    "text": "So let the line search for itself. It can do two things. It can pivot, to change its tilt. And it can slide, up and down.",
+    "visual": "Two control icons: a pivot arrow around the line's centre, an up/down slide arrow.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s052",
+    "chapter": "Scoring a Line",
+    "text": "Watch the score as it pivots. The squares shrink, grow, and shrink again.",
+    "visual": "Line pivots slowly through slopes; aqua tiles resize live; score ticks with it.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s053",
+    "chapter": "Scoring a Line",
+    "text": "Now it slides. Too high is worse, too low is worse.",
+    "visual": "Line slides up and down; score ticks up both ways.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s054",
+    "chapter": "Scoring a Line",
+    "text": "And there is one spot where the score cannot get any smaller.",
+    "visual": "Line settles; the tiles stop at 100, 400, 0, 400, 100.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s055",
+    "chapter": "Scoring a Line",
+    "text": "The misses are minus ten, plus twenty, zero, minus twenty, and plus ten. Squared and added, the score is one thousand.",
+    "visual": "Score box lands on 1,000 and glows violet: 'the smallest possible'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s056",
+    "chapter": "Scoring a Line",
+    "text": "That is it. The line with the smallest sum of squared errors is the least squares line, and finding it is linear regression.",
+    "visual": "Defcard 'least squares line = the line with the smallest score'. Scoreboard: flat 26,000 · end-to-end 1,250 · too steep 7,250 · best 1,000.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s057",
+    "chapter": "Scoring a Line",
+    "text": "Be honest about one thing. Squaring is a choice. If we added plain distances instead, the end to end line would actually win, fifty to sixty.",
+    "visual": "Side card: 'plain distances: end-to-end 50 · least squares 60'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s058",
+    "chapter": "Scoring a Line",
+    "text": "It is the same choice as mean versus median. Squared misses behave like the mean, and plain distances like the median. Squares are the standard, because they give one clean answer with a simple formula.",
+    "visual": "Two chips: 'squares ↔ mean', 'plain distances ↔ median'; tick next to 'one clean formula'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s059",
+    "chapter": "The Formula",
+    "text": "We do not have to search by sliding, though. For a straight line, there is a formula that lands on the best line directly.",
+    "visual": "Pivot and slide icons fade; a formula card frame appears.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s060",
+    "chapter": "The Formula",
+    "text": "Step one. Find the average house. The average size is two thousand square feet, and the average price is two hundred fifty thousand.",
+    "visual": "A blue cross-hair dot at (2,000, $250k) labelled 'average house'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s061",
+    "chapter": "The Formula",
+    "text": "Here is a lovely fact. The best line always passes right through the average house. So now we only need its tilt.",
+    "visual": "The best line is drawn pinned through the blue dot; pin icon.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s062",
+    "chapter": "The Formula",
+    "text": "Step two. For each house, measure how far it is from the average, both in size and in price.",
+    "visual": "Table builds: columns 'size − avg', 'price − avg'; rows −10, −5, 0, +5, +10 (hundred sq ft) and −110, −30, 0, +30, +110 ($k). Arrows on the chart from the blue dot to each house.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s063",
+    "chapter": "The Formula",
+    "text": "To keep the numbers small, size is counted in hundreds of square feet, and price in thousands of dollars.",
+    "visual": "Unit chips on the column heads: 'hundreds of sq ft', 'thousands of $'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s064",
+    "chapter": "The Formula",
+    "text": "Step three. Multiply each pair together, and add them all up.",
+    "visual": "Third column 'product': 1,100 · 150 · 0 · 150 · 1,100; a Σ symbol with label 'Σ means add them all up'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s065",
+    "chapter": "The Formula",
+    "text": "Eleven hundred, plus one fifty, plus zero, plus one fifty, plus eleven hundred. That is two thousand five hundred.",
+    "visual": "Running total 2,500 in warn.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s066",
+    "chapter": "The Formula",
+    "text": "When a house is bigger than average and also pricier, the product is positive. That pulls the line upward.",
+    "visual": "Rectangles drawn from the average house to each dot (equal scale) in aqua; top-right and bottom-left ones get '+'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s067",
+    "chapter": "The Formula",
+    "text": "Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty.",
+    "visual": "Fourth column 'size² ': 100 · 25 · 0 · 25 · 100; total 250.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s068",
+    "chapter": "The Formula",
+    "text": "That second number is just how spread out the sizes are, a close cousin of the variance.",
+    "visual": "Small chip 'spread of sizes (like variance)'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s069",
+    "chapter": "The Formula",
+    "text": "Step five. Divide. Two thousand five hundred over two hundred fifty is ten. That is the slope.",
+    "visual": "Fraction 2,500 / 250 = 10 (LaTeX); slope chip violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s070",
+    "chapter": "The Formula",
+    "text": "Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept.",
+    "visual": "On chart: from the blue dot the line extends left to the price axis; arithmetic '250 − 10 × 20 = 50' in Inter.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s071",
+    "chapter": "The Formula",
+    "text": "Here is the whole recipe as symbols. Each one is just a word we already met.",
+    "visual": "Formula card: b = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²,  a = ȳ − b x̄ (LaTeX).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s072",
+    "chapter": "The Formula",
+    "text": "x is size and y is price. x bar and y bar, with the little line on top, are the averages. And the big sigma means add them all up.",
+    "visual": "Each symbol highlights with a plain-word label underneath: 'size', 'price', 'average size', 'average price', 'add them all up'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s073",
+    "chapter": "The Formula",
+    "text": "b is the slope, and a is the intercept. Ten and fifty. Exactly the line our search found.",
+    "visual": "b = 10, a = 50 fill in; the slid-and-pivoted line from before overlays exactly; tick.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s074",
+    "chapter": "Reading the Line",
+    "text": "So our line says, price equals fifty, plus ten times size, in thousands of dollars and hundreds of square feet.",
+    "visual": "Equation card: 'price = 50 + 10 × size' with unit labels.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s075",
+    "chapter": "Reading the Line",
+    "text": "In plain dollars, that is fifty thousand dollars, plus one hundred dollars for every square foot.",
+    "visual": "Second line under it: '$50,000 + $100 per sq ft'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s076",
+    "chapter": "Reading the Line",
+    "text": "What does the slope mean? Ten means, every extra hundred square feet adds about ten thousand dollars to the price.",
+    "visual": "Slope triangle on the line: run '+100 sq ft', rise '+$10k' (violet).",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s077",
+    "chapter": "Reading the Line",
+    "text": "It is a rate. Dollars per square foot. It is the single most useful number on the line.",
+    "visual": "Triangle slides along the line; same size everywhere: 'same rate everywhere'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s078",
+    "chapter": "Reading the Line",
+    "text": "And the intercept? It is where the line crosses zero size. Fifty thousand dollars, for a house with no floor at all.",
+    "visual": "Line extended dashed to x = 0; dot at $50k with '0 sq ft?' label.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s079",
+    "chapter": "Reading the Line",
+    "text": "That house does not exist. The intercept is often just a starting point that makes the line fit. Do not read too much into it.",
+    "visual": "The 0 sq ft dot gets a red '?' and caption 'a starting point, not a real house'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s080",
+    "chapter": "Reading the Line",
+    "text": "Now the question we started with. Your house is eighteen hundred square feet.",
+    "visual": "Vertical marker at 1,800 sq ft.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s081",
+    "chapter": "Reading the Line",
+    "text": "Fifty, plus ten times eighteen. That is fifty plus one eighty, which is two hundred thirty thousand dollars.",
+    "visual": "Riser to the line, across to the axis: '$230k' in violet. Arithmetic '50 + 10 × 18 = 230'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s082",
+    "chapter": "Reading the Line",
+    "text": "So the first agent was a bit high, and the second was too low. And now you can show why.",
+    "visual": "Agent bubbles return: $260k (above), $200k (below); the line's $230k sits between them.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s083",
+    "chapter": "Reading the Line",
+    "text": "One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise.",
+    "visual": "A soft violet band ±$20k around the line at 1,800; label 'give or take'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s084",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "Eighteen hundred square feet sits inside our data, between houses we have actually seen. Guessing there is called prediction, or interpolation.",
+    "visual": "Aqua shaded zone from 1,000 to 3,000 sq ft: 'inside the data'; the 1,800 marker inside it.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s085",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "Now try a mansion. Ten thousand square feet. The line says one point zero five million dollars.",
+    "visual": "Camera pans right; the line extends dashed to 10,000 sq ft; readout '$1.05M'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s086",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "Maybe. But we have never seen a house that big on this street. We do not know if the straight line keeps going.",
+    "visual": "Beyond 3,000 the zone turns red: 'no data here'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s087",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "Prices might level off, or jump. The line has no idea. Guessing outside your data is called extrapolation, and it is risky.",
+    "visual": "Two ghost curves leave the line beyond 3,000: one flattens, one rises; label 'illustration'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s088",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "It fails the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars.",
+    "visual": "Pan left: marker at 200 sq ft, readout '$70k'; shed outline with red '?'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s089",
+    "chapter": "Prediction vs Extrapolation",
+    "text": "A line is a local summary. It is only trusted where the dots are.",
+    "visual": "Camera pulls back; aqua zone glows, red zones dim; caption 'trust it where the dots are'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s090",
+    "chapter": "A Line Is Not a Cause",
+    "text": "One more warning, and it is a big one. A line tells you that two things move together. It does not tell you why.",
+    "visual": "Two chips 'move together' (tick) vs 'causes' (crossed out in red).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s091",
+    "chapter": "A Line Is Not a Cause",
+    "text": "Here, it feels obvious that more space makes a house cost more. But the line did not prove it. We knew it from common sense.",
+    "visual": "Five-house scatter with the line; a 'common sense' tag, not 'the line says'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s092",
+    "chapter": "A Line Is Not a Cause",
+    "text": "Lines can link things that have nothing to do with each other. Ice cream sales and sunburns rise and fall together, with a lovely straight line between them.",
+    "visual": "New schematic scatter labelled 'illustration': ice cream sales vs sunburn cases, with a line.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s093",
+    "chapter": "A Line Is Not a Cause",
+    "text": "Ice cream does not cause sunburn. Hot sunny days cause both.",
+    "visual": "A sun icon above both axes with arrows to each: 'hidden cause'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s094",
+    "chapter": "A Line Is Not a Cause",
+    "text": "The same thing can hide in house prices. Bigger houses are often newer, or in better neighbourhoods. Some of the hundred dollars per square foot may really belong to those.",
+    "visual": "Back to houses: 'newer?' and 'better area?' chips with arrows into price.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s095",
+    "chapter": "A Line Is Not a Cause",
+    "text": "Separating those effects needs more than one input, and that is a later video on multiple regression.",
+    "visual": "Chip 'later: multiple regression'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s096",
+    "chapter": "A Line Is Not a Cause",
+    "text": "So read the slope as, houses that are bigger tend to cost this much more. Not, adding a room will raise the price by exactly this.",
+    "visual": "Two speech cards: green tick 'bigger houses tend to cost more' · red cross 'adding a room adds exactly $10k'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s097",
+    "chapter": "Big Picture",
+    "text": "Now let us see where this exact idea shows up in the real world.",
+    "visual": "Four domain tiles: ML, DS, Finance, CS.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s098",
+    "chapter": "Big Picture",
+    "text": "In machine learning, a linear regression is the first model you train. The five houses are the training data, and the line is the model.",
+    "visual": "ML tile opens: dots labelled 'training data', line labelled 'model'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s099",
+    "chapter": "Big Picture",
+    "text": "The sum of squared errors is called a loss. Training means finding the settings with the smallest loss, exactly like our line pivoting and sliding.",
+    "visual": "Score box relabelled 'loss'; the pivot-and-slide replay in miniature.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s100",
+    "chapter": "Big Picture",
+    "text": "In data science, it is the trend line. How much do sales rise for each extra thousand dollars of advertising? The slope answers it.",
+    "visual": "DS tile: schematic scatter 'ad spend → sales', slope triangle 'sales per $1k ads'; label 'illustration'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s101",
+    "chapter": "Big Picture",
+    "text": "In finance, analysts plot a stock's daily moves against the whole market's moves. The slope of that line has a name, beta. A beta above one means the stock swings more than the market.",
+    "visual": "Finance tile: schematic scatter 'market move % → stock move %', line slope labelled 'beta'; label 'illustration'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s102",
+    "chapter": "Big Picture",
+    "text": "In computer science, engineers time a program on bigger and bigger inputs and fit a line. The slope is the cost per item, and it tells them how long a huge job will take.",
+    "visual": "CS tile: scatter 'input size → run time', slope 'time per item'; red warning zone far right 'extrapolation'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s103",
+    "chapter": "Big Picture",
+    "text": "But notice that last one is an extrapolation. Engineers check it, for the same reason we did with the mansion.",
+    "visual": "Callback arrow to the mansion zone.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s104",
+    "chapter": "Big Picture",
+    "text": "And that score we built, how much of the squared error the line removes, deserves its own video. Our line cut it from twenty six thousand to one thousand.",
+    "visual": "Bar 26,000 vs bar 1,000; chip 'later: R squared, MSE and RMSE'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s105",
+    "chapter": "Common Mistakes",
+    "text": "Here are the mistakes beginners make most often.",
+    "visual": "Red header 'common mistakes'; three empty numbered slots.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s106",
+    "chapter": "Common Mistakes",
+    "text": "Mistake one. Forcing a straight line onto a curve.",
+    "visual": "Slot 1 fills: '1  a line on a curve'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s107",
+    "chapter": "Common Mistakes",
+    "text": "The formula will always give you a line, even when the dots bend. It never warns you. So always look at the picture first.",
+    "visual": "Schematic curved cloud (label 'shape only'); a straight fit misses the middle; misses form an arch pattern.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s108",
+    "chapter": "Common Mistakes",
+    "text": "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape.",
+    "visual": "Misses coloured by sign show a + middle, − ends pattern; label 'pattern in the misses = wrong shape'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s109",
+    "chapter": "Common Mistakes",
+    "text": "Mistake two. Forgetting how much one odd point can pull the line.",
+    "visual": "Slot 2 fills: '2  one point pulls the line'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s110",
+    "chapter": "Common Mistakes",
+    "text": "Say the three thousand square foot house had a gold-plated kitchen and sold for five hundred sixty thousand instead.",
+    "visual": "Back to the five houses; the 3,000 sq ft dot rises to $560k in red.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s111",
+    "chapter": "Common Mistakes",
+    "text": "Because misses are squared, that one house has huge pull. The slope jumps from one hundred to one hundred eighty dollars per square foot.",
+    "visual": "Line swings steeper; slope chip $100 → $180 per sq ft; the big red square tile beside the outlier.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s112",
+    "chapter": "Common Mistakes",
+    "text": "And your fair price moves from two hundred thirty thousand to two hundred fifty four.",
+    "visual": "At 1,800 sq ft: $230k ghost → $254k red.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s113",
+    "chapter": "Common Mistakes",
+    "text": "It is the same reason one billionaire drags up an average income. Check odd points before you trust the slope.",
+    "visual": "Callback chip 'from: Mean vs Median'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s114",
+    "chapter": "Common Mistakes",
+    "text": "Mistake three. Trusting the line far outside the data, or reading it as cause. We just saw both. A line describes the dots you have, and nothing more.",
+    "visual": "Slot 3 fills: '3  outside the data, or as cause'; mini mansion zone and ice cream icon.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s115",
+    "chapter": "Common Mistakes",
+    "text": "And a bonus one. Measuring the misses slanted, instead of straight up and down. The miss is always in the units of what you are predicting.",
+    "visual": "Bonus slot: 'measure misses vertically'; vertical orange bar vs crossed-out perpendicular.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s116",
+    "chapter": "Recipe",
+    "text": "Let us put the whole method on one card.",
+    "visual": "Recipe card frame, numbered steps appear one by one.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s117",
+    "chapter": "Recipe",
+    "text": "One. Plot the dots, and check they look like a line.",
+    "visual": "Step 1 bold 'Plot and look' + 'check the dots lean along a line'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s118",
+    "chapter": "Recipe",
+    "text": "Two. Measure each miss straight up and down, in the units you predict.",
+    "visual": "Step 2 'Measure the misses' + 'vertical, in the units you predict'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s119",
+    "chapter": "Recipe",
+    "text": "Three. Square the misses and add them. That is the score.",
+    "visual": "Step 3 'Square and add' + 'the sum of squared errors'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s120",
+    "chapter": "Recipe",
+    "text": "Four. Find the line with the smallest score. Slope from the formula, then the intercept from the average point.",
+    "visual": "Step 4 'Find the best line' + 'slope = Σ(x−x̄)(y−ȳ) / Σ(x−x̄)², then intercept'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s121",
+    "chapter": "Recipe",
+    "text": "Five. Read the slope as a rate, and predict only where you have data.",
+    "visual": "Step 5 'Read and predict' + 'slope = rate · stay inside the data'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s122",
+    "chapter": "Recipe",
+    "text": "A line does not know the truth. It is just the one guess that misses least.",
+    "visual": "Closing line in violet under the card.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s123",
+    "chapter": "Subscribe",
+    "text": "Look around your world, and notice how often one number seems to climb with another, and ask whether it is a line, a curve, or just a coincidence.",
+    "visual": "Four everyday cards: taxi fare vs distance, phone bill vs data, plant height vs weeks, rent vs size; stamped 'line, curve, or coincidence?'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s124",
+    "chapter": "Subscribe",
+    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+    "visual": "Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s125",
+    "chapter": "Next Time",
+    "text": "But here's a puzzle for next time.",
+    "visual": "Small logo top-centre; puzzle icon.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s126",
+    "chapter": "Next Time",
+    "text": "With five houses and one straight line, we had a formula. But a modern AI model has millions of settings, and no formula at all.",
+    "visual": "Our pivot-and-slide icon multiplies into a wall of thousands of tiny dials; 'next: gradient descent' chip under the logo.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s127",
+    "chapter": "Next Time",
+    "text": "So how does it find its smallest score? It does what our line did. It feels which way is downhill, and takes a small step. That is gradient descent.",
+    "visual": "A bowl-shaped score surface (illustration); a ball rolls down in small steps to the bottom.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s128",
+    "chapter": "Next Time",
+    "text": "I will see you in the next video.",
+    "visual": "Logo + next chip hold.",
+    "pause_after": 2.0
+  }
+]

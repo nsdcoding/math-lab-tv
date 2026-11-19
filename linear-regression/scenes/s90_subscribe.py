@@ -4,12 +4,12 @@ from common import *
 
 
 def everyday(title, icon_mob, color):
-    box = RoundedRectangle(corner_radius=0.18, width=3.0, height=2.6, stroke_color=color, stroke_width=3,
+    box = RoundedRectangle(corner_radius=0.18, width=3.0, height=2.8, stroke_color=color, stroke_width=3,
                            fill_color="#22221f", fill_opacity=1)
     box.qa_container = True
-    icon_mob.move_to(box.get_center() + UP * 0.5)
-    t = T(title, 26, INK, weight=BOLD).move_to(box.get_center() + DOWN * 0.35)
-    stamp = T(STAMP, 20, color).move_to(box.get_center() + DOWN * 0.85)
+    icon_mob.move_to(box.get_center() + UP * 0.65)
+    t = T(title, 26, INK, weight=BOLD).move_to(box.get_center() + DOWN * 0.15)
+    stamp = T(STAMP, 20, color).move_to(box.get_center() + DOWN * 0.9)
     return VGroup(box, icon_mob, t, stamp)
 
 
@@ -21,12 +21,24 @@ def cursor():
     return c
 
 
-# FILL: four everyday examples tied to this topic: (label, icon builder, colour)
-EVERYDAY = [("smoke alarm", lambda: VGroup(Circle(0.32), Circle(0.1)).set_stroke(RED_, 3), RED_),
-            ("car alarm", lambda: RoundedRectangle(corner_radius=0.1, width=0.9, height=0.35).set_stroke(WARN, 3), WARN),
-            ("spam folder", lambda: Rectangle(width=0.8, height=0.55).set_stroke(BLUE_, 3), BLUE_),
-            ("“Was this you?”", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(AQUA, 3), AQUA)]
-STAMP = "real or false alarm?"   # FILL: the reflection question stamped on each card
+def _car():
+    b = RoundedRectangle(corner_radius=0.12, width=1.0, height=0.38).set_stroke(WARN, 3)
+    w = VGroup(Circle(0.1).move_to(b.get_corner(DL) + RIGHT * 0.22), Circle(0.1).move_to(b.get_corner(DR) + LEFT * 0.22)).set_stroke(WARN, 3)
+    return VGroup(b, w)
+
+
+def _plant():
+    st = Line(DOWN * 0.4, UP * 0.3).set_stroke(AQUA, 3)
+    l1 = Ellipse(width=0.4, height=0.18).rotate(0.5).move_to(UP * 0.1 + RIGHT * 0.18).set_stroke(AQUA, 3)
+    l2 = Ellipse(width=0.4, height=0.18).rotate(-0.5).move_to(DOWN * 0.1 + LEFT * 0.18).set_stroke(AQUA, 3)
+    return VGroup(st, l1, l2)
+
+
+EVERYDAY = [("taxi fare", _car, WARN),
+            ("phone bill", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(BLUE_, 3), BLUE_),
+            ("plant height", _plant, AQUA),
+            ("rent", lambda: house_icon(0.6, VIOLET), VIOLET)]
+STAMP = "line, curve,\nor coincidence?"
 
 
 class S90Subscribe(Base):

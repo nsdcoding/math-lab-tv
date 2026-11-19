@@ -173,7 +173,7 @@
    "series": "ai-ml",
    "order": 4,
    "phase": 1,
-   "status": "in-production",
+   "status": "produced",
    "visual": "a scatter of house prices with a line pivoting and sliding, the vertical error bars shrinking as a running total of squared error ticks down",
    "covers": "fitting a line to a cloud of points, residuals measured vertically and not perpendicular, why the errors are squared, slope and intercept read as plain meanings, a worked fit on five points, prediction versus extrapolation, why a fitted line says nothing about cause",
    "links": {
@@ -190,7 +190,18 @@
    },
    "production": {
     "folder": "linear-regression",
-    "branch": "claude/funny-ride-c08ngi"
+    "branch": "claude/funny-ride-c08ngi",
+    "length": "16:04",
+    "video": "linear-regression/out/linear_regression.mp4",
+    "package": "linear-regression/out/youtube/",
+    "youtube_title": "Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS",
+    "running_example": "Five house sales on one street: 1,000-3,000 sq ft, $140k-$360k; best line $50k + $100/sq ft, misses -10,+20,0,-20,+10, SSE 1,000; 1,800 sq ft -> $230k",
+    "callbacks": [
+     "mean-vs-median",
+     "standard-deviation"
+    ],
+    "teaser_next": "gradient-descent",
+    "hook": "Two agents price your 1,800 sq ft house at $260k and $200k; five nearby sales and one best line say $230k"
    },
    "youtube": null,
    "notes": ""

@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 """Two 1280x720 thumbnails (A/B) for YouTube Test & compare, rendered from HTML with Playwright.
-TEMPLATE: FILL HEADLINE, FORMULA_TEX, FORMULA_LABELS, TILES, HOOK_HTML and diagram_svg() (thumbnail B).
+Linear regression: keyword headline, y-hat = a + b x colour-coded, tiles (A) and the five-house fit (B).
 Generated stickers (scripts/sticker.py) may be placed with <img src="file://..."> when they add a human element.
 
-Both lead with the keyword headline "BAYES' THEOREM / EXPLAINED VISUALLY" and the colour-coded formula
-(typeset with LaTeX -> SVG), plus a relatable picture from the running example:
-  A: where you'll use it: Machine Learning, Data Science, Finance and CS tiles with hand-drawn SVG icons,
-     plus the hook "a positive test: 90% → 8%".
-  B: the 1,000-person grid from the video (9 real positives, 99 false alarms lit up) -> 9 vs 99 -> 8%.
+  A: headline, formula with plain-word labels, where you'll use it (ML, DS, Finance, CS), hook "$260k or $200k? → $230k".
+  B: the five houses, best line, misses and their squares; 1,800 sq ft → $230k.
 """
 import json, pathlib, re, subprocess
-import numpy as np
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE / "out" / "youtube"; OUT.mkdir(parents=True, exist_ok=True)
@@ -18,24 +14,18 @@ MINS = round(json.loads((HERE / "timings.json").read_text())["total"] / 60)
 C = dict(bg="#1a1a19", blue="#3987e5", orange="#d95926", aqua="#199e70", violet="#9085e9", warn="#fab219",
          ink="#f0efec", ink2="#c3c2b7", muted="#898781", red="#d03b3b", card="#22221f")
 
-# ── FILL per video ────────────────────────────────────────────────────
-HEADLINE = ("BAYES'<br>THEOREM", "EXPLAINED VISUALLY")       # keyword headline (big, 2 lines) + subline
-HEADLINE_ONE_LINE = "BAYES' THEOREM"                           # thumbnail B
-FORMULA_TEX = r"{\color{vio}P(A\mid B)} = \frac{{\color{aq}P(B\mid A)}\,{\color{wa}P(A)}}{P(B)}"  # colours: vio aq wa ink
-FORMULA_LABELS = [("the real chance", "violet", 34), ("test hit rate", "aqua", 250), ("base rate", "warn", 420)]  # (text, colour, x)
-TILES = [("MACHINE LEARNING", "precision vs recall", "violet", "ICON_ML"),
-         ("DATA SCIENCE", "update beliefs with data", "aqua", "ICON_DS"),
-         ("FINANCE", "fraud alerts &amp; signals", "warn", "ICON_FIN"),
-         ("COMPUTER SCIENCE", "naive Bayes spam filters", "blue", "ICON_CS")]
-HOOK_HTML = ("a <span style='color:#199e70'>positive</span> test: <span style='color:#898781;text-decoration:line-through;"
-             "text-decoration-color:#d03b3b;text-decoration-thickness:4px'>90%</span> → <span style='color:#9085e9'>8%</span>")
-
-# EXAMPLE diagram for thumbnail B (Bayes): the same crowd as the video (common.py): 40 x 25, sick = column 0 top ten rows, 99 scattered false alarms
-COLS, ROWS = 40, 25
-SICK = [(0, ROWS - 1 - k) for k in range(10)]
-_sick = set(SICK)
-HEALTHY = [(c, r) for r in range(ROWS - 1, -1, -1) for c in range(COLS) if (c, r) not in _sick]
-FALSE_POS = [HEALTHY[k] for k in sorted(np.random.default_rng(7).choice(990, 99, replace=False))]
+# ── per video ────────────────────────────────────────────────────
+HEADLINE = ("LINEAR<br>REGRESSION", "EXPLAINED VISUALLY")       # keyword headline (big, 2 lines) + subline
+HEADLINE_ONE_LINE = "LINEAR REGRESSION"                         # thumbnail B
+FORMULA_TEX = r"{\color{vio}\hat{y}} = {\color{wa}a} + {\color{aq}b}\,x"  # colours: vio aq wa ink
+FORMULA_LABELS = [("price", "violet", 40), ("start", "warn", 196), ("rate × size", "aqua", 360)]  # (text, colour, x)
+TILES = [("MACHINE LEARNING", "the first model you train", "violet", "ICON_ML"),
+         ("DATA SCIENCE", "trend lines", "aqua", "ICON_DS"),
+         ("FINANCE", "a stock's beta", "warn", "ICON_FIN"),
+         ("COMPUTER SCIENCE", "cost per item", "blue", "ICON_CS")]
+HOOK_HTML = ("<span style='color:#d95926'>$260k</span> or <span style='color:#3987e5'>$200k</span>? "
+             "the line says <span style='color:#9085e9'>$230k</span>")
+HOUSES = [(1000, 140), (1500, 220), (2000, 250), (2500, 280), (3000, 360)]
 
 
 def formula_svg(width):
@@ -58,26 +48,29 @@ def formula_svg(width):
     return svg, h
 
 
-def crowd_svg(cell):
-    """The 1,000-person grid: 9 real positives (orange, ringed), 99 false alarms (blue, ringed), rest dimmed."""
-    tp, fp = set(SICK[:9]), set(FALSE_POS)
-    out = []
-    for r in range(ROWS):
-        for c in range(COLS):
-            x, y = c * cell, (ROWS - 1 - r) * cell
-            k = (c, r)
-            if k in tp:
-                col, op = C["orange"], 1
-            elif k in fp:
-                col, op = C["blue"], 1
-            elif k in _sick:
-                col, op = C["orange"], 0.35
-            else:
-                col, op = "#4a4a46", 1
-            out.append(f'<rect x="{x + 1}" y="{y + 1}" width="{cell - 2}" height="{cell - 2}" fill="{col}" opacity="{op}"/>')
-            if k in tp or k in fp:
-                out.append(f'<rect x="{x - 0.5}" y="{y - 0.5}" width="{cell + 1}" height="{cell + 1}" fill="none" stroke="{C["aqua"]}" stroke-width="2"/>')
-    return "\n".join(out), COLS * cell, ROWS * cell
+def scatter_svg(w, h):
+    """The five houses on axes, the best line (violet), misses (orange) and their squares (aqua)."""
+    X = lambda x: 90 + (x / 3500) * (w - 100)
+    Y = lambda y: h - 40 - ((y - 100) / 300) * (h - 60)
+    out = [f'<line x1="{X(0)}" y1="{Y(100)}" x2="{X(3500)}" y2="{Y(100)}" stroke="{C["ink2"]}" stroke-width="3"/>',
+           f'<line x1="{X(0)}" y1="{Y(100)}" x2="{X(0)}" y2="{Y(400)}" stroke="{C["ink2"]}" stroke-width="3"/>']
+    for v in (1000, 2000, 3000):
+        out.append(f'<text x="{X(v)}" y="{Y(100) + 30}" fill="{C["ink2"]}" font-size="20" text-anchor="middle">{v:,}</text>')
+    for v in (100, 200, 300, 400):
+        out.append(f'<text x="{X(0) - 10}" y="{Y(v) + 7}" fill="{C["ink2"]}" font-size="20" text-anchor="end">${v}k</text>')
+    out.append(f'<line x1="{X(500)}" y1="{Y(100)}" x2="{X(3500)}" y2="{Y(400)}" stroke="{C["violet"]}" stroke-width="6"/>')
+    u = (Y(0) - Y(1))
+    for x, y in HOUSES:
+        g = 50 + 0.1 * x; r = y - g
+        if r:
+            s = abs(r) * u
+            sx = X(x) + 6
+            out.append(f'<rect x="{sx}" y="{min(Y(y), Y(g))}" width="{s}" height="{s}" fill="{C["aqua"]}" fill-opacity="0.35" stroke="{C["aqua"]}" stroke-width="2"/>')
+            out.append(f'<line x1="{X(x)}" y1="{Y(g)}" x2="{X(x)}" y2="{Y(y)}" stroke="{C["orange"]}" stroke-width="5"/>')
+        out.append(f'<circle cx="{X(x)}" cy="{Y(y)}" r="9" fill="{C["ink"]}" stroke="{C["bg"]}" stroke-width="2"/>')
+    out.append(f'<line x1="{X(1800)}" y1="{Y(100)}" x2="{X(1800)}" y2="{Y(230)}" stroke="{C["ink2"]}" stroke-width="3" stroke-dasharray="7 6"/>')
+    out.append(f'<circle cx="{X(1800)}" cy="{Y(230)}" r="10" fill="{C["violet"]}" stroke="{C["ink"]}" stroke-width="2"/>')
+    return "\n".join(out)
 
 
 def tile(title, outcome, col, icon):
@@ -96,28 +89,22 @@ def ICON_ML(col):   # small neural network: 3 -> 4 -> 2 nodes
     return lines + dots
 
 
-def ICON_DS(col):   # prior (wide) narrowing into posterior (tall)
-    import math
-    def path(mu, sd, peak):
-        pts = [(x, 72 - peak * math.exp(-0.5 * ((x - mu) / sd) ** 2)) for x in range(4, 107, 3)]
-        return "M" + " L".join(f"{x:.0f},{y:.1f}" for x, y in pts)
-    return (f'<line x1="4" y1="72" x2="106" y2="72" stroke="{C["ink2"]}" stroke-width="3"/>'
-            f'<path d="{path(62, 22, 26)}" fill="none" stroke="{C["warn"]}" stroke-width="4"/>'
-            f'<path d="{path(48, 9, 60)}" fill="none" stroke="{C["violet"]}" stroke-width="4"/>')
+def ICON_DS(col):   # scatter with a trend line
+    pts = [(14, 62), (28, 54), (40, 58), (52, 42), (64, 40), (78, 28), (92, 22)]
+    return (f'<line x1="6" y1="74" x2="106" y2="74" stroke="{C["ink2"]}" stroke-width="3"/>'
+            + "".join(f'<circle cx="{x}" cy="{y}" r="5" fill="{C["ink"]}"/>' for x, y in pts)
+            + f'<line x1="8" y1="68" x2="102" y2="16" stroke="{col}" stroke-width="4"/>')
 
 
-def ICON_FIN(col):  # credit card with an alert badge
-    return (f'<rect x="6" y="14" width="76" height="50" rx="8" fill="none" stroke="{col}" stroke-width="4"/>'
-            f'<rect x="6" y="26" width="76" height="10" fill="{col}" opacity="0.7"/>'
-            f'<circle cx="86" cy="58" r="17" fill="{C["red"]}"/>'
-            f'<rect x="83.5" y="47" width="5" height="13" rx="2" fill="{C["ink"]}"/><circle cx="86" cy="66" r="3" fill="{C["ink"]}"/>')
+def ICON_FIN(col):  # market vs stock: two zig-zag lines, the stock swinging more
+    return (f'<polyline points="6,48 24,40 40,46 58,34 76,40 94,28 106,32" fill="none" stroke="{C["ink2"]}" stroke-width="3"/>'
+            f'<polyline points="6,52 24,30 40,60 58,18 76,46 94,8 106,20" fill="none" stroke="{col}" stroke-width="4"/>'
+            f'<text x="70" y="76" fill="{col}" font-size="20" font-weight="800">β</text>')
 
 
-def ICON_CS(col):   # envelope with a red flag
-    return (f'<rect x="8" y="18" width="70" height="48" rx="5" fill="none" stroke="{col}" stroke-width="4"/>'
-            f'<polyline points="8,20 43,46 78,20" fill="none" stroke="{col}" stroke-width="4"/>'
-            f'<line x1="92" y1="10" x2="92" y2="70" stroke="{C["ink2"]}" stroke-width="4"/>'
-            f'<polygon points="92,10 108,17 92,26" fill="{C["red"]}"/>')
+def ICON_CS(col):   # run time bars growing with input size
+    return "".join(f'<rect x="{10 + 20 * i}" y="{70 - 12 * (i + 1)}" width="14" height="{12 * (i + 1)}" fill="{col}" opacity="0.85"/>'
+                   for i in range(5)) + f'<line x1="6" y1="72" x2="110" y2="8" stroke="{C["ink2"]}" stroke-width="3" stroke-dasharray="6 5"/>'
 
 
 BASE = """<!doctype html><html><head><meta charset="utf-8"><style>
@@ -133,44 +120,38 @@ svg text{font-family:'Inter'}
 def thumb_a():
     f, fh = formula_svg(470)
     body = f"""
-<div class="h" style="position:absolute;left:50px;top:34px;font-size:124px;color:{C['violet']}">{HEADLINE[0]}</div>
-<div class="h" style="position:absolute;left:54px;top:268px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
-<div class="card" style="position:absolute;left:50px;top:362px;width:600px;height:{fh + 92:.0f}px">
+<div class="h" style="position:absolute;left:50px;top:34px;font-size:104px;color:{C['violet']}">{HEADLINE[0]}</div>
+<div class="h" style="position:absolute;left:54px;top:236px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
+<div class="card" style="position:absolute;left:50px;top:330px;width:600px;height:{fh + 92:.0f}px">
   <div style="position:absolute;left:62px;top:22px">{f}</div>
   {"".join(f'<div class="lab" style="position:absolute;left:{x}px;bottom:16px;color:{C[col]}">{txt}</div>' for txt, col, x in FORMULA_LABELS)}
 </div>
-<div style="position:absolute;left:54px;top:{362 + fh + 92 + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>
+<div style="position:absolute;left:54px;top:{330 + fh + 92 + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>
 <div style="position:absolute;left:720px;top:40px;font-size:30px;font-weight:900;letter-spacing:1px;color:{C['ink2']}">WHERE YOU'LL USE IT</div>
 <div style="position:absolute;left:720px;top:96px;display:grid;grid-template-columns:250px 250px;gap:18px">
   {"".join(tile(a, b, C[col], globals()[ic]) for a, b, col, ic in TILES)}
 </div>
-<div style="position:absolute;left:720px;top:532px;font-size:30px;font-weight:800;color:{C['ink']}">
+<div style="position:absolute;left:720px;top:534px;font-size:27px;font-weight:800;color:{C['ink']}">
   {HOOK_HTML}</div>"""
     return BASE % dict(C, body=body)
 
 
-def thumb_b():   # FILL: replace crowd_svg and the right-hand panel with this video's running-example diagram
-    f, fh = formula_svg(400)
-    grid, gw, gh = crowd_svg(13)
+def thumb_b():
+    f, fh = formula_svg(330)
+    W, H = 640, 420
     body = f"""
-<div class="h" style="position:absolute;left:50px;top:30px;font-size:112px;color:{C['violet']}">{HEADLINE_ONE_LINE}</div>
-<div class="h" style="position:absolute;left:54px;top:146px;font-size:56px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
-<div class="card" style="position:absolute;left:836px;top:156px;width:396px;height:{fh + 40:.0f}px">
-  <div style="position:absolute;left:18px;top:20px">{f.replace("width='400'", "width='360'").replace(f"height='{fh:.0f}'", f"height='{fh * 0.9:.0f}'")}</div></div>
-<div style="position:absolute;left:54px;top:236px;font-size:30px;font-weight:800">1,000 people take the test</div>
-<svg style="position:absolute;left:54px;top:286px" width="{gw}" height="{gh}" viewBox="0 0 {gw} {gh}">{grid}</svg>
-<div style="position:absolute;left:{54 + gw + 30}px;top:340px;font-size:64px;color:{C['ink2']}">→</div>
-<div style="position:absolute;left:{54 + gw + 110}px;top:318px;line-height:1.05">
-  <div style="font-size:30px;font-weight:800;color:{C['aqua']}">108 test POSITIVE</div>
-  <div class="h" style="font-size:70px;margin-top:14px"><span style="color:{C['orange']}">9</span>
-    <span style="font-size:34px;color:{C['orange']};letter-spacing:0">really have it</span></div>
-  <div class="h" style="font-size:70px;margin-top:6px"><span style="color:{C['blue']}">99</span>
-    <span style="font-size:34px;color:{C['blue']};letter-spacing:0">false alarms</span></div>
-  <div style="margin-top:18px;display:flex;align-items:baseline;gap:16px">
-    <span class="h" style="font-size:96px;color:{C['violet']}">8%</span>
-    <span style="font-size:30px;font-weight:800;color:{C['violet']}">real chance</span></div>
+<div class="h" style="position:absolute;left:50px;top:30px;font-size:96px;color:{C['violet']}">{HEADLINE_ONE_LINE}</div>
+<div class="h" style="position:absolute;left:54px;top:132px;font-size:52px;letter-spacing:-1px;color:{C['warn']}">{HEADLINE[1]}</div>
+<div style="position:absolute;left:54px;top:212px;font-size:28px;font-weight:800;color:{C['ink2']}">5 house sales, one best line</div>
+<svg style="position:absolute;left:30px;top:250px" width="{W}" height="{H}" viewBox="0 0 {W} {H}">{scatter_svg(W, H)}</svg>
+<div class="card" style="position:absolute;left:730px;top:220px;width:420px;height:{fh + 40:.0f}px">
+  <div style="position:absolute;left:40px;top:20px">{f}</div></div>
+<div style="position:absolute;left:740px;top:{220 + fh + 70:.0f}px;line-height:1.1">
+  <div style="font-size:30px;font-weight:800;color:{C['orange']}">smallest squared misses</div>
+  <div style="font-size:30px;font-weight:800;color:{C['ink']};margin-top:16px">1,800 sq ft →</div>
+  <div class="h" style="font-size:104px;color:{C['violet']};margin-top:6px">$230k</div>
 </div>
-<div style="position:absolute;left:54px;top:{286 + gh + 26:.0f}px" class="badge">Explained in {MINS} minutes</div>"""
+<div style="position:absolute;left:740px;top:560px" class="badge">Explained in {MINS} minutes</div>"""
     return BASE % dict(C, body=body)
 
 

@@ -658,7 +658,7 @@ def hook_title():
     return VGroup(t, c)
 
 
-PANEL_X = 4.6        # lesson layout: chart on the left (axis ends near x = 0.9), panel column centred here (≤ 4.6 wide)
+PANEL_X = 4.25        # lesson layout: chart on the left (axis ends near x = 0.9), panel column centred here (≤ 4.6 wide)
 
 
 def lesson_axes():

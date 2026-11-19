@@ -1,0 +1,1355 @@
+1
+00:00:00,600 --> 00:00:03,151
+Imagine you are about to sell your house.
+
+2
+00:00:03,151 --> 00:00:06,286
+It is eighteen hundred square feet, on a quiet street in a small
+
+3
+00:00:06,286 --> 00:00:06,700
+town.
+
+4
+00:00:07,050 --> 00:00:08,740
+You ask two agents what it is worth.
+
+5
+00:00:09,090 --> 00:00:12,327
+The first says two hundred sixty thousand dollars.
+
+6
+00:00:12,327 --> 00:00:14,810
+The second says two hundred thousand.
+
+7
+00:00:15,160 --> 00:00:17,949
+That is a sixty thousand dollar difference.
+
+8
+00:00:17,949 --> 00:00:19,240
+Who do you believe?
+
+9
+00:00:20,240 --> 00:00:22,255
+So you look at what actually sold.
+
+10
+00:00:22,255 --> 00:00:24,690
+Five houses on your street, in the last year.
+
+11
+00:00:25,040 --> 00:00:28,210
+A thousand square feet sold for one hundred forty thousand.
+
+12
+00:00:28,210 --> 00:00:30,570
+Three thousand square feet sold for three hundred sixty
+
+13
+00:00:30,570 --> 00:00:32,780
+thousand. The rest are in between.
+
+14
+00:00:33,130 --> 00:00:36,145
+Put them on a picture. Size along the bottom,
+
+15
+00:00:36,145 --> 00:00:39,160
+price up the side. Every dot is one house.
+
+16
+00:00:39,510 --> 00:00:41,360
+Your eye sees it straight away.
+
+17
+00:00:41,360 --> 00:00:43,662
+Bigger houses, higher prices.
+
+18
+00:00:43,662 --> 00:00:46,430
+The dots lean upward, almost in a line.
+
+19
+00:00:46,780 --> 00:00:49,320
+So grab a ruler and draw the line.
+
+20
+00:00:49,320 --> 00:00:51,860
+Then read off eighteen hundred square feet.
+
+21
+00:00:52,210 --> 00:00:54,916
+But hand the same ruler to three people, and you get three
+
+22
+00:00:54,916 --> 00:00:57,650
+different lines, and three different prices.
+
+23
+00:00:58,450 --> 00:01:00,621
+There has to be one best line.
+
+24
+00:01:00,621 --> 00:01:04,720
+A line we can defend, with a number that says why it wins.
+
+25
+00:01:05,070 --> 00:01:07,584
+Finding that line is called linear regression.
+
+26
+00:01:07,584 --> 00:01:10,510
+By the end of this video, you will find it yourself,
+
+27
+00:01:10,510 --> 00:01:13,598
+by hand, and the fair price will be two hundred thirty thousand
+
+28
+00:01:13,598 --> 00:01:14,200
+dollars.
+
+29
+00:01:15,200 --> 00:01:16,744
+Welcome to Math Lab TV.
+
+30
+00:01:16,744 --> 00:01:18,950
+Where math is something you can see.
+
+31
+00:01:19,650 --> 00:01:21,760
+Today you will learn how to score any line,
+
+32
+00:01:21,760 --> 00:01:23,870
+by measuring how far it misses each dot.
+
+33
+00:01:24,220 --> 00:01:27,174
+You will see the best line found, step by step,
+
+34
+00:01:27,174 --> 00:01:30,160
+and what its slope and starting point really mean.
+
+35
+00:01:30,510 --> 00:01:33,113
+And you will learn when to trust its predictions,
+
+36
+00:01:33,113 --> 00:01:35,500
+and when a line is quietly lying to you.
+
+37
+00:01:36,100 --> 00:01:38,727
+Drawing a line through dots sounds like a school exercise.
+
+38
+00:01:38,727 --> 00:01:41,910
+It is actually one of the most used tools in the world.
+
+39
+00:01:42,260 --> 00:01:45,080
+Whenever one number tends to move with another,
+
+40
+00:01:45,080 --> 00:01:46,600
+people want a line between them.
+
+41
+00:01:46,950 --> 00:01:49,643
+Price from size. Sales from advertising.
+
+42
+00:01:49,643 --> 00:01:51,891
+Exam scores from hours of study.
+
+43
+00:01:51,891 --> 00:01:55,040
+How long a program runs from how much data it gets.
+
+44
+00:01:55,390 --> 00:01:58,665
+Every one of those lines answers the same kind of question.
+
+45
+00:01:58,665 --> 00:02:01,941
+If this number goes up by one step, how much does that one tend
+
+46
+00:02:01,941 --> 00:02:02,520
+to move?
+
+47
+00:02:03,120 --> 00:02:05,982
+And it is the very first model in machine learning.
+
+48
+00:02:05,982 --> 00:02:09,472
+The same idea, misses, a score, and a search for the smallest
+
+49
+00:02:09,472 --> 00:02:11,610
+score, is how much bigger models learn.
+
+50
+00:02:12,410 --> 00:02:14,396
+So let us build it from nothing.
+
+51
+00:02:14,396 --> 00:02:15,940
+Back to our five houses.
+
+52
+00:02:16,290 --> 00:02:18,122
+Here is a line. Any line.
+
+53
+00:02:18,122 --> 00:02:20,330
+We need a way to say how good it is.
+
+54
+00:02:20,680 --> 00:02:22,358
+The line is a price guesser.
+
+55
+00:02:22,358 --> 00:02:24,880
+For every size, it points to a price.
+
+56
+00:02:25,230 --> 00:02:27,766
+So for each house, we compare two prices.
+
+57
+00:02:27,766 --> 00:02:30,930
+What the line guessed, and what the house really sold for.
+
+58
+00:02:31,280 --> 00:02:33,276
+The gap between them is the miss.
+
+59
+00:02:33,276 --> 00:02:37,490
+Statisticians call it the residual, the bit that is left over.
+
+60
+00:02:38,290 --> 00:02:41,687
+Notice the direction. The miss is measured straight up and down.
+
+61
+00:02:41,687 --> 00:02:43,570
+Not the shortest distance to the line.
+
+62
+00:02:43,920 --> 00:02:46,216
+Why? Because up and down is price.
+
+63
+00:02:46,216 --> 00:02:50,600
+We are guessing prices, so we measure our mistake in dollars.
+
+64
+00:02:50,950 --> 00:02:53,365
+The size of each house is not in doubt.
+
+65
+00:02:53,365 --> 00:02:57,220
+We know it exactly. Only the price is being guessed.
+
+66
+00:02:57,820 --> 00:03:00,580
+There is a different method that uses the shortest,
+
+67
+00:03:00,580 --> 00:03:03,560
+slanted distance, for when both numbers are uncertain.
+
+68
+00:03:03,560 --> 00:03:06,540
+But that is a different tool, for a different job.
+
+69
+00:03:07,140 --> 00:03:09,649
+Now draw the miss for every house.
+
+70
+00:03:09,649 --> 00:03:13,650
+Some dots sit above the line, and their miss is positive.
+
+71
+00:03:14,000 --> 00:03:16,810
+Others are below the line, and their miss is negative.
+
+72
+00:03:17,160 --> 00:03:18,976
+A good line should have small misses.
+
+73
+00:03:18,976 --> 00:03:21,390
+So let us add them up into one score.
+
+74
+00:03:21,740 --> 00:03:23,451
+Try the simplest line of all.
+
+75
+00:03:23,451 --> 00:03:27,300
+A flat line at the average price, two hundred fifty thousand.
+
+76
+00:03:27,650 --> 00:03:31,400
+In our mean versus median video, the average was the single
+
+77
+00:03:31,400 --> 00:03:33,826
+number that best stood in for a whole group.
+
+78
+00:03:33,826 --> 00:03:35,590
+Here it is, as a line.
+
+79
+00:03:35,940 --> 00:03:37,811
+It ignores size completely.
+
+80
+00:03:37,811 --> 00:03:39,499
+Every house gets the same guess.
+
+81
+00:03:39,499 --> 00:03:40,820
+So it should score badly.
+
+82
+00:03:41,170 --> 00:03:43,754
+Let us look at the misses for this flat line,
+
+83
+00:03:43,754 --> 00:03:47,412
+one house at a time. The smallest house is a hundred and ten
+
+84
+00:03:47,412 --> 00:03:51,070
+thousand below it. The biggest is a hundred and ten thousand
+
+85
+00:03:51,070 --> 00:03:51,720
+above.
+
+86
+00:03:52,070 --> 00:03:56,071
+Add up the misses. Minus one ten, minus thirty,
+
+87
+00:03:56,071 --> 00:03:58,878
+zero, plus thirty, plus one ten.
+
+88
+00:03:58,878 --> 00:04:00,530
+The total is zero.
+
+89
+00:04:01,530 --> 00:04:05,100
+Zero. A perfect score, for a line that is plainly bad.
+
+90
+00:04:05,450 --> 00:04:07,671
+The pluses and minuses cancelled out.
+
+91
+00:04:07,671 --> 00:04:10,255
+The misses above wiped out the misses below.
+
+92
+00:04:10,255 --> 00:04:11,930
+So a plain sum is useless.
+
+93
+00:04:12,930 --> 00:04:15,620
+We need every miss to count against the line,
+
+94
+00:04:15,620 --> 00:04:17,281
+whatever its direction.
+
+95
+00:04:17,281 --> 00:04:20,588
+The fix is the one from our standard deviation video.
+
+96
+00:04:20,588 --> 00:04:21,220
+Square them.
+
+97
+00:04:21,570 --> 00:04:25,232
+Each orange miss becomes a square, with the miss as its side.
+
+98
+00:04:25,232 --> 00:04:27,170
+Its area is the squared miss.
+
+99
+00:04:27,520 --> 00:04:30,570
+A square is never negative, so nothing can cancel.
+
+100
+00:04:30,920 --> 00:04:32,641
+And squaring does something else.
+
+101
+00:04:32,641 --> 00:04:35,300
+It punishes big misses much more than small ones.
+
+102
+00:04:35,650 --> 00:04:38,167
+One miss of twenty costs four hundred.
+
+103
+00:04:38,167 --> 00:04:41,604
+Two misses of ten cost only two hundred together.
+
+104
+00:04:41,604 --> 00:04:45,040
+So the best line hates being far from any one house.
+
+105
+00:04:45,840 --> 00:04:47,320
+Add up all the squares.
+
+106
+00:04:47,320 --> 00:04:48,800
+That total is our score.
+
+107
+00:04:48,800 --> 00:04:52,810
+It is called the sum of squared errors, and smaller is better.
+
+108
+00:04:53,160 --> 00:04:55,820
+For the flat line, the score is twenty six thousand.
+
+109
+00:04:56,620 --> 00:04:58,137
+Now give the line some tilt.
+
+110
+00:04:58,137 --> 00:05:01,164
+Here is a line through the cheapest and the most expensive
+
+111
+00:05:01,164 --> 00:05:01,600
+house.
+
+112
+00:05:01,950 --> 00:05:04,820
+It looks great. It passes right through three of the houses.
+
+113
+00:05:05,170 --> 00:05:06,997
+Two misses of twenty five.
+
+114
+00:05:06,997 --> 00:05:09,962
+Squared, that is six hundred twenty five each.
+
+115
+00:05:09,962 --> 00:05:11,560
+The score is twelve fifty.
+
+116
+00:05:12,360 --> 00:05:14,344
+Much better. But is it the best?
+
+117
+00:05:14,344 --> 00:05:17,680
+Let us go too far the other way, a line that is too steep.
+
+118
+00:05:18,030 --> 00:05:21,438
+Its score jumps to seven thousand two hundred fifty.
+
+119
+00:05:21,438 --> 00:05:23,840
+Too steep is bad, too flat is bad.
+
+120
+00:05:24,440 --> 00:05:26,880
+So let the line search for itself.
+
+121
+00:05:26,880 --> 00:05:31,147
+It can do two things. It can pivot, to change its tilt.
+
+122
+00:05:31,147 --> 00:05:33,530
+And it can slide, up and down.
+
+123
+00:05:33,880 --> 00:05:36,025
+Watch the score as it pivots.
+
+124
+00:05:36,025 --> 00:05:39,160
+The squares shrink, grow, and shrink again.
+
+125
+00:05:39,510 --> 00:05:42,620
+Now it slides. Too high is worse, too low is worse.
+
+126
+00:05:42,970 --> 00:05:45,053
+Think of the score as a valley.
+
+127
+00:05:45,053 --> 00:05:48,066
+Every possible line is a spot on the ground,
+
+128
+00:05:48,066 --> 00:05:50,382
+and the score is how high that spot is.
+
+129
+00:05:50,382 --> 00:05:52,930
+We are looking for the lowest point.
+
+130
+00:05:53,530 --> 00:05:57,270
+And at one spot, the score cannot get any smaller.
+
+131
+00:05:57,870 --> 00:06:01,414
+The misses are minus ten, plus twenty, zero,
+
+132
+00:06:01,414 --> 00:06:03,408
+minus twenty, and plus ten.
+
+133
+00:06:03,408 --> 00:06:06,510
+Squared and added, the score is one thousand.
+
+134
+00:06:08,010 --> 00:06:11,332
+That is it. The line with the smallest sum of squared errors is
+
+135
+00:06:11,332 --> 00:06:14,680
+the least squares line, and finding it is linear regression.
+
+136
+00:06:16,180 --> 00:06:18,021
+Be honest about one thing.
+
+137
+00:06:18,021 --> 00:06:21,501
+Squaring is a choice. If we added plain distances instead,
+
+138
+00:06:21,501 --> 00:06:24,980
+the end to end line would actually win, fifty to sixty.
+
+139
+00:06:25,330 --> 00:06:28,026
+It is the same choice as mean versus median.
+
+140
+00:06:28,026 --> 00:06:31,623
+Squared misses behave like the mean, and plain distances like
+
+141
+00:06:31,623 --> 00:06:35,664
+the median. Squares are the standard, because they give one
+
+142
+00:06:35,664 --> 00:06:37,910
+clean answer with a simple formula.
+
+143
+00:06:38,710 --> 00:06:40,984
+We do not have to search by sliding, though.
+
+144
+00:06:40,984 --> 00:06:43,956
+For a straight line, there is a formula that lands on the best
+
+145
+00:06:43,956 --> 00:06:44,910
+line directly.
+
+146
+00:06:45,260 --> 00:06:47,511
+Step one. Find the average house.
+
+147
+00:06:47,511 --> 00:06:49,944
+The average size is two thousand square feet,
+
+148
+00:06:49,944 --> 00:06:52,980
+and the average price is two hundred fifty thousand.
+
+149
+00:06:53,330 --> 00:06:56,684
+Here is a lovely fact. The best line always passes right through
+
+150
+00:06:56,684 --> 00:06:59,670
+the average house. So now we only need its tilt.
+
+151
+00:07:00,470 --> 00:07:04,219
+Step two. For each house, measure how far it is from the
+
+152
+00:07:04,219 --> 00:07:06,950
+average, both in size and in price.
+
+153
+00:07:07,300 --> 00:07:10,589
+To keep the numbers small, size is counted in hundreds of square
+
+154
+00:07:10,589 --> 00:07:12,870
+feet, and price in thousands of dollars.
+
+155
+00:07:13,220 --> 00:07:17,500
+Step three. Multiply each pair together, and add them all up.
+
+156
+00:07:17,850 --> 00:07:21,175
+Eleven hundred, plus one fifty, plus zero,
+
+157
+00:07:21,175 --> 00:07:23,870
+plus one fifty, plus eleven hundred.
+
+158
+00:07:23,870 --> 00:07:25,730
+That is two thousand five hundred.
+
+159
+00:07:26,080 --> 00:07:29,209
+When a house is bigger than average and also pricier,
+
+160
+00:07:29,209 --> 00:07:30,786
+the product is positive.
+
+161
+00:07:30,786 --> 00:07:32,170
+That pulls the line upward.
+
+162
+00:07:32,520 --> 00:07:37,002
+Houses that are smaller than average and also cheaper give a
+
+163
+00:07:37,002 --> 00:07:40,929
+positive product too. Minus times minus is plus.
+
+164
+00:07:40,929 --> 00:07:44,855
+Only a house that breaks the pattern, bigger but cheaper,
+
+165
+00:07:44,855 --> 00:07:46,320
+would pull the line down.
+
+166
+00:07:46,920 --> 00:07:50,533
+Step four. Square each size distance, and add them up.
+
+167
+00:07:50,533 --> 00:07:54,145
+One hundred, plus twenty five, plus zero,
+
+168
+00:07:54,145 --> 00:07:57,001
+plus twenty five, plus one hundred.
+
+169
+00:07:57,001 --> 00:07:59,100
+That is two hundred fifty.
+
+170
+00:07:59,450 --> 00:08:03,042
+That second number is just how spread out the sizes are,
+
+171
+00:08:03,042 --> 00:08:05,060
+a close cousin of the variance.
+
+172
+00:08:05,410 --> 00:08:09,554
+Step five. Divide. Two thousand five hundred over two hundred
+
+173
+00:08:09,554 --> 00:08:11,970
+fifty is ten. That is the slope.
+
+174
+00:08:12,970 --> 00:08:16,766
+Last step. Start at the average house and walk back to zero
+
+175
+00:08:16,766 --> 00:08:20,525
+size. Two hundred fifty, minus ten times twenty,
+
+176
+00:08:20,525 --> 00:08:23,110
+is fifty. That is the intercept.
+
+177
+00:08:24,110 --> 00:08:25,706
+Check it on the picture.
+
+178
+00:08:25,706 --> 00:08:29,136
+Start at the average house, two thousand square feet and two
+
+179
+00:08:29,136 --> 00:08:30,732
+hundred fifty thousand.
+
+180
+00:08:30,732 --> 00:08:34,383
+Walk back two thousand square feet, twenty steps of a hundred,
+
+181
+00:08:34,383 --> 00:08:36,667
+and the price drops ten thousand each step.
+
+182
+00:08:36,667 --> 00:08:38,263
+Two hundred thousand gone.
+
+183
+00:08:38,263 --> 00:08:39,400
+Fifty is left.
+
+184
+00:08:40,200 --> 00:08:42,087
+Here is the whole recipe as symbols.
+
+185
+00:08:42,087 --> 00:08:44,530
+Each one is just a word we already met.
+
+186
+00:08:44,880 --> 00:08:47,084
+x is size and y is price.
+
+187
+00:08:47,084 --> 00:08:50,642
+x bar and y bar, with the little line on top,
+
+188
+00:08:50,642 --> 00:08:55,900
+are the averages. And the big sigma means add them all up.
+
+189
+00:08:56,250 --> 00:08:59,760
+b is the slope, and a is the intercept.
+
+190
+00:08:59,760 --> 00:09:03,550
+Ten and fifty. Exactly the line our search found.
+
+191
+00:09:04,550 --> 00:09:08,667
+So our line says, price equals fifty, plus ten times size,
+
+192
+00:09:08,667 --> 00:09:11,850
+in thousands of dollars and hundreds of square feet.
+
+193
+00:09:12,200 --> 00:09:15,026
+In plain dollars, that is fifty thousand dollars,
+
+194
+00:09:15,026 --> 00:09:17,830
+plus one hundred dollars for every square foot.
+
+195
+00:09:18,180 --> 00:09:19,415
+What does the slope mean?
+
+196
+00:09:19,415 --> 00:09:22,679
+Ten means, every extra hundred square feet adds about ten
+
+197
+00:09:22,679 --> 00:09:24,320
+thousand dollars to the price.
+
+198
+00:09:25,120 --> 00:09:27,315
+It is a rate. Dollars per square foot.
+
+199
+00:09:27,315 --> 00:09:30,070
+It is the single most useful number on the line.
+
+200
+00:09:30,420 --> 00:09:33,917
+And the intercept? It is where the line crosses zero size.
+
+201
+00:09:33,917 --> 00:09:37,210
+Fifty thousand dollars, for a house with no floor at all.
+
+202
+00:09:37,560 --> 00:09:38,866
+That house does not exist.
+
+203
+00:09:38,866 --> 00:09:41,942
+The intercept is often just a starting point that makes the line
+
+204
+00:09:41,942 --> 00:09:44,010
+fit. Do not read too much into it.
+
+205
+00:09:44,810 --> 00:09:46,856
+Now the question we started with.
+
+206
+00:09:46,856 --> 00:09:49,130
+Your house is eighteen hundred square feet.
+
+207
+00:09:49,480 --> 00:09:51,571
+Fifty, plus ten times eighteen.
+
+208
+00:09:51,571 --> 00:09:55,094
+That is fifty plus one eighty, which is two hundred thirty
+
+209
+00:09:55,094 --> 00:09:56,140
+thousand dollars.
+
+210
+00:09:57,640 --> 00:10:01,295
+So the first agent was a bit high, and the second was too low.
+
+211
+00:10:01,295 --> 00:10:02,720
+And now you can show why.
+
+212
+00:10:03,070 --> 00:10:06,160
+Let us test the line on a house we already know.
+
+213
+00:10:06,160 --> 00:10:07,925
+Twenty five hundred square feet.
+
+214
+00:10:07,925 --> 00:10:10,795
+The line says fifty plus ten times twenty five,
+
+215
+00:10:10,795 --> 00:10:12,560
+which is three hundred thousand.
+
+216
+00:10:12,910 --> 00:10:15,381
+It really sold for two hundred eighty thousand.
+
+217
+00:10:15,381 --> 00:10:17,851
+So that house sold twenty thousand below the line.
+
+218
+00:10:17,851 --> 00:10:21,700
+That is its miss, minus twenty, the same one we squared earlier.
+
+219
+00:10:22,500 --> 00:10:26,153
+One honest note. The real houses missed the line by up to twenty
+
+220
+00:10:26,153 --> 00:10:28,882
+thousand. So treat two hundred thirty as a centre,
+
+221
+00:10:28,882 --> 00:10:31,420
+give or take about twenty, not a promise.
+
+222
+00:10:32,220 --> 00:10:34,859
+Eighteen hundred square feet sits inside our data,
+
+223
+00:10:34,859 --> 00:10:37,096
+between houses we have actually seen.
+
+224
+00:10:37,096 --> 00:10:40,560
+Guessing there is called prediction, or interpolation.
+
+225
+00:10:40,910 --> 00:10:43,615
+Now try a mansion. Ten thousand square feet.
+
+226
+00:10:43,615 --> 00:10:46,780
+The line says one point zero five million dollars.
+
+227
+00:10:47,130 --> 00:10:51,122
+Maybe. But we have never seen a house that big on this street.
+
+228
+00:10:51,122 --> 00:10:53,880
+We do not know if the straight line keeps going.
+
+229
+00:10:54,230 --> 00:10:56,310
+Prices might level off, or jump.
+
+230
+00:10:56,310 --> 00:10:59,810
+The line has no idea. Guessing outside your data is called
+
+231
+00:10:59,810 --> 00:11:02,300
+extrapolation, and it is risky.
+
+232
+00:11:03,100 --> 00:11:04,961
+It goes wrong the other way too.
+
+233
+00:11:04,961 --> 00:11:07,453
+A two hundred square foot shed, by this line,
+
+234
+00:11:07,453 --> 00:11:09,520
+would cost seventy thousand dollars.
+
+235
+00:11:09,870 --> 00:11:11,704
+There is a deeper reason too.
+
+236
+00:11:11,704 --> 00:11:15,554
+The line only ever saw five ordinary houses on one street.
+
+237
+00:11:15,554 --> 00:11:18,800
+It cannot know anything the data never showed it.
+
+238
+00:11:19,400 --> 00:11:21,335
+A line is a local summary.
+
+239
+00:11:21,335 --> 00:11:23,650
+It is only trusted where the dots are.
+
+240
+00:11:24,650 --> 00:11:27,966
+One more warning, and it is a big one.
+
+241
+00:11:27,966 --> 00:11:30,822
+A line tells you that two things move together.
+
+242
+00:11:30,822 --> 00:11:32,480
+It does not tell you why.
+
+243
+00:11:32,830 --> 00:11:36,410
+Here, it feels obvious that more space makes a house cost more.
+
+244
+00:11:36,410 --> 00:11:38,200
+But the line did not prove it.
+
+245
+00:11:38,200 --> 00:11:39,990
+We knew it from common sense.
+
+246
+00:11:40,340 --> 00:11:43,729
+Lines can link things that have nothing to do with each other.
+
+247
+00:11:43,729 --> 00:11:46,907
+Ice cream sales and sunburns rise and fall together,
+
+248
+00:11:46,907 --> 00:11:49,240
+with a lovely straight line between them.
+
+249
+00:11:49,590 --> 00:11:51,930
+Ice cream does not cause sunburn.
+
+250
+00:11:51,930 --> 00:11:53,740
+Hot sunny days cause both.
+
+251
+00:11:54,540 --> 00:11:56,612
+The same thing can hide in house prices.
+
+252
+00:11:56,612 --> 00:12:00,551
+Bigger houses are often newer, or in better neighbourhoods.
+
+253
+00:12:00,551 --> 00:12:03,844
+Some of the hundred dollars per square foot may really belong to
+
+254
+00:12:03,844 --> 00:12:04,270
+those.
+
+255
+00:12:04,620 --> 00:12:07,605
+Separating those effects needs more than one input,
+
+256
+00:12:07,605 --> 00:12:10,590
+and that is a later video on multiple regression.
+
+257
+00:12:11,190 --> 00:12:15,090
+So read the slope as, houses that are bigger tend to cost this
+
+258
+00:12:15,090 --> 00:12:18,980
+much more. Not, adding a room will raise the price by exactly
+
+259
+00:12:18,980 --> 00:12:19,430
+this.
+
+260
+00:12:20,430 --> 00:12:25,010
+Now let us see where this exact idea shows up in the real world.
+
+261
+00:12:25,360 --> 00:12:29,065
+In machine learning, a linear regression is the first model you
+
+262
+00:12:29,065 --> 00:12:31,965
+train. The five houses are the training data,
+
+263
+00:12:31,965 --> 00:12:33,620
+and the line is the model.
+
+264
+00:12:33,970 --> 00:12:36,791
+The sum of squared errors is called a loss.
+
+265
+00:12:36,791 --> 00:12:39,829
+Training means finding the settings with the smallest loss,
+
+266
+00:12:39,829 --> 00:12:42,650
+exactly like our line pivoting and sliding.
+
+267
+00:12:43,000 --> 00:12:45,221
+In data science, it is the trend line.
+
+268
+00:12:45,221 --> 00:12:48,189
+How much do sales rise for each extra thousand dollars of
+
+269
+00:12:48,189 --> 00:12:50,410
+advertising? The slope answers it.
+
+270
+00:12:50,760 --> 00:12:54,286
+In finance, analysts plot a stock's daily moves against the
+
+271
+00:12:54,286 --> 00:12:57,411
+whole market's moves. The slope of that line has a name,
+
+272
+00:12:57,411 --> 00:13:00,937
+beta. A beta above one means the stock swings more than the
+
+273
+00:13:00,937 --> 00:13:01,570
+market.
+
+274
+00:13:01,920 --> 00:13:06,136
+In computer science, engineers time a program on bigger and
+
+275
+00:13:06,136 --> 00:13:08,354
+bigger inputs and fit a line.
+
+276
+00:13:08,354 --> 00:13:12,321
+The slope is the cost per item, and it tells them how long a
+
+277
+00:13:12,321 --> 00:13:13,540
+huge job will take.
+
+278
+00:13:13,890 --> 00:13:16,607
+But notice that last one is an extrapolation.
+
+279
+00:13:16,607 --> 00:13:19,900
+Engineers check it, for the same reason we did with the mansion.
+
+280
+00:13:20,700 --> 00:13:23,753
+Measuring how good a line is deserves its own video.
+
+281
+00:13:23,753 --> 00:13:26,618
+For now, notice that our line cut the score from twenty six
+
+282
+00:13:26,618 --> 00:13:28,160
+thousand to one thousand.
+
+283
+00:13:28,960 --> 00:13:31,130
+Here are the mistakes beginners make most often.
+
+284
+00:13:31,480 --> 00:13:34,590
+Mistake one. Forcing a straight line onto a curve.
+
+285
+00:13:34,940 --> 00:13:38,463
+The formula will always give you a line, even when the dots
+
+286
+00:13:38,463 --> 00:13:40,142
+bend. It never warns you.
+
+287
+00:13:40,142 --> 00:13:42,220
+So always look at the picture first.
+
+288
+00:13:42,570 --> 00:13:46,282
+Picture a scatter that rises steeply and then flattens out,
+
+289
+00:13:46,282 --> 00:13:48,830
+like test scores against hours of study.
+
+290
+00:13:48,830 --> 00:13:52,076
+A straight line cuts through the bend, too low in the middle and
+
+291
+00:13:52,076 --> 00:13:53,460
+too high at both ends.
+
+292
+00:13:54,060 --> 00:13:57,502
+If the misses are all positive in the middle and negative at the
+
+293
+00:13:57,502 --> 00:13:59,210
+ends, the line is the wrong shape.
+
+294
+00:14:00,010 --> 00:14:03,961
+Mistake two. Forgetting how much one odd point can pull the
+
+295
+00:14:03,961 --> 00:14:04,430
+line.
+
+296
+00:14:04,780 --> 00:14:07,226
+Say the three thousand square foot house had a gold-plated
+
+297
+00:14:07,226 --> 00:14:10,080
+kitchen and sold for five hundred sixty thousand instead.
+
+298
+00:14:10,430 --> 00:14:14,014
+Because every miss gets squared, that one house has a huge
+
+299
+00:14:14,014 --> 00:14:17,598
+effect on the line. The slope jumps from one hundred to one
+
+300
+00:14:17,598 --> 00:14:19,710
+hundred eighty dollars per square foot.
+
+301
+00:14:20,060 --> 00:14:22,610
+And your fair price moves from two hundred thirty thousand to
+
+302
+00:14:22,610 --> 00:14:23,850
+two hundred fifty four.
+
+303
+00:14:24,200 --> 00:14:27,557
+It is the same reason one billionaire drags up an average
+
+304
+00:14:27,557 --> 00:14:30,170
+income. Check odd points before you trust the slope.
+
+305
+00:14:30,970 --> 00:14:34,382
+Mistake three. Trusting the line far outside the data,
+
+306
+00:14:34,382 --> 00:14:35,974
+or reading it as cause.
+
+307
+00:14:35,974 --> 00:14:39,386
+We just saw both. A line describes the dots you have,
+
+308
+00:14:39,386 --> 00:14:40,520
+and nothing more.
+
+309
+00:14:41,320 --> 00:14:44,567
+And a bonus one. Measuring the misses slanted,
+
+310
+00:14:44,567 --> 00:14:46,191
+instead of straight up and down.
+
+311
+00:14:46,191 --> 00:14:49,820
+The miss is always in the units of what you are predicting.
+
+312
+00:14:50,620 --> 00:14:52,490
+Let us put the whole method on one card.
+
+313
+00:14:52,840 --> 00:14:56,460
+One. Plot the dots, and check they look like a line.
+
+314
+00:14:56,810 --> 00:14:59,185
+Two. Measure each miss straight up and down,
+
+315
+00:14:59,185 --> 00:15:00,910
+in the units you predict.
+
+316
+00:15:01,260 --> 00:15:03,607
+Three. Square the misses and add them.
+
+317
+00:15:03,607 --> 00:15:04,780
+That is the score.
+
+318
+00:15:05,130 --> 00:15:07,519
+Four. Find the line with the smallest score.
+
+319
+00:15:07,519 --> 00:15:11,203
+Slope from the formula, then the intercept from the average
+
+320
+00:15:11,203 --> 00:15:11,640
+point.
+
+321
+00:15:11,990 --> 00:15:15,333
+Five. Read the slope as a rate, and predict only where you have
+
+322
+00:15:15,333 --> 00:15:15,940
+data.
+
+323
+00:15:16,740 --> 00:15:18,496
+A line does not know the truth.
+
+324
+00:15:18,496 --> 00:15:21,130
+It is just the one guess that misses least.
+
+325
+00:15:22,630 --> 00:15:26,603
+Look around your world, and notice how often one number seems to
+
+326
+00:15:26,603 --> 00:15:29,914
+climb with another, and ask whether it is a line,
+
+327
+00:15:29,914 --> 00:15:32,120
+a curve, or just a coincidence.
+
+328
+00:15:32,720 --> 00:15:34,736
+If this lesson made things clear for you,
+
+329
+00:15:34,736 --> 00:15:37,551
+please subscribe to Math Lab TV, so we can keep building
+
+330
+00:15:37,551 --> 00:15:38,370
+together.
+
+331
+00:15:39,170 --> 00:15:40,590
+But here's a puzzle for next time.
+
+332
+00:15:40,940 --> 00:15:44,479
+With five houses and one straight line, we had a formula.
+
+333
+00:15:44,479 --> 00:15:47,384
+But a modern AI model has millions of settings,
+
+334
+00:15:47,384 --> 00:15:49,050
+and no formula at all.
+
+335
+00:15:49,400 --> 00:15:51,640
+So how does it find its smallest score?
+
+336
+00:15:51,640 --> 00:15:53,206
+It does what our line did.
+
+337
+00:15:53,206 --> 00:15:56,564
+It feels which way is downhill, and takes a small step.
+
+338
+00:15:56,564 --> 00:15:58,130
+That is gradient descent.
+
+339
+00:15:58,930 --> 00:16:00,510
+I will see you in the next video.

@@ -1,0 +1,338 @@
+[
+  {
+    "id": "s001",
+    "chapter": "A Tired Uptrend",
+    "text": "Imagine a stock that has climbed for months, from thirty two dollars all the way to sixty.",
+    "visual": "Price chart on real axes (day, price $); line draws up from 32 to 60.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s002",
+    "chapter": "A Tired Uptrend",
+    "text": "It dips, then pushes to a new high of seventy.",
+    "visual": "Line dips to 52, climbs to 70; '70' tag pops.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s003",
+    "chapter": "A Tired Uptrend",
+    "text": "But the next push only reaches sixty one. It could not even make a new high.",
+    "visual": "Line dips to 52, climbs to 61; dashed line from 70 shows the gap; 'lower high' chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s004",
+    "chapter": "A Tired Uptrend",
+    "text": "Then it falls through a level it had bounced off twice before.",
+    "visual": "Two bounce points at 52 pulse; the line breaks below 52.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s005",
+    "chapter": "A Tired Uptrend",
+    "text": "Traders have a name for this shape. It looks like a person: two shoulders and a head.",
+    "visual": "Silhouette of a head and shoulders fades in over the three peaks.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s006",
+    "chapter": "A Tired Uptrend",
+    "text": "The head and shoulders pattern.",
+    "visual": "Title card: HEAD & SHOULDERS PATTERN / explained simply, with real numbers.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s007",
+    "chapter": "Welcome",
+    "text": "Welcome to Math Lab TV. Where math is something you can see.",
+    "visual": "Logo + MATH LAB TV + tagline.",
+    "pause_after": 0.7
+  },
+  {
+    "id": "s008",
+    "chapter": "Welcome",
+    "text": "Today you will learn how to spot the three peaks.",
+    "visual": "① mini three-peak line; 'spot the three peaks'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s009",
+    "chapter": "Welcome",
+    "text": "You will see why the neckline is the line that matters.",
+    "visual": "② mini chart with yellow neckline; 'the neckline'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s010",
+    "chapter": "Welcome",
+    "text": "And you will measure a price target with simple subtraction.",
+    "visual": "③ 70 − 52 = 18 → 52 − 18 = 34.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s011",
+    "chapter": "Three Peaks",
+    "text": "Let's slow down and read the chart one peak at a time.",
+    "visual": "Full chart; camera zooms to the first peak.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s012",
+    "chapter": "Three Peaks",
+    "text": "The first peak, at sixty, is the left shoulder. Buyers are still in control.",
+    "visual": "Blue marker 'left shoulder 60'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s013",
+    "chapter": "Three Peaks",
+    "text": "The second peak, at seventy, is the head. It is the highest point of the whole move.",
+    "visual": "Orange marker 'head 70'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s014",
+    "chapter": "Three Peaks",
+    "text": "The third peak, at sixty one, is the right shoulder. It is lower than the head.",
+    "visual": "Blue marker 'right shoulder 61'; arrow 70 → 61 labelled 'lower high'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s015",
+    "chapter": "Three Peaks",
+    "text": "That lower high is the first warning. Buyers tried again, and they ran out of strength.",
+    "visual": "Up-arrows shrinking: +18, then +9.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s016",
+    "chapter": "Three Peaks",
+    "text": "The shoulders do not need to match exactly. Real charts are never that neat.",
+    "visual": "Left and right shoulder bars side by side: 60 vs 61 'close enough'.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s017",
+    "chapter": "The Neckline",
+    "text": "Now look at the two dips between the peaks. Both stopped at fifty two.",
+    "visual": "Two dots at the troughs, labelled 52.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s018",
+    "chapter": "The Neckline",
+    "text": "Join them with a line, and you have the neckline.",
+    "visual": "Yellow neckline drawn through both dips.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s019",
+    "chapter": "The Neckline",
+    "text": "Here is the key idea. Until price closes below the neckline, there is no pattern yet.",
+    "visual": "Line beyond the right shoulder fades to grey; 'not confirmed' chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s020",
+    "chapter": "The Neckline",
+    "text": "It is only a shape that might become one.",
+    "visual": "Ghost path that bounces off 52 and goes back up.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s021",
+    "chapter": "The Neckline",
+    "text": "When the price closes below fifty two, the pattern is confirmed.",
+    "visual": "Line closes below 52; 'confirmed' chip turns yellow.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s022",
+    "chapter": "The Neckline",
+    "text": "Volume often tells the same story. Trading is lighter on the right shoulder, then jumps on the break.",
+    "visual": "Aqua volume bars under the chart: smaller at right shoulder, tall bar at the break.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s023",
+    "chapter": "The Neckline",
+    "text": "And sometimes the price comes back up to touch the neckline from below, before it falls away.",
+    "visual": "Pullback to 53 marked 'retest'; old floor now acts as a ceiling.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s024",
+    "chapter": "The Price Target",
+    "text": "So how far might it fall? There is a simple rule of thumb.",
+    "visual": "Chart; violet ruler appears.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s025",
+    "chapter": "The Price Target",
+    "text": "Measure the height of the head above the neckline.",
+    "visual": "Vertical violet bracket from 52 to 70.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s026",
+    "chapter": "The Price Target",
+    "text": "Seventy minus fifty two is eighteen dollars.",
+    "visual": "70 − 52 = 18 written beside the bracket.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s027",
+    "chapter": "The Price Target",
+    "text": "Now copy that same eighteen down from the neckline.",
+    "visual": "Bracket slides down below 52.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s028",
+    "chapter": "The Price Target",
+    "text": "Fifty two minus eighteen is thirty four. That is the price target.",
+    "visual": "52 − 18 = 34; violet dashed target line at 34.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s029",
+    "chapter": "The Price Target",
+    "text": "Traders also decide where they would be wrong. A common choice is just above the right shoulder, at sixty one.",
+    "visual": "Red stop line at 61.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s030",
+    "chapter": "The Price Target",
+    "text": "Selling at the break, at fifty two, risks nine dollars to aim for eighteen.",
+    "visual": "Red bar 9 (risk) vs violet bar 18 (reward).",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s031",
+    "chapter": "The Price Target",
+    "text": "That is two dollars of possible reward for every dollar of risk.",
+    "visual": "'2 : 1' badge.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s032",
+    "chapter": "Common Mistakes",
+    "text": "Three mistakes trip up beginners.",
+    "visual": "Three cards appear.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s033",
+    "chapter": "Common Mistakes",
+    "text": "Mistake one: acting before the neckline breaks. Many right shoulders simply turn back up.",
+    "visual": "Card 1, red: ghost path bounces off the neckline.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s034",
+    "chapter": "Common Mistakes",
+    "text": "Mistake two: finding the shape anywhere. It is a reversal pattern, so it needs an uptrend before it to reverse.",
+    "visual": "Card 2: same shape inside a downtrend, crossed out.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s035",
+    "chapter": "Common Mistakes",
+    "text": "Mistake three: treating the target as a promise. It is a rule of thumb. Price can stop short, or overshoot.",
+    "visual": "Card 3: target line with arrows above and below it.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s036",
+    "chapter": "Common Mistakes",
+    "text": "And a bonus: flip the chart upside down, and you get the inverse head and shoulders, a possible bottom after a fall.",
+    "visual": "Chart flips vertically; label 'inverse head and shoulders'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s037",
+    "chapter": "Recap",
+    "text": "Here is the whole recipe.",
+    "visual": "Numbered card appears.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s038",
+    "chapter": "Recap",
+    "text": "One. Start with an uptrend.",
+    "visual": "Step 1 lights up.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s039",
+    "chapter": "Recap",
+    "text": "Two. Find three peaks, with the head the highest.",
+    "visual": "Step 2.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s040",
+    "chapter": "Recap",
+    "text": "Three. Draw the neckline through the two dips.",
+    "visual": "Step 3.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s041",
+    "chapter": "Recap",
+    "text": "Four. Wait for a close below it.",
+    "visual": "Step 4.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s042",
+    "chapter": "Recap",
+    "text": "Five. Measure the head, copy it down, and set where you would be wrong.",
+    "visual": "Step 5.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s043",
+    "chapter": "Recap",
+    "text": "A pattern is not a prediction. It is a way to plan your risk.",
+    "visual": "Closing line in violet.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s044",
+    "chapter": "Subscribe",
+    "text": "Look around your world, and notice how often a rally runs out of steam before it turns.",
+    "visual": "Four cards: stock chart, house prices, a sports streak, a viral trend; stamp 'lower high?'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s045",
+    "chapter": "Subscribe",
+    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+    "visual": "Logo + SUBSCRIBE button clicked.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s046",
+    "chapter": "Next Time",
+    "text": "But here's a puzzle for next time.",
+    "visual": "Small logo top-centre; puzzle icon.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s047",
+    "chapter": "Next Time",
+    "text": "What if the price makes only two peaks, at the same height? That is the double top.",
+    "visual": "Mini chart with two equal peaks; 'next: double top' chip.",
+    "pause_after": 0.35
+  },
+  {
+    "id": "s048",
+    "chapter": "Next Time",
+    "text": "I will see you in the next video.",
+    "visual": "Logo + next chip hold.",
+    "pause_after": 2.0
+  }
+]

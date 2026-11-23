@@ -1,0 +1,315 @@
+1
+00:00:00,600 --> 00:00:02,920
+Imagine a stock that has climbed for months,
+
+2
+00:00:02,920 --> 00:00:05,430
+from thirty two dollars all the way to sixty.
+
+3
+00:00:05,780 --> 00:00:08,630
+It dips, then pushes to a new high of seventy.
+
+4
+00:00:08,980 --> 00:00:11,549
+But the next push only reaches sixty one.
+
+5
+00:00:11,549 --> 00:00:13,530
+It could not even make a new high.
+
+6
+00:00:13,880 --> 00:00:17,110
+Then it falls through a level it had bounced off twice before.
+
+7
+00:00:17,910 --> 00:00:19,934
+Traders have a name for this shape.
+
+8
+00:00:19,934 --> 00:00:23,080
+It looks like a person: two shoulders and a head.
+
+9
+00:00:23,680 --> 00:00:25,060
+The head and shoulders pattern.
+
+10
+00:00:26,060 --> 00:00:27,628
+Welcome to Math Lab TV.
+
+11
+00:00:27,628 --> 00:00:29,870
+Where math is something you can see.
+
+12
+00:00:30,570 --> 00:00:33,530
+Today you will learn how to spot the three peaks.
+
+13
+00:00:33,880 --> 00:00:36,660
+You will see why the neckline is the line that matters.
+
+14
+00:00:37,010 --> 00:00:40,120
+And you will measure a price target with simple subtraction.
+
+15
+00:00:40,720 --> 00:00:43,890
+Let's slow down and read the chart one peak at a time.
+
+16
+00:00:44,240 --> 00:00:47,723
+The first peak, at sixty, is the left shoulder.
+
+17
+00:00:47,723 --> 00:00:49,740
+Buyers are still in control.
+
+18
+00:00:50,090 --> 00:00:53,128
+The second peak, at seventy, is the head.
+
+19
+00:00:53,128 --> 00:00:55,510
+It is the highest point of the whole move.
+
+20
+00:00:55,860 --> 00:00:59,282
+The third peak, at sixty one, is the right shoulder.
+
+21
+00:00:59,282 --> 00:01:00,990
+It is lower than the head.
+
+22
+00:01:01,590 --> 00:01:03,970
+That lower high is the first warning.
+
+23
+00:01:03,970 --> 00:01:06,810
+Buyers tried again, and they ran out of strength.
+
+24
+00:01:07,610 --> 00:01:09,804
+The shoulders do not need to match exactly.
+
+25
+00:01:09,804 --> 00:01:11,460
+Real charts are never that neat.
+
+26
+00:01:11,810 --> 00:01:14,054
+Now look at the two dips between the peaks.
+
+27
+00:01:14,054 --> 00:01:15,690
+Both stopped at fifty two.
+
+28
+00:01:16,040 --> 00:01:18,640
+Join them with a line, and you have the neckline.
+
+29
+00:01:19,240 --> 00:01:22,975
+Here is the key idea. Until price closes below the neckline,
+
+30
+00:01:22,975 --> 00:01:24,430
+there is no pattern yet.
+
+31
+00:01:24,780 --> 00:01:26,840
+It is only a shape that might become one.
+
+32
+00:01:27,440 --> 00:01:30,740
+When the price closes below fifty two, the pattern is confirmed.
+
+33
+00:01:31,540 --> 00:01:33,538
+Volume often tells the same story.
+
+34
+00:01:33,538 --> 00:01:35,733
+Trading is lighter on the right shoulder,
+
+35
+00:01:35,733 --> 00:01:36,940
+then jumps on the break.
+
+36
+00:01:37,290 --> 00:01:40,336
+And sometimes the price comes back up to touch the neckline from
+
+37
+00:01:40,336 --> 00:01:42,210
+below, before it falls away.
+
+38
+00:01:42,810 --> 00:01:44,341
+So how far might it fall?
+
+39
+00:01:44,341 --> 00:01:46,090
+There is a simple rule of thumb.
+
+40
+00:01:46,440 --> 00:01:48,850
+Measure the height of the head above the neckline.
+
+41
+00:01:49,200 --> 00:01:51,620
+Seventy minus fifty two is eighteen dollars.
+
+42
+00:01:52,220 --> 00:01:55,480
+Now copy that same eighteen down from the neckline.
+
+43
+00:01:55,830 --> 00:01:58,341
+Fifty two minus eighteen is thirty four.
+
+44
+00:01:58,341 --> 00:01:59,810
+That is the price target.
+
+45
+00:02:00,810 --> 00:02:03,411
+Traders also decide where they would be wrong.
+
+46
+00:02:03,411 --> 00:02:06,228
+A common choice is just above the right shoulder,
+
+47
+00:02:06,228 --> 00:02:07,530
+at sixty one.
+
+48
+00:02:07,880 --> 00:02:12,037
+Selling at the break, at fifty two, risks nine dollars to aim
+
+49
+00:02:12,037 --> 00:02:13,000
+for eighteen.
+
+50
+00:02:13,350 --> 00:02:17,090
+That is two dollars of possible reward for every dollar of risk.
+
+51
+00:02:18,090 --> 00:02:19,650
+Three mistakes trip up beginners.
+
+52
+00:02:20,000 --> 00:02:23,473
+Mistake one: acting before the neckline breaks.
+
+53
+00:02:23,473 --> 00:02:26,220
+Many right shoulders simply turn back up.
+
+54
+00:02:26,570 --> 00:02:29,003
+Mistake two: finding the shape anywhere.
+
+55
+00:02:29,003 --> 00:02:32,811
+It is a reversal pattern, so it needs an uptrend before it to
+
+56
+00:02:32,811 --> 00:02:33,430
+reverse.
+
+57
+00:02:33,780 --> 00:02:36,998
+Mistake three: treating the target as a promise.
+
+58
+00:02:36,998 --> 00:02:39,754
+It is a rule of thumb. Price can stop short,
+
+59
+00:02:39,754 --> 00:02:40,900
+or overshoot.
+
+60
+00:02:41,700 --> 00:02:45,621
+And a bonus: flip the chart upside down, and you get the inverse
+
+61
+00:02:45,621 --> 00:02:48,890
+head and shoulders, a possible bottom after a fall.
+
+62
+00:02:49,690 --> 00:02:50,890
+Here is the whole recipe.
+
+63
+00:02:51,240 --> 00:02:53,250
+One. Start with an uptrend.
+
+64
+00:02:53,600 --> 00:02:57,230
+Two. Find three peaks, with the head the highest.
+
+65
+00:02:57,580 --> 00:03:00,640
+Three. Draw the neckline through the two dips.
+
+66
+00:03:00,990 --> 00:03:03,390
+Four. Wait for a close below it.
+
+67
+00:03:03,740 --> 00:03:08,197
+Five. Measure the head, copy it down, and set where you would be
+
+68
+00:03:08,197 --> 00:03:08,670
+wrong.
+
+69
+00:03:09,470 --> 00:03:11,326
+A pattern is not a prediction.
+
+70
+00:03:11,326 --> 00:03:13,000
+It is a way to plan your risk.
+
+71
+00:03:14,200 --> 00:03:17,743
+Look around your world, and notice how often a rally runs out of
+
+72
+00:03:17,743 --> 00:03:18,940
+steam before it turns.
+
+73
+00:03:19,540 --> 00:03:21,556
+If this lesson made things clear for you,
+
+74
+00:03:21,556 --> 00:03:24,371
+please subscribe to Math Lab TV, so we can keep building
+
+75
+00:03:24,371 --> 00:03:25,190
+together.
+
+76
+00:03:25,990 --> 00:03:27,480
+But here's a puzzle for next time.
+
+77
+00:03:27,830 --> 00:03:31,379
+What if the price makes only two peaks, at the same height?
+
+78
+00:03:31,379 --> 00:03:32,710
+That is the double top.
+
+79
+00:03:33,060 --> 00:03:34,790
+I will see you in the next video.

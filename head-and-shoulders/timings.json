@@ -1,0 +1,341 @@
+{
+ "total": 218.29,
+ "segments": [
+  {
+   "id": "s001",
+   "chapter": "A Tired Uptrend",
+   "start": 0.6,
+   "end": 5.43,
+   "text": "Imagine a stock that has climbed for months, from thirty two dollars all the way to sixty."
+  },
+  {
+   "id": "s002",
+   "chapter": "A Tired Uptrend",
+   "start": 5.78,
+   "end": 8.63,
+   "text": "It dips, then pushes to a new high of seventy."
+  },
+  {
+   "id": "s003",
+   "chapter": "A Tired Uptrend",
+   "start": 8.98,
+   "end": 13.53,
+   "text": "But the next push only reaches sixty one. It could not even make a new high."
+  },
+  {
+   "id": "s004",
+   "chapter": "A Tired Uptrend",
+   "start": 13.88,
+   "end": 17.11,
+   "text": "Then it falls through a level it had bounced off twice before."
+  },
+  {
+   "id": "s005",
+   "chapter": "A Tired Uptrend",
+   "start": 17.91,
+   "end": 23.08,
+   "text": "Traders have a name for this shape. It looks like a person: two shoulders and a head."
+  },
+  {
+   "id": "s006",
+   "chapter": "A Tired Uptrend",
+   "start": 23.68,
+   "end": 25.06,
+   "text": "The head and shoulders pattern."
+  },
+  {
+   "id": "s007",
+   "chapter": "Welcome",
+   "start": 26.06,
+   "end": 29.87,
+   "text": "Welcome to Math Lab TV. Where math is something you can see."
+  },
+  {
+   "id": "s008",
+   "chapter": "Welcome",
+   "start": 30.57,
+   "end": 33.53,
+   "text": "Today you will learn how to spot the three peaks."
+  },
+  {
+   "id": "s009",
+   "chapter": "Welcome",
+   "start": 33.88,
+   "end": 36.66,
+   "text": "You will see why the neckline is the line that matters."
+  },
+  {
+   "id": "s010",
+   "chapter": "Welcome",
+   "start": 37.01,
+   "end": 40.12,
+   "text": "And you will measure a price target with simple subtraction."
+  },
+  {
+   "id": "s011",
+   "chapter": "Three Peaks",
+   "start": 40.72,
+   "end": 43.89,
+   "text": "Let's slow down and read the chart one peak at a time."
+  },
+  {
+   "id": "s012",
+   "chapter": "Three Peaks",
+   "start": 44.24,
+   "end": 49.74,
+   "text": "The first peak, at sixty, is the left shoulder. Buyers are still in control."
+  },
+  {
+   "id": "s013",
+   "chapter": "Three Peaks",
+   "start": 50.09,
+   "end": 55.51,
+   "text": "The second peak, at seventy, is the head. It is the highest point of the whole move."
+  },
+  {
+   "id": "s014",
+   "chapter": "Three Peaks",
+   "start": 55.86,
+   "end": 60.99,
+   "text": "The third peak, at sixty one, is the right shoulder. It is lower than the head."
+  },
+  {
+   "id": "s015",
+   "chapter": "Three Peaks",
+   "start": 61.59,
+   "end": 66.81,
+   "text": "That lower high is the first warning. Buyers tried again, and they ran out of strength."
+  },
+  {
+   "id": "s016",
+   "chapter": "Three Peaks",
+   "start": 67.61,
+   "end": 71.46,
+   "text": "The shoulders do not need to match exactly. Real charts are never that neat."
+  },
+  {
+   "id": "s017",
+   "chapter": "The Neckline",
+   "start": 71.81,
+   "end": 75.69,
+   "text": "Now look at the two dips between the peaks. Both stopped at fifty two."
+  },
+  {
+   "id": "s018",
+   "chapter": "The Neckline",
+   "start": 76.04,
+   "end": 78.64,
+   "text": "Join them with a line, and you have the neckline."
+  },
+  {
+   "id": "s019",
+   "chapter": "The Neckline",
+   "start": 79.24,
+   "end": 84.43,
+   "text": "Here is the key idea. Until price closes below the neckline, there is no pattern yet."
+  },
+  {
+   "id": "s020",
+   "chapter": "The Neckline",
+   "start": 84.78,
+   "end": 86.84,
+   "text": "It is only a shape that might become one."
+  },
+  {
+   "id": "s021",
+   "chapter": "The Neckline",
+   "start": 87.44,
+   "end": 90.74,
+   "text": "When the price closes below fifty two, the pattern is confirmed."
+  },
+  {
+   "id": "s022",
+   "chapter": "The Neckline",
+   "start": 91.54,
+   "end": 96.94,
+   "text": "Volume often tells the same story. Trading is lighter on the right shoulder, then jumps on the break."
+  },
+  {
+   "id": "s023",
+   "chapter": "The Neckline",
+   "start": 97.29,
+   "end": 102.21,
+   "text": "And sometimes the price comes back up to touch the neckline from below, before it falls away."
+  },
+  {
+   "id": "s024",
+   "chapter": "The Price Target",
+   "start": 102.81,
+   "end": 106.09,
+   "text": "So how far might it fall? There is a simple rule of thumb."
+  },
+  {
+   "id": "s025",
+   "chapter": "The Price Target",
+   "start": 106.44,
+   "end": 108.85,
+   "text": "Measure the height of the head above the neckline."
+  },
+  {
+   "id": "s026",
+   "chapter": "The Price Target",
+   "start": 109.2,
+   "end": 111.62,
+   "text": "Seventy minus fifty two is eighteen dollars."
+  },
+  {
+   "id": "s027",
+   "chapter": "The Price Target",
+   "start": 112.22,
+   "end": 115.48,
+   "text": "Now copy that same eighteen down from the neckline."
+  },
+  {
+   "id": "s028",
+   "chapter": "The Price Target",
+   "start": 115.83,
+   "end": 119.81,
+   "text": "Fifty two minus eighteen is thirty four. That is the price target."
+  },
+  {
+   "id": "s029",
+   "chapter": "The Price Target",
+   "start": 120.81,
+   "end": 127.53,
+   "text": "Traders also decide where they would be wrong. A common choice is just above the right shoulder, at sixty one."
+  },
+  {
+   "id": "s030",
+   "chapter": "The Price Target",
+   "start": 127.88,
+   "end": 133.0,
+   "text": "Selling at the break, at fifty two, risks nine dollars to aim for eighteen."
+  },
+  {
+   "id": "s031",
+   "chapter": "The Price Target",
+   "start": 133.35,
+   "end": 137.09,
+   "text": "That is two dollars of possible reward for every dollar of risk."
+  },
+  {
+   "id": "s032",
+   "chapter": "Common Mistakes",
+   "start": 138.09,
+   "end": 139.65,
+   "text": "Three mistakes trip up beginners."
+  },
+  {
+   "id": "s033",
+   "chapter": "Common Mistakes",
+   "start": 140.0,
+   "end": 146.22,
+   "text": "Mistake one: acting before the neckline breaks. Many right shoulders simply turn back up."
+  },
+  {
+   "id": "s034",
+   "chapter": "Common Mistakes",
+   "start": 146.57,
+   "end": 153.43,
+   "text": "Mistake two: finding the shape anywhere. It is a reversal pattern, so it needs an uptrend before it to reverse."
+  },
+  {
+   "id": "s035",
+   "chapter": "Common Mistakes",
+   "start": 153.78,
+   "end": 160.9,
+   "text": "Mistake three: treating the target as a promise. It is a rule of thumb. Price can stop short, or overshoot."
+  },
+  {
+   "id": "s036",
+   "chapter": "Common Mistakes",
+   "start": 161.7,
+   "end": 168.89,
+   "text": "And a bonus: flip the chart upside down, and you get the inverse head and shoulders, a possible bottom after a fall."
+  },
+  {
+   "id": "s037",
+   "chapter": "Recap",
+   "start": 169.69,
+   "end": 170.89,
+   "text": "Here is the whole recipe."
+  },
+  {
+   "id": "s038",
+   "chapter": "Recap",
+   "start": 171.24,
+   "end": 173.25,
+   "text": "One. Start with an uptrend."
+  },
+  {
+   "id": "s039",
+   "chapter": "Recap",
+   "start": 173.6,
+   "end": 177.23,
+   "text": "Two. Find three peaks, with the head the highest."
+  },
+  {
+   "id": "s040",
+   "chapter": "Recap",
+   "start": 177.58,
+   "end": 180.64,
+   "text": "Three. Draw the neckline through the two dips."
+  },
+  {
+   "id": "s041",
+   "chapter": "Recap",
+   "start": 180.99,
+   "end": 183.39,
+   "text": "Four. Wait for a close below it."
+  },
+  {
+   "id": "s042",
+   "chapter": "Recap",
+   "start": 183.74,
+   "end": 188.67,
+   "text": "Five. Measure the head, copy it down, and set where you would be wrong."
+  },
+  {
+   "id": "s043",
+   "chapter": "Recap",
+   "start": 189.47,
+   "end": 193.0,
+   "text": "A pattern is not a prediction. It is a way to plan your risk."
+  },
+  {
+   "id": "s044",
+   "chapter": "Subscribe",
+   "start": 194.2,
+   "end": 198.94,
+   "text": "Look around your world, and notice how often a rally runs out of steam before it turns."
+  },
+  {
+   "id": "s045",
+   "chapter": "Subscribe",
+   "start": 199.54,
+   "end": 205.19,
+   "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together."
+  },
+  {
+   "id": "s046",
+   "chapter": "Next Time",
+   "start": 205.99,
+   "end": 207.48,
+   "text": "But here's a puzzle for next time."
+  },
+  {
+   "id": "s047",
+   "chapter": "Next Time",
+   "start": 207.83,
+   "end": 212.71,
+   "text": "What if the price makes only two peaks, at the same height? That is the double top."
+  },
+  {
+   "id": "s048",
+   "chapter": "Next Time",
+   "start": 213.06,
+   "end": 214.79,
+   "text": "I will see you in the next video."
+  }
+ ]
+}

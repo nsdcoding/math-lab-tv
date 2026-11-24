@@ -1,6 +1,6 @@
 # The Confusion Matrix Explained: Accuracy, Precision and Recall
 
-214 segments · 3918 words · est. 25.7 min (voice ≈165 wpm + 119 s pauses) · target 25–30 min
+218 segments · 4033 words · est. 26.5 min (voice ≈165 wpm + 121 s pauses) · target 25–30 min
 
 
 ## Two Fraud Detectors  ·  172 words, ~63 s
@@ -417,12 +417,14 @@
 - **s186** If you got those, you can now read any confusion matrix you'll ever see. ⏸0.6s
   - *Visual:* Green check stamp on the grid.
 
-## Where You'll Use It  ·  164 words, ~60 s
+## Where You'll Use It  ·  188 words, ~68 s
 
 - **s187** So where will you actually meet this table?
   - *Visual:* Four tiles: ML, DS, Finance, CS.
 - **s188** In machine learning, it's the first thing printed after training any classifier. Any model that answers yes or no. Is this a cat? Will this customer cancel?
   - *Visual:* ML tile: a model box outputs a 2×2 grid.
+- **s188a** Most machine learning tools print it with one line of code, as a grid of four numbers, exactly like the one we built today.
+  - *Visual:* Code-style card 'confusion_matrix(truth, guess)' outputs a 2×2 of numbers [[9,870, 30],[10, 90]] in Inter.
 - **s189** And when the thing you're predicting is rare, people report precision and recall, never accuracy alone. Exactly because of the lazy detector.
   - *Visual:* Mini lazy-detector badge '99%' crossed out.
 - **s190** In data science, it's how you explain a model to people who don't build models. Of every hundred alarms, this many are real. Of every hundred cases, we catch this many.
@@ -434,20 +436,26 @@
 - **s193** And beyond those four: medical tests, airport security, factory quality checks. Anywhere a yes or no decision can be wrong in two different ways. ⏸0.6s
   - *Visual:* Three more small icons fade in around the tiles.
 
-## Common Mistakes  ·  149 words, ~54 s
+## Common Mistakes  ·  240 words, ~87 s
 
 - **s194** Let's go through the mistakes beginners make most often.
   - *Visual:* Red 'common mistakes' header.
 - **s195** Mistake one: trusting accuracy when the class is rare. Always ask how rare it is, and compare with the lazy model that always says no. ⏸0.8s
   - *Visual:* Card ①: lazy 99% vs model 99.6%; arrow 'compare with the baseline'.
+- **s195a** For our fraud data, that lazy baseline is ninety-nine percent. So Detector A's ninety-nine point six only beats doing nothing by a sliver. The grid shows what that sliver is worth: ninety frauds caught. ⏸0.6s
+  - *Visual:* Accuracy axis 98–100: lazy 99 and A 99.6 markers; the gap labelled '90 frauds caught'.
 - **s196** Mistake two: mixing up precision and recall. Here's the fix. Precision starts from the alarms. Recall starts from the real cases.
   - *Visual:* Card ②: grid with 'start from the alarms' on the column, 'start from the real cases' on the row.
 - **s197** Ask yourself: am I dividing by everything the model flagged, or by everything that was really there? ⏸0.8s
   - *Visual:* Two denominators: 'all flagged' (violet) vs 'all really there' (orange).
+- **s197a** Here's a second check. Precision's bottom number is the size of the alarm column, one hundred and twenty. Recall's bottom number is the size of the fraud row, one hundred. ⏸0.6s
+  - *Visual:* Detector A grid: column total 120 (violet) and row total 100 (orange) circled.
 - **s198** Mistake three: assuming every table is laid out the same way. Some tools put the truth in the rows, some in the columns. Some put the positive class first, some last.
   - *Visual:* Card ③: our grid, then the same grid transposed and flipped; labels highlighted.
 - **s199** So before you read any number, read the labels. Find the alarm column and the real fraud row first. ⏸0.8s
   - *Visual:* Finger traces the axis labels.
+- **s199a** If you're ever unsure, find the box with the true positives first. Then ask: which way does its row go, and which way does its column go? ⏸0.6s
+  - *Visual:* TP box ringed; arrows along its row and down its column.
 - **s200** And a bonus mistake: judging a model by one number. Any single score, even F one, hides which mistake the model makes. Look at the whole grid. ⏸1.0s
   - *Visual:* Bonus card: F1 82% with a curtain pulled back to reveal the full grid.
 

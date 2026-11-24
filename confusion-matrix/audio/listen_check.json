@@ -1,0 +1,1493 @@
+[
+ {
+  "id": "s001",
+  "text": "Imagine you run the card team at a small bank.",
+  "heard": "Imagine you run the card team at a small bank.",
+  "diffs": []
+ },
+ {
+  "id": "s002",
+  "text": "Every day, ten thousand card payments go through. And about one in every hundred of them is fraud.",
+  "heard": "Every day, ten thousand card payments go through. And about one in every hundred of them is fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s003",
+  "text": "Two companies want to sell you a fraud detector.",
+  "heard": "two companies want to sell you a fraud detector.",
+  "diffs": []
+ },
+ {
+  "id": "s004",
+  "text": "The first one says: our model catches ninety percent of fraud.",
+  "heard": "The first one says, our model catches ninety percent of fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s005",
+  "text": "The second one says: ninety percent of our alarms are real fraud.",
+  "heard": "The second one says ninety percent of our alarms are real fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s006",
+  "text": "And both of them add: by the way, we are more than ninety-nine percent accurate.",
+  "heard": "And both of them add: By the way, we are more than ninety-nine percent accurate.",
+  "diffs": []
+ },
+ {
+  "id": "s007",
+  "text": "They sound like the same promise. Ninety, ninety, ninety-nine.",
+  "heard": "They sound like the same promise. ninety ninety ninety ninety",
+  "diffs": [
+   [
+    "nine",
+    "ninety"
+   ]
+  ]
+ },
+ {
+  "id": "s008",
+  "text": "But they are completely different promises. One of these detectors would let more than half of the fraud walk straight past you.",
+  "heard": "But they are completely different promises. One of these detectors would let more than half of the fraud walk straight past you.",
+  "diffs": []
+ },
+ {
+  "id": "s009",
+  "text": "And here's the strangest part. A detector that does nothing at all, that never raises a single alarm, is ninety-nine percent accurate too.",
+  "heard": "And here's the strangest part. A detector that does nothing at all, that never raises a single alarm, is ninety-nine percent accurate too.",
+  "diffs": []
+ },
+ {
+  "id": "s010",
+  "text": "At the end of our prosecutor's fallacy video, I left you with this exact puzzle. Today, we solve it.",
+  "heard": "At the end of our prosecutor's fallacy video, I left you with this exact puzzle. Today, we solve it.",
+  "diffs": []
+ },
+ {
+  "id": "s011",
+  "text": "With one small table, two by two, that tells you the whole truth about any yes or no prediction.",
+  "heard": "With one small table two by two that tells you the whole truth about any yes or no prediction.",
+  "diffs": []
+ },
+ {
+  "id": "s012",
+  "text": "It's called the confusion matrix.",
+  "heard": "It's called the confusion matrix.",
+  "diffs": []
+ },
+ {
+  "id": "s013",
+  "text": "Welcome to Math Lab TV. Where math is something you can see.",
+  "heard": "Welcome to Matlab TV, where math is something you can see.",
+  "diffs": [
+   [
+    "math lab",
+    "matlab"
+   ]
+  ]
+ },
+ {
+  "id": "s014",
+  "text": "Today you will learn the four boxes of the confusion matrix, and how to fill them from real counts.",
+  "heard": "Today you will learn the four boxes of the confusion matrix and how to fill them from real counts.",
+  "diffs": []
+ },
+ {
+  "id": "s015",
+  "text": "You will see why accuracy can lie, and what precision and recall tell you instead.",
+  "heard": "You will see why accuracy can lie and what precision and recall tell you instead.",
+  "diffs": []
+ },
+ {
+  "id": "s016",
+  "text": "And you will practise on four real examples, until you can read any of these tables on your own.",
+  "heard": "And you will practice on four real exams until you can read any of these tables on your own.",
+  "diffs": [
+   [
+    "practise",
+    "practice"
+   ],
+   [
+    "examples",
+    "exams"
+   ]
+  ]
+ },
+ {
+  "id": "s017",
+  "text": "Let's start with that lazy detector, because it shows the whole problem.",
+  "heard": "Let's start with that lazy detective, because it shows the whole problem.",
+  "diffs": [
+   [
+    "detector",
+    "detective"
+   ]
+  ]
+ },
+ {
+  "id": "s018",
+  "text": "Its rule is simple. Whatever the payment is, say: not fraud.",
+  "heard": "Its rule is simple, whatever the payment is, say not fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s019",
+  "text": "Out of ten thousand payments, nine thousand nine hundred really are fine. So it gets all of those right.",
+  "heard": "Out of ten thousand payments nine thousand nine hundred really are fine so it gets all of those right",
+  "diffs": []
+ },
+ {
+  "id": "s020",
+  "text": "The one hundred frauds, it gets wrong. Every single one.",
+  "heard": "The one hundred frauds. It gets wrong. Every single one.",
+  "diffs": []
+ },
+ {
+  "id": "s021",
+  "text": "Nine thousand nine hundred right, out of ten thousand. That's ninety-nine percent accuracy.",
+  "heard": "Nine thousand nine hundred right out of ten thousand. That's ninety-nine percent accuracy.",
+  "diffs": []
+ },
+ {
+  "id": "s022",
+  "text": "And it caught zero fraud. Not one.",
+  "heard": "And he caught zero fraud. Not one. Zero.",
+  "diffs": [
+   [
+    "",
+    "he"
+   ],
+   [
+    "",
+    "zero"
+   ]
+  ]
+ },
+ {
+  "id": "s023",
+  "text": "So accuracy, on its own, can't tell a useless detector from a good one.",
+  "heard": "So accuracy, on its own, can't tell a useless detector from a good one.",
+  "diffs": []
+ },
+ {
+  "id": "s024",
+  "text": "This happens whenever the thing you are looking for is rare.",
+  "heard": "This happens whenever the thing you are looking for is rare",
+  "diffs": []
+ },
+ {
+  "id": "s025",
+  "text": "Fraud is rare. Serious diseases are rare. Faulty parts on a factory line are rare. Hackers in your network logs are rare.",
+  "heard": "Fraud is rare. Serious diseases are rare. Faulty parts on a factory line are rare. Hackers in your network logs are rare.",
+  "diffs": []
+ },
+ {
+  "id": "s026",
+  "text": "And those are exactly the cases where getting it wrong costs the most.",
+  "heard": "And those are exactly the cases where getting it wrong costs the most.",
+  "diffs": []
+ },
+ {
+  "id": "s027",
+  "text": "In our Bayes video, we saw a test that was ninety percent accurate, where a positive result meant only about a one in twelve chance of being sick.",
+  "heard": "In your Bayes video, we saw a test that was ninety percent accurate, where a positive result meant only about a one in twelve chance of being sick.",
+  "diffs": [
+   [
+    "our",
+    "your"
+   ]
+  ]
+ },
+ {
+  "id": "s028",
+  "text": "The confusion matrix is the tool that keeps all of those numbers in one place, so nothing gets hidden.",
+  "heard": "The confusion matrix is the tool that keeps all of those numbers in one place so nothing gets hidden.",
+  "diffs": []
+ },
+ {
+  "id": "s029",
+  "text": "Every time a detector looks at a payment, two things are true.",
+  "heard": "Every time a detector looks at a payment two things are true.",
+  "diffs": []
+ },
+ {
+  "id": "s030",
+  "text": "First, what actually happened. Was it really fraud, or not?",
+  "heard": "First, what actually happened? Was it really fraud or not?",
+  "diffs": []
+ },
+ {
+  "id": "s031",
+  "text": "Second, what the detector said. Did it raise an alarm, or stay quiet?",
+  "heard": "Second, what the detector said. Did it raise an alarm? Or stay quiet?",
+  "diffs": []
+ },
+ {
+  "id": "s032",
+  "text": "Two questions, two answers each. That gives four possible outcomes. No more, no less.",
+  "heard": "Two questions, two answers each. That gives four possible outcomes. No more, no less.",
+  "diffs": []
+ },
+ {
+  "id": "s033",
+  "text": "Let's lay them out in a grid. The rows are the truth. The top row is real fraud. The bottom row is not fraud.",
+  "heard": "Let's lay them out in a grid. The rows are the truth. The top row is real fraud. The bottom row is not fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s034",
+  "text": "The columns are what the detector said. The left column is: alarm. The right column is: quiet.",
+  "heard": "The columns are what the detector said. The left column is alarm. The right column is quiet.",
+  "diffs": []
+ },
+ {
+  "id": "s035",
+  "text": "Now let's name each box carefully, because the names trip everyone up.",
+  "heard": "Now let's name each box carefully, because the names trip everyone up.",
+  "diffs": []
+ },
+ {
+  "id": "s036",
+  "text": "Top left. It really was fraud, and the detector raised an alarm. A correct catch. We call it a true positive.",
+  "heard": "Top left. It really was fraud, and the detector raised an alarm. A correct catch. We call it a true positive.",
+  "diffs": []
+ },
+ {
+  "id": "s037",
+  "text": "Positive means the detector said yes, this is the thing. True means it was right.",
+  "heard": "Positive means the detector said yes, this is the thing. True means it was right.",
+  "diffs": []
+ },
+ {
+  "id": "s038",
+  "text": "Bottom right. It was a normal payment, and the detector stayed quiet. Also correct. That's a true negative.",
+  "heard": "Bottom right. It was a normal payment, and the detector stayed quiet. Also correct, that's a true negative.",
+  "diffs": []
+ },
+ {
+  "id": "s039",
+  "text": "Now the mistakes. Bottom left. A perfectly normal payment, but the detector raised an alarm anyway.",
+  "heard": "Now the mistakes. Bottom left, a perfectly normal payment, but the detector raised an alarm anyway.",
+  "diffs": []
+ },
+ {
+  "id": "s040",
+  "text": "A false alarm. We call it a false positive. The detector said yes, and it was wrong.",
+  "heard": "A false alarm. We call it a false positive. The detector said yes, and it was wrong.",
+  "diffs": []
+ },
+ {
+  "id": "s041",
+  "text": "And top right. Real fraud, and the detector said nothing. The fraud slipped through.",
+  "heard": "In top right, real fraud, and the detector said nothing? The fraud slipped through.",
+  "diffs": []
+ },
+ {
+  "id": "s042",
+  "text": "A miss. We call it a false negative. The detector said no, and it was wrong.",
+  "heard": "A miss, we call it a false negative. The detector said no, and it was wrong.",
+  "diffs": []
+ },
+ {
+  "id": "s043",
+  "text": "Here's a trick to remember them. The second word is what the detector said. The first word is whether that was right.",
+  "heard": "Here's a trick to remember them. The second word is what the detector said. The first word is whether that was right.",
+  "diffs": []
+ },
+ {
+  "id": "s044",
+  "text": "So a false negative is: it said negative, and that was false. It said no, but the answer was yes.",
+  "heard": "So first negative is, it said negative and that was false. It said no, but the answer was yes.",
+  "diffs": [
+   [
+    "false",
+    "first"
+   ]
+  ]
+ },
+ {
+  "id": "s045",
+  "text": "Let's try it slowly with just ten payments, before we use the big numbers. Three of them are fraud.",
+  "heard": "Let's try it slowly with just ten payments before we use the big numbers. Three of them are fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s046",
+  "text": "Payment one is fraud, and the detector raises an alarm. Fraud row, alarm column. A true positive.",
+  "heard": "Payment one is fraud, and the detector raises an alarm. Fraud row, alarm column. A true positive.",
+  "diffs": []
+ },
+ {
+  "id": "s047",
+  "text": "Payment two is a normal coffee, and the detector stays quiet. Fine row, quiet column. A true negative.",
+  "heard": "Payment two is a normal coffee, and the detector stays quiet. Fine row, quiet column. A true negative.",
+  "diffs": []
+ },
+ {
+  "id": "s048",
+  "text": "Payment three is a normal payment, but it's a big one in another country, so the detector panics. A false positive.",
+  "heard": "Payment three is a normal payment, but it's a big one in another country, so the detector panics. A false positive.",
+  "diffs": []
+ },
+ {
+  "id": "s049",
+  "text": "Payment four is fraud, but a small one, and it slips through. A false negative.",
+  "heard": "Payment four is fraud. But a small one, and it slips through. A false negative.",
+  "diffs": []
+ },
+ {
+  "id": "s050",
+  "text": "We keep going, one payment at a time, until all ten are sorted.",
+  "heard": "We keep going. One payment at a time. Until all ten are sorted.",
+  "diffs": []
+ },
+ {
+  "id": "s051",
+  "text": "Two true positives, one false negative, two false positives, and five true negatives. Two plus one plus two plus five is ten. Every payment has exactly one home.",
+  "heard": "Two true positives, one false negative, two false positives, and five true negatives. Two plus one plus two plus five is ten. Every payment has exactly one home.",
+  "diffs": []
+ },
+ {
+  "id": "s052",
+  "text": "The two correct boxes sit on one diagonal. The two kinds of mistake sit on the other.",
+  "heard": "The two correct boxes sit on one diagonal. The two kinds of mistake sit on the other.",
+  "diffs": []
+ },
+ {
+  "id": "s053",
+  "text": "Now let's fill this grid with Detector A, the one that catches ninety percent of fraud.",
+  "heard": "Now let's fill this grid with detector A, the one that catches ninety percent of fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s054",
+  "text": "We run it on our ten thousand payments, and sort every payment into one of the four boxes.",
+  "heard": "We run it on our ten thousand payments and sort every payment into one of the four boxes.",
+  "diffs": []
+ },
+ {
+  "id": "s055",
+  "text": "Start with the one hundred real frauds. They all belong in the top row.",
+  "heard": "Start with the one hundred euro frauds. They all belong in the top row.",
+  "diffs": [
+   [
+    "real",
+    "euro"
+   ]
+  ]
+ },
+ {
+  "id": "s056",
+  "text": "Detector A raises an alarm on ninety of them. Ninety true positives.",
+  "heard": "Detector A raises an alarm on ninety of them. Ninety true positives.",
+  "diffs": []
+ },
+ {
+  "id": "s057",
+  "text": "The other ten get through. Ten false negatives.",
+  "heard": "The other ten get through. Ten false negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s058",
+  "text": "Now the nine thousand nine hundred normal payments. They belong in the bottom row.",
+  "heard": "Now the nine thousand nine hundred normal payments. They belong in the bottom row.",
+  "diffs": []
+ },
+ {
+  "id": "s059",
+  "text": "Detector A wrongly flags thirty of them. Thirty false positives. Thirty customers who get a worried phone call for nothing.",
+  "heard": "Detector A wrongly flags thirty of them. Thirty false positives. Thirty customers who get a worried phone call for nothing.",
+  "diffs": []
+ },
+ {
+  "id": "s060",
+  "text": "And the remaining nine thousand eight hundred and seventy are correctly left alone. True negatives.",
+  "heard": "And the remaining nine thousand eight hundred and seventy are correctly left alone. True negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s061",
+  "text": "Let's check our work. Ninety plus ten is one hundred. That's every fraud.",
+  "heard": "Let's check our work. Ninety plus ten is one hundred. That's every fraud.",
+  "diffs": []
+ },
+ {
+  "id": "s062",
+  "text": "Thirty plus nine thousand eight hundred and seventy is nine thousand nine hundred. That's every normal payment.",
+  "heard": "thirty plus nine thousand eight hundred seventy is nine thousand nine hundred that's every normal payment",
+  "diffs": []
+ },
+ {
+  "id": "s063",
+  "text": "And all four boxes together make ten thousand. Every payment lands in exactly one box.",
+  "heard": "And all four boxes together make ten thousand. Every payment lands in exactly one box.",
+  "diffs": []
+ },
+ {
+  "id": "s064",
+  "text": "Now add up the left column. Ninety plus thirty is one hundred and twenty. That's every alarm Detector A raised.",
+  "heard": "Now add up the left column. Ninety plus thirty is one hundred and twenty. That's every alarm that detector A raised.",
+  "diffs": []
+ },
+ {
+  "id": "s065",
+  "text": "So the rows tell you the truth. The columns tell you what the detector did. Hold on to that, because every number in this video comes from reading this grid by row, or by column.",
+  "heard": "So the rows tell you the truth. The columns tell you what the detector did. Hold on to that, because every number in this video comes from reading this grid by row or by column.",
+  "diffs": []
+ },
+ {
+  "id": "s066",
+  "text": "Let's start with the number the salespeople love. Accuracy.",
+  "heard": "Let's start with the number the sales people love: accuracy.",
+  "diffs": [
+   [
+    "salespeople",
+    "sales people"
+   ]
+  ]
+ },
+ {
+  "id": "s067",
+  "text": "Accuracy asks one question: out of everything, how often was the detector right?",
+  "heard": "Accuracy asks one question, out of everything: how often was the detector right?",
+  "diffs": []
+ },
+ {
+  "id": "s068",
+  "text": "Right means the diagonal. True positives plus true negatives.",
+  "heard": "Right means the diagonal. True positives plus true negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s069",
+  "text": "Then divide by everything. All four boxes.",
+  "heard": "Then divide by everything. All four boxes.",
+  "diffs": []
+ },
+ {
+  "id": "s070",
+  "text": "In symbols, accuracy equals T P plus T N, over the total. T P is short for true positives. T N is short for true negatives.",
+  "heard": "In symbols, accuracy equals T P plus T N over the total. T P is short for true positives. T N is short for true negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s071",
+  "text": "For Detector A, that's ninety plus nine thousand eight hundred and seventy. Nine thousand nine hundred and sixty right answers.",
+  "heard": "For detector A, that's ninety plus nine thousand eight hundred and seventy. Nine thousand nine hundred and sixty right answers.",
+  "diffs": []
+ },
+ {
+  "id": "s072",
+  "text": "Out of ten thousand. That's ninety-nine point six percent.",
+  "heard": "Out of ten thousand. That's ninety-nine point six percent.",
+  "diffs": []
+ },
+ {
+  "id": "s073",
+  "text": "Sounds amazing. But remember the lazy detector scored ninety-nine percent by doing nothing.",
+  "heard": "Sounds amazing, but remember, the lazy detective scored ninety-nine percent by doing nothing.",
+  "diffs": [
+   [
+    "detector",
+    "detective"
+   ]
+  ]
+ },
+ {
+  "id": "s074",
+  "text": "So all of Detector A's real work, catching ninety frauds, only moves accuracy from ninety-nine to ninety-nine point six. Less than one point.",
+  "heard": "So all of Detector A's real work, catching ninety frauds, only moves accuracy from ninety-nine to ninety-nine point six, less than one point.",
+  "diffs": []
+ },
+ {
+  "id": "s075",
+  "text": "Why? Because the bottom right box is huge. Nine thousand eight hundred and seventy easy, boring, correct answers drown out everything else.",
+  "heard": "Why? Because the bottom right box is huge. Nine thousand eight hundred seventy easy boring correct answers drown out everything else.",
+  "diffs": []
+ },
+ {
+  "id": "s076",
+  "text": "That's the rule of thumb. When one class is rare, accuracy is mostly a measure of how rare it is.",
+  "heard": "That's the rule of thumb. When one class is rare, accuracy is mostly a measure of how rare it is.",
+  "diffs": []
+ },
+ {
+  "id": "s077",
+  "text": "Accuracy is not useless. When the two groups are roughly the same size, it's a fine first look. We'll see that in the spam example later.",
+  "heard": "Accuracy is not useless. When the two groups are roughly the same size, it's a fine first look. We'll see that in the spam example later.",
+  "diffs": []
+ },
+ {
+  "id": "s078",
+  "text": "But for rare things, we need questions that zoom in on the fraud itself. And there are exactly two of them.",
+  "heard": "But for rare things, we need questions that zoom in on the fraud itself. And there are exactly two of them.",
+  "diffs": []
+ },
+ {
+  "id": "s079",
+  "text": "The first question is about your alarms.",
+  "heard": "The first question is about your alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s080",
+  "text": "Picture the analyst who has to phone every flagged customer. They only ever see the alarms. They never see the quiet payments.",
+  "heard": "Picture the analyst, who has to phone every flagged customer. They only ever see the alarms. They never see the quiet payments.",
+  "diffs": []
+ },
+ {
+  "id": "s081",
+  "text": "So their question is: when the detector raises an alarm, how often is it real?",
+  "heard": "So their question is, when the detector raises an alarm, how often is it real?",
+  "diffs": []
+ },
+ {
+  "id": "s082",
+  "text": "That's precision. And it lives entirely in the left column.",
+  "heard": "That's precision. And it lives entirely in the left column.",
+  "diffs": []
+ },
+ {
+  "id": "s083",
+  "text": "Precision equals true positives, over all the alarms. T P, over T P plus F P. F P is short for false positives, the false alarms.",
+  "heard": "Precision equals true positives over all the alarms. T P over T P plus F P. F P is short for false positives, the false alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s084",
+  "text": "For Detector A, the left column holds ninety real frauds and thirty false alarms.",
+  "heard": "For detector A, the left column holds ninety real frauds and thirty false alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s085",
+  "text": "Ninety, out of one hundred and twenty. That's three out of every four. Seventy-five percent precision.",
+  "heard": "ninety out of one hundred twenty that's three out of every four seventy-five percent precision",
+  "diffs": []
+ },
+ {
+  "id": "s086",
+  "text": "In plain words: every time Detector A rings the bell, there's a three in four chance it's real fraud, and a one in four chance it's a false alarm.",
+  "heard": "In plain words, every time detector A rings the bell, there's a three in four chance it's real fraud, and a one in four chance it's a false alarm.",
+  "diffs": []
+ },
+ {
+  "id": "s087",
+  "text": "Notice what precision ignores. It doesn't care about the right column at all. It doesn't know how much fraud got away.",
+  "heard": "Notice what precision ignores. It doesn't care about the right column at all. It doesn't know how much fraud got away.",
+  "diffs": []
+ },
+ {
+  "id": "s088",
+  "text": "A detector that raised one single alarm, and happened to be right, would have perfect precision. One out of one.",
+  "heard": "A detector that raised one single alarm and happened to be right would have perfect precision. One out of one.",
+  "diffs": []
+ },
+ {
+  "id": "s089",
+  "text": "So precision alone can be gamed by being very, very cautious.",
+  "heard": "So precision alone can be gained by being very very cautious.",
+  "diffs": [
+   [
+    "gamed",
+    "gained"
+   ]
+  ]
+ },
+ {
+  "id": "s090",
+  "text": "That's why we need the second question. It's about what you missed.",
+  "heard": "That's why we need the second question. It's about what you missed.",
+  "diffs": []
+ },
+ {
+  "id": "s091",
+  "text": "Picture the bank's fraud manager. They care about every fraud that happened, whether the detector noticed it or not.",
+  "heard": "Picture the bank's fraud manager. They care about every fraud that happened, whether the detector noticed it or not.",
+  "diffs": []
+ },
+ {
+  "id": "s092",
+  "text": "Their question is: out of all the real fraud, how much did we catch?",
+  "heard": "Their question is, out of all the real fraud, how much did we catch?",
+  "diffs": []
+ },
+ {
+  "id": "s093",
+  "text": "That's recall. And it lives entirely in the top row.",
+  "heard": "That's recall. And it lives entirely in the top row.",
+  "diffs": []
+ },
+ {
+  "id": "s094",
+  "text": "Recall equals true positives, over all the real positives. T P, over T P plus F N. F N is short for false negatives, the misses.",
+  "heard": "Recall equals true positives over all the real positives. T P over T P plus F N. F N is short for false negatives. The misses.",
+  "diffs": []
+ },
+ {
+  "id": "s095",
+  "text": "For Detector A, the top row holds ninety catches and ten misses.",
+  "heard": "For detector A, the top row holds ninety catches and ten misses.",
+  "diffs": []
+ },
+ {
+  "id": "s096",
+  "text": "Ninety, out of one hundred. Ninety percent recall.",
+  "heard": "ninety out of one hundred ninety percent recall",
+  "diffs": []
+ },
+ {
+  "id": "s097",
+  "text": "That's the first salesperson's claim. We catch ninety percent of fraud. That's a recall claim.",
+  "heard": "That's the first salesperson's claim. We catch ninety percent of fraud, that's a recall claim.",
+  "diffs": []
+ },
+ {
+  "id": "s098",
+  "text": "You'll also hear recall called sensitivity, or the true positive rate. Same number, different names.",
+  "heard": "You'll also hear recall called sensitivity, or the true positive rate. Same number, different names.",
+  "diffs": []
+ },
+ {
+  "id": "s099",
+  "text": "There's also a matching number for the bottom row, called specificity. Of all the normal payments, how many did we leave alone? For Detector A, nine thousand eight hundred and seventy out of nine thousand nine hundred. Almost all of them. We'll need it when we meet the R O C curve.",
+  "heard": "There's also a matching number for the bottom row, called specificity. Of all the normal payments, how many did we leave alone? For detector A, nine thousand eight hundred and seventy out of nine thousand nine hundred, almost all of them. We'll need it when we meet the ROC curve.",
+  "diffs": [
+   [
+    "r o c",
+    "roc"
+   ]
+  ]
+ },
+ {
+  "id": "s100",
+  "text": "And recall has its own blind spot. It ignores the bottom row, so it never sees false alarms.",
+  "heard": "And Recall has its own blind spot. It ignores the bottom row so never sees false alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s101",
+  "text": "A detector that flags every single payment as fraud catches all one hundred frauds. One hundred percent recall.",
+  "heard": "A detector that flags every single payment as fraud catches all one hundred frauds. One hundred percent recall.",
+  "diffs": []
+ },
+ {
+  "id": "s102",
+  "text": "And it phones all ten thousand customers. That's useless too.",
+  "heard": "Any phones all ten thousand customers. That's useless too.",
+  "diffs": [
+   [
+    "",
+    "any"
+   ]
+  ]
+ },
+ {
+  "id": "s103",
+  "text": "So here's the picture to keep. Precision reads down the alarm column. Recall reads across the fraud row. They share one box, the true positives, and look away from each other in every other direction.",
+  "heard": "So here's the picture to keep. Precision reads down the alarm column. Recall reads across the fraud row. They share one box, the true positives, and look away from each other in every other direction.",
+  "diffs": []
+ },
+ {
+  "id": "s104",
+  "text": "Now we can finally answer the puzzle. Let's fill the grid for Detector B, the one whose alarms are ninety percent real.",
+  "heard": "Now we can finally answer the puzzle. Let's fill the grid for detector B, the one whose alarms are ninety percent real.",
+  "diffs": []
+ },
+ {
+  "id": "s105",
+  "text": "Detector B is much more careful. It only raises fifty alarms.",
+  "heard": "Detector B is much more careful. It only raises fifty alarms.",
+  "diffs": []
+ },
+ {
+  "id": "s106",
+  "text": "Forty-five of them are real fraud. Five are false alarms. So its precision is forty-five out of fifty. Ninety percent. Its claim was true.",
+  "heard": "Forty-five of them are real fraud. Five are false alarms. So its precision is forty-five out of fifty. Ninety percent. Its claim was true.",
+  "diffs": []
+ },
+ {
+  "id": "s107",
+  "text": "But look at the top row. Forty-five caught. And fifty-five frauds missed.",
+  "heard": "but look at the top row forty five caught and fifty five frauds missed",
+  "diffs": []
+ },
+ {
+  "id": "s108",
+  "text": "Its recall is forty-five out of one hundred. Forty-five percent. It lets more than half the fraud walk straight past.",
+  "heard": "Its recall is forty-five out of one hundred. Forty-five percent. It lets more than half the fraud walk straight past.",
+  "diffs": []
+ },
+ {
+  "id": "s109",
+  "text": "And its accuracy? Forty-five plus nine thousand eight hundred and ninety-five, out of ten thousand. Ninety-nine point four percent. Still sounds amazing.",
+  "heard": "And its accuracy? forty-five plus nine thousand eight hundred ninety-five out of ten thousand. ninety-nine point four percent. Still sounds amazing.",
+  "diffs": []
+ },
+ {
+  "id": "s110",
+  "text": "So side by side. Detector A: precision seventy-five, recall ninety. Detector B: precision ninety, recall forty-five.",
+  "heard": "So side by side, detector A, precision seventy-five, recall ninety. Detector B, precision ninety, recall forty-five.",
+  "diffs": []
+ },
+ {
+  "id": "s111",
+  "text": "Each salesperson quoted the number that made them look good. Neither was lying. They just answered different questions.",
+  "heard": "Each salesperson quoted the number that made them look good. Neither was lying, they just answered different questions.",
+  "diffs": []
+ },
+ {
+  "id": "s112",
+  "text": "In fact, this is the same swap we saw in the prosecutor's fallacy. How often does an alarm mean fraud, versus how often does fraud cause an alarm.",
+  "heard": "In fact, this is the same swap we saw in the prosecutor's fallacy. How often does an alarm mean fraud versus how often does fraud cause an alarm?",
+  "diffs": []
+ },
+ {
+  "id": "s113",
+  "text": "Now here's the key idea. A and B are often the same model, with the dial set differently.",
+  "heard": "Now here's the key idea: A and B are often the same model, with the dial set differently.",
+  "diffs": []
+ },
+ {
+  "id": "s114",
+  "text": "Most detectors give each payment a score, say from zero to one, for how suspicious it looks. Then you pick a cut-off. Above it, alarm. Below it, quiet.",
+  "heard": "Most detectors give each payment a score, say from zero to one, for how suspicious it looks. Then you pick a cutoff. Above it, alarm. Below it, quiet.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s115",
+  "text": "Set the cut-off high, and only the most suspicious payments get flagged. Fewer false alarms, more misses. High precision, low recall. That's Detector B.",
+  "heard": "Set the cutoff high and only the most suspicious payments get flagged. Fewer false alarms, more misses. High precision, low recall. That's Detector B.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s116",
+  "text": "Set it low, and you flag lots of payments. More catches, more false alarms. High recall, low precision. That's Detector A.",
+  "heard": "Set it low, and you flag lots of payments. More catches, more false alarms. High recall, low precision. That's detector A.",
+  "diffs": []
+ },
+ {
+  "id": "s117",
+  "text": "Push it even lower, and you get a nervous Detector C. It flags four hundred payments and catches ninety-nine of the hundred frauds.",
+  "heard": "Push it even lower, and you get a nervous detector C. It flags four hundred payments and catches ninety-nine of the hundred fraud.",
+  "diffs": [
+   [
+    "frauds",
+    "fraud"
+   ]
+  ]
+ },
+ {
+  "id": "s118",
+  "text": "Ninety-nine percent recall. But only ninety-nine of its four hundred alarms are real. Precision is about one in four.",
+  "heard": "Ninety-nine percent recall. But only ninety-nine of its four hundred arms are real. Precision is about one in four.",
+  "diffs": [
+   [
+    "alarms",
+    "arms"
+   ]
+  ]
+ },
+ {
+  "id": "s119",
+  "text": "And its accuracy drops to about ninety-seven percent, lower than the lazy detector that catches nothing. Accuracy is pointing the wrong way.",
+  "heard": "And its accuracy drops to about ninety-seven percent, lower than the lazy detector that catches nothing. Accuracy is pointing the wrong way.",
+  "diffs": []
+ },
+ {
+  "id": "s120",
+  "text": "That's the trade-off. Move the dial one way, precision goes up and recall goes down. Move it back, and they swap. You almost never get both for free.",
+  "heard": "That's the trade-off. Move the dial one way, precision goes up and recall goes down. Move it back and they swap. You almost never get both for free.",
+  "diffs": []
+ },
+ {
+  "id": "s121",
+  "text": "In a future video, we'll trace this whole dial on one curve, called the R O C curve. For now, just remember: the dial exists.",
+  "heard": "In a future video, we'll trace this whole dial on one curve called the ROC curve. For now, just remember: the dial exists.",
+  "diffs": [
+   [
+    "r o c",
+    "roc"
+   ]
+  ]
+ },
+ {
+  "id": "s122",
+  "text": "But sometimes you need one number. To rank ten models, or to put on a report.",
+  "heard": "But sometimes you need one number to rank ten models or to put on a report.",
+  "diffs": []
+ },
+ {
+  "id": "s123",
+  "text": "The usual compromise is called the F one score. It blends precision and recall into a single number.",
+  "heard": "The usual compromise is called the F one score. It blends precision and recall into a single number.",
+  "diffs": []
+ },
+ {
+  "id": "s124",
+  "text": "You might think: just average them. For Detector A, seventy-five and ninety average to eighty-two and a half.",
+  "heard": "You might think, just average them. For detector A, seventy-five and ninety average to eighty-two and a half.",
+  "diffs": []
+ },
+ {
+  "id": "s125",
+  "text": "But a plain average has a problem. Remember the detector that flags everything? Recall one hundred, precision one. The average is fifty point five, which sounds half decent for a useless detector.",
+  "heard": "But a plain average has a problem. Remember the detector that flags everything? Recall one hundred precision one. The average is fifty point five, which sounds half decent for a useless detector.",
+  "diffs": []
+ },
+ {
+  "id": "s126",
+  "text": "The F one score uses a stricter average, called the harmonic mean, that gets dragged down hard by whichever number is worse.",
+  "heard": "The F one score uses a stricter average called the harmonic mean that gets dragged down hard by whichever number is worse.",
+  "diffs": []
+ },
+ {
+  "id": "s127",
+  "text": "Here's the friendliest way to compute it. F one equals two T P, over two T P plus F P plus F N.",
+  "heard": "Here's the friendliest way to compute it. F one equals two T P over two T P plus F P plus F N.",
+  "diffs": []
+ },
+ {
+  "id": "s128",
+  "text": "In words: count the true positives twice, then compare them with all the mistakes. Both kinds of mistake count against you.",
+  "heard": "In words. Count the true positives twice, then compare them with all the mistakes. Both kinds of mistake count against you.",
+  "diffs": []
+ },
+ {
+  "id": "s129",
+  "text": "For Detector A: two times ninety is one hundred and eighty. Plus thirty false alarms, plus ten misses, is two hundred and twenty.",
+  "heard": "For detector A, two times ninety is one hundred and eighty, plus thirty false alarms, plus ten misses, is two hundred and twenty.",
+  "diffs": []
+ },
+ {
+  "id": "s130",
+  "text": "One hundred and eighty over two hundred and twenty. Nine elevenths. About eighty-two percent.",
+  "heard": "one hundred and eighty over two hundred and twenty nine elevenths about eighty two percent",
+  "diffs": []
+ },
+ {
+  "id": "s131",
+  "text": "For Detector B: two times forty-five is ninety. Plus five plus fifty-five. Ninety over one hundred and fifty. Sixty percent.",
+  "heard": "For detective B, two times forty-five is ninety. Plus five plus fifty-five. Ninety over one hundred and fifty. Sixty percent.",
+  "diffs": [
+   [
+    "detector",
+    "detective"
+   ]
+  ]
+ },
+ {
+  "id": "s132",
+  "text": "And the flag everything detector? Its F one is about two percent. The harmonic mean is not fooled.",
+  "heard": "and the flag everything detector its f one is about two percent the harmonic mean is not fooled",
+  "diffs": []
+ },
+ {
+  "id": "s133",
+  "text": "So by F one, Detector A wins. But be careful. F one assumes a miss and a false alarm are equally bad. And in the real world, they almost never are.",
+  "heard": "So by F one, detector A wins. But be careful. F one assumes a miss and a false alarm are equally bad. And in the real world, they almost never are.",
+  "diffs": []
+ },
+ {
+  "id": "s134",
+  "text": "So the real question is not which number is highest. It's which mistake would you rather make.",
+  "heard": "So the real question is not which number is highest, it's which mistake would you rather make.",
+  "diffs": []
+ },
+ {
+  "id": "s135",
+  "text": "Let's put a price on each one. These are made up numbers, just to show the idea.",
+  "heard": "Let's put a price on each one. These are made-up numbers, just to show the idea.",
+  "diffs": []
+ },
+ {
+  "id": "s136",
+  "text": "Say a missed fraud costs the bank five hundred dollars. And a false alarm costs about five dollars, a few minutes of an analyst's time on the phone.",
+  "heard": "Say a miss fraud costs the bank five hundred dollars. And a false alarm costs about five dollars, a few minutes of an analyst's time on the phone.",
+  "diffs": [
+   [
+    "missed",
+    "miss"
+   ]
+  ]
+ },
+ {
+  "id": "s137",
+  "text": "Detector A: ten misses times five hundred, plus thirty false alarms times five. Five thousand one hundred and fifty dollars.",
+  "heard": "detector a ten misses times five hundred plus thirty false alarms times five five thousand one hundred and fifty dollars",
+  "diffs": []
+ },
+ {
+  "id": "s138",
+  "text": "Detector B: fifty-five misses times five hundred, plus five times five. Twenty-seven thousand five hundred and twenty-five dollars.",
+  "heard": "detector b fifty-five misses times five hundred plus five times five twenty-seven thousand five hundred and twenty-five dollars",
+  "diffs": []
+ },
+ {
+  "id": "s139",
+  "text": "Nervous Detector C: one miss, plus three hundred and one false alarms. Only two thousand and five dollars. The cheapest of all.",
+  "heard": "Nervous detector see one miss plus three hundred and one false alarms only two thousand and five dollars the cheapest of all",
+  "diffs": [
+   [
+    "c",
+    "see"
+   ]
+  ]
+ },
+ {
+  "id": "s140",
+  "text": "And the lazy detector? A hundred misses. Fifty thousand dollars.",
+  "heard": "and the lazy detective a hundred misses fifty thousand dollars",
+  "diffs": [
+   [
+    "detector",
+    "detective"
+   ]
+  ]
+ },
+ {
+  "id": "s141",
+  "text": "With these prices, the detector with the worst accuracy, C, is the best choice. Because misses are so expensive, you want high recall.",
+  "heard": "With these prices, the detector with the worst accuracy, C, is the best choice. Because misses are so expensive, you want high recall.",
+  "diffs": []
+ },
+ {
+  "id": "s142",
+  "text": "But change the prices. Suppose every false alarm freezes a customer's card at the checkout, and they get so annoyed that it costs two hundred dollars in lost business.",
+  "heard": "But change the prices. Suppose every false alarm freezes a customer's card at the checkout and they get so annoyed that it costs two hundred dollars in lost business.",
+  "diffs": []
+ },
+ {
+  "id": "s143",
+  "text": "Now Detector C costs over sixty thousand dollars, and Detector A wins easily, at eleven thousand.",
+  "heard": "No detector C costs over sixty thousand dollars and detector A wins easily at eleven thousand.",
+  "diffs": [
+   [
+    "now",
+    "no"
+   ]
+  ]
+ },
+ {
+  "id": "s144",
+  "text": "Same grids. Same counts. Different answer. The confusion matrix gives you the counts. Only you can decide what each mistake costs.",
+  "heard": "Same grids, same counts, different answer. The confusion matrix gives you the counts, only you can decide what each mistake costs.",
+  "diffs": []
+ },
+ {
+  "id": "s145",
+  "text": "Let's practise reading these grids on a few more examples, each with real counts.",
+  "heard": "Let's practice reading these grids on a few more examples, each with real counts.",
+  "diffs": [
+   [
+    "practise",
+    "practice"
+   ]
+  ]
+ },
+ {
+  "id": "s146",
+  "text": "First, an old friend. The screening test from our Bayes video.",
+  "heard": "First, an old friend: the screening test from our Bayes video.",
+  "diffs": []
+ },
+ {
+  "id": "s147",
+  "text": "One thousand people. One in a hundred has the condition, so ten are sick and nine hundred and ninety are healthy.",
+  "heard": "one thousand people one in a hundred has the condition so ten are sick and nine hundred and ninety are healthy",
+  "diffs": []
+ },
+ {
+  "id": "s148",
+  "text": "The test catches nine of the ten sick people. So nine true positives and one false negative.",
+  "heard": "The test catches nine of the ten sick people. So nine true positives and one false negative.",
+  "diffs": []
+ },
+ {
+  "id": "s149",
+  "text": "And it gives a false alarm to one in ten healthy people. That's ninety-nine false positives, and eight hundred and ninety-one true negatives.",
+  "heard": "And it gives a false alarm to one in ten healthy people. That's ninety-nine false positives and eight hundred ninety-one true negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s150",
+  "text": "Recall: nine out of ten. Ninety percent. The test is good at finding sick people.",
+  "heard": "Recall nine out of ten ninety percent The test is good at finding sick people",
+  "diffs": []
+ },
+ {
+  "id": "s151",
+  "text": "Accuracy: nine plus eight hundred and ninety-one, out of a thousand. Ninety percent again.",
+  "heard": "Accuracy. Nine plus eight hundred and ninety-one out of a thousand. Ninety percent again.",
+  "diffs": []
+ },
+ {
+  "id": "s152",
+  "text": "But precision. Look down the alarm column. Nine real cases, and ninety-nine false alarms. Nine out of one hundred and eight.",
+  "heard": "But precision, look down the alarm column. Nine real cases and ninety-nine false alarms. Nine out of one hundred and eight.",
+  "diffs": []
+ },
+ {
+  "id": "s153",
+  "text": "That's one in twelve. The exact same answer we found with Bayes' theorem.",
+  "heard": "That's one in twelve. The exact same answer we found with Bayes' theorem.",
+  "diffs": []
+ },
+ {
+  "id": "s154",
+  "text": "So here's the connection. Bayes' theorem was secretly a precision calculation. It asked: given an alarm, how likely is it real?",
+  "heard": "So here's the connection. Bayes' Theorem was secretly a precision calculation. It asked: given an alarm, how likely is it real?",
+  "diffs": []
+ },
+ {
+  "id": "s155",
+  "text": "Now watch what happens if we use the exact same test in a different crowd.",
+  "heard": "Now watch what happens if we use the exact same test in a different crowd.",
+  "diffs": []
+ },
+ {
+  "id": "s156",
+  "text": "Say a specialist clinic, where people already have symptoms, and half of the thousand are sick. Five hundred sick, five hundred healthy.",
+  "heard": "Say a specialist clinic where people already have symptoms and half of the thousand are sick. Five hundred sick, five hundred healthy.",
+  "diffs": []
+ },
+ {
+  "id": "s157",
+  "text": "The test still catches nine in ten sick people. Four hundred and fifty caught, fifty missed.",
+  "heard": "The test still catches nine in ten sick people. Four hundred and fifty caught, fifty missed.",
+  "diffs": []
+ },
+ {
+  "id": "s158",
+  "text": "And it still gives false alarms to one in ten healthy people. Fifty false positives, four hundred and fifty true negatives.",
+  "heard": "It still gives false alarms to one in ten healthy people. Fifty false positives, four hundred and fifty true negatives.",
+  "diffs": []
+ },
+ {
+  "id": "s159",
+  "text": "Recall is still ninety percent. But precision jumps from one in twelve, to four hundred and fifty out of five hundred. Ninety percent.",
+  "heard": "Recall is still ninety percent, but precision jumps from one in twelve to four hundred and fifty out of five hundred, ninety percent.",
+  "diffs": []
+ },
+ {
+  "id": "s160",
+  "text": "Same test. Recall didn't move. Precision changed completely, just because the crowd changed. So precision always depends on how common the thing is. Remember that whenever someone quotes you a precision from a different setting.",
+  "heard": "Same test, record did not move. Precision changed completely just because the crowd changed. So precision always depends on how common the thing is. Remember that whenever someone quotes you a precision from a different setting,",
+  "diffs": [
+   [
+    "recall didn't",
+    "record did not"
+   ]
+  ]
+ },
+ {
+  "id": "s161",
+  "text": "In medicine, recall is usually the priority for a first screening. Missing a sick person is the costly mistake.",
+  "heard": "In medicine, recall is usually the priority for a first screening. Missing a sick person is the costly mistake.",
+  "diffs": []
+ },
+ {
+  "id": "s162",
+  "text": "Low precision is acceptable here, because every positive gets a second, more careful test. That's the honest way to use it.",
+  "heard": "Low precision is acceptable here, because every positive gets a second, more careful test. That's the honest way to use it.",
+  "diffs": []
+ },
+ {
+  "id": "s163",
+  "text": "Second example. A spam filter, where the mistakes flip.",
+  "heard": "Second example, a spam filter, where the mistakes flip.",
+  "diffs": []
+ },
+ {
+  "id": "s164",
+  "text": "One thousand emails. Three hundred are spam, seven hundred are real.",
+  "heard": "one thousand emails three hundred are spam seven hundred are real",
+  "diffs": []
+ },
+ {
+  "id": "s165",
+  "text": "The filter sends two hundred and eighty emails to the spam folder. Two hundred and seventy really are spam. Ten are real emails.",
+  "heard": "The filter sends two hundred and eighty emails to the spam folder. Two hundred and seventy really are spam. Ten are real emails.",
+  "diffs": []
+ },
+ {
+  "id": "s166",
+  "text": "So thirty spam emails reach your inbox, and six hundred and ninety real emails land safely.",
+  "heard": "So thirty spam emails reach your inbox and six hundred and ninety real emails land safely.",
+  "diffs": []
+ },
+ {
+  "id": "s167",
+  "text": "Precision: two hundred and seventy out of two hundred and eighty. About ninety-six percent.",
+  "heard": "Precision. Two hundred and seventy out of two hundred and eighty. About ninety-six percent.",
+  "diffs": []
+ },
+ {
+  "id": "s168",
+  "text": "Recall: two hundred and seventy out of three hundred. Ninety percent.",
+  "heard": "Recall two hundred seventy out of three hundred ninety percent",
+  "diffs": []
+ },
+ {
+  "id": "s169",
+  "text": "Accuracy: nine hundred and sixty out of a thousand. Ninety-six percent.",
+  "heard": "accuracy nine hundred and sixty out of a thousand ninety six percent",
+  "diffs": []
+ },
+ {
+  "id": "s170",
+  "text": "And notice, here accuracy is more honest. Spam isn't rare. A lazy filter that never marks anything as spam would only score seventy percent, so it can't hide.",
+  "heard": "And notice, here accuracy is more honest. Spam isn't rare. A lazy filter that never marks anything as spam would only score seventy percent. So it can't hide.",
+  "diffs": []
+ },
+ {
+  "id": "s171",
+  "text": "Now, which mistake is worse? A spam email in your inbox is a small annoyance. You delete it.",
+  "heard": "Now, which mistake is worse? A spam email in your inbox is a small annoyance, you delete it.",
+  "diffs": []
+ },
+ {
+  "id": "s172",
+  "text": "But a real email in the spam folder, a job offer, a bill, a message from your doctor, might never be read.",
+  "heard": "But a real email in this spam folder, a job offer, a bill, a message from your doctor, might never be read.",
+  "diffs": [
+   [
+    "",
+    "this"
+   ]
+  ]
+ },
+ {
+  "id": "s173",
+  "text": "So for spam, the false alarm is the costly mistake. You want high precision, even if a few more spam emails get through.",
+  "heard": "So for spam, the false alarm is the costly mistake. You want high precision, even if a few more spam emails get through.",
+  "diffs": []
+ },
+ {
+  "id": "s174",
+  "text": "Same table, same formulas. But the opposite priority from the medical test.",
+  "heard": "Same table, same formulas. But the opposite priority from the medical test.",
+  "diffs": []
+ },
+ {
+  "id": "s175",
+  "text": "Now it's your turn. Pause whenever you like.",
+  "heard": "Now it's your turn. Pause whenever you like.",
+  "diffs": []
+ },
+ {
+  "id": "s176",
+  "text": "A lender has two thousand loans. Two hundred of them will default, meaning the borrower stops paying.",
+  "heard": "A lender has two thousand loans. Two hundred of them will default, meaning the borrower stops paying.",
+  "diffs": []
+ },
+ {
+  "id": "s177",
+  "text": "A model flags two hundred and fifty loans as risky. One hundred and fifty of them really do default. One hundred are fine.",
+  "heard": "A model flags two hundred and fifty loans as risky. One hundred and fifty of them really do default. One hundred are fine.",
+  "diffs": []
+ },
+ {
+  "id": "s178",
+  "text": "Try to fill the rest of the grid, and find the precision and the recall.",
+  "heard": "Try to fill the rest of the grid and find the precision and the recall.",
+  "diffs": []
+ },
+ {
+  "id": "s179",
+  "text": "Here's the grid. Two hundred defaults, minus one hundred and fifty caught, leaves fifty missed.",
+  "heard": "Here's the grid. Two hundred defaults, minus one hundred and fifty caught, leaves fifty missed.",
+  "diffs": []
+ },
+ {
+  "id": "s180",
+  "text": "One thousand eight hundred good loans, minus one hundred false alarms, leaves one thousand seven hundred true negatives.",
+  "heard": "one thousand eight hundred good loans minus one hundred false alarms leaves one thousand seven hundred true negatives",
+  "diffs": []
+ },
+ {
+  "id": "s181",
+  "text": "Precision: one hundred and fifty out of two hundred and fifty flagged. Sixty percent.",
+  "heard": "Precision. One hundred fifty out of two hundred fifty flagged. Sixty percent.",
+  "diffs": []
+ },
+ {
+  "id": "s182",
+  "text": "Recall: one hundred and fifty out of two hundred defaults. Seventy-five percent.",
+  "heard": "Recall, one hundred and fifty out of two hundred defaults, seventy-five percent.",
+  "diffs": []
+ },
+ {
+  "id": "s183",
+  "text": "Accuracy: one hundred and fifty plus one thousand seven hundred, out of two thousand. Ninety-two and a half percent.",
+  "heard": "Accuracy one hundred fifty plus one thousand seven hundred out of two thousand ninety-two and a half percent.",
+  "diffs": []
+ },
+ {
+  "id": "s184",
+  "text": "And the F one score: three hundred, over three hundred plus one hundred plus fifty. Three hundred over four hundred and fifty. Two thirds.",
+  "heard": "<<STT FAILED>>",
+  "diffs": [
+   [
+    "f one score three hundred over three hundred plus one hundred plus fifty three hundred over four hundred fifty two thirds",
+    "stt failed"
+   ]
+  ]
+ },
+ {
+  "id": "s185",
+  "text": "So, in plain words. When this model says risky, it's right six times out of ten. And it spots three out of every four loans that will go bad.",
+  "heard": "So in plain words, when this model says risky, it's right six times out of ten. And it spots three out of every four loans that will go back.",
+  "diffs": [
+   [
+    "bad",
+    "back"
+   ]
+  ]
+ },
+ {
+  "id": "s186",
+  "text": "If you got those, you can now read any confusion matrix you'll ever see.",
+  "heard": "If you got those, you can now read any confusion matrix you'll ever see.",
+  "diffs": []
+ },
+ {
+  "id": "s187",
+  "text": "So where will you actually meet this table?",
+  "heard": "So where will you actually meet this table?",
+  "diffs": []
+ },
+ {
+  "id": "s188",
+  "text": "In machine learning, it's the first thing printed after training any classifier. Any model that answers yes or no. Is this a cat? Will this customer cancel?",
+  "heard": "In machine learning, it's the first thing printed after training any classifier. Any model that answers yes or no. Is this a cat? Will this customer cancel?",
+  "diffs": []
+ },
+ {
+  "id": "s188a",
+  "text": "Most machine learning tools print it with one line of code, as a grid of four numbers, exactly like the one we built today.",
+  "heard": "Most machine learning tools printed with one line of code as a grid of four numbers, exactly like the one we built today.",
+  "diffs": [
+   [
+    "print",
+    "printed"
+   ]
+  ]
+ },
+ {
+  "id": "s189",
+  "text": "And when the thing you're predicting is rare, people report precision and recall, never accuracy alone. Exactly because of the lazy detector.",
+  "heard": "And when the thing you're predicting is rare, people report precision and recall, never accuracy alone. Exactly because of the lazy detector.",
+  "diffs": []
+ },
+ {
+  "id": "s190",
+  "text": "In data science, it's how you explain a model to people who don't build models. Of every hundred alarms, this many are real. Of every hundred cases, we catch this many.",
+  "heard": "In data science, it's how you explain a model to people who don't build models. Of every hundred alarms, this many are real. Of every hundred cases, we catch this many.",
+  "diffs": []
+ },
+ {
+  "id": "s191",
+  "text": "In finance, it's fraud detection and credit risk, exactly the two examples we worked through. And the cut-off is set by the cost of each mistake.",
+  "heard": "In finance, it's fraud detection and credit risk exactly the two examples we worked through. And the cutoff is set by the cost of each mistake.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s192",
+  "text": "In computer science, it's spam filters, malware scanners, and systems that watch network traffic for intruders. Too many false alarms, and people learn to ignore them.",
+  "heard": "In computer science, it's spam filters, malware scanners, and systems that watch network traffic for intruders. Too many false alarms and people learn to ignore them.",
+  "diffs": []
+ },
+ {
+  "id": "s193",
+  "text": "And beyond those four: medical tests, airport security, factory quality checks. Anywhere a yes or no decision can be wrong in two different ways.",
+  "heard": "And beyond those four, medical tests, airport security, factory quality checks. Anywhere a yes or no decision can be wrong in two different ways.",
+  "diffs": []
+ },
+ {
+  "id": "s194",
+  "text": "Let's go through the mistakes beginners make most often.",
+  "heard": "Let's go through the mistakes beginners make most often.",
+  "diffs": []
+ },
+ {
+  "id": "s195",
+  "text": "Mistake one: trusting accuracy when the class is rare. Always ask how rare it is, and compare with the lazy model that always says no.",
+  "heard": "Mistake one, trusting accuracy when the class is rare. Always ask how rare it is, and compare with the lazy model that always says no.",
+  "diffs": []
+ },
+ {
+  "id": "s195a",
+  "text": "For our fraud data, that lazy baseline is ninety-nine percent. So Detector A's ninety-nine point six only beats doing nothing by a sliver. The grid shows what that sliver is worth: ninety frauds caught.",
+  "heard": "For our fraud data, that lazy baseline is ninety-nine percent, so detector A's ninety-nine point six only beats doing nothing by a sliver. The grid shows what that sliver is worth: ninety frauds caught.",
+  "diffs": []
+ },
+ {
+  "id": "s196",
+  "text": "Mistake two: mixing up precision and recall. Here's the fix. Precision starts from the alarms. Recall starts from the real cases.",
+  "heard": "Mistake two, mixing up precision and recall. Here's the fix. Precision starts from the alarms. Recall starts from the real cases.",
+  "diffs": []
+ },
+ {
+  "id": "s197",
+  "text": "Ask yourself: am I dividing by everything the model flagged, or by everything that was really there?",
+  "heard": "Ask yourself, am I dividing by everything the model flagged? Or by everything that was really there?",
+  "diffs": []
+ },
+ {
+  "id": "s197a",
+  "text": "Here's a second check. Precision's bottom number is the size of the alarm column, one hundred and twenty. Recall's bottom number is the size of the fraud row, one hundred.",
+  "heard": "Here's a second check. Precision's bottom number is the size of the alarm column, one hundred and twenty. Recall's bottom number is the size of the fraud row, one hundred.",
+  "diffs": []
+ },
+ {
+  "id": "s198",
+  "text": "Mistake three: assuming every table is laid out the same way. Some tools put the truth in the rows, some in the columns. Some put the positive class first, some last.",
+  "heard": "Mistake three. Assuming every table is laid out the same way. Some tools put the truth in the rows, some in the columns. Some put the positive class first, some last. I've seen people get this wrong more times than I can count.",
+  "diffs": [
+   [
+    "",
+    "i've seen people get this wrong more times than i can count"
+   ]
+  ]
+ },
+ {
+  "id": "s199",
+  "text": "So before you read any number, read the labels. Find the alarm column and the real fraud row first.",
+  "heard": "So before you read any number, read the labels. Find the alarm column and the real frog row first.",
+  "diffs": [
+   [
+    "fraud",
+    "frog"
+   ]
+  ]
+ },
+ {
+  "id": "s199a",
+  "text": "If you're ever unsure, find the box with the true positives first. Then ask: which way does its row go, and which way does its column go?",
+  "heard": "If you're ever unsure, find the box with the true positives first. Then ask, which way does its row go, and which way does its column go?",
+  "diffs": []
+ },
+ {
+  "id": "s200",
+  "text": "And a bonus mistake: judging a model by one number. Any single score, even F one, hides which mistake the model makes. Look at the whole grid.",
+  "heard": "And a bonus mistake, judging a model by one number. Any single score, even F one, hides which mistake the model makes. Look at the whole grid.",
+  "diffs": []
+ },
+ {
+  "id": "s201",
+  "text": "Here's the whole method as a recipe.",
+  "heard": "Here's the whole method, as a recipe.",
+  "diffs": []
+ },
+ {
+  "id": "s202",
+  "text": "Step one: draw the grid. Truth in the rows, the detector's answer in the columns. Label them.",
+  "heard": "Step one. Draw the grid. Truth in the rows. The detector's answer in the columns. Label them.",
+  "diffs": []
+ },
+ {
+  "id": "s203",
+  "text": "Step two: fill the four boxes with counts, and check that the rows add up to the real totals.",
+  "heard": "Step two. Fill the four boxes with counts and check that the rows add up to the real totals.",
+  "diffs": []
+ },
+ {
+  "id": "s204",
+  "text": "Step three: for precision, read down the alarm column. Of everything flagged, how much was real?",
+  "heard": "<<STT FAILED>>",
+  "diffs": [
+   [
+    "step three for precision read down alarm column everything flagged how much was real",
+    "stt failed"
+   ]
+  ]
+ },
+ {
+  "id": "s205",
+  "text": "Step four: for recall, read across the real row. Of everything real, how much did we catch?",
+  "heard": "Step four. For recall, read across the real row of everything real. How much did we catch?",
+  "diffs": []
+ },
+ {
+  "id": "s206",
+  "text": "Step five: decide which mistake costs more, and choose your cut-off to match. Use accuracy only when the groups are roughly balanced.",
+  "heard": "Step five. Decide which mistake costs more and choose your cutoff to match. Use accuracy only when the groups are roughly balanced.",
+  "diffs": [
+   [
+    "cut off",
+    "cutoff"
+   ]
+  ]
+ },
+ {
+  "id": "s207",
+  "text": "Try it on Detector A. The grid: ninety, ten, thirty, nine thousand eight hundred and seventy. Precision: three in four. Recall: nine in ten. And if misses cost more, pick the detector with the higher recall.",
+  "heard": "<<STT FAILED>>",
+  "diffs": [
+   [
+    "try on detector grid ninety ten thirty nine thousand eight hundred seventy precision three four recall nine ten if misses cost more pick detector with higher recall",
+    "stt failed"
+   ]
+  ]
+ },
+ {
+  "id": "s208",
+  "text": "Because a detector is not good or bad on its own. It's good or bad at the mistakes you can afford.",
+  "heard": "Because the detector is not good or bad on its own. It's good or bad at the mistakes you can afford.",
+  "diffs": []
+ },
+ {
+  "id": "s209",
+  "text": "Look around your world, and notice how many things quietly answer yes or no for you. Your inbox, your bank card, your phone's face unlock. Each one is making both kinds of mistake.",
+  "heard": "Look around your world and notice how many things quietly answer yes or no for you. Your inbox, your bank card, your phone's face unlock. Each one is making both kinds of mistake.",
+  "diffs": []
+ },
+ {
+  "id": "s210",
+  "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+  "heard": "If this lesson made things clear for you, please subscribe to Math Lab TV so we can keep building together.",
+  "diffs": []
+ },
+ {
+  "id": "s211",
+  "text": "But here's a puzzle for next time.",
+  "heard": "But here's a puzzle for next time.",
+  "diffs": []
+ },
+ {
+  "id": "s212",
+  "text": "Our spam filter was right ninety-six times out of a hundred. But how does it decide, in the first place, that an email full of words like free, winner, and urgent is probably spam?",
+  "heard": "Our spam filter was right ninety-six times out of a hundred. But how does it decide in the first place that an email full of words like free, winner, and urgent is probably spam?",
+  "diffs": []
+ },
+ {
+  "id": "s213",
+  "text": "It turns out it's Bayes' theorem again, applied one word at a time. Next time, we'll build a spam filter from scratch, and see how it works.",
+  "heard": "It turns out it's Bayes' theorem again, applied one word at a time. Next time, we'll build a spam filter from scratch and see how it works.",
+  "diffs": []
+ },
+ {
+  "id": "s214",
+  "text": "I will see you in the next video.",
+  "heard": "I will see you in the next video.",
+  "diffs": []
+ }
+]

@@ -452,6 +452,8 @@ seg(c, "So where will you actually meet this table?",
     "Four tiles: ML, DS, Finance, CS.")
 seg(c, "In machine learning, it's the first thing printed after training any classifier. Any model that answers yes or no. Is this a cat? Will this customer cancel?",
     "ML tile: a model box outputs a 2×2 grid.")
+seg(c, "Most machine learning tools print it with one line of code, as a grid of four numbers, exactly like the one we built today.",
+    "Code-style card 'confusion_matrix(truth, guess)' outputs a 2×2 of numbers [[9,870, 30],[10, 90]] in Inter.", sid="s188a")
 seg(c, "And when the thing you're predicting is rare, people report precision and recall, never accuracy alone. Exactly because of the lazy detector.",
     "Mini lazy-detector badge '99%' crossed out.")
 seg(c, "In data science, it's how you explain a model to people who don't build models. Of every hundred alarms, this many are real. Of every hundred cases, we catch this many.",
@@ -469,14 +471,20 @@ seg(c, "Let's go through the mistakes beginners make most often.",
     "Red 'common mistakes' header.")
 seg(c, "Mistake one: trusting accuracy when the class is rare. Always ask how rare it is, and compare with the lazy model that always says no.",
     "Card ①: lazy 99% vs model 99.6%; arrow 'compare with the baseline'.", 0.8)
+seg(c, "For our fraud data, that lazy baseline is ninety-nine percent. So Detector A's ninety-nine point six only beats doing nothing by a sliver. The grid shows what that sliver is worth: ninety frauds caught.",
+    "Accuracy axis 98–100: lazy 99 and A 99.6 markers; the gap labelled '90 frauds caught'.", 0.6, sid="s195a")
 seg(c, "Mistake two: mixing up precision and recall. Here's the fix. Precision starts from the alarms. Recall starts from the real cases.",
     "Card ②: grid with 'start from the alarms' on the column, 'start from the real cases' on the row.")
 seg(c, "Ask yourself: am I dividing by everything the model flagged, or by everything that was really there?",
     "Two denominators: 'all flagged' (violet) vs 'all really there' (orange).", 0.8)
+seg(c, "Here's a second check. Precision's bottom number is the size of the alarm column, one hundred and twenty. Recall's bottom number is the size of the fraud row, one hundred.",
+    "Detector A grid: column total 120 (violet) and row total 100 (orange) circled.", 0.6, sid="s197a")
 seg(c, "Mistake three: assuming every table is laid out the same way. Some tools put the truth in the rows, some in the columns. Some put the positive class first, some last.",
     "Card ③: our grid, then the same grid transposed and flipped; labels highlighted.")
 seg(c, "So before you read any number, read the labels. Find the alarm column and the real fraud row first.",
     "Finger traces the axis labels.", 0.8)
+seg(c, "If you're ever unsure, find the box with the true positives first. Then ask: which way does its row go, and which way does its column go?",
+    "TP box ringed; arrows along its row and down its column.", 0.6, sid="s199a")
 seg(c, "And a bonus mistake: judging a model by one number. Any single score, even F one, hides which mistake the model makes. Look at the whole grid.",
     "Bonus card: F1 82% with a curtain pulled back to reveal the full grid.", 1.0)
 

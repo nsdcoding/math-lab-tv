@@ -22,7 +22,10 @@ URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
 SPOKEN_FIXES = {}
 # Per-segment spoken spellings: {segment id: [(written, spoken), ...]}
 SPOKEN_FIXES_BY_ID = {
-    "s108": [("with Bayes.", "with Bays.")],   # heard as "bass" at the end of the sentence
+    "s160": [("Recall didn't move.", "Recall did not move.")],          # heard as "recorded and move"
+    "s100": [("And recall has", "And recall, has")],                     # heard as "Rico"
+    "s146": [("our Bayes video", "our Bays video")],                     # heard as "base"
+    "s064": [("every alarm Detector A raised", "every alarm that Detector Ay raised")],   # heard as "array"
 }
 
 

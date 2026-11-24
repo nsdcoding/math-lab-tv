@@ -1,13 +1,23 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from common import *
+from cm import *
 
-NEXT_TOPIC = "next topic"   # FILL from `channel.py refs <slug>` -> tease_next (confirmed at checkpoint 1)
+NEXT_TOPIC = "How Spam Filters Work · Naive Bayes"
 
 
 def teaser_visual(k):
-    """FILL: one visual per teaser segment (except the last 'see you' line), tied to the running example."""
-    return T(f"teaser beat {k + 1}", 34, AQUA)
+    if k == 0:
+        return TB("?", 120, WARN)
+    if k == 1:
+        env = envelope(INK2, 3.0)
+        words = VGroup(*[pill(w, WARN, 26) for w in ("FREE", "WINNER", "URGENT")]).arrange(RIGHT, buff=0.25)
+        words.next_to(env, DOWN, buff=0.35)
+        right = T("right 96 times in 100", 26, AQUA, weight=BOLD).next_to(words, DOWN, buff=0.3)
+        return VGroup(env, words, right)
+    w = VGroup(*[pill(x, WARN, 26) for x in ("free", "winner", "urgent")]).arrange(RIGHT, buff=0.4)
+    arrows = VGroup(*[Arrow(p.get_bottom(), p.get_bottom() + DOWN * 0.8, buff=0.1, color=INK2, stroke_width=4) for p in w])
+    b = pill("Bayes' theorem, one word at a time", VIOLET, 28).next_to(arrows, DOWN, buff=0.15)
+    return VGroup(w, arrows, b)
 
 
 class S91Next(Base):

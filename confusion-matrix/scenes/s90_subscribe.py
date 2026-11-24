@@ -1,6 +1,6 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from common import *
+from cm import *
 
 
 def everyday(title, icon_mob, color):
@@ -22,11 +22,11 @@ def cursor():
 
 
 # FILL: four everyday examples tied to this topic: (label, icon builder, colour)
-EVERYDAY = [("smoke alarm", lambda: VGroup(Circle(0.32), Circle(0.1)).set_stroke(RED_, 3), RED_),
-            ("car alarm", lambda: RoundedRectangle(corner_radius=0.1, width=0.9, height=0.35).set_stroke(WARN, 3), WARN),
-            ("spam folder", lambda: Rectangle(width=0.8, height=0.55).set_stroke(BLUE_, 3), BLUE_),
-            ("“Was this you?”", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(AQUA, 3), AQUA)]
-STAMP = "real or false alarm?"   # FILL: the reflection question stamped on each card
+EVERYDAY = [("your inbox", lambda: envelope(BLUE_, 1.3), BLUE_),
+            ("your bank card", lambda: payment_card(WARN, 1.0), WARN),
+            ("face unlock", lambda: phone(AQUA, 0.8), AQUA),
+            ("airport gate", lambda: VGroup(Rectangle(width=0.18, height=0.8), Rectangle(width=0.18, height=0.8)).arrange(RIGHT, buff=0.45).set_stroke(RED_, 3), RED_)]
+STAMP = "two kinds of mistake"
 
 
 class S90Subscribe(Base):
@@ -39,30 +39,29 @@ class S90Subscribe(Base):
         cards = VGroup(*[everyday(lab, mk(), col) for lab, mk, col in EVERYDAY]).arrange(RIGHT, buff=0.3)
         cards.move_to(UP * 0.5)
         self.play(LaggedStart(*[FadeIn(c, shift=UP * 0.4) for c in cards], lag_ratio=0.2), run_time=1.4)
-        self.play(LaggedStart(*[Indicate(c[3], scale_factor=1.15) for c in cards], lag_ratio=0.2), run_time=1.4)
-        self.play(LaggedStart(*[Wiggle(c[1]) for c in cards], lag_ratio=0.15), run_time=1.2)
+        self.until(word_time(seg_look, word_index(seg_look, "each")) - 0.2)
+        self.play(LaggedStart(*[highlight(c[3], color=c[0].get_stroke_color()) for c in cards], lag_ratio=0.2), run_time=1.6)
         # ── subscribe (word for word) ──
         self.at(seg_sub, 0.0)
         lg = logo(1.1).move_to(UP * 1.1)
         self.play(FadeOut(cards, shift=UP * 0.4), run_time=0.5)
-        self.play(FadeIn(lg, scale=0.9), run_time=0.7)
+        self.play(FadeIn(lg), run_time=0.7)
         btn_box = RoundedRectangle(corner_radius=0.32, width=3.6, height=0.8, stroke_width=0, fill_color=RED_, fill_opacity=1)
         btn_box.qa_container = True
         btn_t = T("SUBSCRIBE", 32, INK, weight=BOLD)
         btn = VGroup(btn_box, btn_t).next_to(lg, DOWN, buff=0.6)
         btn_t.move_to(btn_box)
-        self.play(GrowFromCenter(btn), run_time=0.5)
+        self.play(FadeIn(btn), run_time=0.5)
         cur = cursor().move_to(btn.get_center() + RIGHT * 2.6 + DOWN * 1.2, aligned_edge=UL)
         self.add(cur)
         self.until(word_time(seg_sub, word_index(seg_sub, "subscribe")) - 0.4)
         self.play(cur.animate.move_to(btn.get_center() + RIGHT * 0.25 + DOWN * 0.05, aligned_edge=UL), run_time=0.7,
                   rate_func=rate_functions.ease_out_cubic)
-        self.play(btn.animate.scale(0.92), cur.animate.scale(0.9), run_time=0.12)
-        done_box = btn_box.copy().set_fill("#6b6b66", 1).scale(1 / 0.92)
+        done_box = btn_box.copy().set_fill("#6b6b66", 1)
         done_t = T("SUBSCRIBED  ✓", 30, INK, weight=BOLD).move_to(done_box)
         done = VGroup(done_box, done_t).move_to(btn)
         done_box.qa_container = True
-        self.play(ReplacementTransform(btn, done), cur.animate.scale(1 / 0.9), run_time=0.3)
+        self.play(ReplacementTransform(btn, done), run_time=0.3)
         self.play(cur.animate.shift(RIGHT * 1.6 + DOWN * 1.0).set_opacity(0), run_time=0.6)
         self.remove(cur)
         bt = T("so we can keep building together", 32, INK2).next_to(done, DOWN, buff=0.45)

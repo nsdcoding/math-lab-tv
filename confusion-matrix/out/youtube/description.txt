@@ -1,0 +1,71 @@
+The confusion matrix explained visually: accuracy, precision, recall and the F1 score, for Machine Learning (ML), Data Science (DS), Finance and Computer Science (CS).
+Learn to read any classifier's confusion matrix, why 99% accuracy can be useless, and how to choose between precision and recall.
+
+Two fraud detectors check 10,000 card payments, 100 of them fraud. One says "we catch 90% of fraud", the other says "90% of our alarms are real", and both are over 99% accurate. Yet one lets 55 of the 100 frauds through, and a detector that never raises an alarm is 99% accurate too. A 26-minute explainer for people who don't think of themselves as "math people".
+
+⏱ CHAPTERS
+0:00 Two fraud detectors, both 99% accurate
+1:00 Welcome
+1:24 Why accuracy isn't enough (the lazy detector)
+2:28 The four outcomes: TP, TN, FP, FN
+5:04 Filling the confusion matrix with real counts
+6:24 Accuracy, and why it lies about rare things
+7:49 Precision: a question about your alarms
+9:01 Recall (sensitivity) and specificity
+10:46 The precision–recall trade-off and the cut-off dial
+13:16 The F1 score (harmonic mean)
+14:59 Which error is worse? Pricing the mistakes
+16:23 Example: a medical screening test (Bayes link)
+18:32 Example: a spam filter
+19:48 Your turn: loan defaults
+21:07 Where you'll use it: ML, DS, Finance, CS
+22:14 Common mistakes
+23:42 The recipe
+24:45 Subscribe
+25:03 Next time
+
+🌍 WHERE YOU'LL USE IT
+• Machine Learning / ML (21:09): the first thing printed after training any classifier; for rare classes report precision and recall, not accuracy alone
+• Data Science / DS (21:36): explain a model in plain words: of every 100 alarms this many are real, of every 100 cases we catch this many
+• Finance (21:46): fraud detection and credit risk; the cut-off is set by the cost of each kind of mistake
+• Computer Science / CS (21:53): spam filters, malware scanners and intrusion detection, where too many false alarms get ignored
+
+📐 KEY FORMULAS
+• accuracy = (TP + TN) / total: how often the detector is right overall
+• precision = TP / (TP + FP): of everything it flagged, how much was real
+• recall (sensitivity) = TP / (TP + FN): of everything real, how much it caught
+• specificity = TN / (TN + FP): of everything normal, how much it left alone
+• F1 = 2TP / (2TP + FP + FN): the harmonic mean of precision and recall
+  TP = true positives (caught), TN = true negatives (correctly left alone),
+  FP = false positives (false alarms), FN = false negatives (misses)
+
+✅ WORKED EXAMPLE
+• Detector A (TP 90, FN 10, FP 30, TN 9,870): accuracy 99.6%, precision 75%, recall 90%, F1 = 9/11 ≈ 82%
+• Detector B (TP 45, FN 55, FP 5, TN 9,895): accuracy 99.4%, precision 90%, recall 45%, F1 60%
+• Detector C (TP 99, FN 1, FP 301, TN 9,599): recall 99%, precision ≈ 25%, accuracy 96.98%
+• Lazy detector (never alarms): accuracy 99%, recall 0
+• Medical test (9, 1, 99, 891): recall 90%, accuracy 90%, precision 9/108 = 1 in 12; in a clinic where half are sick: precision 90%
+• Spam filter (270, 30, 10, 690): precision ≈ 96%, recall 90%, accuracy 96%
+• Loans (150, 50, 100, 1,700): precision 60%, recall 75%, accuracy 92.5%, F1 = 2/3
+• Costs (illustration, a miss = $500, a false alarm = $5): A $5,150, B $27,525, C $2,005, lazy $50,000
+
+🧭 THE RECIPE
+1. Draw the grid: truth in the rows, the detector's answer in the columns.
+2. Fill the four counts and check the rows add up to the real totals.
+3. Precision: read down the alarm column.
+4. Recall: read across the real row.
+5. Price the mistakes, then set the cut-off. Use accuracy only when the groups are roughly balanced.
+
+📺 RELATED VIDEOS
+• Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
+• Next: The Confusion Matrix Explained: Accuracy, Precision and Recall (coming soon, subscribe so you don't miss it)
+
+🎓 MORE FROM MATH LAB TV
+• Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
+• Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS: https://www.youtube.com/watch?v=uwVXnn68gbg
+• Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
+
+▶ NEXT VIDEO: How Spam Filters Work: Naive Bayes Explained (Bayes' theorem, one word at a time)
+
+#machinelearning #datascience #statistics

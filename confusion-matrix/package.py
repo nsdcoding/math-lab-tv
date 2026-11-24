@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """YouTube package: title options, description (chapters from timings.json + related videos from the
-channel tracker), tags, pinned comment, settings.  FILL every constant below; see bayes-theorem/package.py."""
+channel tracker), tags, pinned comment, settings."""
 import math, pathlib, sys
 from common import CHAPTERS, TIM, SEGS
 
@@ -10,24 +10,74 @@ OUT = HERE / "out" / "youtube"; OUT.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(HERE.parent / "channel"))
 import channel as ch  # noqa: E402
 
-TITLES = ["FILL keyword first … | ML, Data Science, Finance, CS", "FILL option 2", "FILL option 3"]   # each < 100 chars
-TITLE = TITLES[0]                                   # recommended
-CH_TITLES = {c["name"]: c["name"] for c in CHAPTERS}  # FILL: a descriptive, keyword-rich title per chapter
-DOMAIN_SEGS = dict(ml="FILL sid", ds="FILL sid", fin="FILL sid", cs="FILL sid")   # first segment of each domain part
+TITLES = ["Confusion Matrix Explained: Accuracy, Precision, Recall, F1 | ML, Data Science, Finance, CS",
+          "Precision vs Recall Explained Visually: The Confusion Matrix | Machine Learning & Data Science",
+          "Why 99% Accuracy Can Be Useless: The Confusion Matrix Explained | ML, DS, Finance, CS"]
+TITLE = TITLES[0]
+CH_TITLES = {
+    "Two Fraud Detectors": "Two fraud detectors, both 99% accurate",
+    "Welcome": "Welcome",
+    "Why Accuracy Isn't Enough": "Why accuracy isn't enough (the lazy detector)",
+    "The Four Outcomes": "The four outcomes: TP, TN, FP, FN",
+    "Filling the Grid": "Filling the confusion matrix with real counts",
+    "Accuracy": "Accuracy, and why it lies about rare things",
+    "Precision": "Precision: a question about your alarms",
+    "Recall": "Recall (sensitivity) and specificity",
+    "The Trade-off": "The precision–recall trade-off and the cut-off dial",
+    "The F1 Score": "The F1 score (harmonic mean)",
+    "Which Error Is Worse?": "Which error is worse? Pricing the mistakes",
+    "Example: A Medical Test": "Example: a medical screening test (Bayes link)",
+    "Example: A Spam Filter": "Example: a spam filter",
+    "Your Turn: Loan Defaults": "Your turn: loan defaults",
+    "Where You'll Use It": "Where you'll use it: ML, DS, Finance, CS",
+    "Common Mistakes": "Common mistakes",
+    "Recipe": "The recipe",
+    "Subscribe": "Subscribe",
+    "Next Time": "Next time",
+}
+DOMAIN_SEGS = dict(ml="s188", ds="s190", fin="s191", cs="s192")
 LINES = dict(
-    first2="FILL line 1: main keyword + Machine Learning (ML), Data Science (DS), Finance and Computer Science (CS).\n"
-           "FILL line 2: more keywords in a natural sentence.",
-    hook="FILL the hook story in 2–3 sentences, with real numbers.",
-    domains=dict(ml="FILL", ds="FILL", fin="FILL", cs="FILL"),
-    formulas="FILL • formula\n  every symbol explained in plain words",
-    worked="FILL • every worked-example answer",
-    recipe="FILL 1. …\n2. …",
-    next="FILL the next-video teaser",
-    pinned_extra="FILL clarifications with timestamps",
+    first2="The confusion matrix explained visually: accuracy, precision, recall and the F1 score, for Machine Learning (ML), "
+           "Data Science (DS), Finance and Computer Science (CS).\n"
+           "Learn to read any classifier's confusion matrix, why 99% accuracy can be useless, and how to choose between "
+           "precision and recall.",
+    hook="Two fraud detectors check 10,000 card payments, 100 of them fraud. One says \"we catch 90% of fraud\", the other "
+         "says \"90% of our alarms are real\", and both are over 99% accurate. Yet one lets 55 of the 100 frauds through, "
+         "and a detector that never raises an alarm is 99% accurate too.",
+    domains=dict(ml="the first thing printed after training any classifier; for rare classes report precision and recall, not accuracy alone",
+                 ds="explain a model in plain words: of every 100 alarms this many are real, of every 100 cases we catch this many",
+                 fin="fraud detection and credit risk; the cut-off is set by the cost of each kind of mistake",
+                 cs="spam filters, malware scanners and intrusion detection, where too many false alarms get ignored"),
+    formulas="• accuracy = (TP + TN) / total: how often the detector is right overall\n"
+             "• precision = TP / (TP + FP): of everything it flagged, how much was real\n"
+             "• recall (sensitivity) = TP / (TP + FN): of everything real, how much it caught\n"
+             "• specificity = TN / (TN + FP): of everything normal, how much it left alone\n"
+             "• F1 = 2TP / (2TP + FP + FN): the harmonic mean of precision and recall\n"
+             "  TP = true positives (caught), TN = true negatives (correctly left alone),\n"
+             "  FP = false positives (false alarms), FN = false negatives (misses)",
+    worked="• Detector A (TP 90, FN 10, FP 30, TN 9,870): accuracy 99.6%, precision 75%, recall 90%, F1 = 9/11 ≈ 82%\n"
+           "• Detector B (TP 45, FN 55, FP 5, TN 9,895): accuracy 99.4%, precision 90%, recall 45%, F1 60%\n"
+           "• Detector C (TP 99, FN 1, FP 301, TN 9,599): recall 99%, precision ≈ 25%, accuracy 96.98%\n"
+           "• Lazy detector (never alarms): accuracy 99%, recall 0\n"
+           "• Medical test (9, 1, 99, 891): recall 90%, accuracy 90%, precision 9/108 = 1 in 12; in a clinic where half are sick: precision 90%\n"
+           "• Spam filter (270, 30, 10, 690): precision ≈ 96%, recall 90%, accuracy 96%\n"
+           "• Loans (150, 50, 100, 1,700): precision 60%, recall 75%, accuracy 92.5%, F1 = 2/3\n"
+           "• Costs (illustration, a miss = $500, a false alarm = $5): A $5,150, B $27,525, C $2,005, lazy $50,000",
+    recipe="1. Draw the grid: truth in the rows, the detector's answer in the columns.\n"
+           "2. Fill the four counts and check the rows add up to the real totals.\n"
+           "3. Precision: read down the alarm column.\n"
+           "4. Recall: read across the real row.\n"
+           "5. Price the mistakes, then set the cut-off. Use accuracy only when the groups are roughly balanced.",
+    next="How Spam Filters Work: Naive Bayes Explained (Bayes' theorem, one word at a time)",
+    pinned_extra="• (rows vs columns) Some tools, like many Python libraries, put the truth in the rows but list the negative class first, "
+                 "so true positives sit in the bottom-right corner. Always read the labels first.\n"
+                 "• The costs in \"Which error is worse?\" are made-up numbers to show the idea; real costs depend on the business.\n"
+                 "• Precision depends on how common the thing is (see the clinic example), recall doesn't.",
 )
-TAGS = ["FILL topic keywords", "machine learning", "statistics for machine learning", "data science",
-        "statistics for data science", "finance", "statistics for finance", "computer science", "ML", "DS", "CS",
-        "statistics explained", "Math Lab TV"]
+TAGS = ["confusion matrix", "precision and recall", "precision vs recall", "accuracy precision recall", "f1 score",
+        "true positive false positive", "sensitivity and specificity", "classification metrics", "imbalanced data",
+        "machine learning", "statistics for machine learning", "data science", "statistics for data science", "finance",
+        "statistics for finance", "computer science", "ML", "DS", "CS", "fraud detection", "statistics explained", "Math Lab TV"]
 
 
 def ts(t):
@@ -75,7 +125,7 @@ def main():
     tag_str = ", ".join(TAGS)
     assert all(len(t) < 100 for t in TITLES), [len(t) for t in TITLES]
     assert len(tag_str) < 500, len(tag_str)
-    pinned = f"📌 Quick summary: FILL\n\nWorth adding:\n{LINES['pinned_extra']}\n\nFILL a question for viewers 👇"
+    pinned = f"📌 Quick summary: accuracy counts every right answer, precision asks how many alarms are real, recall asks how much of the real thing was caught. For rare things, look at the whole grid, not one number.\n\nWorth adding:\n{LINES['pinned_extra']}\n\nWhich mistake is worse in YOUR work: a false alarm or a miss? 👇"
     settings = f"""Category: Education
 Language: English · Captions: upload out/captions.srt (English)
 Audience: Not made for kids

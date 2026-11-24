@@ -1316,6 +1316,13 @@
     "pause_after": 0.35
   },
   {
+    "id": "s188a",
+    "chapter": "Where You'll Use It",
+    "text": "Most machine learning tools print it with one line of code, as a grid of four numbers, exactly like the one we built today.",
+    "visual": "Code-style card 'confusion_matrix(truth, guess)' outputs a 2×2 of numbers [[9,870, 30],[10, 90]] in Inter.",
+    "pause_after": 0.35
+  },
+  {
     "id": "s189",
     "chapter": "Where You'll Use It",
     "text": "And when the thing you're predicting is rare, people report precision and recall, never accuracy alone. Exactly because of the lazy detector.",
@@ -1365,6 +1372,13 @@
     "pause_after": 0.8
   },
   {
+    "id": "s195a",
+    "chapter": "Common Mistakes",
+    "text": "For our fraud data, that lazy baseline is ninety-nine percent. So Detector A's ninety-nine point six only beats doing nothing by a sliver. The grid shows what that sliver is worth: ninety frauds caught.",
+    "visual": "Accuracy axis 98–100: lazy 99 and A 99.6 markers; the gap labelled '90 frauds caught'.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s196",
     "chapter": "Common Mistakes",
     "text": "Mistake two: mixing up precision and recall. Here's the fix. Precision starts from the alarms. Recall starts from the real cases.",
@@ -1379,6 +1393,13 @@
     "pause_after": 0.8
   },
   {
+    "id": "s197a",
+    "chapter": "Common Mistakes",
+    "text": "Here's a second check. Precision's bottom number is the size of the alarm column, one hundred and twenty. Recall's bottom number is the size of the fraud row, one hundred.",
+    "visual": "Detector A grid: column total 120 (violet) and row total 100 (orange) circled.",
+    "pause_after": 0.6
+  },
+  {
     "id": "s198",
     "chapter": "Common Mistakes",
     "text": "Mistake three: assuming every table is laid out the same way. Some tools put the truth in the rows, some in the columns. Some put the positive class first, some last.",
@@ -1391,6 +1412,13 @@
     "text": "So before you read any number, read the labels. Find the alarm column and the real fraud row first.",
     "visual": "Finger traces the axis labels.",
     "pause_after": 0.8
+  },
+  {
+    "id": "s199a",
+    "chapter": "Common Mistakes",
+    "text": "If you're ever unsure, find the box with the true positives first. Then ask: which way does its row go, and which way does its column go?",
+    "visual": "TP box ringed; arrows along its row and down its column.",
+    "pause_after": 0.6
   },
   {
     "id": "s200",

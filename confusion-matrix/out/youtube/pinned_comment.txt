@@ -1,0 +1,8 @@
+📌 Quick summary: accuracy counts every right answer, precision asks how many alarms are real, recall asks how much of the real thing was caught. For rare things, look at the whole grid, not one number.
+
+Worth adding:
+• (rows vs columns) Some tools, like many Python libraries, put the truth in the rows but list the negative class first, so true positives sit in the bottom-right corner. Always read the labels first.
+• The costs in "Which error is worse?" are made-up numbers to show the idea; real costs depend on the business.
+• Precision depends on how common the thing is (see the clinic example), recall doesn't.
+
+Which mistake is worse in YOUR work: a false alarm or a miss? 👇

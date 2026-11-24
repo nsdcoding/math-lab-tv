@@ -54,6 +54,7 @@ Your friend's coin decides who pays for coffee, and in a month it lands heads 15
 
 🎓 MORE FROM MATH LAB TV
 • Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS: https://www.youtube.com/watch?v=uwVXnn68gbg
 • Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: The prosecutor's fallacy: a 1 in a million chance an innocent person matches the evidence is not a 1 in a million chance they're innocent.

@@ -55,6 +55,7 @@ In a city of 8 million people, Sam's DNA matches a partial trace from a crime sc
 🎓 MORE FROM MATH LAB TV
 • Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
 • Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS: https://www.youtube.com/watch?v=uwVXnn68gbg
 • Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: The confusion matrix: 'catches 90% of fraud' and '90% of alarms are real' are two different claims. One simple table makes the swap impossible to miss.

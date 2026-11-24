@@ -156,7 +156,7 @@ def desc_block(c, slug):
     others = [t for t in c["topics"] if t.get("youtube") and t["slug"] != slug and t["slug"] not in seen
               and t["slug"] != r["tease_next"]]
     others.sort(key=lambda t: (t["series"] != me["series"], t["order"]))
-    more = [f"• {(t.get('production') or {}).get('youtube_title') or t['title']}: {t['youtube']}" for t in others[:3]]
+    more = [f"• {(t.get('production') or {}).get('youtube_title') or t['title']}: {t['youtube']}" for t in others[:12]]   # every live video (capped so descriptions stay readable)
     nxt = r["tease_next"]
     recorded = (me.get("production") or {}).get("teaser_next")
     if me["status"] == "published" and not recorded:

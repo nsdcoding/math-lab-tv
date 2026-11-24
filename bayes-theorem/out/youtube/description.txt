@@ -56,6 +56,7 @@ You take a screening test that catches 9 out of 10 people who have a condition a
 🎓 MORE FROM MATH LAB TV
 • Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
 • Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS: https://www.youtube.com/watch?v=uwVXnn68gbg
 • Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: p-values. A p-value is often described as "the chance the result is a fluke", but that flips the question, exactly like mistake one. Next time: what a p-value really measures, and why Bayes is the missing piece.

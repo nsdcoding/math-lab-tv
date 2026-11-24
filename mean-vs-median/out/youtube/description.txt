@@ -51,6 +51,7 @@ Maple (50, 52, 55, 58, 60, 62, 65, 68, 70) is symmetric, so its mean and median 
 
 🎓 MORE FROM MATH LAB TV
 • Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
+• Linear Regression Explained: Find the Best Line by Hand | ML, Data Science, Finance, CS: https://www.youtube.com/watch?v=uwVXnn68gbg
 • Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: Two towns can have the same mean AND the same median and still be completely different places to live. Next time: standard deviation, how far values typically sit from the middle, and why it squares the distances first.

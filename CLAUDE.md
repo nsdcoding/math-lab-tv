@@ -19,7 +19,7 @@ pick it and give the duration, and it does the rest (full prompt in its SKILL.md
 | `channel/youtube-links.txt` | the owner pastes `slug = URL` here after uploading; a line there = published |
 | `.claude/skills/math-lab-video/SKILL.md` | the owner's standing production prompt (structure, checklists, checkpoints, style). Follow it for every video |
 | `channel/lesson-lab/<slug>/` | older draft scripts from the Lesson Lab app (reference only) |
-| `channel/channel.py` | `status`, `show`, `refs`, `next`, `set`, `link`, `desc-block`, `render` |
+| `channel/channel.py` | `status`, `show`, `refs`, `next`, `set`, `link`, `desc-block`, `refresh`, `render` |
 
 ## Workflow for every new video
 

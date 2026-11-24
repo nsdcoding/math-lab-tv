@@ -48,7 +48,13 @@ Your friend's coin decides who pays for coffee, and in a month it lands heads 15
 5. Decide, then size it: p vs α, and always report the effect size
 
 📺 RELATED VIDEOS
+• Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
+• Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
 • Next: The Prosecutors Fallacy: The Statistics Trap Smart People Fall For (coming soon, subscribe so you don't miss it)
+
+🎓 MORE FROM MATH LAB TV
+• Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: The prosecutor's fallacy: a 1 in a million chance an innocent person matches the evidence is not a 1 in a million chance they're innocent.
 

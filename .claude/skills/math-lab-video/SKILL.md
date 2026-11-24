@@ -225,8 +225,10 @@ full render.
 - Fill the topic's `production` record in `channel/catalog.json`: folder, branch, length, video, package,
   youtube_title, running_example, hook, callbacks (slugs referenced), teaser_next (slug teased).
 - `python3 channel/channel.py set <slug> produced` and `render`.
-- When the owner later sends the YouTube URL: `python3 channel/channel.py link <slug> <url>`, re-run
-  `package.py` of every video the command lists (their descriptions gain the link), commit and push.
+- When the owner later says the video is uploaded and sends the YouTube URL (in chat):
+  `python3 channel/channel.py link <slug> <url>`. It records the link, marks the video published and re-runs
+  every video's `package.py`, so all descriptions list every live video. Commit, push, and give the owner the
+  updated description text of every already-live video that changed, to paste into YouTube Studio.
 
 ## Delivery and where the work lives
 

@@ -12,6 +12,7 @@ Generated view:  channel/README.md (python3 channel/channel.py render).
   python3 channel/channel.py next [<slug>]          best next video(s), optionally after a given one
   python3 channel/channel.py set <slug> <status>    planned | scripted | in-production | produced | published
   python3 channel/channel.py link <slug> <url>      record the YouTube URL (also marks it published)
+  python3 channel/channel.py refresh               re-run every video's package.py so all descriptions carry the latest links
   python3 channel/channel.py desc-block <slug>      a ready-to-paste "related videos" block for the description
   python3 channel/channel.py render                 rebuild channel/README.md
 """
@@ -170,6 +171,36 @@ def desc_block(c, slug):
     return "\n\n".join(out)
 
 
+def package_folders(c):
+    """slug -> video folder holding a package.py (from production.folder, else a folder named after the slug)."""
+    out = {}
+    for t in c["topics"]:
+        f = (t.get("production") or {}).get("folder") or t["slug"]
+        d = HERE.parent / f.strip("/")
+        if (d / "package.py").exists():
+            out[t["slug"]] = d
+    return out
+
+
+def refresh(c):
+    """Re-run every video's package.py so each description's related-videos block has every live link.
+    Returns the slugs whose description changed."""
+    import subprocess
+    changed = []
+    for slug, d in package_folders(c).items():
+        descs = list(d.glob("**/description.txt"))
+        before = {p: p.read_text() for p in descs}
+        r = subprocess.run([sys.executable, "package.py"], cwd=d, capture_output=True, text=True)
+        if r.returncode:
+            print(f"  ✗ {slug}: package.py failed\n{r.stderr.strip()[-800:]}")
+            continue
+        after = {p: p.read_text() for p in d.glob("**/description.txt")}
+        diff = any(before.get(p) != v for p, v in after.items())
+        if diff: changed.append(slug)
+        print(f"  {'↻ updated' if diff else '= same   '} {slug:22s} {', '.join(str(p.relative_to(HERE.parent)) for p in after)}")
+    return changed
+
+
 # ── README ───────────────────────────────────────────────────────────
 def render(c):
     from collections import Counter
@@ -275,10 +306,12 @@ def main(a):
         head = [l for l in (LINKS.read_text().splitlines() if LINKS.exists() else []) if l.strip().startswith("#") or not l.strip()]
         LINKS.write_text("\n".join(head).rstrip() + "\n\n" + "\n".join(f"{k} = {v}" for k, v in links.items()) + "\n")
         c2 = load(); render(c2); print(s, "→ published", a[2])
-        touch = [x["slug"] for x in c2["topics"] if x["status"] == "published" and x["slug"] != s
-                 and (s in refs(c2, x["slug"])["callbacks"] or refs(c2, x["slug"])["tease_next"] == s)]
-        if touch:
-            print("update the descriptions of these live videos (re-run their package.py):", ", ".join(touch))
+        changed = refresh(c2)
+        live = [x for x in changed if c2["by"].get(x, {}).get("status") == "published"]
+        if live:
+            print("paste the new description into YouTube for these live videos:", ", ".join(live))
+    elif cmd == "refresh":
+        refresh(c)
     elif cmd == "desc-block":
         print(desc_block(c, need()))
     elif cmd == "render":

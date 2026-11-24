@@ -42,9 +42,22 @@ pick it and give the duration, and it does the rest (full prompt in its SKILL.md
 5. **When the final video is done**, fill the topic's `production` record in `catalog.json`
    (folder, branch, length, video, package, youtube_title, running_example, hook, callbacks,
    teaser_next), run `set <slug> produced`, then `render`, and commit.
-6. **When the owner sends a YouTube link**: `python3 channel/channel.py link <slug> <url>`, then
-   re-run `package.py` for every video the command lists, so their descriptions gain the new link.
-   Commit and push.
+6. **When the owner says a video is uploaded and sends its YouTube link** (in chat, any wording), do all of this
+   without being asked again:
+   - `python3 channel/channel.py link <slug> <url>`: writes `channel/youtube-links.txt`, marks it published,
+     re-renders `channel/README.md`, and re-runs **every** video's `package.py` (`refresh`), so every
+     description's 📺 Related videos / 🎓 More from Math Lab TV block carries every live link.
+   - If any `package.py` fails (e.g. manim missing in a fresh container), install per the skill's setup.md and
+     run `python3 channel/channel.py refresh`.
+   - Commit and push, then tell the owner which already-live videos got a new description, with the text
+     ready to paste into YouTube Studio.
+   - Videos finished on other session branches must be merged into the working branch first (see "Keep one
+     tracker" below), or their links and descriptions are missed.
+
+**Keep one tracker.** Each session starts from `main`. If a finished video is missing from the tracker, look
+for it on other `claude/*` branches (`git ls-tree -d --name-only origin/<branch>`) and merge those branches in.
+Ask the owner to merge the working branch into `main` (pull request) after each video so the next session
+starts up to date.
 
 ## Owner preferences (keep these)
 

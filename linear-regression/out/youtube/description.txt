@@ -52,7 +52,13 @@ Five sales: 1,000 sq ft $140k · 1,500 $220k · 2,000 $250k · 2,500 $280k · 3,
 "A line does not know the truth. It is just the one guess that misses least."
 
 📺 RELATED VIDEOS
+• Mean vs Median Explained | Machine Learning, Data Science (DS), Finance & Computer Science (CS): https://www.youtube.com/watch?v=CLDnC_Tfmgg
+• Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ
 • Next: Gradient Descent Visualized: How AI Actually Learns (coming soon, subscribe so you don't miss it)
+
+🎓 MORE FROM MATH LAB TV
+• Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
+• Pythagorean Theorem Explained Visually. | Why Do Two Squares Make a Third?: https://www.youtube.com/watch?v=-3pBE2v268M
 
 ▶ NEXT VIDEO: Gradient descent. Five houses had a formula, but a modern AI model has millions of settings and none. Next time: how it finds its smallest score by feeling which way is downhill.
 

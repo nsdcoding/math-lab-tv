@@ -15,14 +15,14 @@ class S17Recipe(Base):
 
     def construct(self):
         self.at("s201", 0.0)
-        ttl = TB("THE RECIPE", 50, AQUA).move_to(UP * 2.4 + RIGHT * 0.2)
+        ttl = TB("THE RECIPE", 50, AQUA).move_to(UP * 2.55 + RIGHT * 0.2)
         self.play(FadeIn(ttl, shift=DOWN * 0.15), run_time=0.5)
         rows = VGroup()
         for i, (h, e) in enumerate(STEPS):
             num = step_chip(i + 1, h, COLS[i], 30)
             ex = T(e, 26, INK2).next_to(num, RIGHT, buff=0.4)
             rows.add(VGroup(num, ex))
-        rows.arrange(DOWN, buff=0.34, aligned_edge=LEFT).move_to(LEFT * 1.6 + DOWN * 0.0)
+        rows.arrange(DOWN, buff=0.34, aligned_edge=LEFT).move_to(LEFT * 1.6 + DOWN * 0.35)
         # align explanations in one column
         x = max(r[0].get_right()[0] for r in rows) + 0.45
         for r in rows:
@@ -46,9 +46,9 @@ class S17Recipe(Base):
             v.move_to([xv + v.width / 2, c.get_y(), 0])
         self.play(FadeIn(vals[0]), FadeIn(vals[1]), run_time=0.5)
         self.word("s207", "Precision:")
-        self.play(FadeIn(vals[2]), Create(g.frame_of(g.col0(), VIOLET)), run_time=0.5)
+        self.play(FadeIn(vals[2]), g.light("TP", VIOLET), g.light("FP", VIOLET), run_time=0.5)
         self.word("s207", "Recall:")
-        self.play(FadeIn(vals[3]), Create(g.frame_of(g.row0(), ORANGE_, pad=0.15)), run_time=0.5)
+        self.play(FadeIn(vals[3]), g.unlight("FP"), g.light("TP", ORANGE_), g.light("FN", ORANGE_), run_time=0.5)
         self.word("s207", "misses")
         self.play(FadeIn(vals[4]), run_time=0.5)
         # ── s208 the closing line ──

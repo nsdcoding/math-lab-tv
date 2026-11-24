@@ -97,14 +97,14 @@ class Grid(VGroup):
         # labels
         top = self.cells.get_top()[1]
         self.collab = VGroup(*[_lab(cols[i], label_size, INK, weight=BOLD).move_to(
-            np.array([(i + 0.5) * cw, top + 0.32, 0])) for i in range(2)])
-        self.coltitle = _lab(col_title, 24, MUTED).move_to(np.array([cw, top + 0.85, 0]))
+            np.array([(i + 0.5) * cw, top + 0.42, 0])) for i in range(2)])
+        self.coltitle = _lab(col_title, 24, MUTED).move_to(np.array([cw, top + 0.95, 0]))
         left = self.cells.get_left()[0]
         self.rowlab = VGroup(*[_lab(rows[i], label_size, INK, weight=BOLD) for i in range(2)])
         for i, t in enumerate(self.rowlab):
-            t.move_to(np.array([left - 0.28 - t.width / 2, -(i + 0.5) * chh, 0]))
+            t.move_to(np.array([left - 0.4 - t.width / 2, -(i + 0.5) * chh, 0]))
         self.rowtitle = _lab(row_title, 24, MUTED)
-        self.rowtitle.move_to(np.array([self.rowlab.get_center()[0], top + 0.32, 0]))
+        self.rowtitle.move_to(np.array([self.rowlab.get_center()[0], top + 0.42, 0]))
         self.rowtitle.align_to(self.rowlab, RIGHT)
         self.add(self.collab, self.coltitle, self.rowlab, self.rowtitle)
 
@@ -140,6 +140,7 @@ class Grid(VGroup):
 
     def frame_of(self, mob, color, width=6, pad=0.09):
         """A highlight frame around part of the grid (deliberately drawn round the cells: qa_ignore)."""
+        pad = pad * min(1.0, self.cell["TP"].width / (self.cw - 0.1))     # keep frames tight on small grids
         r = RoundedRectangle(corner_radius=0.2, width=mob.width + 2 * pad, height=mob.height + 2 * pad,
                              stroke_color=color, stroke_width=width, fill_opacity=0).move_to(mob)
         r.qa_ignore = True   # highlight box around cells on purpose

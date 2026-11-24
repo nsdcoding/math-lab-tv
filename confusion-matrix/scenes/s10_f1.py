@@ -83,7 +83,6 @@ class S10F1(Base):
         self.at("s127", 0.0)
         self.play(FadeOut(VGroup(ax, b1, b2, l1, l2, fe, avl, avt, hl, ht, dn, av, ttl)), run_time=0.5)
         f = ratio("F1", "2 TP", "2 TP + FP + FN", VIOLET, AQUA, INK, 56).move_to(UP * 0.5)
-        self.word("s127", "equals")
         self.play(FadeIn(f), run_time=0.6)
         # ── s128 in words ──
         self.at("s128", 0.0)

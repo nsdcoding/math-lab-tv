@@ -302,7 +302,7 @@
    "series": "ai-ml",
    "order": 8,
    "phase": 1,
-   "status": "in-production",
+   "status": "produced",
    "visual": "a two by two grid of predictions filling with cases, then precision and recall lighting up a different column and row of the same grid",
    "covers": "the four outcomes named carefully, accuracy and why it lies about a rare class, precision as a question about your alerts, recall as a question about what you missed, the f one score as a compromise, a worked screening example with real counts, choosing which of the two errors you would rather make",
    "links": {
@@ -318,7 +318,18 @@
    },
    "production": {
     "folder": "confusion-matrix",
-    "branch": "claude/nice-lovelace-wio1ve"
+    "branch": "claude/nice-lovelace-wio1ve",
+    "length": "25:31",
+    "video": "confusion-matrix/out/confusion_matrix.mp4",
+    "package": "confusion-matrix/out/youtube/",
+    "youtube_title": "Confusion Matrix Explained: Accuracy, Precision, Recall, F1 | ML, Data Science, Finance, CS",
+    "running_example": "Fraud detectors on 10,000 card payments, 100 fraud: A = TP 90, FN 10, FP 30, TN 9,870 (acc 99.6%, precision 75%, recall 90%, F1 9/11); B = 45/55/5/9,895 (precision 90%, recall 45%); C = 99/1/301/9,599; lazy detector 99% accurate. Practice: Bayes medical test 9/1/99/891 (1 in 12), spam 270/30/10/690, loans 150/50/100/1,700",
+    "hook": "Two fraud detectors: 'we catch 90% of fraud' vs '90% of our alarms are real', both 99%+ accurate; one misses 55 of 100 frauds and a do-nothing detector is 99% accurate too",
+    "callbacks": [
+     "prosecutors-fallacy",
+     "bayes-examples"
+    ],
+    "teaser_next": "naive-bayes"
    },
    "youtube": null,
    "notes": ""

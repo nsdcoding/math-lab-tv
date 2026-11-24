@@ -66,7 +66,7 @@ class S04Outcomes(Base):
 
         def explain(lines, color):
             c = side_card(lines, color, 28)
-            c.move_to(RIGHT * PANEL_X + UP * 0.2)
+            c.move_to(RIGHT * PANEL_X + UP * 0.55)
             return c
 
         # ── s036 true positive ──
@@ -82,7 +82,7 @@ class S04Outcomes(Base):
             VGroup(T("POSITIVE", 28, VIOLET, weight=BOLD), T("= it said yes", 28, INK)).arrange(RIGHT, buff=0.2),
             VGroup(T("TRUE", 28, AQUA, weight=BOLD), T("= it was right", 28, INK)).arrange(RIGHT, buff=0.2),
         ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        dc = side_card([d], INK2).move_to(RIGHT * PANEL_X + DOWN * 1.35)
+        dc = side_card([d], INK2).move_to(RIGHT * PANEL_X + DOWN * 1.45)
         self.word("s037", "Positive")
         self.play(FadeIn(dc, shift=UP * 0.2), run_time=0.5)
         # ── s038 true negative ──

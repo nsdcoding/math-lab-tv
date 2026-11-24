@@ -58,7 +58,7 @@ Two fraud detectors check 10,000 card payments, 100 of them fraud. One says "we 
 
 📺 RELATED VIDEOS
 • Bayes' Theorem Explained Simply, With Real Examples | Machine Learning, Data Science, Finance & CS: https://www.youtube.com/watch?v=QpYlwLb8UmE
-• Next: The Confusion Matrix Explained: Accuracy, Precision and Recall (coming soon, subscribe so you don't miss it)
+• Next: How Spam Filters Work: Naive Bayes Explained (coming soon, subscribe so you don't miss it)
 
 🎓 MORE FROM MATH LAB TV
 • Standard Deviation Explained Visually | Stats, Machine Learning & Data Science: https://www.youtube.com/watch?v=N5MXIQOKjoQ

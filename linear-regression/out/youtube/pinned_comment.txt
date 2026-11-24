@@ -1,0 +1,8 @@
+📌 Quick summary: linear regression finds the line with the smallest sum of squared errors. For our five houses that is $50,000 + $100 per sq ft, so 1,800 sq ft → about $230k (9:49). Trust it only inside your data (10:32), and remember a line shows that things move together, not why (11:24).
+
+Worth adding:
+1️⃣ Squaring is a choice (6:16). With plain distances (least absolute deviations) a different line can win, like the median vs the mean. Least squares is the standard because it gives one clean formula.
+2️⃣ The slanted (perpendicular) distance belongs to a different method, total least squares, used when both numbers are measured with error (2:57).
+3️⃣ Beta (12:50): a beta above 1 is a rule of thumb for 'swings more than the market', measured over a past period.
+
+What two numbers in your life seem to climb together? A line, a curve, or a coincidence? 👇

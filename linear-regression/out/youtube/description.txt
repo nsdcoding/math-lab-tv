@@ -1,0 +1,59 @@
+Linear regression explained from scratch, with real uses in Machine Learning (ML), Data Science (DS), Finance and Computer Science (CS).
+Learn least squares, residuals, the sum of squared errors, slope and intercept, prediction vs extrapolation, and why correlation is not causation.
+
+You want to sell your 1,800 sq ft house. One agent says $260,000, another says $200,000. Five houses on your street sold last year, and a ruler line through them gives a different price for everyone who draws it. Linear regression finds the one best line, and here the fair price comes out at $230,000. A 16-minute explainer for people who don't think of themselves as "math people".
+
+⏱ CHAPTERS
+0:00 Two agents, two prices: what is the house really worth?
+1:14 Welcome to Math Lab TV + what you'll learn
+1:35 Why it matters: the first model in machine learning
+2:16 Residuals: measuring a miss straight up and down
+3:21 Least squares: why we square the errors
+6:38 The slope and intercept formula, worked by hand
+9:04 Reading the line: slope as a rate, the intercept, a prediction
+10:31 Prediction vs extrapolation
+11:24 Correlation is not causation
+12:20 Machine learning, data science, finance & computer science
+13:28 3 common mistakes (+ a bonus)
+14:50 Recipe recap: linear regression in five steps
+15:22 Look around your world + subscribe
+15:38 Next: gradient descent
+
+🌍 WHERE YOU'LL USE IT
+• Machine Learning / ML (12:25): linear regression is the first model you train: the score is the loss, training finds the smallest loss
+• Data Science / DS (12:43): trend lines, e.g. how much sales rise per extra $1,000 of advertising
+• Finance (12:50): a stock's beta is the slope of its moves against the market's moves
+• Computer Science / CS (13:01): fit run time against input size; the slope is the cost per item (and predicting huge jobs is extrapolation)
+
+📐 KEY FORMULAS
+• Line: y = a + b·x   (y = price, x = size, b = slope, a = intercept)
+• Residual (miss) = actual − predicted, measured straight up and down
+• Score: sum of squared errors = Σ (miss)²   (Σ = add them all up)
+• Slope: b = Σ(x − x̄)(y − ȳ) ÷ Σ(x − x̄)²   (x̄, ȳ = the averages)
+• Intercept: a = ȳ − b·x̄   (the best line always passes through the average point)
+
+✅ WORKED EXAMPLE
+Five sales: 1,000 sq ft $140k · 1,500 $220k · 2,000 $250k · 2,500 $280k · 3,000 $360k
+• Average house: 2,000 sq ft, $250k
+• Size in hundreds of sq ft: Σ(x − x̄)(y − ȳ) = 2,500 · Σ(x − x̄)² = 250 → slope 10 ($100 per sq ft)
+• Intercept: 250 − 10 × 20 = 50 → price = $50,000 + $100 per sq ft
+• Misses: −10, +20, 0, −20, +10 → sum of squared errors 1,000 (in $ thousand²)
+• Other lines: flat at the average 26,000 · through the end houses 1,250 · too steep 7,250
+• 1,800 sq ft → $230k (give or take about $20k) · 10,000 sq ft → $1.05M is extrapolation
+• One outlier ($560k instead of $360k) moves the slope to $180 per sq ft and the 1,800 sq ft price to $254k
+(Illustrative house prices, not real sales.)
+
+🧭 THE RECIPE
+1. Plot and look: the dots should lean along a line
+2. Measure the misses: straight up and down, in the units you predict
+3. Square and add: that total is the score (sum of squared errors)
+4. Find the best line: slope from the formula, then the intercept from the average point
+5. Read and predict: the slope is a rate; predict only inside your data
+"A line does not know the truth. It is just the one guess that misses least."
+
+📺 RELATED VIDEOS
+• Next: Gradient Descent Visualized: How AI Actually Learns (coming soon, subscribe so you don't miss it)
+
+▶ NEXT VIDEO: Gradient descent. Five houses had a formula, but a modern AI model has millions of settings and none. Next time: how it finds its smallest score by feeling which way is downhill.
+
+#machinelearning #datascience #statistics

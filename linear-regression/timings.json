@@ -1,0 +1,964 @@
+{
+ "total": 964.01,
+ "segments": [
+  {
+   "id": "s001",
+   "chapter": "The Fair Price",
+   "start": 0.6,
+   "end": 6.7,
+   "text": "Imagine you are about to sell your house. It is eighteen hundred square feet, on a quiet street in a small town."
+  },
+  {
+   "id": "s002",
+   "chapter": "The Fair Price",
+   "start": 7.05,
+   "end": 8.74,
+   "text": "You ask two agents what it is worth."
+  },
+  {
+   "id": "s003",
+   "chapter": "The Fair Price",
+   "start": 9.09,
+   "end": 14.81,
+   "text": "The first says two hundred sixty thousand dollars. The second says two hundred thousand."
+  },
+  {
+   "id": "s004",
+   "chapter": "The Fair Price",
+   "start": 15.16,
+   "end": 19.24,
+   "text": "That is a sixty thousand dollar difference. Who do you believe?"
+  },
+  {
+   "id": "s005",
+   "chapter": "The Fair Price",
+   "start": 20.24,
+   "end": 24.69,
+   "text": "So you look at what actually sold. Five houses on your street, in the last year."
+  },
+  {
+   "id": "s006",
+   "chapter": "The Fair Price",
+   "start": 25.04,
+   "end": 32.78,
+   "text": "A thousand square feet sold for one hundred forty thousand. Three thousand square feet sold for three hundred sixty thousand. The rest are in between."
+  },
+  {
+   "id": "s007",
+   "chapter": "The Fair Price",
+   "start": 33.13,
+   "end": 39.16,
+   "text": "Put them on a picture. Size along the bottom, price up the side. Every dot is one house."
+  },
+  {
+   "id": "s008",
+   "chapter": "The Fair Price",
+   "start": 39.51,
+   "end": 46.43,
+   "text": "Your eye sees it straight away. Bigger houses, higher prices. The dots lean upward, almost in a line."
+  },
+  {
+   "id": "s009",
+   "chapter": "The Fair Price",
+   "start": 46.78,
+   "end": 51.86,
+   "text": "So grab a ruler and draw the line. Then read off eighteen hundred square feet."
+  },
+  {
+   "id": "s010",
+   "chapter": "The Fair Price",
+   "start": 52.21,
+   "end": 57.65,
+   "text": "But hand the same ruler to three people, and you get three different lines, and three different prices."
+  },
+  {
+   "id": "s011",
+   "chapter": "The Fair Price",
+   "start": 58.45,
+   "end": 64.72,
+   "text": "There has to be one best line. A line we can defend, with a number that says why it wins."
+  },
+  {
+   "id": "s012",
+   "chapter": "The Fair Price",
+   "start": 65.07,
+   "end": 74.2,
+   "text": "Finding that line is called linear regression. By the end of this video, you will find it yourself, by hand, and the fair price will be two hundred thirty thousand dollars."
+  },
+  {
+   "id": "s013",
+   "chapter": "Welcome",
+   "start": 75.2,
+   "end": 78.95,
+   "text": "Welcome to Math Lab TV. Where math is something you can see."
+  },
+  {
+   "id": "s014",
+   "chapter": "Welcome",
+   "start": 79.65,
+   "end": 83.87,
+   "text": "Today you will learn how to score any line, by measuring how far it misses each dot."
+  },
+  {
+   "id": "s015",
+   "chapter": "Welcome",
+   "start": 84.22,
+   "end": 90.16,
+   "text": "You will see the best line found, step by step, and what its slope and starting point really mean."
+  },
+  {
+   "id": "s016",
+   "chapter": "Welcome",
+   "start": 90.51,
+   "end": 95.5,
+   "text": "And you will learn when to trust its predictions, and when a line is quietly lying to you."
+  },
+  {
+   "id": "s017",
+   "chapter": "Why It Matters",
+   "start": 96.1,
+   "end": 101.91,
+   "text": "Drawing a line through dots sounds like a school exercise. It is actually one of the most used tools in the world."
+  },
+  {
+   "id": "s018",
+   "chapter": "Why It Matters",
+   "start": 102.26,
+   "end": 106.6,
+   "text": "Whenever one number tends to move with another, people want a line between them."
+  },
+  {
+   "id": "s019",
+   "chapter": "Why It Matters",
+   "start": 106.95,
+   "end": 115.04,
+   "text": "Price from size. Sales from advertising. Exam scores from hours of study. How long a program runs from how much data it gets."
+  },
+  {
+   "id": "s021a",
+   "chapter": "Why It Matters",
+   "start": 115.39,
+   "end": 122.52,
+   "text": "Every one of those lines answers the same kind of question. If this number goes up by one step, how much does that one tend to move?"
+  },
+  {
+   "id": "s020",
+   "chapter": "Why It Matters",
+   "start": 123.12,
+   "end": 131.61,
+   "text": "And it is the very first model in machine learning. The same idea, misses, a score, and a search for the smallest score, is how much bigger models learn."
+  },
+  {
+   "id": "s021",
+   "chapter": "Why It Matters",
+   "start": 132.41,
+   "end": 135.94,
+   "text": "So let us build it from nothing. Back to our five houses."
+  },
+  {
+   "id": "s022",
+   "chapter": "Measuring a Miss",
+   "start": 136.29,
+   "end": 140.33,
+   "text": "Here is a line. Any line. We need a way to say how good it is."
+  },
+  {
+   "id": "s023",
+   "chapter": "Measuring a Miss",
+   "start": 140.68,
+   "end": 144.88,
+   "text": "The line is a price guesser. For every size, it points to a price."
+  },
+  {
+   "id": "s024",
+   "chapter": "Measuring a Miss",
+   "start": 145.23,
+   "end": 150.93,
+   "text": "So for each house, we compare two prices. What the line guessed, and what the house really sold for."
+  },
+  {
+   "id": "s025",
+   "chapter": "Measuring a Miss",
+   "start": 151.28,
+   "end": 157.49,
+   "text": "The gap between them is the miss. Statisticians call it the residual, the bit that is left over."
+  },
+  {
+   "id": "s026",
+   "chapter": "Measuring a Miss",
+   "start": 158.29,
+   "end": 163.57,
+   "text": "Notice the direction. The miss is measured straight up and down. Not the shortest distance to the line."
+  },
+  {
+   "id": "s027",
+   "chapter": "Measuring a Miss",
+   "start": 163.92,
+   "end": 170.6,
+   "text": "Why? Because up and down is price. We are guessing prices, so we measure our mistake in dollars."
+  },
+  {
+   "id": "s028",
+   "chapter": "Measuring a Miss",
+   "start": 170.95,
+   "end": 177.22,
+   "text": "The size of each house is not in doubt. We know it exactly. Only the price is being guessed."
+  },
+  {
+   "id": "s029",
+   "chapter": "Measuring a Miss",
+   "start": 177.82,
+   "end": 186.54,
+   "text": "There is a different method that uses the shortest, slanted distance, for when both numbers are uncertain. But that is a different tool, for a different job."
+  },
+  {
+   "id": "s030",
+   "chapter": "Measuring a Miss",
+   "start": 187.14,
+   "end": 193.65,
+   "text": "Now draw the miss for every house. Some dots sit above the line, and their miss is positive."
+  },
+  {
+   "id": "s031",
+   "chapter": "Measuring a Miss",
+   "start": 194.0,
+   "end": 196.81,
+   "text": "Others are below the line, and their miss is negative."
+  },
+  {
+   "id": "s032",
+   "chapter": "Measuring a Miss",
+   "start": 197.16,
+   "end": 201.39,
+   "text": "A good line should have small misses. So let us add them up into one score."
+  },
+  {
+   "id": "s033",
+   "chapter": "Scoring a Line",
+   "start": 201.74,
+   "end": 207.3,
+   "text": "Try the simplest line of all. A flat line at the average price, two hundred fifty thousand."
+  },
+  {
+   "id": "s034",
+   "chapter": "Scoring a Line",
+   "start": 207.65,
+   "end": 215.59,
+   "text": "In our mean versus median video, the average was the single number that best stood in for a whole group. Here it is, as a line."
+  },
+  {
+   "id": "s035",
+   "chapter": "Scoring a Line",
+   "start": 215.94,
+   "end": 220.82,
+   "text": "It ignores size completely. Every house gets the same guess. So it should score badly."
+  },
+  {
+   "id": "s033a",
+   "chapter": "Scoring a Line",
+   "start": 221.17,
+   "end": 231.72,
+   "text": "Let us look at the misses for this flat line, one house at a time. The smallest house is a hundred and ten thousand below it. The biggest is a hundred and ten thousand above."
+  },
+  {
+   "id": "s036",
+   "chapter": "Scoring a Line",
+   "start": 232.07,
+   "end": 240.53,
+   "text": "Add up the misses. Minus one ten, minus thirty, zero, plus thirty, plus one ten. The total is zero."
+  },
+  {
+   "id": "s037",
+   "chapter": "Scoring a Line",
+   "start": 241.53,
+   "end": 245.1,
+   "text": "Zero. A perfect score, for a line that is plainly bad."
+  },
+  {
+   "id": "s038",
+   "chapter": "Scoring a Line",
+   "start": 245.45,
+   "end": 251.93,
+   "text": "The pluses and minuses cancelled out. The misses above wiped out the misses below. So a plain sum is useless."
+  },
+  {
+   "id": "s039",
+   "chapter": "Scoring a Line",
+   "start": 252.93,
+   "end": 261.22,
+   "text": "We need every miss to count against the line, whatever its direction. The fix is the one from our standard deviation video. Square them."
+  },
+  {
+   "id": "s040",
+   "chapter": "Scoring a Line",
+   "start": 261.57,
+   "end": 267.17,
+   "text": "Each orange miss becomes a square, with the miss as its side. Its area is the squared miss."
+  },
+  {
+   "id": "s041",
+   "chapter": "Scoring a Line",
+   "start": 267.52,
+   "end": 270.57,
+   "text": "A square is never negative, so nothing can cancel."
+  },
+  {
+   "id": "s042",
+   "chapter": "Scoring a Line",
+   "start": 270.92,
+   "end": 275.3,
+   "text": "And squaring does something else. It punishes big misses much more than small ones."
+  },
+  {
+   "id": "s043",
+   "chapter": "Scoring a Line",
+   "start": 275.65,
+   "end": 285.04,
+   "text": "One miss of twenty costs four hundred. Two misses of ten cost only two hundred together. So the best line hates being far from any one house."
+  },
+  {
+   "id": "s044",
+   "chapter": "Scoring a Line",
+   "start": 285.84,
+   "end": 292.81,
+   "text": "Add up all the squares. That total is our score. It is called the sum of squared errors, and smaller is better."
+  },
+  {
+   "id": "s045",
+   "chapter": "Scoring a Line",
+   "start": 293.16,
+   "end": 295.82,
+   "text": "For the flat line, the score is twenty six thousand."
+  },
+  {
+   "id": "s046",
+   "chapter": "Scoring a Line",
+   "start": 296.62,
+   "end": 301.6,
+   "text": "Now give the line some tilt. Here is a line through the cheapest and the most expensive house."
+  },
+  {
+   "id": "s047",
+   "chapter": "Scoring a Line",
+   "start": 301.95,
+   "end": 304.82,
+   "text": "It looks great. It passes right through three of the houses."
+  },
+  {
+   "id": "s048",
+   "chapter": "Scoring a Line",
+   "start": 305.17,
+   "end": 311.56,
+   "text": "Two misses of twenty five. Squared, that is six hundred twenty five each. The score is twelve fifty."
+  },
+  {
+   "id": "s049",
+   "chapter": "Scoring a Line",
+   "start": 312.36,
+   "end": 317.68,
+   "text": "Much better. But is it the best? Let us go too far the other way, a line that is too steep."
+  },
+  {
+   "id": "s050",
+   "chapter": "Scoring a Line",
+   "start": 318.03,
+   "end": 323.84,
+   "text": "Its score jumps to seven thousand two hundred fifty. Too steep is bad, too flat is bad."
+  },
+  {
+   "id": "s051",
+   "chapter": "Scoring a Line",
+   "start": 324.44,
+   "end": 333.53,
+   "text": "So let the line search for itself. It can do two things. It can pivot, to change its tilt. And it can slide, up and down."
+  },
+  {
+   "id": "s052",
+   "chapter": "Scoring a Line",
+   "start": 333.88,
+   "end": 339.16,
+   "text": "Watch the score as it pivots. The squares shrink, grow, and shrink again."
+  },
+  {
+   "id": "s053",
+   "chapter": "Scoring a Line",
+   "start": 339.51,
+   "end": 342.62,
+   "text": "Now it slides. Too high is worse, too low is worse."
+  },
+  {
+   "id": "s052a",
+   "chapter": "Scoring a Line",
+   "start": 342.97,
+   "end": 352.93,
+   "text": "Think of the score as a valley. Every possible line is a spot on the ground, and the score is how high that spot is. We are looking for the lowest point."
+  },
+  {
+   "id": "s054",
+   "chapter": "Scoring a Line",
+   "start": 353.53,
+   "end": 357.27,
+   "text": "And at one spot, the score cannot get any smaller."
+  },
+  {
+   "id": "s055",
+   "chapter": "Scoring a Line",
+   "start": 357.87,
+   "end": 366.51,
+   "text": "The misses are minus ten, plus twenty, zero, minus twenty, and plus ten. Squared and added, the score is one thousand."
+  },
+  {
+   "id": "s056",
+   "chapter": "Scoring a Line",
+   "start": 368.01,
+   "end": 374.68,
+   "text": "That is it. The line with the smallest sum of squared errors is the least squares line, and finding it is linear regression."
+  },
+  {
+   "id": "s057",
+   "chapter": "Scoring a Line",
+   "start": 376.18,
+   "end": 384.98,
+   "text": "Be honest about one thing. Squaring is a choice. If we added plain distances instead, the end to end line would actually win, fifty to sixty."
+  },
+  {
+   "id": "s058",
+   "chapter": "Scoring a Line",
+   "start": 385.33,
+   "end": 397.91,
+   "text": "It is the same choice as mean versus median. Squared misses behave like the mean, and plain distances like the median. Squares are the standard, because they give one clean answer with a simple formula."
+  },
+  {
+   "id": "s059",
+   "chapter": "The Formula",
+   "start": 398.71,
+   "end": 404.91,
+   "text": "We do not have to search by sliding, though. For a straight line, there is a formula that lands on the best line directly."
+  },
+  {
+   "id": "s060",
+   "chapter": "The Formula",
+   "start": 405.26,
+   "end": 412.98,
+   "text": "Step one. Find the average house. The average size is two thousand square feet, and the average price is two hundred fifty thousand."
+  },
+  {
+   "id": "s061",
+   "chapter": "The Formula",
+   "start": 413.33,
+   "end": 419.67,
+   "text": "Here is a lovely fact. The best line always passes right through the average house. So now we only need its tilt."
+  },
+  {
+   "id": "s062",
+   "chapter": "The Formula",
+   "start": 420.47,
+   "end": 426.95,
+   "text": "Step two. For each house, measure how far it is from the average, both in size and in price."
+  },
+  {
+   "id": "s063",
+   "chapter": "The Formula",
+   "start": 427.3,
+   "end": 432.87,
+   "text": "To keep the numbers small, size is counted in hundreds of square feet, and price in thousands of dollars."
+  },
+  {
+   "id": "s064",
+   "chapter": "The Formula",
+   "start": 433.22,
+   "end": 437.5,
+   "text": "Step three. Multiply each pair together, and add them all up."
+  },
+  {
+   "id": "s065",
+   "chapter": "The Formula",
+   "start": 437.85,
+   "end": 445.73,
+   "text": "Eleven hundred, plus one fifty, plus zero, plus one fifty, plus eleven hundred. That is two thousand five hundred."
+  },
+  {
+   "id": "s066",
+   "chapter": "The Formula",
+   "start": 446.08,
+   "end": 452.17,
+   "text": "When a house is bigger than average and also pricier, the product is positive. That pulls the line upward."
+  },
+  {
+   "id": "s066a",
+   "chapter": "The Formula",
+   "start": 452.52,
+   "end": 466.32,
+   "text": "Houses that are smaller than average and also cheaper give a positive product too. Minus times minus is plus. Only a house that breaks the pattern, bigger but cheaper, would pull the line down."
+  },
+  {
+   "id": "s067",
+   "chapter": "The Formula",
+   "start": 466.92,
+   "end": 479.1,
+   "text": "Step four. Square each size distance, and add them up. One hundred, plus twenty five, plus zero, plus twenty five, plus one hundred. That is two hundred fifty."
+  },
+  {
+   "id": "s068",
+   "chapter": "The Formula",
+   "start": 479.45,
+   "end": 485.06,
+   "text": "That second number is just how spread out the sizes are, a close cousin of the variance."
+  },
+  {
+   "id": "s069",
+   "chapter": "The Formula",
+   "start": 485.41,
+   "end": 491.97,
+   "text": "Step five. Divide. Two thousand five hundred over two hundred fifty is ten. That is the slope."
+  },
+  {
+   "id": "s070",
+   "chapter": "The Formula",
+   "start": 492.97,
+   "end": 503.11,
+   "text": "Last step. Start at the average house and walk back to zero size. Two hundred fifty, minus ten times twenty, is fifty. That is the intercept."
+  },
+  {
+   "id": "s071a",
+   "chapter": "The Formula",
+   "start": 504.11,
+   "end": 519.4,
+   "text": "Check it on the picture. Start at the average house, two thousand square feet and two hundred fifty thousand. Walk back two thousand square feet, twenty steps of a hundred, and the price drops ten thousand each step. Two hundred thousand gone. Fifty is left."
+  },
+  {
+   "id": "s071",
+   "chapter": "The Formula",
+   "start": 520.2,
+   "end": 524.53,
+   "text": "Here is the whole recipe as symbols. Each one is just a word we already met."
+  },
+  {
+   "id": "s072",
+   "chapter": "The Formula",
+   "start": 524.88,
+   "end": 535.9,
+   "text": "x is size and y is price. x bar and y bar, with the little line on top, are the averages. And the big sigma means add them all up."
+  },
+  {
+   "id": "s073",
+   "chapter": "The Formula",
+   "start": 536.25,
+   "end": 543.55,
+   "text": "b is the slope, and a is the intercept. Ten and fifty. Exactly the line our search found."
+  },
+  {
+   "id": "s074",
+   "chapter": "Reading the Line",
+   "start": 544.55,
+   "end": 551.85,
+   "text": "So our line says, price equals fifty, plus ten times size, in thousands of dollars and hundreds of square feet."
+  },
+  {
+   "id": "s075",
+   "chapter": "Reading the Line",
+   "start": 552.2,
+   "end": 557.83,
+   "text": "In plain dollars, that is fifty thousand dollars, plus one hundred dollars for every square foot."
+  },
+  {
+   "id": "s076",
+   "chapter": "Reading the Line",
+   "start": 558.18,
+   "end": 564.32,
+   "text": "What does the slope mean? Ten means, every extra hundred square feet adds about ten thousand dollars to the price."
+  },
+  {
+   "id": "s077",
+   "chapter": "Reading the Line",
+   "start": 565.12,
+   "end": 570.07,
+   "text": "It is a rate. Dollars per square foot. It is the single most useful number on the line."
+  },
+  {
+   "id": "s078",
+   "chapter": "Reading the Line",
+   "start": 570.42,
+   "end": 577.21,
+   "text": "And the intercept? It is where the line crosses zero size. Fifty thousand dollars, for a house with no floor at all."
+  },
+  {
+   "id": "s079",
+   "chapter": "Reading the Line",
+   "start": 577.56,
+   "end": 584.01,
+   "text": "That house does not exist. The intercept is often just a starting point that makes the line fit. Do not read too much into it."
+  },
+  {
+   "id": "s080",
+   "chapter": "Reading the Line",
+   "start": 584.81,
+   "end": 589.13,
+   "text": "Now the question we started with. Your house is eighteen hundred square feet."
+  },
+  {
+   "id": "s081",
+   "chapter": "Reading the Line",
+   "start": 589.48,
+   "end": 596.14,
+   "text": "Fifty, plus ten times eighteen. That is fifty plus one eighty, which is two hundred thirty thousand dollars."
+  },
+  {
+   "id": "s082",
+   "chapter": "Reading the Line",
+   "start": 597.64,
+   "end": 602.72,
+   "text": "So the first agent was a bit high, and the second was too low. And now you can show why."
+  },
+  {
+   "id": "s082a",
+   "chapter": "Reading the Line",
+   "start": 603.07,
+   "end": 612.56,
+   "text": "Let us test the line on a house we already know. Twenty five hundred square feet. The line says fifty plus ten times twenty five, which is three hundred thousand."
+  },
+  {
+   "id": "s082b",
+   "chapter": "Reading the Line",
+   "start": 612.91,
+   "end": 621.7,
+   "text": "It really sold for two hundred eighty thousand. So that house sold twenty thousand below the line. That is its miss, minus twenty, the same one we squared earlier."
+  },
+  {
+   "id": "s083",
+   "chapter": "Reading the Line",
+   "start": 622.5,
+   "end": 631.42,
+   "text": "One honest note. The real houses missed the line by up to twenty thousand. So treat two hundred thirty as a centre, give or take about twenty, not a promise."
+  },
+  {
+   "id": "s084",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 632.22,
+   "end": 640.56,
+   "text": "Eighteen hundred square feet sits inside our data, between houses we have actually seen. Guessing there is called prediction, or interpolation."
+  },
+  {
+   "id": "s085",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 640.91,
+   "end": 646.78,
+   "text": "Now try a mansion. Ten thousand square feet. The line says one point zero five million dollars."
+  },
+  {
+   "id": "s086",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 647.13,
+   "end": 653.88,
+   "text": "Maybe. But we have never seen a house that big on this street. We do not know if the straight line keeps going."
+  },
+  {
+   "id": "s087",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 654.23,
+   "end": 662.3,
+   "text": "Prices might level off, or jump. The line has no idea. Guessing outside your data is called extrapolation, and it is risky."
+  },
+  {
+   "id": "s088",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 663.1,
+   "end": 669.52,
+   "text": "It goes wrong the other way too. A two hundred square foot shed, by this line, would cost seventy thousand dollars."
+  },
+  {
+   "id": "s101a",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 669.87,
+   "end": 678.8,
+   "text": "There is a deeper reason too. The line only ever saw five ordinary houses on one street. It cannot know anything the data never showed it."
+  },
+  {
+   "id": "s089",
+   "chapter": "Prediction vs Extrapolation",
+   "start": 679.4,
+   "end": 683.65,
+   "text": "A line is a local summary. It is only trusted where the dots are."
+  },
+  {
+   "id": "s090",
+   "chapter": "A Line Is Not a Cause",
+   "start": 684.65,
+   "end": 692.48,
+   "text": "One more warning, and it is a big one. A line tells you that two things move together. It does not tell you why."
+  },
+  {
+   "id": "s091",
+   "chapter": "A Line Is Not a Cause",
+   "start": 692.83,
+   "end": 699.99,
+   "text": "Here, it feels obvious that more space makes a house cost more. But the line did not prove it. We knew it from common sense."
+  },
+  {
+   "id": "s092",
+   "chapter": "A Line Is Not a Cause",
+   "start": 700.34,
+   "end": 709.24,
+   "text": "Lines can link things that have nothing to do with each other. Ice cream sales and sunburns rise and fall together, with a lovely straight line between them."
+  },
+  {
+   "id": "s093",
+   "chapter": "A Line Is Not a Cause",
+   "start": 709.59,
+   "end": 713.74,
+   "text": "Ice cream does not cause sunburn. Hot sunny days cause both."
+  },
+  {
+   "id": "s094",
+   "chapter": "A Line Is Not a Cause",
+   "start": 714.54,
+   "end": 724.27,
+   "text": "The same thing can hide in house prices. Bigger houses are often newer, or in better neighbourhoods. Some of the hundred dollars per square foot may really belong to those."
+  },
+  {
+   "id": "s095",
+   "chapter": "A Line Is Not a Cause",
+   "start": 724.62,
+   "end": 730.59,
+   "text": "Separating those effects needs more than one input, and that is a later video on multiple regression."
+  },
+  {
+   "id": "s096",
+   "chapter": "A Line Is Not a Cause",
+   "start": 731.19,
+   "end": 739.43,
+   "text": "So read the slope as, houses that are bigger tend to cost this much more. Not, adding a room will raise the price by exactly this."
+  },
+  {
+   "id": "s097",
+   "chapter": "Big Picture",
+   "start": 740.43,
+   "end": 745.01,
+   "text": "Now let us see where this exact idea shows up in the real world."
+  },
+  {
+   "id": "s098",
+   "chapter": "Big Picture",
+   "start": 745.36,
+   "end": 753.62,
+   "text": "In machine learning, a linear regression is the first model you train. The five houses are the training data, and the line is the model."
+  },
+  {
+   "id": "s099",
+   "chapter": "Big Picture",
+   "start": 753.97,
+   "end": 762.65,
+   "text": "The sum of squared errors is called a loss. Training means finding the settings with the smallest loss, exactly like our line pivoting and sliding."
+  },
+  {
+   "id": "s100",
+   "chapter": "Big Picture",
+   "start": 763.0,
+   "end": 770.41,
+   "text": "In data science, it is the trend line. How much do sales rise for each extra thousand dollars of advertising? The slope answers it."
+  },
+  {
+   "id": "s101",
+   "chapter": "Big Picture",
+   "start": 770.76,
+   "end": 781.57,
+   "text": "In finance, analysts plot a stock's daily moves against the whole market's moves. The slope of that line has a name, beta. A beta above one means the stock swings more than the market."
+  },
+  {
+   "id": "s102",
+   "chapter": "Big Picture",
+   "start": 781.92,
+   "end": 793.54,
+   "text": "In computer science, engineers time a program on bigger and bigger inputs and fit a line. The slope is the cost per item, and it tells them how long a huge job will take."
+  },
+  {
+   "id": "s103",
+   "chapter": "Big Picture",
+   "start": 793.89,
+   "end": 799.9,
+   "text": "But notice that last one is an extrapolation. Engineers check it, for the same reason we did with the mansion."
+  },
+  {
+   "id": "s104",
+   "chapter": "Big Picture",
+   "start": 800.7,
+   "end": 808.16,
+   "text": "Measuring how good a line is deserves its own video. For now, notice that our line cut the score from twenty six thousand to one thousand."
+  },
+  {
+   "id": "s105",
+   "chapter": "Common Mistakes",
+   "start": 808.96,
+   "end": 811.13,
+   "text": "Here are the mistakes beginners make most often."
+  },
+  {
+   "id": "s106",
+   "chapter": "Common Mistakes",
+   "start": 811.48,
+   "end": 814.59,
+   "text": "Mistake one. Forcing a straight line onto a curve."
+  },
+  {
+   "id": "s107",
+   "chapter": "Common Mistakes",
+   "start": 814.94,
+   "end": 822.22,
+   "text": "The formula will always give you a line, even when the dots bend. It never warns you. So always look at the picture first."
+  },
+  {
+   "id": "s115a",
+   "chapter": "Common Mistakes",
+   "start": 822.57,
+   "end": 833.46,
+   "text": "Picture a scatter that rises steeply and then flattens out, like test scores against hours of study. A straight line cuts through the bend, too low in the middle and too high at both ends."
+  },
+  {
+   "id": "s108",
+   "chapter": "Common Mistakes",
+   "start": 834.06,
+   "end": 839.21,
+   "text": "If the misses are all positive in the middle and negative at the ends, the line is the wrong shape."
+  },
+  {
+   "id": "s109",
+   "chapter": "Common Mistakes",
+   "start": 840.01,
+   "end": 844.43,
+   "text": "Mistake two. Forgetting how much one odd point can pull the line."
+  },
+  {
+   "id": "s110",
+   "chapter": "Common Mistakes",
+   "start": 844.78,
+   "end": 850.08,
+   "text": "Say the three thousand square foot house had a gold-plated kitchen and sold for five hundred sixty thousand instead."
+  },
+  {
+   "id": "s111",
+   "chapter": "Common Mistakes",
+   "start": 850.43,
+   "end": 859.71,
+   "text": "Because every miss gets squared, that one house has a huge effect on the line. The slope jumps from one hundred to one hundred eighty dollars per square foot."
+  },
+  {
+   "id": "s112",
+   "chapter": "Common Mistakes",
+   "start": 860.06,
+   "end": 863.85,
+   "text": "And your fair price moves from two hundred thirty thousand to two hundred fifty four."
+  },
+  {
+   "id": "s113",
+   "chapter": "Common Mistakes",
+   "start": 864.2,
+   "end": 870.17,
+   "text": "It is the same reason one billionaire drags up an average income. Check odd points before you trust the slope."
+  },
+  {
+   "id": "s114",
+   "chapter": "Common Mistakes",
+   "start": 870.97,
+   "end": 880.52,
+   "text": "Mistake three. Trusting the line far outside the data, or reading it as cause. We just saw both. A line describes the dots you have, and nothing more."
+  },
+  {
+   "id": "s115",
+   "chapter": "Common Mistakes",
+   "start": 881.32,
+   "end": 889.82,
+   "text": "And a bonus one. Measuring the misses slanted, instead of straight up and down. The miss is always in the units of what you are predicting."
+  },
+  {
+   "id": "s116",
+   "chapter": "Recipe",
+   "start": 890.62,
+   "end": 892.49,
+   "text": "Let us put the whole method on one card."
+  },
+  {
+   "id": "s117",
+   "chapter": "Recipe",
+   "start": 892.84,
+   "end": 896.46,
+   "text": "One. Plot the dots, and check they look like a line."
+  },
+  {
+   "id": "s118",
+   "chapter": "Recipe",
+   "start": 896.81,
+   "end": 900.91,
+   "text": "Two. Measure each miss straight up and down, in the units you predict."
+  },
+  {
+   "id": "s119",
+   "chapter": "Recipe",
+   "start": 901.26,
+   "end": 904.78,
+   "text": "Three. Square the misses and add them. That is the score."
+  },
+  {
+   "id": "s120",
+   "chapter": "Recipe",
+   "start": 905.13,
+   "end": 911.64,
+   "text": "Four. Find the line with the smallest score. Slope from the formula, then the intercept from the average point."
+  },
+  {
+   "id": "s121",
+   "chapter": "Recipe",
+   "start": 911.99,
+   "end": 915.94,
+   "text": "Five. Read the slope as a rate, and predict only where you have data."
+  },
+  {
+   "id": "s122",
+   "chapter": "Recipe",
+   "start": 916.74,
+   "end": 921.13,
+   "text": "A line does not know the truth. It is just the one guess that misses least."
+  },
+  {
+   "id": "s123",
+   "chapter": "Subscribe",
+   "start": 922.63,
+   "end": 932.12,
+   "text": "Look around your world, and notice how often one number seems to climb with another, and ask whether it is a line, a curve, or just a coincidence."
+  },
+  {
+   "id": "s124",
+   "chapter": "Subscribe",
+   "start": 932.72,
+   "end": 938.37,
+   "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together."
+  },
+  {
+   "id": "s125",
+   "chapter": "Next Time",
+   "start": 939.17,
+   "end": 940.59,
+   "text": "But here's a puzzle for next time."
+  },
+  {
+   "id": "s126",
+   "chapter": "Next Time",
+   "start": 940.94,
+   "end": 949.05,
+   "text": "With five houses and one straight line, we had a formula. But a modern AI model has millions of settings, and no formula at all."
+  },
+  {
+   "id": "s127",
+   "chapter": "Next Time",
+   "start": 949.4,
+   "end": 958.13,
+   "text": "So how does it find its smallest score? It does what our line did. It feels which way is downhill, and takes a small step. That is gradient descent."
+  },
+  {
+   "id": "s128",
+   "chapter": "Next Time",
+   "start": 958.93,
+   "end": 960.51,
+   "text": "I will see you in the next video."
+  }
+ ]
+}

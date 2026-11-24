@@ -1,0 +1,6 @@
+__pycache__/
+build/
+audio/clips/
+audio/proc/
+audio/voice_raw.wav
+audio/voice_lim.wav

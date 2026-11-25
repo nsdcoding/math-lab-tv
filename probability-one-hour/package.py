@@ -49,11 +49,25 @@ CH_TITLES = {
     "Subscribe": "Look around your world + subscribe",
 }
 
-TAGS = ["probability", "probability for beginners", "probability explained", "learn probability", "basic probability",
-        "probability from scratch", "conditional probability", "expected value", "law of large numbers",
-        "gambler's fallacy", "dice probability", "tree diagrams", "complement rule", "addition rule",
-        "multiplication rule", "odds vs probability", "probability distribution", "statistics for beginners",
-        "math for beginners", "math explained", "Math Lab TV"]
+TAGS = ['learn probability',
+        'probability for beginners',
+        'probability explained',
+        'probability in one hour',
+        'basic probability',
+        'probability from scratch',
+        'bad at math',
+        'math for beginners',
+        'conditional probability',
+        'expected value',
+        'law of large numbers', "gambler's fallacy", 'dice probability',
+        'tree diagrams',
+        'addition rule',
+        'multiplication rule',
+        'odds vs probability',
+        'probability distribution',
+        'statistics for beginners',
+        'math explained',
+        'Math Lab TV']
 
 
 def ts(t):

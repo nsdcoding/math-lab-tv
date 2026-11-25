@@ -21,6 +21,14 @@ class PBase(Base):
             idx = hits[nth]
         self.until(word_time(sid, idx) + dt)
 
+    FADE_OUT = True
+
+    def finish(self):
+        if self.FADE_OUT and self.mobjects:
+            self.until(self.ch["t1"] - 0.5)
+            self.play(*[FadeOut(m) for m in self.mobjects], run_time=0.4)
+        self.until(self.ch["t1"])
+
     def clear(self, keep=(), rt=0.5):
         keep_ids = set()
         for k in keep:
@@ -273,7 +281,7 @@ def bar_axes(xs, y_max, y_step, x_len, y_len, x_title, y_title, fs=26, y_fmt=Non
 
 
 def bars(ax, vals, color=AQUA, width=0.6, op=0.9):
-    return VGroup(*[bar(ax, i + 1, v, color, width=width, opacity=op) for i, v in enumerate(vals)])
+    return VGroup(*[bar(ax, i + 1, v, color, width=width, opacity=op if v > 0 else 0) for i, v in enumerate(vals)])
 
 
 def line_chart(ax, pts, color=AQUA, width=4):
@@ -445,3 +453,27 @@ def unit_grid(n_cols, n_rows, cell=0.3, fill=CELL_FILL):
 
 def arrow(a, b, color=INK2, sw=4):
     return Arrow(a, b, color=color, stroke_width=sw, buff=0.15, max_tip_length_to_length_ratio=0.15)
+
+
+# ─────────────── deck of cards grid ───────────────
+RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+SUITS = [("♥", RED_), ("♦", RED_), ("♣", INK2), ("♠", INK2)]
+
+
+def deck_grid(cell=0.52):
+    ax = Axes(x_range=[0, 13, 1], y_range=[0, 4, 1], x_length=13 * cell, y_length=4 * cell,
+              axis_config=dict(color=INK2, stroke_width=3, include_tip=False, include_ticks=False))
+    cells = {}
+    sq = VGroup()
+    for si in range(4):
+        for ri in range(13):
+            s = RoundedRectangle(corner_radius=0.05, width=cell * 0.82, height=cell * 0.9, stroke_width=0, fill_color=CELL_FILL, fill_opacity=1)
+            s.move_to(ax.c2p(ri + 0.5, 3.5 - si)); s.qa_container = True
+            cells[(ri, si)] = s; sq.add(s)
+    xl = VGroup(*[T(r, 22, INK2, weight=BOLD).next_to(ax.c2p(i + 0.5, 0), DOWN, buff=0.12) for i, r in enumerate(RANKS)])
+    yl = VGroup(*[T(s, 30, c).next_to(ax.c2p(0, 3.5 - i), LEFT, buff=0.15) for i, (s, c) in enumerate(SUITS)])
+    g = VGroup(ax, sq, xl, yl); g.cells = cells; g.ax = ax
+    g.where = lambda pred: VGroup(*[s for k, s in cells.items() if pred(*k)])
+    return g
+
+

@@ -1,0 +1,71 @@
+Probability explained from absolute zero, for complete beginners: give me one hour and you'll finally understand probability.
+Learn what a probability is, how to count outcomes, the NOT / OR / AND rules, independence, conditional probability, expected value and the traps that fool almost everyone, all with pictures.
+
+It's game night. You need a 12 with two dice; your friend needs a 7. Most people think it's even. It isn't: 7 comes up six times more often. In this 51-minute lesson for people who don't think of themselves as "math people", we start from zero and count our way to the answer, then keep going.
+
+⏱ CHAPTERS
+0:00 Game night: why 7 beats 12 six times over
+0:59 Welcome to Math Lab TV + what you'll learn
+1:24 Why probability matters in everyday life
+2:28 What is probability? The 0-to-1 scale, fractions, decimals, percents
+5:29 Counting outcomes: sample space, events, coin trees
+9:20 The multiplication rule: outfits and phone codes
+11:04 Orders and the lottery: 1 in 14 million
+12:55 Two dice: the 36-square grid and the probability distribution
+15:59 Law of large numbers: what happens over many tries
+18:17 Is this die fair? Predict, then compare
+19:25 Halfway recap
+20:06 NOT: the complement rule, 1 − P(A)
+21:26 Odds vs probability (and how to convert)
+22:38 OR: the addition rule and the overlap
+24:48 AND: the multiplication rule
+27:31 Independent or not? Five quick examples
+28:31 At least one: flip it around
+30:41 NOT, OR, AND with a deck of cards
+32:19 Two-step tree diagrams: rain and a late bus
+34:25 Conditional probability: a clue shrinks the grid
+38:18 Expected value: is a game worth playing?
+40:44 Measuring instead of counting: lengths and areas
+41:56 More dice: how the bell curve appears
+42:57 Practice round: 10 questions to try yourself
+46:21 Common mistakes: gambler's fallacy and 4 more traps
+48:54 Your probability recipe in 8 steps
+50:13 Look around your world + subscribe
+
+📐 KEY RULES
+• Probability = outcomes you want ÷ all outcomes (only when every outcome is equally likely)
+• NOT: P(not A) = 1 − P(A)
+• OR: P(A or B) = P(A) + P(B) − P(A and B)   (the last part is the overlap; it's 0 if they can't happen together)
+• AND: P(A and B) = P(A) × P(B after A)   (just P(A) × P(B) when they are independent)
+• At least one: P(at least one) = 1 − P(none)
+• Given: P(A | B) = outcomes in both A and B ÷ outcomes in B   ("|" means "given")
+• Expected value = the average result per try over many tries
+P( ) means "the probability of"; A and B are any events (groups of outcomes).
+
+✅ WORKED ANSWERS
+• Two dice: 36 equally likely outcomes · total 7: 6/36 = 1/6 · total 12: 1/36
+• Not a 7: 5/6 · 7 or 11: 8/36 · orange 6 or blue 6: 11/36 · double six: 1/36
+• Two coins, one head and one tail: 1/2 · three coins, exactly two heads: 3/8
+• At least one 6 in four rolls: 1 − (5/6)⁴ = 671/1296 ≈ 52% (not 67%)
+• Cards: king or heart 16/52 = 4/13 · two aces without putting back 1/221
+• Bus late (illustration: rain 3/10, late 1/2 if rain, 1/10 if dry): 22/100; raining given late: 15/22 ≈ 68%
+• Given the orange die shows 6: total 12 → 1/6, total 7 → 1/6 (unchanged: independent)
+• Fair-stall game (pay 2, win 10 on a 7): expected loss ≈ 1/3 token per game
+• Lottery, 6 numbers from 49: 13,983,816 possible tickets
+
+🧭 THE RECIPE
+1. List all outcomes (grid or tree; equally likely)
+2. Count and divide: wanted ÷ all
+3. NOT: 1 − P(A)
+4. OR: add, then remove the overlap
+5. AND: multiply along the path, using the updated chance
+6. AT LEAST ONE: 1 − P(none)
+7. GIVEN: shrink the world, then count
+8. LONG RUN: probability describes patterns over many tries, not the next single try
+
+📺 RELATED VIDEOS
+• Next: Linear Regression Explained: The Complete Beginner Guide (coming soon, subscribe so you don't miss it)
+
+🔔 For more mathematics, explained simply and visually, subscribe to Math Lab TV.
+
+#probability #math #statistics

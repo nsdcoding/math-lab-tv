@@ -1,0 +1,4255 @@
+1
+00:00:00,600 --> 00:00:03,738
+It's game night. You and your friend are one move away from
+
+2
+00:00:03,738 --> 00:00:04,930
+winning a board game.
+
+3
+00:00:05,380 --> 00:00:08,910
+To win, you need to roll exactly twelve with two dice.
+
+4
+00:00:09,360 --> 00:00:11,180
+Your friend needs exactly seven.
+
+5
+00:00:11,630 --> 00:00:15,110
+You each get one roll. So, who is more likely to win?
+
+6
+00:00:16,310 --> 00:00:17,698
+A lot of people say it's the same.
+
+7
+00:00:17,698 --> 00:00:20,037
+Twelve is one number, seven is one number.
+
+8
+00:00:20,037 --> 00:00:22,230
+Every number is just as likely, right?
+
+9
+00:00:22,680 --> 00:00:26,140
+Wrong. Seven comes up six times more often than twelve.
+
+10
+00:00:27,640 --> 00:00:30,540
+Six times. Same dice. Same table.
+
+11
+00:00:30,540 --> 00:00:31,400
+Same luck.
+
+12
+00:00:32,200 --> 00:00:34,359
+If you played this race one hundred times,
+
+13
+00:00:34,359 --> 00:00:36,519
+your friend would win about seventeen times.
+
+14
+00:00:36,519 --> 00:00:37,620
+You'd win about three.
+
+15
+00:00:38,070 --> 00:00:39,765
+That's what probability does.
+
+16
+00:00:39,765 --> 00:00:42,012
+It takes something that feels like pure luck,
+
+17
+00:00:42,012 --> 00:00:44,260
+and shows you a hidden pattern underneath.
+
+18
+00:00:44,710 --> 00:00:45,975
+And here's the promise.
+
+19
+00:00:45,975 --> 00:00:48,855
+Give me one hour, and starting from absolute zero,
+
+20
+00:00:48,855 --> 00:00:51,340
+you will finally understand probability.
+
+21
+00:00:51,940 --> 00:00:54,487
+No scary formulas without pictures.
+
+22
+00:00:54,487 --> 00:00:57,050
+No skipped steps. Just counting, and seeing.
+
+23
+00:00:57,650 --> 00:00:58,530
+Let's begin.
+
+24
+00:00:59,530 --> 00:01:01,030
+Welcome to Math Lab TV.
+
+25
+00:01:01,030 --> 00:01:03,170
+Where math is something you can see.
+
+26
+00:01:03,870 --> 00:01:06,652
+Today you will learn what a probability really is,
+
+27
+00:01:06,652 --> 00:01:08,580
+and how to find one just by counting.
+
+28
+00:01:09,030 --> 00:01:13,345
+You will see the three little words that power almost every
+
+29
+00:01:13,345 --> 00:01:17,390
+probability question. Not, or, and and.
+
+30
+00:01:17,840 --> 00:01:20,943
+And you will learn how new information changes the odds,
+
+31
+00:01:20,943 --> 00:01:23,840
+and how to spot the traps that fool almost everyone.
+
+32
+00:01:24,440 --> 00:01:28,400
+Before we start, why should you care about probability at all?
+
+33
+00:01:28,850 --> 00:01:31,906
+Because you already use it, every single day,
+
+34
+00:01:31,906 --> 00:01:33,060
+without noticing.
+
+35
+00:01:33,510 --> 00:01:35,956
+When the weather app says seventy percent chance of rain,
+
+36
+00:01:35,956 --> 00:01:38,940
+and you decide to take an umbrella, that's probability.
+
+37
+00:01:39,390 --> 00:01:41,997
+When you guess on a quiz question with four choices,
+
+38
+00:01:41,997 --> 00:01:44,206
+and you know you have one chance in four,
+
+39
+00:01:44,206 --> 00:01:45,620
+that's probability.
+
+40
+00:01:46,070 --> 00:01:48,957
+When you wonder if it's worth playing a game at the school fair,
+
+41
+00:01:48,957 --> 00:01:50,320
+that's probability.
+
+42
+00:01:50,770 --> 00:01:53,060
+When a doctor says a medicine works for most people,
+
+43
+00:01:53,060 --> 00:01:55,668
+or a sports commentator says a team is the favourite,
+
+44
+00:01:55,668 --> 00:01:57,480
+they're talking in probabilities too.
+
+45
+00:01:57,930 --> 00:02:00,792
+And when someone says, I've lost five times in a row,
+
+46
+00:02:00,792 --> 00:02:04,026
+so I'm due for a win, that's a probability mistake.
+
+47
+00:02:04,026 --> 00:02:05,550
+We'll fix that one later.
+
+48
+00:02:06,350 --> 00:02:09,200
+Probability is simply the math of not knowing for sure.
+
+49
+00:02:10,200 --> 00:02:15,107
+Games, sports, quizzes, weather, even deciding whether to carry
+
+50
+00:02:15,107 --> 00:02:19,100
+a jacket. They're all little bets about an uncertain future.
+
+51
+00:02:19,550 --> 00:02:21,399
+You can't know what the next roll will be.
+
+52
+00:02:21,399 --> 00:02:23,971
+But you can know a lot about what tends to happen.
+
+53
+00:02:23,971 --> 00:02:25,820
+And that's surprisingly powerful.
+
+54
+00:02:26,270 --> 00:02:28,420
+So let's build it from the very first brick.
+
+55
+00:02:29,020 --> 00:02:31,022
+A probability is just a number.
+
+56
+00:02:31,022 --> 00:02:33,510
+It tells you how likely something is to happen.
+
+57
+00:02:33,960 --> 00:02:36,650
+And this number always lives between zero and one.
+
+58
+00:02:37,100 --> 00:02:39,820
+Zero means impossible. It will never happen.
+
+59
+00:02:40,270 --> 00:02:42,886
+Like rolling a seven on one ordinary die.
+
+60
+00:02:42,886 --> 00:02:46,359
+A die only has the numbers one to six, so seven can never come
+
+61
+00:02:46,359 --> 00:02:46,750
+up.
+
+62
+00:02:47,200 --> 00:02:49,850
+One means certain. It will always happen.
+
+63
+00:02:50,300 --> 00:02:53,646
+Like rolling a number smaller than seven on that same die.
+
+64
+00:02:53,646 --> 00:02:56,170
+Every face works, so it's guaranteed.
+
+65
+00:02:56,620 --> 00:02:59,582
+And everything else, everything that might or might not happen,
+
+66
+00:02:59,582 --> 00:03:00,840
+sits somewhere in between.
+
+67
+00:03:01,440 --> 00:03:04,710
+Right in the middle, at one half, is a perfect toss-up.
+
+68
+00:03:05,160 --> 00:03:07,360
+Like flipping a coin and getting heads.
+
+69
+00:03:07,360 --> 00:03:09,560
+Half the time yes, half the time no.
+
+70
+00:03:10,010 --> 00:03:13,657
+The closer a number is to one, the more likely it is.
+
+71
+00:03:13,657 --> 00:03:16,550
+The closer it is to zero, the less likely.
+
+72
+00:03:17,000 --> 00:03:20,646
+And a probability can never be negative, and never bigger than
+
+73
+00:03:20,646 --> 00:03:23,655
+one. If you ever get an answer like one point two,
+
+74
+00:03:23,655 --> 00:03:26,150
+or minus a half, you know something went wrong.
+
+75
+00:03:26,600 --> 00:03:29,228
+Let's place a few everyday things on this line,
+
+76
+00:03:29,228 --> 00:03:30,050
+just by feel.
+
+77
+00:03:30,500 --> 00:03:32,021
+The sun rising tomorrow?
+
+78
+00:03:32,021 --> 00:03:33,170
+Right up near one.
+
+79
+00:03:33,620 --> 00:03:36,821
+Rain tomorrow, when the forecast says seventy percent?
+
+80
+00:03:36,821 --> 00:03:38,330
+Around zero point seven.
+
+81
+00:03:38,780 --> 00:03:41,331
+Guessing a quiz question right with four choices?
+
+82
+00:03:41,331 --> 00:03:42,610
+Zero point two five.
+
+83
+00:03:43,060 --> 00:03:47,060
+Winning a big lottery? So close to zero that you can't even see
+
+84
+00:03:47,060 --> 00:03:47,700
+the gap.
+
+85
+00:03:48,500 --> 00:03:51,384
+Now, there are three ways to write the same probability,
+
+86
+00:03:51,384 --> 00:03:53,070
+and you'll see all three everywhere.
+
+87
+00:03:53,520 --> 00:03:55,120
+As a fraction, like one half.
+
+88
+00:03:55,570 --> 00:03:57,810
+As a decimal, like zero point five.
+
+89
+00:03:58,260 --> 00:04:00,542
+Or as a percent, like fifty percent.
+
+90
+00:04:00,542 --> 00:04:02,420
+Percent just means out of a hundred.
+
+91
+00:04:02,870 --> 00:04:04,945
+They are all the same amount.
+
+92
+00:04:04,945 --> 00:04:08,157
+One half, zero point five, fifty percent.
+
+93
+00:04:08,157 --> 00:04:10,220
+Three outfits, one person.
+
+94
+00:04:11,220 --> 00:04:14,636
+To change a decimal into a percent, just multiply by one
+
+95
+00:04:14,636 --> 00:04:17,740
+hundred. Zero point two five becomes twenty five percent.
+
+96
+00:04:18,190 --> 00:04:20,858
+We'll mostly use fractions in this video,
+
+97
+00:04:20,858 --> 00:04:23,080
+because fractions show you the counting.
+
+98
+00:04:23,530 --> 00:04:26,346
+But what does a probability actually mean?
+
+99
+00:04:26,346 --> 00:04:28,762
+If the chance of rain is seventy percent,
+
+100
+00:04:28,762 --> 00:04:29,980
+will it rain or not?
+
+101
+00:04:30,780 --> 00:04:32,260
+Here's the honest answer.
+
+102
+00:04:32,260 --> 00:04:35,180
+A probability doesn't tell you what will happen next time.
+
+103
+00:04:35,630 --> 00:04:37,488
+It tells you what happens in the long run.
+
+104
+00:04:37,488 --> 00:04:40,002
+Out of many days with a forecast like this one,
+
+105
+00:04:40,002 --> 00:04:42,680
+about seventy out of every hundred will have rain.
+
+106
+00:04:43,130 --> 00:04:45,742
+So on any one day, it might stay dry.
+
+107
+00:04:45,742 --> 00:04:47,740
+That doesn't mean the forecast was wrong.
+
+108
+00:04:48,190 --> 00:04:49,791
+Keep that idea in your pocket.
+
+109
+00:04:49,791 --> 00:04:52,601
+Probability is about patterns over many tries,
+
+110
+00:04:52,601 --> 00:04:54,030
+not about one single try.
+
+111
+00:04:55,030 --> 00:04:56,987
+And where do probabilities come from?
+
+112
+00:04:56,987 --> 00:04:58,250
+There are three main ways.
+
+113
+00:04:58,700 --> 00:05:02,624
+One, you can count. Like a die with six equal faces.
+
+114
+00:05:02,624 --> 00:05:04,010
+We'll do lots of this.
+
+115
+00:05:04,460 --> 00:05:06,411
+Two, you can experiment.
+
+116
+00:05:06,411 --> 00:05:10,083
+Try something many times and see how often it happens.
+
+117
+00:05:10,083 --> 00:05:13,540
+Like checking how often your bus is late over a whole term.
+
+118
+00:05:13,990 --> 00:05:17,496
+And three, sometimes people simply give their best judgement,
+
+119
+00:05:17,496 --> 00:05:20,782
+like a coach saying, I think we have a sixty percent chance of
+
+120
+00:05:20,782 --> 00:05:21,820
+winning this match.
+
+121
+00:05:22,270 --> 00:05:24,066
+That last kind is the shakiest.
+
+122
+00:05:24,066 --> 00:05:26,758
+In this video, we'll stick to the first two,
+
+123
+00:05:26,758 --> 00:05:29,230
+where we can actually check our answers.
+
+124
+00:05:30,030 --> 00:05:32,425
+So how do we actually find a probability?
+
+125
+00:05:32,425 --> 00:05:34,730
+For lots of everyday questions, you just count.
+
+126
+00:05:35,180 --> 00:05:36,470
+Let's start with one die.
+
+127
+00:05:36,920 --> 00:05:40,594
+When you roll it, there are six things that can happen.
+
+128
+00:05:40,594 --> 00:05:44,182
+It can land on one, two, three, four, five,
+
+129
+00:05:44,182 --> 00:05:44,900
+or six.
+
+130
+00:05:45,350 --> 00:05:47,640
+Each of these is called an outcome.
+
+131
+00:05:47,640 --> 00:05:50,160
+An outcome is one possible result.
+
+132
+00:05:50,610 --> 00:05:53,378
+And the list of all possible outcomes has a name too.
+
+133
+00:05:53,378 --> 00:05:54,690
+It's called the sample space.
+
+134
+00:05:54,690 --> 00:05:57,640
+That's just a fancy name for everything that could happen.
+
+135
+00:05:58,440 --> 00:06:02,058
+Now, if the die is fair, each face is equally likely.
+
+136
+00:06:02,058 --> 00:06:04,470
+No face is special. The die isn't loaded.
+
+137
+00:06:04,920 --> 00:06:06,940
+So what's the chance of rolling a four?
+
+138
+00:06:07,390 --> 00:06:10,088
+There is one outcome we want, the four.
+
+139
+00:06:10,088 --> 00:06:12,340
+Out of six outcomes in total.
+
+140
+00:06:12,340 --> 00:06:14,593
+So the chance is one out of six.
+
+141
+00:06:14,593 --> 00:06:15,490
+One sixth.
+
+142
+00:06:16,490 --> 00:06:17,601
+That's the whole recipe.
+
+143
+00:06:17,601 --> 00:06:20,673
+Probability equals the number of outcomes you want,
+
+144
+00:06:20,673 --> 00:06:23,210
+divided by the total number of outcomes.
+
+145
+00:06:24,410 --> 00:06:27,328
+The letter P is just short for probability.
+
+146
+00:06:27,328 --> 00:06:31,712
+When you see P of something, read it as, the probability of that
+
+147
+00:06:31,712 --> 00:06:32,140
+thing.
+
+148
+00:06:32,590 --> 00:06:35,486
+Let's try another one. What's the chance of rolling an even
+
+149
+00:06:35,486 --> 00:06:36,040
+number?
+
+150
+00:06:36,490 --> 00:06:39,069
+The even numbers are two, four and six.
+
+151
+00:06:39,069 --> 00:06:40,650
+That's three outcomes we want.
+
+152
+00:06:41,100 --> 00:06:44,140
+Three out of six. Which is the same as one half.
+
+153
+00:06:44,940 --> 00:06:49,160
+A group of outcomes we care about, like rolling an even number,
+
+154
+00:06:49,160 --> 00:06:50,640
+is called an event.
+
+155
+00:06:51,090 --> 00:06:53,816
+What about rolling a number bigger than four?
+
+156
+00:06:53,816 --> 00:06:57,190
+That's five or six. Two out of six, which is one third.
+
+157
+00:06:57,640 --> 00:06:59,154
+See how simple this is?
+
+158
+00:06:59,154 --> 00:07:01,923
+Count what you want. Count everything.
+
+159
+00:07:01,923 --> 00:07:02,660
+Divide.
+
+160
+00:07:03,660 --> 00:07:06,500
+But there's one small rule hiding inside this recipe,
+
+161
+00:07:06,500 --> 00:07:08,030
+and it's really important.
+
+162
+00:07:08,480 --> 00:07:11,353
+The counting trick only works when every outcome is equally
+
+163
+00:07:11,353 --> 00:07:12,080
+likely.
+
+164
+00:07:12,880 --> 00:07:14,884
+Here's an example where it breaks.
+
+165
+00:07:14,884 --> 00:07:18,451
+Imagine a spinner where the red part is three quarters of the
+
+166
+00:07:18,451 --> 00:07:21,120
+circle, and the blue part is one quarter.
+
+167
+00:07:21,570 --> 00:07:25,656
+There are two colours. But the chance of red is not one half.
+
+168
+00:07:25,656 --> 00:07:28,830
+It's three quarters, because red takes up more space.
+
+169
+00:07:29,280 --> 00:07:32,783
+Fix it by cutting the circle into equal pieces first.
+
+170
+00:07:32,783 --> 00:07:35,803
+Four equal quarters. Three of them are red.
+
+171
+00:07:35,803 --> 00:07:37,430
+Now counting works again.
+
+172
+00:07:38,430 --> 00:07:41,639
+So, always ask, are my outcomes equally likely?
+
+173
+00:07:41,639 --> 00:07:44,150
+If they aren't, split them into pieces that are.
+
+174
+00:07:44,600 --> 00:07:47,010
+Now let's level up, and flip two coins.
+
+175
+00:07:47,460 --> 00:07:49,890
+What's the chance you get one head and one tail?
+
+176
+00:07:50,340 --> 00:07:52,824
+Many people think there are three outcomes.
+
+177
+00:07:52,824 --> 00:07:55,337
+Two heads, two tails, or one of each.
+
+178
+00:07:55,337 --> 00:07:57,410
+So the answer must be one third.
+
+179
+00:07:57,860 --> 00:08:00,280
+But those three aren't equally likely.
+
+180
+00:08:00,280 --> 00:08:00,700
+Watch.
+
+181
+00:08:01,150 --> 00:08:05,213
+Let's draw a tree. The first coin can be heads or tails.
+
+182
+00:08:05,213 --> 00:08:09,880
+Then for each of those, the second coin can be heads or tails.
+
+183
+00:08:10,330 --> 00:08:14,185
+That gives four outcomes.
+
+184
+00:08:14,185 --> 00:08:16,703
+Heads heads. Heads tails.
+
+185
+00:08:16,703 --> 00:08:19,220
+Tails heads. Tails tails.
+
+186
+00:08:19,670 --> 00:08:21,895
+And these four are equally likely.
+
+187
+00:08:21,895 --> 00:08:24,120
+Each one has a chance of one quarter.
+
+188
+00:08:24,570 --> 00:08:29,774
+Now count. One head and one tail happens two ways,
+
+189
+00:08:29,774 --> 00:08:32,780
+heads then tails, or tails then heads.
+
+190
+00:08:33,230 --> 00:08:35,255
+Two out of four. One half.
+
+191
+00:08:35,255 --> 00:08:36,380
+Not one third.
+
+192
+00:08:37,580 --> 00:08:39,996
+The lesson? Keep track of which coin is which.
+
+193
+00:08:39,996 --> 00:08:42,784
+Heads tails and tails heads are different outcomes,
+
+194
+00:08:42,784 --> 00:08:44,980
+even if they look the same at the end.
+
+195
+00:08:45,430 --> 00:08:47,434
+Let's push it one step further.
+
+196
+00:08:47,434 --> 00:08:48,100
+Three coins.
+
+197
+00:08:48,550 --> 00:08:51,060
+Each new coin doubles the branches.
+
+198
+00:08:51,060 --> 00:08:54,010
+Two, then four, then eight outcomes.
+
+199
+00:08:54,460 --> 00:08:56,780
+What's the chance of getting exactly two heads?
+
+200
+00:08:57,230 --> 00:09:01,435
+Look through the eight leaves.
+
+201
+00:09:01,435 --> 00:09:05,859
+Heads heads tails. Heads tails heads.
+
+202
+00:09:05,859 --> 00:09:09,620
+Tails heads heads. That's three.
+
+203
+00:09:10,070 --> 00:09:12,680
+So the answer is three out of eight.
+
+204
+00:09:13,680 --> 00:09:15,435
+A tree is a wonderful tool.
+
+205
+00:09:15,435 --> 00:09:18,151
+When you're not sure how many outcomes there are,
+
+206
+00:09:18,151 --> 00:09:20,510
+draw the tree, and the leaves will tell you.
+
+207
+00:09:20,960 --> 00:09:23,787
+Trees are great, but they can get huge very quickly.
+
+208
+00:09:23,787 --> 00:09:26,211
+So here's a shortcut for counting outcomes,
+
+209
+00:09:26,211 --> 00:09:27,900
+without drawing every branch.
+
+210
+00:09:28,350 --> 00:09:31,192
+Imagine you have three shirts and four pairs of trousers.
+
+211
+00:09:31,192 --> 00:09:33,630
+How many different outfits can you make?
+
+212
+00:09:34,080 --> 00:09:37,637
+Put the shirts down the side and the trousers along the top,
+
+213
+00:09:37,637 --> 00:09:40,680
+and you get a grid. Three rows, four columns.
+
+214
+00:09:41,130 --> 00:09:43,550
+Twelve squares. Twelve outfits.
+
+215
+00:09:43,550 --> 00:09:45,090
+Three times four.
+
+216
+00:09:46,090 --> 00:09:49,308
+This is called the multiplication rule for counting.
+
+217
+00:09:49,308 --> 00:09:52,312
+If one choice can be made in some number of ways,
+
+218
+00:09:52,312 --> 00:09:54,887
+and a second choice in some number of ways,
+
+219
+00:09:54,887 --> 00:09:57,040
+then together, you multiply.
+
+220
+00:09:57,490 --> 00:10:00,927
+Add two pairs of shoes, and every one of those twelve outfits
+
+221
+00:10:00,927 --> 00:10:03,780
+splits into two. Twelve times two is twenty four.
+
+222
+00:10:04,230 --> 00:10:07,569
+So if you get dressed in the dark, and grab each item at random,
+
+223
+00:10:07,569 --> 00:10:10,979
+the chance of getting one particular outfit is one out of twenty
+
+224
+00:10:10,979 --> 00:10:11,370
+four.
+
+225
+00:10:12,370 --> 00:10:16,020
+Here's another one. A phone lock with a four digit code.
+
+226
+00:10:16,020 --> 00:10:18,848
+Each digit can be anything from zero to nine.
+
+227
+00:10:18,848 --> 00:10:19,870
+That's ten choices.
+
+228
+00:10:20,320 --> 00:10:25,160
+First digit, ten ways. Second digit, ten ways.
+
+229
+00:10:25,160 --> 00:10:27,480
+Third, ten. Fourth, ten.
+
+230
+00:10:27,930 --> 00:10:30,650
+Ten times ten times ten times ten.
+
+231
+00:10:30,650 --> 00:10:32,620
+Ten thousand possible codes.
+
+232
+00:10:33,620 --> 00:10:36,450
+So if a stranger picks up your phone and guesses once,
+
+233
+00:10:36,450 --> 00:10:39,480
+their chance of getting it right is one in ten thousand.
+
+234
+00:10:39,930 --> 00:10:43,170
+And with three different guesses, it's three in ten thousand.
+
+235
+00:10:43,170 --> 00:10:43,990
+Still tiny.
+
+236
+00:10:44,440 --> 00:10:47,433
+That's why phones lock you out after a few wrong tries.
+
+237
+00:10:47,433 --> 00:10:50,427
+They keep the number of guesses small, so the chance stays
+
+238
+00:10:50,427 --> 00:10:50,860
+small.
+
+239
+00:10:51,860 --> 00:10:55,249
+And this is exactly why two dice give thirty six outcomes.
+
+240
+00:10:55,249 --> 00:10:58,660
+Six ways for the orange die, times six ways for the blue die.
+
+241
+00:10:59,110 --> 00:11:03,395
+Count the choices, multiply, and you know the size of your
+
+242
+00:11:03,395 --> 00:11:03,890
+world.
+
+243
+00:11:04,690 --> 00:11:07,083
+The multiplication rule has another trick.
+
+244
+00:11:07,083 --> 00:11:10,200
+It can count how many ways there are to put things in order.
+
+245
+00:11:10,650 --> 00:11:14,120
+Say you have three books, A, B and C, and you put them on a
+
+246
+00:11:14,120 --> 00:11:15,651
+shelf in a random order.
+
+247
+00:11:15,651 --> 00:11:17,370
+How many orders are there?
+
+248
+00:11:17,820 --> 00:11:20,484
+For the first spot, you have three books to choose from.
+
+249
+00:11:20,484 --> 00:11:24,158
+Once one is placed, two books are left for the second spot.
+
+250
+00:11:24,158 --> 00:11:26,400
+And then just one book for the last spot.
+
+251
+00:11:26,850 --> 00:11:28,466
+Three times two times one.
+
+252
+00:11:28,466 --> 00:11:29,210
+Six orders.
+
+253
+00:11:30,210 --> 00:11:33,046
+So the chance they land in alphabetical order,
+
+254
+00:11:33,046 --> 00:11:35,700
+A then B then C, is one out of six.
+
+255
+00:11:36,150 --> 00:11:39,404
+Now try ten books. Ten times nine times eight,
+
+256
+00:11:39,404 --> 00:11:41,416
+all the way down to one.
+
+257
+00:11:41,416 --> 00:11:44,450
+That's over three and a half million orders.
+
+258
+00:11:44,900 --> 00:11:47,677
+The chance that ten books shuffled at random land in perfect
+
+259
+00:11:47,677 --> 00:11:50,673
+order is about one in three and a half million.
+
+260
+00:11:50,673 --> 00:11:51,290
+Tiny.
+
+261
+00:11:52,290 --> 00:11:55,314
+That's why a well shuffled deck of cards is almost certainly in
+
+262
+00:11:55,314 --> 00:11:57,801
+an order that has never existed before.
+
+263
+00:11:57,801 --> 00:12:00,100
+There are just too many possible orders.
+
+264
+00:12:00,550 --> 00:12:05,301
+Now, a lottery. Suppose you must pick six numbers out of forty
+
+265
+00:12:05,301 --> 00:12:07,770
+nine, and the order doesn't matter.
+
+266
+00:12:08,220 --> 00:12:12,228
+If order mattered, there would be forty nine times forty eight
+
+267
+00:12:12,228 --> 00:12:16,684
+times forty seven times forty six times forty five times forty
+
+268
+00:12:16,684 --> 00:12:17,350
+four ways.
+
+269
+00:12:17,800 --> 00:12:21,216
+But the same six numbers can be picked in any order.
+
+270
+00:12:21,216 --> 00:12:25,058
+Six times five times four times three times two times one,
+
+271
+00:12:25,058 --> 00:12:27,622
+which is seven hundred and twenty orders.
+
+272
+00:12:27,622 --> 00:12:29,120
+So we divide by that.
+
+273
+00:12:29,570 --> 00:12:32,090
+The result is almost fourteen million different tickets.
+
+274
+00:12:33,090 --> 00:12:36,930
+So the chance one ticket wins is about one in fourteen million.
+
+275
+00:12:36,930 --> 00:12:39,764
+Remember that tiny gap near zero on our line?
+
+276
+00:12:39,764 --> 00:12:40,990
+That's what it looks like.
+
+277
+00:12:41,990 --> 00:12:43,702
+Here's a way to feel that number.
+
+278
+00:12:43,702 --> 00:12:47,072
+If you bought one ticket every week, you'd expect to wait over a
+
+279
+00:12:47,072 --> 00:12:48,950
+quarter of a million years for a win.
+
+280
+00:12:49,400 --> 00:12:52,320
+Counting carefully turns a vague feeling,
+
+281
+00:12:52,320 --> 00:12:54,970
+maybe I'll win, into a clear number.
+
+282
+00:12:55,770 --> 00:12:59,090
+Now we have enough tools to solve our game night puzzle.
+
+283
+00:12:59,540 --> 00:13:00,833
+We're rolling two dice.
+
+284
+00:13:00,833 --> 00:13:04,490
+To keep them apart, let's make one orange and one blue.
+
+285
+00:13:04,940 --> 00:13:06,560
+The orange die can land six ways.
+
+286
+00:13:06,560 --> 00:13:09,100
+And for each of those, the blue die can land six ways.
+
+287
+00:13:09,550 --> 00:13:12,227
+So let's draw a grid. Orange along the bottom,
+
+288
+00:13:12,227 --> 00:13:15,090
+blue up the side. Every square is one outcome.
+
+289
+00:13:15,540 --> 00:13:19,020
+This square, for example, is orange three and blue five.
+
+290
+00:13:19,470 --> 00:13:25,820
+Six columns, six rows. Six times six is thirty six outcomes.
+
+291
+00:13:26,620 --> 00:13:29,431
+And just like with the coins, orange three blue five is
+
+292
+00:13:29,431 --> 00:13:31,594
+different from orange five blue three.
+
+293
+00:13:31,594 --> 00:13:33,110
+Two different squares.
+
+294
+00:13:33,560 --> 00:13:37,516
+With fair dice, all thirty six squares are equally likely.
+
+295
+00:13:37,516 --> 00:13:38,770
+So now we can count.
+
+296
+00:13:39,220 --> 00:13:42,810
+Let's write the total of the two dice inside every square.
+
+297
+00:13:43,610 --> 00:13:44,873
+Do you see the pattern?
+
+298
+00:13:44,873 --> 00:13:47,180
+Equal totals line up along slanted lines.
+
+299
+00:13:47,630 --> 00:13:50,360
+Now, how many squares have a total of twelve?
+
+300
+00:13:50,810 --> 00:13:53,803
+Only one. Orange six and blue six.
+
+301
+00:13:53,803 --> 00:13:55,300
+The top right corner.
+
+302
+00:13:55,750 --> 00:13:58,450
+So the chance of rolling twelve is one out of thirty six.
+
+303
+00:13:59,450 --> 00:14:01,250
+And a total of seven?
+
+304
+00:14:01,700 --> 00:14:04,166
+Count them. One and six.
+
+305
+00:14:04,166 --> 00:14:06,633
+Two and five. Three and four.
+
+306
+00:14:06,633 --> 00:14:09,099
+Four and three. Five and two.
+
+307
+00:14:09,099 --> 00:14:10,670
+Six and one.
+
+308
+00:14:11,120 --> 00:14:14,221
+Six squares. Six out of thirty six.
+
+309
+00:14:14,221 --> 00:14:15,920
+Which is one sixth.
+
+310
+00:14:17,120 --> 00:14:19,961
+There it is. Seven has six ways to happen.
+
+311
+00:14:19,961 --> 00:14:24,330
+Twelve has only one. That's why seven is six times more likely.
+
+312
+00:14:25,830 --> 00:14:29,401
+The dice aren't magic. Seven is simply the total with the most
+
+313
+00:14:29,401 --> 00:14:30,410
+ways to be made.
+
+314
+00:14:30,860 --> 00:14:33,880
+Let's count the ways for every total, and build a chart.
+
+315
+00:14:34,330 --> 00:14:37,819
+Two can only be made one way.
+
+316
+00:14:37,819 --> 00:14:40,878
+Three, two ways. Four, three ways.
+
+317
+00:14:40,878 --> 00:14:43,937
+Five, four ways. Six, five ways.
+
+318
+00:14:43,937 --> 00:14:45,830
+Seven, six ways.
+
+319
+00:14:46,280 --> 00:14:48,597
+And then it comes back down.
+
+320
+00:14:48,597 --> 00:14:50,975
+Eight, five ways. Nine, four.
+
+321
+00:14:50,975 --> 00:14:53,652
+Ten, three. Eleven, two.
+
+322
+00:14:53,652 --> 00:14:55,590
+And twelve, just one.
+
+323
+00:14:56,040 --> 00:14:59,060
+A perfect little mountain, with seven at the peak.
+
+324
+00:15:00,060 --> 00:15:03,045
+Add up all the bars, and you get thirty six.
+
+325
+00:15:03,045 --> 00:15:05,810
+Every square is counted exactly once.
+
+326
+00:15:06,260 --> 00:15:09,660
+If we divide every bar by thirty six, each bar becomes a
+
+327
+00:15:09,660 --> 00:15:12,043
+probability. This picture has a name.
+
+328
+00:15:12,043 --> 00:15:14,560
+It's called a probability distribution.
+
+329
+00:15:15,360 --> 00:15:18,640
+A distribution is just a map that shows how the chances are
+
+330
+00:15:18,640 --> 00:15:20,790
+spread out over all the possible results.
+
+331
+00:15:21,240 --> 00:15:24,305
+Now you can answer lots of questions just by reading the chart.
+
+332
+00:15:24,305 --> 00:15:26,042
+The chance of a total of eight?
+
+333
+00:15:26,042 --> 00:15:27,400
+Five out of thirty six.
+
+334
+00:15:27,850 --> 00:15:30,031
+The chance of a total of two or twelve?
+
+335
+00:15:30,031 --> 00:15:32,211
+Only one out of thirty six each.
+
+336
+00:15:32,211 --> 00:15:34,000
+They're the rarest rolls in the game.
+
+337
+00:15:34,450 --> 00:15:37,782
+Here's another one. What's the chance of rolling a double,
+
+338
+00:15:37,782 --> 00:15:39,544
+both dice showing the same number?
+
+339
+00:15:39,544 --> 00:15:42,463
+That's the diagonal from the bottom left to the top right.
+
+340
+00:15:42,463 --> 00:15:44,060
+Six squares. One sixth.
+
+341
+00:15:44,510 --> 00:15:47,539
+And the chance of a total of four or less?
+
+342
+00:15:47,539 --> 00:15:51,007
+Two has one way, three has two, four has three.
+
+343
+00:15:51,007 --> 00:15:53,490
+Six squares again. One sixth.
+
+344
+00:15:53,940 --> 00:15:57,076
+Many board games are designed around this exact mountain,
+
+345
+00:15:57,076 --> 00:15:58,840
+even if the players never notice.
+
+346
+00:15:59,840 --> 00:16:03,574
+But hold on. Does real life actually follow this counting?
+
+347
+00:16:03,574 --> 00:16:04,500
+Let's test it.
+
+348
+00:16:04,950 --> 00:16:07,820
+Imagine flipping a fair coin ten times.
+
+349
+00:16:08,270 --> 00:16:10,118
+The chance of heads is one half.
+
+350
+00:16:10,118 --> 00:16:12,169
+So should you get exactly five heads?
+
+351
+00:16:12,169 --> 00:16:13,610
+Not necessarily.
+
+352
+00:16:14,060 --> 00:16:16,672
+In this run we got seven heads out of ten.
+
+353
+00:16:16,672 --> 00:16:19,070
+That's seventy percent, not fifty.
+
+354
+00:16:19,520 --> 00:16:21,295
+Is the coin broken? No.
+
+355
+00:16:21,295 --> 00:16:24,850
+With only ten flips, wobbles like this happen all the time.
+
+356
+00:16:25,650 --> 00:16:28,088
+Now let's flip it a hundred times.
+
+357
+00:16:28,088 --> 00:16:30,500
+Then a thousand. Then ten thousand.
+
+358
+00:16:30,950 --> 00:16:32,443
+Watch the share of heads.
+
+359
+00:16:32,443 --> 00:16:34,700
+At first it jumps around wildly.
+
+360
+00:16:35,150 --> 00:16:37,396
+But the more flips we do, the more it settles down,
+
+361
+00:16:37,396 --> 00:16:38,970
+closer and closer to one half.
+
+362
+00:16:40,170 --> 00:16:42,084
+This is called the law of large numbers.
+
+363
+00:16:42,084 --> 00:16:45,573
+Over many, many tries, what actually happens gets closer to the
+
+364
+00:16:45,573 --> 00:16:46,640
+probability.
+
+365
+00:16:47,640 --> 00:16:49,267
+Let's do the same with our two dice.
+
+366
+00:16:49,267 --> 00:16:51,948
+We'll roll them thirty six times, and build a chart of the
+
+367
+00:16:51,948 --> 00:16:52,520
+totals.
+
+368
+00:16:52,970 --> 00:16:56,687
+After thirty six rolls, the chart is bumpy and messy.
+
+369
+00:16:56,687 --> 00:16:58,780
+Some totals didn't even show up.
+
+370
+00:16:59,230 --> 00:17:02,990
+After three hundred and sixty rolls, a shape starts to appear.
+
+371
+00:17:03,440 --> 00:17:06,785
+And after thirty six thousand rolls, look.
+
+372
+00:17:06,785 --> 00:17:09,840
+It's our mountain. Almost exactly.
+
+373
+00:17:11,340 --> 00:17:14,287
+The counting we did on paper predicted what happens when you
+
+374
+00:17:14,287 --> 00:17:17,490
+really roll the dice. That's the power of probability.
+
+375
+00:17:17,940 --> 00:17:21,232
+This also gives us a second way to find a probability.
+
+376
+00:17:21,232 --> 00:17:24,183
+When you can't count the outcomes, you can try something many
+
+377
+00:17:24,183 --> 00:17:26,330
+times, and see how often it happens.
+
+378
+00:17:26,780 --> 00:17:28,752
+You can try this yourself tonight.
+
+379
+00:17:28,752 --> 00:17:32,696
+Flip a coin twenty times, and write down how many heads you get.
+
+380
+00:17:32,696 --> 00:17:34,669
+Then ask a friend to do the same.
+
+381
+00:17:34,669 --> 00:17:38,612
+Your numbers will probably be different, and that's completely
+
+382
+00:17:38,612 --> 00:17:39,270
+normal.
+
+383
+00:17:39,720 --> 00:17:42,933
+That's how a weather forecast works, in a simple sense.
+
+384
+00:17:42,933 --> 00:17:45,713
+Out of many past days that looked like today,
+
+385
+00:17:45,713 --> 00:17:47,000
+how many had rain?
+
+386
+00:17:47,450 --> 00:17:50,013
+But remember the pocket idea.
+
+387
+00:17:50,013 --> 00:17:54,879
+Many tries, not one. The law of large numbers says nothing about
+
+388
+00:17:54,879 --> 00:17:56,140
+the next single flip.
+
+389
+00:17:57,140 --> 00:18:00,840
+In fact, small numbers of tries can look surprisingly streaky.
+
+390
+00:18:01,290 --> 00:18:04,797
+If you flip a coin twenty times, getting four or more heads in a
+
+391
+00:18:04,797 --> 00:18:06,757
+row somewhere is not rare at all.
+
+392
+00:18:06,757 --> 00:18:08,910
+It happens in nearly half of all runs.
+
+393
+00:18:09,360 --> 00:18:11,724
+Random doesn't mean nicely mixed.
+
+394
+00:18:11,724 --> 00:18:13,611
+Random means unpredictable.
+
+395
+00:18:13,611 --> 00:18:16,690
+And unpredictable things are often clumpy.
+
+396
+00:18:17,690 --> 00:18:20,584
+Here's a fun way to use what we just learned.
+
+397
+00:18:20,584 --> 00:18:23,493
+Suppose a friend hands you a die, and you wonder,
+
+398
+00:18:23,493 --> 00:18:24,330
+is it fair?
+
+399
+00:18:24,780 --> 00:18:28,329
+If it's fair, each face should come up one sixth of the time.
+
+400
+00:18:28,329 --> 00:18:32,100
+So in sixty rolls, you'd expect each face about ten times.
+
+401
+00:18:32,550 --> 00:18:34,909
+Let's roll it sixty times.
+
+402
+00:18:34,909 --> 00:18:38,929
+We get eight ones, eleven twos, nine threes,
+
+403
+00:18:38,929 --> 00:18:42,730
+twelve fours, seven fives and thirteen sixes.
+
+404
+00:18:43,180 --> 00:18:46,599
+Not exactly ten each. But is that suspicious?
+
+405
+00:18:46,599 --> 00:18:51,011
+No. This kind of wobble is completely normal for a fair die,
+
+406
+00:18:51,011 --> 00:18:52,720
+with only sixty rolls.
+
+407
+00:18:53,720 --> 00:18:57,023
+Now a different die. Sixty rolls, and twenty five of them are
+
+408
+00:18:57,023 --> 00:18:57,580
+sixes.
+
+409
+00:18:58,030 --> 00:18:59,183
+That's way more than ten.
+
+410
+00:18:59,183 --> 00:19:02,795
+For a fair die, a result this extreme would be extremely rare.
+
+411
+00:19:02,795 --> 00:19:05,440
+So you'd have good reason to think this die is loaded.
+
+412
+00:19:06,440 --> 00:19:10,091
+Notice what we did. We used probability to predict what fair
+
+413
+00:19:10,091 --> 00:19:13,200
+looks like, then compared it with what really happened.
+
+414
+00:19:13,650 --> 00:19:15,814
+Small differences, we shrug off.
+
+415
+00:19:15,814 --> 00:19:18,188
+Huge differences make us suspicious.
+
+416
+00:19:18,188 --> 00:19:21,645
+Scientists use this same idea, with more careful math,
+
+417
+00:19:21,645 --> 00:19:24,450
+to test whether something is really going on.
+
+418
+00:19:25,250 --> 00:19:27,810
+Let's take a breath, and look at how far we've come.
+
+419
+00:19:28,260 --> 00:19:31,668
+A probability is a number from zero to one.
+
+420
+00:19:31,668 --> 00:19:34,300
+Zero is impossible, one is certain.
+
+421
+00:19:34,750 --> 00:19:38,217
+When outcomes are equally likely, the probability is the
+
+422
+00:19:38,217 --> 00:19:40,930
+outcomes you want, divided by all the outcomes.
+
+423
+00:19:41,380 --> 00:19:44,550
+To find all the outcomes, draw a tree or a grid,
+
+424
+00:19:44,550 --> 00:19:46,870
+or multiply the number of choices.
+
+425
+00:19:47,320 --> 00:19:50,230
+With two dice, seven is the most likely total,
+
+426
+00:19:50,230 --> 00:19:52,350
+because it has the most ways to be made.
+
+427
+00:19:52,800 --> 00:19:55,456
+And over many tries, real results settle close to the
+
+428
+00:19:55,456 --> 00:19:58,520
+probability. But a single try can still surprise you.
+
+429
+00:19:59,520 --> 00:20:03,023
+If all of that makes sense, you've already got the foundation.
+
+430
+00:20:03,023 --> 00:20:05,540
+Everything from here is built on top of it.
+
+431
+00:20:06,340 --> 00:20:09,156
+Now for the three little words that unlock almost every
+
+432
+00:20:09,156 --> 00:20:12,210
+probability question. The first one is not.
+
+433
+00:20:12,660 --> 00:20:15,375
+Something either happens, or it doesn't.
+
+434
+00:20:15,375 --> 00:20:16,960
+There's no third option.
+
+435
+00:20:17,410 --> 00:20:20,275
+So the chance it happens, plus the chance it doesn't,
+
+436
+00:20:20,275 --> 00:20:23,140
+must add up to one. To everything.
+
+437
+00:20:23,590 --> 00:20:27,100
+That means the chance something does not happen is one,
+
+438
+00:20:27,100 --> 00:20:28,730
+minus the chance it does.
+
+439
+00:20:29,730 --> 00:20:32,299
+A here is just a name for any event.
+
+440
+00:20:32,299 --> 00:20:34,020
+Like, rolling a seven.
+
+441
+00:20:34,470 --> 00:20:38,426
+Let's try it. The chance of rolling a total of seven is one
+
+442
+00:20:38,426 --> 00:20:42,381
+sixth. So the chance of not rolling seven is one minus one
+
+443
+00:20:42,381 --> 00:20:43,920
+sixth, which is five sixths.
+
+444
+00:20:44,370 --> 00:20:46,089
+And you can check it on the grid.
+
+445
+00:20:46,089 --> 00:20:47,995
+Thirty squares are not seven.
+
+446
+00:20:47,995 --> 00:20:50,088
+Thirty out of thirty six is five sixths.
+
+447
+00:20:50,088 --> 00:20:50,870
+It matches.
+
+448
+00:20:51,870 --> 00:20:53,135
+Here's why this matters.
+
+449
+00:20:53,135 --> 00:20:55,446
+Sometimes the thing you want is hard to count,
+
+450
+00:20:55,446 --> 00:20:57,060
+but the opposite is easy.
+
+451
+00:20:57,510 --> 00:21:00,814
+For example, what's the chance of rolling a total that is not
+
+452
+00:21:00,814 --> 00:21:01,240
+twelve?
+
+453
+00:21:01,690 --> 00:21:04,022
+You could count thirty five squares.
+
+454
+00:21:04,022 --> 00:21:07,101
+Or you can just say, twelve has one square,
+
+455
+00:21:07,101 --> 00:21:11,280
+so not twelve is one minus one over thirty six,
+
+456
+00:21:11,280 --> 00:21:14,140
+which is thirty five over thirty six.
+
+457
+00:21:14,590 --> 00:21:16,854
+When counting the thing you want looks painful,
+
+458
+00:21:16,854 --> 00:21:20,990
+flip it around. Count the opposite, and take it away from one.
+
+459
+00:21:21,990 --> 00:21:25,570
+This little trick becomes a superpower in a few minutes.
+
+460
+00:21:25,570 --> 00:21:26,580
+Hold on to it.
+
+461
+00:21:27,030 --> 00:21:30,471
+While we're here, let's clear up a word that confuses a lot of
+
+462
+00:21:30,471 --> 00:21:31,340
+people. Odds.
+
+463
+00:21:31,790 --> 00:21:34,492
+People often say odds when they mean probability.
+
+464
+00:21:34,492 --> 00:21:36,430
+But they are not quite the same thing.
+
+465
+00:21:36,880 --> 00:21:40,930
+Probability compares the ways something happens to all the ways.
+
+466
+00:21:40,930 --> 00:21:43,770
+Odds compare the ways it happens to the ways it doesn't.
+
+467
+00:21:44,220 --> 00:21:46,711
+Take a total of seven on two dice.
+
+468
+00:21:46,711 --> 00:21:48,294
+Six squares make seven.
+
+469
+00:21:48,294 --> 00:21:49,650
+Thirty squares don't.
+
+470
+00:21:50,100 --> 00:21:52,546
+The probability is six out of thirty six.
+
+471
+00:21:52,546 --> 00:21:53,280
+One sixth.
+
+472
+00:21:53,730 --> 00:21:55,541
+But the odds are six to thirty.
+
+473
+00:21:55,541 --> 00:21:57,352
+Which simplifies to one to five.
+
+474
+00:21:57,352 --> 00:22:00,620
+For every one way to win, there are five ways to lose.
+
+475
+00:22:01,620 --> 00:22:05,631
+Notice that one to five and one sixth describe the same chance.
+
+476
+00:22:05,631 --> 00:22:08,440
+One plus five makes six, the total.
+
+477
+00:22:08,890 --> 00:22:11,218
+A fair coin has odds of one to one.
+
+478
+00:22:11,218 --> 00:22:13,575
+One way to win, one way to lose.
+
+479
+00:22:13,575 --> 00:22:15,520
+People sometimes call that evens.
+
+480
+00:22:15,970 --> 00:22:19,865
+To turn odds into a probability, put the first number on top,
+
+481
+00:22:19,865 --> 00:22:22,580
+and both numbers added together on the bottom.
+
+482
+00:22:23,030 --> 00:22:26,356
+So odds of three to one against something mean one way it
+
+483
+00:22:26,356 --> 00:22:27,970
+happens, three ways it doesn't.
+
+484
+00:22:27,970 --> 00:22:31,540
+One out of four. A probability of one quarter.
+
+485
+00:22:32,540 --> 00:22:36,434
+When you hear odds, just ask, is this comparing to the whole,
+
+486
+00:22:36,434 --> 00:22:38,040
+or to the other side?
+
+487
+00:22:38,840 --> 00:22:42,507
+The second word is or. What's the chance that this happens,
+
+488
+00:22:42,507 --> 00:22:43,720
+or that happens?
+
+489
+00:22:44,170 --> 00:22:47,090
+Let's start easy. On our two dice, what's the chance of rolling
+
+490
+00:22:47,090 --> 00:22:50,010
+a total of seven, or a total of eleven?
+
+491
+00:22:50,460 --> 00:22:54,052
+Seven has six squares. Eleven has two squares,
+
+492
+00:22:54,052 --> 00:22:56,190
+five and six, and six and five.
+
+493
+00:22:56,640 --> 00:22:58,093
+They don't share any squares.
+
+494
+00:22:58,093 --> 00:23:00,780
+A roll can't be seven and eleven at the same time.
+
+495
+00:23:01,230 --> 00:23:06,183
+So we just add them. Six plus two is eight squares.
+
+496
+00:23:06,183 --> 00:23:08,660
+Eight out of thirty six.
+
+497
+00:23:09,660 --> 00:23:13,134
+When two events can't happen together, the chance of one or the
+
+498
+00:23:13,134 --> 00:23:15,460
+other is just the two chances added up.
+
+499
+00:23:15,910 --> 00:23:18,940
+But careful. This is where a lot of people slip.
+
+500
+00:23:19,390 --> 00:23:22,348
+What's the chance that the orange die shows six,
+
+501
+00:23:22,348 --> 00:23:24,210
+or the blue die shows six?
+
+502
+00:23:24,660 --> 00:23:26,742
+The orange six is a whole column.
+
+503
+00:23:26,742 --> 00:23:27,790
+That's six squares.
+
+504
+00:23:28,240 --> 00:23:29,878
+The blue six is a whole row.
+
+505
+00:23:29,878 --> 00:23:31,110
+Also six squares.
+
+506
+00:23:31,560 --> 00:23:34,167
+So, six plus six is twelve?
+
+507
+00:23:34,167 --> 00:23:35,110
+Let's look.
+
+508
+00:23:35,560 --> 00:23:38,363
+The column and the row cross in one corner,
+
+509
+00:23:38,363 --> 00:23:41,390
+double six. If we add them, we count that square twice.
+
+510
+00:23:42,190 --> 00:23:44,113
+So we take it away once.
+
+511
+00:23:44,113 --> 00:23:47,450
+Six plus six, minus one, is eleven.
+
+512
+00:23:47,900 --> 00:23:50,060
+The answer is eleven out of thirty six.
+
+513
+00:23:51,260 --> 00:23:52,843
+This is the full or rule.
+
+514
+00:23:52,843 --> 00:23:56,235
+Add the two chances, then take away the overlap,
+
+515
+00:23:56,235 --> 00:23:59,400
+the part where both happen, so it's not counted twice.
+
+516
+00:24:00,400 --> 00:24:03,697
+A picture helps. Draw two circles that overlap.
+
+517
+00:24:03,697 --> 00:24:06,773
+To find the area covered by either circle,
+
+518
+00:24:06,773 --> 00:24:09,594
+you add both circles, then remove the middle,
+
+519
+00:24:09,594 --> 00:24:11,480
+because you counted it twice.
+
+520
+00:24:11,930 --> 00:24:15,344
+If the circles don't overlap at all, the middle is zero,
+
+521
+00:24:15,344 --> 00:24:17,150
+and you're back to simply adding.
+
+522
+00:24:17,600 --> 00:24:19,741
+Here's an everyday example.
+
+523
+00:24:19,741 --> 00:24:22,742
+In a class of thirty students, twelve play football,
+
+524
+00:24:22,742 --> 00:24:24,890
+eight play music, and five do both.
+
+525
+00:24:25,340 --> 00:24:27,656
+How many do football or music?
+
+526
+00:24:27,656 --> 00:24:31,136
+Twelve plus eight is twenty, minus the five who were counted
+
+527
+00:24:31,136 --> 00:24:32,740
+twice. Fifteen students.
+
+528
+00:24:33,190 --> 00:24:36,511
+So if you pick a student at random, the chance they do football
+
+529
+00:24:36,511 --> 00:24:38,669
+or music is fifteen out of thirty.
+
+530
+00:24:38,669 --> 00:24:39,470
+One half.
+
+531
+00:24:40,470 --> 00:24:44,339
+Whenever you hear the word or, ask yourself one question.
+
+532
+00:24:44,339 --> 00:24:45,931
+Can both happen at once?
+
+533
+00:24:45,931 --> 00:24:48,200
+If yes, remove the overlap.
+
+534
+00:24:48,650 --> 00:24:52,789
+The third word is and. What's the chance that this happens,
+
+535
+00:24:52,789 --> 00:24:54,550
+and that happens too?
+
+536
+00:24:55,000 --> 00:24:58,263
+Back to our dice. What's the chance of double six?
+
+537
+00:24:58,263 --> 00:25:02,090
+The orange die shows six, and the blue die shows six.
+
+538
+00:25:02,540 --> 00:25:06,306
+On the grid, that's the one square where the six column and the
+
+539
+00:25:06,306 --> 00:25:09,110
+six row meet. One out of thirty six.
+
+540
+00:25:09,560 --> 00:25:11,775
+But here's another way to see it.
+
+541
+00:25:11,775 --> 00:25:14,588
+The orange die has a one in six chance of six.
+
+542
+00:25:14,588 --> 00:25:17,820
+And then, the blue die has a one in six chance of six.
+
+543
+00:25:18,270 --> 00:25:23,971
+Multiply them. One sixth times one sixth is one over thirty six.
+
+544
+00:25:23,971 --> 00:25:24,980
+Same answer.
+
+545
+00:25:25,980 --> 00:25:28,592
+Why multiply? Picture it as area.
+
+546
+00:25:28,592 --> 00:25:30,333
+Take a square of side one.
+
+547
+00:25:30,333 --> 00:25:33,160
+The orange six takes one sixth of the width.
+
+548
+00:25:33,160 --> 00:25:35,770
+The blue six takes one sixth of the height.
+
+549
+00:25:36,220 --> 00:25:41,908
+Where they overlap is a little box, one sixth wide and one sixth
+
+550
+00:25:41,908 --> 00:25:46,530
+tall. Its area is one sixth times one sixth.
+
+551
+00:25:47,530 --> 00:25:49,642
+This works for more than two things.
+
+552
+00:25:49,642 --> 00:25:51,484
+Three dice all showing six?
+
+553
+00:25:51,484 --> 00:25:55,657
+One sixth, times one sixth, times one sixth.
+
+554
+00:25:55,657 --> 00:25:58,310
+One in two hundred and sixteen.
+
+555
+00:25:58,760 --> 00:26:01,108
+So and usually means multiply.
+
+556
+00:26:01,108 --> 00:26:03,930
+And multiplying fractions makes things smaller.
+
+557
+00:26:03,930 --> 00:26:08,170
+Both things happening is less likely than either one alone.
+
+558
+00:26:08,620 --> 00:26:10,227
+But there's a condition.
+
+559
+00:26:10,227 --> 00:26:13,198
+This simple multiplying only works when the two events are
+
+560
+00:26:13,198 --> 00:26:14,210
+independent.
+
+561
+00:26:15,010 --> 00:26:17,854
+Independent means one result doesn't change the chances of the
+
+562
+00:26:17,854 --> 00:26:18,430
+other.
+
+563
+00:26:18,880 --> 00:26:21,310
+The orange die has no idea what the blue die did.
+
+564
+00:26:21,310 --> 00:26:22,720
+They don't talk to each other.
+
+565
+00:26:22,720 --> 00:26:23,960
+So they're independent.
+
+566
+00:26:24,410 --> 00:26:27,336
+A coin and a die are independent too.
+
+567
+00:26:27,336 --> 00:26:31,164
+The chance of heads and a six is one half times one sixth.
+
+568
+00:26:31,164 --> 00:26:32,060
+One twelfth.
+
+569
+00:26:32,510 --> 00:26:35,084
+But some events do affect each other.
+
+570
+00:26:35,084 --> 00:26:38,600
+Here's a bag with three red marbles and two blue marbles.
+
+571
+00:26:39,050 --> 00:26:41,232
+You pull out one marble, don't put it back,
+
+572
+00:26:41,232 --> 00:26:42,671
+and then pull out another.
+
+573
+00:26:42,671 --> 00:26:44,110
+What's the chance both are red?
+
+574
+00:26:44,560 --> 00:26:48,003
+First pull. Three red out of five marbles.
+
+575
+00:26:48,003 --> 00:26:48,890
+Three fifths.
+
+576
+00:26:49,340 --> 00:26:52,473
+Now, if that first marble was red, the bag has changed.
+
+577
+00:26:52,473 --> 00:26:55,180
+There are only two red left, out of four.
+
+578
+00:26:55,630 --> 00:26:57,464
+So the second chance is two quarters.
+
+579
+00:26:57,464 --> 00:26:59,477
+The first pull changed the second one.
+
+580
+00:26:59,477 --> 00:27:01,490
+These events are not independent.
+
+581
+00:27:01,940 --> 00:27:04,467
+Multiply the chances along the path.
+
+582
+00:27:04,467 --> 00:27:07,687
+Three fifths times two quarters is six over twenty,
+
+583
+00:27:07,687 --> 00:27:08,830
+which is three tenths.
+
+584
+00:27:09,830 --> 00:27:13,251
+If you had put the first marble back, the bag would be the same
+
+585
+00:27:13,251 --> 00:27:15,748
+both times. Three fifths times three fifths,
+
+586
+00:27:15,748 --> 00:27:17,340
+nine over twenty five.
+
+587
+00:27:17,790 --> 00:27:21,329
+That's a bit higher, because putting the red marble back gives
+
+588
+00:27:21,329 --> 00:27:23,540
+red a better chance the second time.
+
+589
+00:27:23,990 --> 00:27:26,444
+So, for and: multiply along the path.
+
+590
+00:27:26,444 --> 00:27:28,816
+But always use the chance of the second thing,
+
+591
+00:27:28,816 --> 00:27:30,830
+after the first one has happened.
+
+592
+00:27:31,830 --> 00:27:35,386
+Because independence matters so much, let's practise spotting
+
+593
+00:27:35,386 --> 00:27:39,160
+it. For each pair, ask, does the first result change the chances
+
+594
+00:27:39,160 --> 00:27:40,270
+of the second?
+
+595
+00:27:40,720 --> 00:27:44,937
+One. Flipping a coin today, and flipping it again tomorrow.
+
+596
+00:27:44,937 --> 00:27:47,470
+Independent. The coin doesn't remember.
+
+597
+00:27:47,920 --> 00:27:50,984
+Two. Drawing a card from a deck, keeping it,
+
+598
+00:27:50,984 --> 00:27:53,827
+and drawing another. Not independent.
+
+599
+00:27:53,827 --> 00:27:55,140
+The deck has changed.
+
+600
+00:27:55,590 --> 00:27:58,228
+Three. Rain today, and rain tomorrow.
+
+601
+00:27:58,228 --> 00:28:02,184
+Not independent. Rainy weather tends to stick around for a few
+
+602
+00:28:02,184 --> 00:28:05,920
+days, so rain today makes rain tomorrow more likely.
+
+603
+00:28:06,370 --> 00:28:09,506
+Four. Your birthday, and the birthday of a random stranger in
+
+604
+00:28:09,506 --> 00:28:11,563
+another country. Independent.
+
+605
+00:28:11,563 --> 00:28:13,760
+One tells you nothing about the other.
+
+606
+00:28:14,210 --> 00:28:17,774
+Five. Whether you study tonight, and whether you pass tomorrow's
+
+607
+00:28:17,774 --> 00:28:20,362
+test. Definitely not independent.
+
+608
+00:28:20,362 --> 00:28:21,949
+Studying changes your chances.
+
+609
+00:28:21,949 --> 00:28:22,950
+That's the whole point.
+
+610
+00:28:23,950 --> 00:28:27,605
+When events are independent, multiply the plain chances.
+
+611
+00:28:27,605 --> 00:28:31,060
+When they're not, use the updated chance for the second step.
+
+612
+00:28:31,860 --> 00:28:35,952
+Now let's combine not and and, to solve one of the most useful
+
+613
+00:28:35,952 --> 00:28:38,450
+questions in all of probability.
+
+614
+00:28:38,900 --> 00:28:40,689
+You roll one die four times.
+
+615
+00:28:40,689 --> 00:28:42,870
+What's the chance you get at least one six?
+
+616
+00:28:43,320 --> 00:28:47,416
+At least one means one six, or two, or three,
+
+617
+00:28:47,416 --> 00:28:50,720
+or four. That's a lot of cases to count.
+
+618
+00:28:51,170 --> 00:28:52,932
+Here's a tempting shortcut.
+
+619
+00:28:52,932 --> 00:28:54,915
+Each roll has a one sixth chance.
+
+620
+00:28:54,915 --> 00:28:56,677
+Four rolls, so add them up.
+
+621
+00:28:56,677 --> 00:28:59,320
+Four sixths, about sixty seven percent.
+
+622
+00:28:59,770 --> 00:29:01,518
+But that can't be right.
+
+623
+00:29:01,518 --> 00:29:03,878
+Watch what happens with six rolls.
+
+624
+00:29:03,878 --> 00:29:07,375
+Six sixths is one. A hundred percent.
+
+625
+00:29:07,375 --> 00:29:10,040
+As if six rolls guarantee a six.
+
+626
+00:29:10,490 --> 00:29:13,048
+Anyone who's ever played a dice game knows you can roll six
+
+627
+00:29:13,048 --> 00:29:14,730
+times and never see a six.
+
+628
+00:29:15,730 --> 00:29:18,115
+The adding was wrong because these events can all happen
+
+629
+00:29:18,115 --> 00:29:21,110
+together, so we're counting overlaps again and again.
+
+630
+00:29:21,560 --> 00:29:23,447
+So let's use the superpower.
+
+631
+00:29:23,447 --> 00:29:26,664
+Flip it around. The opposite of at least one six is,
+
+632
+00:29:26,664 --> 00:29:27,810
+no sixes at all.
+
+633
+00:29:28,260 --> 00:29:31,760
+The chance one roll is not a six is five sixths.
+
+634
+00:29:32,210 --> 00:29:33,835
+The rolls are independent.
+
+635
+00:29:33,835 --> 00:29:36,513
+So the chance that all four rolls are not six is five sixths,
+
+636
+00:29:36,513 --> 00:29:39,280
+times five sixths, times five sixths, times five sixths.
+
+637
+00:29:39,730 --> 00:29:42,471
+That's six hundred and twenty five out of one thousand two
+
+638
+00:29:42,471 --> 00:29:43,971
+hundred and ninety six.
+
+639
+00:29:43,971 --> 00:29:45,470
+About forty eight percent.
+
+640
+00:29:45,920 --> 00:29:49,085
+So the chance of at least one six is one minus that.
+
+641
+00:29:49,085 --> 00:29:50,680
+About fifty two percent.
+
+642
+00:29:51,880 --> 00:29:54,430
+Just over a half. Not sixty seven percent.
+
+643
+00:29:54,880 --> 00:29:57,760
+And with six rolls, it's about sixty seven percent.
+
+644
+00:29:57,760 --> 00:29:59,890
+Likely, but nowhere near certain.
+
+645
+00:30:00,340 --> 00:30:03,058
+Look at this curve. Every extra roll helps,
+
+646
+00:30:03,058 --> 00:30:05,970
+but it never quite reaches one hundred percent.
+
+647
+00:30:06,970 --> 00:30:08,732
+This trick works everywhere.
+
+648
+00:30:08,732 --> 00:30:12,037
+The chance of at least one success, equals one,
+
+649
+00:30:12,037 --> 00:30:14,460
+minus the chance of no success at all.
+
+650
+00:30:15,460 --> 00:30:18,667
+For example, if you guess on three quiz questions,
+
+651
+00:30:18,667 --> 00:30:22,408
+each with four choices, what's the chance you get at least one
+
+652
+00:30:22,408 --> 00:30:22,880
+right?
+
+653
+00:30:23,330 --> 00:30:26,138
+The chance of getting one wrong is three quarters.
+
+654
+00:30:26,138 --> 00:30:30,024
+All three wrong is three quarters cubed, twenty seven over sixty
+
+655
+00:30:30,024 --> 00:30:30,460
+four.
+
+656
+00:30:30,910 --> 00:30:34,559
+So at least one right is thirty seven out of sixty four.
+
+657
+00:30:34,559 --> 00:30:35,850
+A bit more than half.
+
+658
+00:30:36,850 --> 00:30:39,914
+Whenever you see the words at least one, your brain should
+
+659
+00:30:39,914 --> 00:30:41,370
+shout, flip it around.
+
+660
+00:30:41,820 --> 00:30:45,841
+Let's practise our three words, not, or, and,
+
+661
+00:30:45,841 --> 00:30:50,470
+on something new. A normal deck of playing cards.
+
+662
+00:30:50,920 --> 00:30:53,369
+A deck has fifty two cards.
+
+663
+00:30:53,369 --> 00:30:58,070
+There are four suits, hearts, diamonds, clubs and spades.
+
+664
+00:30:58,070 --> 00:31:02,650
+And each suit has thirteen cards, from ace up to king.
+
+665
+00:31:03,100 --> 00:31:07,219
+Shuffle well, and every card is equally likely to be on top.
+
+666
+00:31:07,219 --> 00:31:08,870
+So our counting recipe works.
+
+667
+00:31:09,320 --> 00:31:11,696
+What's the chance the top card is a heart?
+
+668
+00:31:11,696 --> 00:31:14,072
+Thirteen hearts out of fifty two cards.
+
+669
+00:31:14,072 --> 00:31:15,490
+That's one quarter.
+
+670
+00:31:16,490 --> 00:31:18,351
+What's the chance it's a king?
+
+671
+00:31:18,351 --> 00:31:20,486
+Four kings out of fifty two.
+
+672
+00:31:20,486 --> 00:31:21,800
+One thirteenth.
+
+673
+00:31:22,250 --> 00:31:24,280
+Now, the chance it's a king or a heart?
+
+674
+00:31:24,730 --> 00:31:26,967
+Thirteen hearts, plus four kings.
+
+675
+00:31:26,967 --> 00:31:30,402
+But one card is both, the king of hearts.
+
+676
+00:31:30,402 --> 00:31:31,820
+Don't count it twice.
+
+677
+00:31:32,270 --> 00:31:35,443
+Thirteen plus four, minus one, is sixteen.
+
+678
+00:31:35,443 --> 00:31:39,310
+Sixteen out of fifty two, which simplifies to four thirteenths.
+
+679
+00:31:40,310 --> 00:31:41,759
+And the chance it's not a heart?
+
+680
+00:31:41,759 --> 00:31:44,130
+One minus one quarter. Three quarters.
+
+681
+00:31:44,580 --> 00:31:48,482
+Now for and. You draw two cards, without putting the first one
+
+682
+00:31:48,482 --> 00:31:51,000
+back. What's the chance both are aces?
+
+683
+00:31:51,450 --> 00:31:54,270
+First card. Four aces out of fifty two.
+
+684
+00:31:54,720 --> 00:31:57,307
+If that was an ace, there are now three aces left,
+
+685
+00:31:57,307 --> 00:31:58,600
+out of fifty one cards.
+
+686
+00:31:59,050 --> 00:32:00,764
+Multiply along the path.
+
+687
+00:32:00,764 --> 00:32:04,405
+Four over fifty two, times three over fifty one.
+
+688
+00:32:04,405 --> 00:32:07,400
+That's one out of two hundred and twenty one.
+
+689
+00:32:08,400 --> 00:32:09,868
+Not even half a percent.
+
+690
+00:32:09,868 --> 00:32:11,870
+Two aces in a row really is rare.
+
+691
+00:32:12,320 --> 00:32:14,957
+Same three words, a completely different game.
+
+692
+00:32:14,957 --> 00:32:16,276
+That's the beauty of it.
+
+693
+00:32:16,276 --> 00:32:18,730
+Once you know the tools, they work everywhere.
+
+694
+00:32:19,530 --> 00:32:22,924
+Real life is often a chain of events, where the second step
+
+695
+00:32:22,924 --> 00:32:26,750
+depends on the first. A tree diagram handles that beautifully.
+
+696
+00:32:27,200 --> 00:32:30,459
+Here's a story. On a typical school day in your town,
+
+697
+00:32:30,459 --> 00:32:32,370
+there's a three in ten chance of rain.
+
+698
+00:32:32,820 --> 00:32:36,155
+When it rains, the school bus is late half the time.
+
+699
+00:32:36,155 --> 00:32:40,280
+When it's dry, the bus is late only one time in ten.
+
+700
+00:32:40,730 --> 00:32:43,071
+These numbers are made up for this example,
+
+701
+00:32:43,071 --> 00:32:45,220
+but the method works for any numbers.
+
+702
+00:32:45,670 --> 00:32:49,414
+Question. On a random school day, what's the chance the bus is
+
+703
+00:32:49,414 --> 00:32:49,870
+late?
+
+704
+00:32:50,320 --> 00:32:53,184
+Let's imagine one hundred school days, and walk them through the
+
+705
+00:32:53,184 --> 00:32:53,580
+tree.
+
+706
+00:32:54,030 --> 00:32:55,610
+Three in ten days are rainy.
+
+707
+00:32:55,610 --> 00:32:56,850
+That's thirty rainy days.
+
+708
+00:32:57,300 --> 00:32:59,878
+On half of those, the bus is late.
+
+709
+00:32:59,878 --> 00:33:00,900
+Fifteen days.
+
+710
+00:33:01,350 --> 00:33:04,683
+Seventy days are dry. On one in ten of them,
+
+711
+00:33:04,683 --> 00:33:06,570
+the bus is late. Seven days.
+
+712
+00:33:07,020 --> 00:33:09,809
+So the bus is late on fifteen plus seven days.
+
+713
+00:33:09,809 --> 00:33:12,170
+Twenty two days out of one hundred.
+
+714
+00:33:13,170 --> 00:33:16,607
+With the tree, you can do this without imagining days.
+
+715
+00:33:16,607 --> 00:33:20,038
+Multiply along each path to a late bus, then add the paths
+
+716
+00:33:20,038 --> 00:33:20,900
+together.
+
+717
+00:33:21,350 --> 00:33:25,711
+Multiply along a path, because both steps have to happen.
+
+718
+00:33:25,711 --> 00:33:29,507
+That's and. Add across paths, because either path works.
+
+719
+00:33:29,507 --> 00:33:30,250
+That's or.
+
+720
+00:33:31,450 --> 00:33:34,388
+And a quick check. All four paths together,
+
+721
+00:33:34,388 --> 00:33:38,824
+late and on time, rainy and dry, must add up to one hundred
+
+722
+00:33:38,824 --> 00:33:43,171
+days. Fifteen, plus fifteen, plus seven, plus sixty three.
+
+723
+00:33:43,171 --> 00:33:44,860
+One hundred. Good.
+
+724
+00:33:45,310 --> 00:33:49,080
+So the tree is just and and or, working together.
+
+725
+00:33:49,530 --> 00:33:52,650
+Now a sneaky question, which will lead us into our next big
+
+726
+00:33:52,650 --> 00:33:54,637
+idea. The bus was late today.
+
+727
+00:33:54,637 --> 00:33:56,210
+What's the chance it was raining?
+
+728
+00:33:57,210 --> 00:33:59,139
+Look at the hundred days again.
+
+729
+00:33:59,139 --> 00:34:01,495
+The bus was late on twenty two of them.
+
+730
+00:34:01,495 --> 00:34:02,570
+That's our world now.
+
+731
+00:34:03,020 --> 00:34:05,150
+Fifteen of those twenty two were rainy days.
+
+732
+00:34:05,600 --> 00:34:08,789
+So the chance it was raining, given the bus was late,
+
+733
+00:34:08,789 --> 00:34:10,700
+is fifteen out of twenty two.
+
+734
+00:34:10,700 --> 00:34:12,400
+About sixty eight percent.
+
+735
+00:34:13,600 --> 00:34:17,158
+Before you knew anything, rain had a thirty percent chance.
+
+736
+00:34:17,158 --> 00:34:20,080
+Knowing the bus was late made rain much more likely.
+
+737
+00:34:20,530 --> 00:34:23,574
+That idea, how a clue changes a probability,
+
+738
+00:34:23,574 --> 00:34:24,910
+is what we'll look at next.
+
+739
+00:34:25,710 --> 00:34:28,565
+So far, we've rolled the dice without knowing anything.
+
+740
+00:34:28,565 --> 00:34:30,510
+But what if someone gives you a clue?
+
+741
+00:34:30,960 --> 00:34:33,512
+This is called conditional probability.
+
+742
+00:34:33,512 --> 00:34:36,423
+It's the chance of something, given that you already know
+
+743
+00:34:36,423 --> 00:34:37,360
+something else.
+
+744
+00:34:37,810 --> 00:34:40,993
+Here's the key idea, and it's beautiful.
+
+745
+00:34:40,993 --> 00:34:42,460
+A clue shrinks the grid.
+
+746
+00:34:43,460 --> 00:34:47,201
+Your friend rolls both dice, hides them, and peeks at the orange
+
+747
+00:34:47,201 --> 00:34:50,690
+one. They tell you, the orange die is a six.
+
+748
+00:34:51,140 --> 00:34:52,910
+What's the chance the total is twelve?
+
+749
+00:34:53,360 --> 00:34:56,528
+Before the clue, it was one in thirty six.
+
+750
+00:34:56,528 --> 00:35:00,378
+But now, every square where orange isn't six is impossible.
+
+751
+00:35:00,378 --> 00:35:01,280
+Cross them out.
+
+752
+00:35:01,730 --> 00:35:03,795
+We're left with just one column.
+
+753
+00:35:03,795 --> 00:35:05,850
+Six squares. That's our new world.
+
+754
+00:35:06,300 --> 00:35:11,400
+And in this new world, a total of twelve is one square out of
+
+755
+00:35:11,400 --> 00:35:13,060
+six. One sixth.
+
+756
+00:35:14,260 --> 00:35:16,634
+The clue made twelve six times more likely.
+
+757
+00:35:16,634 --> 00:35:19,400
+New information changed the probability.
+
+758
+00:35:19,850 --> 00:35:22,390
+We write this with a straight line.
+
+759
+00:35:22,390 --> 00:35:25,369
+P of twelve, line, orange six.
+
+760
+00:35:25,369 --> 00:35:28,460
+And we read that line as, given.
+
+761
+00:35:29,460 --> 00:35:31,721
+So the recipe is the same as always.
+
+762
+00:35:31,721 --> 00:35:35,425
+Count the outcomes you want, but only inside the shrunken world.
+
+763
+00:35:35,425 --> 00:35:37,890
+Then divide by the size of that shrunken world.
+
+764
+00:35:38,340 --> 00:35:40,351
+Now here's a surprising one.
+
+765
+00:35:40,351 --> 00:35:42,979
+With the same clue, the orange die is a six,
+
+766
+00:35:42,979 --> 00:35:44,990
+what's the chance the total is seven?
+
+767
+00:35:45,440 --> 00:35:48,562
+In the six column, only one square makes seven,
+
+768
+00:35:48,562 --> 00:35:50,122
+orange six and blue one.
+
+769
+00:35:50,122 --> 00:35:51,300
+One out of six.
+
+770
+00:35:51,750 --> 00:35:55,350
+But the chance of seven without any clue was also one sixth.
+
+771
+00:35:55,800 --> 00:35:57,235
+The clue changed nothing!
+
+772
+00:35:57,235 --> 00:36:00,272
+Knowing the orange die doesn't help you guess whether the total
+
+773
+00:36:00,272 --> 00:36:01,100
+is seven.
+
+774
+00:36:02,300 --> 00:36:04,875
+Why? Because whatever the orange die shows,
+
+775
+00:36:04,875 --> 00:36:08,394
+there's always exactly one blue number that makes seven.
+
+776
+00:36:08,394 --> 00:36:10,360
+So the clue gives no advantage.
+
+777
+00:36:10,810 --> 00:36:13,292
+And this is the real meaning of independent.
+
+778
+00:36:13,292 --> 00:36:16,497
+Two events are independent when knowing one doesn't change the
+
+779
+00:36:16,497 --> 00:36:17,660
+chance of the other.
+
+780
+00:36:18,660 --> 00:36:20,196
+Let's try a trickier clue.
+
+781
+00:36:20,196 --> 00:36:22,830
+Your friend says, the total is at least ten.
+
+782
+00:36:22,830 --> 00:36:25,902
+What's the chance they rolled a double, two dice showing the
+
+783
+00:36:25,902 --> 00:36:26,780
+same number?
+
+784
+00:36:27,230 --> 00:36:28,617
+First, shrink the world.
+
+785
+00:36:28,617 --> 00:36:32,370
+Which squares have a total of ten, eleven or twelve?
+
+786
+00:36:32,820 --> 00:36:35,906
+Four and six. Five and five.
+
+787
+00:36:35,906 --> 00:36:38,991
+Six and four. Five and six.
+
+788
+00:36:38,991 --> 00:36:42,077
+Six and five. Six and six.
+
+789
+00:36:42,077 --> 00:36:43,620
+Six squares.
+
+790
+00:36:44,070 --> 00:36:46,402
+Now, which of these are doubles?
+
+791
+00:36:46,402 --> 00:36:48,497
+Five and five, and six and six.
+
+792
+00:36:48,497 --> 00:36:49,190
+That's two.
+
+793
+00:36:49,640 --> 00:36:51,580
+Two out of six. One third.
+
+794
+00:36:52,580 --> 00:36:56,363
+Without the clue, doubles happen six times out of thirty six,
+
+795
+00:36:56,363 --> 00:36:59,740
+one sixth. With the clue, it doubles to one third.
+
+796
+00:37:00,190 --> 00:37:03,118
+Now for the most important warning in this whole chapter.
+
+797
+00:37:03,118 --> 00:37:05,660
+The order of a given statement matters.
+
+798
+00:37:06,110 --> 00:37:10,410
+The chance of a total of twelve, given the orange die is six,
+
+799
+00:37:10,410 --> 00:37:12,780
+is one sixth. We just saw it.
+
+800
+00:37:13,230 --> 00:37:17,700
+But the chance the orange die is six, given the total is twelve,
+
+801
+00:37:17,700 --> 00:37:22,390
+is one. It's certain! The only way to make twelve is double six.
+
+802
+00:37:22,840 --> 00:37:24,671
+Same two things. Swapped around.
+
+803
+00:37:24,671 --> 00:37:26,680
+Completely different answers.
+
+804
+00:37:27,880 --> 00:37:29,668
+Here's an everyday version.
+
+805
+00:37:29,668 --> 00:37:31,978
+Most professional basketball players are tall.
+
+806
+00:37:31,978 --> 00:37:34,810
+But most tall people are not professional basketball players.
+
+807
+00:37:35,260 --> 00:37:37,694
+Here's one more everyday example.
+
+808
+00:37:37,694 --> 00:37:40,750
+In a class, twelve of the thirty students wear glasses,
+
+809
+00:37:40,750 --> 00:37:42,580
+and eight of those twelve are girls.
+
+810
+00:37:43,030 --> 00:37:45,539
+Pick a student who wears glasses.
+
+811
+00:37:45,539 --> 00:37:47,476
+What's the chance it's a girl?
+
+812
+00:37:47,476 --> 00:37:51,349
+The clue puts you in the glasses world, twelve students.
+
+813
+00:37:51,349 --> 00:37:53,286
+Eight of them are girls.
+
+814
+00:37:53,286 --> 00:37:54,870
+Eight twelfths, two thirds.
+
+815
+00:37:55,870 --> 00:37:57,475
+Cards work the same way.
+
+816
+00:37:57,475 --> 00:38:00,743
+If you're told the top card is a picture card,
+
+817
+00:38:00,743 --> 00:38:05,005
+a jack, a queen or a king, what's the chance it's a king?
+
+818
+00:38:05,005 --> 00:38:07,442
+The world shrinks to twelve picture cards.
+
+819
+00:38:07,442 --> 00:38:09,325
+Four of them are kings.
+
+820
+00:38:09,325 --> 00:38:11,150
+Four twelfths, one third.
+
+821
+00:38:11,600 --> 00:38:14,840
+Always ask, which world did the clue put me in?
+
+822
+00:38:14,840 --> 00:38:17,860
+That world goes on the bottom of your fraction.
+
+823
+00:38:18,860 --> 00:38:20,552
+Let's go back to the fair.
+
+824
+00:38:20,552 --> 00:38:24,426
+A stall has a game. You pay two tokens to roll two dice.
+
+825
+00:38:24,426 --> 00:38:27,810
+If the total is seven, you win ten tokens.
+
+826
+00:38:28,260 --> 00:38:31,922
+Should you play? To answer that, we need one more idea.
+
+827
+00:38:31,922 --> 00:38:33,000
+Expected value.
+
+828
+00:38:33,450 --> 00:38:36,089
+Expected value is the average result you'd get per game,
+
+829
+00:38:36,089 --> 00:38:37,980
+if you played many, many times.
+
+830
+00:38:38,430 --> 00:38:39,907
+Let's start with something simple.
+
+831
+00:38:39,907 --> 00:38:42,460
+What's the average number you roll on one die?
+
+832
+00:38:42,910 --> 00:38:45,709
+Each face comes up one sixth of the time.
+
+833
+00:38:45,709 --> 00:38:49,608
+So add up one, two, three, four, five, and six,
+
+834
+00:38:49,608 --> 00:38:51,000
+and divide by six.
+
+835
+00:38:51,450 --> 00:38:53,549
+That's twenty one divided by six.
+
+836
+00:38:53,549 --> 00:38:54,520
+Three and a half.
+
+837
+00:38:55,520 --> 00:38:57,005
+Notice something funny.
+
+838
+00:38:57,005 --> 00:38:59,394
+You can never actually roll three and a half.
+
+839
+00:38:59,394 --> 00:39:02,145
+The expected value doesn't have to be a possible result.
+
+840
+00:39:02,145 --> 00:39:03,630
+It's a long run average.
+
+841
+00:39:04,080 --> 00:39:07,732
+For two dice, the average total is three and a half plus three
+
+842
+00:39:07,732 --> 00:39:11,180
+and a half. Seven. Right at the peak of our mountain.
+
+843
+00:39:12,180 --> 00:39:16,509
+Now the fair game. Each game, you win ten tokens one sixth of
+
+844
+00:39:16,509 --> 00:39:20,060
+the time, because seven has a one sixth chance.
+
+845
+00:39:20,510 --> 00:39:23,290
+So on average, you win ten times one sixth.
+
+846
+00:39:23,290 --> 00:39:25,850
+That's about one point six seven tokens per game.
+
+847
+00:39:26,300 --> 00:39:28,770
+But you pay two tokens every single time.
+
+848
+00:39:29,220 --> 00:39:32,960
+So on average, you lose about one third of a token per game.
+
+849
+00:39:33,960 --> 00:39:37,114
+Play once, and you might win ten tokens and feel brilliant.
+
+850
+00:39:37,114 --> 00:39:40,882
+But play sixty games, and you'd expect to be down about twenty
+
+851
+00:39:40,882 --> 00:39:41,520
+tokens.
+
+852
+00:39:41,970 --> 00:39:45,288
+That's the quiet secret of almost every game at a fair.
+
+853
+00:39:45,288 --> 00:39:48,400
+The expected value is a little bit in the stall's favour.
+
+854
+00:39:49,400 --> 00:39:53,909
+For the game to be fair, the expected win should equal the cost.
+
+855
+00:39:53,909 --> 00:39:56,637
+Here, that would mean a price of ten sixths,
+
+856
+00:39:56,637 --> 00:39:59,400
+about one point six seven tokens.
+
+857
+00:39:59,850 --> 00:40:03,755
+Let's try one more. Your class sells one hundred raffle tickets,
+
+858
+00:40:03,755 --> 00:40:08,110
+at one token each. There's one prize, worth fifty tokens.
+
+859
+00:40:08,560 --> 00:40:11,496
+If you buy one ticket, your chance of winning is one in a
+
+860
+00:40:11,496 --> 00:40:14,651
+hundred. So your expected win is fifty times one hundredth.
+
+861
+00:40:14,651 --> 00:40:15,510
+Half a token.
+
+862
+00:40:15,960 --> 00:40:19,467
+You paid one token, and you expect half a token back.
+
+863
+00:40:19,467 --> 00:40:22,770
+So on average, you lose half a token per ticket.
+
+864
+00:40:23,220 --> 00:40:24,712
+But that's fine for a raffle!
+
+865
+00:40:24,712 --> 00:40:27,051
+The extra money goes to the class trip.
+
+866
+00:40:27,051 --> 00:40:29,391
+Expected value doesn't tell you what to do.
+
+867
+00:40:29,391 --> 00:40:31,950
+It tells you what it costs, on average.
+
+868
+00:40:32,950 --> 00:40:36,436
+Expected value is how you decide, using probability,
+
+869
+00:40:36,436 --> 00:40:38,940
+whether something is worth it in the long run.
+
+870
+00:40:39,390 --> 00:40:41,674
+But remember, it's about the long run.
+
+871
+00:40:41,674 --> 00:40:43,370
+A single game can go either way.
+
+872
+00:40:44,370 --> 00:40:46,804
+So far, we've always counted outcomes.
+
+873
+00:40:46,804 --> 00:40:50,014
+But some things can't be counted, because there are too many
+
+874
+00:40:50,014 --> 00:40:51,630
+possibilities to list.
+
+875
+00:40:52,080 --> 00:40:55,375
+Imagine a bus that comes exactly every ten minutes.
+
+876
+00:40:55,375 --> 00:40:58,328
+You walk to the stop at a random moment, without checking the
+
+877
+00:40:58,328 --> 00:40:59,060
+timetable.
+
+878
+00:40:59,510 --> 00:41:01,520
+What's the chance you wait less than three minutes?
+
+879
+00:41:01,970 --> 00:41:05,267
+You could arrive at any moment in those ten minutes.
+
+880
+00:41:05,267 --> 00:41:08,169
+Not just whole minutes, but any split second.
+
+881
+00:41:08,169 --> 00:41:10,440
+There are endless possibilities.
+
+882
+00:41:10,890 --> 00:41:13,205
+So instead of counting, we measure.
+
+883
+00:41:13,205 --> 00:41:17,162
+The good arrival times are the last three minutes before the bus
+
+884
+00:41:17,162 --> 00:41:19,685
+comes. That's a stretch three minutes long,
+
+885
+00:41:19,685 --> 00:41:20,530
+out of ten.
+
+886
+00:41:20,980 --> 00:41:24,180
+Three out of ten. A probability of three tenths.
+
+887
+00:41:25,180 --> 00:41:28,285
+It's the same recipe, just with lengths instead of counts.
+
+888
+00:41:28,285 --> 00:41:31,390
+The length you want, divided by the total length.
+
+889
+00:41:31,840 --> 00:41:33,660
+And it works with areas too.
+
+890
+00:41:33,660 --> 00:41:37,300
+Throw a dart at a square board, landing at a random spot.
+
+891
+00:41:37,300 --> 00:41:40,720
+The board has a circle drawn on it that fills half the area.
+
+892
+00:41:41,170 --> 00:41:44,023
+Then the chance of landing inside the circle is one half.
+
+893
+00:41:44,023 --> 00:41:46,720
+Area you want, divided by total area.
+
+894
+00:41:47,720 --> 00:41:51,456
+Counting, measuring lengths, measuring areas.
+
+895
+00:41:51,456 --> 00:41:53,353
+It's all the same idea.
+
+896
+00:41:53,353 --> 00:41:56,030
+The part you want, out of the whole.
+
+897
+00:41:56,830 --> 00:42:00,811
+Let's go back to our dice mountain, and ask one more question.
+
+898
+00:42:00,811 --> 00:42:02,920
+What happens if we roll more dice?
+
+899
+00:42:03,370 --> 00:42:07,620
+With one die, every total from one to six is equally likely.
+
+900
+00:42:07,620 --> 00:42:09,330
+The chart is flat, like a table.
+
+901
+00:42:09,780 --> 00:42:12,314
+With two dice, it becomes a triangle.
+
+902
+00:42:12,314 --> 00:42:15,080
+A pointy mountain, peaking at seven.
+
+903
+00:42:15,530 --> 00:42:19,100
+With three dice, there are six times six times six,
+
+904
+00:42:19,100 --> 00:42:21,487
+two hundred and sixteen outcomes.
+
+905
+00:42:21,487 --> 00:42:25,078
+And the chart starts to look rounder, with the peak at ten and
+
+906
+00:42:25,078 --> 00:42:26,020
+eleven.
+
+907
+00:42:26,470 --> 00:42:29,513
+Roll more and more dice, and the shape keeps getting smoother
+
+908
+00:42:29,513 --> 00:42:32,774
+and rounder. A soft hill with a peak in the middle and gentle
+
+909
+00:42:32,774 --> 00:42:34,080
+tails at the edges.
+
+910
+00:42:34,530 --> 00:42:36,175
+That shape has a famous name.
+
+911
+00:42:36,175 --> 00:42:39,670
+The bell curve. And it appears again and again in nature,
+
+912
+00:42:39,670 --> 00:42:42,130
+from people's heights to measurement errors.
+
+913
+00:42:43,330 --> 00:42:46,630
+Why? Because when lots of small random things add together,
+
+914
+00:42:46,630 --> 00:42:49,710
+extreme results need everything to go the same way,
+
+915
+00:42:49,710 --> 00:42:53,010
+which is rare. Middle results can happen in many more ways.
+
+916
+00:42:53,460 --> 00:42:56,166
+It's the exact same reason seven beats twelve.
+
+917
+00:42:56,166 --> 00:42:57,290
+Just with more dice.
+
+918
+00:42:58,090 --> 00:42:59,613
+Time for a quick practice round.
+
+919
+00:42:59,613 --> 00:43:02,473
+I'll ask a question, you pause the video if you like,
+
+920
+00:43:02,473 --> 00:43:04,960
+and try it yourself. Then we'll check together.
+
+921
+00:43:05,410 --> 00:43:09,825
+Question one. A jar has four green sweets and six yellow sweets.
+
+922
+00:43:09,825 --> 00:43:12,165
+You pick one without looking.
+
+923
+00:43:12,165 --> 00:43:13,710
+What's the chance it's green?
+
+924
+00:43:16,710 --> 00:43:18,609
+Count what you want, four green.
+
+925
+00:43:18,609 --> 00:43:20,751
+Count everything, ten sweets.
+
+926
+00:43:20,751 --> 00:43:22,650
+Four tenths, which is two fifths.
+
+927
+00:43:23,650 --> 00:43:27,161
+Question two. With two dice, what's the chance of a total of
+
+928
+00:43:27,161 --> 00:43:27,600
+ten?
+
+929
+00:43:30,600 --> 00:43:33,873
+Ten can be made by four and six, five and five,
+
+930
+00:43:33,873 --> 00:43:36,117
+and six and four. Three squares.
+
+931
+00:43:36,117 --> 00:43:39,390
+Three out of thirty six, which is one twelfth.
+
+932
+00:43:40,390 --> 00:43:43,666
+Question three. So what's the chance of not getting a total of
+
+933
+00:43:43,666 --> 00:43:44,090
+ten?
+
+934
+00:43:47,090 --> 00:43:49,627
+Flip it around. One minus one twelfth.
+
+935
+00:43:49,627 --> 00:43:50,610
+Eleven twelfths.
+
+936
+00:43:51,610 --> 00:43:53,879
+Question four. You flip three coins.
+
+937
+00:43:53,879 --> 00:43:56,450
+What's the chance of at least one head?
+
+938
+00:43:59,450 --> 00:44:01,712
+At least one means flip it around.
+
+939
+00:44:01,712 --> 00:44:05,327
+The opposite is no heads at all, which is tails tails tails.
+
+940
+00:44:05,327 --> 00:44:09,170
+One out of eight. So at least one head is seven eighths.
+
+941
+00:44:10,170 --> 00:44:13,203
+Question five. With two dice, what's the chance that both dice
+
+942
+00:44:13,203 --> 00:44:14,720
+show an even number?
+
+943
+00:44:17,720 --> 00:44:22,179
+Each die is even half the time, and the dice are independent.
+
+944
+00:44:22,179 --> 00:44:25,473
+One half times one half is one quarter.
+
+945
+00:44:25,473 --> 00:44:28,750
+On the grid, that's nine squares out of thirty six.
+
+946
+00:44:29,750 --> 00:44:33,477
+Question six. Your friend says the total of two dice is four.
+
+947
+00:44:33,477 --> 00:44:35,340
+What's the chance it was a double?
+
+948
+00:44:38,340 --> 00:44:42,789
+Shrink the world. A total of four comes from one and three,
+
+949
+00:44:42,789 --> 00:44:45,368
+two and two, and three and one.
+
+950
+00:44:45,368 --> 00:44:48,748
+Three squares. Only two and two is a double.
+
+951
+00:44:48,748 --> 00:44:49,770
+One third.
+
+952
+00:44:50,770 --> 00:44:55,105
+Question seven. A spinner has four equal parts showing one,
+
+953
+00:44:55,105 --> 00:44:56,762
+two, three and six points.
+
+954
+00:44:56,762 --> 00:44:59,660
+What's the expected number of points per spin?
+
+955
+00:45:02,660 --> 00:45:05,480
+Add them up, twelve, and divide by four.
+
+956
+00:45:05,480 --> 00:45:07,840
+Three points per spin, on average.
+
+957
+00:45:08,840 --> 00:45:12,512
+Question eight. You draw one card from a well shuffled deck.
+
+958
+00:45:12,512 --> 00:45:15,260
+What's the chance it's a red card, or a queen?
+
+959
+00:45:18,260 --> 00:45:21,712
+Red cards are hearts and diamonds, twenty six of them.
+
+960
+00:45:21,712 --> 00:45:25,605
+Queens, four. But two queens are red, so don't count them twice.
+
+961
+00:45:25,605 --> 00:45:28,606
+Twenty six plus four minus two is twenty eight.
+
+962
+00:45:28,606 --> 00:45:32,290
+Twenty eight out of fifty two, which is seven thirteenths.
+
+963
+00:45:33,290 --> 00:45:36,711
+Question nine. You roll one die three times.
+
+964
+00:45:36,711 --> 00:45:39,370
+What's the chance of at least one six?
+
+965
+00:45:42,370 --> 00:45:45,121
+Flip it around. No sixes at all is five sixths,
+
+966
+00:45:45,121 --> 00:45:48,615
+three times. One hundred and twenty five out of two hundred and
+
+967
+00:45:48,615 --> 00:45:52,494
+sixteen. So at least one six is ninety one out of two hundred
+
+968
+00:45:52,494 --> 00:45:54,860
+and sixteen. About forty two percent.
+
+969
+00:45:55,860 --> 00:45:59,944
+Question ten. A spinner is three quarters red.
+
+970
+00:45:59,944 --> 00:46:04,360
+You spin it twice. What's the chance both spins land on red?
+
+971
+00:46:07,360 --> 00:46:10,254
+The spins are independent, so multiply.
+
+972
+00:46:10,254 --> 00:46:12,928
+Three quarters times three quarters is nine sixteenths.
+
+973
+00:46:12,928 --> 00:46:14,170
+A little more than half.
+
+974
+00:46:15,170 --> 00:46:18,024
+How did you do? If you got even half of those ten,
+
+975
+00:46:18,024 --> 00:46:21,030
+you're already thinking like a probability person.
+
+976
+00:46:21,830 --> 00:46:24,583
+You now know more probability than most people.
+
+977
+00:46:24,583 --> 00:46:27,970
+So let's protect you from the traps that catch almost everyone.
+
+978
+00:46:28,420 --> 00:46:30,860
+Trap number one. I'm due for a win.
+
+979
+00:46:31,310 --> 00:46:33,783
+A coin lands heads five times in a row.
+
+980
+00:46:33,783 --> 00:46:36,250
+Surely tails is coming now, right?
+
+981
+00:46:36,700 --> 00:46:38,866
+No. The coin has no memory.
+
+982
+00:46:38,866 --> 00:46:41,890
+The chance of tails on the next flip is still one half.
+
+983
+00:46:42,890 --> 00:46:44,503
+Each flip is independent.
+
+984
+00:46:44,503 --> 00:46:47,110
+The past doesn't push the future back into balance.
+
+985
+00:46:47,560 --> 00:46:51,112
+But wait, doesn't the law of large numbers say things even out?
+
+986
+00:46:51,112 --> 00:46:53,330
+It does, but not by correcting.
+
+987
+00:46:53,330 --> 00:46:57,549
+Over a huge number of flips, five extra heads just get diluted,
+
+988
+00:46:57,549 --> 00:46:59,770
+like a drop of ink in an ocean.
+
+989
+00:47:00,220 --> 00:47:02,850
+In fact, the sequence heads, heads, heads,
+
+990
+00:47:02,850 --> 00:47:07,449
+heads, heads, tails, is exactly as likely as six heads in a row.
+
+991
+00:47:07,449 --> 00:47:09,200
+One in sixty four each.
+
+992
+00:47:10,200 --> 00:47:11,615
+This mistake has a name.
+
+993
+00:47:11,615 --> 00:47:13,030
+The gambler's fallacy.
+
+994
+00:47:13,480 --> 00:47:16,120
+And here's a sneaky cousin of this trap.
+
+995
+00:47:16,120 --> 00:47:17,660
+Judging from too few tries.
+
+996
+00:47:17,660 --> 00:47:20,080
+A new player scores three shots out of three,
+
+997
+00:47:20,080 --> 00:47:22,280
+and everyone says they never miss.
+
+998
+00:47:22,730 --> 00:47:24,697
+But three tries is a tiny sample.
+
+999
+00:47:24,697 --> 00:47:27,756
+Remember the coin that gave seven heads out of ten.
+
+1000
+00:47:27,756 --> 00:47:31,033
+Small samples wobble. Wait for many tries before you trust a
+
+1001
+00:47:31,033 --> 00:47:31,690
+pattern.
+
+1002
+00:47:32,690 --> 00:47:36,090
+Trap number two. There are two outcomes, so it's fifty fifty.
+
+1003
+00:47:36,540 --> 00:47:38,148
+Will I win the lottery?
+
+1004
+00:47:38,148 --> 00:47:39,976
+Either I win, or I don't.
+
+1005
+00:47:39,976 --> 00:47:42,200
+Two outcomes. So fifty fifty?
+
+1006
+00:47:42,650 --> 00:47:46,376
+Of course not. Two possible results doesn't mean two equally
+
+1007
+00:47:46,376 --> 00:47:49,570
+likely results. Remember the spinner.
+
+1008
+00:47:50,020 --> 00:47:53,181
+Before you count, always check that your outcomes are equally
+
+1009
+00:47:53,181 --> 00:47:53,920
+likely.
+
+1010
+00:47:54,920 --> 00:47:57,440
+Trap number three. Adding when you shouldn't.
+
+1011
+00:47:57,890 --> 00:48:01,575
+We saw it already. Four rolls at one sixth each is not four
+
+1012
+00:48:01,575 --> 00:48:03,964
+sixths, because the events overlap.
+
+1013
+00:48:03,964 --> 00:48:07,220
+If they can happen together, adding counts too much.
+
+1014
+00:48:07,670 --> 00:48:09,333
+A quick sanity check helps here.
+
+1015
+00:48:09,333 --> 00:48:12,438
+If your answer is more than one, or more than one hundred
+
+1016
+00:48:12,438 --> 00:48:14,320
+percent, something has gone wrong.
+
+1017
+00:48:15,320 --> 00:48:17,740
+Trap number four. Flipping the given.
+
+1018
+00:48:18,190 --> 00:48:21,489
+The chance of A given B is not the same as the chance of B given
+
+1019
+00:48:21,489 --> 00:48:24,457
+A. Tall given basketball player is very different from
+
+1020
+00:48:24,457 --> 00:48:25,960
+basketball player given tall.
+
+1021
+00:48:26,410 --> 00:48:29,099
+Whenever you hear a statement with given,
+
+1022
+00:48:29,099 --> 00:48:33,270
+if, or among, pause and ask, which group am I really looking at?
+
+1023
+00:48:34,270 --> 00:48:38,190
+And one bonus trap. Thinking that unlikely means impossible.
+
+1024
+00:48:38,640 --> 00:48:41,360
+A one in a million event is very rare for you.
+
+1025
+00:48:41,360 --> 00:48:43,580
+But in a country of tens of millions of people,
+
+1026
+00:48:43,580 --> 00:48:45,800
+you'd expect it to happen to dozens of them.
+
+1027
+00:48:46,250 --> 00:48:49,032
+So when you hear about an amazing coincidence,
+
+1028
+00:48:49,032 --> 00:48:51,836
+remember, with enough people and enough chances,
+
+1029
+00:48:51,836 --> 00:48:53,830
+surprising things are expected.
+
+1030
+00:48:54,830 --> 00:48:56,225
+Let's put everything together.
+
+1031
+00:48:56,225 --> 00:48:57,750
+Here's your probability recipe.
+
+1032
+00:48:58,200 --> 00:49:00,864
+Step one. List everything that could happen.
+
+1033
+00:49:00,864 --> 00:49:04,604
+Use a grid or a tree, and make sure every outcome is equally
+
+1034
+00:49:04,604 --> 00:49:05,380
+likely.
+
+1035
+00:49:05,830 --> 00:49:09,320
+Step two. Count the outcomes you want, and divide by all the
+
+1036
+00:49:09,320 --> 00:49:10,150
+outcomes.
+
+1037
+00:49:10,600 --> 00:49:13,420
+Step three. For not, take it away from one.
+
+1038
+00:49:13,870 --> 00:49:18,210
+Step four. For or, add, and remove the overlap.
+
+1039
+00:49:18,660 --> 00:49:22,119
+Step five. For and, multiply along the path,
+
+1040
+00:49:22,119 --> 00:49:24,120
+using the updated chance.
+
+1041
+00:49:24,570 --> 00:49:27,997
+Step six. For at least one, flip it around.
+
+1042
+00:49:27,997 --> 00:49:30,450
+One, minus the chance of none.
+
+1043
+00:49:30,900 --> 00:49:35,224
+Step seven. For a given, shrink the world first,
+
+1044
+00:49:35,224 --> 00:49:36,110
+then count.
+
+1045
+00:49:36,560 --> 00:49:40,898
+And step eight. Remember, probability describes the long run.
+
+1046
+00:49:40,898 --> 00:49:42,200
+Not the next single try.
+
+1047
+00:49:43,200 --> 00:49:47,315
+Let's run the recipe one last time, on our game night question.
+
+1048
+00:49:47,315 --> 00:49:52,630
+Two dice, so six times six, thirty six equally likely outcomes.
+
+1049
+00:49:53,080 --> 00:49:55,896
+Twelve has one way, seven has six ways.
+
+1050
+00:49:55,896 --> 00:50:00,612
+Count and divide. One over thirty six, against six over thirty
+
+1051
+00:50:00,612 --> 00:50:01,070
+six.
+
+1052
+00:50:01,520 --> 00:50:04,600
+And over many game nights, your friend will win this race about
+
+1053
+00:50:04,600 --> 00:50:06,345
+six times as often as you.
+
+1054
+00:50:06,345 --> 00:50:07,900
+Unless you change the rules.
+
+1055
+00:50:08,900 --> 00:50:10,406
+You can't control the dice.
+
+1056
+00:50:10,406 --> 00:50:12,560
+But now, you can understand them.
+
+1057
+00:50:14,060 --> 00:50:17,811
+Look around your world, and notice how often you're quietly
+
+1058
+00:50:17,811 --> 00:50:21,466
+guessing the odds. The weather, the bus, a quiz,
+
+1059
+00:50:21,466 --> 00:50:22,190
+a game.
+
+1060
+00:50:22,790 --> 00:50:24,810
+If this lesson made things clear for you,
+
+1061
+00:50:24,810 --> 00:50:27,630
+please subscribe to Math Lab TV, so we can keep building
+
+1062
+00:50:27,630 --> 00:50:28,450
+together.
+
+1063
+00:50:29,250 --> 00:50:32,007
+For more mathematics, explained simply and visually,
+
+1064
+00:50:32,007 --> 00:50:34,300
+subscribe, and I will see you in the next video.

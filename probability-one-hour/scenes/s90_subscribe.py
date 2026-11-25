@@ -1,6 +1,6 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from common import *
+from pkit import *
 
 
 def everyday(title, icon_mob, color):
@@ -21,16 +21,16 @@ def cursor():
     return c
 
 
-# FILL: four everyday examples tied to this topic: (label, icon builder, colour)
-EVERYDAY = [("smoke alarm", lambda: VGroup(Circle(0.32), Circle(0.1)).set_stroke(RED_, 3), RED_),
-            ("car alarm", lambda: RoundedRectangle(corner_radius=0.1, width=0.9, height=0.35).set_stroke(WARN, 3), WARN),
-            ("spam folder", lambda: Rectangle(width=0.8, height=0.55).set_stroke(BLUE_, 3), BLUE_),
-            ("“Was this you?”", lambda: RoundedRectangle(corner_radius=0.08, width=0.45, height=0.75).set_stroke(AQUA, 3), AQUA)]
-STAMP = "real or false alarm?"   # FILL: the reflection question stamped on each card
+EVERYDAY = [("the weather", lambda: ic_cloud(BLUE_, 0.8), BLUE_),
+            ("the bus", lambda: ic_bus(WARN, 0.8), WARN),
+            ("a quiz", lambda: ic_quiz(INK2, 0.7, 2), AQUA),
+            ("a game", lambda: VGroup(die(5, ORANGE_, 0.55), die(2, BLUE_, 0.55)).arrange(RIGHT, buff=0.15), ORANGE_)]
+STAMP = "what are the odds?"
 
 
-class S90Subscribe(Base):
+class S90Subscribe(PBase):
     CHAPTER = "Subscribe"
+    FADE_OUT = False  # the video ends on the logo
 
     def construct(self):
         seg_look, seg_sub = self.ch["segs"][:2]   # "Look around your world…", the subscribe line (word for word)
@@ -68,6 +68,12 @@ class S90Subscribe(Base):
         bt = T("so we can keep building together", 32, INK2).next_to(done, DOWN, buff=0.45)
         self.until(word_time(seg_sub, word_index(seg_sub, "so")) - 0.2)
         self.play(FadeIn(bt, shift=UP * 0.2), run_time=0.6)
-        self.until(SEGS[seg_sub]["end"] + 0.25)
-        self.play(FadeOut(VGroup(done, bt)), lg.animate.scale(0.42).to_edge(UP, buff=0.32), run_time=0.6)
+        # "For more mathematics, explained simply and visually, subscribe…" (owner: no next-time teaser)
+        seg_more = self.ch["segs"][2]
+        self.at(seg_more, 0.0)
+        more = pill("more math, explained simply and visually", AQUA, 34).next_to(lg, DOWN, buff=0.6)
+        self.play(FadeOut(VGroup(done, bt)), run_time=0.4)
+        self.play(FadeIn(more, shift=UP * 0.2), run_time=0.6)
+        self.until(SEGS[seg_more]["end"] + 0.3)
+        self.play(FadeOut(more), lg.animate.move_to(UP * 0.2), run_time=0.8)
         self.finish()

@@ -2203,6 +2203,8 @@
    "links": {
     "builds_on": [],
     "related": [
+     "bayes-examples",
+     "monty-hall",
      "birthday-paradox",
      "expected-value"
     ],
@@ -2210,10 +2212,18 @@
    },
    "production": {
     "folder": "probability-one-hour",
-    "branch": "claude/happy-gauss-0vq8mo"
+    "branch": "claude/happy-gauss-0vq8mo",
+    "length": "50:37",
+    "video": "probability-one-hour/out/probability_one_hour.mp4",
+    "package": "probability-one-hour/out/youtube/",
+    "youtube_title": "Give Me One Hour and You'll FINALLY Understand PROBABILITY",
+    "running_example": "Two dice (orange + blue) on game night: 36-square grid; 7 has 6 ways, 12 has 1 way; plus everyday side examples (coins, marbles, cards, spinner, rain-and-bus tree, fair stall)",
+    "callbacks": [],
+    "teaser_next": null,
+    "hook": "You need a 12, your friend needs a 7: seven comes up six times more often"
    },
    "youtube": null,
-   "notes": "one-hour beginner foundation; owner override: no callbacks to other videos, no ML/DS/Finance/CS scenarios (everyday and classroom examples only)"
+   "notes": "one-hour beginner foundation; owner override: no in-video callbacks, no ML/DS/Finance/CS scenarios, no next-time teaser (ends on a subscribe line); related videos stay in the description"
   }
  ]
 }

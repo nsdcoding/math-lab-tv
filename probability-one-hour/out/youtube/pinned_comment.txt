@@ -1,0 +1,8 @@
+📌 Quick summary: count what you want, count everything, divide. Then three words do almost all the work: NOT (1 − P), OR (add, remove the overlap) and AND (multiply along the path). A clue shrinks the world (34:25), and probability describes the long run, not the next try (15:59).
+
+Worth adding:
+1️⃣ The rain-and-bus numbers (32:19) and the class examples are made up for illustration, so the counting comes out in whole numbers.
+2️⃣ The coin and dice charts in "Try It Many Times" are computer simulations of fair coins and dice; your own runs will look a little different, and that's the point.
+3️⃣ Lottery odds depend on the game: we used the classic "6 numbers from 49" format (11:04).
+
+Which practice question tripped you up? 👇

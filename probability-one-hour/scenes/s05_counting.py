@@ -34,7 +34,8 @@ class S05Counting(PBase):
         # s059–s060 one die, six outcomes
         self.at("s059")
         d = die(4, ORANGE_, 1.4).move_to(UP * 0.3)
-        self.play(FadeIn(d, scale=0.5), Rotate(d, PI), run_time=0.9)
+        self.play(FadeIn(d, scale=0.5), run_time=0.5)
+        self.play(Rotate(d, PI), run_time=0.6)
         self.at("s060")
         ax = NumberLine(x_range=[0.5, 6.5, 1], length=10.2, color=INK2, stroke_width=3, include_tip=False, include_ticks=False)
         ax.move_to(DOWN * 0.9)

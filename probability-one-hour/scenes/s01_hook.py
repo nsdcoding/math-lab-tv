@@ -22,6 +22,7 @@ def board():
 
 class S01Hook(PBase):
     CHAPTER = "Game Night"
+    FADE_OUT = False  # the title card carries into the welcome scene
 
     def construct(self):
         # s001 game night

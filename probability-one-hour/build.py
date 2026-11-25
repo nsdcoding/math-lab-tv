@@ -18,7 +18,7 @@ def discover_scenes():
     A scene is a class deriving from Base with CHAPTER = "<chapter name>"."""
     found = {}
     for f in sorted((HERE / "scenes").glob("s*.py")):
-        for cls, ch in re.findall(r'class (\w+)\(Base\):\s*\n\s*CHAPTER = "([^"]+)"', f.read_text()):
+        for cls, ch in re.findall(r'class (\w+)\(P?Base\):\s*\n\s*CHAPTER = "([^"]+)"', f.read_text()):
             found[ch] = (ch, f.stem, cls)
     missing = [c["name"] for c in CHAPTERS if c["name"] not in found]
     if missing:

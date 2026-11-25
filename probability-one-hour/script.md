@@ -1,9 +1,9 @@
 # Give Me One Hour and You'll FINALLY Understand PROBABILITY
 
-445 segments · 7855 words · est. 52.4 min (voice ≈165 wpm + 286 s pauses) · target 50–60 min
+454 segments · 8149 words · est. 54.4 min (voice ≈165 wpm + 300 s pauses) · target 50–60 min
 
 
-## Game Night  ·  136 words, ~49 s
+## Game Night  ·  155 words, ~56 s
 
 - **s001** It's game night. You and your friend are one move away from winning a board game.
   - *Visual:* Line-art table with a game board; two player tokens near the finish square; two dice (orange, blue) sit in the middle.
@@ -19,6 +19,8 @@
   - *Visual:* The beam slams down on the 7 side; a violet tag '6 times more likely' drops in.
 - **s007** Six times. Same dice. Same table. Same luck. ⏸0.8s
   - *Visual:* Six little '7' tokens stack on the left, one '12' token on the right, on a count axis 0–6.
+- **s007a** If you played this race one hundred times, your friend would win about seventeen times. You'd win about three.
+  - *Visual:* Tally on a count axis 0–20: friend ≈ 17, you ≈ 3 (expected, out of 100 races).
 - **s008** That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath.
   - *Visual:* The dice dissolve into a 6 by 6 grid of squares that briefly flashes the diagonal pattern.
 - **s009** And here's the promise. Give me one hour, and starting from absolute zero, you will finally understand probability. ⏸0.6s
@@ -39,7 +41,7 @@
 - **s015** And you will learn how new information changes the odds, and how to spot the traps that fool almost everyone. ⏸0.6s
   - *Visual:* Big ③ (warn); a grid shrinking to a smaller grid, then a red trap icon; caption 'new information, and the traps'.
 
-## Why It Matters  ·  170 words, ~62 s
+## Why It Matters  ·  189 words, ~69 s
 
 - **s016** Before we start, why should you care about probability at all?
   - *Visual:* A question card 'Why care?' centered.
@@ -57,12 +59,14 @@
   - *Visual:* Card 4: a speech bubble 'I'm due for a win!' gets a red trap stamp.
 - **s023** Probability is simply the math of not knowing for sure. ⏸1.0s
   - *Visual:* The four cards shrink; a big phrase writes on: 'the math of not knowing for sure'.
+- **s022a** Games, sports, quizzes, weather, even deciding whether to carry a jacket. They're all little bets about an uncertain future.
+  - *Visual:* Icons orbit the phrase: dice, ball, quiz, cloud, jacket.
 - **s024** You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful.
   - *Visual:* A single die tumbles with a '?' (next roll), then dissolves into a bar chart outline labelled 'what tends to happen'.
 - **s025** So let's build it from the very first brick. ⏸0.6s
   - *Visual:* One brick drops onto an empty base line.
 
-## What Is Probability?  ·  487 words, ~177 s
+## What Is Probability?  ·  518 words, ~188 s
 
 - **s026** A probability is just a number. It tells you how likely something is to happen.
   - *Visual:* A horizontal number line from 0 to 1 with ticks every 0.1, title 'how likely'.
@@ -84,6 +88,8 @@
   - *Visual:* A coin flips and lands heads; a two-part bar splits 1/2 | 1/2.
 - **s035** The closer a number is to one, the more likely it is. The closer it is to zero, the less likely.
   - *Visual:* Arrows along the line: toward 1 'more likely', toward 0 'less likely'.
+- **s034a** And a probability can never be negative, and never bigger than one. If you ever get an answer like one point two, or minus a half, you know something went wrong.
+  - *Visual:* Red zones beyond both ends of the 0–1 line: '−0.5 ✗' and '1.2 ✗'.
 - **s036** Let's place a few everyday things on this line, just by feel.
   - *Visual:* Empty markers wait above the line.
 - **s037** The sun rising tomorrow? Right up near one.
@@ -337,7 +343,7 @@
 - **s155** Many board games are designed around this exact mountain, even if the players never notice. ⏸1.0s
   - *Visual:* A game board illustration fades in behind the chart (shape only).
 
-## Try It Many Times  ·  334 words, ~121 s
+## Try It Many Times  ·  371 words, ~135 s
 
 - **s156** But hold on. Does real life actually follow this counting? Let's test it.
   - *Visual:* Theory chart from before on the left; an empty 'real rolls' chart on the right.
@@ -369,6 +375,8 @@
   - *Visual:* Paper grid icon → arrow → real dice icon; tag 'paper predicts reality'.
 - **s170** This also gives us a second way to find a probability. When you can't count the outcomes, you can try something many times, and see how often it happens.
   - *Visual:* Two routes: 'count outcomes' and 'try many times', both pointing to the 0–1 line.
+- **s128a** You can try this yourself tonight. Flip a coin twenty times, and write down how many heads you get. Then ask a friend to do the same. Your numbers will probably be different, and that's completely normal.
+  - *Visual:* A notebook tally of 20 flips (illustration) next to a friend's tally; two different counts.
 - **s171** That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?
   - *Visual:* Calendar of past days with rain icons; fraction 'rainy days / similar days'.
 - **s172** But remember the pocket idea. Many tries, not one. The law of large numbers says nothing about the next single flip. ⏸1.0s
@@ -620,9 +628,9 @@
 - **s283** Whenever you see the words at least one, your brain should shout, flip it around.
   - *Visual:* A big 'AT LEAST ONE → FLIP IT' banner.
 
-## A Deck of Cards  ·  246 words, ~89 s
+## A Deck of Cards  ·  248 words, ~90 s
 
-- **s284** Let's practise not, or and and on something new. A normal deck of playing cards.
+- **s284** Let's practise our three words, not, or, and, on something new. A normal deck of playing cards.
   - *Visual:* A fan of card outlines (no real branding), title 'a standard deck'.
 - **s285** A deck has fifty two cards. There are four suits, hearts, diamonds, clubs and spades. And each suit has thirteen cards, from ace up to king.
   - *Visual:* A 13 by 4 grid on axes: x 'rank' A, 2 … 10, J, Q, K; y 'suit' ♥ ♦ ♣ ♠. 4 × 13 = 52 in warn.
@@ -653,7 +661,7 @@
 - **s298** Same three words, a completely different game. That's the beauty of it. Once you know the tools, they work everywhere. ⏸0.8s
   - *Visual:* NOT · OR · AND chips glow together.
 
-## Two Step Trees  ·  317 words, ~115 s
+## Two Step Trees  ·  350 words, ~127 s
 
 - **s299** Real life is often a chain of events, where the second step depends on the first. A tree diagram handles that beautifully.
   - *Visual:* A two-level tree outline draws on.
@@ -679,6 +687,8 @@
   - *Visual:* Paths highlight: 3/10 × 1/2 = 15/100 and 7/10 × 1/10 = 7/100; sum 22/100.
 - **s310** Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or. ⏸1.2s
   - *Visual:* The words AND (along) and OR (across) label the tree.
+- **s297a** And a quick check. All four paths together, late and on time, rainy and dry, must add up to one hundred days. Fifteen, plus fifteen, plus seven, plus sixty three. One hundred. Good.
+  - *Visual:* All four leaves: 15 + 15 + 7 + 63 = 100.
 - **s311** So the tree is just and and or, working together.
   - *Visual:* Chip 'tree = AND along, OR across'.
 - **s312** Now a sneaky question, which will lead us into our next big idea. The bus was late today. What's the chance it was raining? ⏸1.0s
@@ -694,7 +704,7 @@
 - **s317** That idea, how a clue changes a probability, is what we'll look at next. ⏸0.8s
   - *Visual:* Arrow pointing to a chip 'next: GIVEN THAT'.
 
-## Given That  ·  565 words, ~205 s
+## Given That  ·  609 words, ~221 s
 
 - **s318** So far, we've rolled the dice without knowing anything. But what if someone gives you a clue?
   - *Visual:* Two-dice grid returns, all squares neutral; a clue envelope floats in.
@@ -756,6 +766,8 @@
   - *Visual:* A 10 by 3 dot class (illustration); 12 dots get glasses rings; 8 of them violet-tinted 'girls'.
 - **s347** Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds. ⏸1.0s
   - *Visual:* Only the 12 glasses dots stay bright; 8/12 = 2/3 in violet.
+- **s333a** Cards work the same way. If you're told the top card is a picture card, a jack, a queen or a king, what's the chance it's a king? The world shrinks to twelve picture cards. Four of them are kings. Four twelfths, one third.
+  - *Visual:* Card grid: only the J, Q, K columns stay (12 cells); K column aqua; 4/12 = 1/3.
 - **s348** Always ask, which world did the clue put me in? That world goes on the bottom of your fraction. ⏸1.0s
   - *Visual:* The fraction bottom glows warn: 'the world the clue puts you in'.
 
@@ -846,7 +858,7 @@
 - **s387** It's the exact same reason seven beats twelve. Just with more dice. ⏸0.8s
   - *Visual:* A small inset: 7 vs 12 from game night.
 
-## Practice Round  ·  318 words, ~116 s
+## Practice Round  ·  477 words, ~173 s
 
 - **s388** Time for a quick practice round. I'll ask a question, you pause the video if you like, and try it yourself. Then we'll check together.
   - *Visual:* Title strip 'Practice round'; a pause icon.
@@ -878,8 +890,20 @@
   - *Visual:* Spinner with four equal sectors 1, 2, 3, 6; 'Q7' tag; countdown ring.
 - **s402** Add them up, twelve, and divide by four. Three points per spin, on average. ⏸1.0s
   - *Visual:* (1 + 2 + 3 + 6) / 4 = 3 in violet; balance beam balancing at 3.
-- **s403** How did you do? If you got even half of those, you're already thinking like a probability person. ⏸0.8s
-  - *Visual:* A score card '7 questions' with ticks.
+- **s398a** Question eight. You draw one card from a well shuffled deck. What's the chance it's a red card, or a queen? ⏸3.0s
+  - *Visual:* Card grid; 'Q8' tag; countdown ring.
+- **s398b** Red cards are hearts and diamonds, twenty six of them. Queens, four. But two queens are red, so don't count them twice. Twenty six plus four minus two is twenty eight. Twenty eight out of fifty two, which is seven thirteenths. ⏸1.0s
+  - *Visual:* 26 + 4 − 2 = 28; 28/52 = 7/13 in violet.
+- **s398c** Question nine. You roll one die three times. What's the chance of at least one six? ⏸3.0s
+  - *Visual:* Three die slots; 'Q9' tag; countdown ring.
+- **s398d** Flip it around. No sixes at all is five sixths, three times. One hundred and twenty five out of two hundred and sixteen. So at least one six is ninety one out of two hundred and sixteen. About forty two percent. ⏸1.0s
+  - *Visual:* 1 − (5/6)³ = 1 − 125/216 = 91/216 ≈ 42% in violet.
+- **s398e** Question ten. A spinner is three quarters red. You spin it twice. What's the chance both spins land on red? ⏸3.0s
+  - *Visual:* Spinner 3/4 red; 'Q10' tag; countdown ring.
+- **s398f** The spins are independent, so multiply. Three quarters times three quarters is nine sixteenths. A little more than half. ⏸1.0s
+  - *Visual:* 3/4 × 3/4 = 9/16 ≈ 56% in violet.
+- **s403** How did you do? If you got even half of those ten, you're already thinking like a probability person. ⏸0.8s
+  - *Visual:* A score card '10 questions' with ticks.
 
 ## Common Mistakes  ·  424 words, ~154 s
 
@@ -959,20 +983,11 @@
 - **s439** You can't control the dice. But now, you can understand them. ⏸1.5s
   - *Visual:* The recipe card dims; the two dice roll once more and land on 7.
 
-## Subscribe  ·  41 words, ~15 s
+## Subscribe  ·  58 words, ~21 s
 
 - **s440** Look around your world, and notice how often you're quietly guessing the odds. The weather, the bus, a quiz, a game. ⏸0.6s
   - *Visual:* Four everyday cards: cloud, bus stop, quiz sheet, dice; each stamped with a small '?'.
 - **s441** If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together. ⏸0.8s
   - *Visual:* Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.
-
-## Next Time  ·  67 words, ~24 s
-
-- **s442** But here's a puzzle for next time.
-  - *Visual:* Small logo top-centre; puzzle icon.
-- **s443** How many people do you need in a room, before it's more likely than not that two of them share a birthday?
-  - *Visual:* A room of person icons fills in; two of them get a matching cake icon; 'next: Twenty Three People, Fifty Fifty Odds' chip under the logo.
-- **s444** Many people guess something like one hundred and eighty. The real answer is just twenty three. And with the tools you learned today, you'll be able to see exactly why.
-  - *Visual:* '180?' in grey gets crossed; '23' appears in violet; small icons NOT and 'at least one' glow.
-- **s445** I will see you in the next video. ⏸2.0s
-  - *Visual:* Logo + next chip hold.
+- **s442** For more mathematics, explained simply and visually, subscribe, and I will see you in the next video. ⏸2.0s
+  - *Visual:* Logo holds; chip 'more math, explained simply and visually'; slow fade to the logo.

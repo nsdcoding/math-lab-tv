@@ -25,7 +25,7 @@ Colour roles (one per concept, kept for the whole video):
   the answer (a probability)    = violet #9085e9  mistakes / traps = red #d03b3b
 Connections: owner override for this video — NO callbacks to other channel videos, NO ML/DS/Finance/CS
   scenarios (generic everyday and classroom examples only). No promise to pay off.
-  Teaser (to confirm at checkpoint 1): birthday-paradox ("Twenty Three People, Fifty Fifty Odds").
+  No next-time teaser (owner); the video ends on a subscribe line. Related videos stay in the description.
 """
 import json, pathlib, sys
 
@@ -58,6 +58,8 @@ seg(c, "Wrong. Seven comes up six times more often than twelve.",
     "The beam slams down on the 7 side; a violet tag '6 times more likely' drops in.", 1.5)
 seg(c, "Six times. Same dice. Same table. Same luck.",
     "Six little '7' tokens stack on the left, one '12' token on the right, on a count axis 0–6.", 0.8)
+seg(c, "If you played this race one hundred times, your friend would win about seventeen times. You'd win about three.",
+    "Tally on a count axis 0–20: friend ≈ 17, you ≈ 3 (expected, out of 100 races).", sid="s007a")
 seg(c, "That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath.",
     "The dice dissolve into a 6 by 6 grid of squares that briefly flashes the diagonal pattern.")
 seg(c, "And here's the promise. Give me one hour, and starting from absolute zero, you will finally understand probability.",
@@ -96,6 +98,8 @@ seg(c, "And when someone says, I've lost five times in a row, so I'm due for a w
     "Card 4: a speech bubble 'I'm due for a win!' gets a red trap stamp.", 0.8)
 seg(c, "Probability is simply the math of not knowing for sure.",
     "The four cards shrink; a big phrase writes on: 'the math of not knowing for sure'.", 1.0)
+seg(c, "Games, sports, quizzes, weather, even deciding whether to carry a jacket. They're all little bets about an uncertain future.",
+    "Icons orbit the phrase: dice, ball, quiz, cloud, jacket.", sid="s022a")
 seg(c, "You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful.",
     "A single die tumbles with a '?' (next roll), then dissolves into a bar chart outline labelled 'what tends to happen'.")
 seg(c, "So let's build it from the very first brick.",
@@ -123,6 +127,8 @@ seg(c, "Like flipping a coin and getting heads. Half the time yes, half the time
     "A coin flips and lands heads; a two-part bar splits 1/2 | 1/2.")
 seg(c, "The closer a number is to one, the more likely it is. The closer it is to zero, the less likely.",
     "Arrows along the line: toward 1 'more likely', toward 0 'less likely'.")
+seg(c, "And a probability can never be negative, and never bigger than one. If you ever get an answer like one point two, or minus a half, you know something went wrong.",
+    "Red zones beyond both ends of the 0–1 line: '−0.5 ✗' and '1.2 ✗'.", sid="s034a")
 seg(c, "Let's place a few everyday things on this line, just by feel.",
     "Empty markers wait above the line.")
 seg(c, "The sun rising tomorrow? Right up near one.",
@@ -408,6 +414,8 @@ seg(c, "The counting we did on paper predicted what happens when you really roll
     "Paper grid icon → arrow → real dice icon; tag 'paper predicts reality'.")
 seg(c, "This also gives us a second way to find a probability. When you can't count the outcomes, you can try something many times, and see how often it happens.",
     "Two routes: 'count outcomes' and 'try many times', both pointing to the 0–1 line.")
+seg(c, "You can try this yourself tonight. Flip a coin twenty times, and write down how many heads you get. Then ask a friend to do the same. Your numbers will probably be different, and that's completely normal.",
+    "A notebook tally of 20 flips (illustration) next to a friend's tally; two different counts.", sid="s128a")
 seg(c, "That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?",
     "Calendar of past days with rain icons; fraction 'rainy days / similar days'.")
 seg(c, "But remember the pocket idea. Many tries, not one. The law of large numbers says nothing about the next single flip.",
@@ -661,7 +669,7 @@ seg(c, "Whenever you see the words at least one, your brain should shout, flip i
 
 # ───────────── 11a. CARDS ─────────────
 c = "A Deck of Cards"
-seg(c, "Let's practise not, or and and on something new. A normal deck of playing cards.",
+seg(c, "Let's practise our three words, not, or, and, on something new. A normal deck of playing cards.",
     "A fan of card outlines (no real branding), title 'a standard deck'.")
 seg(c, "A deck has fifty two cards. There are four suits, hearts, diamonds, clubs and spades. And each suit has thirteen cards, from ace up to king.",
     "A 13 by 4 grid on axes: x 'rank' A, 2 … 10, J, Q, K; y 'suit' ♥ ♦ ♣ ♠. 4 × 13 = 52 in warn.")
@@ -718,6 +726,8 @@ seg(c, "With the tree, you can do this without imagining days. Multiply along ea
     "Paths highlight: 3/10 × 1/2 = 15/100 and 7/10 × 1/10 = 7/100; sum 22/100.")
 seg(c, "Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or.",
     "The words AND (along) and OR (across) label the tree.", 1.2)
+seg(c, "And a quick check. All four paths together, late and on time, rainy and dry, must add up to one hundred days. Fifteen, plus fifteen, plus seven, plus sixty three. One hundred. Good.",
+    "All four leaves: 15 + 15 + 7 + 63 = 100.", sid="s297a")
 seg(c, "So the tree is just and and or, working together.",
     "Chip 'tree = AND along, OR across'.")
 seg(c, "Now a sneaky question, which will lead us into our next big idea. The bus was late today. What's the chance it was raining?",
@@ -795,6 +805,8 @@ seg(c, "Here's one more everyday example. In a class, twelve of the thirty stude
     "A 10 by 3 dot class (illustration); 12 dots get glasses rings; 8 of them violet-tinted 'girls'.")
 seg(c, "Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds.",
     "Only the 12 glasses dots stay bright; 8/12 = 2/3 in violet.", 1.0)
+seg(c, "Cards work the same way. If you're told the top card is a picture card, a jack, a queen or a king, what's the chance it's a king? The world shrinks to twelve picture cards. Four of them are kings. Four twelfths, one third.",
+    "Card grid: only the J, Q, K columns stay (12 cells); K column aqua; 4/12 = 1/3.", sid="s333a")
 seg(c, "Always ask, which world did the clue put me in? That world goes on the bottom of your fraction.",
     "The fraction bottom glows warn: 'the world the clue puts you in'.", 1.0)
 
@@ -917,8 +929,20 @@ seg(c, "Question seven. A spinner has four equal parts showing one, two, three a
     "Spinner with four equal sectors 1, 2, 3, 6; 'Q7' tag; countdown ring.", 3.0)
 seg(c, "Add them up, twelve, and divide by four. Three points per spin, on average.",
     "(1 + 2 + 3 + 6) / 4 = 3 in violet; balance beam balancing at 3.", 1.0)
-seg(c, "How did you do? If you got even half of those, you're already thinking like a probability person.",
-    "A score card '7 questions' with ticks.", 0.8)
+seg(c, "Question eight. You draw one card from a well shuffled deck. What's the chance it's a red card, or a queen?",
+    "Card grid; 'Q8' tag; countdown ring.", 3.0, sid="s398a")
+seg(c, "Red cards are hearts and diamonds, twenty six of them. Queens, four. But two queens are red, so don't count them twice. Twenty six plus four minus two is twenty eight. Twenty eight out of fifty two, which is seven thirteenths.",
+    "26 + 4 − 2 = 28; 28/52 = 7/13 in violet.", 1.0, sid="s398b")
+seg(c, "Question nine. You roll one die three times. What's the chance of at least one six?",
+    "Three die slots; 'Q9' tag; countdown ring.", 3.0, sid="s398c")
+seg(c, "Flip it around. No sixes at all is five sixths, three times. One hundred and twenty five out of two hundred and sixteen. So at least one six is ninety one out of two hundred and sixteen. About forty two percent.",
+    "1 − (5/6)³ = 1 − 125/216 = 91/216 ≈ 42% in violet.", 1.0, sid="s398d")
+seg(c, "Question ten. A spinner is three quarters red. You spin it twice. What's the chance both spins land on red?",
+    "Spinner 3/4 red; 'Q10' tag; countdown ring.", 3.0, sid="s398e")
+seg(c, "The spins are independent, so multiply. Three quarters times three quarters is nine sixteenths. A little more than half.",
+    "3/4 × 3/4 = 9/16 ≈ 56% in violet.", 1.0, sid="s398f")
+seg(c, "How did you do? If you got even half of those ten, you're already thinking like a probability person.",
+    "A score card '10 questions' with ticks.", 0.8)
 
 # ───────────── 14. COMMON MISTAKES ─────────────
 c = "Common Mistakes"
@@ -998,23 +1022,14 @@ seg(c, "And over many game nights, your friend will win this race about six time
 seg(c, "You can't control the dice. But now, you can understand them.",
     "The recipe card dims; the two dice roll once more and land on 7.", 1.5)
 
-# ───────────── 16. SUBSCRIBE ─────────────
+# ───────────── 16. SUBSCRIBE (final chapter; owner: no next-time teaser) ─────────────
 c = "Subscribe"
 seg(c, "Look around your world, and notice how often you're quietly guessing the odds. The weather, the bus, a quiz, a game.",
     "Four everyday cards: cloud, bus stop, quiz sheet, dice; each stamped with a small '?'.", 0.6)
 seg(c, "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
     "Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.", 0.8)
-
-# ───────────── 17. NEXT TIME ─────────────
-c = "Next Time"
-seg(c, "But here's a puzzle for next time.",
-    "Small logo top-centre; puzzle icon.")
-seg(c, "How many people do you need in a room, before it's more likely than not that two of them share a birthday?",
-    "A room of person icons fills in; two of them get a matching cake icon; 'next: Twenty Three People, Fifty Fifty Odds' chip under the logo.")
-seg(c, "Many people guess something like one hundred and eighty. The real answer is just twenty three. And with the tools you learned today, you'll be able to see exactly why.",
-    "'180?' in grey gets crossed; '23' appears in violet; small icons NOT and 'at least one' glow.")
-seg(c, "I will see you in the next video.",
-    "Logo + next chip hold.", 2.0)
+seg(c, "For more mathematics, explained simply and visually, subscribe, and I will see you in the next video.",
+    "Logo holds; chip 'more math, explained simply and visually'; slow fade to the logo.", 2.0)
 
 if __name__ == "__main__":
     import re

@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 all=""
 for f in scenes/s*.py; do
-  c=$(grep -oP 'class \K\w+(?=\(Base\))' "$f" | head -1); [ -n "$c" ] && all="$all $(basename "$f" .py):$c"
+  c=$(grep -oP 'class \K\w+(?=\((?:P)?Base\))' "$f" | head -1); [ -n "$c" ] && all="$all $(basename "$f" .py):$c"
 done
 if [ $# -gt 0 ]; then sel=""; for a in $all; do for w in "$@"; do [ "${a%%:*}" = "$w" ] && sel="$sel $a"; done; done; else sel=$all; fi
 mkdir -p build

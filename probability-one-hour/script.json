@@ -49,6 +49,13 @@
     "pause_after": 0.8
   },
   {
+    "id": "s007a",
+    "chapter": "Game Night",
+    "text": "If you played this race one hundred times, your friend would win about seventeen times. You'd win about three.",
+    "visual": "Tally on a count axis 0–20: friend ≈ 17, you ≈ 3 (expected, out of 100 races).",
+    "pause_after": 0.45
+  },
+  {
     "id": "s008",
     "chapter": "Game Night",
     "text": "That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath.",
@@ -161,6 +168,13 @@
     "pause_after": 1.0
   },
   {
+    "id": "s022a",
+    "chapter": "Why It Matters",
+    "text": "Games, sports, quizzes, weather, even deciding whether to carry a jacket. They're all little bets about an uncertain future.",
+    "visual": "Icons orbit the phrase: dice, ball, quiz, cloud, jacket.",
+    "pause_after": 0.45
+  },
+  {
     "id": "s024",
     "chapter": "Why It Matters",
     "text": "You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful.",
@@ -242,6 +256,13 @@
     "chapter": "What Is Probability?",
     "text": "The closer a number is to one, the more likely it is. The closer it is to zero, the less likely.",
     "visual": "Arrows along the line: toward 1 'more likely', toward 0 'less likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s034a",
+    "chapter": "What Is Probability?",
+    "text": "And a probability can never be negative, and never bigger than one. If you ever get an answer like one point two, or minus a half, you know something went wrong.",
+    "visual": "Red zones beyond both ends of the 0–1 line: '−0.5 ✗' and '1.2 ✗'.",
     "pause_after": 0.45
   },
   {
@@ -1190,6 +1211,13 @@
     "pause_after": 0.45
   },
   {
+    "id": "s128a",
+    "chapter": "Try It Many Times",
+    "text": "You can try this yourself tonight. Flip a coin twenty times, and write down how many heads you get. Then ask a friend to do the same. Your numbers will probably be different, and that's completely normal.",
+    "visual": "A notebook tally of 20 flips (illustration) next to a friend's tally; two different counts.",
+    "pause_after": 0.45
+  },
+  {
     "id": "s171",
     "chapter": "Try It Many Times",
     "text": "That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?",
@@ -1983,7 +2011,7 @@
   {
     "id": "s284",
     "chapter": "A Deck of Cards",
-    "text": "Let's practise not, or and and on something new. A normal deck of playing cards.",
+    "text": "Let's practise our three words, not, or, and, on something new. A normal deck of playing cards.",
     "visual": "A fan of card outlines (no real branding), title 'a standard deck'.",
     "pause_after": 0.45
   },
@@ -2168,6 +2196,13 @@
     "text": "Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or.",
     "visual": "The words AND (along) and OR (across) label the tree.",
     "pause_after": 1.2
+  },
+  {
+    "id": "s297a",
+    "chapter": "Two Step Trees",
+    "text": "And a quick check. All four paths together, late and on time, rainy and dry, must add up to one hundred days. Fifteen, plus fifteen, plus seven, plus sixty three. One hundred. Good.",
+    "visual": "All four leaves: 15 + 15 + 7 + 63 = 100.",
+    "pause_after": 0.45
   },
   {
     "id": "s311",
@@ -2427,6 +2462,13 @@
     "text": "Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds.",
     "visual": "Only the 12 glasses dots stay bright; 8/12 = 2/3 in violet.",
     "pause_after": 1.0
+  },
+  {
+    "id": "s333a",
+    "chapter": "Given That",
+    "text": "Cards work the same way. If you're told the top card is a picture card, a jack, a queen or a king, what's the chance it's a king? The world shrinks to twelve picture cards. Four of them are kings. Four twelfths, one third.",
+    "visual": "Card grid: only the J, Q, K columns stay (12 cells); K column aqua; 4/12 = 1/3.",
+    "pause_after": 0.45
   },
   {
     "id": "s348",
@@ -2814,10 +2856,52 @@
     "pause_after": 1.0
   },
   {
+    "id": "s398a",
+    "chapter": "Practice Round",
+    "text": "Question eight. You draw one card from a well shuffled deck. What's the chance it's a red card, or a queen?",
+    "visual": "Card grid; 'Q8' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s398b",
+    "chapter": "Practice Round",
+    "text": "Red cards are hearts and diamonds, twenty six of them. Queens, four. But two queens are red, so don't count them twice. Twenty six plus four minus two is twenty eight. Twenty eight out of fifty two, which is seven thirteenths.",
+    "visual": "26 + 4 − 2 = 28; 28/52 = 7/13 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s398c",
+    "chapter": "Practice Round",
+    "text": "Question nine. You roll one die three times. What's the chance of at least one six?",
+    "visual": "Three die slots; 'Q9' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s398d",
+    "chapter": "Practice Round",
+    "text": "Flip it around. No sixes at all is five sixths, three times. One hundred and twenty five out of two hundred and sixteen. So at least one six is ninety one out of two hundred and sixteen. About forty two percent.",
+    "visual": "1 − (5/6)³ = 1 − 125/216 = 91/216 ≈ 42% in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s398e",
+    "chapter": "Practice Round",
+    "text": "Question ten. A spinner is three quarters red. You spin it twice. What's the chance both spins land on red?",
+    "visual": "Spinner 3/4 red; 'Q10' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s398f",
+    "chapter": "Practice Round",
+    "text": "The spins are independent, so multiply. Three quarters times three quarters is nine sixteenths. A little more than half.",
+    "visual": "3/4 × 3/4 = 9/16 ≈ 56% in violet.",
+    "pause_after": 1.0
+  },
+  {
     "id": "s403",
     "chapter": "Practice Round",
-    "text": "How did you do? If you got even half of those, you're already thinking like a probability person.",
-    "visual": "A score card '7 questions' with ticks.",
+    "text": "How did you do? If you got even half of those ten, you're already thinking like a probability person.",
+    "visual": "A score card '10 questions' with ticks.",
     "pause_after": 0.8
   },
   {
@@ -3088,30 +3172,9 @@
   },
   {
     "id": "s442",
-    "chapter": "Next Time",
-    "text": "But here's a puzzle for next time.",
-    "visual": "Small logo top-centre; puzzle icon.",
-    "pause_after": 0.45
-  },
-  {
-    "id": "s443",
-    "chapter": "Next Time",
-    "text": "How many people do you need in a room, before it's more likely than not that two of them share a birthday?",
-    "visual": "A room of person icons fills in; two of them get a matching cake icon; 'next: Twenty Three People, Fifty Fifty Odds' chip under the logo.",
-    "pause_after": 0.45
-  },
-  {
-    "id": "s444",
-    "chapter": "Next Time",
-    "text": "Many people guess something like one hundred and eighty. The real answer is just twenty three. And with the tools you learned today, you'll be able to see exactly why.",
-    "visual": "'180?' in grey gets crossed; '23' appears in violet; small icons NOT and 'at least one' glow.",
-    "pause_after": 0.45
-  },
-  {
-    "id": "s445",
-    "chapter": "Next Time",
-    "text": "I will see you in the next video.",
-    "visual": "Logo + next chip hold.",
+    "chapter": "Subscribe",
+    "text": "For more mathematics, explained simply and visually, subscribe, and I will see you in the next video.",
+    "visual": "Logo holds; chip 'more math, explained simply and visually'; slow fade to the logo.",
     "pause_after": 2.0
   }
 ]

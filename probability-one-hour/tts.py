@@ -21,9 +21,7 @@ URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
 # Spelling fixes for words the voice mispronounces (spoken form only; subtitles keep the original).
 SPOKEN_FIXES = {}
 # Per-segment spoken spellings: {segment id: [(written, spoken), ...]}
-SPOKEN_FIXES_BY_ID = {
-    "s108": [("with Bayes.", "with Bays.")],   # heard as "bass" at the end of the sentence
-}
+SPOKEN_FIXES_BY_ID = {}
 
 
 def creds():

@@ -1,0 +1,3183 @@
+{
+ "total": 3037.8,
+ "segments": [
+  {
+   "id": "s001",
+   "chapter": "Game Night",
+   "start": 0.6,
+   "end": 4.93,
+   "text": "It's game night. You and your friend are one move away from winning a board game."
+  },
+  {
+   "id": "s002",
+   "chapter": "Game Night",
+   "start": 5.38,
+   "end": 8.91,
+   "text": "To win, you need to roll exactly twelve with two dice."
+  },
+  {
+   "id": "s003",
+   "chapter": "Game Night",
+   "start": 9.36,
+   "end": 11.18,
+   "text": "Your friend needs exactly seven."
+  },
+  {
+   "id": "s004",
+   "chapter": "Game Night",
+   "start": 11.63,
+   "end": 15.11,
+   "text": "You each get one roll. So, who is more likely to win?"
+  },
+  {
+   "id": "s005",
+   "chapter": "Game Night",
+   "start": 16.31,
+   "end": 22.23,
+   "text": "A lot of people say it's the same. Twelve is one number, seven is one number. Every number is just as likely, right?"
+  },
+  {
+   "id": "s006",
+   "chapter": "Game Night",
+   "start": 22.68,
+   "end": 26.14,
+   "text": "Wrong. Seven comes up six times more often than twelve."
+  },
+  {
+   "id": "s007",
+   "chapter": "Game Night",
+   "start": 27.64,
+   "end": 31.4,
+   "text": "Six times. Same dice. Same table. Same luck."
+  },
+  {
+   "id": "s007a",
+   "chapter": "Game Night",
+   "start": 32.2,
+   "end": 37.62,
+   "text": "If you played this race one hundred times, your friend would win about seventeen times. You'd win about three."
+  },
+  {
+   "id": "s008",
+   "chapter": "Game Night",
+   "start": 38.07,
+   "end": 44.26,
+   "text": "That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath."
+  },
+  {
+   "id": "s009",
+   "chapter": "Game Night",
+   "start": 44.71,
+   "end": 51.34,
+   "text": "And here's the promise. Give me one hour, and starting from absolute zero, you will finally understand probability."
+  },
+  {
+   "id": "s010",
+   "chapter": "Game Night",
+   "start": 51.94,
+   "end": 57.05,
+   "text": "No scary formulas without pictures. No skipped steps. Just counting, and seeing."
+  },
+  {
+   "id": "s011",
+   "chapter": "Game Night",
+   "start": 57.65,
+   "end": 58.53,
+   "text": "Let's begin."
+  },
+  {
+   "id": "s012",
+   "chapter": "Welcome",
+   "start": 59.53,
+   "end": 63.17,
+   "text": "Welcome to Math Lab TV. Where math is something you can see."
+  },
+  {
+   "id": "s013",
+   "chapter": "Welcome",
+   "start": 63.87,
+   "end": 68.58,
+   "text": "Today you will learn what a probability really is, and how to find one just by counting."
+  },
+  {
+   "id": "s014",
+   "chapter": "Welcome",
+   "start": 69.03,
+   "end": 77.39,
+   "text": "You will see the three little words that power almost every probability question. Not, or, and and."
+  },
+  {
+   "id": "s015",
+   "chapter": "Welcome",
+   "start": 77.84,
+   "end": 83.84,
+   "text": "And you will learn how new information changes the odds, and how to spot the traps that fool almost everyone."
+  },
+  {
+   "id": "s016",
+   "chapter": "Why It Matters",
+   "start": 84.44,
+   "end": 88.4,
+   "text": "Before we start, why should you care about probability at all?"
+  },
+  {
+   "id": "s017",
+   "chapter": "Why It Matters",
+   "start": 88.85,
+   "end": 93.06,
+   "text": "Because you already use it, every single day, without noticing."
+  },
+  {
+   "id": "s018",
+   "chapter": "Why It Matters",
+   "start": 93.51,
+   "end": 98.94,
+   "text": "When the weather app says seventy percent chance of rain, and you decide to take an umbrella, that's probability."
+  },
+  {
+   "id": "s019",
+   "chapter": "Why It Matters",
+   "start": 99.39,
+   "end": 105.62,
+   "text": "When you guess on a quiz question with four choices, and you know you have one chance in four, that's probability."
+  },
+  {
+   "id": "s020",
+   "chapter": "Why It Matters",
+   "start": 106.07,
+   "end": 110.32,
+   "text": "When you wonder if it's worth playing a game at the school fair, that's probability."
+  },
+  {
+   "id": "s021",
+   "chapter": "Why It Matters",
+   "start": 110.77,
+   "end": 117.48,
+   "text": "When a doctor says a medicine works for most people, or a sports commentator says a team is the favourite, they're talking in probabilities too."
+  },
+  {
+   "id": "s022",
+   "chapter": "Why It Matters",
+   "start": 117.93,
+   "end": 125.55,
+   "text": "And when someone says, I've lost five times in a row, so I'm due for a win, that's a probability mistake. We'll fix that one later."
+  },
+  {
+   "id": "s023",
+   "chapter": "Why It Matters",
+   "start": 126.35,
+   "end": 129.2,
+   "text": "Probability is simply the math of not knowing for sure."
+  },
+  {
+   "id": "s022a",
+   "chapter": "Why It Matters",
+   "start": 130.2,
+   "end": 139.1,
+   "text": "Games, sports, quizzes, weather, even deciding whether to carry a jacket. They're all little bets about an uncertain future."
+  },
+  {
+   "id": "s024",
+   "chapter": "Why It Matters",
+   "start": 139.55,
+   "end": 145.82,
+   "text": "You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful."
+  },
+  {
+   "id": "s025",
+   "chapter": "Why It Matters",
+   "start": 146.27,
+   "end": 148.42,
+   "text": "So let's build it from the very first brick."
+  },
+  {
+   "id": "s026",
+   "chapter": "What Is Probability?",
+   "start": 149.02,
+   "end": 153.51,
+   "text": "A probability is just a number. It tells you how likely something is to happen."
+  },
+  {
+   "id": "s027",
+   "chapter": "What Is Probability?",
+   "start": 153.96,
+   "end": 156.65,
+   "text": "And this number always lives between zero and one."
+  },
+  {
+   "id": "s028",
+   "chapter": "What Is Probability?",
+   "start": 157.1,
+   "end": 159.82,
+   "text": "Zero means impossible. It will never happen."
+  },
+  {
+   "id": "s029",
+   "chapter": "What Is Probability?",
+   "start": 160.27,
+   "end": 166.75,
+   "text": "Like rolling a seven on one ordinary die. A die only has the numbers one to six, so seven can never come up."
+  },
+  {
+   "id": "s030",
+   "chapter": "What Is Probability?",
+   "start": 167.2,
+   "end": 169.85,
+   "text": "One means certain. It will always happen."
+  },
+  {
+   "id": "s031",
+   "chapter": "What Is Probability?",
+   "start": 170.3,
+   "end": 176.17,
+   "text": "Like rolling a number smaller than seven on that same die. Every face works, so it's guaranteed."
+  },
+  {
+   "id": "s032",
+   "chapter": "What Is Probability?",
+   "start": 176.62,
+   "end": 180.84,
+   "text": "And everything else, everything that might or might not happen, sits somewhere in between."
+  },
+  {
+   "id": "s033",
+   "chapter": "What Is Probability?",
+   "start": 181.44,
+   "end": 184.71,
+   "text": "Right in the middle, at one half, is a perfect toss-up."
+  },
+  {
+   "id": "s034",
+   "chapter": "What Is Probability?",
+   "start": 185.16,
+   "end": 189.56,
+   "text": "Like flipping a coin and getting heads. Half the time yes, half the time no."
+  },
+  {
+   "id": "s035",
+   "chapter": "What Is Probability?",
+   "start": 190.01,
+   "end": 196.55,
+   "text": "The closer a number is to one, the more likely it is. The closer it is to zero, the less likely."
+  },
+  {
+   "id": "s034a",
+   "chapter": "What Is Probability?",
+   "start": 197.0,
+   "end": 206.15,
+   "text": "And a probability can never be negative, and never bigger than one. If you ever get an answer like one point two, or minus a half, you know something went wrong."
+  },
+  {
+   "id": "s036",
+   "chapter": "What Is Probability?",
+   "start": 206.6,
+   "end": 210.05,
+   "text": "Let's place a few everyday things on this line, just by feel."
+  },
+  {
+   "id": "s037",
+   "chapter": "What Is Probability?",
+   "start": 210.5,
+   "end": 213.17,
+   "text": "The sun rising tomorrow? Right up near one."
+  },
+  {
+   "id": "s038",
+   "chapter": "What Is Probability?",
+   "start": 213.62,
+   "end": 218.33,
+   "text": "Rain tomorrow, when the forecast says seventy percent? Around zero point seven."
+  },
+  {
+   "id": "s039",
+   "chapter": "What Is Probability?",
+   "start": 218.78,
+   "end": 222.61,
+   "text": "Guessing a quiz question right with four choices? Zero point two five."
+  },
+  {
+   "id": "s040",
+   "chapter": "What Is Probability?",
+   "start": 223.06,
+   "end": 227.7,
+   "text": "Winning a big lottery? So close to zero that you can't even see the gap."
+  },
+  {
+   "id": "s041",
+   "chapter": "What Is Probability?",
+   "start": 228.5,
+   "end": 233.07,
+   "text": "Now, there are three ways to write the same probability, and you'll see all three everywhere."
+  },
+  {
+   "id": "s042",
+   "chapter": "What Is Probability?",
+   "start": 233.52,
+   "end": 235.12,
+   "text": "As a fraction, like one half."
+  },
+  {
+   "id": "s043",
+   "chapter": "What Is Probability?",
+   "start": 235.57,
+   "end": 237.81,
+   "text": "As a decimal, like zero point five."
+  },
+  {
+   "id": "s044",
+   "chapter": "What Is Probability?",
+   "start": 238.26,
+   "end": 242.42,
+   "text": "Or as a percent, like fifty percent. Percent just means out of a hundred."
+  },
+  {
+   "id": "s045",
+   "chapter": "What Is Probability?",
+   "start": 242.87,
+   "end": 250.22,
+   "text": "They are all the same amount. One half, zero point five, fifty percent. Three outfits, one person."
+  },
+  {
+   "id": "s046",
+   "chapter": "What Is Probability?",
+   "start": 251.22,
+   "end": 257.74,
+   "text": "To change a decimal into a percent, just multiply by one hundred. Zero point two five becomes twenty five percent."
+  },
+  {
+   "id": "s047",
+   "chapter": "What Is Probability?",
+   "start": 258.19,
+   "end": 263.08,
+   "text": "We'll mostly use fractions in this video, because fractions show you the counting."
+  },
+  {
+   "id": "s048",
+   "chapter": "What Is Probability?",
+   "start": 263.53,
+   "end": 269.98,
+   "text": "But what does a probability actually mean? If the chance of rain is seventy percent, will it rain or not?"
+  },
+  {
+   "id": "s049",
+   "chapter": "What Is Probability?",
+   "start": 270.78,
+   "end": 275.18,
+   "text": "Here's the honest answer. A probability doesn't tell you what will happen next time."
+  },
+  {
+   "id": "s050",
+   "chapter": "What Is Probability?",
+   "start": 275.63,
+   "end": 282.68,
+   "text": "It tells you what happens in the long run. Out of many days with a forecast like this one, about seventy out of every hundred will have rain."
+  },
+  {
+   "id": "s051",
+   "chapter": "What Is Probability?",
+   "start": 283.13,
+   "end": 287.74,
+   "text": "So on any one day, it might stay dry. That doesn't mean the forecast was wrong."
+  },
+  {
+   "id": "s052",
+   "chapter": "What Is Probability?",
+   "start": 288.19,
+   "end": 294.03,
+   "text": "Keep that idea in your pocket. Probability is about patterns over many tries, not about one single try."
+  },
+  {
+   "id": "s053",
+   "chapter": "What Is Probability?",
+   "start": 295.03,
+   "end": 298.25,
+   "text": "And where do probabilities come from? There are three main ways."
+  },
+  {
+   "id": "s054",
+   "chapter": "What Is Probability?",
+   "start": 298.7,
+   "end": 304.01,
+   "text": "One, you can count. Like a die with six equal faces. We'll do lots of this."
+  },
+  {
+   "id": "s055",
+   "chapter": "What Is Probability?",
+   "start": 304.46,
+   "end": 313.54,
+   "text": "Two, you can experiment. Try something many times and see how often it happens. Like checking how often your bus is late over a whole term."
+  },
+  {
+   "id": "s056",
+   "chapter": "What Is Probability?",
+   "start": 313.99,
+   "end": 321.82,
+   "text": "And three, sometimes people simply give their best judgement, like a coach saying, I think we have a sixty percent chance of winning this match."
+  },
+  {
+   "id": "s057",
+   "chapter": "What Is Probability?",
+   "start": 322.27,
+   "end": 329.23,
+   "text": "That last kind is the shakiest. In this video, we'll stick to the first two, where we can actually check our answers."
+  },
+  {
+   "id": "s058",
+   "chapter": "Counting Outcomes",
+   "start": 330.03,
+   "end": 334.73,
+   "text": "So how do we actually find a probability? For lots of everyday questions, you just count."
+  },
+  {
+   "id": "s059",
+   "chapter": "Counting Outcomes",
+   "start": 335.18,
+   "end": 336.47,
+   "text": "Let's start with one die."
+  },
+  {
+   "id": "s060",
+   "chapter": "Counting Outcomes",
+   "start": 336.92,
+   "end": 344.9,
+   "text": "When you roll it, there are six things that can happen. It can land on one, two, three, four, five, or six."
+  },
+  {
+   "id": "s061",
+   "chapter": "Counting Outcomes",
+   "start": 345.35,
+   "end": 350.16,
+   "text": "Each of these is called an outcome. An outcome is one possible result."
+  },
+  {
+   "id": "s062",
+   "chapter": "Counting Outcomes",
+   "start": 350.61,
+   "end": 357.64,
+   "text": "And the list of all possible outcomes has a name too. It's called the sample space. That's just a fancy name for everything that could happen."
+  },
+  {
+   "id": "s063",
+   "chapter": "Counting Outcomes",
+   "start": 358.44,
+   "end": 364.47,
+   "text": "Now, if the die is fair, each face is equally likely. No face is special. The die isn't loaded."
+  },
+  {
+   "id": "s064",
+   "chapter": "Counting Outcomes",
+   "start": 364.92,
+   "end": 366.94,
+   "text": "So what's the chance of rolling a four?"
+  },
+  {
+   "id": "s065",
+   "chapter": "Counting Outcomes",
+   "start": 367.39,
+   "end": 375.49,
+   "text": "There is one outcome we want, the four. Out of six outcomes in total. So the chance is one out of six. One sixth."
+  },
+  {
+   "id": "s066",
+   "chapter": "Counting Outcomes",
+   "start": 376.49,
+   "end": 383.21,
+   "text": "That's the whole recipe. Probability equals the number of outcomes you want, divided by the total number of outcomes."
+  },
+  {
+   "id": "s067",
+   "chapter": "Counting Outcomes",
+   "start": 384.41,
+   "end": 392.14,
+   "text": "The letter P is just short for probability. When you see P of something, read it as, the probability of that thing."
+  },
+  {
+   "id": "s068",
+   "chapter": "Counting Outcomes",
+   "start": 392.59,
+   "end": 396.04,
+   "text": "Let's try another one. What's the chance of rolling an even number?"
+  },
+  {
+   "id": "s069",
+   "chapter": "Counting Outcomes",
+   "start": 396.49,
+   "end": 400.65,
+   "text": "The even numbers are two, four and six. That's three outcomes we want."
+  },
+  {
+   "id": "s070",
+   "chapter": "Counting Outcomes",
+   "start": 401.1,
+   "end": 404.14,
+   "text": "Three out of six. Which is the same as one half."
+  },
+  {
+   "id": "s071",
+   "chapter": "Counting Outcomes",
+   "start": 404.94,
+   "end": 410.64,
+   "text": "A group of outcomes we care about, like rolling an even number, is called an event."
+  },
+  {
+   "id": "s072",
+   "chapter": "Counting Outcomes",
+   "start": 411.09,
+   "end": 417.19,
+   "text": "What about rolling a number bigger than four? That's five or six. Two out of six, which is one third."
+  },
+  {
+   "id": "s073",
+   "chapter": "Counting Outcomes",
+   "start": 417.64,
+   "end": 422.66,
+   "text": "See how simple this is? Count what you want. Count everything. Divide."
+  },
+  {
+   "id": "s074",
+   "chapter": "Counting Outcomes",
+   "start": 423.66,
+   "end": 428.03,
+   "text": "But there's one small rule hiding inside this recipe, and it's really important."
+  },
+  {
+   "id": "s075",
+   "chapter": "Counting Outcomes",
+   "start": 428.48,
+   "end": 432.08,
+   "text": "The counting trick only works when every outcome is equally likely."
+  },
+  {
+   "id": "s076",
+   "chapter": "Counting Outcomes",
+   "start": 432.88,
+   "end": 441.12,
+   "text": "Here's an example where it breaks. Imagine a spinner where the red part is three quarters of the circle, and the blue part is one quarter."
+  },
+  {
+   "id": "s077",
+   "chapter": "Counting Outcomes",
+   "start": 441.57,
+   "end": 448.83,
+   "text": "There are two colours. But the chance of red is not one half. It's three quarters, because red takes up more space."
+  },
+  {
+   "id": "s078",
+   "chapter": "Counting Outcomes",
+   "start": 449.28,
+   "end": 457.43,
+   "text": "Fix it by cutting the circle into equal pieces first. Four equal quarters. Three of them are red. Now counting works again."
+  },
+  {
+   "id": "s079",
+   "chapter": "Counting Outcomes",
+   "start": 458.43,
+   "end": 464.15,
+   "text": "So, always ask, are my outcomes equally likely? If they aren't, split them into pieces that are."
+  },
+  {
+   "id": "s080",
+   "chapter": "Counting Outcomes",
+   "start": 464.6,
+   "end": 467.01,
+   "text": "Now let's level up, and flip two coins."
+  },
+  {
+   "id": "s081",
+   "chapter": "Counting Outcomes",
+   "start": 467.46,
+   "end": 469.89,
+   "text": "What's the chance you get one head and one tail?"
+  },
+  {
+   "id": "s082",
+   "chapter": "Counting Outcomes",
+   "start": 470.34,
+   "end": 477.41,
+   "text": "Many people think there are three outcomes. Two heads, two tails, or one of each. So the answer must be one third."
+  },
+  {
+   "id": "s083",
+   "chapter": "Counting Outcomes",
+   "start": 477.86,
+   "end": 480.7,
+   "text": "But those three aren't equally likely. Watch."
+  },
+  {
+   "id": "s084",
+   "chapter": "Counting Outcomes",
+   "start": 481.15,
+   "end": 489.88,
+   "text": "Let's draw a tree. The first coin can be heads or tails. Then for each of those, the second coin can be heads or tails."
+  },
+  {
+   "id": "s085",
+   "chapter": "Counting Outcomes",
+   "start": 490.33,
+   "end": 499.22,
+   "text": "That gives four outcomes. Heads heads. Heads tails. Tails heads. Tails tails."
+  },
+  {
+   "id": "s086",
+   "chapter": "Counting Outcomes",
+   "start": 499.67,
+   "end": 504.12,
+   "text": "And these four are equally likely. Each one has a chance of one quarter."
+  },
+  {
+   "id": "s087",
+   "chapter": "Counting Outcomes",
+   "start": 504.57,
+   "end": 512.78,
+   "text": "Now count. One head and one tail happens two ways, heads then tails, or tails then heads."
+  },
+  {
+   "id": "s088",
+   "chapter": "Counting Outcomes",
+   "start": 513.23,
+   "end": 516.38,
+   "text": "Two out of four. One half. Not one third."
+  },
+  {
+   "id": "s089",
+   "chapter": "Counting Outcomes",
+   "start": 517.58,
+   "end": 524.98,
+   "text": "The lesson? Keep track of which coin is which. Heads tails and tails heads are different outcomes, even if they look the same at the end."
+  },
+  {
+   "id": "s090",
+   "chapter": "Counting Outcomes",
+   "start": 525.43,
+   "end": 528.1,
+   "text": "Let's push it one step further. Three coins."
+  },
+  {
+   "id": "s091",
+   "chapter": "Counting Outcomes",
+   "start": 528.55,
+   "end": 534.01,
+   "text": "Each new coin doubles the branches. Two, then four, then eight outcomes."
+  },
+  {
+   "id": "s092",
+   "chapter": "Counting Outcomes",
+   "start": 534.46,
+   "end": 536.78,
+   "text": "What's the chance of getting exactly two heads?"
+  },
+  {
+   "id": "s093",
+   "chapter": "Counting Outcomes",
+   "start": 537.23,
+   "end": 549.62,
+   "text": "Look through the eight leaves. Heads heads tails. Heads tails heads. Tails heads heads. That's three."
+  },
+  {
+   "id": "s094",
+   "chapter": "Counting Outcomes",
+   "start": 550.07,
+   "end": 552.68,
+   "text": "So the answer is three out of eight."
+  },
+  {
+   "id": "s095",
+   "chapter": "Counting Outcomes",
+   "start": 553.68,
+   "end": 560.51,
+   "text": "A tree is a wonderful tool. When you're not sure how many outcomes there are, draw the tree, and the leaves will tell you."
+  },
+  {
+   "id": "s096",
+   "chapter": "Counting Bigger Things",
+   "start": 560.96,
+   "end": 567.9,
+   "text": "Trees are great, but they can get huge very quickly. So here's a shortcut for counting outcomes, without drawing every branch."
+  },
+  {
+   "id": "s097",
+   "chapter": "Counting Bigger Things",
+   "start": 568.35,
+   "end": 573.63,
+   "text": "Imagine you have three shirts and four pairs of trousers. How many different outfits can you make?"
+  },
+  {
+   "id": "s098",
+   "chapter": "Counting Bigger Things",
+   "start": 574.08,
+   "end": 580.68,
+   "text": "Put the shirts down the side and the trousers along the top, and you get a grid. Three rows, four columns."
+  },
+  {
+   "id": "s099",
+   "chapter": "Counting Bigger Things",
+   "start": 581.13,
+   "end": 585.09,
+   "text": "Twelve squares. Twelve outfits. Three times four."
+  },
+  {
+   "id": "s100",
+   "chapter": "Counting Bigger Things",
+   "start": 586.09,
+   "end": 597.04,
+   "text": "This is called the multiplication rule for counting. If one choice can be made in some number of ways, and a second choice in some number of ways, then together, you multiply."
+  },
+  {
+   "id": "s101",
+   "chapter": "Counting Bigger Things",
+   "start": 597.49,
+   "end": 603.78,
+   "text": "Add two pairs of shoes, and every one of those twelve outfits splits into two. Twelve times two is twenty four."
+  },
+  {
+   "id": "s102",
+   "chapter": "Counting Bigger Things",
+   "start": 604.23,
+   "end": 611.37,
+   "text": "So if you get dressed in the dark, and grab each item at random, the chance of getting one particular outfit is one out of twenty four."
+  },
+  {
+   "id": "s103",
+   "chapter": "Counting Bigger Things",
+   "start": 612.37,
+   "end": 619.87,
+   "text": "Here's another one. A phone lock with a four digit code. Each digit can be anything from zero to nine. That's ten choices."
+  },
+  {
+   "id": "s104",
+   "chapter": "Counting Bigger Things",
+   "start": 620.32,
+   "end": 627.48,
+   "text": "First digit, ten ways. Second digit, ten ways. Third, ten. Fourth, ten."
+  },
+  {
+   "id": "s105",
+   "chapter": "Counting Bigger Things",
+   "start": 627.93,
+   "end": 632.62,
+   "text": "Ten times ten times ten times ten. Ten thousand possible codes."
+  },
+  {
+   "id": "s106",
+   "chapter": "Counting Bigger Things",
+   "start": 633.62,
+   "end": 639.48,
+   "text": "So if a stranger picks up your phone and guesses once, their chance of getting it right is one in ten thousand."
+  },
+  {
+   "id": "s107",
+   "chapter": "Counting Bigger Things",
+   "start": 639.93,
+   "end": 643.99,
+   "text": "And with three different guesses, it's three in ten thousand. Still tiny."
+  },
+  {
+   "id": "s108",
+   "chapter": "Counting Bigger Things",
+   "start": 644.44,
+   "end": 650.86,
+   "text": "That's why phones lock you out after a few wrong tries. They keep the number of guesses small, so the chance stays small."
+  },
+  {
+   "id": "s109",
+   "chapter": "Counting Bigger Things",
+   "start": 651.86,
+   "end": 658.66,
+   "text": "And this is exactly why two dice give thirty six outcomes. Six ways for the orange die, times six ways for the blue die."
+  },
+  {
+   "id": "s110",
+   "chapter": "Counting Bigger Things",
+   "start": 659.11,
+   "end": 663.89,
+   "text": "Count the choices, multiply, and you know the size of your world."
+  },
+  {
+   "id": "s111",
+   "chapter": "Putting Things in Order",
+   "start": 664.69,
+   "end": 670.2,
+   "text": "The multiplication rule has another trick. It can count how many ways there are to put things in order."
+  },
+  {
+   "id": "s112",
+   "chapter": "Putting Things in Order",
+   "start": 670.65,
+   "end": 677.37,
+   "text": "Say you have three books, A, B and C, and you put them on a shelf in a random order. How many orders are there?"
+  },
+  {
+   "id": "s113",
+   "chapter": "Putting Things in Order",
+   "start": 677.82,
+   "end": 686.4,
+   "text": "For the first spot, you have three books to choose from. Once one is placed, two books are left for the second spot. And then just one book for the last spot."
+  },
+  {
+   "id": "s114",
+   "chapter": "Putting Things in Order",
+   "start": 686.85,
+   "end": 689.21,
+   "text": "Three times two times one. Six orders."
+  },
+  {
+   "id": "s115",
+   "chapter": "Putting Things in Order",
+   "start": 690.21,
+   "end": 695.7,
+   "text": "So the chance they land in alphabetical order, A then B then C, is one out of six."
+  },
+  {
+   "id": "s116",
+   "chapter": "Putting Things in Order",
+   "start": 696.15,
+   "end": 704.45,
+   "text": "Now try ten books. Ten times nine times eight, all the way down to one. That's over three and a half million orders."
+  },
+  {
+   "id": "s117",
+   "chapter": "Putting Things in Order",
+   "start": 704.9,
+   "end": 711.29,
+   "text": "The chance that ten books shuffled at random land in perfect order is about one in three and a half million. Tiny."
+  },
+  {
+   "id": "s118",
+   "chapter": "Putting Things in Order",
+   "start": 712.29,
+   "end": 720.1,
+   "text": "That's why a well shuffled deck of cards is almost certainly in an order that has never existed before. There are just too many possible orders."
+  },
+  {
+   "id": "s119",
+   "chapter": "Putting Things in Order",
+   "start": 720.55,
+   "end": 727.77,
+   "text": "Now, a lottery. Suppose you must pick six numbers out of forty nine, and the order doesn't matter."
+  },
+  {
+   "id": "s120",
+   "chapter": "Putting Things in Order",
+   "start": 728.22,
+   "end": 737.35,
+   "text": "If order mattered, there would be forty nine times forty eight times forty seven times forty six times forty five times forty four ways."
+  },
+  {
+   "id": "s121",
+   "chapter": "Putting Things in Order",
+   "start": 737.8,
+   "end": 749.12,
+   "text": "But the same six numbers can be picked in any order. Six times five times four times three times two times one, which is seven hundred and twenty orders. So we divide by that."
+  },
+  {
+   "id": "s122",
+   "chapter": "Putting Things in Order",
+   "start": 749.57,
+   "end": 752.09,
+   "text": "The result is almost fourteen million different tickets."
+  },
+  {
+   "id": "s123",
+   "chapter": "Putting Things in Order",
+   "start": 753.09,
+   "end": 760.99,
+   "text": "So the chance one ticket wins is about one in fourteen million. Remember that tiny gap near zero on our line? That's what it looks like."
+  },
+  {
+   "id": "s124",
+   "chapter": "Putting Things in Order",
+   "start": 761.99,
+   "end": 768.95,
+   "text": "Here's a way to feel that number. If you bought one ticket every week, you'd expect to wait over a quarter of a million years for a win."
+  },
+  {
+   "id": "s125",
+   "chapter": "Putting Things in Order",
+   "start": 769.4,
+   "end": 774.97,
+   "text": "Counting carefully turns a vague feeling, maybe I'll win, into a clear number."
+  },
+  {
+   "id": "s126",
+   "chapter": "Two Dice",
+   "start": 775.77,
+   "end": 779.09,
+   "text": "Now we have enough tools to solve our game night puzzle."
+  },
+  {
+   "id": "s127",
+   "chapter": "Two Dice",
+   "start": 779.54,
+   "end": 784.49,
+   "text": "We're rolling two dice. To keep them apart, let's make one orange and one blue."
+  },
+  {
+   "id": "s128",
+   "chapter": "Two Dice",
+   "start": 784.94,
+   "end": 789.1,
+   "text": "The orange die can land six ways. And for each of those, the blue die can land six ways."
+  },
+  {
+   "id": "s129",
+   "chapter": "Two Dice",
+   "start": 789.55,
+   "end": 795.09,
+   "text": "So let's draw a grid. Orange along the bottom, blue up the side. Every square is one outcome."
+  },
+  {
+   "id": "s130",
+   "chapter": "Two Dice",
+   "start": 795.54,
+   "end": 799.02,
+   "text": "This square, for example, is orange three and blue five."
+  },
+  {
+   "id": "s131",
+   "chapter": "Two Dice",
+   "start": 799.47,
+   "end": 805.82,
+   "text": "Six columns, six rows. Six times six is thirty six outcomes."
+  },
+  {
+   "id": "s132",
+   "chapter": "Two Dice",
+   "start": 806.62,
+   "end": 813.11,
+   "text": "And just like with the coins, orange three blue five is different from orange five blue three. Two different squares."
+  },
+  {
+   "id": "s133",
+   "chapter": "Two Dice",
+   "start": 813.56,
+   "end": 818.77,
+   "text": "With fair dice, all thirty six squares are equally likely. So now we can count."
+  },
+  {
+   "id": "s134",
+   "chapter": "Two Dice",
+   "start": 819.22,
+   "end": 822.81,
+   "text": "Let's write the total of the two dice inside every square."
+  },
+  {
+   "id": "s135",
+   "chapter": "Two Dice",
+   "start": 823.61,
+   "end": 827.18,
+   "text": "Do you see the pattern? Equal totals line up along slanted lines."
+  },
+  {
+   "id": "s136",
+   "chapter": "Two Dice",
+   "start": 827.63,
+   "end": 830.36,
+   "text": "Now, how many squares have a total of twelve?"
+  },
+  {
+   "id": "s137",
+   "chapter": "Two Dice",
+   "start": 830.81,
+   "end": 835.3,
+   "text": "Only one. Orange six and blue six. The top right corner."
+  },
+  {
+   "id": "s138",
+   "chapter": "Two Dice",
+   "start": 835.75,
+   "end": 838.45,
+   "text": "So the chance of rolling twelve is one out of thirty six."
+  },
+  {
+   "id": "s139",
+   "chapter": "Two Dice",
+   "start": 839.45,
+   "end": 841.25,
+   "text": "And a total of seven?"
+  },
+  {
+   "id": "s140",
+   "chapter": "Two Dice",
+   "start": 841.7,
+   "end": 850.67,
+   "text": "Count them. One and six. Two and five. Three and four. Four and three. Five and two. Six and one."
+  },
+  {
+   "id": "s141",
+   "chapter": "Two Dice",
+   "start": 851.12,
+   "end": 855.92,
+   "text": "Six squares. Six out of thirty six. Which is one sixth."
+  },
+  {
+   "id": "s142",
+   "chapter": "Two Dice",
+   "start": 857.12,
+   "end": 864.33,
+   "text": "There it is. Seven has six ways to happen. Twelve has only one. That's why seven is six times more likely."
+  },
+  {
+   "id": "s143",
+   "chapter": "Two Dice",
+   "start": 865.83,
+   "end": 870.41,
+   "text": "The dice aren't magic. Seven is simply the total with the most ways to be made."
+  },
+  {
+   "id": "s144",
+   "chapter": "Two Dice",
+   "start": 870.86,
+   "end": 873.88,
+   "text": "Let's count the ways for every total, and build a chart."
+  },
+  {
+   "id": "s145",
+   "chapter": "Two Dice",
+   "start": 874.33,
+   "end": 885.83,
+   "text": "Two can only be made one way. Three, two ways. Four, three ways. Five, four ways. Six, five ways. Seven, six ways."
+  },
+  {
+   "id": "s146",
+   "chapter": "Two Dice",
+   "start": 886.28,
+   "end": 895.59,
+   "text": "And then it comes back down. Eight, five ways. Nine, four. Ten, three. Eleven, two. And twelve, just one."
+  },
+  {
+   "id": "s147",
+   "chapter": "Two Dice",
+   "start": 896.04,
+   "end": 899.06,
+   "text": "A perfect little mountain, with seven at the peak."
+  },
+  {
+   "id": "s148",
+   "chapter": "Two Dice",
+   "start": 900.06,
+   "end": 905.81,
+   "text": "Add up all the bars, and you get thirty six. Every square is counted exactly once."
+  },
+  {
+   "id": "s149",
+   "chapter": "Two Dice",
+   "start": 906.26,
+   "end": 914.56,
+   "text": "If we divide every bar by thirty six, each bar becomes a probability. This picture has a name. It's called a probability distribution."
+  },
+  {
+   "id": "s150",
+   "chapter": "Two Dice",
+   "start": 915.36,
+   "end": 920.79,
+   "text": "A distribution is just a map that shows how the chances are spread out over all the possible results."
+  },
+  {
+   "id": "s151",
+   "chapter": "Two Dice",
+   "start": 921.24,
+   "end": 927.4,
+   "text": "Now you can answer lots of questions just by reading the chart. The chance of a total of eight? Five out of thirty six."
+  },
+  {
+   "id": "s152",
+   "chapter": "Two Dice",
+   "start": 927.85,
+   "end": 934.0,
+   "text": "The chance of a total of two or twelve? Only one out of thirty six each. They're the rarest rolls in the game."
+  },
+  {
+   "id": "s153",
+   "chapter": "Two Dice",
+   "start": 934.45,
+   "end": 944.06,
+   "text": "Here's another one. What's the chance of rolling a double, both dice showing the same number? That's the diagonal from the bottom left to the top right. Six squares. One sixth."
+  },
+  {
+   "id": "s154",
+   "chapter": "Two Dice",
+   "start": 944.51,
+   "end": 953.49,
+   "text": "And the chance of a total of four or less? Two has one way, three has two, four has three. Six squares again. One sixth."
+  },
+  {
+   "id": "s155",
+   "chapter": "Two Dice",
+   "start": 953.94,
+   "end": 958.84,
+   "text": "Many board games are designed around this exact mountain, even if the players never notice."
+  },
+  {
+   "id": "s156",
+   "chapter": "Try It Many Times",
+   "start": 959.84,
+   "end": 964.5,
+   "text": "But hold on. Does real life actually follow this counting? Let's test it."
+  },
+  {
+   "id": "s157",
+   "chapter": "Try It Many Times",
+   "start": 964.95,
+   "end": 967.82,
+   "text": "Imagine flipping a fair coin ten times."
+  },
+  {
+   "id": "s158",
+   "chapter": "Try It Many Times",
+   "start": 968.27,
+   "end": 973.61,
+   "text": "The chance of heads is one half. So should you get exactly five heads? Not necessarily."
+  },
+  {
+   "id": "s159",
+   "chapter": "Try It Many Times",
+   "start": 974.06,
+   "end": 979.07,
+   "text": "In this run we got seven heads out of ten. That's seventy percent, not fifty."
+  },
+  {
+   "id": "s160",
+   "chapter": "Try It Many Times",
+   "start": 979.52,
+   "end": 984.85,
+   "text": "Is the coin broken? No. With only ten flips, wobbles like this happen all the time."
+  },
+  {
+   "id": "s161",
+   "chapter": "Try It Many Times",
+   "start": 985.65,
+   "end": 990.5,
+   "text": "Now let's flip it a hundred times. Then a thousand. Then ten thousand."
+  },
+  {
+   "id": "s162",
+   "chapter": "Try It Many Times",
+   "start": 990.95,
+   "end": 994.7,
+   "text": "Watch the share of heads. At first it jumps around wildly."
+  },
+  {
+   "id": "s163",
+   "chapter": "Try It Many Times",
+   "start": 995.15,
+   "end": 998.97,
+   "text": "But the more flips we do, the more it settles down, closer and closer to one half."
+  },
+  {
+   "id": "s164",
+   "chapter": "Try It Many Times",
+   "start": 1000.17,
+   "end": 1006.64,
+   "text": "This is called the law of large numbers. Over many, many tries, what actually happens gets closer to the probability."
+  },
+  {
+   "id": "s165",
+   "chapter": "Try It Many Times",
+   "start": 1007.64,
+   "end": 1012.52,
+   "text": "Let's do the same with our two dice. We'll roll them thirty six times, and build a chart of the totals."
+  },
+  {
+   "id": "s166",
+   "chapter": "Try It Many Times",
+   "start": 1012.97,
+   "end": 1018.78,
+   "text": "After thirty six rolls, the chart is bumpy and messy. Some totals didn't even show up."
+  },
+  {
+   "id": "s167",
+   "chapter": "Try It Many Times",
+   "start": 1019.23,
+   "end": 1022.99,
+   "text": "After three hundred and sixty rolls, a shape starts to appear."
+  },
+  {
+   "id": "s168",
+   "chapter": "Try It Many Times",
+   "start": 1023.44,
+   "end": 1029.84,
+   "text": "And after thirty six thousand rolls, look. It's our mountain. Almost exactly."
+  },
+  {
+   "id": "s169",
+   "chapter": "Try It Many Times",
+   "start": 1031.34,
+   "end": 1037.49,
+   "text": "The counting we did on paper predicted what happens when you really roll the dice. That's the power of probability."
+  },
+  {
+   "id": "s170",
+   "chapter": "Try It Many Times",
+   "start": 1037.94,
+   "end": 1046.33,
+   "text": "This also gives us a second way to find a probability. When you can't count the outcomes, you can try something many times, and see how often it happens."
+  },
+  {
+   "id": "s128a",
+   "chapter": "Try It Many Times",
+   "start": 1046.78,
+   "end": 1059.27,
+   "text": "You can try this yourself tonight. Flip a coin twenty times, and write down how many heads you get. Then ask a friend to do the same. Your numbers will probably be different, and that's completely normal."
+  },
+  {
+   "id": "s171",
+   "chapter": "Try It Many Times",
+   "start": 1059.72,
+   "end": 1067.0,
+   "text": "That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?"
+  },
+  {
+   "id": "s172",
+   "chapter": "Try It Many Times",
+   "start": 1067.45,
+   "end": 1076.14,
+   "text": "But remember the pocket idea. Many tries, not one. The law of large numbers says nothing about the next single flip."
+  },
+  {
+   "id": "s173",
+   "chapter": "Try It Many Times",
+   "start": 1077.14,
+   "end": 1080.84,
+   "text": "In fact, small numbers of tries can look surprisingly streaky."
+  },
+  {
+   "id": "s174",
+   "chapter": "Try It Many Times",
+   "start": 1081.29,
+   "end": 1088.91,
+   "text": "If you flip a coin twenty times, getting four or more heads in a row somewhere is not rare at all. It happens in nearly half of all runs."
+  },
+  {
+   "id": "s175",
+   "chapter": "Try It Many Times",
+   "start": 1089.36,
+   "end": 1096.69,
+   "text": "Random doesn't mean nicely mixed. Random means unpredictable. And unpredictable things are often clumpy."
+  },
+  {
+   "id": "s176",
+   "chapter": "Is This Die Fair?",
+   "start": 1097.69,
+   "end": 1104.33,
+   "text": "Here's a fun way to use what we just learned. Suppose a friend hands you a die, and you wonder, is it fair?"
+  },
+  {
+   "id": "s177",
+   "chapter": "Is This Die Fair?",
+   "start": 1104.78,
+   "end": 1112.1,
+   "text": "If it's fair, each face should come up one sixth of the time. So in sixty rolls, you'd expect each face about ten times."
+  },
+  {
+   "id": "s178",
+   "chapter": "Is This Die Fair?",
+   "start": 1112.55,
+   "end": 1122.73,
+   "text": "Let's roll it sixty times. We get eight ones, eleven twos, nine threes, twelve fours, seven fives and thirteen sixes."
+  },
+  {
+   "id": "s179",
+   "chapter": "Is This Die Fair?",
+   "start": 1123.18,
+   "end": 1132.72,
+   "text": "Not exactly ten each. But is that suspicious? No. This kind of wobble is completely normal for a fair die, with only sixty rolls."
+  },
+  {
+   "id": "s180",
+   "chapter": "Is This Die Fair?",
+   "start": 1133.72,
+   "end": 1137.58,
+   "text": "Now a different die. Sixty rolls, and twenty five of them are sixes."
+  },
+  {
+   "id": "s181",
+   "chapter": "Is This Die Fair?",
+   "start": 1138.03,
+   "end": 1145.44,
+   "text": "That's way more than ten. For a fair die, a result this extreme would be extremely rare. So you'd have good reason to think this die is loaded."
+  },
+  {
+   "id": "s182",
+   "chapter": "Is This Die Fair?",
+   "start": 1146.44,
+   "end": 1153.2,
+   "text": "Notice what we did. We used probability to predict what fair looks like, then compared it with what really happened."
+  },
+  {
+   "id": "s183",
+   "chapter": "Is This Die Fair?",
+   "start": 1153.65,
+   "end": 1164.45,
+   "text": "Small differences, we shrug off. Huge differences make us suspicious. Scientists use this same idea, with more careful math, to test whether something is really going on."
+  },
+  {
+   "id": "s184",
+   "chapter": "Quick Recap",
+   "start": 1165.25,
+   "end": 1167.81,
+   "text": "Let's take a breath, and look at how far we've come."
+  },
+  {
+   "id": "s185",
+   "chapter": "Quick Recap",
+   "start": 1168.26,
+   "end": 1174.3,
+   "text": "A probability is a number from zero to one. Zero is impossible, one is certain."
+  },
+  {
+   "id": "s186",
+   "chapter": "Quick Recap",
+   "start": 1174.75,
+   "end": 1180.93,
+   "text": "When outcomes are equally likely, the probability is the outcomes you want, divided by all the outcomes."
+  },
+  {
+   "id": "s187",
+   "chapter": "Quick Recap",
+   "start": 1181.38,
+   "end": 1186.87,
+   "text": "To find all the outcomes, draw a tree or a grid, or multiply the number of choices."
+  },
+  {
+   "id": "s188",
+   "chapter": "Quick Recap",
+   "start": 1187.32,
+   "end": 1192.35,
+   "text": "With two dice, seven is the most likely total, because it has the most ways to be made."
+  },
+  {
+   "id": "s189",
+   "chapter": "Quick Recap",
+   "start": 1192.8,
+   "end": 1198.52,
+   "text": "And over many tries, real results settle close to the probability. But a single try can still surprise you."
+  },
+  {
+   "id": "s190",
+   "chapter": "Quick Recap",
+   "start": 1199.52,
+   "end": 1205.54,
+   "text": "If all of that makes sense, you've already got the foundation. Everything from here is built on top of it."
+  },
+  {
+   "id": "s191",
+   "chapter": "The Word NOT",
+   "start": 1206.34,
+   "end": 1212.21,
+   "text": "Now for the three little words that unlock almost every probability question. The first one is not."
+  },
+  {
+   "id": "s192",
+   "chapter": "The Word NOT",
+   "start": 1212.66,
+   "end": 1216.96,
+   "text": "Something either happens, or it doesn't. There's no third option."
+  },
+  {
+   "id": "s193",
+   "chapter": "The Word NOT",
+   "start": 1217.41,
+   "end": 1223.14,
+   "text": "So the chance it happens, plus the chance it doesn't, must add up to one. To everything."
+  },
+  {
+   "id": "s194",
+   "chapter": "The Word NOT",
+   "start": 1223.59,
+   "end": 1228.73,
+   "text": "That means the chance something does not happen is one, minus the chance it does."
+  },
+  {
+   "id": "s195",
+   "chapter": "The Word NOT",
+   "start": 1229.73,
+   "end": 1234.02,
+   "text": "A here is just a name for any event. Like, rolling a seven."
+  },
+  {
+   "id": "s196",
+   "chapter": "The Word NOT",
+   "start": 1234.47,
+   "end": 1243.92,
+   "text": "Let's try it. The chance of rolling a total of seven is one sixth. So the chance of not rolling seven is one minus one sixth, which is five sixths."
+  },
+  {
+   "id": "s197",
+   "chapter": "The Word NOT",
+   "start": 1244.37,
+   "end": 1250.87,
+   "text": "And you can check it on the grid. Thirty squares are not seven. Thirty out of thirty six is five sixths. It matches."
+  },
+  {
+   "id": "s198",
+   "chapter": "The Word NOT",
+   "start": 1251.87,
+   "end": 1257.06,
+   "text": "Here's why this matters. Sometimes the thing you want is hard to count, but the opposite is easy."
+  },
+  {
+   "id": "s199",
+   "chapter": "The Word NOT",
+   "start": 1257.51,
+   "end": 1261.24,
+   "text": "For example, what's the chance of rolling a total that is not twelve?"
+  },
+  {
+   "id": "s200",
+   "chapter": "The Word NOT",
+   "start": 1261.69,
+   "end": 1274.14,
+   "text": "You could count thirty five squares. Or you can just say, twelve has one square, so not twelve is one minus one over thirty six, which is thirty five over thirty six."
+  },
+  {
+   "id": "s201",
+   "chapter": "The Word NOT",
+   "start": 1274.59,
+   "end": 1280.99,
+   "text": "When counting the thing you want looks painful, flip it around. Count the opposite, and take it away from one."
+  },
+  {
+   "id": "s202",
+   "chapter": "The Word NOT",
+   "start": 1281.99,
+   "end": 1286.58,
+   "text": "This little trick becomes a superpower in a few minutes. Hold on to it."
+  },
+  {
+   "id": "s203",
+   "chapter": "Odds Versus Probability",
+   "start": 1287.03,
+   "end": 1291.34,
+   "text": "While we're here, let's clear up a word that confuses a lot of people. Odds."
+  },
+  {
+   "id": "s204",
+   "chapter": "Odds Versus Probability",
+   "start": 1291.79,
+   "end": 1296.43,
+   "text": "People often say odds when they mean probability. But they are not quite the same thing."
+  },
+  {
+   "id": "s205",
+   "chapter": "Odds Versus Probability",
+   "start": 1296.88,
+   "end": 1303.77,
+   "text": "Probability compares the ways something happens to all the ways. Odds compare the ways it happens to the ways it doesn't."
+  },
+  {
+   "id": "s206",
+   "chapter": "Odds Versus Probability",
+   "start": 1304.22,
+   "end": 1309.65,
+   "text": "Take a total of seven on two dice. Six squares make seven. Thirty squares don't."
+  },
+  {
+   "id": "s207",
+   "chapter": "Odds Versus Probability",
+   "start": 1310.1,
+   "end": 1313.28,
+   "text": "The probability is six out of thirty six. One sixth."
+  },
+  {
+   "id": "s208",
+   "chapter": "Odds Versus Probability",
+   "start": 1313.73,
+   "end": 1320.62,
+   "text": "But the odds are six to thirty. Which simplifies to one to five. For every one way to win, there are five ways to lose."
+  },
+  {
+   "id": "s209",
+   "chapter": "Odds Versus Probability",
+   "start": 1321.62,
+   "end": 1328.44,
+   "text": "Notice that one to five and one sixth describe the same chance. One plus five makes six, the total."
+  },
+  {
+   "id": "s210",
+   "chapter": "Odds Versus Probability",
+   "start": 1328.89,
+   "end": 1335.52,
+   "text": "A fair coin has odds of one to one. One way to win, one way to lose. People sometimes call that evens."
+  },
+  {
+   "id": "s211",
+   "chapter": "Odds Versus Probability",
+   "start": 1335.97,
+   "end": 1342.58,
+   "text": "To turn odds into a probability, put the first number on top, and both numbers added together on the bottom."
+  },
+  {
+   "id": "s212",
+   "chapter": "Odds Versus Probability",
+   "start": 1343.03,
+   "end": 1351.54,
+   "text": "So odds of three to one against something mean one way it happens, three ways it doesn't. One out of four. A probability of one quarter."
+  },
+  {
+   "id": "s213",
+   "chapter": "Odds Versus Probability",
+   "start": 1352.54,
+   "end": 1358.04,
+   "text": "When you hear odds, just ask, is this comparing to the whole, or to the other side?"
+  },
+  {
+   "id": "s214",
+   "chapter": "The Word OR",
+   "start": 1358.84,
+   "end": 1363.72,
+   "text": "The second word is or. What's the chance that this happens, or that happens?"
+  },
+  {
+   "id": "s215",
+   "chapter": "The Word OR",
+   "start": 1364.17,
+   "end": 1370.01,
+   "text": "Let's start easy. On our two dice, what's the chance of rolling a total of seven, or a total of eleven?"
+  },
+  {
+   "id": "s216",
+   "chapter": "The Word OR",
+   "start": 1370.46,
+   "end": 1376.19,
+   "text": "Seven has six squares. Eleven has two squares, five and six, and six and five."
+  },
+  {
+   "id": "s217",
+   "chapter": "The Word OR",
+   "start": 1376.64,
+   "end": 1380.78,
+   "text": "They don't share any squares. A roll can't be seven and eleven at the same time."
+  },
+  {
+   "id": "s218",
+   "chapter": "The Word OR",
+   "start": 1381.23,
+   "end": 1388.66,
+   "text": "So we just add them. Six plus two is eight squares. Eight out of thirty six."
+  },
+  {
+   "id": "s219",
+   "chapter": "The Word OR",
+   "start": 1389.66,
+   "end": 1395.46,
+   "text": "When two events can't happen together, the chance of one or the other is just the two chances added up."
+  },
+  {
+   "id": "s220",
+   "chapter": "The Word OR",
+   "start": 1395.91,
+   "end": 1398.94,
+   "text": "But careful. This is where a lot of people slip."
+  },
+  {
+   "id": "s221",
+   "chapter": "The Word OR",
+   "start": 1399.39,
+   "end": 1404.21,
+   "text": "What's the chance that the orange die shows six, or the blue die shows six?"
+  },
+  {
+   "id": "s222",
+   "chapter": "The Word OR",
+   "start": 1404.66,
+   "end": 1407.79,
+   "text": "The orange six is a whole column. That's six squares."
+  },
+  {
+   "id": "s223",
+   "chapter": "The Word OR",
+   "start": 1408.24,
+   "end": 1411.11,
+   "text": "The blue six is a whole row. Also six squares."
+  },
+  {
+   "id": "s224",
+   "chapter": "The Word OR",
+   "start": 1411.56,
+   "end": 1415.11,
+   "text": "So, six plus six is twelve? Let's look."
+  },
+  {
+   "id": "s225",
+   "chapter": "The Word OR",
+   "start": 1415.56,
+   "end": 1421.39,
+   "text": "The column and the row cross in one corner, double six. If we add them, we count that square twice."
+  },
+  {
+   "id": "s226",
+   "chapter": "The Word OR",
+   "start": 1422.19,
+   "end": 1427.45,
+   "text": "So we take it away once. Six plus six, minus one, is eleven."
+  },
+  {
+   "id": "s227",
+   "chapter": "The Word OR",
+   "start": 1427.9,
+   "end": 1430.06,
+   "text": "The answer is eleven out of thirty six."
+  },
+  {
+   "id": "s228",
+   "chapter": "The Word OR",
+   "start": 1431.26,
+   "end": 1439.4,
+   "text": "This is the full or rule. Add the two chances, then take away the overlap, the part where both happen, so it's not counted twice."
+  },
+  {
+   "id": "s229",
+   "chapter": "The Word OR",
+   "start": 1440.4,
+   "end": 1451.48,
+   "text": "A picture helps. Draw two circles that overlap. To find the area covered by either circle, you add both circles, then remove the middle, because you counted it twice."
+  },
+  {
+   "id": "s230",
+   "chapter": "The Word OR",
+   "start": 1451.93,
+   "end": 1457.15,
+   "text": "If the circles don't overlap at all, the middle is zero, and you're back to simply adding."
+  },
+  {
+   "id": "s231",
+   "chapter": "The Word OR",
+   "start": 1457.6,
+   "end": 1464.89,
+   "text": "Here's an everyday example. In a class of thirty students, twelve play football, eight play music, and five do both."
+  },
+  {
+   "id": "s232",
+   "chapter": "The Word OR",
+   "start": 1465.34,
+   "end": 1472.74,
+   "text": "How many do football or music? Twelve plus eight is twenty, minus the five who were counted twice. Fifteen students."
+  },
+  {
+   "id": "s233",
+   "chapter": "The Word OR",
+   "start": 1473.19,
+   "end": 1479.47,
+   "text": "So if you pick a student at random, the chance they do football or music is fifteen out of thirty. One half."
+  },
+  {
+   "id": "s234",
+   "chapter": "The Word OR",
+   "start": 1480.47,
+   "end": 1488.2,
+   "text": "Whenever you hear the word or, ask yourself one question. Can both happen at once? If yes, remove the overlap."
+  },
+  {
+   "id": "s235",
+   "chapter": "The Word AND",
+   "start": 1488.65,
+   "end": 1494.55,
+   "text": "The third word is and. What's the chance that this happens, and that happens too?"
+  },
+  {
+   "id": "s236",
+   "chapter": "The Word AND",
+   "start": 1495.0,
+   "end": 1502.09,
+   "text": "Back to our dice. What's the chance of double six? The orange die shows six, and the blue die shows six."
+  },
+  {
+   "id": "s237",
+   "chapter": "The Word AND",
+   "start": 1502.54,
+   "end": 1509.11,
+   "text": "On the grid, that's the one square where the six column and the six row meet. One out of thirty six."
+  },
+  {
+   "id": "s238",
+   "chapter": "The Word AND",
+   "start": 1509.56,
+   "end": 1517.82,
+   "text": "But here's another way to see it. The orange die has a one in six chance of six. And then, the blue die has a one in six chance of six."
+  },
+  {
+   "id": "s239",
+   "chapter": "The Word AND",
+   "start": 1518.27,
+   "end": 1524.98,
+   "text": "Multiply them. One sixth times one sixth is one over thirty six. Same answer."
+  },
+  {
+   "id": "s240",
+   "chapter": "The Word AND",
+   "start": 1525.98,
+   "end": 1535.77,
+   "text": "Why multiply? Picture it as area. Take a square of side one. The orange six takes one sixth of the width. The blue six takes one sixth of the height."
+  },
+  {
+   "id": "s241",
+   "chapter": "The Word AND",
+   "start": 1536.22,
+   "end": 1546.53,
+   "text": "Where they overlap is a little box, one sixth wide and one sixth tall. Its area is one sixth times one sixth."
+  },
+  {
+   "id": "s242",
+   "chapter": "The Word AND",
+   "start": 1547.53,
+   "end": 1558.31,
+   "text": "This works for more than two things. Three dice all showing six? One sixth, times one sixth, times one sixth. One in two hundred and sixteen."
+  },
+  {
+   "id": "s243",
+   "chapter": "The Word AND",
+   "start": 1558.76,
+   "end": 1568.17,
+   "text": "So and usually means multiply. And multiplying fractions makes things smaller. Both things happening is less likely than either one alone."
+  },
+  {
+   "id": "s244",
+   "chapter": "The Word AND",
+   "start": 1568.62,
+   "end": 1574.21,
+   "text": "But there's a condition. This simple multiplying only works when the two events are independent."
+  },
+  {
+   "id": "s245",
+   "chapter": "The Word AND",
+   "start": 1575.01,
+   "end": 1578.43,
+   "text": "Independent means one result doesn't change the chances of the other."
+  },
+  {
+   "id": "s246",
+   "chapter": "The Word AND",
+   "start": 1578.88,
+   "end": 1583.96,
+   "text": "The orange die has no idea what the blue die did. They don't talk to each other. So they're independent."
+  },
+  {
+   "id": "s247",
+   "chapter": "The Word AND",
+   "start": 1584.41,
+   "end": 1592.06,
+   "text": "A coin and a die are independent too. The chance of heads and a six is one half times one sixth. One twelfth."
+  },
+  {
+   "id": "s248",
+   "chapter": "The Word AND",
+   "start": 1592.51,
+   "end": 1598.6,
+   "text": "But some events do affect each other. Here's a bag with three red marbles and two blue marbles."
+  },
+  {
+   "id": "s249",
+   "chapter": "The Word AND",
+   "start": 1599.05,
+   "end": 1604.11,
+   "text": "You pull out one marble, don't put it back, and then pull out another. What's the chance both are red?"
+  },
+  {
+   "id": "s250",
+   "chapter": "The Word AND",
+   "start": 1604.56,
+   "end": 1608.89,
+   "text": "First pull. Three red out of five marbles. Three fifths."
+  },
+  {
+   "id": "s251",
+   "chapter": "The Word AND",
+   "start": 1609.34,
+   "end": 1615.18,
+   "text": "Now, if that first marble was red, the bag has changed. There are only two red left, out of four."
+  },
+  {
+   "id": "s252",
+   "chapter": "The Word AND",
+   "start": 1615.63,
+   "end": 1621.49,
+   "text": "So the second chance is two quarters. The first pull changed the second one. These events are not independent."
+  },
+  {
+   "id": "s253",
+   "chapter": "The Word AND",
+   "start": 1621.94,
+   "end": 1628.83,
+   "text": "Multiply the chances along the path. Three fifths times two quarters is six over twenty, which is three tenths."
+  },
+  {
+   "id": "s254",
+   "chapter": "The Word AND",
+   "start": 1629.83,
+   "end": 1637.34,
+   "text": "If you had put the first marble back, the bag would be the same both times. Three fifths times three fifths, nine over twenty five."
+  },
+  {
+   "id": "s255",
+   "chapter": "The Word AND",
+   "start": 1637.79,
+   "end": 1643.54,
+   "text": "That's a bit higher, because putting the red marble back gives red a better chance the second time."
+  },
+  {
+   "id": "s256",
+   "chapter": "The Word AND",
+   "start": 1643.99,
+   "end": 1650.83,
+   "text": "So, for and: multiply along the path. But always use the chance of the second thing, after the first one has happened."
+  },
+  {
+   "id": "s257",
+   "chapter": "Independent or Not?",
+   "start": 1651.83,
+   "end": 1660.27,
+   "text": "Because independence matters so much, let's practise spotting it. For each pair, ask, does the first result change the chances of the second?"
+  },
+  {
+   "id": "s258",
+   "chapter": "Independent or Not?",
+   "start": 1660.72,
+   "end": 1667.47,
+   "text": "One. Flipping a coin today, and flipping it again tomorrow. Independent. The coin doesn't remember."
+  },
+  {
+   "id": "s259",
+   "chapter": "Independent or Not?",
+   "start": 1667.92,
+   "end": 1675.14,
+   "text": "Two. Drawing a card from a deck, keeping it, and drawing another. Not independent. The deck has changed."
+  },
+  {
+   "id": "s260",
+   "chapter": "Independent or Not?",
+   "start": 1675.59,
+   "end": 1685.92,
+   "text": "Three. Rain today, and rain tomorrow. Not independent. Rainy weather tends to stick around for a few days, so rain today makes rain tomorrow more likely."
+  },
+  {
+   "id": "s261",
+   "chapter": "Independent or Not?",
+   "start": 1686.37,
+   "end": 1693.76,
+   "text": "Four. Your birthday, and the birthday of a random stranger in another country. Independent. One tells you nothing about the other."
+  },
+  {
+   "id": "s262",
+   "chapter": "Independent or Not?",
+   "start": 1694.21,
+   "end": 1702.95,
+   "text": "Five. Whether you study tonight, and whether you pass tomorrow's test. Definitely not independent. Studying changes your chances. That's the whole point."
+  },
+  {
+   "id": "s263",
+   "chapter": "Independent or Not?",
+   "start": 1703.95,
+   "end": 1711.06,
+   "text": "When events are independent, multiply the plain chances. When they're not, use the updated chance for the second step."
+  },
+  {
+   "id": "s264",
+   "chapter": "At Least One",
+   "start": 1711.86,
+   "end": 1718.45,
+   "text": "Now let's combine not and and, to solve one of the most useful questions in all of probability."
+  },
+  {
+   "id": "s265",
+   "chapter": "At Least One",
+   "start": 1718.9,
+   "end": 1722.87,
+   "text": "You roll one die four times. What's the chance you get at least one six?"
+  },
+  {
+   "id": "s266",
+   "chapter": "At Least One",
+   "start": 1723.32,
+   "end": 1730.72,
+   "text": "At least one means one six, or two, or three, or four. That's a lot of cases to count."
+  },
+  {
+   "id": "s267",
+   "chapter": "At Least One",
+   "start": 1731.17,
+   "end": 1739.32,
+   "text": "Here's a tempting shortcut. Each roll has a one sixth chance. Four rolls, so add them up. Four sixths, about sixty seven percent."
+  },
+  {
+   "id": "s268",
+   "chapter": "At Least One",
+   "start": 1739.77,
+   "end": 1750.04,
+   "text": "But that can't be right. Watch what happens with six rolls. Six sixths is one. A hundred percent. As if six rolls guarantee a six."
+  },
+  {
+   "id": "s269",
+   "chapter": "At Least One",
+   "start": 1750.49,
+   "end": 1754.73,
+   "text": "Anyone who's ever played a dice game knows you can roll six times and never see a six."
+  },
+  {
+   "id": "s270",
+   "chapter": "At Least One",
+   "start": 1755.73,
+   "end": 1761.11,
+   "text": "The adding was wrong because these events can all happen together, so we're counting overlaps again and again."
+  },
+  {
+   "id": "s271",
+   "chapter": "At Least One",
+   "start": 1761.56,
+   "end": 1767.81,
+   "text": "So let's use the superpower. Flip it around. The opposite of at least one six is, no sixes at all."
+  },
+  {
+   "id": "s272",
+   "chapter": "At Least One",
+   "start": 1768.26,
+   "end": 1771.76,
+   "text": "The chance one roll is not a six is five sixths."
+  },
+  {
+   "id": "s273",
+   "chapter": "At Least One",
+   "start": 1772.21,
+   "end": 1779.28,
+   "text": "The rolls are independent. So the chance that all four rolls are not six is five sixths, times five sixths, times five sixths, times five sixths."
+  },
+  {
+   "id": "s274",
+   "chapter": "At Least One",
+   "start": 1779.73,
+   "end": 1785.47,
+   "text": "That's six hundred and twenty five out of one thousand two hundred and ninety six. About forty eight percent."
+  },
+  {
+   "id": "s275",
+   "chapter": "At Least One",
+   "start": 1785.92,
+   "end": 1790.68,
+   "text": "So the chance of at least one six is one minus that. About fifty two percent."
+  },
+  {
+   "id": "s276",
+   "chapter": "At Least One",
+   "start": 1791.88,
+   "end": 1794.43,
+   "text": "Just over a half. Not sixty seven percent."
+  },
+  {
+   "id": "s277",
+   "chapter": "At Least One",
+   "start": 1794.88,
+   "end": 1799.89,
+   "text": "And with six rolls, it's about sixty seven percent. Likely, but nowhere near certain."
+  },
+  {
+   "id": "s278",
+   "chapter": "At Least One",
+   "start": 1800.34,
+   "end": 1805.97,
+   "text": "Look at this curve. Every extra roll helps, but it never quite reaches one hundred percent."
+  },
+  {
+   "id": "s279",
+   "chapter": "At Least One",
+   "start": 1806.97,
+   "end": 1814.46,
+   "text": "This trick works everywhere. The chance of at least one success, equals one, minus the chance of no success at all."
+  },
+  {
+   "id": "s280",
+   "chapter": "At Least One",
+   "start": 1815.46,
+   "end": 1822.88,
+   "text": "For example, if you guess on three quiz questions, each with four choices, what's the chance you get at least one right?"
+  },
+  {
+   "id": "s281",
+   "chapter": "At Least One",
+   "start": 1823.33,
+   "end": 1830.46,
+   "text": "The chance of getting one wrong is three quarters. All three wrong is three quarters cubed, twenty seven over sixty four."
+  },
+  {
+   "id": "s282",
+   "chapter": "At Least One",
+   "start": 1830.91,
+   "end": 1835.85,
+   "text": "So at least one right is thirty seven out of sixty four. A bit more than half."
+  },
+  {
+   "id": "s283",
+   "chapter": "At Least One",
+   "start": 1836.85,
+   "end": 1841.37,
+   "text": "Whenever you see the words at least one, your brain should shout, flip it around."
+  },
+  {
+   "id": "s284",
+   "chapter": "A Deck of Cards",
+   "start": 1841.82,
+   "end": 1850.47,
+   "text": "Let's practise our three words, not, or, and, on something new. A normal deck of playing cards."
+  },
+  {
+   "id": "s285",
+   "chapter": "A Deck of Cards",
+   "start": 1850.92,
+   "end": 1862.65,
+   "text": "A deck has fifty two cards. There are four suits, hearts, diamonds, clubs and spades. And each suit has thirteen cards, from ace up to king."
+  },
+  {
+   "id": "s286",
+   "chapter": "A Deck of Cards",
+   "start": 1863.1,
+   "end": 1868.87,
+   "text": "Shuffle well, and every card is equally likely to be on top. So our counting recipe works."
+  },
+  {
+   "id": "s287",
+   "chapter": "A Deck of Cards",
+   "start": 1869.32,
+   "end": 1875.49,
+   "text": "What's the chance the top card is a heart? Thirteen hearts out of fifty two cards. That's one quarter."
+  },
+  {
+   "id": "s288",
+   "chapter": "A Deck of Cards",
+   "start": 1876.49,
+   "end": 1881.8,
+   "text": "What's the chance it's a king? Four kings out of fifty two. One thirteenth."
+  },
+  {
+   "id": "s289",
+   "chapter": "A Deck of Cards",
+   "start": 1882.25,
+   "end": 1884.28,
+   "text": "Now, the chance it's a king or a heart?"
+  },
+  {
+   "id": "s290",
+   "chapter": "A Deck of Cards",
+   "start": 1884.73,
+   "end": 1891.82,
+   "text": "Thirteen hearts, plus four kings. But one card is both, the king of hearts. Don't count it twice."
+  },
+  {
+   "id": "s291",
+   "chapter": "A Deck of Cards",
+   "start": 1892.27,
+   "end": 1899.31,
+   "text": "Thirteen plus four, minus one, is sixteen. Sixteen out of fifty two, which simplifies to four thirteenths."
+  },
+  {
+   "id": "s292",
+   "chapter": "A Deck of Cards",
+   "start": 1900.31,
+   "end": 1904.13,
+   "text": "And the chance it's not a heart? One minus one quarter. Three quarters."
+  },
+  {
+   "id": "s293",
+   "chapter": "A Deck of Cards",
+   "start": 1904.58,
+   "end": 1911.0,
+   "text": "Now for and. You draw two cards, without putting the first one back. What's the chance both are aces?"
+  },
+  {
+   "id": "s294",
+   "chapter": "A Deck of Cards",
+   "start": 1911.45,
+   "end": 1914.27,
+   "text": "First card. Four aces out of fifty two."
+  },
+  {
+   "id": "s295",
+   "chapter": "A Deck of Cards",
+   "start": 1914.72,
+   "end": 1918.6,
+   "text": "If that was an ace, there are now three aces left, out of fifty one cards."
+  },
+  {
+   "id": "s296",
+   "chapter": "A Deck of Cards",
+   "start": 1919.05,
+   "end": 1927.4,
+   "text": "Multiply along the path. Four over fifty two, times three over fifty one. That's one out of two hundred and twenty one."
+  },
+  {
+   "id": "s297",
+   "chapter": "A Deck of Cards",
+   "start": 1928.4,
+   "end": 1931.87,
+   "text": "Not even half a percent. Two aces in a row really is rare."
+  },
+  {
+   "id": "s298",
+   "chapter": "A Deck of Cards",
+   "start": 1932.32,
+   "end": 1938.73,
+   "text": "Same three words, a completely different game. That's the beauty of it. Once you know the tools, they work everywhere."
+  },
+  {
+   "id": "s299",
+   "chapter": "Two Step Trees",
+   "start": 1939.53,
+   "end": 1946.75,
+   "text": "Real life is often a chain of events, where the second step depends on the first. A tree diagram handles that beautifully."
+  },
+  {
+   "id": "s300",
+   "chapter": "Two Step Trees",
+   "start": 1947.2,
+   "end": 1952.37,
+   "text": "Here's a story. On a typical school day in your town, there's a three in ten chance of rain."
+  },
+  {
+   "id": "s301",
+   "chapter": "Two Step Trees",
+   "start": 1952.82,
+   "end": 1960.28,
+   "text": "When it rains, the school bus is late half the time. When it's dry, the bus is late only one time in ten."
+  },
+  {
+   "id": "s302",
+   "chapter": "Two Step Trees",
+   "start": 1960.73,
+   "end": 1965.22,
+   "text": "These numbers are made up for this example, but the method works for any numbers."
+  },
+  {
+   "id": "s303",
+   "chapter": "Two Step Trees",
+   "start": 1965.67,
+   "end": 1969.87,
+   "text": "Question. On a random school day, what's the chance the bus is late?"
+  },
+  {
+   "id": "s304",
+   "chapter": "Two Step Trees",
+   "start": 1970.32,
+   "end": 1973.58,
+   "text": "Let's imagine one hundred school days, and walk them through the tree."
+  },
+  {
+   "id": "s305",
+   "chapter": "Two Step Trees",
+   "start": 1974.03,
+   "end": 1976.85,
+   "text": "Three in ten days are rainy. That's thirty rainy days."
+  },
+  {
+   "id": "s306",
+   "chapter": "Two Step Trees",
+   "start": 1977.3,
+   "end": 1980.9,
+   "text": "On half of those, the bus is late. Fifteen days."
+  },
+  {
+   "id": "s307",
+   "chapter": "Two Step Trees",
+   "start": 1981.35,
+   "end": 1986.57,
+   "text": "Seventy days are dry. On one in ten of them, the bus is late. Seven days."
+  },
+  {
+   "id": "s308",
+   "chapter": "Two Step Trees",
+   "start": 1987.02,
+   "end": 1992.17,
+   "text": "So the bus is late on fifteen plus seven days. Twenty two days out of one hundred."
+  },
+  {
+   "id": "s309",
+   "chapter": "Two Step Trees",
+   "start": 1993.17,
+   "end": 2000.9,
+   "text": "With the tree, you can do this without imagining days. Multiply along each path to a late bus, then add the paths together."
+  },
+  {
+   "id": "s310",
+   "chapter": "Two Step Trees",
+   "start": 2001.35,
+   "end": 2010.25,
+   "text": "Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or."
+  },
+  {
+   "id": "s297a",
+   "chapter": "Two Step Trees",
+   "start": 2011.45,
+   "end": 2024.86,
+   "text": "And a quick check. All four paths together, late and on time, rainy and dry, must add up to one hundred days. Fifteen, plus fifteen, plus seven, plus sixty three. One hundred. Good."
+  },
+  {
+   "id": "s311",
+   "chapter": "Two Step Trees",
+   "start": 2025.31,
+   "end": 2029.08,
+   "text": "So the tree is just and and or, working together."
+  },
+  {
+   "id": "s312",
+   "chapter": "Two Step Trees",
+   "start": 2029.53,
+   "end": 2036.21,
+   "text": "Now a sneaky question, which will lead us into our next big idea. The bus was late today. What's the chance it was raining?"
+  },
+  {
+   "id": "s313",
+   "chapter": "Two Step Trees",
+   "start": 2037.21,
+   "end": 2042.57,
+   "text": "Look at the hundred days again. The bus was late on twenty two of them. That's our world now."
+  },
+  {
+   "id": "s314",
+   "chapter": "Two Step Trees",
+   "start": 2043.02,
+   "end": 2045.15,
+   "text": "Fifteen of those twenty two were rainy days."
+  },
+  {
+   "id": "s315",
+   "chapter": "Two Step Trees",
+   "start": 2045.6,
+   "end": 2052.4,
+   "text": "So the chance it was raining, given the bus was late, is fifteen out of twenty two. About sixty eight percent."
+  },
+  {
+   "id": "s316",
+   "chapter": "Two Step Trees",
+   "start": 2053.6,
+   "end": 2060.08,
+   "text": "Before you knew anything, rain had a thirty percent chance. Knowing the bus was late made rain much more likely."
+  },
+  {
+   "id": "s317",
+   "chapter": "Two Step Trees",
+   "start": 2060.53,
+   "end": 2064.91,
+   "text": "That idea, how a clue changes a probability, is what we'll look at next."
+  },
+  {
+   "id": "s318",
+   "chapter": "Given That",
+   "start": 2065.71,
+   "end": 2070.51,
+   "text": "So far, we've rolled the dice without knowing anything. But what if someone gives you a clue?"
+  },
+  {
+   "id": "s319",
+   "chapter": "Given That",
+   "start": 2070.96,
+   "end": 2077.36,
+   "text": "This is called conditional probability. It's the chance of something, given that you already know something else."
+  },
+  {
+   "id": "s320",
+   "chapter": "Given That",
+   "start": 2077.81,
+   "end": 2082.46,
+   "text": "Here's the key idea, and it's beautiful. A clue shrinks the grid."
+  },
+  {
+   "id": "s321",
+   "chapter": "Given That",
+   "start": 2083.46,
+   "end": 2090.69,
+   "text": "Your friend rolls both dice, hides them, and peeks at the orange one. They tell you, the orange die is a six."
+  },
+  {
+   "id": "s322",
+   "chapter": "Given That",
+   "start": 2091.14,
+   "end": 2092.91,
+   "text": "What's the chance the total is twelve?"
+  },
+  {
+   "id": "s323",
+   "chapter": "Given That",
+   "start": 2093.36,
+   "end": 2101.28,
+   "text": "Before the clue, it was one in thirty six. But now, every square where orange isn't six is impossible. Cross them out."
+  },
+  {
+   "id": "s324",
+   "chapter": "Given That",
+   "start": 2101.73,
+   "end": 2105.85,
+   "text": "We're left with just one column. Six squares. That's our new world."
+  },
+  {
+   "id": "s325",
+   "chapter": "Given That",
+   "start": 2106.3,
+   "end": 2113.06,
+   "text": "And in this new world, a total of twelve is one square out of six. One sixth."
+  },
+  {
+   "id": "s326",
+   "chapter": "Given That",
+   "start": 2114.26,
+   "end": 2119.4,
+   "text": "The clue made twelve six times more likely. New information changed the probability."
+  },
+  {
+   "id": "s327",
+   "chapter": "Given That",
+   "start": 2119.85,
+   "end": 2128.46,
+   "text": "We write this with a straight line. P of twelve, line, orange six. And we read that line as, given."
+  },
+  {
+   "id": "s328",
+   "chapter": "Given That",
+   "start": 2129.46,
+   "end": 2137.89,
+   "text": "So the recipe is the same as always. Count the outcomes you want, but only inside the shrunken world. Then divide by the size of that shrunken world."
+  },
+  {
+   "id": "s329",
+   "chapter": "Given That",
+   "start": 2138.34,
+   "end": 2144.99,
+   "text": "Now here's a surprising one. With the same clue, the orange die is a six, what's the chance the total is seven?"
+  },
+  {
+   "id": "s330",
+   "chapter": "Given That",
+   "start": 2145.44,
+   "end": 2151.3,
+   "text": "In the six column, only one square makes seven, orange six and blue one. One out of six."
+  },
+  {
+   "id": "s331",
+   "chapter": "Given That",
+   "start": 2151.75,
+   "end": 2155.35,
+   "text": "But the chance of seven without any clue was also one sixth."
+  },
+  {
+   "id": "s332",
+   "chapter": "Given That",
+   "start": 2155.8,
+   "end": 2161.1,
+   "text": "The clue changed nothing! Knowing the orange die doesn't help you guess whether the total is seven."
+  },
+  {
+   "id": "s333",
+   "chapter": "Given That",
+   "start": 2162.3,
+   "end": 2170.36,
+   "text": "Why? Because whatever the orange die shows, there's always exactly one blue number that makes seven. So the clue gives no advantage."
+  },
+  {
+   "id": "s334",
+   "chapter": "Given That",
+   "start": 2170.81,
+   "end": 2177.66,
+   "text": "And this is the real meaning of independent. Two events are independent when knowing one doesn't change the chance of the other."
+  },
+  {
+   "id": "s335",
+   "chapter": "Given That",
+   "start": 2178.66,
+   "end": 2186.78,
+   "text": "Let's try a trickier clue. Your friend says, the total is at least ten. What's the chance they rolled a double, two dice showing the same number?"
+  },
+  {
+   "id": "s336",
+   "chapter": "Given That",
+   "start": 2187.23,
+   "end": 2192.37,
+   "text": "First, shrink the world. Which squares have a total of ten, eleven or twelve?"
+  },
+  {
+   "id": "s337",
+   "chapter": "Given That",
+   "start": 2192.82,
+   "end": 2203.62,
+   "text": "Four and six. Five and five. Six and four. Five and six. Six and five. Six and six. Six squares."
+  },
+  {
+   "id": "s338",
+   "chapter": "Given That",
+   "start": 2204.07,
+   "end": 2209.19,
+   "text": "Now, which of these are doubles? Five and five, and six and six. That's two."
+  },
+  {
+   "id": "s339",
+   "chapter": "Given That",
+   "start": 2209.64,
+   "end": 2211.58,
+   "text": "Two out of six. One third."
+  },
+  {
+   "id": "s340",
+   "chapter": "Given That",
+   "start": 2212.58,
+   "end": 2219.74,
+   "text": "Without the clue, doubles happen six times out of thirty six, one sixth. With the clue, it doubles to one third."
+  },
+  {
+   "id": "s341",
+   "chapter": "Given That",
+   "start": 2220.19,
+   "end": 2225.66,
+   "text": "Now for the most important warning in this whole chapter. The order of a given statement matters."
+  },
+  {
+   "id": "s342",
+   "chapter": "Given That",
+   "start": 2226.11,
+   "end": 2232.78,
+   "text": "The chance of a total of twelve, given the orange die is six, is one sixth. We just saw it."
+  },
+  {
+   "id": "s343",
+   "chapter": "Given That",
+   "start": 2233.23,
+   "end": 2242.39,
+   "text": "But the chance the orange die is six, given the total is twelve, is one. It's certain! The only way to make twelve is double six."
+  },
+  {
+   "id": "s344",
+   "chapter": "Given That",
+   "start": 2242.84,
+   "end": 2246.68,
+   "text": "Same two things. Swapped around. Completely different answers."
+  },
+  {
+   "id": "s345",
+   "chapter": "Given That",
+   "start": 2247.88,
+   "end": 2254.81,
+   "text": "Here's an everyday version. Most professional basketball players are tall. But most tall people are not professional basketball players."
+  },
+  {
+   "id": "s346",
+   "chapter": "Given That",
+   "start": 2255.26,
+   "end": 2262.58,
+   "text": "Here's one more everyday example. In a class, twelve of the thirty students wear glasses, and eight of those twelve are girls."
+  },
+  {
+   "id": "s347",
+   "chapter": "Given That",
+   "start": 2263.03,
+   "end": 2274.87,
+   "text": "Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds."
+  },
+  {
+   "id": "s333a",
+   "chapter": "Given That",
+   "start": 2275.87,
+   "end": 2291.15,
+   "text": "Cards work the same way. If you're told the top card is a picture card, a jack, a queen or a king, what's the chance it's a king? The world shrinks to twelve picture cards. Four of them are kings. Four twelfths, one third."
+  },
+  {
+   "id": "s348",
+   "chapter": "Given That",
+   "start": 2291.6,
+   "end": 2297.86,
+   "text": "Always ask, which world did the clue put me in? That world goes on the bottom of your fraction."
+  },
+  {
+   "id": "s349",
+   "chapter": "Expected Value",
+   "start": 2298.86,
+   "end": 2307.81,
+   "text": "Let's go back to the fair. A stall has a game. You pay two tokens to roll two dice. If the total is seven, you win ten tokens."
+  },
+  {
+   "id": "s350",
+   "chapter": "Expected Value",
+   "start": 2308.26,
+   "end": 2313.0,
+   "text": "Should you play? To answer that, we need one more idea. Expected value."
+  },
+  {
+   "id": "s351",
+   "chapter": "Expected Value",
+   "start": 2313.45,
+   "end": 2317.98,
+   "text": "Expected value is the average result you'd get per game, if you played many, many times."
+  },
+  {
+   "id": "s352",
+   "chapter": "Expected Value",
+   "start": 2318.43,
+   "end": 2322.46,
+   "text": "Let's start with something simple. What's the average number you roll on one die?"
+  },
+  {
+   "id": "s353",
+   "chapter": "Expected Value",
+   "start": 2322.91,
+   "end": 2331.0,
+   "text": "Each face comes up one sixth of the time. So add up one, two, three, four, five, and six, and divide by six."
+  },
+  {
+   "id": "s354",
+   "chapter": "Expected Value",
+   "start": 2331.45,
+   "end": 2334.52,
+   "text": "That's twenty one divided by six. Three and a half."
+  },
+  {
+   "id": "s355",
+   "chapter": "Expected Value",
+   "start": 2335.52,
+   "end": 2343.63,
+   "text": "Notice something funny. You can never actually roll three and a half. The expected value doesn't have to be a possible result. It's a long run average."
+  },
+  {
+   "id": "s356",
+   "chapter": "Expected Value",
+   "start": 2344.08,
+   "end": 2351.18,
+   "text": "For two dice, the average total is three and a half plus three and a half. Seven. Right at the peak of our mountain."
+  },
+  {
+   "id": "s357",
+   "chapter": "Expected Value",
+   "start": 2352.18,
+   "end": 2360.06,
+   "text": "Now the fair game. Each game, you win ten tokens one sixth of the time, because seven has a one sixth chance."
+  },
+  {
+   "id": "s358",
+   "chapter": "Expected Value",
+   "start": 2360.51,
+   "end": 2365.85,
+   "text": "So on average, you win ten times one sixth. That's about one point six seven tokens per game."
+  },
+  {
+   "id": "s359",
+   "chapter": "Expected Value",
+   "start": 2366.3,
+   "end": 2368.77,
+   "text": "But you pay two tokens every single time."
+  },
+  {
+   "id": "s360",
+   "chapter": "Expected Value",
+   "start": 2369.22,
+   "end": 2372.96,
+   "text": "So on average, you lose about one third of a token per game."
+  },
+  {
+   "id": "s361",
+   "chapter": "Expected Value",
+   "start": 2373.96,
+   "end": 2381.52,
+   "text": "Play once, and you might win ten tokens and feel brilliant. But play sixty games, and you'd expect to be down about twenty tokens."
+  },
+  {
+   "id": "s362",
+   "chapter": "Expected Value",
+   "start": 2381.97,
+   "end": 2388.4,
+   "text": "That's the quiet secret of almost every game at a fair. The expected value is a little bit in the stall's favour."
+  },
+  {
+   "id": "s363",
+   "chapter": "Expected Value",
+   "start": 2389.4,
+   "end": 2399.4,
+   "text": "For the game to be fair, the expected win should equal the cost. Here, that would mean a price of ten sixths, about one point six seven tokens."
+  },
+  {
+   "id": "s364",
+   "chapter": "Expected Value",
+   "start": 2399.85,
+   "end": 2408.11,
+   "text": "Let's try one more. Your class sells one hundred raffle tickets, at one token each. There's one prize, worth fifty tokens."
+  },
+  {
+   "id": "s365",
+   "chapter": "Expected Value",
+   "start": 2408.56,
+   "end": 2415.51,
+   "text": "If you buy one ticket, your chance of winning is one in a hundred. So your expected win is fifty times one hundredth. Half a token."
+  },
+  {
+   "id": "s366",
+   "chapter": "Expected Value",
+   "start": 2415.96,
+   "end": 2422.77,
+   "text": "You paid one token, and you expect half a token back. So on average, you lose half a token per ticket."
+  },
+  {
+   "id": "s367",
+   "chapter": "Expected Value",
+   "start": 2423.22,
+   "end": 2431.95,
+   "text": "But that's fine for a raffle! The extra money goes to the class trip. Expected value doesn't tell you what to do. It tells you what it costs, on average."
+  },
+  {
+   "id": "s368",
+   "chapter": "Expected Value",
+   "start": 2432.95,
+   "end": 2438.94,
+   "text": "Expected value is how you decide, using probability, whether something is worth it in the long run."
+  },
+  {
+   "id": "s369",
+   "chapter": "Expected Value",
+   "start": 2439.39,
+   "end": 2443.37,
+   "text": "But remember, it's about the long run. A single game can go either way."
+  },
+  {
+   "id": "s370",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2444.37,
+   "end": 2451.63,
+   "text": "So far, we've always counted outcomes. But some things can't be counted, because there are too many possibilities to list."
+  },
+  {
+   "id": "s371",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2452.08,
+   "end": 2459.06,
+   "text": "Imagine a bus that comes exactly every ten minutes. You walk to the stop at a random moment, without checking the timetable."
+  },
+  {
+   "id": "s372",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2459.51,
+   "end": 2461.52,
+   "text": "What's the chance you wait less than three minutes?"
+  },
+  {
+   "id": "s373",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2461.97,
+   "end": 2470.44,
+   "text": "You could arrive at any moment in those ten minutes. Not just whole minutes, but any split second. There are endless possibilities."
+  },
+  {
+   "id": "s374",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2470.89,
+   "end": 2480.53,
+   "text": "So instead of counting, we measure. The good arrival times are the last three minutes before the bus comes. That's a stretch three minutes long, out of ten."
+  },
+  {
+   "id": "s375",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2480.98,
+   "end": 2484.18,
+   "text": "Three out of ten. A probability of three tenths."
+  },
+  {
+   "id": "s376",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2485.18,
+   "end": 2491.39,
+   "text": "It's the same recipe, just with lengths instead of counts. The length you want, divided by the total length."
+  },
+  {
+   "id": "s377",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2491.84,
+   "end": 2500.72,
+   "text": "And it works with areas too. Throw a dart at a square board, landing at a random spot. The board has a circle drawn on it that fills half the area."
+  },
+  {
+   "id": "s378",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2501.17,
+   "end": 2506.72,
+   "text": "Then the chance of landing inside the circle is one half. Area you want, divided by total area."
+  },
+  {
+   "id": "s379",
+   "chapter": "Measuring Instead of Counting",
+   "start": 2507.72,
+   "end": 2516.03,
+   "text": "Counting, measuring lengths, measuring areas. It's all the same idea. The part you want, out of the whole."
+  },
+  {
+   "id": "s380",
+   "chapter": "More Dice, New Shapes",
+   "start": 2516.83,
+   "end": 2522.92,
+   "text": "Let's go back to our dice mountain, and ask one more question. What happens if we roll more dice?"
+  },
+  {
+   "id": "s381",
+   "chapter": "More Dice, New Shapes",
+   "start": 2523.37,
+   "end": 2529.33,
+   "text": "With one die, every total from one to six is equally likely. The chart is flat, like a table."
+  },
+  {
+   "id": "s382",
+   "chapter": "More Dice, New Shapes",
+   "start": 2529.78,
+   "end": 2535.08,
+   "text": "With two dice, it becomes a triangle. A pointy mountain, peaking at seven."
+  },
+  {
+   "id": "s383",
+   "chapter": "More Dice, New Shapes",
+   "start": 2535.53,
+   "end": 2546.02,
+   "text": "With three dice, there are six times six times six, two hundred and sixteen outcomes. And the chart starts to look rounder, with the peak at ten and eleven."
+  },
+  {
+   "id": "s384",
+   "chapter": "More Dice, New Shapes",
+   "start": 2546.47,
+   "end": 2554.08,
+   "text": "Roll more and more dice, and the shape keeps getting smoother and rounder. A soft hill with a peak in the middle and gentle tails at the edges."
+  },
+  {
+   "id": "s385",
+   "chapter": "More Dice, New Shapes",
+   "start": 2554.53,
+   "end": 2562.13,
+   "text": "That shape has a famous name. The bell curve. And it appears again and again in nature, from people's heights to measurement errors."
+  },
+  {
+   "id": "s386",
+   "chapter": "More Dice, New Shapes",
+   "start": 2563.33,
+   "end": 2573.01,
+   "text": "Why? Because when lots of small random things add together, extreme results need everything to go the same way, which is rare. Middle results can happen in many more ways."
+  },
+  {
+   "id": "s387",
+   "chapter": "More Dice, New Shapes",
+   "start": 2573.46,
+   "end": 2577.29,
+   "text": "It's the exact same reason seven beats twelve. Just with more dice."
+  },
+  {
+   "id": "s388",
+   "chapter": "Practice Round",
+   "start": 2578.09,
+   "end": 2584.96,
+   "text": "Time for a quick practice round. I'll ask a question, you pause the video if you like, and try it yourself. Then we'll check together."
+  },
+  {
+   "id": "s389",
+   "chapter": "Practice Round",
+   "start": 2585.41,
+   "end": 2593.71,
+   "text": "Question one. A jar has four green sweets and six yellow sweets. You pick one without looking. What's the chance it's green?"
+  },
+  {
+   "id": "s390",
+   "chapter": "Practice Round",
+   "start": 2596.71,
+   "end": 2602.65,
+   "text": "Count what you want, four green. Count everything, ten sweets. Four tenths, which is two fifths."
+  },
+  {
+   "id": "s391",
+   "chapter": "Practice Round",
+   "start": 2603.65,
+   "end": 2607.6,
+   "text": "Question two. With two dice, what's the chance of a total of ten?"
+  },
+  {
+   "id": "s392",
+   "chapter": "Practice Round",
+   "start": 2610.6,
+   "end": 2619.39,
+   "text": "Ten can be made by four and six, five and five, and six and four. Three squares. Three out of thirty six, which is one twelfth."
+  },
+  {
+   "id": "s393",
+   "chapter": "Practice Round",
+   "start": 2620.39,
+   "end": 2624.09,
+   "text": "Question three. So what's the chance of not getting a total of ten?"
+  },
+  {
+   "id": "s394",
+   "chapter": "Practice Round",
+   "start": 2627.09,
+   "end": 2630.61,
+   "text": "Flip it around. One minus one twelfth. Eleven twelfths."
+  },
+  {
+   "id": "s395",
+   "chapter": "Practice Round",
+   "start": 2631.61,
+   "end": 2636.45,
+   "text": "Question four. You flip three coins. What's the chance of at least one head?"
+  },
+  {
+   "id": "s396",
+   "chapter": "Practice Round",
+   "start": 2639.45,
+   "end": 2649.17,
+   "text": "At least one means flip it around. The opposite is no heads at all, which is tails tails tails. One out of eight. So at least one head is seven eighths."
+  },
+  {
+   "id": "s397",
+   "chapter": "Practice Round",
+   "start": 2650.17,
+   "end": 2654.72,
+   "text": "Question five. With two dice, what's the chance that both dice show an even number?"
+  },
+  {
+   "id": "s398",
+   "chapter": "Practice Round",
+   "start": 2657.72,
+   "end": 2668.75,
+   "text": "Each die is even half the time, and the dice are independent. One half times one half is one quarter. On the grid, that's nine squares out of thirty six."
+  },
+  {
+   "id": "s399",
+   "chapter": "Practice Round",
+   "start": 2669.75,
+   "end": 2675.34,
+   "text": "Question six. Your friend says the total of two dice is four. What's the chance it was a double?"
+  },
+  {
+   "id": "s400",
+   "chapter": "Practice Round",
+   "start": 2678.34,
+   "end": 2689.77,
+   "text": "Shrink the world. A total of four comes from one and three, two and two, and three and one. Three squares. Only two and two is a double. One third."
+  },
+  {
+   "id": "s401",
+   "chapter": "Practice Round",
+   "start": 2690.77,
+   "end": 2699.66,
+   "text": "Question seven. A spinner has four equal parts showing one, two, three and six points. What's the expected number of points per spin?"
+  },
+  {
+   "id": "s402",
+   "chapter": "Practice Round",
+   "start": 2702.66,
+   "end": 2707.84,
+   "text": "Add them up, twelve, and divide by four. Three points per spin, on average."
+  },
+  {
+   "id": "s398a",
+   "chapter": "Practice Round",
+   "start": 2708.84,
+   "end": 2715.26,
+   "text": "Question eight. You draw one card from a well shuffled deck. What's the chance it's a red card, or a queen?"
+  },
+  {
+   "id": "s398b",
+   "chapter": "Practice Round",
+   "start": 2718.26,
+   "end": 2732.29,
+   "text": "Red cards are hearts and diamonds, twenty six of them. Queens, four. But two queens are red, so don't count them twice. Twenty six plus four minus two is twenty eight. Twenty eight out of fifty two, which is seven thirteenths."
+  },
+  {
+   "id": "s398c",
+   "chapter": "Practice Round",
+   "start": 2733.29,
+   "end": 2739.37,
+   "text": "Question nine. You roll one die three times. What's the chance of at least one six?"
+  },
+  {
+   "id": "s398d",
+   "chapter": "Practice Round",
+   "start": 2742.37,
+   "end": 2754.86,
+   "text": "Flip it around. No sixes at all is five sixths, three times. One hundred and twenty five out of two hundred and sixteen. So at least one six is ninety one out of two hundred and sixteen. About forty two percent."
+  },
+  {
+   "id": "s398e",
+   "chapter": "Practice Round",
+   "start": 2755.86,
+   "end": 2764.36,
+   "text": "Question ten. A spinner is three quarters red. You spin it twice. What's the chance both spins land on red?"
+  },
+  {
+   "id": "s398f",
+   "chapter": "Practice Round",
+   "start": 2767.36,
+   "end": 2774.17,
+   "text": "The spins are independent, so multiply. Three quarters times three quarters is nine sixteenths. A little more than half."
+  },
+  {
+   "id": "s403",
+   "chapter": "Practice Round",
+   "start": 2775.17,
+   "end": 2781.03,
+   "text": "How did you do? If you got even half of those ten, you're already thinking like a probability person."
+  },
+  {
+   "id": "s404",
+   "chapter": "Common Mistakes",
+   "start": 2781.83,
+   "end": 2787.97,
+   "text": "You now know more probability than most people. So let's protect you from the traps that catch almost everyone."
+  },
+  {
+   "id": "s405",
+   "chapter": "Common Mistakes",
+   "start": 2788.42,
+   "end": 2790.86,
+   "text": "Trap number one. I'm due for a win."
+  },
+  {
+   "id": "s406",
+   "chapter": "Common Mistakes",
+   "start": 2791.31,
+   "end": 2796.25,
+   "text": "A coin lands heads five times in a row. Surely tails is coming now, right?"
+  },
+  {
+   "id": "s407",
+   "chapter": "Common Mistakes",
+   "start": 2796.7,
+   "end": 2801.89,
+   "text": "No. The coin has no memory. The chance of tails on the next flip is still one half."
+  },
+  {
+   "id": "s408",
+   "chapter": "Common Mistakes",
+   "start": 2802.89,
+   "end": 2807.11,
+   "text": "Each flip is independent. The past doesn't push the future back into balance."
+  },
+  {
+   "id": "s409",
+   "chapter": "Common Mistakes",
+   "start": 2807.56,
+   "end": 2819.77,
+   "text": "But wait, doesn't the law of large numbers say things even out? It does, but not by correcting. Over a huge number of flips, five extra heads just get diluted, like a drop of ink in an ocean."
+  },
+  {
+   "id": "s410",
+   "chapter": "Common Mistakes",
+   "start": 2820.22,
+   "end": 2829.2,
+   "text": "In fact, the sequence heads, heads, heads, heads, heads, tails, is exactly as likely as six heads in a row. One in sixty four each."
+  },
+  {
+   "id": "s411",
+   "chapter": "Common Mistakes",
+   "start": 2830.2,
+   "end": 2833.03,
+   "text": "This mistake has a name. The gambler's fallacy."
+  },
+  {
+   "id": "s412",
+   "chapter": "Common Mistakes",
+   "start": 2833.48,
+   "end": 2842.28,
+   "text": "And here's a sneaky cousin of this trap. Judging from too few tries. A new player scores three shots out of three, and everyone says they never miss."
+  },
+  {
+   "id": "s413",
+   "chapter": "Common Mistakes",
+   "start": 2842.73,
+   "end": 2851.69,
+   "text": "But three tries is a tiny sample. Remember the coin that gave seven heads out of ten. Small samples wobble. Wait for many tries before you trust a pattern."
+  },
+  {
+   "id": "s414",
+   "chapter": "Common Mistakes",
+   "start": 2852.69,
+   "end": 2856.09,
+   "text": "Trap number two. There are two outcomes, so it's fifty fifty."
+  },
+  {
+   "id": "s415",
+   "chapter": "Common Mistakes",
+   "start": 2856.54,
+   "end": 2862.2,
+   "text": "Will I win the lottery? Either I win, or I don't. Two outcomes. So fifty fifty?"
+  },
+  {
+   "id": "s416",
+   "chapter": "Common Mistakes",
+   "start": 2862.65,
+   "end": 2869.57,
+   "text": "Of course not. Two possible results doesn't mean two equally likely results. Remember the spinner."
+  },
+  {
+   "id": "s417",
+   "chapter": "Common Mistakes",
+   "start": 2870.02,
+   "end": 2873.92,
+   "text": "Before you count, always check that your outcomes are equally likely."
+  },
+  {
+   "id": "s418",
+   "chapter": "Common Mistakes",
+   "start": 2874.92,
+   "end": 2877.44,
+   "text": "Trap number three. Adding when you shouldn't."
+  },
+  {
+   "id": "s419",
+   "chapter": "Common Mistakes",
+   "start": 2877.89,
+   "end": 2887.22,
+   "text": "We saw it already. Four rolls at one sixth each is not four sixths, because the events overlap. If they can happen together, adding counts too much."
+  },
+  {
+   "id": "s420",
+   "chapter": "Common Mistakes",
+   "start": 2887.67,
+   "end": 2894.32,
+   "text": "A quick sanity check helps here. If your answer is more than one, or more than one hundred percent, something has gone wrong."
+  },
+  {
+   "id": "s421",
+   "chapter": "Common Mistakes",
+   "start": 2895.32,
+   "end": 2897.74,
+   "text": "Trap number four. Flipping the given."
+  },
+  {
+   "id": "s422",
+   "chapter": "Common Mistakes",
+   "start": 2898.19,
+   "end": 2905.96,
+   "text": "The chance of A given B is not the same as the chance of B given A. Tall given basketball player is very different from basketball player given tall."
+  },
+  {
+   "id": "s423",
+   "chapter": "Common Mistakes",
+   "start": 2906.41,
+   "end": 2913.27,
+   "text": "Whenever you hear a statement with given, if, or among, pause and ask, which group am I really looking at?"
+  },
+  {
+   "id": "s424",
+   "chapter": "Common Mistakes",
+   "start": 2914.27,
+   "end": 2918.19,
+   "text": "And one bonus trap. Thinking that unlikely means impossible."
+  },
+  {
+   "id": "s425",
+   "chapter": "Common Mistakes",
+   "start": 2918.64,
+   "end": 2925.8,
+   "text": "A one in a million event is very rare for you. But in a country of tens of millions of people, you'd expect it to happen to dozens of them."
+  },
+  {
+   "id": "s426",
+   "chapter": "Common Mistakes",
+   "start": 2926.25,
+   "end": 2933.83,
+   "text": "So when you hear about an amazing coincidence, remember, with enough people and enough chances, surprising things are expected."
+  },
+  {
+   "id": "s427",
+   "chapter": "Recipe",
+   "start": 2934.83,
+   "end": 2937.75,
+   "text": "Let's put everything together. Here's your probability recipe."
+  },
+  {
+   "id": "s428",
+   "chapter": "Recipe",
+   "start": 2938.2,
+   "end": 2945.38,
+   "text": "Step one. List everything that could happen. Use a grid or a tree, and make sure every outcome is equally likely."
+  },
+  {
+   "id": "s429",
+   "chapter": "Recipe",
+   "start": 2945.83,
+   "end": 2950.15,
+   "text": "Step two. Count the outcomes you want, and divide by all the outcomes."
+  },
+  {
+   "id": "s430",
+   "chapter": "Recipe",
+   "start": 2950.6,
+   "end": 2953.42,
+   "text": "Step three. For not, take it away from one."
+  },
+  {
+   "id": "s431",
+   "chapter": "Recipe",
+   "start": 2953.87,
+   "end": 2958.21,
+   "text": "Step four. For or, add, and remove the overlap."
+  },
+  {
+   "id": "s432",
+   "chapter": "Recipe",
+   "start": 2958.66,
+   "end": 2964.12,
+   "text": "Step five. For and, multiply along the path, using the updated chance."
+  },
+  {
+   "id": "s433",
+   "chapter": "Recipe",
+   "start": 2964.57,
+   "end": 2970.45,
+   "text": "Step six. For at least one, flip it around. One, minus the chance of none."
+  },
+  {
+   "id": "s434",
+   "chapter": "Recipe",
+   "start": 2970.9,
+   "end": 2976.11,
+   "text": "Step seven. For a given, shrink the world first, then count."
+  },
+  {
+   "id": "s435",
+   "chapter": "Recipe",
+   "start": 2976.56,
+   "end": 2982.2,
+   "text": "And step eight. Remember, probability describes the long run. Not the next single try."
+  },
+  {
+   "id": "s436",
+   "chapter": "Recipe",
+   "start": 2983.2,
+   "end": 2992.63,
+   "text": "Let's run the recipe one last time, on our game night question. Two dice, so six times six, thirty six equally likely outcomes."
+  },
+  {
+   "id": "s437",
+   "chapter": "Recipe",
+   "start": 2993.08,
+   "end": 3001.07,
+   "text": "Twelve has one way, seven has six ways. Count and divide. One over thirty six, against six over thirty six."
+  },
+  {
+   "id": "s438",
+   "chapter": "Recipe",
+   "start": 3001.52,
+   "end": 3007.9,
+   "text": "And over many game nights, your friend will win this race about six times as often as you. Unless you change the rules."
+  },
+  {
+   "id": "s439",
+   "chapter": "Recipe",
+   "start": 3008.9,
+   "end": 3012.56,
+   "text": "You can't control the dice. But now, you can understand them."
+  },
+  {
+   "id": "s440",
+   "chapter": "Subscribe",
+   "start": 3014.06,
+   "end": 3022.19,
+   "text": "Look around your world, and notice how often you're quietly guessing the odds. The weather, the bus, a quiz, a game."
+  },
+  {
+   "id": "s441",
+   "chapter": "Subscribe",
+   "start": 3022.79,
+   "end": 3028.45,
+   "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together."
+  },
+  {
+   "id": "s442",
+   "chapter": "Subscribe",
+   "start": 3029.25,
+   "end": 3034.3,
+   "text": "For more mathematics, explained simply and visually, subscribe, and I will see you in the next video."
+  }
+ ]
+}

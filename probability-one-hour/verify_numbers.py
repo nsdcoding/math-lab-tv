@@ -97,6 +97,14 @@ assert F(1 + 2 + 3 + 6, 4) == 3
 assert F(1, 2) ** 5 == F(1, 32) and F(1, 2) ** 6 == F(1, 64)
 assert 30_000_000 * F(1, 1_000_000) == 30   # "tens of millions" × one-in-a-million → dozens
 
+# additions after voicing
+assert round(100 * F(1, 6)) == 17 and round(100 * F(1, 36)) == 3
+assert Pc(lambda c: c[1] in "HD" or c[0] == 12) == F(28, 52) == F(7, 13)
+assert 1 - F(5, 6) ** 3 == F(91, 216) and round(float(F(91, 216)) * 100) == 42
+assert F(3, 4) ** 2 == F(9, 16) and round(float(F(9, 16)) * 100) == 56
+assert F(sum(1 for c in deck if c[0] == 13), sum(1 for c in deck if c[0] >= 11)) == F(1, 3)
+assert 15 + 15 + 7 + 63 == 100
+
 # streak claim: in 20 fair flips, a run of 4+ heads somewhere happens in "about half" of runs
 def p_no_run(n, k):   # P(no run of k heads in n flips), exact DP over the current run length
     st = {0: F(1)}

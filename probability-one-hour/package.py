@@ -12,11 +12,12 @@ sys.path.insert(0, str(HERE.parent / "channel"))
 import channel as ch  # noqa: E402
 
 TITLES = [
+    "Learn PROBABILITY in One Hour (Even If You're Bad at Math)",
     "Give Me One Hour and You'll FINALLY Understand PROBABILITY",
     "Give Me One Hour and You'll FINALLY Understand PROBABILITY (From Absolute Zero)",
     "Probability From Absolute Zero: Give Me One Hour and You'll FINALLY Get It",
 ]
-TITLE = TITLES[0]   # recommended: the owner's title, keyword in caps
+TITLE = TITLES[0]   # the title the owner uploaded with
 
 CH_TITLES = {
     "Game Night": "Game night: why 7 beats 12 six times over",

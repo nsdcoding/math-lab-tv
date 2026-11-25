@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Two 1280x720 thumbnails (A/B) for YouTube Test & compare, rendered from HTML with Playwright.
 Owner override for this video: no ML / DS / Finance / CS tiles (everyday examples only).
-Both lead with the keyword headline "PROBABILITY / EXPLAINED VISUALLY" and the colour-coded counting rule
+A: "PROBABILITY / MADE EASY", B: "PROBABILITY / FROM ZERO" (owner's picks); both carry and the colour-coded counting rule
 (typeset with LaTeX -> SVG), plus a real diagram from the running example (two dice):
   A: the 6x6 dice grid with the seven-diagonal lit, "7 beats 12 six times over".
   B: the three magic words NOT / OR / AND and the two-dice "mountain" of totals.
@@ -83,8 +83,7 @@ def thumb_a():
     grid, gw, gh = dice_grid_svg(60)
     body = f"""
 <div class="h" style="position:absolute;left:50px;top:46px;font-size:112px;color:{C['violet']}">PROBABILITY</div>
-<div class="h" style="position:absolute;left:54px;top:168px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">EXPLAINED VISUALLY</div>
-<div style="position:absolute;left:56px;top:262px;font-size:34px;font-weight:800;color:{C['ink']}">from absolute zero</div>
+<div class="h" style="position:absolute;left:54px;top:168px;font-size:84px;letter-spacing:-2px;color:{C['warn']}">MADE EASY</div>
 <div class="card" style="position:absolute;left:50px;top:330px;width:610px;height:{fh + 50:.0f}px">
   <div style="position:absolute;left:44px;top:25px">{f}</div></div>
 <div style="position:absolute;left:54px;top:{330 + fh + 50 + 28:.0f}px" class="badge">Explained in {MINS} minutes</div>
@@ -99,7 +98,7 @@ def thumb_b():
     f, fh = formula_svg(440)
     body = f"""
 <div class="h" style="position:absolute;left:50px;top:40px;font-size:132px;color:{C['violet']}">PROBABILITY</div>
-<div class="h" style="position:absolute;left:54px;top:178px;font-size:60px;letter-spacing:-1px;color:{C['warn']}">EXPLAINED VISUALLY</div>
+<div class="h" style="position:absolute;left:54px;top:170px;font-size:84px;letter-spacing:-2px;color:{C['warn']}">FROM ZERO</div>
 <div style="position:absolute;left:54px;top:282px;display:flex;gap:18px">
   {"".join(f'<div style="border:4px solid {c};color:{c};border-radius:16px;padding:6px 22px;font-size:46px;font-weight:900">{w}</div>' for w, c in (("NOT", C["blue"]), ("OR", C["aqua"]), ("AND", C["orange"])))}
 </div>

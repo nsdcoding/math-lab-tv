@@ -3,6 +3,6 @@ Language: English · Captions: upload out/captions.srt (English)
 Audience: Not made for kids
 License: Standard YouTube License · Allow embedding: on
 Chapters: automatic from the description timestamps (first at 0:00, all ≥ 10 s)
-Thumbnails: upload thumbnail_A.png and thumbnail_B.png to "Test & compare"
+Thumbnails: thumbnail_C.png (simple keyword + formula) as the main one; thumbnail_A.png and thumbnail_B.png for "Test & compare"
 End screen: link the next video in the last 20 s · Comments: on · pin pinned_comment.txt
 Video length: 25:30 (1530.9 s)

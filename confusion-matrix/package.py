@@ -131,7 +131,7 @@ Language: English · Captions: upload out/captions.srt (English)
 Audience: Not made for kids
 License: Standard YouTube License · Allow embedding: on
 Chapters: automatic from the description timestamps (first at 0:00, all ≥ 10 s)
-Thumbnails: upload thumbnail_A.png and thumbnail_B.png to "Test & compare"
+Thumbnails: thumbnail_C.png (simple keyword + formula) as the main one; thumbnail_A.png and thumbnail_B.png for "Test & compare"
 End screen: link the next video in the last 20 s · Comments: on · pin pinned_comment.txt
 Video length: {ts(total)} ({total:.1f} s)"""
     (OUT / "title.txt").write_text("\n".join(f"{'★ ' if t == TITLE else '  '}{t}  ({len(t)} chars)" for t in TITLES) + "\n")

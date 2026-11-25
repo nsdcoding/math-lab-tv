@@ -30,19 +30,19 @@ HOOK_HTML = ("<span style='color:#fab219'>99% accurate</span> … and <span styl
 A = dict(TP=90, FN=10, FP=30, TN=9870)
 
 
-def formula_svg(width):
+def formula_svg(width, tex=None, name="f"):
     """Typeset the formula with LaTeX (colours: posterior violet, likelihood aqua, prior yellow)."""
     d = HERE / "build" / "tex"; d.mkdir(parents=True, exist_ok=True)
-    (d / "f.tex").write_text(r"""\documentclass[preview,border=2pt]{standalone}
+    (d / f"{name}.tex").write_text(r"""\documentclass[preview,border=2pt]{standalone}
 \usepackage{xcolor,amsmath}
 \definecolor{vio}{HTML}{9085E9}\definecolor{aq}{HTML}{199E70}\definecolor{wa}{HTML}{FAB219}\definecolor{ink}{HTML}{F0EFEC}\definecolor{or}{HTML}{D95926}\definecolor{bl}{HTML}{3987E5}
 \begin{document}
-\color{ink}$\displaystyle """ + FORMULA_TEX + r"""$
+\color{ink}$\displaystyle """ + (tex or FORMULA_TEX) + r"""$
 \end{document}
 """)
-    subprocess.run(["latex", "-interaction=nonstopmode", "f.tex"], cwd=d, check=True, capture_output=True)
-    subprocess.run(["dvisvgm", "--no-fonts", "--exact", "f.dvi", "-o", "formula.svg"], cwd=d, check=True, capture_output=True)
-    svg = (d / "formula.svg").read_text()
+    subprocess.run(["latex", "-interaction=nonstopmode", f"{name}.tex"], cwd=d, check=True, capture_output=True)
+    subprocess.run(["dvisvgm", "--no-fonts", "--exact", f"{name}.dvi", "-o", f"{name}.svg"], cwd=d, check=True, capture_output=True)
+    svg = (d / f"{name}.svg").read_text()
     svg = svg[svg.index("<svg"):]
     vb = [float(x) for x in re.search(r"viewBox='([^']+)'", svg).group(1).split()]
     h = width * vb[3] / vb[2]
@@ -160,9 +160,43 @@ def thumb_b():
     return BASE % dict(C, body=body)
 
 
+PREC_TEX = r"{\color{vio}\mathbf{Precision}} = \frac{{\color{aq}\mathrm{TP}}}{{\color{aq}\mathrm{TP}} + {\color{or}\mathrm{FP}}}"
+REC_TEX = r"{\color{or}\mathbf{Recall}} = \frac{{\color{aq}\mathrm{TP}}}{{\color{aq}\mathrm{TP}} + {\color{bl}\mathrm{FN}}}"
+
+
+def thumb_c():
+    """Simple keyword thumbnail: CONFUSION MATRIX / EXPLAINED IN DETAIL, the 2x2 grid of TP FN FP TN,
+    and the precision and recall formulas, colour-coded like the grid."""
+    pf, ph = formula_svg(420, PREC_TEX, "prec")
+    rf, rh = formula_svg(385, REC_TEX, "rec")
+    cw, chh, ox, oy = 170, 140, 70, 52
+    cells = dict(TP=(0, 0, C["aqua"], "caught"), FN=(1, 0, C["blue"], "missed"),
+                 FP=(0, 1, C["orange"], "false alarm"), TN=(1, 1, C["aqua"], "left alone"))
+    g = [f'<text x="{ox + cw * 0.5}" y="34" text-anchor="middle" font-size="24" font-weight="800" fill="{C["ink2"]}">said YES</text>',
+         f'<text x="{ox + cw * 1.5}" y="34" text-anchor="middle" font-size="24" font-weight="800" fill="{C["ink2"]}">said NO</text>',
+         f'<text x="{ox - 14}" y="{oy + chh * 0.5 + 8}" text-anchor="end" font-size="24" font-weight="800" fill="{C["ink2"]}">YES</text>',
+         f'<text x="{ox - 14}" y="{oy + chh * 1.5 + 8}" text-anchor="end" font-size="24" font-weight="800" fill="{C["ink2"]}">NO</text>']
+    for k, (c, r, col, sub) in cells.items():
+        x, y = ox + c * cw, oy + r * chh
+        g.append(f'<rect x="{x + 6}" y="{y + 6}" width="{cw - 12}" height="{chh - 12}" rx="16" fill="{col}" fill-opacity="0.18" stroke="{col}" stroke-width="4"/>')
+        g.append(f'<text x="{x + cw / 2}" y="{y + 78}" text-anchor="middle" font-size="62" font-weight="900" fill="{col}">{k}</text>')
+        g.append(f'<text x="{x + cw / 2}" y="{y + 112}" text-anchor="middle" font-size="20" font-weight="700" fill="{C["ink2"]}">{sub}</text>')
+    gw, gh = ox + 2 * cw + 10, oy + 2 * chh + 10
+    body = f"""
+<div class="h" style="position:absolute;left:52px;top:50px;font-size:118px;color:{C['violet']}">CONFUSION<br>MATRIX</div>
+<div class="h" style="position:absolute;left:56px;top:282px;font-size:58px;letter-spacing:-1px;color:{C['warn']}">EXPLAINED IN DETAIL</div>
+<svg style="position:absolute;left:{1280 - gw - 40}px;top:40px" width="{gw}" height="{gh}" viewBox="0 0 {gw} {gh}">{"".join(g)}</svg>
+<div class="card" style="position:absolute;left:50px;top:410px;width:1000px;height:220px">
+  <div style="position:absolute;left:36px;top:{110 - ph / 2:.0f}px">{pf}</div>
+  <div style="position:absolute;left:500px;top:40px;width:3px;height:140px;background:#3a3a37"></div>
+  <div style="position:absolute;left:560px;top:{110 - rh / 2:.0f}px">{rf}</div>
+</div>"""
+    return BASE % dict(C, body=body)
+
+
 if __name__ == "__main__":
     shots = []
-    for name, html in (("thumbnail_A.png", thumb_a()), ("thumbnail_B.png", thumb_b())):
+    for name, html in (("thumbnail_A.png", thumb_a()), ("thumbnail_B.png", thumb_b()), ("thumbnail_C.png", thumb_c())):
         h = HERE / "build" / name.replace(".png", ".html"); h.write_text(html); shots.append((str(h.resolve()), str(OUT / name)))
     js = HERE / "build" / "shot.js"
     js.write_text("""const { chromium } = require('playwright');
@@ -171,6 +205,6 @@ for (const [src, dst] of JSON.parse(process.argv[2])) { await p.goto('file://' +
 await b.close(); })();""")
     subprocess.run(["node", str(js), json.dumps(shots)], check=True)
     from PIL import Image
-    for n in ("A", "B"):
+    for n in ("A", "B", "C"):
         im = Image.open(OUT / f"thumbnail_{n}.png"); print(n, im.size)
         im.resize((320, 180), Image.LANCZOS).save(HERE / "build" / f"thumb_{n}_phone.png")

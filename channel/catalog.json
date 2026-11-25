@@ -2197,7 +2197,7 @@
    "series": "probability",
    "order": 9,
    "phase": null,
-   "status": "in-production",
+   "status": "produced",
    "visual": "an orange die and a blue die on a 6x6 outcome grid that gets shaded, split, and shrunk for every rule; the triangle 'mountain' of totals; trees, unit-square areas and settling simulation curves",
    "covers": "what a probability is (0 to 1, fraction/decimal/percent, long-run meaning), counting equally likely outcomes, trees, the multiplication rule and orderings, the two-dice grid and its distribution, the law of large numbers, NOT / odds / OR / AND, independence, at least one, two-step trees, conditional probability, measuring (length/area), expected value, the bell-curve shape, a practice round, and the classic traps",
    "links": {

@@ -1,0 +1,3117 @@
+[
+  {
+    "id": "s001",
+    "chapter": "Game Night",
+    "text": "It's game night. You and your friend are one move away from winning a board game.",
+    "visual": "Line-art table with a game board; two player tokens near the finish square; two dice (orange, blue) sit in the middle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s002",
+    "chapter": "Game Night",
+    "text": "To win, you need to roll exactly twelve with two dice.",
+    "visual": "Your token glows; a chip 'you need: 12' appears; the dice show a ghosted 6 and 6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s003",
+    "chapter": "Game Night",
+    "text": "Your friend needs exactly seven.",
+    "visual": "Friend's token glows; chip 'friend needs: 7'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s004",
+    "chapter": "Game Night",
+    "text": "You each get one roll. So, who is more likely to win?",
+    "visual": "Both chips side by side with a big '?' between them.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s005",
+    "chapter": "Game Night",
+    "text": "A lot of people say it's the same. Twelve is one number, seven is one number. Every number is just as likely, right?",
+    "visual": "A balance beam: '12' on one pan, '7' on the other, sitting level; a grey 'gut feeling' label.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s006",
+    "chapter": "Game Night",
+    "text": "Wrong. Seven comes up six times more often than twelve.",
+    "visual": "The beam slams down on the 7 side; a violet tag '6 times more likely' drops in.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s007",
+    "chapter": "Game Night",
+    "text": "Six times. Same dice. Same table. Same luck.",
+    "visual": "Six little '7' tokens stack on the left, one '12' token on the right, on a count axis 0–6.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s008",
+    "chapter": "Game Night",
+    "text": "That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath.",
+    "visual": "The dice dissolve into a 6 by 6 grid of squares that briefly flashes the diagonal pattern.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s009",
+    "chapter": "Game Night",
+    "text": "And here's the promise. Give me one hour, and starting from absolute zero, you will finally understand probability.",
+    "visual": "A clock icon sweeps from 0 to 60 minutes.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s010",
+    "chapter": "Game Night",
+    "text": "No scary formulas without pictures. No skipped steps. Just counting, and seeing.",
+    "visual": "Three chips pop: 'no scary formulas' · 'no skipped steps' · 'just counting'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s011",
+    "chapter": "Game Night",
+    "text": "Let's begin.",
+    "visual": "Title card: 'PROBABILITY' (violet) with subtitle 'from absolute zero, in one hour'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s012",
+    "chapter": "Welcome",
+    "text": "Welcome to Math Lab TV. Where math is something you can see.",
+    "visual": "Logo (violet rounded square with a green bell curve) + MATH LAB TV + tagline 'where math is something you can see'.",
+    "pause_after": 0.7
+  },
+  {
+    "id": "s013",
+    "chapter": "Welcome",
+    "text": "Today you will learn what a probability really is, and how to find one just by counting.",
+    "visual": "Small logo top-right. Big ① (aqua); a mini 0-to-1 scale with a pointer; caption 'what probability is, and how to count it'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s014",
+    "chapter": "Welcome",
+    "text": "You will see the three little words that power almost every probability question. Not, or, and and.",
+    "visual": "Big ② (violet); three chips NOT · OR · AND; caption 'the three magic words'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s015",
+    "chapter": "Welcome",
+    "text": "And you will learn how new information changes the odds, and how to spot the traps that fool almost everyone.",
+    "visual": "Big ③ (warn); a grid shrinking to a smaller grid, then a red trap icon; caption 'new information, and the traps'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s016",
+    "chapter": "Why It Matters",
+    "text": "Before we start, why should you care about probability at all?",
+    "visual": "A question card 'Why care?' centered.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s017",
+    "chapter": "Why It Matters",
+    "text": "Because you already use it, every single day, without noticing.",
+    "visual": "Four empty cards slide in a row.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s018",
+    "chapter": "Why It Matters",
+    "text": "When the weather app says seventy percent chance of rain, and you decide to take an umbrella, that's probability.",
+    "visual": "Card 1: cloud with rain drops; a meter on a 0–100% axis fills to 70%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s019",
+    "chapter": "Why It Matters",
+    "text": "When you guess on a quiz question with four choices, and you know you have one chance in four, that's probability.",
+    "visual": "Card 2: quiz sheet with A B C D; one option circled; chip '1 in 4'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s020",
+    "chapter": "Why It Matters",
+    "text": "When you wonder if it's worth playing a game at the school fair, that's probability.",
+    "visual": "Card 3: fair stall with a spinner; a '?' over the prize.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s021",
+    "chapter": "Why It Matters",
+    "text": "When a doctor says a medicine works for most people, or a sports commentator says a team is the favourite, they're talking in probabilities too.",
+    "visual": "Two small cards: a medicine bottle 'works for most people', a trophy 'the favourite'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s022",
+    "chapter": "Why It Matters",
+    "text": "And when someone says, I've lost five times in a row, so I'm due for a win, that's a probability mistake. We'll fix that one later.",
+    "visual": "Card 4: a speech bubble 'I'm due for a win!' gets a red trap stamp.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s023",
+    "chapter": "Why It Matters",
+    "text": "Probability is simply the math of not knowing for sure.",
+    "visual": "The four cards shrink; a big phrase writes on: 'the math of not knowing for sure'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s024",
+    "chapter": "Why It Matters",
+    "text": "You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful.",
+    "visual": "A single die tumbles with a '?' (next roll), then dissolves into a bar chart outline labelled 'what tends to happen'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s025",
+    "chapter": "Why It Matters",
+    "text": "So let's build it from the very first brick.",
+    "visual": "One brick drops onto an empty base line.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s026",
+    "chapter": "What Is Probability?",
+    "text": "A probability is just a number. It tells you how likely something is to happen.",
+    "visual": "A horizontal number line from 0 to 1 with ticks every 0.1, title 'how likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s027",
+    "chapter": "What Is Probability?",
+    "text": "And this number always lives between zero and one.",
+    "visual": "The ends of the line glow: '0' and '1'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s028",
+    "chapter": "What Is Probability?",
+    "text": "Zero means impossible. It will never happen.",
+    "visual": "At 0: label 'impossible' (blue); example card: a normal die showing 'roll a 7 on one die'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s029",
+    "chapter": "What Is Probability?",
+    "text": "Like rolling a seven on one ordinary die. A die only has the numbers one to six, so seven can never come up.",
+    "visual": "A die net unfolds showing faces 1–6; '7' with a red cross.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s030",
+    "chapter": "What Is Probability?",
+    "text": "One means certain. It will always happen.",
+    "visual": "At 1: label 'certain' (orange); example card 'roll a number less than 7'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s031",
+    "chapter": "What Is Probability?",
+    "text": "Like rolling a number smaller than seven on that same die. Every face works, so it's guaranteed.",
+    "visual": "All six faces get green ticks.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s032",
+    "chapter": "What Is Probability?",
+    "text": "And everything else, everything that might or might not happen, sits somewhere in between.",
+    "visual": "The middle of the line shades softly.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s033",
+    "chapter": "What Is Probability?",
+    "text": "Right in the middle, at one half, is a perfect toss-up.",
+    "visual": "Pointer at 0.5, label 'toss-up'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s034",
+    "chapter": "What Is Probability?",
+    "text": "Like flipping a coin and getting heads. Half the time yes, half the time no.",
+    "visual": "A coin flips and lands heads; a two-part bar splits 1/2 | 1/2.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s035",
+    "chapter": "What Is Probability?",
+    "text": "The closer a number is to one, the more likely it is. The closer it is to zero, the less likely.",
+    "visual": "Arrows along the line: toward 1 'more likely', toward 0 'less likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s036",
+    "chapter": "What Is Probability?",
+    "text": "Let's place a few everyday things on this line, just by feel.",
+    "visual": "Empty markers wait above the line.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s037",
+    "chapter": "What Is Probability?",
+    "text": "The sun rising tomorrow? Right up near one.",
+    "visual": "A sun icon lands near 1.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s038",
+    "chapter": "What Is Probability?",
+    "text": "Rain tomorrow, when the forecast says seventy percent? Around zero point seven.",
+    "visual": "A cloud lands at 0.7.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s039",
+    "chapter": "What Is Probability?",
+    "text": "Guessing a quiz question right with four choices? Zero point two five.",
+    "visual": "A quiz icon lands at 0.25.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s040",
+    "chapter": "What Is Probability?",
+    "text": "Winning a big lottery? So close to zero that you can't even see the gap.",
+    "visual": "A ticket icon lands at 0; a magnifier shows a tiny gap labelled 'very, very small'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s041",
+    "chapter": "What Is Probability?",
+    "text": "Now, there are three ways to write the same probability, and you'll see all three everywhere.",
+    "visual": "Three empty slots: 'fraction' · 'decimal' · 'percent'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s042",
+    "chapter": "What Is Probability?",
+    "text": "As a fraction, like one half.",
+    "visual": "Slot 1 fills: 1/2.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s043",
+    "chapter": "What Is Probability?",
+    "text": "As a decimal, like zero point five.",
+    "visual": "Slot 2 fills: 0.5.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s044",
+    "chapter": "What Is Probability?",
+    "text": "Or as a percent, like fifty percent. Percent just means out of a hundred.",
+    "visual": "Slot 3 fills: 50%; a 10 by 10 grid with 50 squares shaded.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s045",
+    "chapter": "What Is Probability?",
+    "text": "They are all the same amount. One half, zero point five, fifty percent. Three outfits, one person.",
+    "visual": "Equals signs link the three slots; they collapse into one violet point at 0.5 on the line.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s046",
+    "chapter": "What Is Probability?",
+    "text": "To change a decimal into a percent, just multiply by one hundred. Zero point two five becomes twenty five percent.",
+    "visual": "0.25 × 100 = 25% writes on; a 10 by 10 grid shades 25 squares.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s047",
+    "chapter": "What Is Probability?",
+    "text": "We'll mostly use fractions in this video, because fractions show you the counting.",
+    "visual": "The fraction slot glows warn yellow.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s048",
+    "chapter": "What Is Probability?",
+    "text": "But what does a probability actually mean? If the chance of rain is seventy percent, will it rain or not?",
+    "visual": "Cloud card returns with a '?'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s049",
+    "chapter": "What Is Probability?",
+    "text": "Here's the honest answer. A probability doesn't tell you what will happen next time.",
+    "visual": "A single day card shows '?' (one day can't be predicted).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s050",
+    "chapter": "What Is Probability?",
+    "text": "It tells you what happens in the long run. Out of many days with a forecast like this one, about seventy out of every hundred will have rain.",
+    "visual": "A calendar grid of 100 days on axes (columns 1–10, rows 1–10); 70 days turn to rain icons one row at a time.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s051",
+    "chapter": "What Is Probability?",
+    "text": "So on any one day, it might stay dry. That doesn't mean the forecast was wrong.",
+    "visual": "One dry sun day pulses; label 'still fits the 70%'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s052",
+    "chapter": "What Is Probability?",
+    "text": "Keep that idea in your pocket. Probability is about patterns over many tries, not about one single try.",
+    "visual": "Chip 'patterns over many tries' slides into a small pocket icon top-right, which stays.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s053",
+    "chapter": "What Is Probability?",
+    "text": "And where do probabilities come from? There are three main ways.",
+    "visual": "Three empty cards: 'count', 'experiment', 'judgement'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s054",
+    "chapter": "What Is Probability?",
+    "text": "One, you can count. Like a die with six equal faces. We'll do lots of this.",
+    "visual": "Card 1 fills: a die and '1/6'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s055",
+    "chapter": "What Is Probability?",
+    "text": "Two, you can experiment. Try something many times and see how often it happens. Like checking how often your bus is late over a whole term.",
+    "visual": "Card 2 fills: a tally chart of late days (illustration).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s056",
+    "chapter": "What Is Probability?",
+    "text": "And three, sometimes people simply give their best judgement, like a coach saying, I think we have a sixty percent chance of winning this match.",
+    "visual": "Card 3 fills: a coach with a speech bubble '60%?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s057",
+    "chapter": "What Is Probability?",
+    "text": "That last kind is the shakiest. In this video, we'll stick to the first two, where we can actually check our answers.",
+    "visual": "Card 3 dims; cards 1 and 2 glow.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s058",
+    "chapter": "Counting Outcomes",
+    "text": "So how do we actually find a probability? For lots of everyday questions, you just count.",
+    "visual": "Title strip 'Probability by counting'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s059",
+    "chapter": "Counting Outcomes",
+    "text": "Let's start with one die.",
+    "visual": "A single orange die rotates in.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s060",
+    "chapter": "Counting Outcomes",
+    "text": "When you roll it, there are six things that can happen. It can land on one, two, three, four, five, or six.",
+    "visual": "Six die faces line up on an axis labelled 'face' with ticks 1–6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s061",
+    "chapter": "Counting Outcomes",
+    "text": "Each of these is called an outcome. An outcome is one possible result.",
+    "visual": "Definition card: 'OUTCOME = one possible result'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s062",
+    "chapter": "Counting Outcomes",
+    "text": "And the list of all possible outcomes has a name too. It's called the sample space. That's just a fancy name for everything that could happen.",
+    "visual": "A warn-yellow box wraps all six faces; label 'sample space = everything that could happen'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s063",
+    "chapter": "Counting Outcomes",
+    "text": "Now, if the die is fair, each face is equally likely. No face is special. The die isn't loaded.",
+    "visual": "Six equal bars on the axis, each of height 1/6 on a y axis 'probability' 0 to 0.3.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s064",
+    "chapter": "Counting Outcomes",
+    "text": "So what's the chance of rolling a four?",
+    "visual": "Face 4 lifts up.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s065",
+    "chapter": "Counting Outcomes",
+    "text": "There is one outcome we want, the four. Out of six outcomes in total. So the chance is one out of six. One sixth.",
+    "visual": "Fraction builds: '1' (aqua, outcomes we want) over '6' (warn, all outcomes) = 1/6 (violet).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s066",
+    "chapter": "Counting Outcomes",
+    "text": "That's the whole recipe. Probability equals the number of outcomes you want, divided by the total number of outcomes.",
+    "visual": "Rule card: P = (outcomes you want) / (all outcomes), colour-coded aqua over warn.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s067",
+    "chapter": "Counting Outcomes",
+    "text": "The letter P is just short for probability. When you see P of something, read it as, the probability of that thing.",
+    "visual": "Definition: 'P( ) = the probability of ...'; example 'P(4) = 1/6'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s068",
+    "chapter": "Counting Outcomes",
+    "text": "Let's try another one. What's the chance of rolling an even number?",
+    "visual": "Faces reset; question chip 'even number?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s069",
+    "chapter": "Counting Outcomes",
+    "text": "The even numbers are two, four and six. That's three outcomes we want.",
+    "visual": "Faces 2, 4, 6 turn aqua.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s070",
+    "chapter": "Counting Outcomes",
+    "text": "Three out of six. Which is the same as one half.",
+    "visual": "3/6 = 1/2 builds; pointer drops at 0.5 on a mini 0–1 line.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s071",
+    "chapter": "Counting Outcomes",
+    "text": "A group of outcomes we care about, like rolling an even number, is called an event.",
+    "visual": "Definition card: 'EVENT = a group of outcomes you care about'; the aqua faces get a bracket.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s072",
+    "chapter": "Counting Outcomes",
+    "text": "What about rolling a number bigger than four? That's five or six. Two out of six, which is one third.",
+    "visual": "Faces 5, 6 turn aqua; 2/6 = 1/3.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s073",
+    "chapter": "Counting Outcomes",
+    "text": "See how simple this is? Count what you want. Count everything. Divide.",
+    "visual": "Three icons: 'count what you want' → 'count everything' → 'divide'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s074",
+    "chapter": "Counting Outcomes",
+    "text": "But there's one small rule hiding inside this recipe, and it's really important.",
+    "visual": "A warn exclamation mark pulses over the rule card.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s075",
+    "chapter": "Counting Outcomes",
+    "text": "The counting trick only works when every outcome is equally likely.",
+    "visual": "Underline under 'equally likely' on the rule card.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s076",
+    "chapter": "Counting Outcomes",
+    "text": "Here's an example where it breaks. Imagine a spinner where the red part is three quarters of the circle, and the blue part is one quarter.",
+    "visual": "A spinner circle: red 270°, blue 90°.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s077",
+    "chapter": "Counting Outcomes",
+    "text": "There are two colours. But the chance of red is not one half. It's three quarters, because red takes up more space.",
+    "visual": "A wrong label '1/2?' gets a red cross; the circle splits into four equal quarters, three red; '3/4' in violet.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s078",
+    "chapter": "Counting Outcomes",
+    "text": "Fix it by cutting the circle into equal pieces first. Four equal quarters. Three of them are red. Now counting works again.",
+    "visual": "Quarter lines draw; count 1, 2, 3 on the red quarters; 3/4.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s079",
+    "chapter": "Counting Outcomes",
+    "text": "So, always ask, are my outcomes equally likely? If they aren't, split them into pieces that are.",
+    "visual": "Rule card adds a footnote: 'only if all outcomes are equally likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s080",
+    "chapter": "Counting Outcomes",
+    "text": "Now let's level up, and flip two coins.",
+    "visual": "Two coins appear side by side, labelled 'coin 1' and 'coin 2'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s081",
+    "chapter": "Counting Outcomes",
+    "text": "What's the chance you get one head and one tail?",
+    "visual": "Question chip 'one head and one tail?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s082",
+    "chapter": "Counting Outcomes",
+    "text": "Many people think there are three outcomes. Two heads, two tails, or one of each. So the answer must be one third.",
+    "visual": "Three boxes: 'HH' 'TT' 'one of each' with a grey '1/3?' label.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s083",
+    "chapter": "Counting Outcomes",
+    "text": "But those three aren't equally likely. Watch.",
+    "visual": "The 'one of each' box shakes.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s084",
+    "chapter": "Counting Outcomes",
+    "text": "Let's draw a tree. The first coin can be heads or tails. Then for each of those, the second coin can be heads or tails.",
+    "visual": "A tree diagram grows left to right: first split H / T, then each splits H / T.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s085",
+    "chapter": "Counting Outcomes",
+    "text": "That gives four outcomes. Heads heads. Heads tails. Tails heads. Tails tails.",
+    "visual": "Leaves label HH, HT, TH, TT.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s086",
+    "chapter": "Counting Outcomes",
+    "text": "And these four are equally likely. Each one has a chance of one quarter.",
+    "visual": "Each leaf gets '1/4'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s087",
+    "chapter": "Counting Outcomes",
+    "text": "Now count. One head and one tail happens two ways, heads then tails, or tails then heads.",
+    "visual": "HT and TH turn aqua.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s088",
+    "chapter": "Counting Outcomes",
+    "text": "Two out of four. One half. Not one third.",
+    "visual": "2/4 = 1/2 in violet; the grey '1/3?' gets a red cross.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s089",
+    "chapter": "Counting Outcomes",
+    "text": "The lesson? Keep track of which coin is which. Heads tails and tails heads are different outcomes, even if they look the same at the end.",
+    "visual": "Coin 1 is tinted orange, coin 2 blue; HT and TH shown side by side with their coloured coins.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s090",
+    "chapter": "Counting Outcomes",
+    "text": "Let's push it one step further. Three coins.",
+    "visual": "A third coin joins.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s091",
+    "chapter": "Counting Outcomes",
+    "text": "Each new coin doubles the branches. Two, then four, then eight outcomes.",
+    "visual": "The tree grows a third level; a counter shows 2 → 4 → 8.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s092",
+    "chapter": "Counting Outcomes",
+    "text": "What's the chance of getting exactly two heads?",
+    "visual": "Question chip 'exactly two heads?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s093",
+    "chapter": "Counting Outcomes",
+    "text": "Look through the eight leaves. Heads heads tails. Heads tails heads. Tails heads heads. That's three.",
+    "visual": "HHT, HTH, THH turn aqua one by one with a counter 1, 2, 3.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s094",
+    "chapter": "Counting Outcomes",
+    "text": "So the answer is three out of eight.",
+    "visual": "3/8 in violet; also '= 0.375'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s095",
+    "chapter": "Counting Outcomes",
+    "text": "A tree is a wonderful tool. When you're not sure how many outcomes there are, draw the tree, and the leaves will tell you.",
+    "visual": "The tree glows; tag 'draw the tree'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s096",
+    "chapter": "Counting Bigger Things",
+    "text": "Trees are great, but they can get huge very quickly. So here's a shortcut for counting outcomes, without drawing every branch.",
+    "visual": "A tree explodes into dozens of branches, then fades; chip 'a faster way to count'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s097",
+    "chapter": "Counting Bigger Things",
+    "text": "Imagine you have three shirts and four pairs of trousers. How many different outfits can you make?",
+    "visual": "Three shirts (illustration shapes) in a column on the left, four trousers in a row along the top.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s098",
+    "chapter": "Counting Bigger Things",
+    "text": "Put the shirts down the side and the trousers along the top, and you get a grid. Three rows, four columns.",
+    "visual": "A 3 by 4 grid on axes: x 'trousers' 1–4, y 'shirt' 1–3; each cell is one outfit.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s099",
+    "chapter": "Counting Bigger Things",
+    "text": "Twelve squares. Twelve outfits. Three times four.",
+    "visual": "Counter 3 × 4 = 12 in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s100",
+    "chapter": "Counting Bigger Things",
+    "text": "This is called the multiplication rule for counting. If one choice can be made in some number of ways, and a second choice in some number of ways, then together, you multiply.",
+    "visual": "Rule card: 'ways for choice 1 × ways for choice 2 = total ways'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s101",
+    "chapter": "Counting Bigger Things",
+    "text": "Add two pairs of shoes, and every one of those twelve outfits splits into two. Twelve times two is twenty four.",
+    "visual": "The grid duplicates into two layers (shoe A, shoe B); 12 × 2 = 24.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s102",
+    "chapter": "Counting Bigger Things",
+    "text": "So if you get dressed in the dark, and grab each item at random, the chance of getting one particular outfit is one out of twenty four.",
+    "visual": "One cell glows aqua; 1/24 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s103",
+    "chapter": "Counting Bigger Things",
+    "text": "Here's another one. A phone lock with a four digit code. Each digit can be anything from zero to nine. That's ten choices.",
+    "visual": "Four empty code slots; under each, a chip '10 choices'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s104",
+    "chapter": "Counting Bigger Things",
+    "text": "First digit, ten ways. Second digit, ten ways. Third, ten. Fourth, ten.",
+    "visual": "Each slot fills with '10' one by one.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s105",
+    "chapter": "Counting Bigger Things",
+    "text": "Ten times ten times ten times ten. Ten thousand possible codes.",
+    "visual": "10 × 10 × 10 × 10 = 10,000 in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s106",
+    "chapter": "Counting Bigger Things",
+    "text": "So if a stranger picks up your phone and guesses once, their chance of getting it right is one in ten thousand.",
+    "visual": "1/10,000 in violet; a tiny marker near 0 on the 0–1 line.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s107",
+    "chapter": "Counting Bigger Things",
+    "text": "And with three different guesses, it's three in ten thousand. Still tiny.",
+    "visual": "3/10,000 in violet.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s108",
+    "chapter": "Counting Bigger Things",
+    "text": "That's why phones lock you out after a few wrong tries. They keep the number of guesses small, so the chance stays small.",
+    "visual": "A padlock icon with 'too many tries' and a timer.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s109",
+    "chapter": "Counting Bigger Things",
+    "text": "And this is exactly why two dice give thirty six outcomes. Six ways for the orange die, times six ways for the blue die.",
+    "visual": "Two dice with '6 × 6 = 36'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s110",
+    "chapter": "Counting Bigger Things",
+    "text": "Count the choices, multiply, and you know the size of your world.",
+    "visual": "Chip 'multiply the choices = size of the world'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s111",
+    "chapter": "Putting Things in Order",
+    "text": "The multiplication rule has another trick. It can count how many ways there are to put things in order.",
+    "visual": "Three book spines labelled A, B, C on a shelf.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s112",
+    "chapter": "Putting Things in Order",
+    "text": "Say you have three books, A, B and C, and you put them on a shelf in a random order. How many orders are there?",
+    "visual": "Question chip 'how many orders?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s113",
+    "chapter": "Putting Things in Order",
+    "text": "For the first spot, you have three books to choose from. Once one is placed, two books are left for the second spot. And then just one book for the last spot.",
+    "visual": "Three shelf slots fill with counts 3, 2, 1.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s114",
+    "chapter": "Putting Things in Order",
+    "text": "Three times two times one. Six orders.",
+    "visual": "3 × 2 × 1 = 6; all six orders appear in a list: ABC, ACB, BAC, BCA, CAB, CBA.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s115",
+    "chapter": "Putting Things in Order",
+    "text": "So the chance they land in alphabetical order, A then B then C, is one out of six.",
+    "visual": "ABC glows aqua; 1/6 in violet.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s116",
+    "chapter": "Putting Things in Order",
+    "text": "Now try ten books. Ten times nine times eight, all the way down to one. That's over three and a half million orders.",
+    "visual": "10 × 9 × 8 × … × 1 = 3,628,800 in warn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s117",
+    "chapter": "Putting Things in Order",
+    "text": "The chance that ten books shuffled at random land in perfect order is about one in three and a half million. Tiny.",
+    "visual": "1/3,628,800 → marker at 0 on the 0–1 line.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s118",
+    "chapter": "Putting Things in Order",
+    "text": "That's why a well shuffled deck of cards is almost certainly in an order that has never existed before. There are just too many possible orders.",
+    "visual": "A deck fan; chip 'too many orders to ever repeat'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s119",
+    "chapter": "Putting Things in Order",
+    "text": "Now, a lottery. Suppose you must pick six numbers out of forty nine, and the order doesn't matter.",
+    "visual": "A grid of numbered balls 1–49 (7 by 7); six get circled.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s120",
+    "chapter": "Putting Things in Order",
+    "text": "If order mattered, there would be forty nine times forty eight times forty seven times forty six times forty five times forty four ways.",
+    "visual": "49 × 48 × 47 × 46 × 45 × 44 writes on.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s121",
+    "chapter": "Putting Things in Order",
+    "text": "But the same six numbers can be picked in any order. Six times five times four times three times two times one, which is seven hundred and twenty orders. So we divide by that.",
+    "visual": "÷ (6 × 5 × 4 × 3 × 2 × 1) = ÷ 720.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s122",
+    "chapter": "Putting Things in Order",
+    "text": "The result is almost fourteen million different tickets.",
+    "visual": "= 13,983,816 in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s123",
+    "chapter": "Putting Things in Order",
+    "text": "So the chance one ticket wins is about one in fourteen million. Remember that tiny gap near zero on our line? That's what it looks like.",
+    "visual": "The 0–1 line returns; magnifier shows the ticket marker crushed against 0.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s124",
+    "chapter": "Putting Things in Order",
+    "text": "Here's a way to feel that number. If you bought one ticket every week, you'd expect to wait over a quarter of a million years for a win.",
+    "visual": "A timeline arrow stretching off the screen with '≈ 269,000 years'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s125",
+    "chapter": "Putting Things in Order",
+    "text": "Counting carefully turns a vague feeling, maybe I'll win, into a clear number.",
+    "visual": "Chip 'vague feeling → clear number'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s126",
+    "chapter": "Two Dice",
+    "text": "Now we have enough tools to solve our game night puzzle.",
+    "visual": "Game night chips return: 'you need: 12' · 'friend needs: 7'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s127",
+    "chapter": "Two Dice",
+    "text": "We're rolling two dice. To keep them apart, let's make one orange and one blue.",
+    "visual": "An orange die and a blue die drop in.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s128",
+    "chapter": "Two Dice",
+    "text": "The orange die can land six ways. And for each of those, the blue die can land six ways.",
+    "visual": "Orange faces 1–6 along an x axis; blue faces 1–6 up a y axis.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s129",
+    "chapter": "Two Dice",
+    "text": "So let's draw a grid. Orange along the bottom, blue up the side. Every square is one outcome.",
+    "visual": "A 6 by 6 grid fills between the axes; axis titles 'orange die' and 'blue die'; equal x/y scale.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s130",
+    "chapter": "Two Dice",
+    "text": "This square, for example, is orange three and blue five.",
+    "visual": "Square (3,5) highlights; label 'orange 3, blue 5'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s131",
+    "chapter": "Two Dice",
+    "text": "Six columns, six rows. Six times six is thirty six outcomes.",
+    "visual": "Counter: 6 × 6 = 36 in warn yellow.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s132",
+    "chapter": "Two Dice",
+    "text": "And just like with the coins, orange three blue five is different from orange five blue three. Two different squares.",
+    "visual": "Squares (3,5) and (5,3) both highlight with a 'not the same' chip.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s133",
+    "chapter": "Two Dice",
+    "text": "With fair dice, all thirty six squares are equally likely. So now we can count.",
+    "visual": "All squares flash once.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s134",
+    "chapter": "Two Dice",
+    "text": "Let's write the total of the two dice inside every square.",
+    "visual": "Sums write into all 36 squares, row by row.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s135",
+    "chapter": "Two Dice",
+    "text": "Do you see the pattern? Equal totals line up along slanted lines.",
+    "visual": "Diagonals of equal sums briefly glow in turn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s136",
+    "chapter": "Two Dice",
+    "text": "Now, how many squares have a total of twelve?",
+    "visual": "Question chip '12?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s137",
+    "chapter": "Two Dice",
+    "text": "Only one. Orange six and blue six. The top right corner.",
+    "visual": "Square (6,6) turns aqua.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s138",
+    "chapter": "Two Dice",
+    "text": "So the chance of rolling twelve is one out of thirty six.",
+    "visual": "1/36 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s139",
+    "chapter": "Two Dice",
+    "text": "And a total of seven?",
+    "visual": "Question chip '7?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s140",
+    "chapter": "Two Dice",
+    "text": "Count them. One and six. Two and five. Three and four. Four and three. Five and two. Six and one.",
+    "visual": "The 7-diagonal lights aqua one square at a time with a counter 1 to 6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s141",
+    "chapter": "Two Dice",
+    "text": "Six squares. Six out of thirty six. Which is one sixth.",
+    "visual": "6/36 = 1/6 in violet.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s142",
+    "chapter": "Two Dice",
+    "text": "There it is. Seven has six ways to happen. Twelve has only one. That's why seven is six times more likely.",
+    "visual": "Side by side: the long 7-diagonal and the lonely 12 corner; '6 ways' vs '1 way'.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s143",
+    "chapter": "Two Dice",
+    "text": "The dice aren't magic. Seven is simply the total with the most ways to be made.",
+    "visual": "Chip 'most ways to be made' sits on the 7-diagonal.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s144",
+    "chapter": "Two Dice",
+    "text": "Let's count the ways for every total, and build a chart.",
+    "visual": "Grid shrinks to the left; an empty bar chart appears with x axis 'total' 2–12 and y axis 'number of ways' 0–6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s145",
+    "chapter": "Two Dice",
+    "text": "Two can only be made one way. Three, two ways. Four, three ways. Five, four ways. Six, five ways. Seven, six ways.",
+    "visual": "Each diagonal slides off the grid and stacks into its bar, from 2 up to 7.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s146",
+    "chapter": "Two Dice",
+    "text": "And then it comes back down. Eight, five ways. Nine, four. Ten, three. Eleven, two. And twelve, just one.",
+    "visual": "Bars 8 to 12 fill in; the chart forms a triangle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s147",
+    "chapter": "Two Dice",
+    "text": "A perfect little mountain, with seven at the peak.",
+    "visual": "Outline of the triangle glows; peak tagged '7'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s148",
+    "chapter": "Two Dice",
+    "text": "Add up all the bars, and you get thirty six. Every square is counted exactly once.",
+    "visual": "1+2+3+4+5+6+5+4+3+2+1 = 36 writes along the bottom.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s149",
+    "chapter": "Two Dice",
+    "text": "If we divide every bar by thirty six, each bar becomes a probability. This picture has a name. It's called a probability distribution.",
+    "visual": "Y axis relabels to 'probability' with ticks 0, 1/36 … 6/36; title 'probability distribution'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s150",
+    "chapter": "Two Dice",
+    "text": "A distribution is just a map that shows how the chances are spread out over all the possible results.",
+    "visual": "Definition card: 'DISTRIBUTION = how the chances are spread out'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s151",
+    "chapter": "Two Dice",
+    "text": "Now you can answer lots of questions just by reading the chart. The chance of a total of eight? Five out of thirty six.",
+    "visual": "Bar 8 highlights; 5/36.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s152",
+    "chapter": "Two Dice",
+    "text": "The chance of a total of two or twelve? Only one out of thirty six each. They're the rarest rolls in the game.",
+    "visual": "Bars 2 and 12 highlight; '1/36 each'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s153",
+    "chapter": "Two Dice",
+    "text": "Here's another one. What's the chance of rolling a double, both dice showing the same number? That's the diagonal from the bottom left to the top right. Six squares. One sixth.",
+    "visual": "Diagonal (1,1)…(6,6) turns aqua; 6/36 = 1/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s154",
+    "chapter": "Two Dice",
+    "text": "And the chance of a total of four or less? Two has one way, three has two, four has three. Six squares again. One sixth.",
+    "visual": "Bottom-left corner triangle of 6 squares aqua; 6/36 = 1/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s155",
+    "chapter": "Two Dice",
+    "text": "Many board games are designed around this exact mountain, even if the players never notice.",
+    "visual": "A game board illustration fades in behind the chart (shape only).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s156",
+    "chapter": "Try It Many Times",
+    "text": "But hold on. Does real life actually follow this counting? Let's test it.",
+    "visual": "Theory chart from before on the left; an empty 'real rolls' chart on the right.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s157",
+    "chapter": "Try It Many Times",
+    "text": "Imagine flipping a fair coin ten times.",
+    "visual": "Ten coin slots in a row.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s158",
+    "chapter": "Try It Many Times",
+    "text": "The chance of heads is one half. So should you get exactly five heads? Not necessarily.",
+    "visual": "The slots flip one by one (simulation): seven heads, three tails; counter 'heads: 7 of 10'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s159",
+    "chapter": "Try It Many Times",
+    "text": "In this run we got seven heads out of ten. That's seventy percent, not fifty.",
+    "visual": "A pointer on a 0–100% axis sits at 70%; a dashed line marks 50%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s160",
+    "chapter": "Try It Many Times",
+    "text": "Is the coin broken? No. With only ten flips, wobbles like this happen all the time.",
+    "visual": "Label 'simulation · 10 flips: big wobbles'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s161",
+    "chapter": "Try It Many Times",
+    "text": "Now let's flip it a hundred times. Then a thousand. Then ten thousand.",
+    "visual": "A line chart: x axis 'number of flips' (log scale 1 to 10,000), y axis 'share of heads' 0–100%; dashed line at 50%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s162",
+    "chapter": "Try It Many Times",
+    "text": "Watch the share of heads. At first it jumps around wildly.",
+    "visual": "The simulated line zigzags early on.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s163",
+    "chapter": "Try It Many Times",
+    "text": "But the more flips we do, the more it settles down, closer and closer to one half.",
+    "visual": "The line hugs the dashed 50% line on the right side; label 'settles near 1/2'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s164",
+    "chapter": "Try It Many Times",
+    "text": "This is called the law of large numbers. Over many, many tries, what actually happens gets closer to the probability.",
+    "visual": "Definition card: 'LAW OF LARGE NUMBERS: over many tries, results get close to the probability'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s165",
+    "chapter": "Try It Many Times",
+    "text": "Let's do the same with our two dice. We'll roll them thirty six times, and build a chart of the totals.",
+    "visual": "Dice roll animation; the 'real rolls' bar chart (totals 2–12) starts filling.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s166",
+    "chapter": "Try It Many Times",
+    "text": "After thirty six rolls, the chart is bumpy and messy. Some totals didn't even show up.",
+    "visual": "Simulation result for 36 rolls: lumpy bars, a few totals at zero.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s167",
+    "chapter": "Try It Many Times",
+    "text": "After three hundred and sixty rolls, a shape starts to appear.",
+    "visual": "Bars for 360 rolls (scaled to share), a rough triangle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s168",
+    "chapter": "Try It Many Times",
+    "text": "And after thirty six thousand rolls, look. It's our mountain. Almost exactly.",
+    "visual": "Bars for 36,000 rolls; the theory triangle outline overlays and matches.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s169",
+    "chapter": "Try It Many Times",
+    "text": "The counting we did on paper predicted what happens when you really roll the dice. That's the power of probability.",
+    "visual": "Paper grid icon → arrow → real dice icon; tag 'paper predicts reality'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s170",
+    "chapter": "Try It Many Times",
+    "text": "This also gives us a second way to find a probability. When you can't count the outcomes, you can try something many times, and see how often it happens.",
+    "visual": "Two routes: 'count outcomes' and 'try many times', both pointing to the 0–1 line.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s171",
+    "chapter": "Try It Many Times",
+    "text": "That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?",
+    "visual": "Calendar of past days with rain icons; fraction 'rainy days / similar days'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s172",
+    "chapter": "Try It Many Times",
+    "text": "But remember the pocket idea. Many tries, not one. The law of large numbers says nothing about the next single flip.",
+    "visual": "The pocket icon top-right glows: 'patterns over many tries'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s173",
+    "chapter": "Try It Many Times",
+    "text": "In fact, small numbers of tries can look surprisingly streaky.",
+    "visual": "A row of 20 simulated coin flips appears, with a run of four heads highlighted.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s174",
+    "chapter": "Try It Many Times",
+    "text": "If you flip a coin twenty times, getting four or more heads in a row somewhere is not rare at all. It happens in nearly half of all runs.",
+    "visual": "Chip '4+ heads in a row: in about 48% of 20-flip runs'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s175",
+    "chapter": "Try It Many Times",
+    "text": "Random doesn't mean nicely mixed. Random means unpredictable. And unpredictable things are often clumpy.",
+    "visual": "Two strips: a neat alternating pattern labelled 'looks random, but isn't typical' vs a clumpy strip labelled 'real randomness'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s176",
+    "chapter": "Is This Die Fair?",
+    "text": "Here's a fun way to use what we just learned. Suppose a friend hands you a die, and you wonder, is it fair?",
+    "visual": "A single die with a suspicious '?' tag.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s177",
+    "chapter": "Is This Die Fair?",
+    "text": "If it's fair, each face should come up one sixth of the time. So in sixty rolls, you'd expect each face about ten times.",
+    "visual": "Bar chart axes: x 'face' 1–6, y 'times rolled' 0–25; dashed line at 10, label 'expected: 60 × 1/6 = 10'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s178",
+    "chapter": "Is This Die Fair?",
+    "text": "Let's roll it sixty times. We get eight ones, eleven twos, nine threes, twelve fours, seven fives and thirteen sixes.",
+    "visual": "Bars fill: 8, 11, 9, 12, 7, 13 (simulation of a fair die).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s179",
+    "chapter": "Is This Die Fair?",
+    "text": "Not exactly ten each. But is that suspicious? No. This kind of wobble is completely normal for a fair die, with only sixty rolls.",
+    "visual": "Bars within a soft band around 10 labelled 'normal wobble'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s180",
+    "chapter": "Is This Die Fair?",
+    "text": "Now a different die. Sixty rolls, and twenty five of them are sixes.",
+    "visual": "Second chart: the 6 bar shoots to 25 (red outline); others around 7.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s181",
+    "chapter": "Is This Die Fair?",
+    "text": "That's way more than ten. For a fair die, a result this extreme would be extremely rare. So you'd have good reason to think this die is loaded.",
+    "visual": "Tag 'very unlikely for a fair die → suspicious' in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s182",
+    "chapter": "Is This Die Fair?",
+    "text": "Notice what we did. We used probability to predict what fair looks like, then compared it with what really happened.",
+    "visual": "Two-step chip: 'predict fair' → 'compare with reality'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s183",
+    "chapter": "Is This Die Fair?",
+    "text": "Small differences, we shrug off. Huge differences make us suspicious. Scientists use this same idea, with more careful math, to test whether something is really going on.",
+    "visual": "A small gap vs a big gap between predicted and real bars.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s184",
+    "chapter": "Quick Recap",
+    "text": "Let's take a breath, and look at how far we've come.",
+    "visual": "A path with milestones; a 'you are here' pin at the middle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s185",
+    "chapter": "Quick Recap",
+    "text": "A probability is a number from zero to one. Zero is impossible, one is certain.",
+    "visual": "Milestone 1: the 0–1 line.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s186",
+    "chapter": "Quick Recap",
+    "text": "When outcomes are equally likely, the probability is the outcomes you want, divided by all the outcomes.",
+    "visual": "Milestone 2: the counting rule card.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s187",
+    "chapter": "Quick Recap",
+    "text": "To find all the outcomes, draw a tree or a grid, or multiply the number of choices.",
+    "visual": "Milestone 3: tree, grid and '6 × 6'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s188",
+    "chapter": "Quick Recap",
+    "text": "With two dice, seven is the most likely total, because it has the most ways to be made.",
+    "visual": "Milestone 4: the mountain chart.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s189",
+    "chapter": "Quick Recap",
+    "text": "And over many tries, real results settle close to the probability. But a single try can still surprise you.",
+    "visual": "Milestone 5: the settling line chart.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s190",
+    "chapter": "Quick Recap",
+    "text": "If all of that makes sense, you've already got the foundation. Everything from here is built on top of it.",
+    "visual": "The pin moves forward; upcoming milestones 'NOT · OR · AND · GIVEN · EXPECTED VALUE' light up faintly.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s191",
+    "chapter": "The Word NOT",
+    "text": "Now for the three little words that unlock almost every probability question. The first one is not.",
+    "visual": "Three chips NOT · OR · AND; NOT lifts and glows.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s192",
+    "chapter": "The Word NOT",
+    "text": "Something either happens, or it doesn't. There's no third option.",
+    "visual": "A rectangle splits into two parts: 'happens' and 'doesn't happen'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s193",
+    "chapter": "The Word NOT",
+    "text": "So the chance it happens, plus the chance it doesn't, must add up to one. To everything.",
+    "visual": "Bar of length 1 on a 0–1 axis: aqua 'happens' + grey 'doesn't' = 1.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s194",
+    "chapter": "The Word NOT",
+    "text": "That means the chance something does not happen is one, minus the chance it does.",
+    "visual": "Formula: P(not A) = 1 − P(A).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s195",
+    "chapter": "The Word NOT",
+    "text": "A here is just a name for any event. Like, rolling a seven.",
+    "visual": "Definition chip: 'A = any event, e.g. rolling a 7'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s196",
+    "chapter": "The Word NOT",
+    "text": "Let's try it. The chance of rolling a total of seven is one sixth. So the chance of not rolling seven is one minus one sixth, which is five sixths.",
+    "visual": "Two-dice grid returns; 7-diagonal aqua (6 squares); the other 30 squares turn grey; 1 − 1/6 = 5/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s197",
+    "chapter": "The Word NOT",
+    "text": "And you can check it on the grid. Thirty squares are not seven. Thirty out of thirty six is five sixths. It matches.",
+    "visual": "Counter on grey squares: 30; 30/36 = 5/6 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s198",
+    "chapter": "The Word NOT",
+    "text": "Here's why this matters. Sometimes the thing you want is hard to count, but the opposite is easy.",
+    "visual": "A big messy pile labelled 'hard' next to a small neat pile labelled 'easy'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s199",
+    "chapter": "The Word NOT",
+    "text": "For example, what's the chance of rolling a total that is not twelve?",
+    "visual": "Question chip 'not 12?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s200",
+    "chapter": "The Word NOT",
+    "text": "You could count thirty five squares. Or you can just say, twelve has one square, so not twelve is one minus one over thirty six, which is thirty five over thirty six.",
+    "visual": "Grid: (6,6) aqua; others grey with a fast counter to 35; 1 − 1/36 = 35/36.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s201",
+    "chapter": "The Word NOT",
+    "text": "When counting the thing you want looks painful, flip it around. Count the opposite, and take it away from one.",
+    "visual": "A flip arrow icon; tag 'count the opposite'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s202",
+    "chapter": "The Word NOT",
+    "text": "This little trick becomes a superpower in a few minutes. Hold on to it.",
+    "visual": "The NOT chip moves to the top-right, next to the pocket icon.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s203",
+    "chapter": "Odds Versus Probability",
+    "text": "While we're here, let's clear up a word that confuses a lot of people. Odds.",
+    "visual": "Two cards: 'probability' and 'odds' side by side.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s204",
+    "chapter": "Odds Versus Probability",
+    "text": "People often say odds when they mean probability. But they are not quite the same thing.",
+    "visual": "A '≠' between the cards.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s205",
+    "chapter": "Odds Versus Probability",
+    "text": "Probability compares the ways something happens to all the ways. Odds compare the ways it happens to the ways it doesn't.",
+    "visual": "Probability card: 'happens ÷ everything'; odds card: 'happens : doesn't happen'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s206",
+    "chapter": "Odds Versus Probability",
+    "text": "Take a total of seven on two dice. Six squares make seven. Thirty squares don't.",
+    "visual": "Grid: 6 aqua squares, 30 grey squares; counters '6' and '30'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s207",
+    "chapter": "Odds Versus Probability",
+    "text": "The probability is six out of thirty six. One sixth.",
+    "visual": "6/36 = 1/6 in violet.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s208",
+    "chapter": "Odds Versus Probability",
+    "text": "But the odds are six to thirty. Which simplifies to one to five. For every one way to win, there are five ways to lose.",
+    "visual": "Odds bar: 1 aqua block next to 5 grey blocks, '1 : 5'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s209",
+    "chapter": "Odds Versus Probability",
+    "text": "Notice that one to five and one sixth describe the same chance. One plus five makes six, the total.",
+    "visual": "1 : 5 → 1 / (1 + 5) = 1/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s210",
+    "chapter": "Odds Versus Probability",
+    "text": "A fair coin has odds of one to one. One way to win, one way to lose. People sometimes call that evens.",
+    "visual": "Coin with '1 : 1 = evens' and 1/2 underneath.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s211",
+    "chapter": "Odds Versus Probability",
+    "text": "To turn odds into a probability, put the first number on top, and both numbers added together on the bottom.",
+    "visual": "Rule card: 'odds a : b → probability a / (a + b)'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s212",
+    "chapter": "Odds Versus Probability",
+    "text": "So odds of three to one against something mean one way it happens, three ways it doesn't. One out of four. A probability of one quarter.",
+    "visual": "Example: '3 : 1 against' → 1 / (1 + 3) = 1/4.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s213",
+    "chapter": "Odds Versus Probability",
+    "text": "When you hear odds, just ask, is this comparing to the whole, or to the other side?",
+    "visual": "Chip 'to the whole, or to the other side?'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s214",
+    "chapter": "The Word OR",
+    "text": "The second word is or. What's the chance that this happens, or that happens?",
+    "visual": "Chips NOT · OR · AND; OR lifts and glows.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s215",
+    "chapter": "The Word OR",
+    "text": "Let's start easy. On our two dice, what's the chance of rolling a total of seven, or a total of eleven?",
+    "visual": "Grid returns; question chip '7 or 11?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s216",
+    "chapter": "The Word OR",
+    "text": "Seven has six squares. Eleven has two squares, five and six, and six and five.",
+    "visual": "7-diagonal aqua; 11 squares (5,6),(6,5) in a second aqua shade.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s217",
+    "chapter": "The Word OR",
+    "text": "They don't share any squares. A roll can't be seven and eleven at the same time.",
+    "visual": "A gap chip 'no shared squares'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s218",
+    "chapter": "The Word OR",
+    "text": "So we just add them. Six plus two is eight squares. Eight out of thirty six.",
+    "visual": "6/36 + 2/36 = 8/36 = 2/9 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s219",
+    "chapter": "The Word OR",
+    "text": "When two events can't happen together, the chance of one or the other is just the two chances added up.",
+    "visual": "Rule card: 'can't happen together → P(A or B) = P(A) + P(B)'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s220",
+    "chapter": "The Word OR",
+    "text": "But careful. This is where a lot of people slip.",
+    "visual": "Red caution icon.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s221",
+    "chapter": "The Word OR",
+    "text": "What's the chance that the orange die shows six, or the blue die shows six?",
+    "visual": "Question chip 'orange 6 OR blue 6?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s222",
+    "chapter": "The Word OR",
+    "text": "The orange six is a whole column. That's six squares.",
+    "visual": "Column orange=6 tints orange: 6 squares.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s223",
+    "chapter": "The Word OR",
+    "text": "The blue six is a whole row. Also six squares.",
+    "visual": "Row blue=6 tints blue: 6 squares.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s224",
+    "chapter": "The Word OR",
+    "text": "So, six plus six is twelve? Let's look.",
+    "visual": "Grey '6 + 6 = 12?' label.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s225",
+    "chapter": "The Word OR",
+    "text": "The column and the row cross in one corner, double six. If we add them, we count that square twice.",
+    "visual": "Square (6,6) flashes with a '×2' badge.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s226",
+    "chapter": "The Word OR",
+    "text": "So we take it away once. Six plus six, minus one, is eleven.",
+    "visual": "6 + 6 − 1 = 11; the '12?' gets a red cross.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s227",
+    "chapter": "The Word OR",
+    "text": "The answer is eleven out of thirty six.",
+    "visual": "11/36 in violet; the 11 squares glow.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s228",
+    "chapter": "The Word OR",
+    "text": "This is the full or rule. Add the two chances, then take away the overlap, the part where both happen, so it's not counted twice.",
+    "visual": "Rule card: P(A or B) = P(A) + P(B) − P(A and B), with the overlap term in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s229",
+    "chapter": "The Word OR",
+    "text": "A picture helps. Draw two circles that overlap. To find the area covered by either circle, you add both circles, then remove the middle, because you counted it twice.",
+    "visual": "Two overlapping circles (orange and blue); the lens in the middle glows warn with '×2', then is counted once.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s230",
+    "chapter": "The Word OR",
+    "text": "If the circles don't overlap at all, the middle is zero, and you're back to simply adding.",
+    "visual": "The circles slide apart; overlap term becomes 0.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s231",
+    "chapter": "The Word OR",
+    "text": "Here's an everyday example. In a class of thirty students, twelve play football, eight play music, and five do both.",
+    "visual": "A class of 30 dots on a 10 by 3 grid (illustration); 12 orange outlined, 8 blue outlined, 5 with both.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s232",
+    "chapter": "The Word OR",
+    "text": "How many do football or music? Twelve plus eight is twenty, minus the five who were counted twice. Fifteen students.",
+    "visual": "12 + 8 − 5 = 15; 15 dots glow.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s233",
+    "chapter": "The Word OR",
+    "text": "So if you pick a student at random, the chance they do football or music is fifteen out of thirty. One half.",
+    "visual": "15/30 = 1/2 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s234",
+    "chapter": "The Word OR",
+    "text": "Whenever you hear the word or, ask yourself one question. Can both happen at once? If yes, remove the overlap.",
+    "visual": "Checklist chip: 'OR → can both happen? → subtract the overlap'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s235",
+    "chapter": "The Word AND",
+    "text": "The third word is and. What's the chance that this happens, and that happens too?",
+    "visual": "Chips NOT · OR · AND; AND lifts and glows.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s236",
+    "chapter": "The Word AND",
+    "text": "Back to our dice. What's the chance of double six? The orange die shows six, and the blue die shows six.",
+    "visual": "Grid returns; question 'orange 6 AND blue 6?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s237",
+    "chapter": "The Word AND",
+    "text": "On the grid, that's the one square where the six column and the six row meet. One out of thirty six.",
+    "visual": "Column and row tint; their crossing square glows aqua; 1/36.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s238",
+    "chapter": "The Word AND",
+    "text": "But here's another way to see it. The orange die has a one in six chance of six. And then, the blue die has a one in six chance of six.",
+    "visual": "Two separate bars: orange 1/6, blue 1/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s239",
+    "chapter": "The Word AND",
+    "text": "Multiply them. One sixth times one sixth is one over thirty six. Same answer.",
+    "visual": "1/6 × 1/6 = 1/36.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s240",
+    "chapter": "The Word AND",
+    "text": "Why multiply? Picture it as area. Take a square of side one. The orange six takes one sixth of the width. The blue six takes one sixth of the height.",
+    "visual": "A unit square on axes 0–1 by 0–1; a vertical strip 1/6 wide (orange) and a horizontal strip 1/6 tall (blue).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s241",
+    "chapter": "The Word AND",
+    "text": "Where they overlap is a little box, one sixth wide and one sixth tall. Its area is one sixth times one sixth.",
+    "visual": "The tiny overlap box glows violet; 'area = 1/6 × 1/6 = 1/36'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s242",
+    "chapter": "The Word AND",
+    "text": "This works for more than two things. Three dice all showing six? One sixth, times one sixth, times one sixth. One in two hundred and sixteen.",
+    "visual": "1/6 × 1/6 × 1/6 = 1/216; a tiny cube in a 6 by 6 by 6 block (illustration).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s243",
+    "chapter": "The Word AND",
+    "text": "So and usually means multiply. And multiplying fractions makes things smaller. Both things happening is less likely than either one alone.",
+    "visual": "A shrinking arrow: 1/6 → 1/36; tag 'AND makes it smaller'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s244",
+    "chapter": "The Word AND",
+    "text": "But there's a condition. This simple multiplying only works when the two events are independent.",
+    "visual": "Warn chip 'only if INDEPENDENT'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s245",
+    "chapter": "The Word AND",
+    "text": "Independent means one result doesn't change the chances of the other.",
+    "visual": "Definition card: 'INDEPENDENT = one result doesn't change the chances of the other'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s246",
+    "chapter": "The Word AND",
+    "text": "The orange die has no idea what the blue die did. They don't talk to each other. So they're independent.",
+    "visual": "The two dice with a 'no connection' dashed line and a crossed-out phone icon.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s247",
+    "chapter": "The Word AND",
+    "text": "A coin and a die are independent too. The chance of heads and a six is one half times one sixth. One twelfth.",
+    "visual": "Tree: coin H/T then die 1–6 = 12 leaves; leaf 'H, 6' glows; 1/2 × 1/6 = 1/12.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s248",
+    "chapter": "The Word AND",
+    "text": "But some events do affect each other. Here's a bag with three red marbles and two blue marbles.",
+    "visual": "A bag illustration with 3 red and 2 blue marbles drawn as circles.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s249",
+    "chapter": "The Word AND",
+    "text": "You pull out one marble, don't put it back, and then pull out another. What's the chance both are red?",
+    "visual": "Hand icon takes a marble; chip 'no putting back'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s250",
+    "chapter": "The Word AND",
+    "text": "First pull. Three red out of five marbles. Three fifths.",
+    "visual": "Fraction 3/5; the red marbles glow.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s251",
+    "chapter": "The Word AND",
+    "text": "Now, if that first marble was red, the bag has changed. There are only two red left, out of four.",
+    "visual": "One red marble leaves the bag; 2 red, 2 blue remain; fraction 2/4.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s252",
+    "chapter": "The Word AND",
+    "text": "So the second chance is two quarters. The first pull changed the second one. These events are not independent.",
+    "visual": "Tag 'the first pull changed the bag' in warn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s253",
+    "chapter": "The Word AND",
+    "text": "Multiply the chances along the path. Three fifths times two quarters is six over twenty, which is three tenths.",
+    "visual": "Tree path: 3/5 → 2/4; 3/5 × 2/4 = 6/20 = 3/10 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s254",
+    "chapter": "The Word AND",
+    "text": "If you had put the first marble back, the bag would be the same both times. Three fifths times three fifths, nine over twenty five.",
+    "visual": "Alternative path: 3/5 × 3/5 = 9/25, labelled 'with putting back'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s255",
+    "chapter": "The Word AND",
+    "text": "That's a bit higher, because putting the red marble back gives red a better chance the second time.",
+    "visual": "Comparison on a 0–1 line: 0.30 vs 0.36.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s256",
+    "chapter": "The Word AND",
+    "text": "So, for and: multiply along the path. But always use the chance of the second thing, after the first one has happened.",
+    "visual": "Rule card: 'AND → multiply along the path, using the updated chance'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s257",
+    "chapter": "Independent or Not?",
+    "text": "Because independence matters so much, let's practise spotting it. For each pair, ask, does the first result change the chances of the second?",
+    "visual": "Title strip 'Independent or not?'; four empty cards with YES / NO slots.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s258",
+    "chapter": "Independent or Not?",
+    "text": "One. Flipping a coin today, and flipping it again tomorrow. Independent. The coin doesn't remember.",
+    "visual": "Card 1: two coins; stamp 'INDEPENDENT' (aqua).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s259",
+    "chapter": "Independent or Not?",
+    "text": "Two. Drawing a card from a deck, keeping it, and drawing another. Not independent. The deck has changed.",
+    "visual": "Card 2: a deck missing one card; stamp 'NOT independent' (warn).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s260",
+    "chapter": "Independent or Not?",
+    "text": "Three. Rain today, and rain tomorrow. Not independent. Rainy weather tends to stick around for a few days, so rain today makes rain tomorrow more likely.",
+    "visual": "Card 3: two cloud days linked by an arrow; stamp 'NOT independent'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s261",
+    "chapter": "Independent or Not?",
+    "text": "Four. Your birthday, and the birthday of a random stranger in another country. Independent. One tells you nothing about the other.",
+    "visual": "Card 4: two cake icons far apart; stamp 'INDEPENDENT'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s262",
+    "chapter": "Independent or Not?",
+    "text": "Five. Whether you study tonight, and whether you pass tomorrow's test. Definitely not independent. Studying changes your chances. That's the whole point.",
+    "visual": "Card 5: a book and a test paper with a tick; stamp 'NOT independent'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s263",
+    "chapter": "Independent or Not?",
+    "text": "When events are independent, multiply the plain chances. When they're not, use the updated chance for the second step.",
+    "visual": "Rule card: 'independent → multiply plain chances · dependent → multiply updated chances'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s264",
+    "chapter": "At Least One",
+    "text": "Now let's combine not and and, to solve one of the most useful questions in all of probability.",
+    "visual": "Chips NOT and AND snap together.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s265",
+    "chapter": "At Least One",
+    "text": "You roll one die four times. What's the chance you get at least one six?",
+    "visual": "Four die slots in a row; question 'at least one 6 in 4 rolls?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s266",
+    "chapter": "At Least One",
+    "text": "At least one means one six, or two, or three, or four. That's a lot of cases to count.",
+    "visual": "A messy list of cases: '6 _ _ _', '_ 6 _ _', '6 6 _ _' … piling up.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s267",
+    "chapter": "At Least One",
+    "text": "Here's a tempting shortcut. Each roll has a one sixth chance. Four rolls, so add them up. Four sixths, about sixty seven percent.",
+    "visual": "Grey '1/6 + 1/6 + 1/6 + 1/6 = 4/6 ≈ 67%?' label.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s268",
+    "chapter": "At Least One",
+    "text": "But that can't be right. Watch what happens with six rolls. Six sixths is one. A hundred percent. As if six rolls guarantee a six.",
+    "visual": "The sum grows to 6/6 = 100%; a red trap stamp: 'guaranteed? no!'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s269",
+    "chapter": "At Least One",
+    "text": "Anyone who's ever played a dice game knows you can roll six times and never see a six.",
+    "visual": "Six simulated rolls with no six: 2, 5, 1, 3, 3, 4.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s270",
+    "chapter": "At Least One",
+    "text": "The adding was wrong because these events can all happen together, so we're counting overlaps again and again.",
+    "visual": "Overlapping circles multiply into a tangle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s271",
+    "chapter": "At Least One",
+    "text": "So let's use the superpower. Flip it around. The opposite of at least one six is, no sixes at all.",
+    "visual": "Flip arrow; chip 'opposite = NO sixes at all'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s272",
+    "chapter": "At Least One",
+    "text": "The chance one roll is not a six is five sixths.",
+    "visual": "One die: five faces aqua, the 6 face grey; 5/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s273",
+    "chapter": "At Least One",
+    "text": "The rolls are independent. So the chance that all four rolls are not six is five sixths, times five sixths, times five sixths, times five sixths.",
+    "visual": "5/6 × 5/6 × 5/6 × 5/6 writes under the four slots.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s274",
+    "chapter": "At Least One",
+    "text": "That's six hundred and twenty five out of one thousand two hundred and ninety six. About forty eight percent.",
+    "visual": "= 625/1296 ≈ 48.2%; a bar on a 0–100% axis.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s275",
+    "chapter": "At Least One",
+    "text": "So the chance of at least one six is one minus that. About fifty two percent.",
+    "visual": "1 − 625/1296 = 671/1296 ≈ 51.8% in violet; the bar's remaining part glows.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s276",
+    "chapter": "At Least One",
+    "text": "Just over a half. Not sixty seven percent.",
+    "visual": "Side by side: wrong 67% (red, struck) vs right 52% (violet).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s277",
+    "chapter": "At Least One",
+    "text": "And with six rolls, it's about sixty seven percent. Likely, but nowhere near certain.",
+    "visual": "Line chart: x axis 'number of rolls' 1–12, y axis 'chance of at least one 6' 0–100%; points rising and bending; 6 rolls at 66.5%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s278",
+    "chapter": "At Least One",
+    "text": "Look at this curve. Every extra roll helps, but it never quite reaches one hundred percent.",
+    "visual": "The curve flattens toward the top dashed 100% line.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s279",
+    "chapter": "At Least One",
+    "text": "This trick works everywhere. The chance of at least one success, equals one, minus the chance of no success at all.",
+    "visual": "Rule card: P(at least one) = 1 − P(none).",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s280",
+    "chapter": "At Least One",
+    "text": "For example, if you guess on three quiz questions, each with four choices, what's the chance you get at least one right?",
+    "visual": "Three quiz cards A B C D.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s281",
+    "chapter": "At Least One",
+    "text": "The chance of getting one wrong is three quarters. All three wrong is three quarters cubed, twenty seven over sixty four.",
+    "visual": "3/4 × 3/4 × 3/4 = 27/64.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s282",
+    "chapter": "At Least One",
+    "text": "So at least one right is thirty seven out of sixty four. A bit more than half.",
+    "visual": "1 − 27/64 = 37/64 ≈ 58% in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s283",
+    "chapter": "At Least One",
+    "text": "Whenever you see the words at least one, your brain should shout, flip it around.",
+    "visual": "A big 'AT LEAST ONE → FLIP IT' banner.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s284",
+    "chapter": "A Deck of Cards",
+    "text": "Let's practise not, or and and on something new. A normal deck of playing cards.",
+    "visual": "A fan of card outlines (no real branding), title 'a standard deck'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s285",
+    "chapter": "A Deck of Cards",
+    "text": "A deck has fifty two cards. There are four suits, hearts, diamonds, clubs and spades. And each suit has thirteen cards, from ace up to king.",
+    "visual": "A 13 by 4 grid on axes: x 'rank' A, 2 … 10, J, Q, K; y 'suit' ♥ ♦ ♣ ♠. 4 × 13 = 52 in warn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s286",
+    "chapter": "A Deck of Cards",
+    "text": "Shuffle well, and every card is equally likely to be on top. So our counting recipe works.",
+    "visual": "All 52 cells flash once; chip 'equally likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s287",
+    "chapter": "A Deck of Cards",
+    "text": "What's the chance the top card is a heart? Thirteen hearts out of fifty two cards. That's one quarter.",
+    "visual": "Heart row aqua; 13/52 = 1/4 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s288",
+    "chapter": "A Deck of Cards",
+    "text": "What's the chance it's a king? Four kings out of fifty two. One thirteenth.",
+    "visual": "King column aqua; 4/52 = 1/13.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s289",
+    "chapter": "A Deck of Cards",
+    "text": "Now, the chance it's a king or a heart?",
+    "visual": "Question chip 'king OR heart?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s290",
+    "chapter": "A Deck of Cards",
+    "text": "Thirteen hearts, plus four kings. But one card is both, the king of hearts. Don't count it twice.",
+    "visual": "Row and column tint; the crossing cell flashes '×2'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s291",
+    "chapter": "A Deck of Cards",
+    "text": "Thirteen plus four, minus one, is sixteen. Sixteen out of fifty two, which simplifies to four thirteenths.",
+    "visual": "13 + 4 − 1 = 16; 16/52 = 4/13 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s292",
+    "chapter": "A Deck of Cards",
+    "text": "And the chance it's not a heart? One minus one quarter. Three quarters.",
+    "visual": "Other three rows grey-glow; 1 − 1/4 = 3/4.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s293",
+    "chapter": "A Deck of Cards",
+    "text": "Now for and. You draw two cards, without putting the first one back. What's the chance both are aces?",
+    "visual": "Two card slots; chip 'no putting back'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s294",
+    "chapter": "A Deck of Cards",
+    "text": "First card. Four aces out of fifty two.",
+    "visual": "4/52 under slot 1.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s295",
+    "chapter": "A Deck of Cards",
+    "text": "If that was an ace, there are now three aces left, out of fifty one cards.",
+    "visual": "One ace leaves; 3/51 under slot 2.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s296",
+    "chapter": "A Deck of Cards",
+    "text": "Multiply along the path. Four over fifty two, times three over fifty one. That's one out of two hundred and twenty one.",
+    "visual": "4/52 × 3/51 = 12/2652 = 1/221 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s297",
+    "chapter": "A Deck of Cards",
+    "text": "Not even half a percent. Two aces in a row really is rare.",
+    "visual": "Marker near 0 on a 0–100% axis: ≈ 0.45%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s298",
+    "chapter": "A Deck of Cards",
+    "text": "Same three words, a completely different game. That's the beauty of it. Once you know the tools, they work everywhere.",
+    "visual": "NOT · OR · AND chips glow together.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s299",
+    "chapter": "Two Step Trees",
+    "text": "Real life is often a chain of events, where the second step depends on the first. A tree diagram handles that beautifully.",
+    "visual": "A two-level tree outline draws on.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s300",
+    "chapter": "Two Step Trees",
+    "text": "Here's a story. On a typical school day in your town, there's a three in ten chance of rain.",
+    "visual": "Weather chip 'rain: 3/10'; first split of the tree: 'rain' 3/10, 'dry' 7/10.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s301",
+    "chapter": "Two Step Trees",
+    "text": "When it rains, the school bus is late half the time. When it's dry, the bus is late only one time in ten.",
+    "visual": "Second level: rain → 'late' 1/2, 'on time' 1/2; dry → 'late' 1/10, 'on time' 9/10.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s302",
+    "chapter": "Two Step Trees",
+    "text": "These numbers are made up for this example, but the method works for any numbers.",
+    "visual": "Small label 'illustration: made-up numbers'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s303",
+    "chapter": "Two Step Trees",
+    "text": "Question. On a random school day, what's the chance the bus is late?",
+    "visual": "Question chip 'bus late?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s304",
+    "chapter": "Two Step Trees",
+    "text": "Let's imagine one hundred school days, and walk them through the tree.",
+    "visual": "A 10 by 10 grid of day squares on axes, columns 1–10, rows 1–10.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s305",
+    "chapter": "Two Step Trees",
+    "text": "Three in ten days are rainy. That's thirty rainy days.",
+    "visual": "30 squares tint blue-grey 'rain'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s306",
+    "chapter": "Two Step Trees",
+    "text": "On half of those, the bus is late. Fifteen days.",
+    "visual": "15 of the rainy squares get an aqua 'late' mark.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s307",
+    "chapter": "Two Step Trees",
+    "text": "Seventy days are dry. On one in ten of them, the bus is late. Seven days.",
+    "visual": "7 of the 70 dry squares get an aqua 'late' mark.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s308",
+    "chapter": "Two Step Trees",
+    "text": "So the bus is late on fifteen plus seven days. Twenty two days out of one hundred.",
+    "visual": "15 + 7 = 22; 22/100 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s309",
+    "chapter": "Two Step Trees",
+    "text": "With the tree, you can do this without imagining days. Multiply along each path to a late bus, then add the paths together.",
+    "visual": "Paths highlight: 3/10 × 1/2 = 15/100 and 7/10 × 1/10 = 7/100; sum 22/100.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s310",
+    "chapter": "Two Step Trees",
+    "text": "Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or.",
+    "visual": "The words AND (along) and OR (across) label the tree.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s311",
+    "chapter": "Two Step Trees",
+    "text": "So the tree is just and and or, working together.",
+    "visual": "Chip 'tree = AND along, OR across'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s312",
+    "chapter": "Two Step Trees",
+    "text": "Now a sneaky question, which will lead us into our next big idea. The bus was late today. What's the chance it was raining?",
+    "visual": "Question chip 'bus was late → was it raining?'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s313",
+    "chapter": "Two Step Trees",
+    "text": "Look at the hundred days again. The bus was late on twenty two of them. That's our world now.",
+    "visual": "Only the 22 late squares stay bright; the rest fade.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s314",
+    "chapter": "Two Step Trees",
+    "text": "Fifteen of those twenty two were rainy days.",
+    "visual": "The 15 rainy-late squares glow.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s315",
+    "chapter": "Two Step Trees",
+    "text": "So the chance it was raining, given the bus was late, is fifteen out of twenty two. About sixty eight percent.",
+    "visual": "15/22 ≈ 68% in violet.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s316",
+    "chapter": "Two Step Trees",
+    "text": "Before you knew anything, rain had a thirty percent chance. Knowing the bus was late made rain much more likely.",
+    "visual": "Before/after: 30% → 68%.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s317",
+    "chapter": "Two Step Trees",
+    "text": "That idea, how a clue changes a probability, is what we'll look at next.",
+    "visual": "Arrow pointing to a chip 'next: GIVEN THAT'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s318",
+    "chapter": "Given That",
+    "text": "So far, we've rolled the dice without knowing anything. But what if someone gives you a clue?",
+    "visual": "Two-dice grid returns, all squares neutral; a clue envelope floats in.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s319",
+    "chapter": "Given That",
+    "text": "This is called conditional probability. It's the chance of something, given that you already know something else.",
+    "visual": "Definition card: 'CONDITIONAL PROBABILITY = the chance of A, given that B is true'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s320",
+    "chapter": "Given That",
+    "text": "Here's the key idea, and it's beautiful. A clue shrinks the grid.",
+    "visual": "The grid shrinks to a smaller highlighted region with a 'clue' label.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s321",
+    "chapter": "Given That",
+    "text": "Your friend rolls both dice, hides them, and peeks at the orange one. They tell you, the orange die is a six.",
+    "visual": "A cup covers the dice; a speech bubble 'the orange die is a 6!'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s322",
+    "chapter": "Given That",
+    "text": "What's the chance the total is twelve?",
+    "visual": "Question chip 'total 12, given orange is 6?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s323",
+    "chapter": "Given That",
+    "text": "Before the clue, it was one in thirty six. But now, every square where orange isn't six is impossible. Cross them out.",
+    "visual": "Columns 1–5 grey out and fade; only the orange=6 column stays.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s324",
+    "chapter": "Given That",
+    "text": "We're left with just one column. Six squares. That's our new world.",
+    "visual": "The orange=6 column glows warn as the new total: 6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s325",
+    "chapter": "Given That",
+    "text": "And in this new world, a total of twelve is one square out of six. One sixth.",
+    "visual": "(6,6) aqua; 1/6 in violet.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s326",
+    "chapter": "Given That",
+    "text": "The clue made twelve six times more likely. New information changed the probability.",
+    "visual": "Before/after: 1/36 → 1/6, with an arrow labelled 'clue'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s327",
+    "chapter": "Given That",
+    "text": "We write this with a straight line. P of twelve, line, orange six. And we read that line as, given.",
+    "visual": "Notation: P(12 | orange 6) = 1/6; the bar '|' glows with label 'given'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s328",
+    "chapter": "Given That",
+    "text": "So the recipe is the same as always. Count the outcomes you want, but only inside the shrunken world. Then divide by the size of that shrunken world.",
+    "visual": "Rule card: P(A | B) = (outcomes in both A and B) / (outcomes in B).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s329",
+    "chapter": "Given That",
+    "text": "Now here's a surprising one. With the same clue, the orange die is a six, what's the chance the total is seven?",
+    "visual": "Grid resets to the orange=6 column; question 'total 7, given orange is 6?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s330",
+    "chapter": "Given That",
+    "text": "In the six column, only one square makes seven, orange six and blue one. One out of six.",
+    "visual": "Square (6,1) aqua; 1/6.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s331",
+    "chapter": "Given That",
+    "text": "But the chance of seven without any clue was also one sixth.",
+    "visual": "Earlier result '7: 1/6' slides in beside it.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s332",
+    "chapter": "Given That",
+    "text": "The clue changed nothing! Knowing the orange die doesn't help you guess whether the total is seven.",
+    "visual": "Equals sign between the two 1/6 values glows.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s333",
+    "chapter": "Given That",
+    "text": "Why? Because whatever the orange die shows, there's always exactly one blue number that makes seven. So the clue gives no advantage.",
+    "visual": "Each column, in turn, lights its single 7-square: one per column.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s334",
+    "chapter": "Given That",
+    "text": "And this is the real meaning of independent. Two events are independent when knowing one doesn't change the chance of the other.",
+    "visual": "Definition card returns: 'INDEPENDENT: the clue doesn't change the chance'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s335",
+    "chapter": "Given That",
+    "text": "Let's try a trickier clue. Your friend says, the total is at least ten. What's the chance they rolled a double, two dice showing the same number?",
+    "visual": "Grid resets; speech bubble 'total is at least 10'; question 'double?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s336",
+    "chapter": "Given That",
+    "text": "First, shrink the world. Which squares have a total of ten, eleven or twelve?",
+    "visual": "Squares with sums 10, 11, 12 stay bright; others fade.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s337",
+    "chapter": "Given That",
+    "text": "Four and six. Five and five. Six and four. Five and six. Six and five. Six and six. Six squares.",
+    "visual": "The six squares count up 1–6 in warn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s338",
+    "chapter": "Given That",
+    "text": "Now, which of these are doubles? Five and five, and six and six. That's two.",
+    "visual": "(5,5) and (6,6) turn aqua.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s339",
+    "chapter": "Given That",
+    "text": "Two out of six. One third.",
+    "visual": "2/6 = 1/3 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s340",
+    "chapter": "Given That",
+    "text": "Without the clue, doubles happen six times out of thirty six, one sixth. With the clue, it doubles to one third.",
+    "visual": "Before/after: 1/6 → 1/3.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s341",
+    "chapter": "Given That",
+    "text": "Now for the most important warning in this whole chapter. The order of a given statement matters.",
+    "visual": "Red caution icon; two cards slide in.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s342",
+    "chapter": "Given That",
+    "text": "The chance of a total of twelve, given the orange die is six, is one sixth. We just saw it.",
+    "visual": "Card 1: P(12 | orange 6) = 1/6 with its shrunken column.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s343",
+    "chapter": "Given That",
+    "text": "But the chance the orange die is six, given the total is twelve, is one. It's certain! The only way to make twelve is double six.",
+    "visual": "Card 2: P(orange 6 | 12) = 1 with its one-square world.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s344",
+    "chapter": "Given That",
+    "text": "Same two things. Swapped around. Completely different answers.",
+    "visual": "A swap arrow between the cards with '≠'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s345",
+    "chapter": "Given That",
+    "text": "Here's an everyday version. Most professional basketball players are tall. But most tall people are not professional basketball players.",
+    "visual": "Two cards: 'given a pro player → very likely tall' vs 'given tall → very unlikely a pro player'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s346",
+    "chapter": "Given That",
+    "text": "Here's one more everyday example. In a class, twelve of the thirty students wear glasses, and eight of those twelve are girls.",
+    "visual": "A 10 by 3 dot class (illustration); 12 dots get glasses rings; 8 of them violet-tinted 'girls'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s347",
+    "chapter": "Given That",
+    "text": "Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds.",
+    "visual": "Only the 12 glasses dots stay bright; 8/12 = 2/3 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s348",
+    "chapter": "Given That",
+    "text": "Always ask, which world did the clue put me in? That world goes on the bottom of your fraction.",
+    "visual": "The fraction bottom glows warn: 'the world the clue puts you in'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s349",
+    "chapter": "Expected Value",
+    "text": "Let's go back to the fair. A stall has a game. You pay two tokens to roll two dice. If the total is seven, you win ten tokens.",
+    "visual": "Fair stall illustration; chips 'cost: 2 tokens' · 'roll 7: win 10 tokens'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s350",
+    "chapter": "Expected Value",
+    "text": "Should you play? To answer that, we need one more idea. Expected value.",
+    "visual": "Title strip 'expected value'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s351",
+    "chapter": "Expected Value",
+    "text": "Expected value is the average result you'd get per game, if you played many, many times.",
+    "visual": "Definition card: 'EXPECTED VALUE = the average per game, over many games'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s352",
+    "chapter": "Expected Value",
+    "text": "Let's start with something simple. What's the average number you roll on one die?",
+    "visual": "One die; faces 1–6 on an axis.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s353",
+    "chapter": "Expected Value",
+    "text": "Each face comes up one sixth of the time. So add up one, two, three, four, five, and six, and divide by six.",
+    "visual": "(1+2+3+4+5+6) / 6 writes on.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s354",
+    "chapter": "Expected Value",
+    "text": "That's twenty one divided by six. Three and a half.",
+    "visual": "= 21/6 = 3.5 in violet; a marker at 3.5 on the face axis.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s355",
+    "chapter": "Expected Value",
+    "text": "Notice something funny. You can never actually roll three and a half. The expected value doesn't have to be a possible result. It's a long run average.",
+    "visual": "A balance beam with weights on 1–6 balances exactly at 3.5; tag 'balance point'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s356",
+    "chapter": "Expected Value",
+    "text": "For two dice, the average total is three and a half plus three and a half. Seven. Right at the peak of our mountain.",
+    "visual": "Mountain bar chart returns; balance triangle under 7; '3.5 + 3.5 = 7'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s357",
+    "chapter": "Expected Value",
+    "text": "Now the fair game. Each game, you win ten tokens one sixth of the time, because seven has a one sixth chance.",
+    "visual": "Tree: 'roll 7' (1/6) → +10 tokens; 'not 7' (5/6) → 0 tokens.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s358",
+    "chapter": "Expected Value",
+    "text": "So on average, you win ten times one sixth. That's about one point six seven tokens per game.",
+    "visual": "10 × 1/6 ≈ 1.67 tokens.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s359",
+    "chapter": "Expected Value",
+    "text": "But you pay two tokens every single time.",
+    "visual": "Chip 'pay 2 every game' in red.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s360",
+    "chapter": "Expected Value",
+    "text": "So on average, you lose about one third of a token per game.",
+    "visual": "1.67 − 2 ≈ −0.33 per game in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s361",
+    "chapter": "Expected Value",
+    "text": "Play once, and you might win ten tokens and feel brilliant. But play sixty games, and you'd expect to be down about twenty tokens.",
+    "visual": "A line chart: x axis 'games played' 0–60, y axis 'tokens won or lost'; a simulated wiggly line drifting down; a dashed 'expected' line from 0 to −20.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s362",
+    "chapter": "Expected Value",
+    "text": "That's the quiet secret of almost every game at a fair. The expected value is a little bit in the stall's favour.",
+    "visual": "The stall tag 'expected value favours the stall' in warn.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s363",
+    "chapter": "Expected Value",
+    "text": "For the game to be fair, the expected win should equal the cost. Here, that would mean a price of ten sixths, about one point six seven tokens.",
+    "visual": "Fair price: 10/6 ≈ 1.67 tokens; a level beam.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s364",
+    "chapter": "Expected Value",
+    "text": "Let's try one more. Your class sells one hundred raffle tickets, at one token each. There's one prize, worth fifty tokens.",
+    "visual": "100 ticket squares on a 10 by 10 grid; one gold; chips 'ticket: 1 token' · 'prize: 50 tokens'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s365",
+    "chapter": "Expected Value",
+    "text": "If you buy one ticket, your chance of winning is one in a hundred. So your expected win is fifty times one hundredth. Half a token.",
+    "visual": "50 × 1/100 = 0.5 token.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s366",
+    "chapter": "Expected Value",
+    "text": "You paid one token, and you expect half a token back. So on average, you lose half a token per ticket.",
+    "visual": "0.5 − 1 = −0.5 in violet.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s367",
+    "chapter": "Expected Value",
+    "text": "But that's fine for a raffle! The extra money goes to the class trip. Expected value doesn't tell you what to do. It tells you what it costs, on average.",
+    "visual": "A school bus icon labelled 'class trip' collects the extra tokens.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s368",
+    "chapter": "Expected Value",
+    "text": "Expected value is how you decide, using probability, whether something is worth it in the long run.",
+    "visual": "Chip 'is it worth it in the long run?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s369",
+    "chapter": "Expected Value",
+    "text": "But remember, it's about the long run. A single game can go either way.",
+    "visual": "Pocket icon glows again.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s370",
+    "chapter": "Measuring Instead of Counting",
+    "text": "So far, we've always counted outcomes. But some things can't be counted, because there are too many possibilities to list.",
+    "visual": "A die (countable) next to a stopwatch (not countable) with '?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s371",
+    "chapter": "Measuring Instead of Counting",
+    "text": "Imagine a bus that comes exactly every ten minutes. You walk to the stop at a random moment, without checking the timetable.",
+    "visual": "A timeline axis 'minutes' 0–10 between two bus icons.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s372",
+    "chapter": "Measuring Instead of Counting",
+    "text": "What's the chance you wait less than three minutes?",
+    "visual": "Question chip 'wait less than 3 minutes?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s373",
+    "chapter": "Measuring Instead of Counting",
+    "text": "You could arrive at any moment in those ten minutes. Not just whole minutes, but any split second. There are endless possibilities.",
+    "visual": "Dots sprinkle densely along the timeline.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s374",
+    "chapter": "Measuring Instead of Counting",
+    "text": "So instead of counting, we measure. The good arrival times are the last three minutes before the bus comes. That's a stretch three minutes long, out of ten.",
+    "visual": "The segment from 7 to 10 on the axis turns aqua, labelled '3 minutes'; the whole axis labelled '10 minutes' in warn.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s375",
+    "chapter": "Measuring Instead of Counting",
+    "text": "Three out of ten. A probability of three tenths.",
+    "visual": "3/10 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s376",
+    "chapter": "Measuring Instead of Counting",
+    "text": "It's the same recipe, just with lengths instead of counts. The length you want, divided by the total length.",
+    "visual": "Rule card: P = length you want / total length.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s377",
+    "chapter": "Measuring Instead of Counting",
+    "text": "And it works with areas too. Throw a dart at a square board, landing at a random spot. The board has a circle drawn on it that fills half the area.",
+    "visual": "A square board on axes with equal scale; a circle shape covering half the area (illustration).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s378",
+    "chapter": "Measuring Instead of Counting",
+    "text": "Then the chance of landing inside the circle is one half. Area you want, divided by total area.",
+    "visual": "Random dart dots: about half inside; 'area you want / total area = 1/2'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s379",
+    "chapter": "Measuring Instead of Counting",
+    "text": "Counting, measuring lengths, measuring areas. It's all the same idea. The part you want, out of the whole.",
+    "visual": "Three icons merge into one card: 'the part you want, out of the whole'.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s380",
+    "chapter": "More Dice, New Shapes",
+    "text": "Let's go back to our dice mountain, and ask one more question. What happens if we roll more dice?",
+    "visual": "The two-dice triangle chart returns, totals 2–12.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s381",
+    "chapter": "More Dice, New Shapes",
+    "text": "With one die, every total from one to six is equally likely. The chart is flat, like a table.",
+    "visual": "Chart morphs to one die: six equal bars on axes 'total' 1–6, 'probability'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s382",
+    "chapter": "More Dice, New Shapes",
+    "text": "With two dice, it becomes a triangle. A pointy mountain, peaking at seven.",
+    "visual": "Chart morphs to the triangle.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s383",
+    "chapter": "More Dice, New Shapes",
+    "text": "With three dice, there are six times six times six, two hundred and sixteen outcomes. And the chart starts to look rounder, with the peak at ten and eleven.",
+    "visual": "Chart morphs to three dice: totals 3–18, counts out of 216, peak at 10 and 11 (27 each).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s384",
+    "chapter": "More Dice, New Shapes",
+    "text": "Roll more and more dice, and the shape keeps getting smoother and rounder. A soft hill with a peak in the middle and gentle tails at the edges.",
+    "visual": "Charts for 5 and 10 dice (scaled), each smoother; label 'shape only' for the scaled ones.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s385",
+    "chapter": "More Dice, New Shapes",
+    "text": "That shape has a famous name. The bell curve. And it appears again and again in nature, from people's heights to measurement errors.",
+    "visual": "A smooth bell outline traces over the last chart; tag 'the bell curve'.",
+    "pause_after": 1.2
+  },
+  {
+    "id": "s386",
+    "chapter": "More Dice, New Shapes",
+    "text": "Why? Because when lots of small random things add together, extreme results need everything to go the same way, which is rare. Middle results can happen in many more ways.",
+    "visual": "Ten dice: all sixes (one way) vs a middle total (many ways) shown as a tiny vs a big pile.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s387",
+    "chapter": "More Dice, New Shapes",
+    "text": "It's the exact same reason seven beats twelve. Just with more dice.",
+    "visual": "A small inset: 7 vs 12 from game night.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s388",
+    "chapter": "Practice Round",
+    "text": "Time for a quick practice round. I'll ask a question, you pause the video if you like, and try it yourself. Then we'll check together.",
+    "visual": "Title strip 'Practice round'; a pause icon.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s389",
+    "chapter": "Practice Round",
+    "text": "Question one. A jar has four green sweets and six yellow sweets. You pick one without looking. What's the chance it's green?",
+    "visual": "Jar with 4 green and 6 yellow circles; 'Q1' tag; a 3-second countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s390",
+    "chapter": "Practice Round",
+    "text": "Count what you want, four green. Count everything, ten sweets. Four tenths, which is two fifths.",
+    "visual": "4/10 = 2/5 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s391",
+    "chapter": "Practice Round",
+    "text": "Question two. With two dice, what's the chance of a total of ten?",
+    "visual": "Two-dice grid returns; 'Q2' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s392",
+    "chapter": "Practice Round",
+    "text": "Ten can be made by four and six, five and five, and six and four. Three squares. Three out of thirty six, which is one twelfth.",
+    "visual": "Squares (4,6),(5,5),(6,4) aqua; 3/36 = 1/12.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s393",
+    "chapter": "Practice Round",
+    "text": "Question three. So what's the chance of not getting a total of ten?",
+    "visual": "'Q3' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s394",
+    "chapter": "Practice Round",
+    "text": "Flip it around. One minus one twelfth. Eleven twelfths.",
+    "visual": "1 − 1/12 = 11/12 in violet.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s395",
+    "chapter": "Practice Round",
+    "text": "Question four. You flip three coins. What's the chance of at least one head?",
+    "visual": "Three coins; 'Q4' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s396",
+    "chapter": "Practice Round",
+    "text": "At least one means flip it around. The opposite is no heads at all, which is tails tails tails. One out of eight. So at least one head is seven eighths.",
+    "visual": "Tree with 8 leaves; TTT grey; 1 − 1/8 = 7/8.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s397",
+    "chapter": "Practice Round",
+    "text": "Question five. With two dice, what's the chance that both dice show an even number?",
+    "visual": "Grid; 'Q5' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s398",
+    "chapter": "Practice Round",
+    "text": "Each die is even half the time, and the dice are independent. One half times one half is one quarter. On the grid, that's nine squares out of thirty six.",
+    "visual": "Even-even squares (9) turn aqua; 1/2 × 1/2 = 1/4 = 9/36.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s399",
+    "chapter": "Practice Round",
+    "text": "Question six. Your friend says the total of two dice is four. What's the chance it was a double?",
+    "visual": "'Q6' tag; speech bubble 'total is 4'; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s400",
+    "chapter": "Practice Round",
+    "text": "Shrink the world. A total of four comes from one and three, two and two, and three and one. Three squares. Only two and two is a double. One third.",
+    "visual": "Squares (1,3),(2,2),(3,1) bright; (2,2) aqua; 1/3.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s401",
+    "chapter": "Practice Round",
+    "text": "Question seven. A spinner has four equal parts showing one, two, three and six points. What's the expected number of points per spin?",
+    "visual": "Spinner with four equal sectors 1, 2, 3, 6; 'Q7' tag; countdown ring.",
+    "pause_after": 3.0
+  },
+  {
+    "id": "s402",
+    "chapter": "Practice Round",
+    "text": "Add them up, twelve, and divide by four. Three points per spin, on average.",
+    "visual": "(1 + 2 + 3 + 6) / 4 = 3 in violet; balance beam balancing at 3.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s403",
+    "chapter": "Practice Round",
+    "text": "How did you do? If you got even half of those, you're already thinking like a probability person.",
+    "visual": "A score card '7 questions' with ticks.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s404",
+    "chapter": "Common Mistakes",
+    "text": "You now know more probability than most people. So let's protect you from the traps that catch almost everyone.",
+    "visual": "Title strip 'the traps'; four empty red-bordered cards.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s405",
+    "chapter": "Common Mistakes",
+    "text": "Trap number one. I'm due for a win.",
+    "visual": "Card 1: 'I'm due!' (red).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s406",
+    "chapter": "Common Mistakes",
+    "text": "A coin lands heads five times in a row. Surely tails is coming now, right?",
+    "visual": "Five heads in a row on a strip; a sixth coin spins with '?'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s407",
+    "chapter": "Common Mistakes",
+    "text": "No. The coin has no memory. The chance of tails on the next flip is still one half.",
+    "visual": "The sixth coin: 1/2 heads, 1/2 tails; a 'no memory' brain icon crossed out.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s408",
+    "chapter": "Common Mistakes",
+    "text": "Each flip is independent. The past doesn't push the future back into balance.",
+    "visual": "Chip 'independent: the past doesn't push'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s409",
+    "chapter": "Common Mistakes",
+    "text": "But wait, doesn't the law of large numbers say things even out? It does, but not by correcting. Over a huge number of flips, five extra heads just get diluted, like a drop of ink in an ocean.",
+    "visual": "Line chart of share of heads: an early bump fades as flips grow; tag 'diluted, not corrected'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s410",
+    "chapter": "Common Mistakes",
+    "text": "In fact, the sequence heads, heads, heads, heads, heads, tails, is exactly as likely as six heads in a row. One in sixty four each.",
+    "visual": "Two strips HHHHHT and HHHHHH, each tagged 1/64.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s411",
+    "chapter": "Common Mistakes",
+    "text": "This mistake has a name. The gambler's fallacy.",
+    "visual": "Name tag 'the gambler's fallacy' on card 1.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s412",
+    "chapter": "Common Mistakes",
+    "text": "And here's a sneaky cousin of this trap. Judging from too few tries. A new player scores three shots out of three, and everyone says they never miss.",
+    "visual": "Three basketball shots, all in; a speech bubble 'never misses!'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s413",
+    "chapter": "Common Mistakes",
+    "text": "But three tries is a tiny sample. Remember the coin that gave seven heads out of ten. Small samples wobble. Wait for many tries before you trust a pattern.",
+    "visual": "The 10-flip wobble from earlier returns briefly; chip 'small samples wobble'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s414",
+    "chapter": "Common Mistakes",
+    "text": "Trap number two. There are two outcomes, so it's fifty fifty.",
+    "visual": "Card 2: 'two outcomes → 50/50?' (red).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s415",
+    "chapter": "Common Mistakes",
+    "text": "Will I win the lottery? Either I win, or I don't. Two outcomes. So fifty fifty?",
+    "visual": "A ticket with 'win' / 'lose' and a grey '1/2?' label.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s416",
+    "chapter": "Common Mistakes",
+    "text": "Of course not. Two possible results doesn't mean two equally likely results. Remember the spinner.",
+    "visual": "The spinner from earlier returns, 3/4 red, 1/4 blue.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s417",
+    "chapter": "Common Mistakes",
+    "text": "Before you count, always check that your outcomes are equally likely.",
+    "visual": "Rule footnote glows: 'only if equally likely'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s418",
+    "chapter": "Common Mistakes",
+    "text": "Trap number three. Adding when you shouldn't.",
+    "visual": "Card 3: 'adding chances blindly' (red).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s419",
+    "chapter": "Common Mistakes",
+    "text": "We saw it already. Four rolls at one sixth each is not four sixths, because the events overlap. If they can happen together, adding counts too much.",
+    "visual": "The 4/6 vs 671/1296 comparison returns.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s420",
+    "chapter": "Common Mistakes",
+    "text": "A quick sanity check helps here. If your answer is more than one, or more than one hundred percent, something has gone wrong.",
+    "visual": "A gauge 0–1 with a red zone beyond 1; tag 'never above 1'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s421",
+    "chapter": "Common Mistakes",
+    "text": "Trap number four. Flipping the given.",
+    "visual": "Card 4: 'flipping the given' (red).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s422",
+    "chapter": "Common Mistakes",
+    "text": "The chance of A given B is not the same as the chance of B given A. Tall given basketball player is very different from basketball player given tall.",
+    "visual": "The two basketball cards with '≠'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s423",
+    "chapter": "Common Mistakes",
+    "text": "Whenever you hear a statement with given, if, or among, pause and ask, which group am I really looking at?",
+    "visual": "Chip 'which group am I in?'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s424",
+    "chapter": "Common Mistakes",
+    "text": "And one bonus trap. Thinking that unlikely means impossible.",
+    "visual": "Bonus card: 'unlikely = impossible?' (red).",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s425",
+    "chapter": "Common Mistakes",
+    "text": "A one in a million event is very rare for you. But in a country of tens of millions of people, you'd expect it to happen to dozens of them.",
+    "visual": "A grid of many tiny dots (illustration), a scattered few glowing; tag 'rare for one, common for many'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s426",
+    "chapter": "Common Mistakes",
+    "text": "So when you hear about an amazing coincidence, remember, with enough people and enough chances, surprising things are expected.",
+    "visual": "Chip 'enough chances → surprises are normal'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s427",
+    "chapter": "Recipe",
+    "text": "Let's put everything together. Here's your probability recipe.",
+    "visual": "Recipe card title 'Your probability recipe'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s428",
+    "chapter": "Recipe",
+    "text": "Step one. List everything that could happen. Use a grid or a tree, and make sure every outcome is equally likely.",
+    "visual": "① List all outcomes — 'grid or tree; equally likely'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s429",
+    "chapter": "Recipe",
+    "text": "Step two. Count the outcomes you want, and divide by all the outcomes.",
+    "visual": "② Count and divide — 'wanted ÷ all'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s430",
+    "chapter": "Recipe",
+    "text": "Step three. For not, take it away from one.",
+    "visual": "③ NOT — '1 − P(A)'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s431",
+    "chapter": "Recipe",
+    "text": "Step four. For or, add, and remove the overlap.",
+    "visual": "④ OR — 'add, then remove the overlap'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s432",
+    "chapter": "Recipe",
+    "text": "Step five. For and, multiply along the path, using the updated chance.",
+    "visual": "⑤ AND — 'multiply along the path'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s433",
+    "chapter": "Recipe",
+    "text": "Step six. For at least one, flip it around. One, minus the chance of none.",
+    "visual": "⑥ AT LEAST ONE — '1 − P(none)'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s434",
+    "chapter": "Recipe",
+    "text": "Step seven. For a given, shrink the world first, then count.",
+    "visual": "⑦ GIVEN — 'shrink the world, then count'.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s435",
+    "chapter": "Recipe",
+    "text": "And step eight. Remember, probability describes the long run. Not the next single try.",
+    "visual": "⑧ LONG RUN — 'patterns over many tries'.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s436",
+    "chapter": "Recipe",
+    "text": "Let's run the recipe one last time, on our game night question. Two dice, so six times six, thirty six equally likely outcomes.",
+    "visual": "Mini grid 6 × 6 next to step ①.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s437",
+    "chapter": "Recipe",
+    "text": "Twelve has one way, seven has six ways. Count and divide. One over thirty six, against six over thirty six.",
+    "visual": "1/36 vs 6/36 beside step ②.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s438",
+    "chapter": "Recipe",
+    "text": "And over many game nights, your friend will win this race about six times as often as you. Unless you change the rules.",
+    "visual": "Step ⑧ glows; tally of many game nights 6 : 1.",
+    "pause_after": 1.0
+  },
+  {
+    "id": "s439",
+    "chapter": "Recipe",
+    "text": "You can't control the dice. But now, you can understand them.",
+    "visual": "The recipe card dims; the two dice roll once more and land on 7.",
+    "pause_after": 1.5
+  },
+  {
+    "id": "s440",
+    "chapter": "Subscribe",
+    "text": "Look around your world, and notice how often you're quietly guessing the odds. The weather, the bus, a quiz, a game.",
+    "visual": "Four everyday cards: cloud, bus stop, quiz sheet, dice; each stamped with a small '?'.",
+    "pause_after": 0.6
+  },
+  {
+    "id": "s441",
+    "chapter": "Subscribe",
+    "text": "If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together.",
+    "visual": "Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.",
+    "pause_after": 0.8
+  },
+  {
+    "id": "s442",
+    "chapter": "Next Time",
+    "text": "But here's a puzzle for next time.",
+    "visual": "Small logo top-centre; puzzle icon.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s443",
+    "chapter": "Next Time",
+    "text": "How many people do you need in a room, before it's more likely than not that two of them share a birthday?",
+    "visual": "A room of person icons fills in; two of them get a matching cake icon; 'next: Twenty Three People, Fifty Fifty Odds' chip under the logo.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s444",
+    "chapter": "Next Time",
+    "text": "Many people guess something like one hundred and eighty. The real answer is just twenty three. And with the tools you learned today, you'll be able to see exactly why.",
+    "visual": "'180?' in grey gets crossed; '23' appears in violet; small icons NOT and 'at least one' glow.",
+    "pause_after": 0.45
+  },
+  {
+    "id": "s445",
+    "chapter": "Next Time",
+    "text": "I will see you in the next video.",
+    "visual": "Logo + next chip hold.",
+    "pause_after": 2.0
+  }
+]

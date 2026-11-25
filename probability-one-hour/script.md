@@ -1,0 +1,978 @@
+# Give Me One Hour and You'll FINALLY Understand PROBABILITY
+
+445 segments · 7855 words · est. 52.4 min (voice ≈165 wpm + 286 s pauses) · target 50–60 min
+
+
+## Game Night  ·  136 words, ~49 s
+
+- **s001** It's game night. You and your friend are one move away from winning a board game.
+  - *Visual:* Line-art table with a game board; two player tokens near the finish square; two dice (orange, blue) sit in the middle.
+- **s002** To win, you need to roll exactly twelve with two dice.
+  - *Visual:* Your token glows; a chip 'you need: 12' appears; the dice show a ghosted 6 and 6.
+- **s003** Your friend needs exactly seven.
+  - *Visual:* Friend's token glows; chip 'friend needs: 7'.
+- **s004** You each get one roll. So, who is more likely to win? ⏸1.2s
+  - *Visual:* Both chips side by side with a big '?' between them.
+- **s005** A lot of people say it's the same. Twelve is one number, seven is one number. Every number is just as likely, right?
+  - *Visual:* A balance beam: '12' on one pan, '7' on the other, sitting level; a grey 'gut feeling' label.
+- **s006** Wrong. Seven comes up six times more often than twelve. ⏸1.5s
+  - *Visual:* The beam slams down on the 7 side; a violet tag '6 times more likely' drops in.
+- **s007** Six times. Same dice. Same table. Same luck. ⏸0.8s
+  - *Visual:* Six little '7' tokens stack on the left, one '12' token on the right, on a count axis 0–6.
+- **s008** That's what probability does. It takes something that feels like pure luck, and shows you a hidden pattern underneath.
+  - *Visual:* The dice dissolve into a 6 by 6 grid of squares that briefly flashes the diagonal pattern.
+- **s009** And here's the promise. Give me one hour, and starting from absolute zero, you will finally understand probability. ⏸0.6s
+  - *Visual:* A clock icon sweeps from 0 to 60 minutes.
+- **s010** No scary formulas without pictures. No skipped steps. Just counting, and seeing. ⏸0.6s
+  - *Visual:* Three chips pop: 'no scary formulas' · 'no skipped steps' · 'just counting'.
+- **s011** Let's begin. ⏸1.0s
+  - *Visual:* Title card: 'PROBABILITY' (violet) with subtitle 'from absolute zero, in one hour'.
+
+## Welcome  ·  66 words, ~24 s
+
+- **s012** Welcome to Math Lab TV. Where math is something you can see. ⏸0.7s
+  - *Visual:* Logo (violet rounded square with a green bell curve) + MATH LAB TV + tagline 'where math is something you can see'.
+- **s013** Today you will learn what a probability really is, and how to find one just by counting.
+  - *Visual:* Small logo top-right. Big ① (aqua); a mini 0-to-1 scale with a pointer; caption 'what probability is, and how to count it'.
+- **s014** You will see the three little words that power almost every probability question. Not, or, and and.
+  - *Visual:* Big ② (violet); three chips NOT · OR · AND; caption 'the three magic words'.
+- **s015** And you will learn how new information changes the odds, and how to spot the traps that fool almost everyone. ⏸0.6s
+  - *Visual:* Big ③ (warn); a grid shrinking to a smaller grid, then a red trap icon; caption 'new information, and the traps'.
+
+## Why It Matters  ·  170 words, ~62 s
+
+- **s016** Before we start, why should you care about probability at all?
+  - *Visual:* A question card 'Why care?' centered.
+- **s017** Because you already use it, every single day, without noticing.
+  - *Visual:* Four empty cards slide in a row.
+- **s018** When the weather app says seventy percent chance of rain, and you decide to take an umbrella, that's probability.
+  - *Visual:* Card 1: cloud with rain drops; a meter on a 0–100% axis fills to 70%.
+- **s019** When you guess on a quiz question with four choices, and you know you have one chance in four, that's probability.
+  - *Visual:* Card 2: quiz sheet with A B C D; one option circled; chip '1 in 4'.
+- **s020** When you wonder if it's worth playing a game at the school fair, that's probability.
+  - *Visual:* Card 3: fair stall with a spinner; a '?' over the prize.
+- **s021** When a doctor says a medicine works for most people, or a sports commentator says a team is the favourite, they're talking in probabilities too.
+  - *Visual:* Two small cards: a medicine bottle 'works for most people', a trophy 'the favourite'.
+- **s022** And when someone says, I've lost five times in a row, so I'm due for a win, that's a probability mistake. We'll fix that one later. ⏸0.8s
+  - *Visual:* Card 4: a speech bubble 'I'm due for a win!' gets a red trap stamp.
+- **s023** Probability is simply the math of not knowing for sure. ⏸1.0s
+  - *Visual:* The four cards shrink; a big phrase writes on: 'the math of not knowing for sure'.
+- **s024** You can't know what the next roll will be. But you can know a lot about what tends to happen. And that's surprisingly powerful.
+  - *Visual:* A single die tumbles with a '?' (next roll), then dissolves into a bar chart outline labelled 'what tends to happen'.
+- **s025** So let's build it from the very first brick. ⏸0.6s
+  - *Visual:* One brick drops onto an empty base line.
+
+## What Is Probability?  ·  487 words, ~177 s
+
+- **s026** A probability is just a number. It tells you how likely something is to happen.
+  - *Visual:* A horizontal number line from 0 to 1 with ticks every 0.1, title 'how likely'.
+- **s027** And this number always lives between zero and one.
+  - *Visual:* The ends of the line glow: '0' and '1'.
+- **s028** Zero means impossible. It will never happen.
+  - *Visual:* At 0: label 'impossible' (blue); example card: a normal die showing 'roll a 7 on one die'.
+- **s029** Like rolling a seven on one ordinary die. A die only has the numbers one to six, so seven can never come up.
+  - *Visual:* A die net unfolds showing faces 1–6; '7' with a red cross.
+- **s030** One means certain. It will always happen.
+  - *Visual:* At 1: label 'certain' (orange); example card 'roll a number less than 7'.
+- **s031** Like rolling a number smaller than seven on that same die. Every face works, so it's guaranteed.
+  - *Visual:* All six faces get green ticks.
+- **s032** And everything else, everything that might or might not happen, sits somewhere in between. ⏸0.6s
+  - *Visual:* The middle of the line shades softly.
+- **s033** Right in the middle, at one half, is a perfect toss-up.
+  - *Visual:* Pointer at 0.5, label 'toss-up'.
+- **s034** Like flipping a coin and getting heads. Half the time yes, half the time no.
+  - *Visual:* A coin flips and lands heads; a two-part bar splits 1/2 | 1/2.
+- **s035** The closer a number is to one, the more likely it is. The closer it is to zero, the less likely.
+  - *Visual:* Arrows along the line: toward 1 'more likely', toward 0 'less likely'.
+- **s036** Let's place a few everyday things on this line, just by feel.
+  - *Visual:* Empty markers wait above the line.
+- **s037** The sun rising tomorrow? Right up near one.
+  - *Visual:* A sun icon lands near 1.
+- **s038** Rain tomorrow, when the forecast says seventy percent? Around zero point seven.
+  - *Visual:* A cloud lands at 0.7.
+- **s039** Guessing a quiz question right with four choices? Zero point two five.
+  - *Visual:* A quiz icon lands at 0.25.
+- **s040** Winning a big lottery? So close to zero that you can't even see the gap. ⏸0.8s
+  - *Visual:* A ticket icon lands at 0; a magnifier shows a tiny gap labelled 'very, very small'.
+- **s041** Now, there are three ways to write the same probability, and you'll see all three everywhere.
+  - *Visual:* Three empty slots: 'fraction' · 'decimal' · 'percent'.
+- **s042** As a fraction, like one half.
+  - *Visual:* Slot 1 fills: 1/2.
+- **s043** As a decimal, like zero point five.
+  - *Visual:* Slot 2 fills: 0.5.
+- **s044** Or as a percent, like fifty percent. Percent just means out of a hundred.
+  - *Visual:* Slot 3 fills: 50%; a 10 by 10 grid with 50 squares shaded.
+- **s045** They are all the same amount. One half, zero point five, fifty percent. Three outfits, one person. ⏸1.0s
+  - *Visual:* Equals signs link the three slots; they collapse into one violet point at 0.5 on the line.
+- **s046** To change a decimal into a percent, just multiply by one hundred. Zero point two five becomes twenty five percent.
+  - *Visual:* 0.25 × 100 = 25% writes on; a 10 by 10 grid shades 25 squares.
+- **s047** We'll mostly use fractions in this video, because fractions show you the counting.
+  - *Visual:* The fraction slot glows warn yellow.
+- **s048** But what does a probability actually mean? If the chance of rain is seventy percent, will it rain or not? ⏸0.8s
+  - *Visual:* Cloud card returns with a '?'.
+- **s049** Here's the honest answer. A probability doesn't tell you what will happen next time.
+  - *Visual:* A single day card shows '?' (one day can't be predicted).
+- **s050** It tells you what happens in the long run. Out of many days with a forecast like this one, about seventy out of every hundred will have rain.
+  - *Visual:* A calendar grid of 100 days on axes (columns 1–10, rows 1–10); 70 days turn to rain icons one row at a time.
+- **s051** So on any one day, it might stay dry. That doesn't mean the forecast was wrong.
+  - *Visual:* One dry sun day pulses; label 'still fits the 70%'.
+- **s052** Keep that idea in your pocket. Probability is about patterns over many tries, not about one single try. ⏸1.0s
+  - *Visual:* Chip 'patterns over many tries' slides into a small pocket icon top-right, which stays.
+- **s053** And where do probabilities come from? There are three main ways.
+  - *Visual:* Three empty cards: 'count', 'experiment', 'judgement'.
+- **s054** One, you can count. Like a die with six equal faces. We'll do lots of this.
+  - *Visual:* Card 1 fills: a die and '1/6'.
+- **s055** Two, you can experiment. Try something many times and see how often it happens. Like checking how often your bus is late over a whole term.
+  - *Visual:* Card 2 fills: a tally chart of late days (illustration).
+- **s056** And three, sometimes people simply give their best judgement, like a coach saying, I think we have a sixty percent chance of winning this match.
+  - *Visual:* Card 3 fills: a coach with a speech bubble '60%?'.
+- **s057** That last kind is the shakiest. In this video, we'll stick to the first two, where we can actually check our answers. ⏸0.8s
+  - *Visual:* Card 3 dims; cards 1 and 2 glow.
+
+## Counting Outcomes  ·  595 words, ~216 s
+
+- **s058** So how do we actually find a probability? For lots of everyday questions, you just count.
+  - *Visual:* Title strip 'Probability by counting'.
+- **s059** Let's start with one die.
+  - *Visual:* A single orange die rotates in.
+- **s060** When you roll it, there are six things that can happen. It can land on one, two, three, four, five, or six.
+  - *Visual:* Six die faces line up on an axis labelled 'face' with ticks 1–6.
+- **s061** Each of these is called an outcome. An outcome is one possible result.
+  - *Visual:* Definition card: 'OUTCOME = one possible result'.
+- **s062** And the list of all possible outcomes has a name too. It's called the sample space. That's just a fancy name for everything that could happen. ⏸0.8s
+  - *Visual:* A warn-yellow box wraps all six faces; label 'sample space = everything that could happen'.
+- **s063** Now, if the die is fair, each face is equally likely. No face is special. The die isn't loaded.
+  - *Visual:* Six equal bars on the axis, each of height 1/6 on a y axis 'probability' 0 to 0.3.
+- **s064** So what's the chance of rolling a four?
+  - *Visual:* Face 4 lifts up.
+- **s065** There is one outcome we want, the four. Out of six outcomes in total. So the chance is one out of six. One sixth. ⏸1.0s
+  - *Visual:* Fraction builds: '1' (aqua, outcomes we want) over '6' (warn, all outcomes) = 1/6 (violet).
+- **s066** That's the whole recipe. Probability equals the number of outcomes you want, divided by the total number of outcomes. ⏸1.2s
+  - *Visual:* Rule card: P = (outcomes you want) / (all outcomes), colour-coded aqua over warn.
+- **s067** The letter P is just short for probability. When you see P of something, read it as, the probability of that thing.
+  - *Visual:* Definition: 'P( ) = the probability of ...'; example 'P(4) = 1/6'.
+- **s068** Let's try another one. What's the chance of rolling an even number?
+  - *Visual:* Faces reset; question chip 'even number?'.
+- **s069** The even numbers are two, four and six. That's three outcomes we want.
+  - *Visual:* Faces 2, 4, 6 turn aqua.
+- **s070** Three out of six. Which is the same as one half. ⏸0.8s
+  - *Visual:* 3/6 = 1/2 builds; pointer drops at 0.5 on a mini 0–1 line.
+- **s071** A group of outcomes we care about, like rolling an even number, is called an event.
+  - *Visual:* Definition card: 'EVENT = a group of outcomes you care about'; the aqua faces get a bracket.
+- **s072** What about rolling a number bigger than four? That's five or six. Two out of six, which is one third.
+  - *Visual:* Faces 5, 6 turn aqua; 2/6 = 1/3.
+- **s073** See how simple this is? Count what you want. Count everything. Divide. ⏸1.0s
+  - *Visual:* Three icons: 'count what you want' → 'count everything' → 'divide'.
+- **s074** But there's one small rule hiding inside this recipe, and it's really important.
+  - *Visual:* A warn exclamation mark pulses over the rule card.
+- **s075** The counting trick only works when every outcome is equally likely. ⏸0.8s
+  - *Visual:* Underline under 'equally likely' on the rule card.
+- **s076** Here's an example where it breaks. Imagine a spinner where the red part is three quarters of the circle, and the blue part is one quarter.
+  - *Visual:* A spinner circle: red 270°, blue 90°.
+- **s077** There are two colours. But the chance of red is not one half. It's three quarters, because red takes up more space.
+  - *Visual:* A wrong label '1/2?' gets a red cross; the circle splits into four equal quarters, three red; '3/4' in violet.
+- **s078** Fix it by cutting the circle into equal pieces first. Four equal quarters. Three of them are red. Now counting works again. ⏸1.0s
+  - *Visual:* Quarter lines draw; count 1, 2, 3 on the red quarters; 3/4.
+- **s079** So, always ask, are my outcomes equally likely? If they aren't, split them into pieces that are.
+  - *Visual:* Rule card adds a footnote: 'only if all outcomes are equally likely'.
+- **s080** Now let's level up, and flip two coins.
+  - *Visual:* Two coins appear side by side, labelled 'coin 1' and 'coin 2'.
+- **s081** What's the chance you get one head and one tail?
+  - *Visual:* Question chip 'one head and one tail?'.
+- **s082** Many people think there are three outcomes. Two heads, two tails, or one of each. So the answer must be one third.
+  - *Visual:* Three boxes: 'HH' 'TT' 'one of each' with a grey '1/3?' label.
+- **s083** But those three aren't equally likely. Watch.
+  - *Visual:* The 'one of each' box shakes.
+- **s084** Let's draw a tree. The first coin can be heads or tails. Then for each of those, the second coin can be heads or tails.
+  - *Visual:* A tree diagram grows left to right: first split H / T, then each splits H / T.
+- **s085** That gives four outcomes. Heads heads. Heads tails. Tails heads. Tails tails.
+  - *Visual:* Leaves label HH, HT, TH, TT.
+- **s086** And these four are equally likely. Each one has a chance of one quarter.
+  - *Visual:* Each leaf gets '1/4'.
+- **s087** Now count. One head and one tail happens two ways, heads then tails, or tails then heads.
+  - *Visual:* HT and TH turn aqua.
+- **s088** Two out of four. One half. Not one third. ⏸1.2s
+  - *Visual:* 2/4 = 1/2 in violet; the grey '1/3?' gets a red cross.
+- **s089** The lesson? Keep track of which coin is which. Heads tails and tails heads are different outcomes, even if they look the same at the end.
+  - *Visual:* Coin 1 is tinted orange, coin 2 blue; HT and TH shown side by side with their coloured coins.
+- **s090** Let's push it one step further. Three coins.
+  - *Visual:* A third coin joins.
+- **s091** Each new coin doubles the branches. Two, then four, then eight outcomes.
+  - *Visual:* The tree grows a third level; a counter shows 2 → 4 → 8.
+- **s092** What's the chance of getting exactly two heads?
+  - *Visual:* Question chip 'exactly two heads?'.
+- **s093** Look through the eight leaves. Heads heads tails. Heads tails heads. Tails heads heads. That's three.
+  - *Visual:* HHT, HTH, THH turn aqua one by one with a counter 1, 2, 3.
+- **s094** So the answer is three out of eight. ⏸1.0s
+  - *Visual:* 3/8 in violet; also '= 0.375'.
+- **s095** A tree is a wonderful tool. When you're not sure how many outcomes there are, draw the tree, and the leaves will tell you.
+  - *Visual:* The tree glows; tag 'draw the tree'.
+
+## Counting Bigger Things  ·  285 words, ~104 s
+
+- **s096** Trees are great, but they can get huge very quickly. So here's a shortcut for counting outcomes, without drawing every branch.
+  - *Visual:* A tree explodes into dozens of branches, then fades; chip 'a faster way to count'.
+- **s097** Imagine you have three shirts and four pairs of trousers. How many different outfits can you make?
+  - *Visual:* Three shirts (illustration shapes) in a column on the left, four trousers in a row along the top.
+- **s098** Put the shirts down the side and the trousers along the top, and you get a grid. Three rows, four columns.
+  - *Visual:* A 3 by 4 grid on axes: x 'trousers' 1–4, y 'shirt' 1–3; each cell is one outfit.
+- **s099** Twelve squares. Twelve outfits. Three times four. ⏸1.0s
+  - *Visual:* Counter 3 × 4 = 12 in warn.
+- **s100** This is called the multiplication rule for counting. If one choice can be made in some number of ways, and a second choice in some number of ways, then together, you multiply.
+  - *Visual:* Rule card: 'ways for choice 1 × ways for choice 2 = total ways'.
+- **s101** Add two pairs of shoes, and every one of those twelve outfits splits into two. Twelve times two is twenty four.
+  - *Visual:* The grid duplicates into two layers (shoe A, shoe B); 12 × 2 = 24.
+- **s102** So if you get dressed in the dark, and grab each item at random, the chance of getting one particular outfit is one out of twenty four. ⏸1.0s
+  - *Visual:* One cell glows aqua; 1/24 in violet.
+- **s103** Here's another one. A phone lock with a four digit code. Each digit can be anything from zero to nine. That's ten choices.
+  - *Visual:* Four empty code slots; under each, a chip '10 choices'.
+- **s104** First digit, ten ways. Second digit, ten ways. Third, ten. Fourth, ten.
+  - *Visual:* Each slot fills with '10' one by one.
+- **s105** Ten times ten times ten times ten. Ten thousand possible codes. ⏸1.0s
+  - *Visual:* 10 × 10 × 10 × 10 = 10,000 in warn.
+- **s106** So if a stranger picks up your phone and guesses once, their chance of getting it right is one in ten thousand.
+  - *Visual:* 1/10,000 in violet; a tiny marker near 0 on the 0–1 line.
+- **s107** And with three different guesses, it's three in ten thousand. Still tiny.
+  - *Visual:* 3/10,000 in violet.
+- **s108** That's why phones lock you out after a few wrong tries. They keep the number of guesses small, so the chance stays small. ⏸1.0s
+  - *Visual:* A padlock icon with 'too many tries' and a timer.
+- **s109** And this is exactly why two dice give thirty six outcomes. Six ways for the orange die, times six ways for the blue die.
+  - *Visual:* Two dice with '6 × 6 = 36'.
+- **s110** Count the choices, multiply, and you know the size of your world. ⏸0.8s
+  - *Visual:* Chip 'multiply the choices = size of the world'.
+
+## Putting Things in Order  ·  323 words, ~117 s
+
+- **s111** The multiplication rule has another trick. It can count how many ways there are to put things in order.
+  - *Visual:* Three book spines labelled A, B, C on a shelf.
+- **s112** Say you have three books, A, B and C, and you put them on a shelf in a random order. How many orders are there?
+  - *Visual:* Question chip 'how many orders?'.
+- **s113** For the first spot, you have three books to choose from. Once one is placed, two books are left for the second spot. And then just one book for the last spot.
+  - *Visual:* Three shelf slots fill with counts 3, 2, 1.
+- **s114** Three times two times one. Six orders. ⏸1.0s
+  - *Visual:* 3 × 2 × 1 = 6; all six orders appear in a list: ABC, ACB, BAC, BCA, CAB, CBA.
+- **s115** So the chance they land in alphabetical order, A then B then C, is one out of six.
+  - *Visual:* ABC glows aqua; 1/6 in violet.
+- **s116** Now try ten books. Ten times nine times eight, all the way down to one. That's over three and a half million orders.
+  - *Visual:* 10 × 9 × 8 × … × 1 = 3,628,800 in warn.
+- **s117** The chance that ten books shuffled at random land in perfect order is about one in three and a half million. Tiny. ⏸1.0s
+  - *Visual:* 1/3,628,800 → marker at 0 on the 0–1 line.
+- **s118** That's why a well shuffled deck of cards is almost certainly in an order that has never existed before. There are just too many possible orders.
+  - *Visual:* A deck fan; chip 'too many orders to ever repeat'.
+- **s119** Now, a lottery. Suppose you must pick six numbers out of forty nine, and the order doesn't matter.
+  - *Visual:* A grid of numbered balls 1–49 (7 by 7); six get circled.
+- **s120** If order mattered, there would be forty nine times forty eight times forty seven times forty six times forty five times forty four ways.
+  - *Visual:* 49 × 48 × 47 × 46 × 45 × 44 writes on.
+- **s121** But the same six numbers can be picked in any order. Six times five times four times three times two times one, which is seven hundred and twenty orders. So we divide by that.
+  - *Visual:* ÷ (6 × 5 × 4 × 3 × 2 × 1) = ÷ 720.
+- **s122** The result is almost fourteen million different tickets. ⏸1.0s
+  - *Visual:* = 13,983,816 in warn.
+- **s123** So the chance one ticket wins is about one in fourteen million. Remember that tiny gap near zero on our line? That's what it looks like. ⏸1.0s
+  - *Visual:* The 0–1 line returns; magnifier shows the ticket marker crushed against 0.
+- **s124** Here's a way to feel that number. If you bought one ticket every week, you'd expect to wait over a quarter of a million years for a win.
+  - *Visual:* A timeline arrow stretching off the screen with '≈ 269,000 years'.
+- **s125** Counting carefully turns a vague feeling, maybe I'll win, into a clear number. ⏸0.8s
+  - *Visual:* Chip 'vague feeling → clear number'.
+
+## Two Dice  ·  484 words, ~176 s
+
+- **s126** Now we have enough tools to solve our game night puzzle.
+  - *Visual:* Game night chips return: 'you need: 12' · 'friend needs: 7'.
+- **s127** We're rolling two dice. To keep them apart, let's make one orange and one blue.
+  - *Visual:* An orange die and a blue die drop in.
+- **s128** The orange die can land six ways. And for each of those, the blue die can land six ways.
+  - *Visual:* Orange faces 1–6 along an x axis; blue faces 1–6 up a y axis.
+- **s129** So let's draw a grid. Orange along the bottom, blue up the side. Every square is one outcome.
+  - *Visual:* A 6 by 6 grid fills between the axes; axis titles 'orange die' and 'blue die'; equal x/y scale.
+- **s130** This square, for example, is orange three and blue five.
+  - *Visual:* Square (3,5) highlights; label 'orange 3, blue 5'.
+- **s131** Six columns, six rows. Six times six is thirty six outcomes. ⏸0.8s
+  - *Visual:* Counter: 6 × 6 = 36 in warn yellow.
+- **s132** And just like with the coins, orange three blue five is different from orange five blue three. Two different squares.
+  - *Visual:* Squares (3,5) and (5,3) both highlight with a 'not the same' chip.
+- **s133** With fair dice, all thirty six squares are equally likely. So now we can count.
+  - *Visual:* All squares flash once.
+- **s134** Let's write the total of the two dice inside every square. ⏸0.8s
+  - *Visual:* Sums write into all 36 squares, row by row.
+- **s135** Do you see the pattern? Equal totals line up along slanted lines.
+  - *Visual:* Diagonals of equal sums briefly glow in turn.
+- **s136** Now, how many squares have a total of twelve?
+  - *Visual:* Question chip '12?'.
+- **s137** Only one. Orange six and blue six. The top right corner.
+  - *Visual:* Square (6,6) turns aqua.
+- **s138** So the chance of rolling twelve is one out of thirty six. ⏸1.0s
+  - *Visual:* 1/36 in violet.
+- **s139** And a total of seven?
+  - *Visual:* Question chip '7?'.
+- **s140** Count them. One and six. Two and five. Three and four. Four and three. Five and two. Six and one.
+  - *Visual:* The 7-diagonal lights aqua one square at a time with a counter 1 to 6.
+- **s141** Six squares. Six out of thirty six. Which is one sixth. ⏸1.2s
+  - *Visual:* 6/36 = 1/6 in violet.
+- **s142** There it is. Seven has six ways to happen. Twelve has only one. That's why seven is six times more likely. ⏸1.5s
+  - *Visual:* Side by side: the long 7-diagonal and the lonely 12 corner; '6 ways' vs '1 way'.
+- **s143** The dice aren't magic. Seven is simply the total with the most ways to be made.
+  - *Visual:* Chip 'most ways to be made' sits on the 7-diagonal.
+- **s144** Let's count the ways for every total, and build a chart.
+  - *Visual:* Grid shrinks to the left; an empty bar chart appears with x axis 'total' 2–12 and y axis 'number of ways' 0–6.
+- **s145** Two can only be made one way. Three, two ways. Four, three ways. Five, four ways. Six, five ways. Seven, six ways.
+  - *Visual:* Each diagonal slides off the grid and stacks into its bar, from 2 up to 7.
+- **s146** And then it comes back down. Eight, five ways. Nine, four. Ten, three. Eleven, two. And twelve, just one.
+  - *Visual:* Bars 8 to 12 fill in; the chart forms a triangle.
+- **s147** A perfect little mountain, with seven at the peak. ⏸1.0s
+  - *Visual:* Outline of the triangle glows; peak tagged '7'.
+- **s148** Add up all the bars, and you get thirty six. Every square is counted exactly once.
+  - *Visual:* 1+2+3+4+5+6+5+4+3+2+1 = 36 writes along the bottom.
+- **s149** If we divide every bar by thirty six, each bar becomes a probability. This picture has a name. It's called a probability distribution. ⏸0.8s
+  - *Visual:* Y axis relabels to 'probability' with ticks 0, 1/36 … 6/36; title 'probability distribution'.
+- **s150** A distribution is just a map that shows how the chances are spread out over all the possible results.
+  - *Visual:* Definition card: 'DISTRIBUTION = how the chances are spread out'.
+- **s151** Now you can answer lots of questions just by reading the chart. The chance of a total of eight? Five out of thirty six.
+  - *Visual:* Bar 8 highlights; 5/36.
+- **s152** The chance of a total of two or twelve? Only one out of thirty six each. They're the rarest rolls in the game.
+  - *Visual:* Bars 2 and 12 highlight; '1/36 each'.
+- **s153** Here's another one. What's the chance of rolling a double, both dice showing the same number? That's the diagonal from the bottom left to the top right. Six squares. One sixth.
+  - *Visual:* Diagonal (1,1)…(6,6) turns aqua; 6/36 = 1/6.
+- **s154** And the chance of a total of four or less? Two has one way, three has two, four has three. Six squares again. One sixth.
+  - *Visual:* Bottom-left corner triangle of 6 squares aqua; 6/36 = 1/6.
+- **s155** Many board games are designed around this exact mountain, even if the players never notice. ⏸1.0s
+  - *Visual:* A game board illustration fades in behind the chart (shape only).
+
+## Try It Many Times  ·  334 words, ~121 s
+
+- **s156** But hold on. Does real life actually follow this counting? Let's test it.
+  - *Visual:* Theory chart from before on the left; an empty 'real rolls' chart on the right.
+- **s157** Imagine flipping a fair coin ten times.
+  - *Visual:* Ten coin slots in a row.
+- **s158** The chance of heads is one half. So should you get exactly five heads? Not necessarily.
+  - *Visual:* The slots flip one by one (simulation): seven heads, three tails; counter 'heads: 7 of 10'.
+- **s159** In this run we got seven heads out of ten. That's seventy percent, not fifty.
+  - *Visual:* A pointer on a 0–100% axis sits at 70%; a dashed line marks 50%.
+- **s160** Is the coin broken? No. With only ten flips, wobbles like this happen all the time. ⏸0.8s
+  - *Visual:* Label 'simulation · 10 flips: big wobbles'.
+- **s161** Now let's flip it a hundred times. Then a thousand. Then ten thousand.
+  - *Visual:* A line chart: x axis 'number of flips' (log scale 1 to 10,000), y axis 'share of heads' 0–100%; dashed line at 50%.
+- **s162** Watch the share of heads. At first it jumps around wildly.
+  - *Visual:* The simulated line zigzags early on.
+- **s163** But the more flips we do, the more it settles down, closer and closer to one half. ⏸1.2s
+  - *Visual:* The line hugs the dashed 50% line on the right side; label 'settles near 1/2'.
+- **s164** This is called the law of large numbers. Over many, many tries, what actually happens gets closer to the probability. ⏸1.0s
+  - *Visual:* Definition card: 'LAW OF LARGE NUMBERS: over many tries, results get close to the probability'.
+- **s165** Let's do the same with our two dice. We'll roll them thirty six times, and build a chart of the totals.
+  - *Visual:* Dice roll animation; the 'real rolls' bar chart (totals 2–12) starts filling.
+- **s166** After thirty six rolls, the chart is bumpy and messy. Some totals didn't even show up.
+  - *Visual:* Simulation result for 36 rolls: lumpy bars, a few totals at zero.
+- **s167** After three hundred and sixty rolls, a shape starts to appear.
+  - *Visual:* Bars for 360 rolls (scaled to share), a rough triangle.
+- **s168** And after thirty six thousand rolls, look. It's our mountain. Almost exactly. ⏸1.5s
+  - *Visual:* Bars for 36,000 rolls; the theory triangle outline overlays and matches.
+- **s169** The counting we did on paper predicted what happens when you really roll the dice. That's the power of probability.
+  - *Visual:* Paper grid icon → arrow → real dice icon; tag 'paper predicts reality'.
+- **s170** This also gives us a second way to find a probability. When you can't count the outcomes, you can try something many times, and see how often it happens.
+  - *Visual:* Two routes: 'count outcomes' and 'try many times', both pointing to the 0–1 line.
+- **s171** That's how a weather forecast works, in a simple sense. Out of many past days that looked like today, how many had rain?
+  - *Visual:* Calendar of past days with rain icons; fraction 'rainy days / similar days'.
+- **s172** But remember the pocket idea. Many tries, not one. The law of large numbers says nothing about the next single flip. ⏸1.0s
+  - *Visual:* The pocket icon top-right glows: 'patterns over many tries'.
+- **s173** In fact, small numbers of tries can look surprisingly streaky.
+  - *Visual:* A row of 20 simulated coin flips appears, with a run of four heads highlighted.
+- **s174** If you flip a coin twenty times, getting four or more heads in a row somewhere is not rare at all. It happens in nearly half of all runs.
+  - *Visual:* Chip '4+ heads in a row: in about 48% of 20-flip runs'.
+- **s175** Random doesn't mean nicely mixed. Random means unpredictable. And unpredictable things are often clumpy. ⏸1.0s
+  - *Visual:* Two strips: a neat alternating pattern labelled 'looks random, but isn't typical' vs a clumpy strip labelled 'real randomness'.
+
+## Is This Die Fair?  ·  179 words, ~65 s
+
+- **s176** Here's a fun way to use what we just learned. Suppose a friend hands you a die, and you wonder, is it fair?
+  - *Visual:* A single die with a suspicious '?' tag.
+- **s177** If it's fair, each face should come up one sixth of the time. So in sixty rolls, you'd expect each face about ten times.
+  - *Visual:* Bar chart axes: x 'face' 1–6, y 'times rolled' 0–25; dashed line at 10, label 'expected: 60 × 1/6 = 10'.
+- **s178** Let's roll it sixty times. We get eight ones, eleven twos, nine threes, twelve fours, seven fives and thirteen sixes.
+  - *Visual:* Bars fill: 8, 11, 9, 12, 7, 13 (simulation of a fair die).
+- **s179** Not exactly ten each. But is that suspicious? No. This kind of wobble is completely normal for a fair die, with only sixty rolls. ⏸1.0s
+  - *Visual:* Bars within a soft band around 10 labelled 'normal wobble'.
+- **s180** Now a different die. Sixty rolls, and twenty five of them are sixes.
+  - *Visual:* Second chart: the 6 bar shoots to 25 (red outline); others around 7.
+- **s181** That's way more than ten. For a fair die, a result this extreme would be extremely rare. So you'd have good reason to think this die is loaded. ⏸1.0s
+  - *Visual:* Tag 'very unlikely for a fair die → suspicious' in warn.
+- **s182** Notice what we did. We used probability to predict what fair looks like, then compared it with what really happened.
+  - *Visual:* Two-step chip: 'predict fair' → 'compare with reality'.
+- **s183** Small differences, we shrug off. Huge differences make us suspicious. Scientists use this same idea, with more careful math, to test whether something is really going on. ⏸0.8s
+  - *Visual:* A small gap vs a big gap between predicted and real bars.
+
+## Quick Recap  ·  117 words, ~43 s
+
+- **s184** Let's take a breath, and look at how far we've come.
+  - *Visual:* A path with milestones; a 'you are here' pin at the middle.
+- **s185** A probability is a number from zero to one. Zero is impossible, one is certain.
+  - *Visual:* Milestone 1: the 0–1 line.
+- **s186** When outcomes are equally likely, the probability is the outcomes you want, divided by all the outcomes.
+  - *Visual:* Milestone 2: the counting rule card.
+- **s187** To find all the outcomes, draw a tree or a grid, or multiply the number of choices.
+  - *Visual:* Milestone 3: tree, grid and '6 × 6'.
+- **s188** With two dice, seven is the most likely total, because it has the most ways to be made.
+  - *Visual:* Milestone 4: the mountain chart.
+- **s189** And over many tries, real results settle close to the probability. But a single try can still surprise you. ⏸1.0s
+  - *Visual:* Milestone 5: the settling line chart.
+- **s190** If all of that makes sense, you've already got the foundation. Everything from here is built on top of it. ⏸0.8s
+  - *Visual:* The pin moves forward; upcoming milestones 'NOT · OR · AND · GIVEN · EXPECTED VALUE' light up faintly.
+
+## The Word NOT  ·  222 words, ~81 s
+
+- **s191** Now for the three little words that unlock almost every probability question. The first one is not.
+  - *Visual:* Three chips NOT · OR · AND; NOT lifts and glows.
+- **s192** Something either happens, or it doesn't. There's no third option.
+  - *Visual:* A rectangle splits into two parts: 'happens' and 'doesn't happen'.
+- **s193** So the chance it happens, plus the chance it doesn't, must add up to one. To everything.
+  - *Visual:* Bar of length 1 on a 0–1 axis: aqua 'happens' + grey 'doesn't' = 1.
+- **s194** That means the chance something does not happen is one, minus the chance it does. ⏸1.0s
+  - *Visual:* Formula: P(not A) = 1 − P(A).
+- **s195** A here is just a name for any event. Like, rolling a seven.
+  - *Visual:* Definition chip: 'A = any event, e.g. rolling a 7'.
+- **s196** Let's try it. The chance of rolling a total of seven is one sixth. So the chance of not rolling seven is one minus one sixth, which is five sixths.
+  - *Visual:* Two-dice grid returns; 7-diagonal aqua (6 squares); the other 30 squares turn grey; 1 − 1/6 = 5/6.
+- **s197** And you can check it on the grid. Thirty squares are not seven. Thirty out of thirty six is five sixths. It matches. ⏸1.0s
+  - *Visual:* Counter on grey squares: 30; 30/36 = 5/6 in violet.
+- **s198** Here's why this matters. Sometimes the thing you want is hard to count, but the opposite is easy.
+  - *Visual:* A big messy pile labelled 'hard' next to a small neat pile labelled 'easy'.
+- **s199** For example, what's the chance of rolling a total that is not twelve?
+  - *Visual:* Question chip 'not 12?'.
+- **s200** You could count thirty five squares. Or you can just say, twelve has one square, so not twelve is one minus one over thirty six, which is thirty five over thirty six.
+  - *Visual:* Grid: (6,6) aqua; others grey with a fast counter to 35; 1 − 1/36 = 35/36.
+- **s201** When counting the thing you want looks painful, flip it around. Count the opposite, and take it away from one. ⏸1.0s
+  - *Visual:* A flip arrow icon; tag 'count the opposite'.
+- **s202** This little trick becomes a superpower in a few minutes. Hold on to it.
+  - *Visual:* The NOT chip moves to the top-right, next to the pocket icon.
+
+## Odds Versus Probability  ·  206 words, ~75 s
+
+- **s203** While we're here, let's clear up a word that confuses a lot of people. Odds.
+  - *Visual:* Two cards: 'probability' and 'odds' side by side.
+- **s204** People often say odds when they mean probability. But they are not quite the same thing.
+  - *Visual:* A '≠' between the cards.
+- **s205** Probability compares the ways something happens to all the ways. Odds compare the ways it happens to the ways it doesn't.
+  - *Visual:* Probability card: 'happens ÷ everything'; odds card: 'happens : doesn't happen'.
+- **s206** Take a total of seven on two dice. Six squares make seven. Thirty squares don't.
+  - *Visual:* Grid: 6 aqua squares, 30 grey squares; counters '6' and '30'.
+- **s207** The probability is six out of thirty six. One sixth.
+  - *Visual:* 6/36 = 1/6 in violet.
+- **s208** But the odds are six to thirty. Which simplifies to one to five. For every one way to win, there are five ways to lose. ⏸1.0s
+  - *Visual:* Odds bar: 1 aqua block next to 5 grey blocks, '1 : 5'.
+- **s209** Notice that one to five and one sixth describe the same chance. One plus five makes six, the total.
+  - *Visual:* 1 : 5 → 1 / (1 + 5) = 1/6.
+- **s210** A fair coin has odds of one to one. One way to win, one way to lose. People sometimes call that evens.
+  - *Visual:* Coin with '1 : 1 = evens' and 1/2 underneath.
+- **s211** To turn odds into a probability, put the first number on top, and both numbers added together on the bottom.
+  - *Visual:* Rule card: 'odds a : b → probability a / (a + b)'.
+- **s212** So odds of three to one against something mean one way it happens, three ways it doesn't. One out of four. A probability of one quarter. ⏸1.0s
+  - *Visual:* Example: '3 : 1 against' → 1 / (1 + 3) = 1/4.
+- **s213** When you hear odds, just ask, is this comparing to the whole, or to the other side? ⏸0.8s
+  - *Visual:* Chip 'to the whole, or to the other side?'.
+
+## The Word OR  ·  349 words, ~127 s
+
+- **s214** The second word is or. What's the chance that this happens, or that happens?
+  - *Visual:* Chips NOT · OR · AND; OR lifts and glows.
+- **s215** Let's start easy. On our two dice, what's the chance of rolling a total of seven, or a total of eleven?
+  - *Visual:* Grid returns; question chip '7 or 11?'.
+- **s216** Seven has six squares. Eleven has two squares, five and six, and six and five.
+  - *Visual:* 7-diagonal aqua; 11 squares (5,6),(6,5) in a second aqua shade.
+- **s217** They don't share any squares. A roll can't be seven and eleven at the same time.
+  - *Visual:* A gap chip 'no shared squares'.
+- **s218** So we just add them. Six plus two is eight squares. Eight out of thirty six. ⏸1.0s
+  - *Visual:* 6/36 + 2/36 = 8/36 = 2/9 in violet.
+- **s219** When two events can't happen together, the chance of one or the other is just the two chances added up.
+  - *Visual:* Rule card: 'can't happen together → P(A or B) = P(A) + P(B)'.
+- **s220** But careful. This is where a lot of people slip.
+  - *Visual:* Red caution icon.
+- **s221** What's the chance that the orange die shows six, or the blue die shows six?
+  - *Visual:* Question chip 'orange 6 OR blue 6?'.
+- **s222** The orange six is a whole column. That's six squares.
+  - *Visual:* Column orange=6 tints orange: 6 squares.
+- **s223** The blue six is a whole row. Also six squares.
+  - *Visual:* Row blue=6 tints blue: 6 squares.
+- **s224** So, six plus six is twelve? Let's look.
+  - *Visual:* Grey '6 + 6 = 12?' label.
+- **s225** The column and the row cross in one corner, double six. If we add them, we count that square twice. ⏸0.8s
+  - *Visual:* Square (6,6) flashes with a '×2' badge.
+- **s226** So we take it away once. Six plus six, minus one, is eleven.
+  - *Visual:* 6 + 6 − 1 = 11; the '12?' gets a red cross.
+- **s227** The answer is eleven out of thirty six. ⏸1.2s
+  - *Visual:* 11/36 in violet; the 11 squares glow.
+- **s228** This is the full or rule. Add the two chances, then take away the overlap, the part where both happen, so it's not counted twice. ⏸1.0s
+  - *Visual:* Rule card: P(A or B) = P(A) + P(B) − P(A and B), with the overlap term in warn.
+- **s229** A picture helps. Draw two circles that overlap. To find the area covered by either circle, you add both circles, then remove the middle, because you counted it twice.
+  - *Visual:* Two overlapping circles (orange and blue); the lens in the middle glows warn with '×2', then is counted once.
+- **s230** If the circles don't overlap at all, the middle is zero, and you're back to simply adding.
+  - *Visual:* The circles slide apart; overlap term becomes 0.
+- **s231** Here's an everyday example. In a class of thirty students, twelve play football, eight play music, and five do both.
+  - *Visual:* A class of 30 dots on a 10 by 3 grid (illustration); 12 orange outlined, 8 blue outlined, 5 with both.
+- **s232** How many do football or music? Twelve plus eight is twenty, minus the five who were counted twice. Fifteen students.
+  - *Visual:* 12 + 8 − 5 = 15; 15 dots glow.
+- **s233** So if you pick a student at random, the chance they do football or music is fifteen out of thirty. One half. ⏸1.0s
+  - *Visual:* 15/30 = 1/2 in violet.
+- **s234** Whenever you hear the word or, ask yourself one question. Can both happen at once? If yes, remove the overlap.
+  - *Visual:* Checklist chip: 'OR → can both happen? → subtract the overlap'.
+
+## The Word AND  ·  441 words, ~160 s
+
+- **s235** The third word is and. What's the chance that this happens, and that happens too?
+  - *Visual:* Chips NOT · OR · AND; AND lifts and glows.
+- **s236** Back to our dice. What's the chance of double six? The orange die shows six, and the blue die shows six.
+  - *Visual:* Grid returns; question 'orange 6 AND blue 6?'.
+- **s237** On the grid, that's the one square where the six column and the six row meet. One out of thirty six.
+  - *Visual:* Column and row tint; their crossing square glows aqua; 1/36.
+- **s238** But here's another way to see it. The orange die has a one in six chance of six. And then, the blue die has a one in six chance of six.
+  - *Visual:* Two separate bars: orange 1/6, blue 1/6.
+- **s239** Multiply them. One sixth times one sixth is one over thirty six. Same answer. ⏸1.0s
+  - *Visual:* 1/6 × 1/6 = 1/36.
+- **s240** Why multiply? Picture it as area. Take a square of side one. The orange six takes one sixth of the width. The blue six takes one sixth of the height.
+  - *Visual:* A unit square on axes 0–1 by 0–1; a vertical strip 1/6 wide (orange) and a horizontal strip 1/6 tall (blue).
+- **s241** Where they overlap is a little box, one sixth wide and one sixth tall. Its area is one sixth times one sixth. ⏸1.0s
+  - *Visual:* The tiny overlap box glows violet; 'area = 1/6 × 1/6 = 1/36'.
+- **s242** This works for more than two things. Three dice all showing six? One sixth, times one sixth, times one sixth. One in two hundred and sixteen.
+  - *Visual:* 1/6 × 1/6 × 1/6 = 1/216; a tiny cube in a 6 by 6 by 6 block (illustration).
+- **s243** So and usually means multiply. And multiplying fractions makes things smaller. Both things happening is less likely than either one alone.
+  - *Visual:* A shrinking arrow: 1/6 → 1/36; tag 'AND makes it smaller'.
+- **s244** But there's a condition. This simple multiplying only works when the two events are independent. ⏸0.8s
+  - *Visual:* Warn chip 'only if INDEPENDENT'.
+- **s245** Independent means one result doesn't change the chances of the other.
+  - *Visual:* Definition card: 'INDEPENDENT = one result doesn't change the chances of the other'.
+- **s246** The orange die has no idea what the blue die did. They don't talk to each other. So they're independent.
+  - *Visual:* The two dice with a 'no connection' dashed line and a crossed-out phone icon.
+- **s247** A coin and a die are independent too. The chance of heads and a six is one half times one sixth. One twelfth.
+  - *Visual:* Tree: coin H/T then die 1–6 = 12 leaves; leaf 'H, 6' glows; 1/2 × 1/6 = 1/12.
+- **s248** But some events do affect each other. Here's a bag with three red marbles and two blue marbles.
+  - *Visual:* A bag illustration with 3 red and 2 blue marbles drawn as circles.
+- **s249** You pull out one marble, don't put it back, and then pull out another. What's the chance both are red?
+  - *Visual:* Hand icon takes a marble; chip 'no putting back'.
+- **s250** First pull. Three red out of five marbles. Three fifths.
+  - *Visual:* Fraction 3/5; the red marbles glow.
+- **s251** Now, if that first marble was red, the bag has changed. There are only two red left, out of four.
+  - *Visual:* One red marble leaves the bag; 2 red, 2 blue remain; fraction 2/4.
+- **s252** So the second chance is two quarters. The first pull changed the second one. These events are not independent.
+  - *Visual:* Tag 'the first pull changed the bag' in warn.
+- **s253** Multiply the chances along the path. Three fifths times two quarters is six over twenty, which is three tenths. ⏸1.0s
+  - *Visual:* Tree path: 3/5 → 2/4; 3/5 × 2/4 = 6/20 = 3/10 in violet.
+- **s254** If you had put the first marble back, the bag would be the same both times. Three fifths times three fifths, nine over twenty five.
+  - *Visual:* Alternative path: 3/5 × 3/5 = 9/25, labelled 'with putting back'.
+- **s255** That's a bit higher, because putting the red marble back gives red a better chance the second time.
+  - *Visual:* Comparison on a 0–1 line: 0.30 vs 0.36.
+- **s256** So, for and: multiply along the path. But always use the chance of the second thing, after the first one has happened. ⏸1.0s
+  - *Visual:* Rule card: 'AND → multiply along the path, using the updated chance'.
+
+## Independent or Not?  ·  144 words, ~52 s
+
+- **s257** Because independence matters so much, let's practise spotting it. For each pair, ask, does the first result change the chances of the second?
+  - *Visual:* Title strip 'Independent or not?'; four empty cards with YES / NO slots.
+- **s258** One. Flipping a coin today, and flipping it again tomorrow. Independent. The coin doesn't remember.
+  - *Visual:* Card 1: two coins; stamp 'INDEPENDENT' (aqua).
+- **s259** Two. Drawing a card from a deck, keeping it, and drawing another. Not independent. The deck has changed.
+  - *Visual:* Card 2: a deck missing one card; stamp 'NOT independent' (warn).
+- **s260** Three. Rain today, and rain tomorrow. Not independent. Rainy weather tends to stick around for a few days, so rain today makes rain tomorrow more likely.
+  - *Visual:* Card 3: two cloud days linked by an arrow; stamp 'NOT independent'.
+- **s261** Four. Your birthday, and the birthday of a random stranger in another country. Independent. One tells you nothing about the other.
+  - *Visual:* Card 4: two cake icons far apart; stamp 'INDEPENDENT'.
+- **s262** Five. Whether you study tonight, and whether you pass tomorrow's test. Definitely not independent. Studying changes your chances. That's the whole point. ⏸1.0s
+  - *Visual:* Card 5: a book and a test paper with a tick; stamp 'NOT independent'.
+- **s263** When events are independent, multiply the plain chances. When they're not, use the updated chance for the second step. ⏸0.8s
+  - *Visual:* Rule card: 'independent → multiply plain chances · dependent → multiply updated chances'.
+
+## At Least One  ·  362 words, ~132 s
+
+- **s264** Now let's combine not and and, to solve one of the most useful questions in all of probability.
+  - *Visual:* Chips NOT and AND snap together.
+- **s265** You roll one die four times. What's the chance you get at least one six?
+  - *Visual:* Four die slots in a row; question 'at least one 6 in 4 rolls?'.
+- **s266** At least one means one six, or two, or three, or four. That's a lot of cases to count.
+  - *Visual:* A messy list of cases: '6 _ _ _', '_ 6 _ _', '6 6 _ _' … piling up.
+- **s267** Here's a tempting shortcut. Each roll has a one sixth chance. Four rolls, so add them up. Four sixths, about sixty seven percent.
+  - *Visual:* Grey '1/6 + 1/6 + 1/6 + 1/6 = 4/6 ≈ 67%?' label.
+- **s268** But that can't be right. Watch what happens with six rolls. Six sixths is one. A hundred percent. As if six rolls guarantee a six.
+  - *Visual:* The sum grows to 6/6 = 100%; a red trap stamp: 'guaranteed? no!'.
+- **s269** Anyone who's ever played a dice game knows you can roll six times and never see a six. ⏸1.0s
+  - *Visual:* Six simulated rolls with no six: 2, 5, 1, 3, 3, 4.
+- **s270** The adding was wrong because these events can all happen together, so we're counting overlaps again and again.
+  - *Visual:* Overlapping circles multiply into a tangle.
+- **s271** So let's use the superpower. Flip it around. The opposite of at least one six is, no sixes at all.
+  - *Visual:* Flip arrow; chip 'opposite = NO sixes at all'.
+- **s272** The chance one roll is not a six is five sixths.
+  - *Visual:* One die: five faces aqua, the 6 face grey; 5/6.
+- **s273** The rolls are independent. So the chance that all four rolls are not six is five sixths, times five sixths, times five sixths, times five sixths.
+  - *Visual:* 5/6 × 5/6 × 5/6 × 5/6 writes under the four slots.
+- **s274** That's six hundred and twenty five out of one thousand two hundred and ninety six. About forty eight percent.
+  - *Visual:* = 625/1296 ≈ 48.2%; a bar on a 0–100% axis.
+- **s275** So the chance of at least one six is one minus that. About fifty two percent. ⏸1.2s
+  - *Visual:* 1 − 625/1296 = 671/1296 ≈ 51.8% in violet; the bar's remaining part glows.
+- **s276** Just over a half. Not sixty seven percent.
+  - *Visual:* Side by side: wrong 67% (red, struck) vs right 52% (violet).
+- **s277** And with six rolls, it's about sixty seven percent. Likely, but nowhere near certain.
+  - *Visual:* Line chart: x axis 'number of rolls' 1–12, y axis 'chance of at least one 6' 0–100%; points rising and bending; 6 rolls at 66.5%.
+- **s278** Look at this curve. Every extra roll helps, but it never quite reaches one hundred percent. ⏸1.0s
+  - *Visual:* The curve flattens toward the top dashed 100% line.
+- **s279** This trick works everywhere. The chance of at least one success, equals one, minus the chance of no success at all. ⏸1.0s
+  - *Visual:* Rule card: P(at least one) = 1 − P(none).
+- **s280** For example, if you guess on three quiz questions, each with four choices, what's the chance you get at least one right?
+  - *Visual:* Three quiz cards A B C D.
+- **s281** The chance of getting one wrong is three quarters. All three wrong is three quarters cubed, twenty seven over sixty four.
+  - *Visual:* 3/4 × 3/4 × 3/4 = 27/64.
+- **s282** So at least one right is thirty seven out of sixty four. A bit more than half. ⏸1.0s
+  - *Visual:* 1 − 27/64 = 37/64 ≈ 58% in violet.
+- **s283** Whenever you see the words at least one, your brain should shout, flip it around.
+  - *Visual:* A big 'AT LEAST ONE → FLIP IT' banner.
+
+## A Deck of Cards  ·  246 words, ~89 s
+
+- **s284** Let's practise not, or and and on something new. A normal deck of playing cards.
+  - *Visual:* A fan of card outlines (no real branding), title 'a standard deck'.
+- **s285** A deck has fifty two cards. There are four suits, hearts, diamonds, clubs and spades. And each suit has thirteen cards, from ace up to king.
+  - *Visual:* A 13 by 4 grid on axes: x 'rank' A, 2 … 10, J, Q, K; y 'suit' ♥ ♦ ♣ ♠. 4 × 13 = 52 in warn.
+- **s286** Shuffle well, and every card is equally likely to be on top. So our counting recipe works.
+  - *Visual:* All 52 cells flash once; chip 'equally likely'.
+- **s287** What's the chance the top card is a heart? Thirteen hearts out of fifty two cards. That's one quarter. ⏸1.0s
+  - *Visual:* Heart row aqua; 13/52 = 1/4 in violet.
+- **s288** What's the chance it's a king? Four kings out of fifty two. One thirteenth.
+  - *Visual:* King column aqua; 4/52 = 1/13.
+- **s289** Now, the chance it's a king or a heart?
+  - *Visual:* Question chip 'king OR heart?'.
+- **s290** Thirteen hearts, plus four kings. But one card is both, the king of hearts. Don't count it twice.
+  - *Visual:* Row and column tint; the crossing cell flashes '×2'.
+- **s291** Thirteen plus four, minus one, is sixteen. Sixteen out of fifty two, which simplifies to four thirteenths. ⏸1.0s
+  - *Visual:* 13 + 4 − 1 = 16; 16/52 = 4/13 in violet.
+- **s292** And the chance it's not a heart? One minus one quarter. Three quarters.
+  - *Visual:* Other three rows grey-glow; 1 − 1/4 = 3/4.
+- **s293** Now for and. You draw two cards, without putting the first one back. What's the chance both are aces?
+  - *Visual:* Two card slots; chip 'no putting back'.
+- **s294** First card. Four aces out of fifty two.
+  - *Visual:* 4/52 under slot 1.
+- **s295** If that was an ace, there are now three aces left, out of fifty one cards.
+  - *Visual:* One ace leaves; 3/51 under slot 2.
+- **s296** Multiply along the path. Four over fifty two, times three over fifty one. That's one out of two hundred and twenty one. ⏸1.0s
+  - *Visual:* 4/52 × 3/51 = 12/2652 = 1/221 in violet.
+- **s297** Not even half a percent. Two aces in a row really is rare.
+  - *Visual:* Marker near 0 on a 0–100% axis: ≈ 0.45%.
+- **s298** Same three words, a completely different game. That's the beauty of it. Once you know the tools, they work everywhere. ⏸0.8s
+  - *Visual:* NOT · OR · AND chips glow together.
+
+## Two Step Trees  ·  317 words, ~115 s
+
+- **s299** Real life is often a chain of events, where the second step depends on the first. A tree diagram handles that beautifully.
+  - *Visual:* A two-level tree outline draws on.
+- **s300** Here's a story. On a typical school day in your town, there's a three in ten chance of rain.
+  - *Visual:* Weather chip 'rain: 3/10'; first split of the tree: 'rain' 3/10, 'dry' 7/10.
+- **s301** When it rains, the school bus is late half the time. When it's dry, the bus is late only one time in ten.
+  - *Visual:* Second level: rain → 'late' 1/2, 'on time' 1/2; dry → 'late' 1/10, 'on time' 9/10.
+- **s302** These numbers are made up for this example, but the method works for any numbers.
+  - *Visual:* Small label 'illustration: made-up numbers'.
+- **s303** Question. On a random school day, what's the chance the bus is late?
+  - *Visual:* Question chip 'bus late?'.
+- **s304** Let's imagine one hundred school days, and walk them through the tree.
+  - *Visual:* A 10 by 10 grid of day squares on axes, columns 1–10, rows 1–10.
+- **s305** Three in ten days are rainy. That's thirty rainy days.
+  - *Visual:* 30 squares tint blue-grey 'rain'.
+- **s306** On half of those, the bus is late. Fifteen days.
+  - *Visual:* 15 of the rainy squares get an aqua 'late' mark.
+- **s307** Seventy days are dry. On one in ten of them, the bus is late. Seven days.
+  - *Visual:* 7 of the 70 dry squares get an aqua 'late' mark.
+- **s308** So the bus is late on fifteen plus seven days. Twenty two days out of one hundred. ⏸1.0s
+  - *Visual:* 15 + 7 = 22; 22/100 in violet.
+- **s309** With the tree, you can do this without imagining days. Multiply along each path to a late bus, then add the paths together.
+  - *Visual:* Paths highlight: 3/10 × 1/2 = 15/100 and 7/10 × 1/10 = 7/100; sum 22/100.
+- **s310** Multiply along a path, because both steps have to happen. That's and. Add across paths, because either path works. That's or. ⏸1.2s
+  - *Visual:* The words AND (along) and OR (across) label the tree.
+- **s311** So the tree is just and and or, working together.
+  - *Visual:* Chip 'tree = AND along, OR across'.
+- **s312** Now a sneaky question, which will lead us into our next big idea. The bus was late today. What's the chance it was raining? ⏸1.0s
+  - *Visual:* Question chip 'bus was late → was it raining?'.
+- **s313** Look at the hundred days again. The bus was late on twenty two of them. That's our world now.
+  - *Visual:* Only the 22 late squares stay bright; the rest fade.
+- **s314** Fifteen of those twenty two were rainy days.
+  - *Visual:* The 15 rainy-late squares glow.
+- **s315** So the chance it was raining, given the bus was late, is fifteen out of twenty two. About sixty eight percent. ⏸1.2s
+  - *Visual:* 15/22 ≈ 68% in violet.
+- **s316** Before you knew anything, rain had a thirty percent chance. Knowing the bus was late made rain much more likely.
+  - *Visual:* Before/after: 30% → 68%.
+- **s317** That idea, how a clue changes a probability, is what we'll look at next. ⏸0.8s
+  - *Visual:* Arrow pointing to a chip 'next: GIVEN THAT'.
+
+## Given That  ·  565 words, ~205 s
+
+- **s318** So far, we've rolled the dice without knowing anything. But what if someone gives you a clue?
+  - *Visual:* Two-dice grid returns, all squares neutral; a clue envelope floats in.
+- **s319** This is called conditional probability. It's the chance of something, given that you already know something else.
+  - *Visual:* Definition card: 'CONDITIONAL PROBABILITY = the chance of A, given that B is true'.
+- **s320** Here's the key idea, and it's beautiful. A clue shrinks the grid. ⏸1.0s
+  - *Visual:* The grid shrinks to a smaller highlighted region with a 'clue' label.
+- **s321** Your friend rolls both dice, hides them, and peeks at the orange one. They tell you, the orange die is a six.
+  - *Visual:* A cup covers the dice; a speech bubble 'the orange die is a 6!'.
+- **s322** What's the chance the total is twelve?
+  - *Visual:* Question chip 'total 12, given orange is 6?'.
+- **s323** Before the clue, it was one in thirty six. But now, every square where orange isn't six is impossible. Cross them out.
+  - *Visual:* Columns 1–5 grey out and fade; only the orange=6 column stays.
+- **s324** We're left with just one column. Six squares. That's our new world.
+  - *Visual:* The orange=6 column glows warn as the new total: 6.
+- **s325** And in this new world, a total of twelve is one square out of six. One sixth. ⏸1.2s
+  - *Visual:* (6,6) aqua; 1/6 in violet.
+- **s326** The clue made twelve six times more likely. New information changed the probability.
+  - *Visual:* Before/after: 1/36 → 1/6, with an arrow labelled 'clue'.
+- **s327** We write this with a straight line. P of twelve, line, orange six. And we read that line as, given. ⏸1.0s
+  - *Visual:* Notation: P(12 | orange 6) = 1/6; the bar '|' glows with label 'given'.
+- **s328** So the recipe is the same as always. Count the outcomes you want, but only inside the shrunken world. Then divide by the size of that shrunken world.
+  - *Visual:* Rule card: P(A | B) = (outcomes in both A and B) / (outcomes in B).
+- **s329** Now here's a surprising one. With the same clue, the orange die is a six, what's the chance the total is seven?
+  - *Visual:* Grid resets to the orange=6 column; question 'total 7, given orange is 6?'.
+- **s330** In the six column, only one square makes seven, orange six and blue one. One out of six.
+  - *Visual:* Square (6,1) aqua; 1/6.
+- **s331** But the chance of seven without any clue was also one sixth.
+  - *Visual:* Earlier result '7: 1/6' slides in beside it.
+- **s332** The clue changed nothing! Knowing the orange die doesn't help you guess whether the total is seven. ⏸1.2s
+  - *Visual:* Equals sign between the two 1/6 values glows.
+- **s333** Why? Because whatever the orange die shows, there's always exactly one blue number that makes seven. So the clue gives no advantage.
+  - *Visual:* Each column, in turn, lights its single 7-square: one per column.
+- **s334** And this is the real meaning of independent. Two events are independent when knowing one doesn't change the chance of the other. ⏸1.0s
+  - *Visual:* Definition card returns: 'INDEPENDENT: the clue doesn't change the chance'.
+- **s335** Let's try a trickier clue. Your friend says, the total is at least ten. What's the chance they rolled a double, two dice showing the same number?
+  - *Visual:* Grid resets; speech bubble 'total is at least 10'; question 'double?'.
+- **s336** First, shrink the world. Which squares have a total of ten, eleven or twelve?
+  - *Visual:* Squares with sums 10, 11, 12 stay bright; others fade.
+- **s337** Four and six. Five and five. Six and four. Five and six. Six and five. Six and six. Six squares.
+  - *Visual:* The six squares count up 1–6 in warn.
+- **s338** Now, which of these are doubles? Five and five, and six and six. That's two.
+  - *Visual:* (5,5) and (6,6) turn aqua.
+- **s339** Two out of six. One third. ⏸1.0s
+  - *Visual:* 2/6 = 1/3 in violet.
+- **s340** Without the clue, doubles happen six times out of thirty six, one sixth. With the clue, it doubles to one third.
+  - *Visual:* Before/after: 1/6 → 1/3.
+- **s341** Now for the most important warning in this whole chapter. The order of a given statement matters.
+  - *Visual:* Red caution icon; two cards slide in.
+- **s342** The chance of a total of twelve, given the orange die is six, is one sixth. We just saw it.
+  - *Visual:* Card 1: P(12 | orange 6) = 1/6 with its shrunken column.
+- **s343** But the chance the orange die is six, given the total is twelve, is one. It's certain! The only way to make twelve is double six.
+  - *Visual:* Card 2: P(orange 6 | 12) = 1 with its one-square world.
+- **s344** Same two things. Swapped around. Completely different answers. ⏸1.2s
+  - *Visual:* A swap arrow between the cards with '≠'.
+- **s345** Here's an everyday version. Most professional basketball players are tall. But most tall people are not professional basketball players.
+  - *Visual:* Two cards: 'given a pro player → very likely tall' vs 'given tall → very unlikely a pro player'.
+- **s346** Here's one more everyday example. In a class, twelve of the thirty students wear glasses, and eight of those twelve are girls.
+  - *Visual:* A 10 by 3 dot class (illustration); 12 dots get glasses rings; 8 of them violet-tinted 'girls'.
+- **s347** Pick a student who wears glasses. What's the chance it's a girl? The clue puts you in the glasses world, twelve students. Eight of them are girls. Eight twelfths, two thirds. ⏸1.0s
+  - *Visual:* Only the 12 glasses dots stay bright; 8/12 = 2/3 in violet.
+- **s348** Always ask, which world did the clue put me in? That world goes on the bottom of your fraction. ⏸1.0s
+  - *Visual:* The fraction bottom glows warn: 'the world the clue puts you in'.
+
+## Expected Value  ·  419 words, ~152 s
+
+- **s349** Let's go back to the fair. A stall has a game. You pay two tokens to roll two dice. If the total is seven, you win ten tokens.
+  - *Visual:* Fair stall illustration; chips 'cost: 2 tokens' · 'roll 7: win 10 tokens'.
+- **s350** Should you play? To answer that, we need one more idea. Expected value.
+  - *Visual:* Title strip 'expected value'.
+- **s351** Expected value is the average result you'd get per game, if you played many, many times.
+  - *Visual:* Definition card: 'EXPECTED VALUE = the average per game, over many games'.
+- **s352** Let's start with something simple. What's the average number you roll on one die?
+  - *Visual:* One die; faces 1–6 on an axis.
+- **s353** Each face comes up one sixth of the time. So add up one, two, three, four, five, and six, and divide by six.
+  - *Visual:* (1+2+3+4+5+6) / 6 writes on.
+- **s354** That's twenty one divided by six. Three and a half. ⏸1.0s
+  - *Visual:* = 21/6 = 3.5 in violet; a marker at 3.5 on the face axis.
+- **s355** Notice something funny. You can never actually roll three and a half. The expected value doesn't have to be a possible result. It's a long run average.
+  - *Visual:* A balance beam with weights on 1–6 balances exactly at 3.5; tag 'balance point'.
+- **s356** For two dice, the average total is three and a half plus three and a half. Seven. Right at the peak of our mountain. ⏸1.0s
+  - *Visual:* Mountain bar chart returns; balance triangle under 7; '3.5 + 3.5 = 7'.
+- **s357** Now the fair game. Each game, you win ten tokens one sixth of the time, because seven has a one sixth chance.
+  - *Visual:* Tree: 'roll 7' (1/6) → +10 tokens; 'not 7' (5/6) → 0 tokens.
+- **s358** So on average, you win ten times one sixth. That's about one point six seven tokens per game.
+  - *Visual:* 10 × 1/6 ≈ 1.67 tokens.
+- **s359** But you pay two tokens every single time.
+  - *Visual:* Chip 'pay 2 every game' in red.
+- **s360** So on average, you lose about one third of a token per game. ⏸1.0s
+  - *Visual:* 1.67 − 2 ≈ −0.33 per game in violet.
+- **s361** Play once, and you might win ten tokens and feel brilliant. But play sixty games, and you'd expect to be down about twenty tokens.
+  - *Visual:* A line chart: x axis 'games played' 0–60, y axis 'tokens won or lost'; a simulated wiggly line drifting down; a dashed 'expected' line from 0 to −20.
+- **s362** That's the quiet secret of almost every game at a fair. The expected value is a little bit in the stall's favour. ⏸1.0s
+  - *Visual:* The stall tag 'expected value favours the stall' in warn.
+- **s363** For the game to be fair, the expected win should equal the cost. Here, that would mean a price of ten sixths, about one point six seven tokens.
+  - *Visual:* Fair price: 10/6 ≈ 1.67 tokens; a level beam.
+- **s364** Let's try one more. Your class sells one hundred raffle tickets, at one token each. There's one prize, worth fifty tokens.
+  - *Visual:* 100 ticket squares on a 10 by 10 grid; one gold; chips 'ticket: 1 token' · 'prize: 50 tokens'.
+- **s365** If you buy one ticket, your chance of winning is one in a hundred. So your expected win is fifty times one hundredth. Half a token.
+  - *Visual:* 50 × 1/100 = 0.5 token.
+- **s366** You paid one token, and you expect half a token back. So on average, you lose half a token per ticket.
+  - *Visual:* 0.5 − 1 = −0.5 in violet.
+- **s367** But that's fine for a raffle! The extra money goes to the class trip. Expected value doesn't tell you what to do. It tells you what it costs, on average. ⏸1.0s
+  - *Visual:* A school bus icon labelled 'class trip' collects the extra tokens.
+- **s368** Expected value is how you decide, using probability, whether something is worth it in the long run.
+  - *Visual:* Chip 'is it worth it in the long run?'.
+- **s369** But remember, it's about the long run. A single game can go either way. ⏸1.0s
+  - *Visual:* Pocket icon glows again.
+
+## Measuring Instead of Counting  ·  196 words, ~71 s
+
+- **s370** So far, we've always counted outcomes. But some things can't be counted, because there are too many possibilities to list.
+  - *Visual:* A die (countable) next to a stopwatch (not countable) with '?'.
+- **s371** Imagine a bus that comes exactly every ten minutes. You walk to the stop at a random moment, without checking the timetable.
+  - *Visual:* A timeline axis 'minutes' 0–10 between two bus icons.
+- **s372** What's the chance you wait less than three minutes?
+  - *Visual:* Question chip 'wait less than 3 minutes?'.
+- **s373** You could arrive at any moment in those ten minutes. Not just whole minutes, but any split second. There are endless possibilities.
+  - *Visual:* Dots sprinkle densely along the timeline.
+- **s374** So instead of counting, we measure. The good arrival times are the last three minutes before the bus comes. That's a stretch three minutes long, out of ten.
+  - *Visual:* The segment from 7 to 10 on the axis turns aqua, labelled '3 minutes'; the whole axis labelled '10 minutes' in warn.
+- **s375** Three out of ten. A probability of three tenths. ⏸1.0s
+  - *Visual:* 3/10 in violet.
+- **s376** It's the same recipe, just with lengths instead of counts. The length you want, divided by the total length.
+  - *Visual:* Rule card: P = length you want / total length.
+- **s377** And it works with areas too. Throw a dart at a square board, landing at a random spot. The board has a circle drawn on it that fills half the area.
+  - *Visual:* A square board on axes with equal scale; a circle shape covering half the area (illustration).
+- **s378** Then the chance of landing inside the circle is one half. Area you want, divided by total area. ⏸1.0s
+  - *Visual:* Random dart dots: about half inside; 'area you want / total area = 1/2'.
+- **s379** Counting, measuring lengths, measuring areas. It's all the same idea. The part you want, out of the whole. ⏸0.8s
+  - *Visual:* Three icons merge into one card: 'the part you want, out of the whole'.
+
+## More Dice, New Shapes  ·  173 words, ~63 s
+
+- **s380** Let's go back to our dice mountain, and ask one more question. What happens if we roll more dice?
+  - *Visual:* The two-dice triangle chart returns, totals 2–12.
+- **s381** With one die, every total from one to six is equally likely. The chart is flat, like a table.
+  - *Visual:* Chart morphs to one die: six equal bars on axes 'total' 1–6, 'probability'.
+- **s382** With two dice, it becomes a triangle. A pointy mountain, peaking at seven.
+  - *Visual:* Chart morphs to the triangle.
+- **s383** With three dice, there are six times six times six, two hundred and sixteen outcomes. And the chart starts to look rounder, with the peak at ten and eleven.
+  - *Visual:* Chart morphs to three dice: totals 3–18, counts out of 216, peak at 10 and 11 (27 each).
+- **s384** Roll more and more dice, and the shape keeps getting smoother and rounder. A soft hill with a peak in the middle and gentle tails at the edges.
+  - *Visual:* Charts for 5 and 10 dice (scaled), each smoother; label 'shape only' for the scaled ones.
+- **s385** That shape has a famous name. The bell curve. And it appears again and again in nature, from people's heights to measurement errors. ⏸1.2s
+  - *Visual:* A smooth bell outline traces over the last chart; tag 'the bell curve'.
+- **s386** Why? Because when lots of small random things add together, extreme results need everything to go the same way, which is rare. Middle results can happen in many more ways.
+  - *Visual:* Ten dice: all sixes (one way) vs a middle total (many ways) shown as a tiny vs a big pile.
+- **s387** It's the exact same reason seven beats twelve. Just with more dice. ⏸0.8s
+  - *Visual:* A small inset: 7 vs 12 from game night.
+
+## Practice Round  ·  318 words, ~116 s
+
+- **s388** Time for a quick practice round. I'll ask a question, you pause the video if you like, and try it yourself. Then we'll check together.
+  - *Visual:* Title strip 'Practice round'; a pause icon.
+- **s389** Question one. A jar has four green sweets and six yellow sweets. You pick one without looking. What's the chance it's green? ⏸3.0s
+  - *Visual:* Jar with 4 green and 6 yellow circles; 'Q1' tag; a 3-second countdown ring.
+- **s390** Count what you want, four green. Count everything, ten sweets. Four tenths, which is two fifths. ⏸1.0s
+  - *Visual:* 4/10 = 2/5 in violet.
+- **s391** Question two. With two dice, what's the chance of a total of ten? ⏸3.0s
+  - *Visual:* Two-dice grid returns; 'Q2' tag; countdown ring.
+- **s392** Ten can be made by four and six, five and five, and six and four. Three squares. Three out of thirty six, which is one twelfth. ⏸1.0s
+  - *Visual:* Squares (4,6),(5,5),(6,4) aqua; 3/36 = 1/12.
+- **s393** Question three. So what's the chance of not getting a total of ten? ⏸3.0s
+  - *Visual:* 'Q3' tag; countdown ring.
+- **s394** Flip it around. One minus one twelfth. Eleven twelfths. ⏸1.0s
+  - *Visual:* 1 − 1/12 = 11/12 in violet.
+- **s395** Question four. You flip three coins. What's the chance of at least one head? ⏸3.0s
+  - *Visual:* Three coins; 'Q4' tag; countdown ring.
+- **s396** At least one means flip it around. The opposite is no heads at all, which is tails tails tails. One out of eight. So at least one head is seven eighths. ⏸1.0s
+  - *Visual:* Tree with 8 leaves; TTT grey; 1 − 1/8 = 7/8.
+- **s397** Question five. With two dice, what's the chance that both dice show an even number? ⏸3.0s
+  - *Visual:* Grid; 'Q5' tag; countdown ring.
+- **s398** Each die is even half the time, and the dice are independent. One half times one half is one quarter. On the grid, that's nine squares out of thirty six. ⏸1.0s
+  - *Visual:* Even-even squares (9) turn aqua; 1/2 × 1/2 = 1/4 = 9/36.
+- **s399** Question six. Your friend says the total of two dice is four. What's the chance it was a double? ⏸3.0s
+  - *Visual:* 'Q6' tag; speech bubble 'total is 4'; countdown ring.
+- **s400** Shrink the world. A total of four comes from one and three, two and two, and three and one. Three squares. Only two and two is a double. One third. ⏸1.0s
+  - *Visual:* Squares (1,3),(2,2),(3,1) bright; (2,2) aqua; 1/3.
+- **s401** Question seven. A spinner has four equal parts showing one, two, three and six points. What's the expected number of points per spin? ⏸3.0s
+  - *Visual:* Spinner with four equal sectors 1, 2, 3, 6; 'Q7' tag; countdown ring.
+- **s402** Add them up, twelve, and divide by four. Three points per spin, on average. ⏸1.0s
+  - *Visual:* (1 + 2 + 3 + 6) / 4 = 3 in violet; balance beam balancing at 3.
+- **s403** How did you do? If you got even half of those, you're already thinking like a probability person. ⏸0.8s
+  - *Visual:* A score card '7 questions' with ticks.
+
+## Common Mistakes  ·  424 words, ~154 s
+
+- **s404** You now know more probability than most people. So let's protect you from the traps that catch almost everyone.
+  - *Visual:* Title strip 'the traps'; four empty red-bordered cards.
+- **s405** Trap number one. I'm due for a win.
+  - *Visual:* Card 1: 'I'm due!' (red).
+- **s406** A coin lands heads five times in a row. Surely tails is coming now, right?
+  - *Visual:* Five heads in a row on a strip; a sixth coin spins with '?'.
+- **s407** No. The coin has no memory. The chance of tails on the next flip is still one half. ⏸1.0s
+  - *Visual:* The sixth coin: 1/2 heads, 1/2 tails; a 'no memory' brain icon crossed out.
+- **s408** Each flip is independent. The past doesn't push the future back into balance.
+  - *Visual:* Chip 'independent: the past doesn't push'.
+- **s409** But wait, doesn't the law of large numbers say things even out? It does, but not by correcting. Over a huge number of flips, five extra heads just get diluted, like a drop of ink in an ocean.
+  - *Visual:* Line chart of share of heads: an early bump fades as flips grow; tag 'diluted, not corrected'.
+- **s410** In fact, the sequence heads, heads, heads, heads, heads, tails, is exactly as likely as six heads in a row. One in sixty four each. ⏸1.0s
+  - *Visual:* Two strips HHHHHT and HHHHHH, each tagged 1/64.
+- **s411** This mistake has a name. The gambler's fallacy.
+  - *Visual:* Name tag 'the gambler's fallacy' on card 1.
+- **s412** And here's a sneaky cousin of this trap. Judging from too few tries. A new player scores three shots out of three, and everyone says they never miss.
+  - *Visual:* Three basketball shots, all in; a speech bubble 'never misses!'.
+- **s413** But three tries is a tiny sample. Remember the coin that gave seven heads out of ten. Small samples wobble. Wait for many tries before you trust a pattern. ⏸1.0s
+  - *Visual:* The 10-flip wobble from earlier returns briefly; chip 'small samples wobble'.
+- **s414** Trap number two. There are two outcomes, so it's fifty fifty.
+  - *Visual:* Card 2: 'two outcomes → 50/50?' (red).
+- **s415** Will I win the lottery? Either I win, or I don't. Two outcomes. So fifty fifty?
+  - *Visual:* A ticket with 'win' / 'lose' and a grey '1/2?' label.
+- **s416** Of course not. Two possible results doesn't mean two equally likely results. Remember the spinner.
+  - *Visual:* The spinner from earlier returns, 3/4 red, 1/4 blue.
+- **s417** Before you count, always check that your outcomes are equally likely. ⏸1.0s
+  - *Visual:* Rule footnote glows: 'only if equally likely'.
+- **s418** Trap number three. Adding when you shouldn't.
+  - *Visual:* Card 3: 'adding chances blindly' (red).
+- **s419** We saw it already. Four rolls at one sixth each is not four sixths, because the events overlap. If they can happen together, adding counts too much.
+  - *Visual:* The 4/6 vs 671/1296 comparison returns.
+- **s420** A quick sanity check helps here. If your answer is more than one, or more than one hundred percent, something has gone wrong. ⏸1.0s
+  - *Visual:* A gauge 0–1 with a red zone beyond 1; tag 'never above 1'.
+- **s421** Trap number four. Flipping the given.
+  - *Visual:* Card 4: 'flipping the given' (red).
+- **s422** The chance of A given B is not the same as the chance of B given A. Tall given basketball player is very different from basketball player given tall.
+  - *Visual:* The two basketball cards with '≠'.
+- **s423** Whenever you hear a statement with given, if, or among, pause and ask, which group am I really looking at? ⏸1.0s
+  - *Visual:* Chip 'which group am I in?'.
+- **s424** And one bonus trap. Thinking that unlikely means impossible.
+  - *Visual:* Bonus card: 'unlikely = impossible?' (red).
+- **s425** A one in a million event is very rare for you. But in a country of tens of millions of people, you'd expect it to happen to dozens of them.
+  - *Visual:* A grid of many tiny dots (illustration), a scattered few glowing; tag 'rare for one, common for many'.
+- **s426** So when you hear about an amazing coincidence, remember, with enough people and enough chances, surprising things are expected. ⏸1.0s
+  - *Visual:* Chip 'enough chances → surprises are normal'.
+
+## Recipe  ·  189 words, ~69 s
+
+- **s427** Let's put everything together. Here's your probability recipe.
+  - *Visual:* Recipe card title 'Your probability recipe'.
+- **s428** Step one. List everything that could happen. Use a grid or a tree, and make sure every outcome is equally likely.
+  - *Visual:* ① List all outcomes — 'grid or tree; equally likely'.
+- **s429** Step two. Count the outcomes you want, and divide by all the outcomes.
+  - *Visual:* ② Count and divide — 'wanted ÷ all'.
+- **s430** Step three. For not, take it away from one.
+  - *Visual:* ③ NOT — '1 − P(A)'.
+- **s431** Step four. For or, add, and remove the overlap.
+  - *Visual:* ④ OR — 'add, then remove the overlap'.
+- **s432** Step five. For and, multiply along the path, using the updated chance.
+  - *Visual:* ⑤ AND — 'multiply along the path'.
+- **s433** Step six. For at least one, flip it around. One, minus the chance of none.
+  - *Visual:* ⑥ AT LEAST ONE — '1 − P(none)'.
+- **s434** Step seven. For a given, shrink the world first, then count.
+  - *Visual:* ⑦ GIVEN — 'shrink the world, then count'.
+- **s435** And step eight. Remember, probability describes the long run. Not the next single try. ⏸1.0s
+  - *Visual:* ⑧ LONG RUN — 'patterns over many tries'.
+- **s436** Let's run the recipe one last time, on our game night question. Two dice, so six times six, thirty six equally likely outcomes.
+  - *Visual:* Mini grid 6 × 6 next to step ①.
+- **s437** Twelve has one way, seven has six ways. Count and divide. One over thirty six, against six over thirty six.
+  - *Visual:* 1/36 vs 6/36 beside step ②.
+- **s438** And over many game nights, your friend will win this race about six times as often as you. Unless you change the rules. ⏸1.0s
+  - *Visual:* Step ⑧ glows; tally of many game nights 6 : 1.
+- **s439** You can't control the dice. But now, you can understand them. ⏸1.5s
+  - *Visual:* The recipe card dims; the two dice roll once more and land on 7.
+
+## Subscribe  ·  41 words, ~15 s
+
+- **s440** Look around your world, and notice how often you're quietly guessing the odds. The weather, the bus, a quiz, a game. ⏸0.6s
+  - *Visual:* Four everyday cards: cloud, bus stop, quiz sheet, dice; each stamped with a small '?'.
+- **s441** If this lesson made things clear for you, please subscribe to Math Lab TV, so we can keep building together. ⏸0.8s
+  - *Visual:* Logo + red SUBSCRIBE button; a cursor clicks it; it turns grey 'SUBSCRIBED ✓'; 'so we can keep building together' appears.
+
+## Next Time  ·  67 words, ~24 s
+
+- **s442** But here's a puzzle for next time.
+  - *Visual:* Small logo top-centre; puzzle icon.
+- **s443** How many people do you need in a room, before it's more likely than not that two of them share a birthday?
+  - *Visual:* A room of person icons fills in; two of them get a matching cake icon; 'next: Twenty Three People, Fifty Fifty Odds' chip under the logo.
+- **s444** Many people guess something like one hundred and eighty. The real answer is just twenty three. And with the tools you learned today, you'll be able to see exactly why.
+  - *Visual:* '180?' in grey gets crossed; '23' appears in violet; small icons NOT and 'at least one' glow.
+- **s445** I will see you in the next video. ⏸2.0s
+  - *Visual:* Logo + next chip hold.
